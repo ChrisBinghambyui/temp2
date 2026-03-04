@@ -1,0 +1,95 @@
+body {
+    background-color: lightslategray;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: #8b0000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2.8s ease;
+    z-index: 5;
+}
+
+body.dead::before {
+    opacity: 0.78;
+}
+
+#death-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #b30000;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1em;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+    z-index: 10;
+    pointer-events: none;
+}
+
+body.dead #death-message {
+    opacity: 1;
+}
+
+#card{
+    display: grid;
+    margin-top: 40px;
+    margin-bottom: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.98);
+    overflow: hidden;
+    background-color: #a6c8f0;
+}
+
+#card img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#card h2{
+    background-color:rgba(109, 144, 232, 0.98);
+    color: rgb(254, 232, 107);
+    padding-left: 32px;
+    margin-top: 0;
+}
+
+#card ul {
+    list-style: none;
+    padding-left: 32px;
+    margin: 0;
+}
+
+#actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: white;
+}
+
+#actions button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: blue;
+    color: white;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+#actions button:hover {
+    background-color: #314988;
+}

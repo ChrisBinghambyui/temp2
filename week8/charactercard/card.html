@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A knight card for a trading card game">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Knight Card">
+    <meta property="og:description" content="A knight card for a trading card game">
+    <meta property="og:url" content="yourgithubusername.github.io/wdd131/week8/charactercard/card.html">
+
+    <link rel="icon" href="images/favicon.ico" alt="an icon of swords">
+    <title>Knight Card</title>
+    <link rel="preload" as="image" href="images/knight.gif">
+    <script src="card.js" defer></script>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div id="death-message" aria-live="polite">YOU DIED</div>
+    <div id="card">
+        <img src="images/knight.gif" id="knight_gif" width="800" height="1042" fetchpriority="high" decoding="async" alt="A knight in an idle animation">
+        <h2 id="name">
+            Knight
+        </h2>
+        <ul>
+            <li><strong>Class:</strong> Human Soldier</li>
+            <li><strong>Level:</strong> <span id="level">6</span></li>
+            <li><strong>Health:</strong> <span id="health">100</span> / <span id="max-health">100</span></li>
+        </ul>
+        <div id="actions">
+            <button id="attack-btn" type="button">Attack</button>
+            <button id="levelup-btn" type="button">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>
