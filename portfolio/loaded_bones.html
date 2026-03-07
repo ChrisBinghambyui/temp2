@@ -1370,11 +1370,6 @@ const UPGRADED_CARDS = [
 ["Frosted Dagger XY","Deal damage equal to die value + 3, On 4-6: Apply 3 Poison and 3 Frozen","33-5-000-01-E3-34-134360",10],
 ];
 
-// Merge upgraded cards into lookup
-UPGRADED_CARDS.forEach(([name,desc,id,rarity]) => {
-  CARD_BY_NAME[name] = {name,desc,id,rarity};
-});
-
 // ============================================================
 // CARD FAMILY & UPGRADE SYSTEM
 // ============================================================
@@ -1386,6 +1381,36 @@ const CARD_FAMILIES = {
   'Chomp': 'chomp',
   'Frosted Dagger': 'frosteddagger',
 };
+
+// Get the family for a card (e.g., "Bite x" → "bite")
+function getCardFamily(cardName) {
+  for (const [base, family] of Object.entries(CARD_FAMILIES)) {
+    if (cardName.startsWith(base)) return family;
+  }
+  return null;
+}
+
+// Get the base card name for a family (e.g., "bite" → "Bite")
+function getBaseCardForFamily(family) {
+  for (const [base, fam] of Object.entries(CARD_FAMILIES)) {
+    if (fam === family) return base;
+  }
+  return null;
+}
+
+// Helper function to check if a card is an upgraded version
+function isUpgradedCard(cardName) {
+  return / [xXyY]$| XY$/.test(cardName);
+}
+
+// Merge upgraded cards into lookup, inheriting base card rarity
+UPGRADED_CARDS.forEach(([name,desc,id,unusedRarity]) => {
+  const family = getCardFamily(name);
+  const baseCardName = family ? getBaseCardForFamily(family) : null;
+  const baseCard = baseCardName ? CARD_BY_NAME[baseCardName] : null;
+  const rarity = baseCard ? baseCard.rarity : 1;
+  CARD_BY_NAME[name] = {name,desc,id,rarity};
+});
 
 // Upgrade paths: defines how duplicates combine
 // { base: { x: 'x variant', y: 'y variant', xx: 'X variant', etc } }
@@ -1426,22 +1451,6 @@ const UPGRADE_PATHS = {
     'Frosted Dagger Y': ['Frosted Dagger XY'],
   },
 };
-
-// Get the family for a card (e.g., "Bite x" → "bite")
-function getCardFamily(cardName) {
-  for (const [base, family] of Object.entries(CARD_FAMILIES)) {
-    if (cardName.startsWith(base)) return family;
-  }
-  return null;
-}
-
-// Get the base card name for a family (e.g., "bite" → "Bite")
-function getBaseCardForFamily(family) {
-  for (const [base, fam] of Object.entries(CARD_FAMILIES)) {
-    if (fam === family) return base;
-  }
-  return null;
-}
 
 // Get possible forgings for a card (what it can upgrade to)
 function getPossibleForgings(cardName) {
@@ -4105,7 +4114,7 @@ let currentShopOffers = [];
 
 function generateShopOffers(numOffers = SHOP_CONFIG.numOffers) {
   const sale = Math.random() < SHOP_CONFIG.saleChance;
-  const shopPool = ALL_CARDS.filter(([name,,, r])=>r>=1&&r<=6&&!SHOP_EXCLUDED.has(name));
+  const shopPool = ALL_CARDS.filter(([name,,, r])=>r>=1&&r<=6&&!SHOP_EXCLUDED.has(name)&&!isUpgradedCard(name));
   const offers = [];
   const usedIds = new Set();
   
