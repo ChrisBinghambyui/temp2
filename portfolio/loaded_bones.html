@@ -390,7 +390,15 @@ input[type="text"]:focus { border-color: var(--gold); }
 
 /* =================== DICE =================== */
 .dice-area {
-  display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 12px 0;
+  min-height: 84px;
+  max-height: 128px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .die {
   width: 56px; height: 56px;
@@ -445,7 +453,16 @@ input[type="text"]:focus { border-color: var(--gold); }
 
 /* =================== CARDS =================== */
 .hand-area {
-  display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 10px 0;
+  flex: 1;
+  min-height: 150px;
+  max-height: 34dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .card {
   width: 130px;
@@ -532,17 +549,27 @@ input[type="text"]:focus { border-color: var(--gold); }
 .rarity-6 { background: var(--celestial); }
 
 /* =================== COMBAT SCREEN =================== */
-#combat-screen { width: 100%; padding: 0; }
+#combat-screen {
+  width: 100%;
+  padding: 0;
+  height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
 .combat-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  min-height: 100vh;
+  height: 100%;
+  min-height: 0;
 }
 .combatant-panel {
   padding: 20px;
   border-right: 1px solid var(--card-border);
-  display: flex; flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
 }
 .combatant-panel.enemy-side {
   background: rgba(122,28,28,0.05);
@@ -910,6 +937,24 @@ input[type="text"]:focus { border-color: var(--gold); }
   /* Adjust combat layout for mobile */
   #combat-screen {
     padding: 10px!important;
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .combat-layout {
+    height: auto;
+    min-height: 0;
+  }
+
+  .combatant-panel {
+    overflow: visible;
+  }
+
+  .dice-area,
+  .hand-area {
+    max-height: none;
+    overflow: visible;
   }
   
   /* Make combat panels stack better */
@@ -1175,6 +1220,21 @@ input[type="text"]:focus { border-color: var(--gold); }
 const RARITY_LABELS = {1:'Common',2:'Uncommon',3:'Rare',4:'Heroic',5:'Legendary',6:'Celestial'};
 const RARITY_COLORS = {1:'#a0a0a0',2:'#5ba55b',3:'#4a80c4',4:'#9b59b6',5:'#e67e22',6:'#e74c3c'};
 
+// first two digits: card family
+
+// next one digit: upgrade tier
+
+// next 3 digits: limit (if any) than the limit. 000 if no limit, 1XX if yes, 200 if no limit and reusable, 222 if once per combat
+
+// next 2 digits: die requirements (01 is any, 02 is evens, 03 is odds, 7? accepts only the second digit)
+
+// next 2 digits: damage (if any), AX is die value * Z (A2 would be double die value), E is die value plus second value (E5 would be die value plus 5, E0 is just die value) 
+
+// next 2 digits: if triggering bonus effects are contingent on a certain number. 00 is no. 1 then a digit means just that digit (15 means only on 5's). 2 then a digit means that digit is the max, 3 then a digit means that digit is the minimum. 41 is odds, 42 is evens.
+
+// next 6 digits: status effects (00 is nothing. First digit is the code for the status to apply, second digit is how many to apply (X for die value, Y for half die value , A for die value + 1, B for same + 2, etc). 1 for poison (1Z means trigger poison), 2 for burn, 3 for lock, 4 for freeze, 5 for bleed, 6 for blind, 7 is for shield, 8 is for heal, 9 is for sacrifice. Z is for unique effects, HAS TO BE FIRST, the other 5 digits will be the unique identifier for what it does)
+
+
 // Card format: [name, description, id, rarity]
 // We store only base cards (no x/y/X/Y/XY variants for shop display)
 const ALL_CARDS = [
@@ -1186,7 +1246,7 @@ const ALL_CARDS = [
 ["Bellow","Deal damage equal to die value, On 5-6: Apply 1 Frozen","06-0-000-01-E0-35-410000",1],
 ["Blood Pact","Deal 12 damage, Heal 4 HP, Sacrifice 3 HP","07-0-115-01-12-00-840093",4],
 ["Blood Ritual","Sacrifice 5 HP, Deal 15 damage, Apply 2 Poison","08-0-000-71-00-00-Z00003",4],
-["Boulder Toss","Deal 12 damage, Apply 2 Lock","09-0-000-33-12-00-320000",3],
+["Boulder Toss","Deal 12 damage, Apply 2 Blind","09-0-000-33-12-00-620000",3],
 ["Chain Lightning","Deal quadruple die value damage","10-0-000-03-A4-00-000000",4],
 ["Charge","Deal 8 damage, Gain 3 Shield (limit 15)","11-0-115-01-08-00-730000",2],
 ["Chomp","Deal 10 damage (limit 8)","12-0-108-01-10-00-000000",2],
@@ -1195,48 +1255,48 @@ const ALL_CARDS = [
 ["Club","Deal damage equal to die value","15-0-000-01-E0-00-000000",1],
 ["Control","Sacrifice 2 HP, draw a new card, roll a new die","16-0-000-71-00-00-Z00005",3],
 ["Curse","Apply 2 Poison, Apply 2 Blind","17-0-000-71-00-00-122600",3],
-["Dagger","Deal 3 damage, Apply 1 Poison","18-0-000-01-03-00-910100",2],
+["Dagger","Deal 3 damage, Apply 1 Bleed","18-0-000-01-03-00-510000",2],
 ["Dark Blessing","Heal 8 HP, Apply 2 Poison to opponent (limit 18)","19-0-118-01-00-00-Z00006",3],
 ["Dark Aegis","Gain Shield equal to die value + 4, Apply 1 Poison to opponent","20-0-200-02-E4-00-7D1100",4],
-["Desperation","Deal 10 damage, Sacrifice 5 HP (exactly 1)","21-0-000-71-10-00-900005",3],
+["Desperation","Deal 10 damage, Sacrifice 5 HP (exactly 1)","21-0-000-71-10-00-900000",3],
 ["Divebomb","Deal 8 damage + die value, Apply 1 Bleed","22-0-222-01-E8-00-510000",3],
-["Dominate","Apply 3 Lock, Apply 2 Blind","23-0-000-01-00-00-326200",4],
-["Earthshatter","Deal 15 damage, Apply 3 Lock, Apply 2 Frozen (limit 22)","24-0-122-01-15-00-334200",4],
-["Earthquake","Deal die value damage, Apply Lock = die/3 rounded down","25-0-000-01-E0-00-Z00007",3],
+["Dominate","Apply 2 Lock, Apply 2 Blind","23-0-000-01-00-00-326200",4],
+["Earthshatter","Deal 15 damage, Apply 2 Bleed, Apply 2 Blind (limit 22)","24-0-122-01-15-00-522600",4],
+["Earthquake","Deal die value damage, Apply Blind = die/3 rounded down","25-0-000-01-E0-00-Z00007",3],
 ["Evade","Gain 4 Shield, Remove 1 negative effect (reusable)","26-0-200-01-00-00-Z00008",3],
 ["Execution","Deal 22 damage, Apply 4 Bleed (limit 25)","27-0-125-01-22-00-540000",5],
-["Flail","Deal damage equal to die value, Sacrifice 1 HP","28-0-000-01-E0-00-910001",2],
+["Flail","Deal damage equal to die value, Sacrifice 1 HP","28-0-000-01-E0-00-910000",2],
 ["Flame Burst","Deal triple die value damage (odd only)","29-0-000-03-A3-00-000000",3],
-["Flame Strike","Deal double die value damage, Apply 1 Poison (odd only)","30-0-000-03-A2-00-910100",3],
+["Flame Strike","Deal double die value damage, Apply 1 Burn (odd only)","30-0-000-03-A2-00-210000",3],
 ["Flame Wall","Gain Shield equal to die value + 5, Deal 5 damage (reusable)","31-0-200-02-E5-00-Z00009",4],
 ["Fortify","Gain 3 Shield","32-0-000-01-00-00-730000",1],
-["Frosted Dagger","Deal damage equal to die value, On 6: Apply 1 Poison","33-0-000-01-E0-16-910100",1],
+["Frosted Dagger","Deal damage equal to die value, On 6: Apply 1 Frozen","33-0-000-01-E0-16-410000",1],
 ["Frosted Spear","Deal 3 damage (reusable, min 3)","34-0-200-33-03-00-000000",1],
 ["Gore","Deal damage equal to die value, On 6: Apply 1 Bleed","35-0-000-01-E0-16-510000",1],
-["Haunting Wail","Apply 3 Blind, Apply 1 Lock","36-0-000-01-00-00-630310",3],
+["Haunting Wail","Apply 3 Blind, Apply 1 Frozen","36-0-000-01-00-00-634100",3],
 ["Hellfire","Deal quintuple die value damage (odd only)","37-0-000-03-A5-00-000000",5],
 ["Howl","Heal 2 HP (limit 8)","38-0-108-01-00-00-820000",1],
 ["Ice Magic","Heal 2 HP, Remove all negative effects (max 2)","39-0-000-22-00-00-Z00010",2],
-["Immolate","Deal 10 damage, Apply 2 Poison, Sacrifice 2 HP (limit 10)","40-0-110-01-10-00-122092",3],
+["Immolate","Deal 10 damage, Apply 2 Burn, Sacrifice 2 HP (limit 10)","40-0-110-01-10-00-220092",3],
 ["Jab","Deal damage equal to die value","41-0-000-01-E0-00-000000",1],
-["Jade Spear","Deal 6 damage, Apply 1 Lock, Apply 1 Frozen","42-0-200-01-06-00-310410",3],
-["Judgement","Deal 18 damage, Heal 6 HP, Apply 2 Lock (exactly 6)","43-0-000-76-18-00-860320",4],
+["Jade Spear","Deal 6 damage, Apply 1 Bleed, Apply 1 Frozen","42-0-200-01-06-00-514100",3],
+["Judgement","Deal 18 damage, Heal 6 HP, Apply 2 Blind (exactly 6)","43-0-000-76-18-00-862600",4],
 ["Life Drain","Deal damage equal to die value, Heal half damage dealt","44-0-200-01-E0-00-Z00011",2],
 ["Lightning Bolt","Deal triple die value damage","45-0-104-01-A3-00-000000",3],
 ["Lightning Storm","Deal 20 damage, Apply 2 Blind (limit 20)","46-0-120-01-20-00-620000",4],
 ["Maul","Deal damage equal to die value + 5","47-0-200-01-E5-00-000000",2],
-["Meteor","Deal 15 damage, Apply 2 Bleed (reusable, min 5)","48-0-200-35-15-00-520000",4],
+["Meteor","Deal 15 damage, Apply 2 Burn (reusable, min 5)","48-0-200-35-15-00-220000",4],
 ["Mirror Hide","Remove all negative effects from self, Apply them to opponent","49-0-000-01-00-00-Z00012",3],
 ["Necromancy","Deal 6 damage, Apply 1 Bleed, Apply 1 Poison","50-0-200-01-06-00-511100",3],
-["Petrify","Apply 2 Frozen, Apply 2 Lock","51-0-222-01-00-00-422300",4],
+["Petrify","Apply 2 Frozen, Apply 2 Blind","51-0-222-01-00-00-422600",4],
 ["Phase Step","Gain 6 Shield, Apply 2 Blind to opponent (once per combat)","52-0-222-01-00-00-Z00013",3],
 ["Phoenix Rising","Heal 10 HP, Gain 10 Shield, Remove all negative effects (exactly 1)","53-0-000-71-00-00-Z00014",5],
 ["Plague Breath","Apply 3 Poison, Apply 2 Bleed","54-0-200-01-00-00-132500",3],
 ["Reflecting Scales","Deal 4 damage, Apply 2 Blind","55-0-000-01-04-00-620000",2],
-["Roar","Apply 1 Lock (exactly 1)","56-0-000-71-00-00-310000",2],
+["Roar","Apply 1 Blind (exactly 1)","56-0-000-71-00-00-610000",2],
 ["Rupture","Deal 2 damage, Apply 1 Bleed, Apply 1 Poison","57-0-000-01-02-00-511100",1],
 ["Rusty Dagger","Deal 2 damage (odd only)","58-0-000-03-02-00-000000",1],
-["Screech","Apply 2 Blind, Apply 1 Lock","59-0-000-01-00-00-621310",3],
+["Screech","Apply 3 Blind","59-0-000-01-00-00-630000",3],
 ["Shield","Gain Shield equal to half the die value (even only)","64-0-000-02-00-00-7Y0000",2],
 ["Shortbow","Deal double die value damage (odd only)","65-0-103-01-A2-00-000000",1],
 ["Snipe","Deal 8 damage, Apply 1 Bleed (limit 15)","66-0-115-01-08-00-510000",2],
@@ -1248,11 +1308,11 @@ const ALL_CARDS = [
 ["Swipe","Deal 3 damage, Heal 1 HP (limit 5)","72-0-105-01-03-00-810000",1],
 ["Talon Strike","Deal damage equal to die value + 3, On 6: Apply 1 Bleed (reusable)","73-0-200-01-E3-16-510000",2],
 ["Thunderclap","Deal 18 damage, Apply 2 Blind (limit 25)","74-0-125-01-18-00-620000",4],
-["Torture","Deal 15 damage, Apply 2 Bleed, Apply 2 Lock (limit 20)","75-0-120-01-15-00-525320",4],
+["Torture","Deal 15 damage, Apply 2 Bleed, Apply 2 Poison (limit 20)","75-0-120-01-15-00-521200",4],
 ["Totem","Gain 5 Shield, Heal 2 HP (exactly 2)","76-0-000-72-00-00-758200",2],
-["Trample","Deal damage equal to die value, On 6: Apply 1 Lock","77-0-000-01-E0-16-310000",1],
-["Tremor","Deal damage equal to die value, Apply Lock = die/3 rounded down","78-0-000-01-E0-00-Z00015",2],
-["Whip Crack","Deal damage equal to die value + 5, Apply 1 Lock","79-0-000-01-E5-00-310000",3],
+["Trample","Deal damage equal to die value, On 6: Apply 1 Bleed","77-0-000-01-E0-16-510000",1],
+["Tremor","Deal damage equal to die value, Apply Blind = die/3 rounded down","78-0-000-01-E0-00-Z00015",2],
+["Whip Crack","Deal damage equal to die value + 5, Apply 1 Bleed","79-0-000-01-E5-00-510000",3],
 ["Wind Slash","Deal damage equal to die value + 4, On 6: Apply 2 Bleed (reusable)","80-0-200-01-E4-16-520000",3],
 ["Wooden Sword","Deal damage equal to die value","81-0-000-01-E0-00-000000",1],
 ["Slingshot","Deal 3 damage","82-0-000-01-03-00-000000",1],
@@ -1268,6 +1328,17 @@ ALL_CARDS.forEach(([name,desc,id,rarity]) => {
   CARD_BY_NAME[name] = {name,desc,id,rarity};
 });
 
+function canonicalCardByName(card) {
+  if (!card || !card.name) return card;
+  return CARD_BY_NAME[card.name] ? {...CARD_BY_NAME[card.name]} : card;
+}
+
+function normalizeOwnedCards(state = G) {
+  if (!state) return;
+  if (Array.isArray(state.deck)) state.deck = state.deck.map(canonicalCardByName).filter(Boolean);
+  if (Array.isArray(state.inventory)) state.inventory = state.inventory.map(canonicalCardByName).filter(Boolean);
+}
+
 // Starter cards
 const STARTER_CARDS = ["Wooden Sword","Slingshot","Small Stone","Makeshift Shield","Bandage","Sharpened Stick"];
 
@@ -1281,7 +1352,7 @@ const ENEMY_DATA = [
   // Plains Tier 1
   {name:"Wolf",hp:10,dice:2,biome:1,tier:1,cards:["Bite","Howl"]},
   {name:"Giant Locust",hp:12,dice:2,biome:1,tier:1,cards:["Swipe","Swipe"]},
-  {name:"Naukin Outcast",hp:10,dice:2,biome:1,tier:1,cards:["Jab","Rusty Dagger"]},
+  {name:"Naukin Outcast",hp:8,dice:2,biome:1,tier:1,cards:["Jab","Rusty Dagger"]},
   // Plains Tier 2
   {name:"Dire Wolves",hp:18,dice:3,biome:1,tier:2,cards:["Bite","Bite","Charge"]},
   {name:"Prowling Dellinid",hp:16,dice:3,biome:1,tier:2,cards:["Charge","Gore","Bite"]},
@@ -1599,11 +1670,11 @@ function resolveZEffect(zCode, source, target, dieVal) {
       msg = `healed ${h2} HP, applied 2 Poison to ${target.name}`;
       break;
     }
-    case 7: { // earthquake: lock = dieVal/3
+    case 7: { // earthquake: blind = dieVal/3
       const dmg3 = applyShieldedDamage(target, dieVal);
-      const lockAmt = Math.floor(dieVal/3);
-      if (lockAmt > 0) target.lock = (target.lock||0)+lockAmt;
-      msg = `dealt ${dmg3} damage, applied ${lockAmt} Lock`;
+      const blindAmt = Math.floor(dieVal/3);
+      if (blindAmt > 0) target.blind = (target.blind||0)+blindAmt;
+      msg = `dealt ${dmg3} damage, applied ${blindAmt} Blind`;
       break;
     }
     case 8: { // evade: gain 4 shield, remove 1 neg
@@ -1660,11 +1731,11 @@ function resolveZEffect(zCode, source, target, dieVal) {
       msg = `healed 10 HP, gained 10 Shield, removed all negative effects`;
       break;
     }
-    case 15: { // tremor
+    case 15: { // tremor (blind scaling)
       const d3 = applyShieldedDamage(target, dieVal);
-      const lk = Math.floor(dieVal/3);
-      target.lock = (target.lock||0)+lk;
-      msg = `dealt ${d3} damage, applied ${lk} Lock`;
+      const blindAmt = Math.floor(dieVal/3);
+      target.blind = (target.blind||0)+blindAmt;
+      msg = `dealt ${d3} damage, applied ${blindAmt} Blind`;
       break;
     }
     case 72: case 73: case 74: case 75: case 76: case 77: { // splinter variants
@@ -1979,6 +2050,16 @@ function getPlayerHandLimit() {
 
 function getPlayerDiceLimit() { return 2; }
 
+function snapshotCardChargeProgress(c) {
+  const out = {};
+  if (!c || !c.limitProgress) return out;
+  for (const [key, val] of Object.entries(c.limitProgress)) {
+    const n = Number(val) || 0;
+    if (n > 0) out[key] = n;
+  }
+  return out;
+}
+
 // ============================================================
 // UI HELPERS
 // ============================================================
@@ -2167,6 +2248,7 @@ function startGame() {
     thessaStarterGiven: false,
     trainingHand: 0, trainingHp: 0, trainingRecovery: 0, trainingShield: 0,
     trainingHpLevel: 0, trainingHandLevel: 0, trainingRecoveryLevel: 0, trainingShieldLevel: 0,
+    cardChargeProgress: {},
     currentBiome: 1,
     currentTier: 1,
     selectedClass: G.selectedClass,
@@ -2214,6 +2296,7 @@ function showShipTutorialIntro() {
 }
 
 function startShipTutorialCombat() {
+  normalizeOwnedCards();
   PROLOGUE.active = true;
   PROLOGUE.phase = 'ship_tutorial';
 
@@ -2231,6 +2314,7 @@ function startShipTutorialCombat() {
   const handLimit = getPlayerHandLimit();
   const playerCards = G.deck.map(c => ({...c}));
   const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, 2, G.classId, G.level, G.hp);
+  player.limitProgress = {...(G.cardChargeProgress || {})};
 
   const enemyCards = ['Rusty Dagger', 'Jab', 'Swipe']
     .map(n => CARD_BY_NAME[n])
@@ -2429,6 +2513,8 @@ function autoSelectStarterCards() {
 // TOWN
 // ============================================================
 function showTown() {
+  // Returning to town always restores full HP.
+  if (G && typeof G.maxHp === 'number') G.hp = G.maxHp;
   // Always transition screens first so UI update issues can't trap progression.
   showScreen('town-screen');
   // Autosave when returning to town
@@ -2599,6 +2685,7 @@ function startAdventure(biome, tier) {
 }
 
 function startNextCombat(legendary=false) {
+  normalizeOwnedCards();
   ADV.legendary = legendary;
   const enemy = spawnEnemy(ADV.biome, ADV.tier, legendary);
   if (!enemy) {
@@ -2614,6 +2701,7 @@ function startNextCombat(legendary=false) {
     G.name, G.maxHp, playerCards, handLimit, 2,
     G.classId, G.level, ADV.playerHp
   );
+  player.limitProgress = {...(G.cardChargeProgress || {})};
   player.shield = G.trainingShield || 0;
 
   // Rogue: pick lucky number
@@ -2893,6 +2981,7 @@ function confirmRetreat() {
 function endCombat(result) {
   CB.phase = 'over';
   ADV.playerHp = Math.max(0, CB.player.hp);
+  G.cardChargeProgress = snapshotCardChargeProgress(CB.player);
   updateCombatUI();
 
   if (PROLOGUE.active) {
@@ -4063,7 +4152,9 @@ function deserializeGameState(saveData) {
   G = {
     ...saveData.G,
     unlockedBiomes: new Set(saveData.G.unlockedBiomes || []),
+    cardChargeProgress: saveData.G.cardChargeProgress || {},
   };
+  normalizeOwnedCards(G);
   return true;
 }
 
