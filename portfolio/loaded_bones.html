@@ -2315,6 +2315,7 @@ function startShipTutorialCombat() {
   const playerCards = G.deck.map(c => ({...c}));
   const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, 2, G.classId, G.level, G.hp);
   player.limitProgress = {...(G.cardChargeProgress || {})};
+  console.log('Restoring charge progress (prologue):', player.limitProgress);
 
   const enemyCards = ['Rusty Dagger', 'Jab', 'Swipe']
     .map(n => CARD_BY_NAME[n])
@@ -2702,6 +2703,7 @@ function startNextCombat(legendary=false) {
     G.classId, G.level, ADV.playerHp
   );
   player.limitProgress = {...(G.cardChargeProgress || {})};
+  console.log('Restoring charge progress:', player.limitProgress);
   player.shield = G.trainingShield || 0;
 
   // Rogue: pick lucky number
@@ -2982,6 +2984,7 @@ function endCombat(result) {
   CB.phase = 'over';
   ADV.playerHp = Math.max(0, CB.player.hp);
   G.cardChargeProgress = snapshotCardChargeProgress(CB.player);
+  console.log('Saving charge progress:', G.cardChargeProgress);
   updateCombatUI();
 
   if (PROLOGUE.active) {
@@ -3927,7 +3930,7 @@ function openTraining() {
   renderTrainingModal();
 }
 
-function trainingCost(base, level) { return Math.ceil(base * Math.pow(1.4, level)); }
+function trainingCost(base, level) { return Math.ceil(base * Math.pow(2.0, level)); }
 
 function renderTrainingModal() {
   const hC = trainingCost(180, G.trainingHandLevel||0);
