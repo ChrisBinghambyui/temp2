@@ -4305,25 +4305,71 @@ function openBlacksmith() {
 }
 
 function getUpgradeCandidates(cardName) {
-  // Use the new UPGRADE_PATHS system
-  return getPossibleForgings(cardName);
+  // Legacy wrapper: returns only output names for callers that still need it.
+  return getForgeRecipes(cardName).map(r => r.output);
+}
+
+function getCombinedCardCounts() {
+  const counts = {};
+  G.inventory.forEach(c => { counts[c.name] = (counts[c.name] || 0) + 1; });
+  G.deck.forEach(c => { counts[c.name] = (counts[c.name] || 0) + 1; });
+  return counts;
+}
+
+function hasInputsForRecipe(recipe, counts) {
+  const [a, b] = recipe.inputs;
+  if (a === b) return (counts[a] || 0) >= 2;
+  return (counts[a] || 0) >= 1 && (counts[b] || 0) >= 1;
+}
+
+function formatRecipeInputsText(inputs) {
+  const [a, b] = inputs;
+  return a === b ? `2x ${a}` : `1x ${a} + 1x ${b}`;
+}
+
+function getForgeRecipes(cardName) {
+  const family = getCardFamily(cardName);
+  if (!family || !UPGRADE_PATHS[family]) return [];
+
+  const baseCard = getBaseCardForFamily(family);
+  const path = UPGRADE_PATHS[family];
+  const recipes = [];
+
+  // Base cards upgrade into x/y using two identical base copies.
+  if (cardName === baseCard) {
+    (path.base || []).forEach(out => {
+      recipes.push({ output: out, inputs: [cardName, cardName] });
+    });
+    return recipes;
+  }
+
+  // Non-base cards follow path entries; XY requires X + Y (not two copies).
+  (path[cardName] || []).forEach(out => {
+    const isXY = out.endsWith(' XY') && (cardName.endsWith(' X') || cardName.endsWith(' Y'));
+    if (isXY) {
+      const pairName = cardName.endsWith(' X')
+        ? cardName.replace(/ X$/, ' Y')
+        : cardName.replace(/ Y$/, ' X');
+      recipes.push({ output: out, inputs: [cardName, pairName] });
+    } else {
+      recipes.push({ output: out, inputs: [cardName, cardName] });
+    }
+  });
+
+  return recipes;
 }
 
 function renderBlacksmithModal() {
-  const invCounts = countCards(G.inventory);
-  const deckCounts = countCards(G.deck);
+  const allCounts = getCombinedCardCounts();
   const upgradeable = [];
   
-  // Find all cards with 2+ copies that can be upgraded
-  Object.keys(invCounts).sort().forEach(name => {
-    const totalCount = (invCounts[name] || 0) + (deckCounts[name] || 0);
-    if (totalCount >= 2) {
-      const card = CARD_BY_NAME[name];
-      if (!card) return;
-      const candidates = getPossibleForgings(name);
-      if (candidates.length > 0) {
-        upgradeable.push({name, card, candidates, count: totalCount});
-      }
+  // Show only cards where at least one forge recipe can currently be paid with card copies.
+  Object.keys(allCounts).sort().forEach(name => {
+    const card = CARD_BY_NAME[name];
+    if (!card) return;
+    const recipes = getForgeRecipes(name).filter(recipe => hasInputsForRecipe(recipe, allCounts));
+    if (recipes.length > 0) {
+      upgradeable.push({name, card, recipes, count: allCounts[name] || 0});
     }
   });
 
@@ -4339,14 +4385,18 @@ function renderBlacksmithModal() {
     <h2>Blacksmith</h2>
     <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span></div>
     <div style="display:flex;flex-wrap:wrap;gap:12px;">
-      ${upgradeable.map(({name, card, candidates, count}) => {
+      ${upgradeable.map(({name, card, recipes, count}) => {
         const cost = calculateForgeCost(name);
         const canAfford = G.gold >= cost;
         const color = RARITY_COLORS[card.rarity || 1];
+        const recipePreview = recipes
+          .map(r => `${formatRecipeInputsText(r.inputs)} -> ${r.output}`)
+          .join('<br>');
         return `<div class="card" style="cursor:pointer;opacity:${canAfford ? '1' : '0.6'};" onclick="${canAfford ? `renderForgeOptions('${name}')` : ''}">
           <div class="card-rarity-bar" style="background:${color}"></div>
           <div class="card-name">${name}</div>
           <div class="card-desc">${card.desc}</div>
+          <div style="color:var(--teal-light);font-size:10px;margin-top:6px;font-family:'Courier Prime',monospace;line-height:1.3;">Recipe: ${recipePreview}</div>
           <div style="color:var(--gold-light);font-size:11px;margin-top:8px;font-weight:bold;">Available: ${count}</div>
           <div style="color:${canAfford ? 'var(--teal-light)' : '#888'};font-size:11px;font-weight:bold;">Cost: ${cost}g</div>
         </div>`;
@@ -4362,12 +4412,11 @@ function renderForgeOptions(cardName) {
   const card = CARD_BY_NAME[cardName];
   if (!card) return;
   
-  const candidates = getPossibleForgings(cardName);
-  if (candidates.length === 0) return;
-  
-  const invCounts = countCards(G.inventory);
-  const deckCounts = countCards(G.deck);
-  const totalCount = (invCounts[cardName] || 0) + (deckCounts[cardName] || 0);
+  const allCounts = getCombinedCardCounts();
+  const recipes = getForgeRecipes(cardName).filter(recipe => hasInputsForRecipe(recipe, allCounts));
+  if (recipes.length === 0) return;
+
+  const totalCount = allCounts[cardName] || 0;
   const cost = calculateForgeCost(cardName);
   const canAfford = G.gold >= cost;
   
@@ -4378,14 +4427,19 @@ function renderForgeOptions(cardName) {
       Cost: <span class="${canAfford ? 'gold-text' : 'danger-text'}">${cost}g</span>
     </div>
     <div style="display:flex;flex-direction:column;gap:12px;">
-      ${candidates.map(upgradedName => {
+      ${recipes.map(recipe => {
+        const upgradedName = recipe.output;
         const upgradedCard = CARD_BY_NAME[upgradedName];
         const color = RARITY_COLORS[upgradedCard?.rarity || 10];
-        return `<div onclick="${canAfford ? `forgeCard('${cardName}', '${upgradedName}')` : ''}" class="card" style="cursor:${canAfford ? 'pointer' : 'not-allowed'};opacity:${canAfford ? '1' : '0.6'};">
+        const [inputA, inputB] = recipe.inputs;
+        const recipeText = inputA === inputB
+          ? `2x ${inputA}`
+          : `1x ${inputA} + 1x ${inputB}`;
+        return `<div onclick="${canAfford ? `forgeCard('${cardName}', '${upgradedName}', '${inputA}', '${inputB}')` : ''}" class="card" style="cursor:${canAfford ? 'pointer' : 'not-allowed'};opacity:${canAfford ? '1' : '0.6'};">
           <div class="card-rarity-bar" style="background:${color}"></div>
           <div class="card-name">${upgradedName}</div>
           <div class="card-desc">${upgradedCard?.desc || 'Unknown'}</div>
-          <div style="color:var(--teal-light);font-size:11px;margin-top:6px;text-align:center;font-weight:bold;">2x ${cardName} → 1x ${upgradedName}</div>
+          <div style="color:var(--teal-light);font-size:11px;margin-top:6px;text-align:center;font-weight:bold;">${recipeText} → 1x ${upgradedName}</div>
         </div>`;
       }).join('')}
     </div>
@@ -4397,13 +4451,33 @@ function renderForgeOptions(cardName) {
   openModal(modalContent);
 }
 
-function forgeCard(baseName, upgradedName) {
+function forgeCard(baseName, upgradedName, inputA, inputB) {
   const baseCard = CARD_BY_NAME[baseName];
   const upgradedCard = CARD_BY_NAME[upgradedName];
   
   if (!baseCard || !upgradedCard) {
     log('Card data not found!', 'error');
     return;
+  }
+
+  if (!inputA || !inputB) {
+    log('Forge inputs not found!', 'error');
+    return;
+  }
+
+  const allCounts = getCombinedCardCounts();
+  if (inputA === inputB) {
+    if ((allCounts[inputA] || 0) < 2) {
+      log(`Need 2x ${inputA} to forge ${upgradedName}.`, 'error');
+      renderForgeOptions(baseName);
+      return;
+    }
+  } else {
+    if ((allCounts[inputA] || 0) < 1 || (allCounts[inputB] || 0) < 1) {
+      log(`Need 1x ${inputA} and 1x ${inputB} to forge ${upgradedName}.`, 'error');
+      renderForgeOptions(baseName);
+      return;
+    }
   }
   
   const cost = calculateForgeCost(baseName);
@@ -4413,34 +4487,42 @@ function forgeCard(baseName, upgradedName) {
     return;
   }
   
-  // Remove 2 copies from inventory first
-  let removed = 0;
-  for (let i = G.inventory.length - 1; i >= 0 && removed < 2; i--) {
-    if (G.inventory[i].name === baseName) {
-      G.inventory.splice(i, 1);
-      removed++;
-    }
-  }
-  
-  // Remove from deck if needed
-  if (removed < 2) {
-    for (let i = G.deck.length - 1; i >= 0 && removed < 2; i--) {
-      if (G.deck[i].name === baseName) {
-        G.deck.splice(i, 1);
-        removed++;
+  // Remove required inputs from inventory/deck.
+  const removeOneCardByName = (name) => {
+    for (let i = G.inventory.length - 1; i >= 0; i--) {
+      if (G.inventory[i].name === name) {
+        G.inventory.splice(i, 1);
+        return true;
       }
     }
+    for (let i = G.deck.length - 1; i >= 0; i--) {
+      if (G.deck[i].name === name) {
+        G.deck.splice(i, 1);
+        return true;
+      }
+    }
+    return false;
+  };
+
+  let removedOk = true;
+  if (inputA === inputB) {
+    removedOk = removeOneCardByName(inputA) && removeOneCardByName(inputA);
+  } else {
+    removedOk = removeOneCardByName(inputA) && removeOneCardByName(inputB);
   }
-  
-  if (removed < 2) {
-    log('Could not find 2 copies to forge!', 'error');
+
+  if (!removedOk) {
+    log('Could not find required card copies to forge!', 'error');
     return;
   }
   
   // Deduct cost and add upgraded card
   G.gold -= cost;
   G.inventory.push({...upgradedCard});
-  log(`Forged 2x ${baseName} → 1x ${upgradedName} (${cost}g).`, 'loot');
+  const recipeText = inputA === inputB
+    ? `2x ${inputA}`
+    : `1x ${inputA} + 1x ${inputB}`;
+  log(`Forged ${recipeText} → 1x ${upgradedName} (${cost}g).`, 'loot');
   updateTownUI();
   renderBlacksmithModal();
 }
