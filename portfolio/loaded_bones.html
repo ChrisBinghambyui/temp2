@@ -710,7 +710,7 @@ input[type="text"]:focus { border-color: var(--gold); }
   to { opacity:1; transform: translateY(0); }
 }
 .modal h2 {
-  font-family: 'UnifrakturMaguntia', cursive;
+  font-family: 'Cinzel', serif;
   font-size: 26px;
   color: var(--parchment);
   margin-bottom: 16px;
@@ -4203,7 +4203,12 @@ function buyShopCard(i) {
 
 function calculateSellPrice(card) {
   const rarity = card.rarity || 1;
-  const [pmin, pmax] = SHOP_PRICE_RANGES[rarity];
+  const priceRange = SHOP_PRICE_RANGES[rarity];
+  if (!priceRange) {
+    console.warn('Invalid rarity for card:', card);
+    return 10;
+  }
+  const [pmin, pmax] = priceRange;
   const basePrice = Math.floor((pmin + pmax) / 2);
   return Math.round(basePrice * 0.5);
 }
