@@ -576,6 +576,44 @@ input[type="text"]:focus { border-color: var(--gold); }
 .status-blind { background: rgba(241,196,15,0.2); border-color: var(--status-blind); color: var(--status-blind); }
 .status-shield { background: rgba(149,165,166,0.2); border-color: var(--status-shield); color: var(--status-shield); }
 
+.status-tooltip {
+  position: fixed;
+  max-width: 260px;
+  background: rgba(13,11,8,0.98);
+  border: 1px solid var(--card-border);
+  color: var(--bone);
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  z-index: 400;
+  pointer-events: none;
+}
+.status-tooltip-title {
+  font-family: 'Courier Prime', monospace;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: var(--parchment);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.xp-tooltip {
+  position: fixed;
+  background: rgba(13,11,8,0.98);
+  border: 1px solid var(--card-border);
+  color: var(--bone);
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  z-index: 350;
+  pointer-events: none;
+}
+
 .combat-controls {
   margin-top: auto;
   padding-top: 16px;
@@ -881,6 +919,9 @@ input[type="text"]:focus { border-color: var(--gold); }
   <div id="log-entries"></div>
 </div>
 
+<div id="status-tooltip" class="status-tooltip" hidden></div>
+<div id="xp-tooltip" class="xp-tooltip" hidden></div>
+
 <!-- LOG TOGGLE BUTTON (Mobile) -->
 <button id="log-toggle-btn" onclick="toggleLogPanel()">📋</button>
 
@@ -894,6 +935,7 @@ input[type="text"]:focus { border-color: var(--gold); }
       <div class="title-logo">Loaded Bones</div>
       <div class="title-subtitle">A Dice & Card Adventure</div>
       <button class="btn primary" style="font-size:15px; padding:14px 40px; letter-spacing:4px" onclick="showCharCreate()">Begin</button>
+      <button class="btn primary" id="continue-btn" style="font-size:15px; padding:14px 40px; letter-spacing:4px; margin-left:12px; display:none;" onclick="loadAndResume()">Continue</button>
     </div>
   </div>
 
@@ -969,7 +1011,7 @@ input[type="text"]:focus { border-color: var(--gold); }
           </div>
         </div>
         <div class="xp-bar-wrap mt-8">
-          <div class="xp-bar-track">
+          <div class="xp-bar-track" id="town-xp-track" onmouseenter="showTownXpTooltip(event)" onmouseleave="hideTownXpTooltip()" onclick="toggleTownXpTooltip(event)">
             <div class="xp-bar-fill" id="xp-bar-fill" style="width:0%"></div>
           </div>
         </div>
@@ -1007,6 +1049,14 @@ input[type="text"]:focus { border-color: var(--gold); }
         <div class="town-action-desc">Improve your stats with Thessa's coaching</div>
         <div class="town-action-icon">💪</div>
       </div>
+    </div>
+    
+    <div style="margin-top:32px; padding-top:24px; border-top: 1px solid var(--card-border); text-align:center;">
+      <div class="section-label" style="margin-bottom:12px;">Game Management</div>
+      <button class="btn" style="font-size:12px; padding:10px 16px;" onclick="autoSave()">💾 Save</button>
+      <button class="btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="exportSave()">📥 Export Save</button>
+      <button class="btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="importSave()">📤 Import Save</button>
+      <button class="btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="showScreen('title-screen')">🏠 Main Menu</button>
     </div>
   </div>
 
@@ -1381,9 +1431,9 @@ let G = {}; // global game state
 
 const CLASSES = [
   {id:"fencer",name:"Fencer",color:"#4dd0e1",hp:14,desc:"Once per turn, may reroll one die."},
-  {id:"knight",name:"Knight",color:"#ef5350",hp:14,desc:"Roll dice one at a time. Match your limit exactly for powerful boons; exceed it and lose your turn."},
+  {id:"knight",name:"Knight",color:"#ef5350",hp:15,desc:"Roll dice one at a time. Match your limit exactly for powerful boons; exceed it and lose your turn."},
   {id:"cleric",name:"Cleric",color:"#ffca28",hp:15,desc:"When rolling doubles, heal by that amount."},
-  {id:"warlock",name:"Warlock",color:"#ab47bc",hp:13,desc:"When applying status effects, apply that many plus your level."},
+  {id:"warlock",name:"Warlock",color:"#ab47bc",hp:14,desc:"When applying status effects or shield, apply extra equal to level/2 (min 1)."},
   {id:"druid",name:"Druid",color:"#66bb6a",hp:15,desc:"Once per turn, \"plant\" a die. Next turn it blooms into 2 dice of the same value."},
   {id:"rogue",name:"Rogue",color:"#f06292",hp:13,desc:"Choose a lucky number before each fight. Whenever it's rolled, deal 2 bonus damage."},
 ];
@@ -1662,6 +1712,7 @@ function resolveZEffect(zCode, source, target, dieVal) {
 function resolveCardUse(source, target, card, dieVal) {
   const info = parseCardId(card.id);
   if (!info) return {ok:false, msg:"Invalid card ID."};
+  const reusable = isReusable(info.limit);
 
   if (!checkDieReq(info.dieReq, dieVal)) return {ok:false, msg:`Requires ${descDieReq(info.dieReq)}, but die shows ${dieVal}.`};
 
@@ -1702,7 +1753,7 @@ function resolveCardUse(source, target, card, dieVal) {
     // For legendary enemy, scale dieVal upward for Z damage calcs
     const effectiveDie = (ADV.legendary && source === CB.enemy) ? Math.ceil(dieVal * 1.5) : dieVal;
     const zMsg = resolveZEffect(zCode, source, target, effectiveDie);
-    return {ok:true, msg:`${source.name} uses ${card.name} with a ${dieVal}: ${zMsg}.`, keepInHand:false};
+    return {ok:true, msg:`${source.name} uses ${card.name} with a ${dieVal}: ${zMsg}.`, keepInHand: reusable};
   }
 
   // Normal damage
@@ -1724,9 +1775,10 @@ function resolveCardUse(source, target, card, dieVal) {
       let amt = amountFromToken(tok, dieVal);
       if (amt <= 0) continue;
 
-      // Warlock bonus
-      if (source.classId === 'warlock' && '123456'.includes(code)) {
-        amt += source.level || 1;
+      // Warlock bonus: applies to all status effects and shield
+      if (source.classId === 'warlock' && '1234567'.includes(code)) {
+        const warlockBonus = Math.max(1, Math.ceil((source.level || 1) / 2));
+        amt += warlockBonus;
       }
 
       if (code==='1') target.poison=(target.poison||0)+amt;
@@ -1745,14 +1797,13 @@ function resolveCardUse(source, target, card, dieVal) {
     }
   }
 
-  const reusable = isReusable(info.limit);
   let msg = `${source.name} uses ${card.name} with a ${dieVal}`;
   if (hpDmg > 0) msg += `, dealing ${hpDmg} HP damage`;
   if (statusMsgs.length > 0) msg += `, ${statusMsgs.join(', ')}`;
   msg += '.';
 
-  // Reusable cards go to discard after use (they'll be reshuffled back in)
-  return {ok:true, msg, keepInHand:false};
+  // Reusable cards remain in hand so they can consume multiple dice in one turn.
+  return {ok:true, msg, keepInHand: reusable};
 }
 
 function statusName(code) {
@@ -2188,6 +2239,8 @@ function startShipTutorialCombat() {
 
   showScreen('combat-screen');
   log('A sailor you\'ve never met charges you on the storm-tossed deck.', 'enemy');
+  // Only show onboarding tips during the optional tutorial combat.
+  setTimeout(() => enqueueTutorials(['first_combat','deck_basics','dice_basics','end_turn']), 250);
   if (CB.rogueLuckyPending) {
     promptRogueLucky();
   } else {
@@ -2354,7 +2407,6 @@ function confirmStarterCards() {
   log("Welcome to Ascus. Your adventure begins.", 'story');
   closeModal();
   showTown();
-  setTimeout(() => enqueueTutorials(['first_town','deck_basics','dice_basics','end_turn']), 400);
 }
 
 function autoSelectStarterCards() {
@@ -2368,6 +2420,8 @@ function autoSelectStarterCards() {
 function showTown() {
   // Always transition screens first so UI update issues can't trap progression.
   showScreen('town-screen');
+  // Autosave when returning to town
+  autoSave();
   try {
     updateTownUI();
   } catch (err) {
@@ -2387,12 +2441,47 @@ function updateTownUI() {
   const needed = xpForLevel(G.level);
   const pct = Math.min(100, (G.xp/needed)*100);
   document.getElementById('xp-bar-fill').style.width = pct+'%';
+  const xpTrack = document.getElementById('town-xp-track');
+  if (xpTrack) {
+    xpTrack.dataset.currentXp = String(G.xp);
+    xpTrack.dataset.nextXp = String(needed);
+  }
 
   // Lock/unlock shops
   const shopAction = document.getElementById('town-shop');
   const smithAction = document.getElementById('town-blacksmith');
   shopAction.classList.toggle('locked', !G.shopUnlocked);
   smithAction.classList.toggle('locked', !G.blacksmithUnlocked);
+}
+
+function showTownXpTooltip(evt) {
+  const track = evt?.currentTarget || document.getElementById('town-xp-track');
+  const tip = document.getElementById('xp-tooltip');
+  if (!track || !tip) return;
+
+  const current = track.dataset.currentXp || String(G.xp || 0);
+  const needed = track.dataset.nextXp || String(xpForLevel(G.level));
+  tip.textContent = `${current}/${needed} XP`;
+  tip.hidden = false;
+
+  const rect = track.getBoundingClientRect();
+  const tipRect = tip.getBoundingClientRect();
+  const top = Math.max(8, rect.top - tipRect.height - 8);
+  const left = Math.min(window.innerWidth - tipRect.width - 8, Math.max(8, rect.left + rect.width / 2 - tipRect.width / 2));
+  tip.style.top = `${top}px`;
+  tip.style.left = `${left}px`;
+}
+
+function hideTownXpTooltip() {
+  const tip = document.getElementById('xp-tooltip');
+  if (tip) tip.hidden = true;
+}
+
+function toggleTownXpTooltip(evt) {
+  const tip = document.getElementById('xp-tooltip');
+  if (!tip) return;
+  if (tip.hidden) showTownXpTooltip(evt);
+  else hideTownXpTooltip();
 }
 
 function doRest() {
@@ -2741,8 +2830,8 @@ function playSelectedCard() {
   // Remove hidden index tracking too
   CB.player.hiddenDice = CB.player.hiddenDice.filter(i=>i!==dieIdx).map(i=>i>dieIdx?i-1:i);
 
-  // Played cards go to discard (including reusable ones that were used at least once)
-  // keepInHand was used for limit-charging (card not yet triggered), not for reusable stays
+  // Non-reusable cards go to discard.
+  // keepInHand covers charging cards and reusable cards that should remain available.
   if (!keepInHand) {
     CB.player.discard.push(CB.player.hand.splice(CB.selectedCard, 1)[0]);
   } else {
@@ -2813,6 +2902,13 @@ function endCombat(result) {
     ADV.totalXp += xpEarned;
     ADV.totalGold += goldEarned;
     log(`Victory! +${xpEarned} XP, +${goldEarned} gold (x${mult.toFixed(2)}).`, 'victory');
+
+    // If legendary boss defeated, immediately return to town
+    if (ADV.legendary) {
+      log('=== LEGENDARY BOSS DEFEATED ===', 'victory');
+      finishAdventure('victory');
+      return;
+    }
 
     // Card drop (10%)
     if (Math.random() < 0.10) {
@@ -3031,14 +3127,96 @@ function updateCombatUI() {
 function renderStatusBadges(containerId, c) {
   const el = document.getElementById(containerId);
   const statuses = [];
-  if (c.poison>0) statuses.push(`<span class="status-badge status-poison">☠ Poison ${c.poison}</span>`);
-  if (c.bleed>0) statuses.push(`<span class="status-badge status-bleed">🩸 Bleed ${c.bleed}</span>`);
-  if (c.burn>0) statuses.push(`<span class="status-badge status-burn">🔥 Burn ${c.burn}</span>`);
-  if (c.lock>0) statuses.push(`<span class="status-badge status-lock">🔒 Lock ${c.lock}</span>`);
-  if (c.freeze>0) statuses.push(`<span class="status-badge status-freeze">❄ Frozen ${c.freeze}</span>`);
-  if (c.blind>0) statuses.push(`<span class="status-badge status-blind">👁 Blind ${c.blind}</span>`);
-  if (c.shield>0) statuses.push(`<span class="status-badge status-shield">🛡 ${c.shield}</span>`);
+  if (c.poison>0) statuses.push(`<span class="status-badge status-poison" data-status-key="poison" data-status-value="${c.poison}">☠ Poison ${c.poison}</span>`);
+  if (c.bleed>0) statuses.push(`<span class="status-badge status-bleed" data-status-key="bleed" data-status-value="${c.bleed}">🩸 Bleed ${c.bleed}</span>`);
+  if (c.burn>0) statuses.push(`<span class="status-badge status-burn" data-status-key="burn" data-status-value="${c.burn}">🔥 Burn ${c.burn}</span>`);
+  if (c.lock>0) statuses.push(`<span class="status-badge status-lock" data-status-key="lock" data-status-value="${c.lock}">🔒 Lock ${c.lock}</span>`);
+  if (c.freeze>0) statuses.push(`<span class="status-badge status-freeze" data-status-key="freeze" data-status-value="${c.freeze}">❄ Frozen ${c.freeze}</span>`);
+  if (c.blind>0) statuses.push(`<span class="status-badge status-blind" data-status-key="blind" data-status-value="${c.blind}">👁 Blind ${c.blind}</span>`);
+  if (c.shield>0) statuses.push(`<span class="status-badge status-shield" data-status-key="shield" data-status-value="${c.shield}">🛡 ${c.shield}</span>`);
   el.innerHTML = statuses.join('');
+}
+
+const STATUS_HELP = {
+  poison: { title: 'Poison', text: (v) => `Start of turn: take ${v} damage, then Poison drops by 1.` },
+  bleed: { title: 'Bleed', text: (v) => `End of turn: take ${v} damage, then Bleed drops by 1.` },
+  burn: { title: 'Burn', text: (v) => `When you play a card: take ${v * 2} damage, then Burn drops by 1.` },
+  lock: { title: 'Lock', text: (v) => `When dice are rolled: lose up to ${v} dice, then Lock drops by the same amount.` },
+  freeze: { title: 'Frozen', text: (v) => `When dice are rolled: up to ${v} dice showing above 1 are forced to 1.` },
+  blind: { title: 'Blind', text: (v) => `When dice are rolled: up to ${v} dice are hidden this turn.` },
+  shield: { title: 'Shield', text: (v) => `Blocks incoming HP damage first. Current shield: ${v}.` },
+};
+
+let activeStatusBadge = null;
+
+function positionStatusTooltip(tooltipEl, badgeEl) {
+  const rect = badgeEl.getBoundingClientRect();
+  const ttRect = tooltipEl.getBoundingClientRect();
+  const top = Math.max(8, rect.top - ttRect.height - 8);
+  const left = Math.min(window.innerWidth - ttRect.width - 8, Math.max(8, rect.left + rect.width / 2 - ttRect.width / 2));
+  tooltipEl.style.top = `${top}px`;
+  tooltipEl.style.left = `${left}px`;
+}
+
+function showStatusTooltip(badgeEl) {
+  const key = badgeEl.dataset.statusKey;
+  const value = parseInt(badgeEl.dataset.statusValue || '0', 10);
+  const help = STATUS_HELP[key];
+  const tooltipEl = document.getElementById('status-tooltip');
+  if (!help || !tooltipEl) return;
+
+  tooltipEl.innerHTML = `<div class="status-tooltip-title">${help.title}</div><div>${help.text(value)}</div>`;
+  tooltipEl.hidden = false;
+  positionStatusTooltip(tooltipEl, badgeEl);
+  activeStatusBadge = badgeEl;
+}
+
+function hideStatusTooltip() {
+  const tooltipEl = document.getElementById('status-tooltip');
+  if (!tooltipEl) return;
+  tooltipEl.hidden = true;
+  activeStatusBadge = null;
+}
+
+function setupStatusTooltips() {
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+  document.addEventListener('mouseover', (evt) => {
+    if (!supportsHover) return;
+    const badge = evt.target.closest('.status-badge[data-status-key]');
+    if (!badge) return;
+    showStatusTooltip(badge);
+  });
+
+  document.addEventListener('mouseout', (evt) => {
+    if (!supportsHover) return;
+    const badge = evt.target.closest('.status-badge[data-status-key]');
+    if (!badge) return;
+    if (evt.relatedTarget && badge.contains(evt.relatedTarget)) return;
+    hideStatusTooltip();
+  });
+
+  document.addEventListener('click', (evt) => {
+    const badge = evt.target.closest('.status-badge[data-status-key]');
+    if (badge) {
+      if (activeStatusBadge === badge) hideStatusTooltip();
+      else showStatusTooltip(badge);
+      return;
+    }
+    if (!evt.target.closest('#status-tooltip')) hideStatusTooltip();
+  });
+
+  window.addEventListener('resize', () => {
+    if (!activeStatusBadge) return;
+    const tooltipEl = document.getElementById('status-tooltip');
+    if (tooltipEl && !tooltipEl.hidden) positionStatusTooltip(tooltipEl, activeStatusBadge);
+  });
+
+  document.addEventListener('scroll', () => {
+    if (!activeStatusBadge) return;
+    const tooltipEl = document.getElementById('status-tooltip');
+    if (tooltipEl && !tooltipEl.hidden) positionStatusTooltip(tooltipEl, activeStatusBadge);
+  }, true);
 }
 
 function renderDice() {
@@ -3705,7 +3883,11 @@ function renderTrainingModal() {
 function buyTraining(type, cost) {
   if (G.gold < cost) return;
   G.gold -= cost;
-  if (type==='hand') { G.trainingHandLevel=(G.trainingHandLevel||0)+1; log(`Hand size improved: now +${G.trainingHandLevel}.`,'system'); }
+  if (type==='hand') {
+    G.trainingHandLevel=(G.trainingHandLevel||0)+1;
+    G.trainingHand = G.trainingHandLevel;
+    log(`Hand size improved: now +${G.trainingHandLevel}.`,'system');
+  }
   else if (type==='hp') {
     G.trainingHpLevel=(G.trainingHpLevel||0)+1;
     G.maxHp+=5; G.hp=Math.min(G.maxHp,G.hp+5);
@@ -3729,9 +3911,9 @@ function buyTraining(type, cost) {
 // ============================================================
 const TUTORIAL_STEPS = [
   {
-    id: 'first_town',
-    title: 'Welcome to Ascus',
-    text: 'This is your home base. Rest to recover HP, manage your deck in Inventory, train with Thessa to improve your stats, and eventually unlock the Shop and Blacksmith.',
+    id: 'first_combat',
+    title: 'Tutorial Combat',
+    text: 'This optional fight teaches the combat loop. You can still use click-to-select and Play Card, or drag a die directly onto a card to play it.',
   },
   {
     id: 'deck_basics',
@@ -3841,10 +4023,147 @@ function showThessaTownIntro(outcome = 'defeat') {
 }
 
 // ============================================================
+// SAVE/LOAD SYSTEM
+// ============================================================
+
+const SAVE_KEY = 'loadedBones_autosave';
+const SAVE_VERSION = 1;
+
+function serializeGameState() {
+  // Convert Sets to arrays for JSON serialization
+  const saveData = {
+    version: SAVE_VERSION,
+    timestamp: Date.now(),
+    G: {
+      ...G,
+      unlockedBiomes: Array.from(G.unlockedBiomes || []),
+    },
+    screen: document.querySelector('.screen.active')?.id || 'title-screen',
+  };
+  return saveData;
+}
+
+function deserializeGameState(saveData) {
+  if (!saveData || saveData.version !== SAVE_VERSION) {
+    console.warn('Invalid or outdated save data');
+    return false;
+  }
+  
+  G = {
+    ...saveData.G,
+    unlockedBiomes: new Set(saveData.G.unlockedBiomes || []),
+  };
+  return true;
+}
+
+function autoSave() {
+  try {
+    const saveData = serializeGameState();
+    localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
+    log('Game saved.', 'system');
+    return true;
+  } catch (err) {
+    console.error('Failed to save game:', err);
+    log('Failed to save game.', 'system');
+    return false;
+  }
+}
+
+function hasSave() {
+  return localStorage.getItem(SAVE_KEY) !== null;
+}
+
+function loadSave() {
+  try {
+    const saved = localStorage.getItem(SAVE_KEY);
+    if (!saved) return false;
+    const saveData = JSON.parse(saved);
+    return deserializeGameState(saveData) ? saveData : false;
+  } catch (err) {
+    console.error('Failed to load save:', err);
+    return false;
+  }
+}
+
+function loadAndResume() {
+  const saveData = loadSave();
+  if (!saveData) {
+    alert('No save found! Starting a new game.');
+    showCharCreate();
+    return;
+  }
+  
+  // Resume from town screen
+  showTown();
+  log(`Welcome back, ${G.name}!`, 'system');
+}
+
+function exportSave() {
+  const saveData = serializeGameState();
+  const dataStr = JSON.stringify(saveData, null, 2);
+  const dataBlob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(dataBlob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `LoadedBones_${G.name}_${new Date().toISOString().slice(0, 10)}.json`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+  log('Save file downloaded.', 'system');
+}
+
+function importSave() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json';
+  input.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const saveData = JSON.parse(event.target.result);
+        if (deserializeGameState(saveData)) {
+          log(`Loaded save: ${G.name}`, 'system');
+          showTown();
+        } else {
+          alert('Invalid save file format');
+        }
+      } catch (err) {
+        console.error('Failed to import save:', err);
+        alert('Failed to load save file: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+  });
+  input.click();
+}
+
+function deleteSave() {
+  if (confirm('Are you sure you want to delete your save? This cannot be undone.')) {
+    localStorage.removeItem(SAVE_KEY);
+    alert('Save deleted.');
+    location.reload();
+  }
+}
+
+// ============================================================
 // INIT
 // ============================================================
 window.addEventListener('load', () => {
   setDiff('normal');
+  setupStatusTooltips();
+  document.addEventListener('click', (evt) => {
+    if (!evt.target.closest('#town-xp-track')) hideTownXpTooltip();
+  });
+  
+  // Show Continue button if save exists
+  if (hasSave()) {
+    document.getElementById('continue-btn').style.display = 'inline-block';
+  }
+  
   log('Welcome to LOADED BONES.', 'story');
   log('In Loaded Bones, you will use your magical dice to activate spellcards to ensure victory on your adventures. Try each class, refine your strategy, and triumph!', 'story');
 });
