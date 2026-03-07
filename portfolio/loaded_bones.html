@@ -1,0 +1,3703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOADED BONES</title>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0b08;
+  --parchment: #c8a96e;
+  --parchment-dark: #8b6914;
+  --ink: #1a1208;
+  --blood: #7a1c1c;
+  --blood-bright: #c0392b;
+  --gold: #d4a017;
+  --gold-light: #f0c040;
+  --bone: #d4c8a8;
+  --bone-dim: #a09070;
+  --teal: #2a6b5e;
+  --teal-light: #3d9e8a;
+  --shadow: rgba(0,0,0,0.7);
+  --card-bg: #1e1a14;
+  --card-border: #5a4520;
+  --common: #a0a0a0;
+  --uncommon: #5ba55b;
+  --rare: #4a80c4;
+  --heroic: #9b59b6;
+  --legendary: #e67e22;
+  --celestial: #e74c3c;
+  --status-poison: #27ae60;
+  --status-bleed: #c0392b;
+  --status-burn: #e67e22;
+  --status-lock: #7f8c8d;
+  --status-freeze: #3498db;
+  --status-blind: #f1c40f;
+  --status-shield: #95a5a6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--bone);
+  font-family: 'Crimson Pro', Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(122,28,28,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(42,107,94,0.06) 0%, transparent 50%);
+}
+
+/* =================== SCROLLING LOG =================== */
+#log-panel {
+  position: fixed; top:0; right:0; width:340px; height:100vh;
+  background: rgba(13,11,8,0.97);
+  border-left: 1px solid var(--card-border);
+  display: flex; flex-direction: column;
+  z-index: 100;
+  overflow: hidden;
+}
+#log-title {
+  padding: 12px 16px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--bone-dim);
+  border-bottom: 1px solid var(--card-border);
+  text-transform: uppercase;
+}
+#log-entries {
+  flex:1; overflow-y: auto; padding: 10px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--card-border) transparent;
+}
+#log-entries::-webkit-scrollbar { width: 4px; }
+#log-entries::-webkit-scrollbar-thumb { background: var(--card-border); border-radius: 2px; }
+.log-entry {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 3px 0;
+  border-bottom: 1px solid rgba(90,69,32,0.2);
+  animation: fadeIn 0.3s ease;
+}
+.log-entry.player { color: var(--teal-light); }
+.log-entry.enemy { color: #c96060; }
+.log-entry.system { color: var(--bone-dim); font-style: italic; }
+.log-entry.victory { color: var(--gold-light); font-weight: 600; }
+.log-entry.defeat { color: var(--blood-bright); }
+.log-entry.loot { color: #a0d0a0; }
+.log-entry.story { color: var(--parchment); font-style: italic; font-size: 12px; }
+
+/* =================== MAIN LAYOUT =================== */
+#main {
+  margin-right: 340px;
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+/* =================== SCREENS =================== */
+.screen { 
+  display: none; 
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100vh;
+  padding: 20px;
+}
+.screen.active { display: flex; }
+
+/* =================== TITLE SCREEN =================== */
+#title-screen {
+  justify-content: center;
+  background: radial-gradient(ellipse at center, rgba(122,28,28,0.15) 0%, transparent 70%);
+}
+.title-logo {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: clamp(60px, 10vw, 100px);
+  color: var(--parchment);
+  text-shadow: 0 0 40px rgba(200,169,110,0.4), 0 4px 8px rgba(0,0,0,0.8);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+@keyframes titleGlow {
+  from { text-shadow: 0 0 30px rgba(200,169,110,0.3), 0 4px 8px rgba(0,0,0,0.8); }
+  to   { text-shadow: 0 0 60px rgba(200,169,110,0.6), 0 4px 8px rgba(0,0,0,0.8); }
+}
+.title-subtitle {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.title-bones {
+  display: flex; gap: 30px; margin-bottom: 50px;
+  opacity: 0.3;
+  font-size: 28px;
+}
+
+/* =================== BUTTONS =================== */
+.btn {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: 1px solid var(--card-border);
+  background: transparent;
+  color: var(--parchment);
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.btn::before {
+  content: '';
+  position: absolute; inset:0;
+  background: var(--parchment);
+  transform: translateX(-100%);
+  transition: transform 0.2s;
+  z-index: -1;
+}
+.btn:hover::before { transform: translateX(0); }
+.btn:hover { color: var(--ink); border-color: var(--parchment); }
+.btn.primary { border-color: var(--gold); color: var(--gold-light); }
+.btn.primary::before { background: var(--gold); }
+.btn.primary:hover { color: var(--ink); }
+.btn.danger { border-color: var(--blood); color: #e07070; }
+.btn.danger::before { background: var(--blood); }
+.btn.danger:hover { color: var(--bone); }
+.btn.small { padding: 7px 16px; font-size: 11px; }
+.btn:disabled { opacity: 0.35; cursor: not-allowed; pointer-events: none; }
+
+/* =================== FORMS =================== */
+.form-group { margin-bottom: 20px; width: 100%; max-width: 360px; }
+.form-label {
+  display: block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-bottom: 8px;
+}
+input[type="text"] {
+  width: 100%;
+  background: rgba(30,26,20,0.8);
+  border: 1px solid var(--card-border);
+  color: var(--parchment);
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input[type="text"]:focus { border-color: var(--gold); }
+
+/* =================== PANELS =================== */
+.panel {
+  background: rgba(20,17,12,0.9);
+  border: 1px solid var(--card-border);
+  padding: 20px;
+  position: relative;
+}
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 3px; left: 3px; right: 3px; bottom: 3px;
+  border: 1px solid rgba(90,69,32,0.3);
+  pointer-events: none;
+}
+.panel-title {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 22px;
+  color: var(--parchment);
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.section-label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(90,69,32,0.4);
+}
+
+/* =================== CLASS CARDS =================== */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 700px;
+  width: 100%;
+}
+@media (max-width: 600px) { .class-grid { grid-template-columns: repeat(2,1fr); } }
+.class-card {
+  border: 1px solid var(--card-border);
+  padding: 16px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  background: var(--card-bg);
+}
+.class-card:hover, .class-card.selected {
+  border-color: var(--parchment);
+  background: rgba(200,169,110,0.08);
+  transform: translateY(-2px);
+}
+.class-card.selected { border-color: var(--gold); }
+.class-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.class-fencer { color: #4dd0e1; }
+.class-knight { color: #ef5350; }
+.class-cleric { color: #ffca28; }
+.class-warlock { color: #ab47bc; }
+.class-druid { color: #66bb6a; }
+.class-rogue { color: #f06292; }
+.class-desc {
+  font-size: 12px;
+  color: var(--bone-dim);
+  line-height: 1.4;
+}
+.class-hp {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  color: var(--blood-bright);
+  margin-top: 6px;
+}
+
+/* =================== TOWN SCREEN =================== */
+#town-screen {
+  padding: 24px;
+  width: 100%;
+}
+.town-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--card-border);
+}
+.player-title {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 28px;
+  color: var(--parchment);
+}
+.player-meta {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: var(--bone-dim);
+  margin-top: 4px;
+}
+.stats-row {
+  display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px;
+}
+.stat-box {
+  background: rgba(20,17,12,0.8);
+  border: 1px solid var(--card-border);
+  padding: 8px 14px;
+  min-width: 80px;
+  text-align: center;
+}
+.stat-label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 9px; letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-bottom: 2px;
+}
+.stat-value { font-size: 18px; font-weight: 600; }
+.stat-hp { color: var(--blood-bright); }
+.stat-gold { color: var(--gold-light); }
+.stat-xp { color: var(--teal-light); }
+.stat-level { color: var(--parchment); }
+
+.town-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 700px) { .town-grid { grid-template-columns: 1fr; } }
+.town-action {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.town-action:hover { border-color: var(--parchment); background: rgba(200,169,110,0.06); }
+.town-action.locked { opacity: 0.4; cursor: not-allowed; }
+.town-action-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 13px; letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--parchment);
+  margin-bottom: 4px;
+}
+.town-action-desc { font-size: 13px; color: var(--bone-dim); }
+.town-action-icon {
+  position: absolute; top: 14px; right: 16px;
+  font-size: 22px; opacity: 0.4;
+}
+
+/* =================== HEALTH BAR =================== */
+.health-bar-wrap { margin: 6px 0; }
+.health-bar-label {
+  display: flex; justify-content: space-between;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--bone-dim);
+  margin-bottom: 3px;
+}
+.health-bar-track {
+  height: 8px;
+  background: rgba(60,40,20,0.8);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+.health-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blood) 0%, var(--blood-bright) 100%);
+  transition: width 0.4s ease;
+}
+.shield-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5577aa 0%, #7799cc 100%);
+  transition: width 0.4s ease;
+}
+
+/* =================== DICE =================== */
+.dice-area {
+  display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0;
+}
+.die {
+  width: 56px; height: 56px;
+  background: var(--parchment);
+  border: 2px solid var(--parchment-dark);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+  box-shadow: 2px 3px 6px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.3);
+  user-select: none;
+}
+.die:hover { transform: translateY(-3px); box-shadow: 2px 6px 10px rgba(0,0,0,0.7); }
+.die.selected { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 0 12px rgba(212,160,23,0.6); }
+.die.hidden { background: #2a2520; border-color: #443520; }
+.die.rolling { animation: rollDie 0.4s ease; }
+@keyframes rollDie {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  25%  { transform: rotateX(90deg) rotateY(45deg); }
+  50%  { transform: rotateX(180deg) rotateY(90deg); }
+  75%  { transform: rotateX(270deg) rotateY(135deg); }
+  100% { transform: rotateX(360deg) rotateY(180deg); }
+}
+.die-pips {
+  display: grid;
+  grid-template: repeat(3,1fr) / repeat(3,1fr);
+  width: 38px; height: 38px;
+  padding: 2px;
+}
+.pip {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--ink);
+  align-self: center;
+  justify-self: center;
+  transition: background 0.2s;
+}
+.die.hidden .pip { background: transparent; }
+.die-label {
+  position: absolute; bottom: -18px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px; color: var(--bone-dim);
+  text-align: center; width: 100%;
+}
+.die-index-label {
+  position: absolute; top: -16px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px; color: var(--bone-dim);
+  text-align: center; width: 100%;
+}
+
+/* =================== CARDS =================== */
+.hand-area {
+  display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0;
+}
+.card {
+  width: 130px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 10px 10px 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  min-height: 130px;
+  display: flex; flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.7); }
+.card.selected {
+  border-color: var(--gold);
+  box-shadow: 0 0 14px rgba(212,160,23,0.5);
+  transform: translateY(-8px);
+}
+.card.unplayable { opacity: 0.4; cursor: not-allowed; }
+.card-rarity-bar {
+  height: 3px;
+  border-radius: 2px 2px 0 0;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+.card-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--parchment);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.card-desc {
+  font-size: 11px;
+  color: var(--bone-dim);
+  line-height: 1.35;
+  flex: 1;
+}
+.card-limit-bar {
+  margin-top: 6px;
+  height: 4px;
+  background: rgba(60,40,20,0.8);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.card-limit-fill {
+  height: 100%;
+  background: var(--teal-light);
+  transition: width 0.3s;
+}
+.card-limit-text {
+  font-family: 'Courier Prime', monospace;
+  font-size: 9px; color: var(--teal-light);
+  margin-top: 2px;
+}
+.card-reusable-badge {
+  position: absolute; bottom: 6px; right: 6px;
+  font-size: 9px;
+  color: var(--gold);
+  font-family: 'Courier Prime', monospace;
+  letter-spacing: 1px;
+}
+
+/* Rarity colors */
+.rarity-1 { background: var(--common); }
+.rarity-2 { background: var(--uncommon); }
+.rarity-3 { background: var(--rare); }
+.rarity-4 { background: var(--heroic); }
+.rarity-5 { background: var(--legendary); }
+.rarity-6 { background: var(--celestial); }
+
+/* =================== COMBAT SCREEN =================== */
+#combat-screen { width: 100%; padding: 0; }
+.combat-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  min-height: 100vh;
+}
+.combatant-panel {
+  padding: 20px;
+  border-right: 1px solid var(--card-border);
+  display: flex; flex-direction: column;
+}
+.combatant-panel.enemy-side {
+  background: rgba(122,28,28,0.05);
+  border-right: none;
+  border-left: 1px solid var(--card-border);
+}
+.combatant-name {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 24px;
+  color: var(--parchment);
+  margin-bottom: 4px;
+}
+.combatant-name.enemy { color: #c06060; }
+.legendary-badge {
+  display: inline-block;
+  font-family: 'Courier Prime', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--legendary);
+  border: 1px solid var(--legendary);
+  padding: 2px 6px;
+  margin-bottom: 6px;
+  vertical-align: middle;
+}
+
+.status-row {
+  display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0;
+}
+.status-badge {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+.status-poison { background: rgba(39,174,96,0.2); border-color: var(--status-poison); color: var(--status-poison); }
+.status-bleed { background: rgba(192,57,43,0.2); border-color: var(--status-bleed); color: var(--status-bleed); }
+.status-burn { background: rgba(230,126,34,0.2); border-color: var(--status-burn); color: var(--status-burn); }
+.status-lock { background: rgba(127,140,141,0.2); border-color: var(--status-lock); color: var(--status-lock); }
+.status-freeze { background: rgba(52,152,219,0.2); border-color: var(--status-freeze); color: var(--status-freeze); }
+.status-blind { background: rgba(241,196,15,0.2); border-color: var(--status-blind); color: var(--status-blind); }
+.status-shield { background: rgba(149,165,166,0.2); border-color: var(--status-shield); color: var(--status-shield); }
+
+.combat-controls {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--card-border);
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.round-display {
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--card-border);
+  border-top: 1px solid var(--card-border);
+  margin: 10px 0;
+}
+.round-label {
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--bone-dim);
+}
+.round-num { font-size: 22px; color: var(--parchment); font-weight: 600; }
+
+/* =================== COMBAT PHASE BANNER =================== */
+.phase-banner {
+  position: fixed; top: 0; left: 0; right: 340px;
+  text-align: center;
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  padding: 8px;
+  z-index: 200;
+  transition: all 0.3s;
+}
+.phase-player { background: rgba(42,107,94,0.9); color: var(--teal-light); }
+.phase-enemy { background: rgba(122,28,28,0.9); color: #e07070; }
+.phase-system { background: rgba(30,26,20,0.95); color: var(--bone-dim); }
+
+/* =================== MODAL / OVERLAY =================== */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none; align-items: center; justify-content: center;
+  z-index: 500;
+  padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  max-width: 560px; width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 28px;
+  position: relative;
+  animation: modalIn 0.25s ease;
+}
+@keyframes modalIn {
+  from { opacity:0; transform: translateY(20px); }
+  to { opacity:1; transform: translateY(0); }
+}
+.modal h2 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 26px;
+  color: var(--parchment);
+  margin-bottom: 16px;
+}
+
+/* =================== STORY SCREEN =================== */
+#story-screen {
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+.story-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--parchment);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: storyFade 1.2s ease forwards;
+}
+@keyframes storyFade {
+  from { opacity:0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* =================== SHOP / BLACKSMITH =================== */
+.shop-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 12px;
+}
+@media (max-width: 550px) { .shop-grid { grid-template-columns: repeat(2,1fr); } }
+.shop-card { cursor: pointer; }
+.shop-card.sold { opacity: 0.35; cursor: not-allowed; }
+.card-price {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  color: var(--gold-light);
+  margin-top: 6px;
+}
+.card-price.cant-afford { color: #888; }
+
+/* =================== ADVENTURE SCREEN =================== */
+#adventure-screen { width: 100%; padding: 20px; }
+.biome-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; max-width: 600px;
+}
+.biome-card {
+  border: 1px solid var(--card-border);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--card-bg);
+  text-align: center;
+}
+.biome-card:hover { border-color: var(--parchment); background: rgba(200,169,110,0.07); }
+.biome-card.locked { opacity: 0.3; cursor: not-allowed; }
+.biome-name {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--parchment);
+  margin-bottom: 4px;
+}
+.biome-tier {
+  font-size: 11px; color: var(--bone-dim);
+}
+.biome-icon { font-size: 24px; margin-bottom: 8px; }
+
+/* =================== INVENTORY =================== */
+.inventory-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 10px;
+}
+@media (max-width: 600px) { .inventory-grid { grid-template-columns: repeat(2,1fr); } }
+.inv-card-wrap { position: relative; }
+.inv-card-count {
+  position: absolute; top: 6px; right: 6px;
+  background: var(--blood);
+  color: white;
+  font-family: 'Courier Prime', monospace;
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.inv-card-in-deck {
+  position: absolute; bottom: 6px; right: 6px;
+  color: var(--teal-light);
+  font-size: 9px;
+  font-family: 'Courier Prime', monospace;
+}
+
+/* =================== XP BAR =================== */
+.xp-bar-wrap { width: 100%; margin: 6px 0; }
+.xp-bar-track {
+  height: 6px;
+  background: rgba(42,107,94,0.3);
+  border: 1px solid rgba(42,107,94,0.5);
+  overflow: hidden;
+}
+.xp-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%);
+  transition: width 0.5s ease;
+}
+
+/* =================== ANIMATIONS =================== */
+@keyframes fadeIn {
+  from { opacity:0; } to { opacity:1; }
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%      { transform: translateX(-4px); }
+  40%      { transform: translateX(4px); }
+  60%      { transform: translateX(-3px); }
+  80%      { transform: translateX(3px); }
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; } 50% { opacity: 0.5; }
+}
+.animate-damage { animation: shake 0.3s ease; }
+.animate-heal { animation: pulse 0.5s ease; }
+
+/* =================== MISC =================== */
+.separator {
+  border: none;
+  border-top: 1px solid var(--card-border);
+  margin: 16px 0;
+}
+.text-center { text-align: center; }
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.flex-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.spacer { flex: 1; }
+
+.knight-total {
+  font-family: 'Courier Prime', monospace;
+  font-size: 14px;
+  color: var(--blood-bright);
+  margin: 6px 0;
+}
+.rogue-lucky {
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: #f06292;
+  margin: 6px 0;
+}
+
+/* difficulty */
+.diff-easy { color: #66bb6a; }
+.diff-normal { color: var(--gold-light); }
+.diff-punishing { color: var(--blood-bright); }
+
+.info-text {
+  font-size: 13px; color: var(--bone-dim);
+  line-height: 1.6;
+  margin: 8px 0;
+}
+.gold-text { color: var(--gold-light); }
+.danger-text { color: var(--blood-bright); }
+.success-text { color: var(--teal-light); }
+
+.win-streak-badge {
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  padding: 4px 10px;
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  display: inline-block;
+  margin: 6px 0;
+}
+
+</style>
+</head>
+<body>
+
+<!-- LOG PANEL -->
+<div id="log-panel">
+  <div id="log-title">⚔ Combat Log</div>
+  <div id="log-entries"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+  <!-- TITLE SCREEN -->
+  <div id="title-screen" class="screen active">
+    <div style="text-align:center; animation: fadeIn 1.2s ease">
+      <div class="title-bones">🦴 ✦ 🎲 ✦ 🦴</div>
+      <div class="title-logo">Loaded Bones</div>
+      <div class="title-subtitle">A Dice & Card Adventure</div>
+      <button class="btn primary" style="font-size:15px; padding:14px 40px; letter-spacing:4px" onclick="showCharCreate()">Begin</button>
+    </div>
+  </div>
+
+  <!-- CHAR CREATE SCREEN -->
+  <div id="charcreate-screen" class="screen" style="padding:40px 24px; max-width:780px; margin:0 auto; width:100%">
+    <div class="panel-title" style="font-family:'UnifrakturMaguntia',cursive;font-size:32px;color:var(--parchment);margin-bottom:24px;">Create Your Adventurer</div>
+
+    <div class="form-group">
+      <label class="form-label">Your Name</label>
+      <input type="text" id="player-name-input" placeholder="Enter your name..." maxlength="24">
+    </div>
+
+    <div class="section-label" style="margin-bottom:12px;">Choose Your Class</div>
+    <div class="class-grid" id="class-grid">
+      <!-- populated by JS -->
+    </div>
+
+    <div style="margin-top:28px;">
+      <div class="section-label" style="margin-bottom:12px;">Difficulty</div>
+      <div class="flex-row">
+        <button class="btn small diff-easy" id="diff-easy" onclick="setDiff('easy')">Easy</button>
+        <button class="btn small diff-normal" id="diff-normal" onclick="setDiff('normal')">Normal</button>
+        <button class="btn small diff-punishing" id="diff-punishing" onclick="setDiff('punishing')">Punishing</button>
+        <span class="info-text" id="diff-desc" style="margin-left:8px">Keep all loot on defeat</span>
+      </div>
+    </div>
+
+    <div style="margin-top:30px">
+      <button class="btn primary" onclick="startGame()">Begin Your Tale</button>
+      <button class="btn" style="margin-left:12px" onclick="showScreen('title-screen')">Back</button>
+    </div>
+  </div>
+
+  <!-- STORY SCREEN -->
+  <div id="story-screen" class="screen"></div>
+
+  <!-- STARTER CARDS SCREEN -->
+  <div id="starter-screen" class="screen" style="padding:40px 24px; max-width:780px; margin:0 auto; width:100%">
+    <div class="panel-title" style="font-family:'UnifrakturMaguntia',cursive;font-size:28px;color:var(--parchment);margin-bottom:8px;">Thessa's Welcome Gift</div>
+    <div class="info-text" style="margin-bottom:8px;color:var(--parchment);">Thessa places a wooden box on the counter and opens it, revealing various basic equipment.</div>
+    <div class="info-text" style="margin-bottom:8px;color:var(--parchment);">"Before you head out there," she says, "you should take some proper gear. Can't have you fighting with just scraps."</div>
+    <div class="info-text" style="margin-bottom:20px;color:var(--parchment);font-style:italic;">"Pick any three. Consider them a welcome gift to Ascus."</div>
+    <div class="section-label" id="starter-pick-label">Choose 3 items (0/3 chosen)</div>
+    <div id="starter-cards-grid" style="display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;"></div>
+    <button class="btn primary" id="starter-confirm-btn" onclick="confirmStarterCards()" disabled>Take Your Equipment</button>
+    <button class="btn" style="margin-left:10px" onclick="autoSelectStarterCards()">Auto-Select 3</button>
+  </div>
+
+  <!-- TOWN SCREEN -->
+  <div id="town-screen" class="screen">
+    <div class="town-header">
+      <div>
+        <div class="player-title" id="town-player-name">Adventurer</div>
+        <div class="player-meta" id="town-player-meta">Fencer · Plains Tier 1</div>
+      </div>
+      <div>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-label">HP</div>
+            <div class="stat-value stat-hp" id="town-hp">40/40</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Level</div>
+            <div class="stat-value stat-level" id="town-level">1</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Gold</div>
+            <div class="stat-value stat-gold" id="town-gold">0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">XP</div>
+            <div class="stat-value stat-xp" id="town-xp">0</div>
+          </div>
+        </div>
+        <div class="xp-bar-wrap mt-8">
+          <div class="xp-bar-track">
+            <div class="xp-bar-fill" id="xp-bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="town-grid">
+      <div class="town-action" onclick="goAdventure()">
+        <div class="town-action-name">Adventure</div>
+        <div class="town-action-desc">Head into the wilderness and fight enemies</div>
+        <div class="town-action-icon">⚔️</div>
+      </div>
+      <div class="town-action" onclick="doRest()">
+        <div class="town-action-name">Rest</div>
+        <div class="town-action-desc">Sleep at the tavern and recover all HP</div>
+        <div class="town-action-icon">🛏️</div>
+      </div>
+      <div class="town-action" onclick="openInventory()">
+        <div class="town-action-name">Inventory & Deck</div>
+        <div class="town-action-desc">Manage your cards and active deck</div>
+        <div class="town-action-icon">🃏</div>
+      </div>
+      <div class="town-action" id="town-shop" onclick="openShop()">
+        <div class="town-action-name">Shop</div>
+        <div class="town-action-desc">Buy cards from the Naukin shopkeep</div>
+        <div class="town-action-icon">🏪</div>
+      </div>
+      <div class="town-action" id="town-blacksmith" onclick="openBlacksmith()">
+        <div class="town-action-name">Blacksmith</div>
+        <div class="town-action-desc">Forge 2 identical cards into an upgrade</div>
+        <div class="town-action-icon">🔨</div>
+      </div>
+      <div class="town-action" onclick="openTraining()">
+        <div class="town-action-name">Training</div>
+        <div class="town-action-desc">Improve your stats with Thessa's coaching</div>
+        <div class="town-action-icon">💪</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADVENTURE DESTINATION SCREEN -->
+  <div id="adventure-screen" class="screen">
+    <div class="panel-title" style="font-family:'UnifrakturMaguntia',cursive;font-size:28px;margin-bottom:16px;">Choose Your Destination</div>
+    <div class="info-text" style="margin-bottom:20px">Select a biome to adventure in. Win 10 battles to face the legendary boss!</div>
+    <div class="biome-grid" id="biome-grid"></div>
+    <div style="margin-top:20px">
+      <button class="btn" onclick="showTown()">Return to Town</button>
+    </div>
+  </div>
+
+  <!-- COMBAT SCREEN -->
+  <div id="combat-screen" class="screen">
+    <div class="phase-banner phase-system" id="phase-banner">Your Turn</div>
+    <div style="padding-top:36px;"></div>
+    <div class="combat-layout">
+      <!-- PLAYER SIDE -->
+      <div class="combatant-panel">
+        <div class="combatant-name" id="c-player-name">Hero</div>
+        <div id="c-player-class-label" style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:2px;color:var(--bone-dim);margin-bottom:8px;"></div>
+        <div class="health-bar-wrap">
+          <div class="health-bar-label">
+            <span>HP</span>
+            <span id="c-player-hp-text">40/40</span>
+          </div>
+          <div class="health-bar-track">
+            <div class="health-bar-fill" id="c-player-hp-bar" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="health-bar-wrap">
+          <div class="health-bar-label">
+            <span>Shield</span>
+            <span id="c-player-shield-text">0</span>
+          </div>
+          <div class="health-bar-track">
+            <div class="shield-bar-fill" id="c-player-shield-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="status-row" id="c-player-status"></div>
+        <div id="c-player-class-info" class="info-text" style="margin:8px 0;font-size:12px;"></div>
+        
+        <div class="section-label mt-16">Your Dice</div>
+        <div class="dice-area" id="player-dice-area"></div>
+        
+        <div class="section-label mt-16">Hand</div>
+        <div class="hand-area" id="player-hand-area"></div>
+        
+        <div class="combat-controls" id="player-controls">
+          <button class="btn small primary" id="btn-play-card" onclick="playSelectedCard()" disabled>Play Card</button>
+          <button class="btn small" onclick="endPlayerTurn()">End Turn</button>
+        </div>
+      </div>
+
+      <!-- ENEMY SIDE -->
+      <div class="combatant-panel enemy-side">
+        <div id="legendary-badge-area"></div>
+        <div class="combatant-name enemy" id="c-enemy-name">Enemy</div>
+        <div class="health-bar-wrap">
+          <div class="health-bar-label">
+            <span>HP</span>
+            <span id="c-enemy-hp-text">20/20</span>
+          </div>
+          <div class="health-bar-track">
+            <div class="health-bar-fill" id="c-enemy-hp-bar" style="width:100%"></div>
+          </div>
+        </div>
+        <div class="health-bar-wrap">
+          <div class="health-bar-label">
+            <span>Shield</span>
+            <span id="c-enemy-shield-text">0</span>
+          </div>
+          <div class="health-bar-track">
+            <div class="shield-bar-fill" id="c-enemy-shield-bar" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="status-row" id="c-enemy-status"></div>
+
+        <div class="section-label mt-16">Enemy Abilities</div>
+        <div id="enemy-cards-display" style="margin-top:8px;"></div>
+
+        <div class="section-label mt-16">Round</div>
+        <div class="round-display">
+          <div class="round-label">Round</div>
+          <div class="round-num" id="round-number">1</div>
+        </div>
+        <div id="win-streak-display" style="margin-top:8px;"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalIfOutside(event)">
+  <div class="modal" id="modal-content">
+  </div>
+</div>
+
+<script>
+// ============================================================
+// DATA: ALL CARDS
+// ============================================================
+const RARITY_LABELS = {1:'Common',2:'Uncommon',3:'Rare',4:'Heroic',5:'Legendary',6:'Celestial'};
+const RARITY_COLORS = {1:'#a0a0a0',2:'#5ba55b',3:'#4a80c4',4:'#9b59b6',5:'#e67e22',6:'#e74c3c'};
+
+// Card format: [name, description, id, rarity]
+// We store only base cards (no x/y/X/Y/XY variants for shop display)
+const ALL_CARDS = [
+["Afflict","Apply 2 Poison, Apply 1 Blind","010000710000126100",2],
+["Annihilation","Deal 20 damage, Apply 2 Bleed, Apply 2 Poison","02-0-130-01-25-00-125300",6],
+["Apocalypse","Deal 30 damage, Apply 2 Burn","03-0-135-01-30-00-220000",6],
+["Bash","Remove all Shield, Deal damage equal to double the Shield removed","04-0-000-01-00-00-Z00001",2],
+["Bite","Deal damage equal to die value","05-0-000-01-E0-00-000000",1],
+["Bellow","Deal damage equal to die value, On 5-6: Apply 1 Frozen","06-0-000-01-E0-35-410000",1],
+["Blood Pact","Deal 12 damage, Heal 4 HP, Sacrifice 3 HP","07-0-115-01-12-00-840093",4],
+["Blood Ritual","Sacrifice 5 HP, Deal 15 damage, Apply 2 Poison","08-0-000-71-00-00-Z00003",4],
+["Boulder Toss","Deal 12 damage, Apply 2 Lock","09-0-000-33-12-00-320000",3],
+["Chain Lightning","Deal quadruple die value damage","10-0-000-03-A4-00-000000",4],
+["Charge","Deal 8 damage, Gain 3 Shield (limit 15)","11-0-115-01-08-00-730000",2],
+["Chomp","Deal 10 damage (limit 8)","12-0-108-01-10-00-000000",2],
+["Claw Swipe","Deal damage equal to die value + 3, On 6: Apply 1 Bleed","13-0-200-01-E3-16-510000",2],
+["Cleansing Fire","Heal 8 HP, Remove all negative effects","14-0-000-01-00-00-Z00004",3],
+["Club","Deal damage equal to die value","15-0-000-01-E0-00-000000",1],
+["Control","Sacrifice 2 HP, draw a new card, roll a new die","16-0-000-71-00-00-Z00005",3],
+["Curse","Apply 2 Poison, Apply 2 Blind","17-0-000-71-00-00-122600",3],
+["Dagger","Deal 3 damage, Apply 1 Poison","18-0-000-01-03-00-910100",2],
+["Dark Blessing","Heal 8 HP, Apply 2 Poison to opponent (limit 18)","19-0-118-01-00-00-Z00006",3],
+["Dark Aegis","Gain Shield equal to die value + 4, Apply 1 Poison to opponent","20-0-200-02-E4-00-7D1100",4],
+["Desperation","Deal 10 damage, Sacrifice 5 HP (exactly 1)","21-0-000-71-10-00-900005",3],
+["Divebomb","Deal 8 damage + die value, Apply 1 Bleed","22-0-222-01-E8-00-510000",3],
+["Dominate","Apply 3 Lock, Apply 2 Blind","23-0-000-01-00-00-326200",4],
+["Earthshatter","Deal 15 damage, Apply 3 Lock, Apply 2 Frozen (limit 22)","24-0-122-01-15-00-334200",4],
+["Earthquake","Deal die value damage, Apply Lock = die/3 rounded down","25-0-000-01-E0-00-Z00007",3],
+["Evade","Gain 4 Shield, Remove 1 negative effect (reusable)","26-0-200-01-00-00-Z00008",3],
+["Execution","Deal 22 damage, Apply 4 Bleed (limit 25)","27-0-125-01-22-00-540000",5],
+["Flail","Deal damage equal to die value, Sacrifice 1 HP","28-0-000-01-E0-00-910001",2],
+["Flame Burst","Deal triple die value damage (odd only)","29-0-000-03-A3-00-000000",3],
+["Flame Strike","Deal double die value damage, Apply 1 Poison (odd only)","30-0-000-03-A2-00-910100",3],
+["Flame Wall","Gain Shield equal to die value + 5, Deal 5 damage (reusable)","31-0-200-02-E5-00-Z00009",4],
+["Fortify","Gain 3 Shield","32-0-000-01-00-00-730000",1],
+["Frosted Dagger","Deal damage equal to die value, On 6: Apply 1 Poison","33-0-000-01-E0-16-910100",1],
+["Frosted Spear","Deal 3 damage (reusable, min 3)","34-0-200-33-03-00-000000",1],
+["Gore","Deal damage equal to die value, On 6: Apply 1 Bleed","35-0-000-01-E0-16-510000",1],
+["Haunting Wail","Apply 3 Blind, Apply 1 Lock","36-0-000-01-00-00-630310",3],
+["Hellfire","Deal quintuple die value damage (odd only)","37-0-000-03-A5-00-000000",5],
+["Howl","Heal 2 HP (limit 8)","38-0-108-01-00-00-820000",1],
+["Ice Magic","Heal 2 HP, Remove all negative effects (max 2)","39-0-000-22-00-00-Z00010",2],
+["Immolate","Deal 10 damage, Apply 2 Poison, Sacrifice 2 HP (limit 10)","40-0-110-01-10-00-122092",3],
+["Jab","Deal damage equal to die value","41-0-000-01-E0-00-000000",1],
+["Jade Spear","Deal 6 damage, Apply 1 Lock, Apply 1 Frozen","42-0-200-01-06-00-310410",3],
+["Judgement","Deal 18 damage, Heal 6 HP, Apply 2 Lock (exactly 6)","43-0-000-76-18-00-860320",4],
+["Life Drain","Deal damage equal to die value, Heal half damage dealt","44-0-200-01-E0-00-Z00011",2],
+["Lightning Bolt","Deal triple die value damage","45-0-104-01-A3-00-000000",3],
+["Lightning Storm","Deal 20 damage, Apply 2 Blind (limit 20)","46-0-120-01-20-00-620000",4],
+["Maul","Deal damage equal to die value + 5","47-0-200-01-E5-00-000000",2],
+["Meteor","Deal 15 damage, Apply 2 Bleed (reusable, min 5)","48-0-200-35-15-00-520000",4],
+["Mirror Hide","Remove all negative effects from self, Apply them to opponent","49-0-000-01-00-00-Z00012",3],
+["Necromancy","Deal 6 damage, Apply 1 Bleed, Apply 1 Poison","50-0-200-01-06-00-511100",3],
+["Petrify","Apply 2 Frozen, Apply 2 Lock","51-0-222-01-00-00-422300",4],
+["Phase Step","Gain 6 Shield, Apply 2 Blind to opponent (once per combat)","52-0-222-01-00-00-Z00013",3],
+["Phoenix Rising","Heal 10 HP, Gain 10 Shield, Remove all negative effects (exactly 1)","53-0-000-71-00-00-Z00014",5],
+["Plague Breath","Apply 3 Poison, Apply 2 Bleed","54-0-200-01-00-00-132500",3],
+["Reflecting Scales","Deal 4 damage, Apply 2 Blind","55-0-000-01-04-00-620000",2],
+["Roar","Apply 1 Lock (exactly 1)","56-0-000-71-00-00-310000",2],
+["Rupture","Deal 2 damage, Apply 1 Bleed, Apply 1 Poison","57-0-000-01-02-00-511100",1],
+["Rusty Dagger","Deal 2 damage (odd only)","58-0-000-03-02-00-000000",1],
+["Screech","Apply 2 Blind, Apply 1 Lock","59-0-000-01-00-00-621310",3],
+["Shield","Gain Shield equal to half the die value (even only)","64-0-000-02-00-00-7Y0000",2],
+["Shortbow","Deal double die value damage (odd only)","65-0-103-01-A2-00-000000",1],
+["Snipe","Deal 8 damage, Apply 1 Bleed (limit 15)","66-0-115-01-08-00-510000",2],
+["Soul Rend","Deal 8 damage, Apply 1 Bleed (reusable, min 4)","67-0-200-34-08-00-510000",3],
+["Spectral Strike","Deal damage equal to die value, On 5-6: Apply 1 Bleed","68-0-000-01-E0-35-510000",2],
+["Splinter","Sacrifice 2 HP, Create 2 dice with half the input die value","69-0-000-01-00-00-Z00072",2],
+["Stone Hide","Gain Shield equal to die value + 2 (reusable, even only)","70-0-200-02-E2-00-7B0000",3],
+["Sunstrike","Deal 4 damage, Apply 1 Blind (limit 4)","71-0-104-01-04-00-610000",2],
+["Swipe","Deal 3 damage, Heal 1 HP (limit 5)","72-0-105-01-03-00-810000",1],
+["Talon Strike","Deal damage equal to die value + 3, On 6: Apply 1 Bleed (reusable)","73-0-200-01-E3-16-510000",2],
+["Thunderclap","Deal 18 damage, Apply 2 Blind (limit 25)","74-0-125-01-18-00-620000",4],
+["Torture","Deal 15 damage, Apply 2 Bleed, Apply 2 Lock (limit 20)","75-0-120-01-15-00-525320",4],
+["Totem","Gain 5 Shield, Heal 2 HP (exactly 2)","76-0-000-72-00-00-758200",2],
+["Trample","Deal damage equal to die value, On 6: Apply 1 Lock","77-0-000-01-E0-16-310000",1],
+["Tremor","Deal damage equal to die value, Apply Lock = die/3 rounded down","78-0-000-01-E0-00-Z00015",2],
+["Whip Crack","Deal damage equal to die value + 5, Apply 1 Lock","79-0-000-01-E5-00-310000",3],
+["Wind Slash","Deal damage equal to die value + 4, On 6: Apply 2 Bleed (reusable)","80-0-200-01-E4-16-520000",3],
+["Wooden Sword","Deal damage equal to die value","81-0-000-01-E0-00-000000",1],
+["Slingshot","Deal 3 damage","82-0-000-01-03-00-000000",1],
+["Small Stone","Deal damage equal to die value (reusable)","83-0-200-01-E0-00-000000",1],
+["Makeshift Shield","Gain Shield equal to die value","84-0-000-01-00-00-7X0000",1],
+["Bandage","Heal 3 HP","85-0-000-01-00-00-830000",1],
+["Sharpened Stick","Deal 2 damage, Apply 1 Bleed","86-0-000-01-02-00-510000",1],
+];
+
+// Build lookup
+const CARD_BY_NAME = {};
+ALL_CARDS.forEach(([name,desc,id,rarity]) => {
+  CARD_BY_NAME[name] = {name,desc,id,rarity};
+});
+
+// Starter cards
+const STARTER_CARDS = ["Wooden Sword","Slingshot","Small Stone","Makeshift Shield","Bandage","Sharpened Stick"];
+
+// Starting deck
+const STARTING_DECK_NAMES = ["Club","Rusty Dagger"];
+
+// ============================================================
+// DATA: ENEMIES  (name, hp, dice, biome, tier, cardNames[])
+// ============================================================
+const ENEMY_DATA = [
+  // Plains Tier 1
+  {name:"Wolf",hp:10,dice:2,biome:1,tier:1,cards:["Bite","Howl"]},
+  {name:"Giant Locust",hp:12,dice:2,biome:1,tier:1,cards:["Swipe","Swipe"]},
+  {name:"Naukin Outcast",hp:10,dice:2,biome:1,tier:1,cards:["Jab","Rusty Dagger"]},
+  // Plains Tier 2
+  {name:"Dire Wolves",hp:18,dice:3,biome:1,tier:2,cards:["Bite","Bite","Charge"]},
+  {name:"Prowling Dellinid",hp:16,dice:3,biome:1,tier:2,cards:["Charge","Gore","Bite"]},
+  {name:"Juvenile Auroc",hp:20,dice:3,biome:1,tier:2,cards:["Fortify","Reflecting Scales","Chomp"]},
+  // Plains Tier 3
+  {name:"Bovari Bandit",hp:30,dice:3,biome:1,tier:3,cards:["Shortbow","Dagger","Charge"]},
+  {name:"Roaming Gallox",hp:30,dice:4,biome:1,tier:3,cards:["Charge","Trample","Gore"]},
+  {name:"Lone Plainsdrake",hp:30,dice:4,biome:1,tier:3,cards:["Reflecting Scales","Reflecting Scales","Mirror Hide","Chomp"]},
+  // Tundra Tier 1
+  {name:"Blue Dellinid",hp:12,dice:2,biome:2,tier:1,cards:["Charge","Gore"]},
+  {name:"Khinari Exile",hp:14,dice:2,biome:2,tier:1,cards:["Shortbow","Frosted Dagger"]},
+  {name:"Territorial Whitespike",hp:16,dice:2,biome:2,tier:1,cards:["Gore","Bellow"]},
+  // Tundra Tier 2
+  {name:"Khinari Raider",hp:20,dice:3,biome:2,tier:2,cards:["Frosted Spear","Frosted Dagger","Ice Magic"]},
+  {name:"Tundra Boneguard",hp:24,dice:3,biome:2,tier:2,cards:["Splinter","Shield","Bash"]},
+  {name:"Alpha Whitespike",hp:22,dice:3,biome:2,tier:2,cards:["Gore","Bellow","Charge","Trample"]},
+  // Tundra Tier 3
+  {name:"Veteran Boneguard",hp:30,dice:4,biome:2,tier:3,cards:["Splinter","Shield","Bash","Frosted Spear"]},
+  {name:"Khinari Hunting Party",hp:30,dice:4,biome:2,tier:3,cards:["Splinter","Fortify","Ice Magic","Control","Frosted Spear"]},
+  {name:"Hungry Frost Wyrm",hp:28,dice:3,biome:2,tier:3,cards:["Bite","Bite","Bellow"]},
+  // Forest Tier 1
+  {name:"Naukin Scouts",hp:16,dice:3,biome:3,tier:1,cards:["Jab","Jab","Fortify"]},
+  {name:"Skittari Hunters",hp:18,dice:3,biome:3,tier:1,cards:["Snipe","Rusty Dagger"]},
+  {name:"Reclaimed Boneguard",hp:18,dice:3,biome:3,tier:1,cards:["Splinter","Shield","Bash"]},
+  // Forest Tier 2
+  {name:"Dire Bear",hp:28,dice:4,biome:3,tier:2,cards:["Swipe","Bite","Roar"]},
+  {name:"Khinari Bladedancer",hp:22,dice:4,biome:3,tier:2,cards:["Splinter","Snipe","Jab"]},
+  {name:"Naukin Sunstriker",hp:20,dice:4,biome:3,tier:2,cards:["Dagger","Sunstrike","Mirror Hide","Control"]},
+  // Forest Tier 3
+  {name:"Verdant Shepherd",hp:40,dice:4,biome:3,tier:3,cards:["Maul","Bellow","Jade Spear","Splinter"]},
+  {name:"Barkskin Colossus",hp:50,dice:4,biome:3,tier:3,cards:["Splinter","Swipe","Charge"]},
+  {name:"Emerald Lich",hp:35,dice:5,biome:3,tier:3,cards:["Necromancy","Afflict","Shield","Life Drain"]},
+  // Ruins Tier 1
+  {name:"Brass Golem",hp:24,dice:3,biome:4,tier:1,cards:["Bash","Shield","Fortify"]},
+  {name:"Skittari Looters",hp:22,dice:3,biome:4,tier:1,cards:["Dagger","Shortbow","Control"]},
+  {name:"Bloated Zombie",hp:26,dice:3,biome:4,tier:1,cards:["Bite","Rupture","Life Drain"]},
+  // Ruins Tier 2
+  {name:"Iron Bulwark",hp:40,dice:4,biome:4,tier:2,cards:["Bash","Shield","Fortify"]},
+  {name:"Stone Drake",hp:38,dice:4,biome:4,tier:2,cards:["Chomp","Reflecting Scales","Petrify"]},
+  {name:"Lost Myrrim",hp:36,dice:4,biome:4,tier:2,cards:["Spectral Strike","Phase Step","Haunting Wail"]},
+  // Ruins Tier 3
+  {name:"Fell Lich",hp:60,dice:5,biome:4,tier:3,cards:["Necromancy","Afflict","Life Drain","Soul Rend"]},
+  {name:"Blighted Auroc",hp:65,dice:4,biome:4,tier:3,cards:["Gore","Chomp","Plague Breath","Charge"]},
+  {name:"Khinari Subjugator",hp:62,dice:5,biome:4,tier:3,cards:["Snipe","Frosted Spear","Dominate","Splinter"]},
+  // Slopes Tier 1
+  {name:"Steppe Whitespike",hp:28,dice:3,biome:5,tier:1,cards:["Gore","Bellow","Trample"]},
+  {name:"Caghoul Shaman",hp:26,dice:4,biome:5,tier:1,cards:["Lightning Bolt","Totem","Jab"]},
+  {name:"Naukin Outrider",hp:24,dice:4,biome:5,tier:1,cards:["Shortbow","Dagger","Evade"]},
+  // Slopes Tier 2
+  {name:"Hill Giant",hp:48,dice:4,biome:5,tier:2,cards:["Maul","Boulder Toss","Earthquake"]},
+  {name:"Black Roc",hp:45,dice:4,biome:5,tier:2,cards:["Divebomb","Talon Strike","Screech"]},
+  {name:"Whitespike Patriarch",hp:50,dice:4,biome:5,tier:2,cards:["Gore","Bellow","Charge","Trample"]},
+  // Slopes Tier 3
+  {name:"Thunder Giant",hp:85,dice:5,biome:5,tier:3,cards:["Maul","Thunderclap","Boulder Toss","Fortify"]},
+  {name:"Quakewyrm",hp:83,dice:5,biome:5,tier:3,cards:["Chomp","Tremor","Stone Hide","Earthshatter"]},
+  {name:"Caghoul Skyshaker",hp:80,dice:5,biome:5,tier:3,cards:["Lightning Storm","Chain Lightning","Totem","Wind Slash"]},
+  // Pit Tier 1
+  {name:"Condemned",hp:38,dice:4,biome:6,tier:1,cards:["Flail","Chains","Desperation"]},
+  {name:"Bovari Thrall",hp:40,dice:4,biome:6,tier:1,cards:["Gore","Blood Pact","Flame Strike"]},
+  {name:"Hatebound Imp",hp:36,dice:4,biome:6,tier:1,cards:["Claw Swipe","Curse","Immolate"]},
+  // Pit Tier 2
+  {name:"Blooded Khinari",hp:62,dice:5,biome:6,tier:2,cards:["Snipe","Frosted Spear","Blood Ritual","Splinter"]},
+  {name:"Hatebound Priest",hp:60,dice:5,biome:6,tier:2,cards:["Dark Blessing","Afflict","Flame Burst","Life Drain"]},
+  {name:"Condemned Taskmaster",hp:64,dice:4,biome:6,tier:2,cards:["Whip Crack","Snipe","Torture","Bash"]},
+  // Pit Tier 3
+  {name:"Pit Lord",hp:115,dice:5,biome:6,tier:3,cards:["Annihilation","Hellfire","Dark Aegis"]},
+  {name:"Blood Judge",hp:112,dice:5,biome:6,tier:3,cards:["Execution","Blood Ritual","Judgement","Life Drain"]},
+  {name:"Prophet of Fire",hp:110,dice:6,biome:6,tier:3,cards:["Apocalypse","Meteor","Cleansing Fire","Phoenix Rising","Flame Wall"]},
+];
+
+const ENEMY_FLAVOR = {
+  // Plains Tier 1
+  "Wolf": "A lean, hungry wolf slinks out of the tall grass. Its yellow eyes track your every movement. The plains wolves have grown bold since the Naukin closed their borders.",
+  "Giant Locust": "A locust the size of a dog. Its mandibles click rhythmically, legs twitching with coiled energy. The plains are plagued with them this season.",
+  "Naukin Outcast": "A ratman in tattered clothes, fur matted with grime. The Naukin are good by nature, but an outcast has been severed from their kin — dangerous in its desperation and shame.",
+  // Plains Tier 2
+  "Dire Wolves": "A pack moves as one, circling in near-silence. Dire wolves are twice the weight of a normal wolf and far smarter. They have learned to separate prey from safety before striking.",
+  "Prowling Dellinid": "A massive dark cougar, long-bodied and low to the ground. The Dellinid are forest and mountain hunters by nature, but this one has strayed onto the plains — perhaps following blood.",
+  "Juvenile Auroc": "A young Auroc — what the locals call a Plainsdrake — golden-scaled and long-legged like a crocodile built to gallop. Juvenile, yes. Still dangerous enough to break a man in half.",
+  // Plains Tier 3
+  "Bovari Bandit": "A Bovari deserter, bison-headed and broad, with four hands and a grudge. The Hornlords of the Ironhorn fiefdom would pay to see this one returned. You'd rather not find out why.",
+  "Roaming Gallox": "A Gallox bull — the great bovine mounts of the Bovari people — gone feral. Without a rider to direct it, its aggression has nowhere to go but outward.",
+  "Lone Plainsdrake": "A fully grown Auroc. Its golden scales catch the sun as it circles you, reflecting light in disorienting patterns. The locals say they're almost intelligent. Almost.",
+  // Tundra Tier 1
+  "Blue Dellinid": "A Dellinid of the north, its dark fur shot through with pale blue that blends eerily with snow and ice. It moves without sound on the frozen ground.",
+  "Khinari Exile": "Pale-skinned and sharp-eyed, this Khinari was cast out from their tundra bastion. Their fallen noble race is corrupted by depravity, but exiles are perhaps the most unpredictable of all.",
+  "Territorial Whitespike": "A ram with massively curled horns and broad shovel tusks built for digging through permafrost. It lowers its head at your approach. You are standing in its territory.",
+  // Tundra Tier 2
+  "Khinari Raider": "Lean and cold-eyed, a Khinari warrior in the raider caste — the second step on a violent progression. Their conflicting gods demand blood sacrifice. Today you are the offering.",
+  "Tundra Boneguard": "An armored undead skeleton, morning star in hand, still moving through the tundra cold with no apparent purpose beyond violence. The bones are frosted over. It does not slow.",
+  "Alpha Whitespike": "The dominant ram of a highland herd. Its horns have been notched by a dozen battles. It snorts a cloud of frozen breath and stamps once — a warning that something already decided.",
+  // Tundra Tier 3
+  "Veteran Boneguard": "A Boneguard that has endured long enough to earn the title. Its armor is scored with countless old wounds. Something keeps it moving that has nothing to do with muscle or will.",
+  "Khinari Hunting Party": "Three — no, four of them emerge from the white. A Khinari hunting party, organized and silent. They were looking for prey. They found you instead.",
+  "Hungry Frost Wyrm": "The apex predator of the tundra: an ice dragon, lean from a hard winter, moving with the sluggish menace of something that has never truly needed to hurry.",
+  // Forest Tier 1
+  "Naukin Scouts": "A trio of Naukin scouts — ratmen in tight formation, watchful and fast. The Naukin are reclusive and organized, and they do not appreciate trespassers in their forest.",
+  "Skittari Hunters": "Six-armed spider-folk, primitive but tactical. The Skittari scavenge ruins and hunt ancient paths through this forest. They have already spotted you.",
+  "Reclaimed Boneguard": "A skeleton draped in moss and root-growth, the forest slowly reclaiming what the undead should never have kept. Its morning star still swings true.",
+  // Forest Tier 2
+  "Dire Bear": "An enormous bear with a scar across its muzzle and ruin in its eyes. The forest here is old and strange, and so are the things that live within it.",
+  "Khinari Bladedancer": "A Khinari warrior of the bladedancer caste — fluid, elegant, and savage. They have been practicing their art on whatever wanders these woods.",
+  "Naukin Sunstriker": "An elite Naukin gliding assassin — one of the Sunstrikers, their most feared warriors. It drops from the canopy above without a sound. You barely had time to see it.",
+  // Forest Tier 3
+  "Verdant Shepherd": "One of the Verdant Shepherds: ancient tree-folk, vast and slow in mind but terrible in wrath. It has decided this forest section is not for you. It is difficult to argue with a walking tree.",
+  "Barkskin Colossus": "A massive creature armored in living bark, moving through the old-growth like it owns everything under the canopy. It probably does.",
+  "Emerald Lich": "An Emerald Lich — an archmage of the old world whose body has been consumed by nature-corruption. Vines thread through its ribcage. Its magic smells like rot and old rain.",
+  // Ruins Tier 1
+  "Brass Golem": "A brass automaton, still animated by whatever enchantment the old civilization baked into it. The Skittari worship these ruins; this golem protects them.",
+  "Skittari Looters": "Spider-folk in scavenged metal armor, picking through ancient rubble. They carry weapons that don't quite fit their hands. They don't care.",
+  "Bloated Zombie": "A shambling corpse, swollen and foul, dragging itself through the ruin corridors. Whoever it was in life, that is long gone.",
+  // Ruins Tier 2
+  "Iron Bulwark": "A golem of iron rather than brass — heavier, newer, more purposeful. It was built to guard something specific. It no longer remembers what. It guards you now.",
+  "Stone Drake": "A dragon of petrified scales, ancient enough that the stone has begun to grow through its flesh. Its eyes still burn.",
+  "Lost Myrrim": "A Myrrim — mushroom folk — wandering the ruins in silence, its spore-crown pulsing with faint light. The lost variant has separated from its grove. They become strange when alone.",
+  // Ruins Tier 3
+  "Fell Lich": "A Fell Lich — once a great archmage, now an ancient undead with too much memory and too much power. It regards you the way a man regards a moth: with mild curiosity before ending the nuisance.",
+  "Blighted Auroc": "An Auroc consumed by corruption, its golden scales blackened and split, plague-breath fouling the air around it. It should not still be moving. It is.",
+  "Khinari Subjugator": "A Khinari warrior of the subjugator caste — near the top of a very bloody hierarchy. It has broken others to its will. You are next on its list.",
+  // Slopes Tier 1
+  "Steppe Whitespike": "A highland Whitespike, larger and more aggressive than the plains variants, its massive curled horns worn to bone-white points from years of impact.",
+  "Caghoul Shaman": "A Caghoul shaman — six-limbed, spine-protruding, unable to stand fully upright. It moves in a terrible crouch. Its god has given it lightning, and it believes this blessing enthusiastically.",
+  "Naukin Outrider": "A Naukin outrider on patrol along the slope passes. The Naukin organization extends into every biome they claim. You have entered claimed territory.",
+  // Slopes Tier 2
+  "Hill Giant": "A Hill Giant, massive and dim-eyed, with arms like tree trunks and a boulder already in hand. It looks at you the way it looks at obstacles: as problems to be removed by force.",
+  "Black Roc": "A Black Roc, a variant of the great eagles — wingspan like a ship's sail, talons like short swords. It has been watching you from above for the last mile.",
+  "Whitespike Patriarch": "The oldest bull of the high slopes, its horns so massively grown they curve back around. It has been fighting everything on these slopes since before you were born.",
+  // Slopes Tier 3
+  "Thunder Giant": "A Thunder Giant — where Hill Giants are strong, Thunder Giants are apocalyptic. The ground vibrates with its footsteps. It has already decided you are an insect.",
+  "Quakewyrm": "A Quakewyrm: a dragon that causes earthquakes. You felt the tremors twenty minutes ago. Now you understand what made them.",
+  "Caghoul Skyshaker": "A Caghoul blessed by its god — a Skyshaker, the highest divine caste. The spine protrusion on its back pulses with lightning. Its religion demands total destruction of the unblessed.",
+  // Pit Tier 1
+  "Condemned": "A person corrupted by hatred until something demonic replaced whatever they once were. The Condemned are the first stage — still recognizably human in shape, utterly inhuman in purpose.",
+  "Bovari Thrall": "A Bovari enslaved by the Pit's influence, its four hands bearing weapons of rage. The Hornlords would weep. The Brutarchs would demand retribution.",
+  "Hatebound Imp": "A lesser demon of the Pit — a Hatebound Imp, born from rage and sustained by it. Small, fast, and absolutely committed to your destruction.",
+  // Pit Tier 2
+  "Blooded Khinari": "A Khinari corrupted by the Pit into the Blooded caste — their pale skin marked by violence, sharp blue eyes filled with something no longer entirely mortal.",
+  "Hatebound Priest": "A Hatebound Priest, conducting dark rites in the Pit's deepest passages. It heals itself from your suffering. The blessing it has received is a hideous inversion of grace.",
+  "Condemned Taskmaster": "A Condemned who has risen by breaking others. The Taskmaster wears its authority like a wound — everything about it is designed to inflict.",
+  // Pit Tier 3
+  "Pit Lord": "The supreme warlord of the Pit — a Pit Lord, vast and armored in hatred made physical. It has waged war since before Ascus existed. You are a very small obstacle in a very long campaign.",
+  "Blood Judge": "The Blood Judge: executioner, condemner, the final word on worthiness in the Pit's brutal hierarchy. It has condemned thousands. It regards you with professional interest.",
+  "Prophet of Fire": "The Prophet of Fire — a dark religious leader burning with divine purpose and literal flame. It has seen the end of things and found it beautiful. It would like to share the experience with you.",
+};
+
+function getEnemyFlavor(name) {
+  // Try exact match first, then strip legendary prefix
+  const clean = name.replace(/^⚡ LEGENDARY /, '');
+  return ENEMY_FLAVOR[clean] || ENEMY_FLAVOR[name] || null;
+}
+
+const SHOP_PRICE_RANGES = {1:[30,45],2:[90,130],3:[220,300],4:[500,700],5:[1000,1400],6:[2500,3500]};
+
+// ============================================================
+// GAME STATE
+// ============================================================
+let G = {}; // global game state
+
+const CLASSES = [
+  {id:"fencer",name:"Fencer",color:"#4dd0e1",hp:14,desc:"Once per turn, may reroll one die."},
+  {id:"knight",name:"Knight",color:"#ef5350",hp:14,desc:"Roll dice one at a time. Match your limit exactly for powerful boons; exceed it and lose your turn."},
+  {id:"cleric",name:"Cleric",color:"#ffca28",hp:15,desc:"When rolling doubles, heal by that amount."},
+  {id:"warlock",name:"Warlock",color:"#ab47bc",hp:13,desc:"When applying status effects, apply that many plus your level."},
+  {id:"druid",name:"Druid",color:"#66bb6a",hp:15,desc:"Once per turn, \"plant\" a die. Next turn it blooms into 2 dice of the same value."},
+  {id:"rogue",name:"Rogue",color:"#f06292",hp:13,desc:"Choose a lucky number before each fight. Whenever it's rolled, deal 2 bonus damage."},
+];
+
+const BIOME_NAMES = {
+  1: 'Plains',
+  2: 'Tundra',
+  3: 'Forest',
+  4: 'Ruins',
+  5: 'Slopes',
+  6: 'Pit',
+};
+
+const BIOME_ICONS = {
+  1: '🌾',
+  2: '❄️',
+  3: '🌲',
+  4: '🏛️',
+  5: '⛰️',
+  6: '🔥',
+};
+
+function rand(min, max) { return min + Math.floor(Math.random() * (max - min + 1)); }
+function randItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+// ============================================================
+// CARD LOGIC (parse ID -> resolve effects)
+// ============================================================
+function sanitizeId(id) { return String(id).replace(/-/g,''); }
+
+function parseCardId(id) {
+  const s = sanitizeId(id);
+  if (s.length < 18) return null;
+  return {
+    family: s.slice(0,2),
+    tier:   s.slice(2,3),
+    limit:  s.slice(3,6),
+    dieReq: s.slice(6,8),
+    damage: s.slice(8,10),
+    trigger:s.slice(10,12),
+    status: s.slice(12,18),
+  };
+}
+
+function checkDieReq(code, val) {
+  if (code === '01') return true;
+  if (code === '02') return val % 2 === 0;
+  if (code === '03') return val % 2 === 1;
+  if (code[0] === '7' && /\d/.test(code[1])) return val === parseInt(code[1]);
+  if (code[0] === '3' && /\d/.test(code[1])) return val >= parseInt(code[1]);
+  if (code[0] === '2' && /\d/.test(code[1])) return val <= parseInt(code[1]);
+  return true;
+}
+
+function checkTrigger(code, val) {
+  if (code === '00') return true;
+  if (code === '41') return val % 2 === 1;
+  if (code === '42') return val % 2 === 0;
+  if (code[0] === '1' && /\d/.test(code[1])) return val === parseInt(code[1]);
+  if (code[0] === '2' && /\d/.test(code[1])) return val <= parseInt(code[1]);
+  if (code[0] === '3' && /\d/.test(code[1])) return val >= parseInt(code[1]);
+  return false;
+}
+
+function evalDamage(code, val) {
+  if (code === '00') return 0;
+  if (code[0] === 'E' && /\d/.test(code[1])) return val + parseInt(code[1]);
+  if (code[0] === 'A' && /\d/.test(code[1])) return val * parseInt(code[1]);
+  if (/^\d+$/.test(code)) return parseInt(code);
+  return 0;
+}
+
+function amountFromToken(t, val) {
+  if (!t || t === '0') return 0;
+  if (/^\d+$/.test(t)) return parseInt(t);
+  if (t === 'X') return val;
+  if (t === 'Y') return Math.ceil(val/2);
+  if (t === 'Z') return Math.floor(val/2);
+  if ('ABCDEF'.includes(t)) return val + ('ABCDEF'.indexOf(t)+1);
+  return 0;
+}
+
+function getLimitValue(limit) {
+  if (limit.length !== 3) return 0;
+  if (limit[0] === '1') return parseInt(limit.slice(1));
+  return 0;
+}
+function isReusable(limit) { return limit.length===3 && limit[0]==='2'; }
+function isOncePerCombat(limit) { return limit === '222'; }
+
+function applyShieldedDamage(target, amount) {
+  if (amount <= 0) return 0;
+  let remaining = amount;
+  if (target.shield > 0) {
+    const blocked = Math.min(target.shield, remaining);
+    target.shield -= blocked;
+    remaining -= blocked;
+  }
+  if (remaining > 0) target.hp -= remaining;
+  return remaining;
+}
+
+// Special Z-card effects
+function resolveZEffect(zCode, source, target, dieVal) {
+  const z = parseInt(zCode);
+  let msg = '';
+  switch(z) {
+    case 1: { // bash: double shield damage
+      const dmg = source.shield * 2;
+      source.shield = 0;
+      const dealt = applyShieldedDamage(target, dmg);
+      msg = `dealt ${dealt} damage (Bash)`;
+      break;
+    }
+    case 2: { // bash x: double shield, keep half
+      const dmg = source.shield * 2;
+      const deal2 = applyShieldedDamage(target, dmg);
+      source.shield = Math.floor(source.shield / 2);
+      msg = `dealt ${deal2} damage (Bash x)`;
+      break;
+    }
+    case 3: { // blood ritual: sac 5hp, deal 15 dmg, apply 2 poison
+      source.hp -= 5;
+      const d = applyShieldedDamage(target, 15);
+      target.poison = (target.poison||0)+2;
+      msg = `sacrificed 5 HP, dealt ${d} damage, applied 2 Poison`;
+      break;
+    }
+    case 4: { // cleansing fire: heal 8, remove negs
+      const h = Math.min(source.maxHp-source.hp, 8);
+      source.hp += h;
+      source.poison=0;source.bleed=0;source.lock=0;source.freeze=0;source.blind=0;
+      msg = `healed ${h} HP, removed all negative effects`;
+      break;
+    }
+    case 5: { // control: sac 2 HP, draw card, add die
+      source.hp -= 2;
+      if (source.deck && source.deck.length > 0) {
+        const drawn = source.deck.pop();
+        source.hand.push(drawn);
+        msg = `sacrificed 2 HP, drew ${drawn.name}`;
+      } else msg = `sacrificed 2 HP, drew nothing (empty deck)`;
+      // add die
+      source.dicePool.push(rand(1,6));
+      break;
+    }
+    case 6: { // dark blessing: heal 8, apply 2 poison to opponent (limit handled outside)
+      const h2 = Math.min(source.maxHp-source.hp, 8);
+      source.hp += h2;
+      target.poison = (target.poison||0)+2;
+      msg = `healed ${h2} HP, applied 2 Poison to ${target.name}`;
+      break;
+    }
+    case 7: { // earthquake: lock = dieVal/3
+      const dmg3 = applyShieldedDamage(target, dieVal);
+      const lockAmt = Math.floor(dieVal/3);
+      if (lockAmt > 0) target.lock = (target.lock||0)+lockAmt;
+      msg = `dealt ${dmg3} damage, applied ${lockAmt} Lock`;
+      break;
+    }
+    case 8: { // evade: gain 4 shield, remove 1 neg
+      source.shield += 4;
+      // remove first negative
+      if (source.poison>0) { source.poison--; msg = `gained 4 Shield, removed 1 Poison`; }
+      else if (source.bleed>0) { source.bleed--; msg = `gained 4 Shield, removed 1 Bleed`; }
+      else if (source.lock>0) { source.lock--; msg = `gained 4 Shield, removed 1 Lock`; }
+      else if (source.freeze>0) { source.freeze--; msg = `gained 4 Shield, removed 1 Frozen`; }
+      else if (source.blind>0) { source.blind--; msg = `gained 4 Shield, removed 1 Blind`; }
+      else msg = `gained 4 Shield`;
+      break;
+    }
+    case 9: { // phase step: gain 6 shield, apply 2 blind to opponent
+      source.shield += 6;
+      target.blind = (target.blind||0)+2;
+      msg = `gained 6 Shield, applied 2 Blind to ${target.name}`;
+      break;
+    }
+    case 10: { // ice magic: heal 2, remove all negs
+      const h3 = Math.min(source.maxHp-source.hp, 2);
+      source.hp += h3;
+      source.poison=0;source.bleed=0;source.lock=0;source.freeze=0;
+      msg = `healed ${h3} HP, removed all negative effects`;
+      break;
+    }
+    case 11: { // life drain: die val damage, heal half
+      const d2 = applyShieldedDamage(target, dieVal);
+      const h4 = Math.ceil(dieVal/2);
+      source.hp = Math.min(source.maxHp, source.hp+h4);
+      msg = `dealt ${d2} damage, healed ${h4} HP`;
+      break;
+    }
+    case 12: { // mirror hide
+      const pp=target.poison||0,bl=target.bleed||0,lo=target.lock||0,fr=target.freeze||0,bi=target.blind||0;
+      target.poison+=(source.poison||0); source.poison=0;
+      target.bleed+=(source.bleed||0); source.bleed=0;
+      target.lock+=(source.lock||0); source.lock=0;
+      target.freeze+=(source.freeze||0); source.freeze=0;
+      target.blind+=(source.blind||0); source.blind=0;
+      msg = `transferred all negative effects to ${target.name}`;
+      break;
+    }
+    case 13: { // phase step (alias)
+      source.shield += 6;
+      target.blind = (target.blind||0)+2;
+      msg = `gained 6 Shield, applied 2 Blind to ${target.name}`;
+      break;
+    }
+    case 14: { // phoenix rising: heal 10, gain 10 shield, remove negs
+      source.hp = Math.min(source.maxHp, source.hp+10);
+      source.shield += 10;
+      source.poison=0;source.bleed=0;source.lock=0;source.freeze=0;source.blind=0;
+      msg = `healed 10 HP, gained 10 Shield, removed all negative effects`;
+      break;
+    }
+    case 15: { // tremor
+      const d3 = applyShieldedDamage(target, dieVal);
+      const lk = Math.floor(dieVal/3);
+      target.lock = (target.lock||0)+lk;
+      msg = `dealt ${d3} damage, applied ${lk} Lock`;
+      break;
+    }
+    case 72: case 73: case 74: case 75: case 76: case 77: { // splinter variants
+      const roundDown = (z===72||z===73||z===74);
+      const dice2 = (z===76||z===77) ? 3 : 2;
+      const sacHP = (z===74) ? 1 : 2;
+      const splitVal = roundDown ? Math.floor(dieVal/2) : Math.ceil(dieVal/2);
+      source.hp -= sacHP;
+      for (let i=0;i<dice2;i++) source.dicePool.push(splitVal);
+      msg = `sacrificed ${sacHP} HP, created ${dice2} dice showing ${splitVal}`;
+      break;
+    }
+    case 78: { // stone hide x: gain shield dieVal+4, remove 1 neg
+      source.shield += dieVal+4;
+      let r='nothing';
+      if(source.poison>0){source.poison--;r='1 Poison';}
+      else if(source.bleed>0){source.bleed--;r='1 Bleed';}
+      msg = `gained ${dieVal+4} Shield, removed ${r}`;
+      break;
+    }
+    case 79: { // stone hide xy: gain dieVal+6 shield, heal 2, remove all negs
+      source.shield+=dieVal+6;
+      source.hp=Math.min(source.maxHp,source.hp+2);
+      source.poison=0;source.bleed=0;source.lock=0;source.freeze=0;source.blind=0;
+      msg=`gained ${dieVal+6} Shield, healed 2 HP, removed all negative effects`;
+      break;
+    }
+    case 80: case 81: case 82: { // swipe x/X/XY: escalating
+      const base = (z===81)?2:3; const bonus = (z===82)?3:1;
+      source._swipeCount = (source._swipeCount||0)+1;
+      const dmg4 = base+(source._swipeCount-1)*bonus;
+      const d4 = applyShieldedDamage(target, dmg4);
+      const healAmt = (z===82)?3:1;
+      source.hp = Math.min(source.maxHp, source.hp+healAmt);
+      msg = `dealt ${d4} damage, healed ${healAmt} HP`;
+      break;
+    }
+    case 83: { // totem yy
+      source.shield+=7;source.hp=Math.min(source.maxHp,source.hp+4);
+      if(source.poison>0){source.poison--;} 
+      msg=`gained 7 Shield, healed 4 HP, removed 1 negative effect`;
+      break;
+    }
+    case 84: { // totem xy
+      source.shield+=8;source.hp=Math.min(source.maxHp,source.hp+5);
+      source.poison=0;source.bleed=0;source.lock=0;source.freeze=0;source.blind=0;
+      msg=`gained 8 Shield, healed 5 HP, removed all negative effects`;
+      break;
+    }
+    default:
+      msg = `special effect (Z${z})`;
+  }
+  return msg;
+}
+
+function resolveCardUse(source, target, card, dieVal) {
+  const info = parseCardId(card.id);
+  if (!info) return {ok:false, msg:"Invalid card ID."};
+
+  if (!checkDieReq(info.dieReq, dieVal)) return {ok:false, msg:`Requires ${descDieReq(info.dieReq)}, but die shows ${dieVal}.`};
+
+  const cardKey = card.name + '::' + card.id;
+  const isOPC = isOncePerCombat(info.limit);
+  if (isOPC && source.oncePerCombat.has(cardKey)) return {ok:false, msg:`${card.name} can only be used once per combat.`};
+
+  const limitVal = getLimitValue(info.limit);
+  let effectTriggersNow = true;
+  let chargeMsg = '';
+
+  if (limitVal > 0) {
+    if (!source.limitProgress[cardKey]) source.limitProgress[cardKey] = 0;
+    source.limitProgress[cardKey] += dieVal;
+    if (source.limitProgress[cardKey] < limitVal) {
+      effectTriggersNow = false;
+      chargeMsg = `${source.name} charges ${card.name} (${source.limitProgress[cardKey]}/${limitVal}).`;
+    } else {
+      source.limitProgress[cardKey] = 0;
+    }
+  }
+  if (isOPC) source.oncePerCombat.add(cardKey);
+
+  // burn on card play
+  if (source.burn > 0) {
+    source.hp -= source.burn * 2;
+    source.burn = Math.max(0, source.burn - 1);
+  }
+
+  if (!effectTriggersNow) return {ok:true, msg:chargeMsg, keepInHand:true};
+
+  // Check trigger
+  const trigMet = checkTrigger(info.trigger, dieVal);
+
+  // Z-special effects
+  if (info.status.startsWith('Z')) {
+    const zCode = info.status.slice(1);
+    // For legendary enemy, scale dieVal upward for Z damage calcs
+    const effectiveDie = (ADV.legendary && source === CB.enemy) ? Math.ceil(dieVal * 1.5) : dieVal;
+    const zMsg = resolveZEffect(zCode, source, target, effectiveDie);
+    return {ok:true, msg:`${source.name} uses ${card.name} with a ${dieVal}: ${zMsg}.`, keepInHand:false};
+  }
+
+  // Normal damage
+  const dmgAmt = evalDamage(info.damage, dieVal);
+  let hpDmg = 0;
+  if (dmgAmt > 0) {
+    const legendary_mult = (ADV.legendary && source === CB.enemy) ? 1.5 : 1;
+    hpDmg = applyShieldedDamage(target, Math.ceil(dmgAmt * legendary_mult));
+  }
+
+  // Status pairs
+  let statusMsgs = [];
+  if (trigMet) {
+    const sb = info.status;
+    for (let i=0; i<6; i+=2) {
+      const code = sb[i];
+      const tok = sb[i+1];
+      if (code === '0') continue;
+      let amt = amountFromToken(tok, dieVal);
+      if (amt <= 0) continue;
+
+      // Warlock bonus
+      if (source.classId === 'warlock' && '123456'.includes(code)) {
+        amt += source.level || 1;
+      }
+
+      if (code==='1') target.poison=(target.poison||0)+amt;
+      else if (code==='2') target.burn=(target.burn||0)+amt;
+      else if (code==='3') target.lock=(target.lock||0)+amt;
+      else if (code==='4') target.freeze=(target.freeze||0)+amt;
+      else if (code==='5') target.bleed=(target.bleed||0)+amt;
+      else if (code==='6') target.blind=(target.blind||0)+amt;
+      else if (code==='7') { source.shield+=amt; statusMsgs.push(`+${amt} Shield`); continue; }
+      else if (code==='8') {
+        const healed = Math.min(source.maxHp-source.hp, amt);
+        source.hp+=healed; statusMsgs.push(`+${healed} HP`); continue;
+      }
+      else if (code==='9') { source.hp-=amt; statusMsgs.push(`-${amt} HP (sacrifice)`); continue; }
+      statusMsgs.push(`+${amt} ${statusName(code)}`);
+    }
+  }
+
+  const reusable = isReusable(info.limit);
+  let msg = `${source.name} uses ${card.name} with a ${dieVal}`;
+  if (hpDmg > 0) msg += `, dealing ${hpDmg} HP damage`;
+  if (statusMsgs.length > 0) msg += `, ${statusMsgs.join(', ')}`;
+  msg += '.';
+
+  // Reusable cards go to discard after use (they'll be reshuffled back in)
+  return {ok:true, msg, keepInHand:false};
+}
+
+function statusName(code) {
+  const m = {'1':'Poison','2':'Burn','3':'Lock','4':'Freeze','5':'Bleed','6':'Blind'};
+  return m[code] || 'Status';
+}
+
+function descDieReq(code) {
+  if (code==='01') return 'Any';
+  if (code==='02') return 'Even';
+  if (code==='03') return 'Odd';
+  if (code[0]==='7') return `Exactly ${code[1]}`;
+  if (code[0]==='3') return `Min ${code[1]}`;
+  if (code[0]==='2') return `Max ${code[1]}`;
+  return 'Any';
+}
+
+// ============================================================
+// COMBATANT FACTORY
+// ============================================================
+function makeCombatant(name, maxHp, deckCards, handLimit, diceLimit, classId=null, level=1, currentHp=null) {
+  return {
+    name, maxHp, hp: currentHp??maxHp, shield:0,
+    poison:0, bleed:0, burn:0, lock:0, freeze:0, blind:0,
+    deck: [...deckCards], hand:[], discard:[],
+    dicePool:[], hiddenDice:[],
+    handLimit, diceLimit,
+    limitProgress:{}, oncePerCombat: new Set(),
+    classId, level,
+    classState: {
+      fencerUsed:false, druidUsed:false,
+      knightTotal:0, knightLocked:false,
+      druidPlanted:null,
+      rogueLucky: null,
+      _swipeCount:0
+    }
+  };
+}
+
+function drawToHandLimit(c) {
+  // Only draw enough cards to fill the hand; keep unplayed cards
+  const needed = Math.max(0, c.handLimit - c.hand.length);
+  for (let drawn = 0; drawn < needed; drawn++) {
+    if (c.deck.length === 0) {
+      if (c.discard.length === 0) break;
+      c.deck = c.discard.splice(0);
+      shuffle(c.deck);
+    }
+    // Draw from a random position for true random draw
+    const idx = Math.floor(Math.random() * c.deck.length);
+    c.hand.push(c.deck.splice(idx, 1)[0]);
+  }
+}
+
+function shuffle(arr) {
+  for (let i=arr.length-1;i>0;i--) {
+    const j=Math.floor(Math.random()*(i+1));
+    [arr[i],arr[j]]=[arr[j],arr[i]];
+  }
+}
+
+function rollDicePool(c) {
+  c.dicePool = Array.from({length: Math.max(0,c.diceLimit)}, () => rand(1,6));
+  c.hiddenDice = [];
+}
+
+function triggerStartOfTurn(c) {
+  let msgs = [];
+  if (c.poison > 0) {
+    const dmg = c.poison;
+    c.hp -= dmg;
+    c.poison = Math.max(0, c.poison-1);
+    msgs.push(`${c.name} takes ${dmg} poison damage`);
+  }
+  return msgs;
+}
+
+function triggerOnDiceRolled(c) {
+  let msgs = [];
+  if (c.lock > 0) {
+    const remove = Math.min(c.lock, c.dicePool.length);
+    c.dicePool.splice(0, remove);
+    c.lock = Math.max(0, c.lock-remove);
+    msgs.push(`${c.name} loses ${remove} dice (Lock)`);
+  }
+  if (c.freeze > 0) {
+    let frozen = 0;
+    for (let i=0;i<c.dicePool.length;i++) {
+      if (c.dicePool[i] > 1 && c.freeze > 0) {
+        c.dicePool[i] = 1;
+        c.freeze--;
+        frozen++;
+      }
+    }
+    if (frozen > 0) msgs.push(`${c.name}: ${frozen} dice frozen to 1`);
+  }
+  if (c.blind > 0 && c.dicePool.length > 0) {
+    const hidden = Math.min(c.blind, c.dicePool.length);
+    c.hiddenDice = Array.from({length:hidden}, (_,i) => c.dicePool.length-hidden+i);
+    c.blind = Math.max(0, c.blind-hidden);
+    msgs.push(`${c.name} is blinded: ${hidden} dice hidden`);
+  }
+  return msgs;
+}
+
+function triggerEndOfTurn(c) {
+  let msgs = [];
+  if (c.bleed > 0) {
+    const dmg = c.bleed;
+    c.hp -= dmg;
+    c.bleed = Math.max(0, c.bleed-1);
+    msgs.push(`${c.name} takes ${dmg} bleed damage`);
+  }
+  return msgs;
+}
+
+function applyDruidBloom(c) {
+  if (c.classId==='druid' && c.classState.druidPlanted !== null) {
+    const val = c.classState.druidPlanted;
+    c.dicePool.push(val, val);
+    c.classState.druidPlanted = null;
+    return [`Druid bloom: 2 dice showing ${val} added`];
+  }
+  return [];
+}
+
+// ============================================================
+// COMBAT STATE
+// ============================================================
+let CB = {}; // combat state
+
+function spawnEnemy(biome, tier, legendary=false) {
+  const pool = ENEMY_DATA.filter(e => e.biome===biome && e.tier===tier);
+  if (!pool.length) return null;
+  const base = randItem(pool);
+  const cards = base.cards.map(n => CARD_BY_NAME[n] || {name:n, desc:'?', id:'01-0-000-01-E0-00-000000', rarity:1});
+  let hp = base.hp;
+  if (legendary) hp = Math.ceil(hp*1.5);
+  return makeCombatant(
+    legendary ? `⚡ LEGENDARY ${base.name}` : base.name,
+    hp, cards, 3, base.dice
+  );
+}
+
+function resetCombatState(c) {
+  c.shield=0; c.limitProgress={}; c.oncePerCombat=new Set();
+  c.poison=0; c.bleed=0; c.burn=0; c.lock=0; c.freeze=0; c.blind=0;
+  if (c.classState) c.classState._swipeCount=0;
+}
+
+// ============================================================
+// PLAYER STATE
+// ============================================================
+function xpForLevel(lvl) {
+  const step = lvl-1;
+  return 800 + 600*step + 150*step*step;
+}
+
+function getPlayerHandLimit() {
+  return 2 + (G.trainingHand||0);
+}
+
+function getPlayerDiceLimit() { return 2; }
+
+// ============================================================
+// UI HELPERS
+// ============================================================
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+function log(msg, type='system') {
+  const el = document.getElementById('log-entries');
+  const div = document.createElement('div');
+  div.className = `log-entry ${type}`;
+  div.textContent = msg;
+  el.appendChild(div);
+  el.scrollTop = el.scrollHeight;
+  // Keep log to 200 entries
+  while (el.children.length > 200) el.removeChild(el.firstChild);
+}
+
+function clearLog() {
+  document.getElementById('log-entries').innerHTML = '';
+}
+
+function openModal(html) {
+  document.getElementById('modal-content').innerHTML = html;
+  document.getElementById('modal-overlay').classList.add('active');
+}
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('active');
+}
+function closeModalIfOutside(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+}
+
+function buildDieSVG(val, hidden=false, selected=false, idx=0) {
+  const PIP_POSITIONS = {
+    1:[[1,1]],
+    2:[[0,0],[2,2]],
+    3:[[0,0],[1,1],[2,2]],
+    4:[[0,0],[0,2],[2,0],[2,2]],
+    5:[[0,0],[0,2],[1,1],[2,0],[2,2]],
+    6:[[0,0],[1,0],[2,0],[0,2],[1,2],[2,2]],
+  };
+  const pips = (!hidden && PIP_POSITIONS[val]) ? PIP_POSITIONS[val] : [];
+  const size = 56;
+  const cellSize = 38/3;
+  const startX = (size-38)/2;
+  const startY = (size-38)/2;
+
+  let pipHTML = '';
+  if (hidden) {
+    pipHTML = `<text x="${size/2}" y="${size/2+6}" text-anchor="middle" font-size="18" fill="#443520" font-family="Courier Prime">?</text>`;
+  } else {
+    pips.forEach(([r,c]) => {
+      const cx = startX + c*cellSize + cellSize/2;
+      const cy = startY + r*cellSize + cellSize/2;
+      pipHTML += `<circle cx="${cx}" cy="${cy}" r="4" fill="#1a1208"/>`;
+    });
+  }
+
+  const bgColor = hidden ? '#2a2520' : (selected ? '#ffe082' : '#c8a96e');
+  const borderColor = selected ? '#d4a017' : (hidden ? '#443520' : '#8b6914');
+  const borderWidth = selected ? 2.5 : 1.5;
+
+  return `<div class="die-container" style="position:relative;display:inline-block;margin-bottom:20px;cursor:pointer;" data-die="${idx}">
+    <svg width="${size}" height="${size}" style="border-radius:8px;box-shadow:${selected?'0 0 12px rgba(212,160,23,0.6)':'2px 3px 6px rgba(0,0,0,0.6)'}">
+      <rect x="1" y="1" width="${size-2}" height="${size-2}" rx="8" fill="${bgColor}" stroke="${borderColor}" stroke-width="${borderWidth}"/>
+      ${pipHTML}
+    </svg>
+    <div style="position:absolute;bottom:-18px;left:0;right:0;text-align:center;font-family:'Courier Prime',monospace;font-size:10px;color:var(--bone-dim);">(${idx+1})</div>
+  </div>`;
+}
+
+function buildCardHTML(card, selected=false, unplayable=false, showPrice=false, price=0, soldOut=false, inDeckCount=0, ownedCount=0) {
+  if (!card) return '';
+  const rarity = card.rarity || 1;
+  const color = RARITY_COLORS[rarity];
+  const info = parseCardId(card.id);
+  let limitText = '';
+  if (info) {
+    const lv = getLimitValue(info.limit);
+    const reusable = isReusable(info.limit);
+    const opc = isOncePerCombat(info.limit);
+    if (reusable) limitText = `<div class="card-reusable-badge">↩ Reusable</div>`;
+    else if (opc) limitText = `<div class="card-reusable-badge" style="color:var(--legendary)">Once/Battle</div>`;
+    else if (lv > 0) limitText = `<div class="card-limit-text">Limit: ${lv}</div>`;
+  }
+  const sel = selected ? 'selected' : '';
+  const unpl = unplayable ? 'unplayable' : '';
+  const req = info ? `<div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--teal-light);margin-top:3px;">Req: ${descDieReq(info.dieReq)}</div>` : '';
+
+  let extra = '';
+  if (showPrice) {
+    const cantAfford = G.gold < price;
+    extra = soldOut 
+      ? `<div class="card-price" style="color:#666">SOLD</div>` 
+      : `<div class="card-price ${cantAfford?'cant-afford':''}">${price}g</div>`;
+  }
+  if (inDeckCount > 0) {
+    extra += `<div class="inv-card-in-deck">In Deck: ${inDeckCount}</div>`;
+  }
+
+  return `<div class="card ${sel} ${unpl}" style="cursor:${unplayable||soldOut?'default':'pointer'}">
+    <div class="card-rarity-bar" style="background:${color}"></div>
+    <div class="card-name">${card.name}</div>
+    ${req}
+    <div class="card-desc">${card.desc}</div>
+    ${limitText}
+    ${extra}
+  </div>`;
+}
+
+// ============================================================
+// SETUP SCREENS
+// ============================================================
+function showCharCreate() {
+  populateClassGrid();
+  showScreen('charcreate-screen');
+  G.selectedClass = 0;
+  G.selectedDifficulty = 'normal';
+  document.getElementById('diff-normal').style.borderWidth='2px';
+}
+
+function populateClassGrid() {
+  const grid = document.getElementById('class-grid');
+  grid.innerHTML = CLASSES.map((c,i) => `
+    <div class="class-card" id="cc-${i}" onclick="selectClass(${i})">
+      <div class="class-name class-${c.id}">${c.name}</div>
+      <div class="class-desc">${c.desc}</div>
+      <div class="class-hp">❤ ${c.hp} HP</div>
+    </div>`).join('');
+}
+
+function selectClass(i) {
+  G.selectedClass = i;
+  document.querySelectorAll('.class-card').forEach((el,j) => {
+    el.classList.toggle('selected', j===i);
+  });
+}
+
+const DIFF_DESCS = {
+  easy:'Keep all loot on defeat',
+  normal:'Lose 50% loot on defeat',
+  punishing:'Lose all loot on defeat'
+};
+
+function setDiff(d) {
+  G.selectedDifficulty = d;
+  ['easy','normal','punishing'].forEach(x => {
+    const btn = document.getElementById('diff-'+x);
+    btn.style.borderWidth = x===d ? '2px' : '1px';
+  });
+  document.getElementById('diff-desc').textContent = DIFF_DESCS[d];
+}
+
+function startGame() {
+  const name = document.getElementById('player-name-input').value.trim();
+  if (!name) { alert('Please enter your name!'); return; }
+  if (G.selectedClass === undefined) { alert('Please select a class!'); return; }
+
+  // Reset tutorial progress for each new run.
+  tutorialSeen = new Set();
+  tutorialQueue = [];
+  
+  const cls = CLASSES[G.selectedClass];
+  G = {
+    name,
+    classId: cls.id,
+    className: cls.name,
+    maxHp: cls.hp + (G.trainingHpLevel||0)*5,
+    hp: cls.hp,
+    level: 1,
+    xp: 0,
+    gold: 0,
+    difficulty: G.selectedDifficulty || 'normal',
+    inventory: [],
+    deck: [],
+    unlockedBiomes: new Set(['1-1']),
+    shopUnlocked: false,
+    blacksmithUnlocked: false,
+    thessaStarterGiven: false,
+    trainingHand: 0, trainingHp: 0, trainingRecovery: 0, trainingShield: 0,
+    trainingHpLevel: 0, trainingHandLevel: 0, trainingRecoveryLevel: 0, trainingShieldLevel: 0,
+    currentBiome: 1,
+    currentTier: 1,
+    selectedClass: G.selectedClass,
+    selectedDifficulty: G.selectedDifficulty || 'normal',
+  };
+
+  // Starting deck
+  STARTING_DECK_NAMES.forEach(n => {
+    if (CARD_BY_NAME[n]) {
+      G.deck.push(CARD_BY_NAME[n]);
+      G.inventory.push(CARD_BY_NAME[n]);
+    }
+  });
+
+  showIntroStory();
+}
+
+function showIntroStory() {
+  const screen = document.getElementById('story-screen');
+  screen.innerHTML = `
+    <div style="max-width:700px;margin:0 auto;text-align:center;">
+      <div style="font-family:'UnifrakturMaguntia',cursive;font-size:34px;color:var(--parchment);margin-bottom:12px;">Prologue</div>
+      <div class="story-text" style="animation-delay:0.2s">Play the tutorial?</div>
+      <div class="flex-row" style="justify-content:center;margin-top:18px;gap:12px;animation:storyFade 0.8s ease 0.4s both forwards;">
+        <button class="btn primary" onclick="showShipTutorialIntro()">Yes</button>
+        <button class="btn" onclick="showCrashMemoryScene()">No</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+function showShipTutorialIntro() {
+  const screen = document.getElementById('story-screen');
+  screen.innerHTML = `
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="story-text">The sea air blows around you as you watch the waves break against your ship. You hoped to make it to your destination without any storms, but it seems luck is not on your side. The sea churns and grows violent as you sail under the rolling black clouds. You've never seen clouds quite so dark. If you weren't on the open ocean, you'd think it was smoke.</div>
+      <div class="story-text">The deck lurches, as though colliding with a rock, but as the captain orders the sailors about, you take a peek over the side and find nothing that could have caused the movement, just the shadows of marine life zipping around the beleaguered boat. But they're too fast. A loud splash sounds, and you whip around to see a silhouette behind you. A sailor you've never met stands, sword drawn, dripping wet. It opens its mouth, letting out a low whistle, before raising its blade and charging you.</div>
+      <div style="margin-top:30px;text-align:center;">
+        <button class="btn primary" onclick="startShipTutorialCombat()">Fight</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+function startShipTutorialCombat() {
+  PROLOGUE.active = true;
+  PROLOGUE.phase = 'ship_tutorial';
+
+  ADV = {
+    biome: 1,
+    tier: 1,
+    winStreak: 0,
+    totalXp: 0,
+    totalGold: 0,
+    playerHp: G.hp,
+    active: true,
+    legendary: false,
+  };
+
+  const handLimit = getPlayerHandLimit();
+  const playerCards = G.deck.map(c => ({...c}));
+  const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, 2, G.classId, G.level, G.hp);
+
+  const enemyCards = ['Rusty Dagger', 'Jab', 'Swipe']
+    .map(n => CARD_BY_NAME[n])
+    .filter(Boolean)
+    .map(c => ({...c}));
+  const enemy = makeCombatant('Strange Sailor', 14, enemyCards, 2, 2);
+
+  CB = {
+    player,
+    enemy,
+    round: 1,
+    phase: 'player',
+    selectedCard: -1,
+    selectedDie: -1,
+    rogueLuckyPending: G.classId === 'rogue',
+  };
+
+  showScreen('combat-screen');
+  log('A sailor you\'ve never met charges you on the storm-tossed deck.', 'enemy');
+  if (CB.rogueLuckyPending) {
+    promptRogueLucky();
+  } else {
+    startPlayerTurn();
+  }
+}
+
+function showShipAftermath(result) {
+  const screen = document.getElementById('story-screen');
+  const victoryText = `You stand over the defeated pirate. The strange man looks up at you, then begins to... melt. He disappears, seeping into the cracks in the boards of the ship, leaving you alone. Truly alone, because as you look around, you can find none of the other sailors manning the ship. The storm has calmed, but the clouds still fill the sky. The sea is eerily still. Then you feel something. A terrible rumbling, growing all around you. The ship explodes beneath your feet, and you are sent sailing into the air. You manage to get a look at a massive creature, a sea serpent of some kind, emerging from where you were just standing, before you collide with the water and everything goes black`;
+  const defeatText = `You lie on your back, defeated. You try to inch away from the strange pirate, but with the rail behind you and his blade before you, you have nowhere to go. A rumbling sounds all around the ship, and the pirate finally takes its unearthly dark eyes off you as it looks around frantically. You take the chance to scramble to the side and put some distance between you and your foe. You grab a sturdy chunk of wood as a primitive defensive club, but when you turn around you witness the pirate diving off the side of the ship. You rush to the side to see where he went, but despite searching for a few minutes you see nothing. You turn around and are faced with something infinitely worse. A massive sea serpent, 300, no 400 feet tall at least, looms above your ship, huge glowing blue eyes focused unblinking at you. Your head begins to swim, and you collapse against the rail for support. The eyes seem to grow in both size and intensity, and soon you can see nothing else. You try to turn, but are unable to escape the blue light. Soon, your mind collapses, and the world flees from you.`;
+  const selected = result === 'victory' ? victoryText : defeatText;
+
+  screen.innerHTML = `
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="story-text">${selected}</div>
+      <div style="margin-top:30px;text-align:center;">
+        <button class="btn primary" onclick="showCrashMemoryScene()">Continue</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+function showCrashMemoryScene() {
+  const screen = document.getElementById('story-screen');
+  screen.innerHTML = `
+    <div style="max-width:760px;margin:0 auto;text-align:center;">
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">You remember the smell of the sea...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">You remember the swaying of the ship...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">You remember...lightning...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">Wind...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">And then the icy grip of the sea...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div class="story-text">...</div>
+      <div style="margin-top:30px;">
+        <button class="btn danger" onclick="showLakeWakeScene()">GET UP?</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+function showLakeWakeScene() {
+  const screen = document.getElementById('story-screen');
+  screen.innerHTML = `
+    <div style="max-width:760px;margin:0 auto;">
+      <div class="story-text">As life slowly awakens in your head, you feel coarse sand beneath you and the gentle nudging of waves against your leg. Your first attempt to move your arms fails you, but after a few moments you're able to place them underneath you and shakily stand. You see the wide golden expanse of plains ahead.</div>
+      <div class="story-text">You brush off some of the sand and turn to see what's left of the crash. However...</div>
+      <div class="story-text">You are not on a seaside beach or some lonely island.</div>
+      <div class="story-text">Before you is a lake. A large lake, to be sure, but you scan the breadth of it easily without squinting.</div>
+      <div class="story-text">The only connections this lake has are a small creek trickling in from the north, and a slow, shallow stream exiting it to the west.</div>
+      <div class="story-text">Certainly confusing, but you have more things to worry about now. Some of the ship you were on seems to have made it to this strange lakeside alongside you, but you see no evidence of other survivors. You spend the rest of the day collecting debris and searching wreckage. You manage to scrounge together some remnants of what was probably the sail, and set up a simple shelter for the night.</div>
+      <div class="story-text">The night, thankfully, passes quickly. As you make your way outside in the morning, you see small tracks left by some evening passerby, not far from your makeshift tent. Just the thought of something else alive makes you realize how hungry you are. Maybe you can find some animal to eat, or, if you're lucky, a tavern. You slide a small metal shard into your pocket to use as a knife, and break off an unrotted piece of wood as a primitive club.</div>
+      <div class="story-text">By midday, you are travelling through those beautiful golden stalks. This looks like farmland. Hopefully its farmer is nearby. You hear a rustling to your side, and turn to investigate. You'd hoped to find help, but your luck has betrayed you once again.</div>
+      <div style="margin-top:30px;text-align:center;">
+        <button class="btn primary" onclick="advanceFromLakeScene()">Face What You Found</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+function advanceFromLakeScene() {
+  try {
+    startPrologueAdventure();
+  } catch (err) {
+    console.error('Failed to start prologue adventure from lake scene:', err);
+    log('The path forward twists strangely. You press on toward Ascus.', 'story');
+    // Fallback so player can never get stuck on this screen.
+    showThessaTownIntro('retreat');
+  }
+}
+
+function startPrologueAdventure() {
+  closeModal();
+  G.hp = G.maxHp;
+  PROLOGUE.active = true;
+  PROLOGUE.phase = 'plains_adventure';
+  startAdventure(1, 1);
+}
+
+// ============================================================
+// STARTER CARD SELECTION
+// ============================================================
+let starterChosen = [];
+function goToStarterCards() {
+  closeModal();
+  starterChosen = [];
+  renderStarterCards();
+  showScreen('starter-screen');
+}
+
+function renderStarterCards() {
+  const grid = document.getElementById('starter-cards-grid');
+  grid.innerHTML = STARTER_CARDS.map((name, i) => {
+    const card = CARD_BY_NAME[name];
+    const chosen = starterChosen.includes(i);
+    return `<div onclick="toggleStarterCard(${i})" style="cursor:pointer">${buildCardHTML(card, chosen)}</div>`;
+  }).join('');
+  document.getElementById('starter-pick-label').textContent = `Choose 3 items (${starterChosen.length}/3 chosen)`;
+  const confirmBtn = document.getElementById('starter-confirm-btn');
+  confirmBtn.disabled = false;
+  confirmBtn.textContent = starterChosen.length < 3
+    ? 'Take Your Equipment (auto-fill missing picks)'
+    : 'Take Your Equipment';
+}
+
+function toggleStarterCard(i) {
+  if (starterChosen.includes(i)) {
+    starterChosen = starterChosen.filter(x=>x!==i);
+  } else if (starterChosen.length < 3) {
+    starterChosen.push(i);
+  }
+  renderStarterCards();
+}
+
+function confirmStarterCards() {
+  if (starterChosen.length < 3) {
+    for (let i = 0; i < STARTER_CARDS.length && starterChosen.length < 3; i++) {
+      if (!starterChosen.includes(i)) starterChosen.push(i);
+    }
+    log('Thessa adds a few essentials to round out your pack.', 'story');
+  }
+
+  const granted = [];
+  starterChosen.forEach(i => {
+    const card = CARD_BY_NAME[STARTER_CARDS[i]];
+    if (card) {
+      G.deck.push(card);
+      G.inventory.push(card);
+      granted.push(card.name);
+    }
+  });
+
+  // Fallback: if mapping fails for any reason, grant first 3 valid starter cards so progression never stalls.
+  if (granted.length < 3) {
+    for (const name of STARTER_CARDS) {
+      if (granted.length >= 3) break;
+      const card = CARD_BY_NAME[name];
+      if (card && !granted.includes(card.name)) {
+        G.deck.push(card);
+        G.inventory.push(card);
+        granted.push(card.name);
+      }
+    }
+  }
+
+  G.thessaStarterGiven = true;
+  log(`You carefully pack away your new equipment: ${granted.join(', ')}.`, 'story');
+  log('Thessa nods approvingly. "Those should serve you well out there. Now, about that adventure..."', 'story');
+  log("Welcome to Ascus. Your adventure begins.", 'story');
+  closeModal();
+  showTown();
+  setTimeout(() => enqueueTutorials(['first_town','deck_basics','dice_basics','end_turn']), 400);
+}
+
+function autoSelectStarterCards() {
+  starterChosen = [0, 1, 2];
+  renderStarterCards();
+}
+
+// ============================================================
+// TOWN
+// ============================================================
+function showTown() {
+  // Always transition screens first so UI update issues can't trap progression.
+  showScreen('town-screen');
+  try {
+    updateTownUI();
+  } catch (err) {
+    console.error('Failed to update town UI:', err);
+    log('You arrive in Ascus, though something feels off with your bearings.', 'system');
+  }
+}
+
+function updateTownUI() {
+  document.getElementById('town-player-name').textContent = G.name;
+  document.getElementById('town-player-meta').textContent = `${G.className} · ${BIOME_NAMES[G.currentBiome] || 'Plains'} Tier ${G.currentTier}`;
+  document.getElementById('town-hp').textContent = `${G.hp}/${G.maxHp}`;
+  document.getElementById('town-level').textContent = G.level;
+  document.getElementById('town-gold').textContent = G.gold;
+  document.getElementById('town-xp').textContent = G.xp;
+  
+  const needed = xpForLevel(G.level);
+  const pct = Math.min(100, (G.xp/needed)*100);
+  document.getElementById('xp-bar-fill').style.width = pct+'%';
+
+  // Lock/unlock shops
+  const shopAction = document.getElementById('town-shop');
+  const smithAction = document.getElementById('town-blacksmith');
+  shopAction.classList.toggle('locked', !G.shopUnlocked);
+  smithAction.classList.toggle('locked', !G.blacksmithUnlocked);
+}
+
+function doRest() {
+  if (G.hp >= G.maxHp) {
+    log("You're already at full health!", 'system');
+    openModal(`<h2>Already Rested</h2><p class="info-text">You're already at full health!</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">Close</button></div>`);
+    return;
+  }
+  const healed = G.maxHp - G.hp;
+  G.hp = G.maxHp;
+  log(`You rest at the tavern and recover ${healed} HP.`, 'system');
+  updateTownUI();
+  openModal(`<h2>Rested</h2><p class="info-text">You sleep peacefully and wake refreshed. Recovered <span class="success-text">+${healed} HP</span>.</p>
+    <div class="mt-16"><button class="btn primary" onclick="closeModal()">Continue</button></div>`);
+}
+
+// ============================================================
+// ADVENTURE
+// ============================================================
+let ADV = {}; // adventure state
+let PROLOGUE = {
+  active: false,
+  phase: null,
+};
+
+function goAdventure() {
+  try {
+    if (!G.deck.length) {
+      openModal(`<h2>Empty Deck</h2><p class="info-text">Your active deck is empty. Add cards from the Inventory & Deck menu first.</p>
+        <div class="mt-16"><button class="btn" onclick="closeModal()">OK</button></div>`);
+      return;
+    }
+    normalizeUnlockedBiomes();
+    renderBiomeGrid();
+    showScreen('adventure-screen');
+  } catch (err) {
+    console.error('goAdventure failed:', err);
+    openModal(`<h2>Travel Failed</h2><p class="info-text">Something went wrong while preparing your destination map. Please try again.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">OK</button></div>`);
+  }
+}
+
+function normalizeUnlockedBiomes() {
+  if (G.unlockedBiomes instanceof Set) {
+    if (!G.unlockedBiomes.has('1-1')) G.unlockedBiomes.add('1-1');
+    return;
+  }
+
+  // Recover from any accidental state shape changes.
+  if (Array.isArray(G.unlockedBiomes)) {
+    G.unlockedBiomes = new Set(G.unlockedBiomes);
+  } else if (G.unlockedBiomes && typeof G.unlockedBiomes === 'object') {
+    G.unlockedBiomes = new Set(Object.keys(G.unlockedBiomes).filter(k => G.unlockedBiomes[k]));
+  } else {
+    G.unlockedBiomes = new Set();
+  }
+
+  G.unlockedBiomes.add('1-1');
+}
+
+function renderBiomeGrid() {
+  normalizeUnlockedBiomes();
+  const grid = document.getElementById('biome-grid');
+  const biomes = [];
+  for (let b=1; b<=6; b++) {
+    for (let t=1; t<=3; t++) {
+      biomes.push({b,t});
+    }
+  }
+  grid.innerHTML = biomes.map(({b,t}) => {
+    const key = `${b}-${t}`;
+    const unlocked = G.unlockedBiomes.has(key);
+    return `<button type="button" class="biome-card ${unlocked?'':'locked'}" ${unlocked?`onclick="startAdventure(${b},${t})"`:'disabled'}>
+      <div class="biome-icon">${BIOME_ICONS[b]||'🗺️'}</div>
+      <div class="biome-name">${BIOME_NAMES[b]} T${t}</div>
+      <div class="biome-tier">${unlocked?'Unlocked':'Locked'}</div>
+    </button>`;
+  }).join('');
+}
+
+function startAdventure(biome, tier) {
+  normalizeUnlockedBiomes();
+  const key = `${biome}-${tier}`;
+  if (!G.unlockedBiomes.has(key)) {
+    openModal(`<h2>Destination Locked</h2><p class="info-text">That route is still blocked. Try another path first.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">OK</button></div>`);
+    return;
+  }
+
+  G.currentBiome = biome;
+  G.currentTier = tier;
+  ADV = {
+    biome, tier,
+    winStreak: 0,
+    totalXp: 0,
+    totalGold: 0,
+    playerHp: G.hp,
+    active: true,
+    legendary: false,
+  };
+  log(`You venture into ${BIOME_NAMES[biome]} Tier ${tier}...`, 'story');
+  startNextCombat();
+}
+
+function startNextCombat(legendary=false) {
+  ADV.legendary = legendary;
+  const enemy = spawnEnemy(ADV.biome, ADV.tier, legendary);
+  if (!enemy) {
+    log('No enemies found for this area.', 'system');
+    endAdventure('retreat');
+    return;
+  }
+
+  const handLimit = getPlayerHandLimit();
+  const playerCards = G.deck.map(c => ({...c}));
+  
+  const player = makeCombatant(
+    G.name, G.maxHp, playerCards, handLimit, 2,
+    G.classId, G.level, ADV.playerHp
+  );
+  player.shield = G.trainingShield || 0;
+
+  // Rogue: pick lucky number
+  if (G.classId === 'rogue') {
+    CB.rogueLuckyPending = true;
+  } else {
+    CB.rogueLuckyPending = false;
+  }
+
+  CB = {
+    player, enemy,
+    round: 1,
+    phase: 'player', // 'player', 'enemy', 'over'
+    selectedCard: -1,
+    selectedDie: -1,
+    rogueLuckyPending: G.classId==='rogue',
+  };
+
+  if (legendary) {
+    log(`⚡ LEGENDARY ${enemy.name} appears!`, 'victory');
+  } else {
+    log(`A ${enemy.name} appears in ${BIOME_NAMES[ADV.biome]} Tier ${ADV.tier}!`, 'enemy');
+  }
+  if (player.shield > 0) log(`Training bonus: you start with ${player.shield} shield.`, 'system');
+
+  showScreen('combat-screen');
+  
+  // Show flavor text before combat
+  const flavor = getEnemyFlavor(enemy.name);
+  if (flavor) {
+    const isLeg = legendary;
+    openModal(`
+      <div style="text-align:center;margin-bottom:12px;">
+        ${isLeg ? '<div class="legendary-badge" style="display:inline-block;margin-bottom:8px;">LEGENDARY</div><br>' : ''}
+        <h2 style="font-family:\'UnifrakturMaguntia\',cursive;font-size:26px;color:var(--parchment);">${enemy.name}</h2>
+      </div>
+      <p class="info-text" style="font-size:14px;line-height:1.7;font-style:italic;color:var(--parchment);">${flavor}</p>
+      <div style="margin-top:6px;font-family:'Courier Prime',monospace;font-size:11px;color:var(--bone-dim);">
+        HP: ${enemy.maxHp} &nbsp;|&nbsp; Dice: ${enemy.diceLimit}
+      </div>
+      <div class="mt-16 text-center">
+        <button class="btn ${isLeg?'danger':'primary'}" onclick="closeModal();beginCombatAfterFlavor()">${isLeg ? '⚡ Face Your Doom' : 'Engage'}</button>
+      </div>
+    `);
+  } else {
+    beginCombatAfterFlavor();
+  }
+}
+
+function beginCombatAfterFlavor() {
+  if (G.classId === 'rogue') {
+    promptRogueLucky();
+  } else {
+    startPlayerTurn();
+  }
+}
+
+function promptRogueLucky() {
+  openModal(`
+    <h2>Choose Lucky Number</h2>
+    <p class="info-text">As a Rogue, choose your lucky number for this combat. Whenever this number is rolled, deal 2 bonus damage.</p>
+    <div class="flex-row mt-16">
+      ${[1,2,3,4,5,6].map(n=>`<button class="btn primary" onclick="setRogueLucky(${n})">${n}</button>`).join('')}
+    </div>
+  `);
+}
+
+function setRogueLucky(n) {
+  CB.player.classState.rogueLucky = n;
+  closeModal();
+  log(`Rogue: lucky number is ${n}.`, 'player');
+  startPlayerTurn();
+}
+
+// ============================================================
+// COMBAT TURN LOGIC
+// ============================================================
+function startPlayerTurn() {
+  CB.phase = 'player';
+  CB.selectedCard = -1;
+  CB.selectedDie = -1;
+
+  // Start of turn effects
+  const msgs = triggerStartOfTurn(CB.player);
+  msgs.forEach(m => log(m, 'player'));
+
+  if (CB.player.hp <= 0) { endCombat('defeat'); return; }
+
+  // Draw cards
+  drawToHandLimit(CB.player);
+
+  // Roll dice (knight handles differently)
+  if (CB.player.classId !== 'knight') {
+    rollDicePool(CB.player);
+    const bloomMsgs = applyDruidBloom(CB.player);
+    bloomMsgs.forEach(m => log(m,'player'));
+
+    // Cleric: check doubles
+    if (CB.player.classId==='cleric') {
+      const pool = CB.player.dicePool;
+      if (pool.length >= 2) {
+        const counts = {};
+        pool.forEach(v=>{counts[v]=(counts[v]||0)+1;});
+        let healTotal = 0;
+        Object.entries(counts).forEach(([v,c])=>{ if(c>=2) healTotal+=parseInt(v)*Math.floor(c/2); });
+        if (healTotal > 0) {
+          CB.player.hp = Math.min(CB.player.maxHp, CB.player.hp+healTotal);
+          log(`Cleric doubles! Healed ${healTotal} HP.`,'player');
+        }
+      }
+    }
+
+    // Rogue: lucky number bonus
+    if (CB.player.classId==='rogue' && CB.player.classState.rogueLucky) {
+      const lucky = CB.player.classState.rogueLucky;
+      const hits = CB.player.dicePool.filter(v=>v===lucky).length;
+      if (hits > 0) {
+        const bonusDmg = hits * 2 * (G.level||1);
+        CB.enemy.hp -= bonusDmg;
+        log(`Rogue lucky ${lucky}! x${hits} hits: ${bonusDmg} bonus damage.`,'player');
+      }
+    }
+
+    const onRollMsgs = triggerOnDiceRolled(CB.player);
+    onRollMsgs.forEach(m=>log(m,'player'));
+  } else {
+    // Knight: reset pool
+    CB.player.dicePool = [];
+    CB.player.classState.knightTotal = 0;
+    CB.player.classState.knightLocked = false;
+  }
+
+  // Reset class turn state
+  CB.player.classState.fencerUsed = false;
+  CB.player.classState.druidUsed = false;
+
+  updateCombatUI();
+  setPhaseBanner('Your Turn', 'player');
+  updatePlayerControls();
+}
+
+function startEnemyTurn() {
+  CB.phase = 'enemy';
+  setPhaseBanner("Enemy's Turn", 'enemy');
+  updatePlayerControls();
+
+  // Delay for drama
+  setTimeout(() => {
+    const msgs = triggerStartOfTurn(CB.enemy);
+    msgs.forEach(m => log(m,'enemy'));
+    if (CB.enemy.hp <= 0) { endCombat('victory'); return; }
+
+    drawToHandLimit(CB.enemy);
+    rollDicePool(CB.enemy);
+    const onRollMsgs = triggerOnDiceRolled(CB.enemy);
+    onRollMsgs.forEach(m=>log(m,'enemy'));
+
+    // Enemy plays cards greedily
+    let maxPlays = 20;
+    while (CB.enemy.dicePool.length>0 && CB.enemy.hand.length>0 && CB.player.hp>0 && CB.enemy.hp>0 && (maxPlays-- > 0)) {
+      let moved = false;
+      for (let ci=0; ci<CB.enemy.hand.length; ci++) {
+        const eCard = CB.enemy.hand[ci];
+        const info = parseCardId(eCard.id);
+        if (!info) continue;
+        for (let di=0; di<CB.enemy.dicePool.length; di++) {
+          const dv = CB.enemy.dicePool[di];
+          if (checkDieReq(info.dieReq, dv)) {
+            const spent = CB.enemy.dicePool.splice(di,1)[0];
+            const {ok,msg,keepInHand} = resolveCardUse(CB.enemy, CB.player, eCard, spent);
+            if (ok) {
+              log(msg, 'enemy');
+              if (!keepInHand) {
+                CB.enemy.discard.push(CB.enemy.hand.splice(ci,1)[0]);
+              }
+              moved = true;
+              break;
+            } else {
+              // put die back conceptually (it was spliced already - just break)
+              CB.enemy.dicePool.splice(di,0,spent);
+            }
+          }
+        }
+        if (moved) break;
+      }
+      if (!moved) break;
+    }
+
+    const endMsgs = triggerEndOfTurn(CB.enemy);
+    endMsgs.forEach(m=>log(m,'enemy'));
+    
+    const endPlayerMsgs = triggerEndOfTurn(CB.player);
+    endPlayerMsgs.forEach(m=>log(m,'player'));
+
+    updateCombatUI();
+
+    if (CB.player.hp <= 0) { endCombat('defeat'); return; }
+    if (CB.enemy.hp <= 0) { endCombat('victory'); return; }
+
+    CB.round++;
+    log(`--- Round ${CB.round} ---`,'system');
+    startPlayerTurn();
+  }, 600);
+}
+
+function playSelectedCard() {
+  if (CB.selectedCard < 0 || CB.selectedDie < 0) return;
+  if (CB.phase !== 'player') return;
+
+  const card = CB.player.hand[CB.selectedCard];
+  const dieVal = CB.player.dicePool[CB.selectedDie];
+  const dieIdx = CB.selectedDie;
+
+  const {ok, msg, keepInHand} = resolveCardUse(CB.player, CB.enemy, card, dieVal);
+  
+  if (!ok) {
+    log(msg, 'system');
+    openModal(`<h2>Can't Play That</h2><p class="info-text">${msg}</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">OK</button></div>`);
+    return;
+  }
+
+  // Remove spent die
+  CB.player.dicePool.splice(dieIdx, 1);
+  // Remove hidden index tracking too
+  CB.player.hiddenDice = CB.player.hiddenDice.filter(i=>i!==dieIdx).map(i=>i>dieIdx?i-1:i);
+
+  // Played cards go to discard (including reusable ones that were used at least once)
+  // keepInHand was used for limit-charging (card not yet triggered), not for reusable stays
+  if (!keepInHand) {
+    CB.player.discard.push(CB.player.hand.splice(CB.selectedCard, 1)[0]);
+  } else {
+    // keepInHand = still charging (limit not met), card stays in hand
+    // Do nothing - card stays in hand
+  }
+
+  log(msg, 'player');
+  
+  CB.selectedCard = -1;
+  CB.selectedDie = -1;
+
+  // Check splinter: new dice are already added to pool in resolveZEffect
+  
+  updateCombatUI();
+  updatePlayerControls();
+
+  if (CB.enemy.hp <= 0) { endCombat('victory'); }
+}
+
+function endPlayerTurn() {
+  if (CB.phase !== 'player') return;
+  
+  // Unplayed cards stay in hand for next turn (they were already kept)
+  // Only trigger end-of-turn effects
+  const endMsgs = triggerEndOfTurn(CB.player);
+  endMsgs.forEach(m=>log(m,'player'));
+  
+  updateCombatUI();
+  if (CB.player.hp <= 0) { endCombat('defeat'); return; }
+  startEnemyTurn();
+}
+
+function retreatFromAdventure() {
+  openModal(`<h2>Retreat?</h2>
+    <p class="info-text">Are you sure you want to retreat to Ascus? You will lose ${G.difficulty==='easy'?'nothing':G.difficulty==='normal'?'50% of':'all'} earnings.</p>
+    <div class="flex-row mt-16">
+      <button class="btn danger" onclick="confirmRetreat()">Retreat</button>
+      <button class="btn" onclick="closeModal()">Keep Fighting</button>
+    </div>`);
+}
+
+function confirmRetreat() {
+  closeModal();
+  endCombat('retreat');
+}
+
+function endCombat(result) {
+  CB.phase = 'over';
+  ADV.playerHp = Math.max(0, CB.player.hp);
+  updateCombatUI();
+
+  if (PROLOGUE.active) {
+    handlePrologueCombatEnd(result);
+    return;
+  }
+
+  if (result === 'victory') {
+    log(`${CB.enemy.name} is defeated!`, 'victory');
+    ADV.winStreak++;
+
+    // Rewards
+    const mult = Math.min(1.0 + (ADV.winStreak-1)*0.08, 2.0);
+    const xpBase = 30 + ADV.tier*15;
+    const goldBase = 20 + ADV.tier*10;
+    const xpEarned = Math.floor(xpBase*mult);
+    const goldEarned = Math.floor(goldBase*mult);
+    ADV.totalXp += xpEarned;
+    ADV.totalGold += goldEarned;
+    log(`Victory! +${xpEarned} XP, +${goldEarned} gold (x${mult.toFixed(2)}).`, 'victory');
+
+    // Card drop (10%)
+    if (Math.random() < 0.10) {
+      const dropped = randItem(CB.enemy.hand.length>0 ? CB.enemy.hand : CB.enemy.deck);
+      if (dropped) {
+        log(`Loot drop! ${CB.enemy.name} dropped ${dropped.name}!`, 'loot');
+        openModal(`<h2>Card Drop!</h2>
+          <p class="info-text">You found a <span class="gold-text">${dropped.name}</span>!</p>
+          <div style="margin:14px 0">${buildCardHTML(dropped)}</div>
+          <div class="flex-row mt-8">
+            <button class="btn primary" onclick="addDropToInventory('${dropped.name}',true)">Add to Deck</button>
+            <button class="btn" onclick="addDropToInventory('${dropped.name}',false)">Inventory Only</button>
+          </div>`);
+        CB._pendingDrop = dropped;
+        return; // wait for player choice
+      }
+    }
+
+    afterVictoryChoice();
+  } else if (result === 'defeat' || result === 'retreat') {
+    const forced = result === 'defeat';
+    log(forced ? 'You were defeated and forced to retreat!' : 'You retreat to Ascus.', 'defeat');
+    finishAdventure(result);
+  }
+}
+
+function handlePrologueCombatEnd(result) {
+  if (PROLOGUE.phase === 'ship_tutorial') {
+    G.hp = G.maxHp;
+    PROLOGUE.active = false;
+    PROLOGUE.phase = null;
+    showShipAftermath(result === 'victory' ? 'victory' : 'defeat');
+    return;
+  }
+
+  if (PROLOGUE.phase === 'plains_adventure') {
+    G.hp = Math.max(0, ADV.playerHp);
+    PROLOGUE.active = false;
+    PROLOGUE.phase = null;
+
+    if (result === 'defeat' || G.hp <= 0) {
+      showThessaTownIntro('defeat');
+      return;
+    }
+    if (result === 'victory') {
+      showThessaTownIntro('victory');
+      return;
+    }
+    showThessaTownIntro('retreat');
+  }
+}
+
+function addDropToInventory(cardName, addToDeck) {
+  const card = CARD_BY_NAME[cardName] || CB._pendingDrop;
+  if (card) {
+    G.inventory.push(card);
+    if (addToDeck) G.deck.push(card);
+    log(`${card.name} added to ${addToDeck?'deck':'inventory'}.`, 'loot');
+  }
+  closeModal();
+  afterVictoryChoice();
+}
+
+function afterVictoryChoice() {
+  // Legendary boss?
+  if (ADV.winStreak === 10) {
+    log('=== LEGENDARY BOSS ENCOUNTER ===', 'victory');
+    openModal(`<h2>Legendary Encounter!</h2>
+      <p class="info-text">You've won 10 battles in a row! A Legendary enemy awaits...</p>
+      <p class="info-text">Current HP: <span class="stat-hp">${ADV.playerHp}/${G.maxHp}</span></p>
+      <div class="mt-16"><button class="btn primary" onclick="closeModal();startNextCombat(true)">Face the Legend</button></div>`);
+    return;
+  }
+
+  // Offer continue or retreat
+  const nextMult = Math.min(1.0 + ADV.winStreak*0.08, 2.0);
+  openModal(`<h2>Victory!</h2>
+    <p class="info-text">Win streak: <span class="gold-text">${ADV.winStreak}</span></p>
+    <p class="info-text">Earned so far: <span class="gold-text">${ADV.totalXp} XP, ${ADV.totalGold} gold</span></p>
+    <p class="info-text">Current HP: <span class="stat-hp">${ADV.playerHp}/${G.maxHp}</span></p>
+    <p class="info-text">Next battle multiplier: <span class="gold-text">x${nextMult.toFixed(2)}</span></p>
+    <div class="flex-row mt-16">
+      <button class="btn primary" onclick="closeModal();startNextCombat(false)">Keep Fighting</button>
+      <button class="btn" onclick="closeModal();finishAdventure('retreat')">Retreat to Town</button>
+    </div>`);
+}
+
+function finishAdventure(result) {
+  // result can be: 'victory', 'defeat', or 'retreat'
+  const victory = result === 'victory';
+  const defeatOnly = result === 'defeat';
+  
+  G.hp = Math.max(0, ADV.playerHp);
+
+  // Training recovery
+  if (G.trainingRecovery > 0 && G.hp > 0) {
+    const rec = Math.ceil(G.maxHp * (G.trainingRecovery/100));
+    G.hp = Math.min(G.maxHp, G.hp+rec);
+  }
+
+  let xpGained = ADV.totalXp;
+  let goldGained = ADV.totalGold;
+
+  if (defeatOnly && ADV.winStreak < 10) {
+    // Defeat penalty (only on actual defeat, not retreat)
+    if (G.difficulty === 'normal') {
+      xpGained = Math.floor(xpGained/2);
+      goldGained = Math.floor(goldGained/2);
+    } else if (G.difficulty === 'punishing') {
+      xpGained = 0; goldGained = 0;
+    }
+  }
+
+  G.xp += xpGained;
+  G.gold += goldGained;
+
+  log(`Returned to Ascus with +${xpGained} XP, +${goldGained} gold.`, victory?'victory':'system');
+
+  // Level up
+  let leveled = false;
+  while (G.xp >= xpForLevel(G.level)) {
+    G.xp -= xpForLevel(G.level);
+    G.level++;
+    G.maxHp += 5;
+    G.hp = G.maxHp;
+    log(`LEVEL UP! You are now level ${G.level}!`, 'victory');
+    leveled = true;
+  }
+
+  // Unlock shop after first adventure
+  if (!G.shopUnlocked) {
+    G.shopUnlocked = true;
+    log('The Naukin shopkeep lets you in.', 'system');
+  }
+
+  // Unlock biomes based on legendary victories (at fight 11, after 10 consecutive wins)
+  if (victory && ADV.winStreak >= 10) {
+    const b=ADV.biome, t=ADV.tier;
+    if (b===1&&t===1) { G.unlockedBiomes.add('2-1'); G.unlockedBiomes.add('1-2'); }
+    if (b===1&&t===2) { G.unlockedBiomes.add('1-3'); }
+    if (b===1&&t===3) { G.unlockedBiomes.add('2-1'); }
+    if (b===2&&t===2) { G.blacksmithUnlocked=true; log('The Blacksmith has opened for you.','system'); }
+    // Generally: complete tier 3 unlocks next biome tier 1
+    if (t===3 && b<6) G.unlockedBiomes.add(`${b+1}-1`);
+    if (t<3) G.unlockedBiomes.add(`${b}-${t+1}`);
+  }
+
+  updateTownUI();
+  
+  // Regenerate shop stock each time player returns to town
+  if (G.shopUnlocked) generateAndShowShop();
+  
+  const resultText = victory ? '⚔ Adventure Complete!' : (defeatOnly ? '💀 Defeated' : '🏃 Retreated');
+  const diffPenalty = (defeatOnly && ADV.winStreak < 10 && G.difficulty!=='easy') ? `<p class="info-text danger-text">(${G.difficulty==='normal'?'50%':'All'} earnings lost on defeat)</p>` : '';
+
+  openModal(`<h2>${resultText}</h2>
+    <p class="info-text">Earned: <span class="gold-text">+${xpGained} XP, +${goldGained} gold</span></p>
+    ${diffPenalty}
+    ${leveled?`<p class="success-text" style="margin-top:8px;font-size:14px;">✨ LEVEL UP! Now level ${G.level}!</p>`:''}
+    <p class="info-text" style="margin-top:8px;">HP: ${G.hp}/${G.maxHp}</p>
+    <div class="mt-16"><button class="btn primary" onclick="closeModal();showTown()">Return to Ascus</button></div>`);
+}
+
+// ============================================================
+// COMBAT UI
+// ============================================================
+function setPhaseBanner(text, type) {
+  const banner = document.getElementById('phase-banner');
+  banner.textContent = text;
+  banner.className = `phase-banner phase-${type}`;
+}
+
+function updateCombatUI() {
+  if (!CB.player) return;
+  const p = CB.player, e = CB.enemy;
+
+  // Player stats
+  document.getElementById('c-player-name').textContent = p.name;
+  document.getElementById('c-player-class-label').textContent = G.className.toUpperCase();
+  document.getElementById('c-player-hp-text').textContent = `${p.hp}/${p.maxHp}`;
+  document.getElementById('c-player-hp-bar').style.width = Math.max(0,p.hp/p.maxHp*100)+'%';
+  document.getElementById('c-player-shield-text').textContent = p.shield;
+  document.getElementById('c-player-shield-bar').style.width = Math.min(100,p.shield/p.maxHp*100*3)+'%';
+
+  // Class info
+  let classInfo = '';
+  if (p.classId==='knight') classInfo = `<div class="knight-total">Total: ${p.classState.knightTotal||0}/12</div>`;
+  else if (p.classId==='rogue' && p.classState.rogueLucky) classInfo = `<div class="rogue-lucky">Lucky Number: ${p.classState.rogueLucky}</div>`;
+  else if (p.classId==='druid' && p.classState.druidPlanted!==null) classInfo = `<div style="color:var(--teal-light);font-family:'Courier Prime',monospace;font-size:11px;">Planted die: ${p.classState.druidPlanted} (blooms next turn)</div>`;
+  document.getElementById('c-player-class-info').innerHTML = classInfo;
+
+  renderStatusBadges('c-player-status', p);
+
+  // Enemy stats
+  const isLegendary = ADV.legendary;
+  document.getElementById('c-enemy-name').textContent = e.name;
+  document.getElementById('legendary-badge-area').innerHTML = isLegendary ? '<span class="legendary-badge">LEGENDARY</span>' : '';
+  document.getElementById('c-enemy-hp-text').textContent = `${Math.max(0,e.hp)}/${e.maxHp}`;
+  document.getElementById('c-enemy-hp-bar').style.width = Math.max(0,e.hp/e.maxHp*100)+'%';
+  document.getElementById('c-enemy-shield-text').textContent = e.shield;
+  document.getElementById('c-enemy-shield-bar').style.width = Math.min(100,e.shield/e.maxHp*100*3)+'%';
+  renderStatusBadges('c-enemy-status', e);
+
+  // Round
+  document.getElementById('round-number').textContent = CB.round;
+  document.getElementById('win-streak-display').innerHTML = ADV.winStreak>0 ? `<div class="win-streak-badge">Win Streak: ${ADV.winStreak}</div>` : '';
+
+  // Dice
+  renderDice();
+  // Hand
+  renderHand();
+  // Enemy cards
+  renderEnemyCards();
+}
+
+function renderStatusBadges(containerId, c) {
+  const el = document.getElementById(containerId);
+  const statuses = [];
+  if (c.poison>0) statuses.push(`<span class="status-badge status-poison">☠ Poison ${c.poison}</span>`);
+  if (c.bleed>0) statuses.push(`<span class="status-badge status-bleed">🩸 Bleed ${c.bleed}</span>`);
+  if (c.burn>0) statuses.push(`<span class="status-badge status-burn">🔥 Burn ${c.burn}</span>`);
+  if (c.lock>0) statuses.push(`<span class="status-badge status-lock">🔒 Lock ${c.lock}</span>`);
+  if (c.freeze>0) statuses.push(`<span class="status-badge status-freeze">❄ Frozen ${c.freeze}</span>`);
+  if (c.blind>0) statuses.push(`<span class="status-badge status-blind">👁 Blind ${c.blind}</span>`);
+  if (c.shield>0) statuses.push(`<span class="status-badge status-shield">🛡 ${c.shield}</span>`);
+  el.innerHTML = statuses.join('');
+}
+
+function renderDice() {
+  const area = document.getElementById('player-dice-area');
+  if (!CB.player) { area.innerHTML=''; return; }
+  const pool = CB.player.dicePool;
+  if (pool.length === 0) {
+    area.innerHTML = '<div style="color:var(--bone-dim);font-family:Courier Prime,monospace;font-size:12px;">(no dice)</div>';
+    return;
+  }
+  area.innerHTML = pool.map((v,i) => {
+    const hidden = CB.player.hiddenDice.includes(i);
+    const selected = i === CB.selectedDie;
+    return `<div onclick="selectDie(${i})" style="display:inline-block">${buildDieSVG(v, hidden, selected, i)}</div>`;
+  }).join('');
+}
+
+function renderHand() {
+  const area = document.getElementById('player-hand-area');
+  if (!CB.player) { area.innerHTML=''; return; }
+  const hand = CB.player.hand;
+  area.innerHTML = hand.map((card,i) => {
+    const selected = i===CB.selectedCard;
+    const info = parseCardId(card.id);
+    let unplayable = false;
+    if (CB.selectedDie>=0 && info) {
+      unplayable = !checkDieReq(info.dieReq, CB.player.dicePool[CB.selectedDie]);
+    }
+    
+    // Show limit progress
+    let limitExtra = '';
+    if (info) {
+      const lv = getLimitValue(info.limit);
+      if (lv > 0) {
+        const key = card.name+'::'+card.id;
+        const prog = CB.player.limitProgress[key]||0;
+        const pct = Math.min(100,(prog/lv)*100);
+        limitExtra = `<div class="card-limit-bar"><div class="card-limit-fill" style="width:${pct}%"></div></div>
+          <div class="card-limit-text">${prog}/${lv}</div>`;
+      }
+      if (isReusable(info.limit)) limitExtra += `<div class="card-reusable-badge">↩ Reusable</div>`;
+      if (isOncePerCombat(info.limit)) limitExtra += `<div class="card-reusable-badge" style="color:var(--legendary)">Once/Battle</div>`;
+    }
+    const reqStr = info ? `<div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--teal-light);margin-top:3px;">Req: ${descDieReq(info.dieReq)}</div>` : '';
+    const color = RARITY_COLORS[card.rarity||1];
+    return `<div class="card ${selected?'selected':''} ${unplayable&&CB.selectedDie>=0?'unplayable':''}" onclick="selectCard(${i})" style="cursor:pointer">
+      <div class="card-rarity-bar" style="background:${color}"></div>
+      <div class="card-name">${card.name}</div>
+      ${reqStr}
+      <div class="card-desc">${card.desc}</div>
+      ${limitExtra}
+    </div>`;
+  }).join('');
+}
+
+function renderEnemyCards() {
+  const el = document.getElementById('enemy-cards-display');
+  if (!CB.enemy) { el.innerHTML=''; return; }
+  // Show enemy's hand (what they currently hold)
+  const hand = CB.enemy.hand;
+  if (!hand.length) { el.innerHTML = '<div style="color:var(--bone-dim);font-size:12px;">Drawing cards...</div>'; return; }
+  el.innerHTML = `<div style="display:flex;flex-wrap:wrap;gap:8px;">` +
+    hand.map(card => {
+      const color = RARITY_COLORS[card.rarity||1];
+      const info = parseCardId(card.id);
+      const req = info ? `<div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--teal-light);">Req: ${descDieReq(info.dieReq)}</div>` : '';
+      return `<div class="card" style="width:110px;cursor:default;pointer-events:none;">
+        <div class="card-rarity-bar" style="background:${color}"></div>
+        <div class="card-name" style="font-size:10px;">${card.name}</div>
+        ${req}
+        <div class="card-desc" style="font-size:10px;">${card.desc}</div>
+      </div>`;
+    }).join('') + `</div>`;
+}
+
+function selectCard(i) {
+  if (CB.phase !== 'player') return;
+  CB.selectedCard = CB.selectedCard === i ? -1 : i;
+  renderHand();
+  updatePlayerControls();
+}
+
+function selectDie(i) {
+  if (CB.phase !== 'player') return;
+  CB.selectedDie = CB.selectedDie === i ? -1 : i;
+  renderDice();
+  renderHand(); // re-render to show playability
+  updatePlayerControls();
+}
+
+function updatePlayerControls() {
+  const btn = document.getElementById('btn-play-card');
+  const canPlay = CB.phase==='player' && CB.selectedCard>=0 && CB.selectedDie>=0;
+  if (btn) btn.disabled = !canPlay;
+
+  // Knight class ability
+  const pcontrols = document.getElementById('player-controls');
+  // Remove old knight btn if any
+  const old = document.getElementById('knight-roll-btn');
+  if (old) old.remove();
+  const oldFencer = document.getElementById('fencer-reroll-btn');
+  if (oldFencer) oldFencer.remove();
+  const oldDruid = document.getElementById('druid-plant-btn');
+  if (oldDruid) oldDruid.remove();
+
+  if (CB.phase==='player') {
+    if (CB.player.classId==='knight' && !CB.player.classState.knightLocked) {
+      const limit = 9 + (G.level-1)*2;
+      const knightBtn = document.createElement('button');
+      knightBtn.id = 'knight-roll-btn';
+      knightBtn.className = 'btn small';
+      knightBtn.style.borderColor = '#ef5350';
+      knightBtn.textContent = `Roll Die (${CB.player.classState.knightTotal||0}/${limit})`;
+      knightBtn.onclick = doKnightRoll;
+      pcontrols.insertBefore(knightBtn, pcontrols.firstChild);
+    }
+    if (CB.player.classId==='fencer' && !CB.player.classState.fencerUsed && CB.player.dicePool.length>0) {
+      const fBtn = document.createElement('button');
+      fBtn.id = 'fencer-reroll-btn';
+      fBtn.className = 'btn small';
+      fBtn.style.borderColor='#4dd0e1';
+      fBtn.textContent = CB.selectedDie>=0 ? `Reroll Die ${CB.selectedDie+1}` : 'Reroll (select die)';
+      fBtn.disabled = CB.selectedDie<0;
+      fBtn.onclick = doFencerReroll;
+      pcontrols.insertBefore(fBtn, pcontrols.firstChild);
+    }
+    if (CB.player.classId==='druid' && !CB.player.classState.druidUsed && CB.player.dicePool.length>0) {
+      const dBtn = document.createElement('button');
+      dBtn.id = 'druid-plant-btn';
+      dBtn.className = 'btn small';
+      dBtn.style.borderColor='#66bb6a';
+      dBtn.textContent = CB.selectedDie>=0 ? `Plant Die ${CB.selectedDie+1}` : 'Plant (select die)';
+      dBtn.disabled = CB.selectedDie<0;
+      dBtn.onclick = doDruidPlant;
+      pcontrols.insertBefore(dBtn, pcontrols.firstChild);
+    }
+  }
+}
+
+function doKnightRoll() {
+  if (CB.phase!=='player'||CB.player.classState.knightLocked) return;
+  const limit = 9 + (G.level-1)*2;
+  const newDie = rand(1,6);
+  CB.player.classState.knightTotal += newDie;
+  CB.player.dicePool.push(newDie);
+
+  if (CB.player.classState.knightTotal > limit) {
+    CB.player.dicePool = [];
+    CB.player.classState.knightLocked = true;
+    log(`Knight bust! Rolled ${newDie}, exceeded ${limit}. All dice lost!`, 'player');
+    updateCombatUI();
+    updatePlayerControls();
+  } else if (CB.player.classState.knightTotal === limit) {
+    log(`Knight jackpot! Total exactly ${limit}.`, 'player');
+    updateCombatUI();
+    openModal(`<h2>Knight Jackpot!</h2>
+      <p class="info-text">Total exactly ${limit}! Choose a boon:</p>
+      <div class="flex-row mt-16">
+        <button class="btn primary" onclick="knightBoon(1)">Heal ${3*G.level} HP</button>
+        <button class="btn primary" onclick="knightBoon(2)">Deal ${4*G.level} Damage</button>
+        <button class="btn primary" onclick="knightBoon(3)">Gain a 6-die</button>
+      </div>`);
+    CB.player.classState.knightLocked = true;
+  } else {
+    log(`Knight rolls ${newDie}. Total: ${CB.player.classState.knightTotal}/${limit}.`, 'player');
+    updateCombatUI();
+    updatePlayerControls();
+  }
+}
+
+function knightBoon(choice) {
+  closeModal();
+  const lv = G.level;
+  if (choice===1) {
+    CB.player.hp = Math.min(CB.player.maxHp, CB.player.hp+3*lv);
+    log(`Knight boon: healed ${3*lv} HP.`,'player');
+  } else if (choice===2) {
+    const dealt = applyShieldedDamage(CB.enemy, 4*lv);
+    log(`Knight boon: dealt ${dealt} damage.`,'player');
+  } else {
+    CB.player.dicePool.push(6);
+    log('Knight boon: gained a 6-die.','player');
+  }
+  updateCombatUI();
+  updatePlayerControls();
+  if (CB.enemy.hp<=0) endCombat('victory');
+}
+
+function doFencerReroll() {
+  if (CB.selectedDie<0||CB.player.classState.fencerUsed) return;
+  const old = CB.player.dicePool[CB.selectedDie];
+  const newVal = rand(1,6);
+  CB.player.dicePool[CB.selectedDie] = newVal;
+  CB.player.classState.fencerUsed = true;
+  log(`Fencer rerolls die ${CB.selectedDie+1}: ${old} → ${newVal}.`,'player');
+  
+  // Re-apply dice trigger effects
+  const msgs = triggerOnDiceRolled(CB.player);
+  msgs.forEach(m=>log(m,'player'));
+  
+  updateCombatUI();
+  updatePlayerControls();
+}
+
+function doDruidPlant() {
+  if (CB.selectedDie<0||CB.player.classState.druidUsed) return;
+  const val = CB.player.dicePool.splice(CB.selectedDie,1)[0];
+  CB.player.classState.druidPlanted = val;
+  CB.player.classState.druidUsed = true;
+  CB.selectedDie = -1;
+  log(`Druid plants a ${val}. It will bloom next turn.`,'player');
+  updateCombatUI();
+  updatePlayerControls();
+}
+
+// ============================================================
+// INVENTORY / DECK
+// ============================================================
+function openInventory() {
+  renderInventoryModal();
+}
+
+function renderInventoryModal() {
+  const deckCounts = countCards(G.deck);
+  const invCounts = countCards(G.inventory);
+  const allCardNames = Object.keys(invCounts);
+
+  let invHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;">`;
+  allCardNames.sort().forEach(name => {
+    const card = CARD_BY_NAME[name];
+    if (!card) return;
+    const owned = invCounts[name];
+    const inDeck = deckCounts[name]||0;
+    const color = RARITY_COLORS[card.rarity||1];
+    invHTML += `<div class="card" style="cursor:default;position:relative;">
+      <div class="card-rarity-bar" style="background:${color}"></div>
+      <div class="card-name">${card.name}</div>
+      <div class="card-desc">${card.desc}</div>
+      <div style="position:absolute;top:6px;right:6px;background:var(--blood);color:white;font-family:'Courier Prime',monospace;font-size:10px;padding:1px 5px;">x${owned}</div>
+      <div style="color:var(--teal-light);font-family:'Courier Prime',monospace;font-size:9px;margin-top:4px;">In deck: ${inDeck}</div>
+    </div>`;
+  });
+  invHTML += `</div>`;
+
+  openModal(`
+    <h2>Inventory & Deck</h2>
+    <div class="flex-row mb-16">
+      <span class="info-text">Cards owned: <span class="gold-text">${G.inventory.length}</span></span>
+      <span class="info-text" style="margin-left:16px">In deck: <span class="gold-text">${G.deck.length}</span></span>
+    </div>
+    <div class="section-label mb-8">Owned Cards</div>
+    ${invHTML}
+    <div class="section-label mb-8" style="margin-top:16px">Manage Deck</div>
+    <div class="flex-row mb-16">
+      <button class="btn small primary" onclick="openAddCardToDeck()">+ Add Card to Deck</button>
+      <button class="btn small danger" onclick="openRemoveCardFromDeck()">- Remove Card</button>
+    </div>
+    <div class="section-label mb-8">Active Deck</div>
+    <div id="deck-list-modal" style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--bone-dim);">
+      ${G.deck.length ? G.deck.map(c=>`<div>${c.name}</div>`).join('') : 'Empty'}
+    </div>
+    <div class="mt-16">
+      <button class="btn" onclick="closeModal()">Close</button>
+    </div>
+  `);
+}
+
+function countCards(arr) {
+  const c={};
+  arr.forEach(card=>{c[card.name]=(c[card.name]||0)+1;});
+  return c;
+}
+
+function openAddCardToDeck() {
+  const invCounts = countCards(G.inventory);
+  const deckCounts = countCards(G.deck);
+  const addable = [];
+  Object.keys(invCounts).sort().forEach(name=>{
+    const avail = invCounts[name]-(deckCounts[name]||0);
+    if (avail>0) addable.push({name, avail});
+  });
+  if (!addable.length) {
+    openModal(`<h2>No Cards Available</h2><p class="info-text">All owned cards are already in your deck.</p>
+      <div class="mt-16"><button class="btn" onclick="renderInventoryModal()">Back</button></div>`);
+    return;
+  }
+  openModal(`<h2>Add to Deck</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      ${addable.map(({name,avail})=>{
+        const card=CARD_BY_NAME[name];
+        const color=RARITY_COLORS[(card?.rarity)||1];
+        return `<div onclick="addCardToDeck('${name}')" class="card" style="cursor:pointer">
+          <div class="card-rarity-bar" style="background:${color}"></div>
+          <div class="card-name">${name}</div>
+          <div class="card-desc">${card?.desc||''}</div>
+          <div style="color:var(--teal-light);font-size:10px;margin-top:4px;">Available: ${avail}</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="mt-16"><button class="btn" onclick="renderInventoryModal()">Back</button></div>`);
+}
+
+function addCardToDeck(name) {
+  const card = CARD_BY_NAME[name];
+  if (!card) return;
+  const invCounts = countCards(G.inventory);
+  const deckCounts = countCards(G.deck);
+  if ((deckCounts[name]||0) >= (invCounts[name]||0)) {
+    log('No more copies available.','system'); return;
+  }
+  G.deck.push(card);
+  log(`${name} added to deck.`,'system');
+  openAddCardToDeck();
+}
+
+function openRemoveCardFromDeck() {
+  if (!G.deck.length) {
+    openModal(`<h2>Empty Deck</h2><p class="info-text">Your deck is already empty.</p>
+      <div class="mt-16"><button class="btn" onclick="renderInventoryModal()">Back</button></div>`);
+    return;
+  }
+  const counts = countCards(G.deck);
+  openModal(`<h2>Remove from Deck</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;">
+      ${Object.keys(counts).sort().map(name=>{
+        const card=CARD_BY_NAME[name];
+        const color=RARITY_COLORS[(card?.rarity)||1];
+        return `<div onclick="removeCardFromDeck('${name}')" class="card" style="cursor:pointer">
+          <div class="card-rarity-bar" style="background:${color}"></div>
+          <div class="card-name">${name}</div>
+          <div class="card-desc" style="font-size:10px;">${card?.desc||''}</div>
+          <div style="color:var(--blood-bright);font-size:10px;margin-top:4px;">In deck: ${counts[name]}</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="mt-16"><button class="btn" onclick="renderInventoryModal()">Back</button></div>`);
+}
+
+function removeCardFromDeck(name) {
+  const idx = G.deck.findIndex(c=>c.name===name);
+  if (idx>=0) {
+    G.deck.splice(idx,1);
+    log(`${name} removed from deck.`,'system');
+  }
+  if (!G.deck.length) { renderInventoryModal(); return; }
+  openRemoveCardFromDeck();
+}
+
+// ============================================================
+// SHOP
+// ============================================================
+function openShop() {
+  if (!G.shopUnlocked) {
+    openModal(`<h2>Locked</h2><p class="info-text">The Naukin shopkeep eyes you suspiciously. Return after completing some adventures.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>`);
+    return;
+  }
+  // Shop already generated on return from adventure; just show it
+  if (!currentShopOffers.length) generateAndShowShop();
+  else renderShopModal(currentShopOffers[0]?.sale||false);
+}
+
+const SHOP_EXCLUDED = new Set(["Wooden Sword","Slingshot","Small Stone","Makeshift Shield","Bandage","Sharpened Stick","Club","Rusty Dagger"]);
+
+let currentShopOffers = [];
+function generateAndShowShop() {
+  const sale = Math.random() < 0.05;
+  const shopPool = ALL_CARDS.filter(([name,,, r])=>r>=1&&r<=6&&!SHOP_EXCLUDED.has(name));
+  currentShopOffers = [];
+  const usedIds = new Set();
+  
+  for (let i=0;i<6;i++) {
+    // weighted rarity
+    const roll = Math.random();
+    let rarity = 1;
+    if (roll < 0.50) rarity=1;
+    else if (roll < 0.75) rarity=2;
+    else if (roll < 0.90) rarity=3;
+    else if (roll < 0.95) rarity=4;
+    else if (roll < 0.98) rarity=5;
+    else rarity=6;
+    
+    const pool = shopPool.filter(([,,id,r])=>r===rarity&&!usedIds.has(id));
+    if (!pool.length) continue;
+    const pick = randItem(pool);
+    usedIds.add(pick[2]);
+    const [pmin,pmax]=SHOP_PRICE_RANGES[rarity];
+    const basePrice = rand(pmin,pmax);
+    const price = sale ? Math.ceil(basePrice*0.5) : basePrice;
+    currentShopOffers.push({card:{name:pick[0],desc:pick[1],id:pick[2],rarity:pick[3]}, price, basePrice, purchased:false, sale});
+  }
+
+  renderShopModal(sale);
+}
+
+function renderShopModal(sale=false) {
+  const saleText = sale ? `<div style="color:var(--gold-light);font-family:'Courier Prime',monospace;font-size:12px;margin-bottom:12px;">🔔 SALE DAY! Everything 50% off!</div>` : '';
+  openModal(`
+    <h2>Naukin Card Shop</h2>
+    ${saleText}
+    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      ${currentShopOffers.map((offer,i)=>{
+        const card = offer.card;
+        const color=RARITY_COLORS[card.rarity||1];
+        const sold = offer.purchased;
+        const cantAfford = G.gold < offer.price;
+        const priceText = sold ? 'SOLD' : (offer.sale?`<span style="text-decoration:line-through;color:#888;">${offer.basePrice}g</span> ${offer.price}g`:offer.price+'g');
+        return `<div onclick="${sold?'':(!cantAfford?`buyShopCard(${i})`:'')}" class="card ${sold?'unplayable':''}" style="cursor:${sold||cantAfford?'default':'pointer'}">
+          <div class="card-rarity-bar" style="background:${color}"></div>
+          <div class="card-name">${card.name}</div>
+          <div style="font-size:9px;font-family:'Courier Prime',monospace;color:${color};">${RARITY_LABELS[card.rarity]}</div>
+          <div class="card-desc">${card.desc}</div>
+          <div style="font-family:'Courier Prime',monospace;font-size:11px;color:${sold?'#666':cantAfford?'#888':'var(--gold-light)'};margin-top:6px;">${priceText}</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="mt-16 flex-row">
+      <button class="btn" onclick="closeModal()">Leave</button>
+    </div>
+  `);
+}
+
+function buyShopCard(i) {
+  const offer = currentShopOffers[i];
+  if (!offer || offer.purchased) return;
+  if (G.gold < offer.price) return;
+  G.gold -= offer.price;
+  G.inventory.push(offer.card);
+  offer.purchased = true;
+  log(`Bought ${offer.card.name} for ${offer.price}g.`,'loot');
+  renderShopModal(offer.sale);
+  updateTownUI();
+}
+
+// ============================================================
+// BLACKSMITH
+// ============================================================
+function openBlacksmith() {
+  if (!G.blacksmithUnlocked) {
+    openModal(`<h2>Locked</h2><p class="info-text">The Naukin blacksmith closes up shop. Return after defeating stronger foes.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>`);
+    return;
+  }
+  renderBlacksmithModal();
+}
+
+function getUpgradeCandidates(card) {
+  const name = card.name;
+  const suffixes = [' x',' y'];
+  const base = name;
+  
+  // Check if it's already base, x/y, X/Y
+  const results = [];
+  for (const suf of [' x',' y']) {
+    const n = base+suf;
+    if (CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]);
+  }
+  if (!results.length) {
+    // Try XY path
+    if (name.endsWith(' x')) { const n=name.slice(0,-2)+' X'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
+    else if (name.endsWith(' y')) { const n=name.slice(0,-2)+' Y'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
+    else if (name.endsWith(' X')||name.endsWith(' Y')) { const base2=name.slice(0,-2); const n=base2+' XY'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
+  }
+  return results;
+}
+
+function renderBlacksmithModal() {
+  const invCounts = countCards(G.inventory);
+  const upgradeable = [];
+  
+  Object.keys(invCounts).sort().forEach(name => {
+    if (invCounts[name]>=2) {
+      const card = CARD_BY_NAME[name];
+      if (!card) return;
+      const candidates = getUpgradeCandidates(card);
+      if (candidates.length>0) upgradeable.push({name, card, candidates, count:invCounts[name]});
+    }
+  });
+
+  if (!upgradeable.length) {
+    openModal(`<h2>Blacksmith</h2>
+      <p class="info-text">"You need 2 identical copies of a card that can be upgraded."</p>
+      <p class="info-text">Collect duplicates through adventuring or the shop.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>`);
+    return;
+  }
+
+  openModal(`
+    <h2>Blacksmith</h2>
+    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span><br>Sacrifice 2 identical cards to forge 1 upgraded version.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;">
+      ${upgradeable.map(({name,card,candidates,count},i)=>{
+        const tier = 1; // simplified
+        const cost = 100;
+        const cantAfford = G.gold < cost;
+        const color=RARITY_COLORS[card.rarity||1];
+        return `<div onclick="${cantAfford?'':`forgeCard('${name}',${i})`}" class="card" style="cursor:${cantAfford?'not-allowed':'pointer'};">
+          <div class="card-rarity-bar" style="background:${color}"></div>
+          <div class="card-name">${name} x${count}</div>
+          <div class="card-desc">${card.desc}</div>
+          <div style="color:var(--gold-light);font-size:11px;font-family:'Courier Prime',monospace;margin-top:6px;">→ ${candidates[0].name}</div>
+          <div style="color:${cantAfford?'#888':'var(--gold-light)'};font-size:11px;font-family:'Courier Prime',monospace;">${cost}g</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>
+  `);
+}
+
+function forgeCard(name, idx) {
+  const cost = 100;
+  if (G.gold < cost) return;
+  const card = CARD_BY_NAME[name];
+  if (!card) return;
+  const candidates = getUpgradeCandidates(card);
+  if (!candidates.length) return;
+  
+  // Remove 2 copies
+  let removed = 0;
+  for (let i=G.inventory.length-1;i>=0&&removed<2;i--) {
+    if (G.inventory[i].name===name) { G.inventory.splice(i,1); removed++; }
+  }
+  // Also from deck
+  removed = 0;
+  for (let i=G.deck.length-1;i>=0&&removed<2;i--) {
+    if (G.deck[i].name===name) { G.deck.splice(i,1); removed++; }
+  }
+  
+  const upgraded = candidates[0];
+  G.inventory.push(upgraded);
+  G.gold -= cost;
+  log(`Forged 2x ${name} → 1x ${upgraded.name}.`, 'loot');
+  updateTownUI();
+  renderBlacksmithModal();
+}
+
+// ============================================================
+// TRAINING
+// ============================================================
+function openTraining() {
+  renderTrainingModal();
+}
+
+function trainingCost(base, level) { return Math.ceil(base * Math.pow(1.4, level)); }
+
+function renderTrainingModal() {
+  const hC = trainingCost(180, G.trainingHandLevel||0);
+  const hpC = trainingCost(220, G.trainingHpLevel||0);
+  const rC = trainingCost(160, G.trainingRecoveryLevel||0);
+  const sC = trainingCost(190, G.trainingShield||0);
+  
+  openModal(`
+    <h2>Train with Thessa</h2>
+    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span></div>
+    <div style="display:grid;gap:12px;">
+      <div class="panel" style="padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--parchment)">Hand Size +1</div>
+            <div style="font-size:11px;color:var(--bone-dim)">Current: +${G.trainingHandLevel||0} cards</div>
+          </div>
+          <button class="btn small primary" ${G.gold<hC?'disabled':''} onclick="buyTraining('hand',${hC})">${hC}g</button>
+        </div>
+      </div>
+      <div class="panel" style="padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--parchment)">Max HP +5</div>
+            <div style="font-size:11px;color:var(--bone-dim)">Current: +${(G.trainingHpLevel||0)*5} HP</div>
+          </div>
+          <button class="btn small primary" ${G.gold<hpC?'disabled':''} onclick="buyTraining('hp',${hpC})">${hpC}g</button>
+        </div>
+      </div>
+      <div class="panel" style="padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--parchment)">Recovery +5%</div>
+            <div style="font-size:11px;color:var(--bone-dim)">Current: ${(G.trainingRecoveryLevel||0)*5}% HP recovered between battles</div>
+          </div>
+          <button class="btn small primary" ${G.gold<rC?'disabled':''} onclick="buyTraining('recovery',${rC})">${rC}g</button>
+        </div>
+      </div>
+      <div class="panel" style="padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--parchment)">Starting Shield +1</div>
+            <div style="font-size:11px;color:var(--bone-dim)">Current: +${G.trainingShield||0} shield</div>
+          </div>
+          <button class="btn small primary" ${G.gold<sC?'disabled':''} onclick="buyTraining('shield',${sC})">${sC}g</button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>
+  `);
+}
+
+function buyTraining(type, cost) {
+  if (G.gold < cost) return;
+  G.gold -= cost;
+  if (type==='hand') { G.trainingHandLevel=(G.trainingHandLevel||0)+1; log(`Hand size improved: now +${G.trainingHandLevel}.`,'system'); }
+  else if (type==='hp') {
+    G.trainingHpLevel=(G.trainingHpLevel||0)+1;
+    G.maxHp+=5; G.hp=Math.min(G.maxHp,G.hp+5);
+    log(`Max HP increased to ${G.maxHp}.`,'system');
+  }
+  else if (type==='recovery') {
+    G.trainingRecoveryLevel=(G.trainingRecoveryLevel||0)+1;
+    G.trainingRecovery=(G.trainingRecoveryLevel)*5;
+    log(`Recovery improved to ${G.trainingRecovery}%.`,'system');
+  }
+  else if (type==='shield') {
+    G.trainingShield=(G.trainingShield||0)+1;
+    log(`Starting shield improved to ${G.trainingShield}.`,'system');
+  }
+  updateTownUI();
+  renderTrainingModal();
+}
+
+// ============================================================
+// TUTORIAL
+// ============================================================
+const TUTORIAL_STEPS = [
+  {
+    id: 'first_town',
+    title: 'Welcome to Ascus',
+    text: 'This is your home base. Rest to recover HP, manage your deck in Inventory, train with Thessa to improve your stats, and eventually unlock the Shop and Blacksmith.',
+  },
+  {
+    id: 'deck_basics',
+    title: 'Your Deck',
+    text: 'Cards are drawn randomly from your deck each combat turn, up to your hand limit. Unplayed cards stay in your hand across turns. Used and reusable cards go to the discard pile and shuffle back in when your deck runs dry.',
+  },
+  {
+    id: 'dice_basics',
+    title: 'Dice & Cards',
+    text: 'Each turn you roll 2 dice. Select a die, then a card (or card then die). Each card has a requirement — Any, Even, Odd, Min X, Exactly X. Spend a valid die to activate the card\'s effect.',
+  },
+  {
+    id: 'end_turn',
+    title: 'Ending Your Turn',
+    text: 'Click End Turn when done. Unused cards stay in your hand. The enemy takes their turn, then a new round begins. Between battles you can retreat to town — but not mid-combat.',
+  },
+];
+
+let tutorialSeen = new Set();
+let tutorialQueue = [];
+
+function enqueueTutorials(ids) {
+  for (const id of ids) {
+    if (!tutorialSeen.has(id)) tutorialQueue.push(id);
+  }
+  drainTutorialQueue();
+}
+
+function drainTutorialQueue() {
+  if (!tutorialQueue.length) return;
+  const id = tutorialQueue.shift();
+  if (tutorialSeen.has(id)) { drainTutorialQueue(); return; }
+  tutorialSeen.add(id);
+  const step = TUTORIAL_STEPS.find(s => s.id === id);
+  if (!step) { drainTutorialQueue(); return; }
+  const hasMore = tutorialQueue.length > 0;
+  openModal(`
+    <div style="font-family:'Courier Prime',monospace;font-size:10px;letter-spacing:3px;color:var(--teal-light);margin-bottom:8px;">✦ TUTORIAL ✦</div>
+    <h2>${step.title}</h2>
+    <p class="info-text" style="font-size:14px;line-height:1.7;">${step.text}</p>
+    <div class="mt-16"><button class="btn primary" onclick="closeModal();drainTutorialQueue()">${hasMore ? 'Next' : 'Understood'}</button></div>
+  `);
+}
+
+// ============================================================
+// THESSA TOWN INTRO
+// ============================================================
+function showThessaTownIntro(outcome = 'defeat') {
+  const screen = document.getElementById('story-screen');
+  let lines = [];
+
+  if (outcome === 'defeat') {
+    lines = [
+      'You stagger to relative safety before collapsing on the ground. That last fight got you good. Luckily, you had some straps leftover from the sail that you use to make a makeshift bandage.',
+      'As you finish wrapping, you think you hear the sound of carriage wheels. You must be getting delirious. Regardless, you limp towards the sound, hoping beyond hope to find some sort of aid.',
+      'You stumble out onto a worn dirt road. Slowly getting further and further is a wagon. You weakly croak, wave your arms, but you seem unable to get the attention of the wagon driver.',
+      'With all your remaining strength you let out a shout, but the effort leaves you nearly breathless, and you fall to your knees. As your vision fades. You can see the wagon slow, and a silhouette hop off and rush towards you.',
+      'What seems to be either only a few moments later, or a few decades, you are able to again open your eyes. You are lying in a bed, in a room faintly lit by torchlight. You try to sit up, but wince in pain.',
+      'Your wounds are bandaged. A strange salve is on a scratch on your arm. It has an unpleasant smell, but you can\'t feel any pain from it. As you pat yourself down, inspecting your wrappings, a voice clears from the corner of the room.',
+      '"You took quite the beating, stranger," says the voice. It is somehow both very deep, yet still soft. A silhouette forms and steps into the light, and you are finally able to get a good look at your savior.',
+      'You recognize them as a bovari, one of the ox-folk. The bovari stands about as tall as you, but her horns curl up another foot. Her impressive arms split at the elbows, ending in four powerful hands, the two left ones holding small vials.',
+      '"Not many travelers pass through here," she says, wiping away the salve from your arm before applying a new coat. "We can\'t let the few that do make it croak on us, can we?"',
+      `As she works, you ask for her name. "Thessa", she says. "What\'s yours?" "${G.name}," you reply. "Don\'t know where you were headed, but you\'ve made it to Ascus." She says this like it\'s supposed to mean something to you, but you\'ve never heard the name before.`,
+      'After a few moments tending to your wounds, she helps you up. The salve is working miracles, as you\'re able to make it out the door and down the stairs without much help.',
+      'You\'re in a modest tavern, filled with ratmen. The Naukin are a reclusive people, and they validate that stereotype, eyeing you and hushing their conversations as you enter the room.',
+      'Thessa leads you to the bar counter and helps you into a seat, before going behind and fixing a few drinks. "Don\'t mind them, they\'re always wary of outsiders." She slides you a drink, before getting to work on another for another customer.',
+      'You down the drink, a warm, earthy beverage that fills your stomach. "What do I owe you?", you ask, sheepishly patting yourself down for a coinpurse you both know isn\'t there.',
+      'The woman laughs. "A stack of clean dishes is a good start", she says, gesturing to the kitchen.'
+    ];
+  } else if (outcome === 'victory') {
+    lines = [
+      'You pat yourself down, surprised you made it out with as few scratches as you did. Looking around, you spot a faint trail of smoke in the distance, almost like from a chimney. You decide to head towards it.',
+      'After about another hour of hiking through wheat fields, you can finally see a small village in the distance. A few houses and other buildings are loosely scattered around a sturdy-looking tavern, and the scent of fresh bread drifts towards your nose.',
+      'As you enter the village, the citizens grow quiet, and you can feel all eyes on you. The denizens seem to be mostly Naukin, rat-folk known for being extremely reclusive and secluded by nature.',
+      'The tavern greets you with mostly the same reaction, with one notable exception: a large friendly Bovari bartender. The ox-folk warmly gestures you over, greeting you with a drink ready before you even sit down.',
+      '"Welcome to Ascus, traveler," says the bartender. "My name is Thessa. We don\'t get many visitors here, so don\'t mind the strange looks. Took them a couple years to get used to me," she chuckles.',
+      '"What can I do for you?" Thessa asks, her four hands cleaning the counter and pouring drinks with remarkable dexterity.',
+      'You sip a drink and feel it warm your chest. You patch your wounds, and ask for a room. "How long will you be staying?" the barkeep asks.',
+      'You look at your ragged clothes and bandaged hands. There\'s no cities you can reach, and you\'d be too poor to make it if you could.',
+      'You\'ll be stuck here for a while. Might as well make some coin adventuring.'
+    ];
+  } else {
+    lines = [
+      'You make your way back through the wilderness, following the path you took earlier. After some time, you spot smoke rising from a chimney in the distance.',
+      'You arrive at a small village nestled among wheat fields. The buildings are modest but sturdy, clustered around a welcoming tavern.',
+      'As you enter the village, you notice the inhabitants - mostly Naukin, the reclusive rat-folk - eye you curiously. They\'re not used to outsiders.',
+      'The tavern offers a warm respite. Behind the bar, a large Bovari with impressive horns and four arms greets you with a friendly wave.',
+      '"Welcome to Ascus, traveler!" she says cheerfully. "Name\'s Thessa. Don\'t mind the locals - they warm up eventually. Took me a couple years," she chuckles, sliding you a drink.',
+      'You accept the drink gratefully and settle in. This seems like as good a base as any for your adventures.'
+    ];
+  }
+
+  const rendered = lines
+    .map((line, index) => `<div class="story-text" style="animation-delay:${(0.4 + index * 0.28).toFixed(2)}s">${line}</div>`)
+    .join('');
+
+  screen.innerHTML = `
+    <div style="max-width:760px;margin:0 auto;">
+      <div style="font-family:'UnifrakturMaguntia',cursive;font-size:28px;color:var(--parchment);margin-bottom:24px;text-align:center;">Ascus</div>
+      ${rendered}
+      <div style="margin-top:36px;text-align:center;animation:storyFade 1s ease 1.2s both forwards;">
+        <button class="btn primary" onclick="goToStarterCards()">Continue</button>
+      </div>
+    </div>
+  `;
+  showScreen('story-screen');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+window.addEventListener('load', () => {
+  setDiff('normal');
+  log('Welcome to LOADED BONES.', 'story');
+  log('In Loaded Bones, you will use your magical dice to activate spellcards to ensure victory on your adventures. Try each class, refine your strategy, and triumph!', 'story');
+});
+</script>
+</body>
+</html>

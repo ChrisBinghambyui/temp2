@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Flintlock Dungeon — Browser Terminal</title>
+<style>
+  :root{
+    --bg:#0d0d0d;
+    --panel:#0b0b0b;
+    --green:#00ff66;
+    --muted:#007a3a;
+    --accent:#39ff9a;
+  }
+  html,body{height:100%;margin:0;background:linear-gradient(180deg,#050505 0%, #0f0f0f 100%);}
+  body{
+    font-family: "Courier New", monospace;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    color:var(--green);
+  }
+
+  .terminal {
+    width:min(1000px, 94vw);
+    max-width:1000px;
+    height:75vh;
+    min-height:540px;
+    background: radial-gradient(ellipse at 20% 10%, rgba(0,255,102,0.02), transparent 30%),
+                linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+    border: 2px solid rgba(0,255,102,0.08);
+    box-shadow: 0 10px 60px rgba(0,0,0,0.7), inset 0 2px 0 rgba(255,255,255,0.02);
+    padding:18px;
+    border-radius:8px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+
+  .term-header{
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+  .led { width:12px;height:12px;border-radius:50%; background:#ff5f56; box-shadow:0 0 12px rgba(255,95,86,0.2); }
+  .led.yellow { background:#ffbd2e; box-shadow:0 0 12px rgba(255,189,46,0.1); }
+  .led.green { background:#27c93f; box-shadow:0 0 12px rgba(39,201,63,0.12); }
+  .title { font-weight:bold; margin-left:6px; color:var(--accent); }
+
+  .screen {
+    flex:1;
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.2));
+    border-radius:6px;
+    padding:14px;
+    color:var(--green);
+    overflow:auto;
+    box-shadow: inset 0 0 30px rgba(0,255,102,0.01);
+    border: 1px solid rgba(0,255,102,0.03);
+    line-height:1.35;
+    font-size:14px;
+  }
+
+  .screen .line { white-space:pre-wrap; word-wrap:break-word; margin-bottom:6px; }
+
+  .input-row {
+    display:flex;
+    gap:8px;
+    align-items:center;
+  }
+
+  .prompt {
+    min-width:84px;
+    text-align:right;
+    color:var(--muted);
+    font-size:13px;
+    user-select:none;
+  }
+
+  .cmd-input {
+    flex:1;
+    background:transparent;
+    border:1px solid rgba(0,255,102,0.07);
+    color:var(--green);
+    padding:10px 12px;
+    border-radius:6px;
+    outline:none;
+    font-family:inherit;
+    font-size:14px;
+  }
+
+  .btn {
+    background:linear-gradient(180deg, rgba(0,255,102,0.06), rgba(0,255,102,0.02));
+    border:1px solid rgba(0,255,102,0.06);
+    color:var(--green);
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    font-family:inherit;
+    font-size:13px;
+  }
+  .btn:active{ transform:translateY(1px); }
+
+  .muted { color: #4f9f6e; font-size:13px; }
+
+  .status {
+    display:flex;
+    gap:10px;
+    color:var(--muted);
+    font-size:13px;
+  }
+
+
+  .green-highlight{ color:var(--accent); font-weight:700; }
+  ::-webkit-scrollbar{ height:10px; width:10px; }
+  ::-webkit-scrollbar-thumb{ background:rgba(0,255,102,0.06); border-radius:8px; }
+  .blinker { display:inline-block; width:8px; background:var(--green); margin-left:6px; animation:blink 1s steps(1) infinite; height:14px; vertical-align:middle; }
+  @keyframes blink { 50%{opacity:0} }
+</style>
+</head>
+<body>
+  <div class="terminal" role="application" aria-label="Flintlock Dungeon terminal">
+    <div class="term-header">
+      <div class="led"></div><div class="led yellow"></div><div class="led green"></div>
+      <div class="title">Flintlock Dungeon</div>
+      <div style="flex:1"></div>
+      <div class="status"> <span id="stat-level" class="muted">Level: 0</span> <span id="stat-hp" class="muted">HP: 10/20</span> <span id="stat-floor" class="muted">Floor: 0</span></div>
+    </div>
+
+    <div id="screen" class="screen" tabindex="0" aria-live="polite"></div>
+
+    <div class="input-row">
+      <div class="prompt">INPUT:</div>
+      <input id="cmd" class="cmd-input" autocomplete="off" />
+      <button id="send" class="btn">Enter</button>
+    </div>
+  </div>
+
+<script>
+/*
+  Flintlock Dungeon — browser terminal UI
+  Converted from original PyScript game into event-driven JS.
+  Works locally: save as HTML and open in Chrome.
+*/
+
+(function(){
+
+  const screen = document.getElementById('screen');
+  const input = document.getElementById('cmd');
+  const send = document.getElementById('send');
+  const statLevel = document.getElementById('stat-level');
+  const statHP = document.getElementById('stat-hp');
+  const statFloor = document.getElementById('stat-floor');
+
+  function print(text="", cssClass="line"){
+    const el = document.createElement('div');
+    el.className = cssClass;
+    el.textContent = text;
+    screen.appendChild(el);
+    screen.scrollTop = screen.scrollHeight;
+  }
+
+  function printRich(text, html=false){
+    const el = document.createElement('div');
+    el.className = "line";
+    if(html) el.innerHTML = text; else el.textContent = text;
+    screen.appendChild(el);
+    screen.scrollTop = screen.scrollHeight;
+  }
+
+  function dice(n){ return Math.floor(Math.random()*n) + 1; }
+  function d4(){ return dice(4); }
+  function d6(){ return dice(6); }
+  function d8(){ return dice(8); }
+  function d10(){ return dice(10); }
+  function d12(){ return dice(12); }
+  function d100(){ return dice(100); }
+  function d20(){ return dice(20); }
+  function d40(){ return dice(40); }
+
+
+  let inputResolve = null;
+  function getInput(promptText="", validOptions=null){
+    printRich("> " + promptText);
+    input.value = "";
+    input.focus();
+    return new Promise((resolve) => {
+      inputResolve = ({resolve, validOptions});
+    });
+  }
+
+
+  function handleInputSubmit(){
+    if(!inputResolve) return;
+    const raw = input.value.trim();
+    if(raw === "") return;
+    printRich(raw, false);
+    const { resolve, validOptions } = inputResolve;
+    inputResolve = null;
+    // If validOptions specified, validate
+    if(validOptions){
+      const num = Number(raw);
+      if(!Number.isFinite(num) || !validOptions.includes(num)){
+        print("Invalid choice. Expected: " + JSON.stringify(validOptions));
+        // re-prompt: resolve with null so caller can re-prompt
+        resolve({ok:false, raw});
+        return;
+      }
+      resolve({ok:true, value:num});
+    } else {
+      resolve({ok:true, value:raw});
+    }
+  }
+
+
+  send.addEventListener('click', handleInputSubmit);
+  input.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter') { e.preventDefault(); handleInputSubmit(); }
+  });
+
+
+  class Creature {
+    constructor(name, health, strength, defense, xp_value=0, strength_type="fixed", max_health=null){
+      this.name = name;
+      this.health = health;
+      this.base_strength = strength;
+      this.defense = defense;
+      this.xp_value = xp_value;
+      this.strength_type = strength_type;
+      this.max_health = max_health !== null ? max_health : health;
+    }
+    getStrength(){
+      if(this.strength_type === "current_health") return this.health;
+      return this.base_strength;
+    }
+  }
+
+
+  let weapon = [1,2,3,4,5,6];
+  let hp = 20;
+  let currenthp = 20;
+  let lvl = 0;
+  let floor = 0;
+  let xp = 0;
+  let upg = 0;
+  let shield = 0;
+  let cdef = 1;
+  let heal = [0,1,2,3];
+  let critchance = [1,2,3,4,5];
+  let gun_loaded = true;
+
+  let final = 1;
+  let double = 0, rapid = 0, crit = 0;
+  let totem = 0, idol = 0, potion = 0;
+  let potion_usage = 0, totem_usage = 0, idol_usage = 0, victories = 0;
+
+  const rng = [0,1,2,3];
+  const rng2 = [0,1,2,3,4,5,6];
+  const rng3 = [0,1,2];
+  const rng4 = [0,1];
+
+  // enemies
+  const coin = new Creature("Cloaked Man", 10000, 0, 0);
+
+  const pdummy = new Creature("Practice Dummy", 6, 0, d4(), 15);
+  
+  const crat = new Creature("Cave Rat", 3, d4()-1, 0, 2);
+  const wbat = new Creature("Weary Bat", 2, d4()-1, 1, 2);
+  const rock = new Creature("Spooky Rock", 10, 0, 0, 2);
+
+  const vrat = new Creature("Crazed Rats", 4, d8()-2, 0, 3);
+  const mutt = new Creature("Mangy Dog", 6, d6()-1, 0, 3);
+  const ybel = new Creature("Young Beltleech", d4()+d4(), 3, 0, 3);
+
+  const magg = new Creature("Maggot Swarm", 12, 0, -1, 5, "current_health");
+  const ygos = new Creature("Decrepit Ghost", 4, d6()-1, 0, 5);
+  const ycag = new Creature("Young Caghouse", 8, d8(), 2, 5);
+
+  const dell = new Creature("Dellinid Prowler", 15, d6()+d6(), 2, 7);
+  const skel = new Creature("Skeletal Guard", 12, d8()+2, 2, 7);
+  const nauk = new Creature("Naukin Scout", 12, d4()+d4()+d4(), 1, 7);
+
+  const tent = new Creature("Fleshy Protrusion", 20, d8()+d4(), 2, 10);
+  const myrm = new Creature("Myrrim Rotguard", 18, d12()+1, 3, 10);
+  const cagh = new Creature("Roaming Caghouse", 16, 15, 4, 10);
+
+  const wyrm = new Creature("Hammerhead Tunneler", 25, d10()+2, 4, 15);
+  const skit = new Creature("Skittran Scouts", 20, 0, 5, 15, "current_health");
+  const pred = new Creature("Predator Wyrm", 30, d8()+d8()+d8(), 2, 15);
+
+  const enak = new Creature("Naukin Patrol", 30, 0, 2, 20, "current_health");
+  const mysa = new Creature("Rooted Myr", 35, d12()+d12(), d6(), 20);
+  const marr = new Creature("Marrow Hulk", 40, d12()+10, 2, 20);
+
+  const skar = new Creature("Skittran Arbalests", 35, 20, 4, 30);
+  const terr = new Creature("Terragan", 45, d10()+d10()+d10()+5, 2, 30);
+  const myrg = new Creature("Myrrim Goliath", 45, d40(), 4, 30);
+
+  const hrt = new Creature("Heart of the Mountain", 60, d20()+d20()+10, 6, 60);
+
+  const tier0 = [coin];
+  const tier1 = [pdummy];
+  const tier2 = [crat, wbat, rock];
+  const tier3 = [vrat, mutt, ybel];
+  const tier4 = [magg, ygos, ycag];
+  const tier5 = [dell, skel, nauk];
+  const tier6 = [tent, cagh, myrm];
+  const tier7 = [pred, skit, wyrm];
+  const tier8 = [enak, mysa, marr];
+  const tier9 = [skar, terr, myrg];
+  const tier10 = [hrt];
+
+  
+  function updateStats(){
+    statLevel.textContent = `Level: ${lvl}`;
+    statHP.textContent = `HP: ${currenthp}/${hp}`;
+    statFloor.textContent = `Floor: ${floor}`;
+  }
+
+ 
+  async function mainGame(){
+    print("Welcome to FLINTLOCK DUNGEON (browser edition)!");
+    print("");
+    print("Note: Most inputs in this game are numeric. If you enter something invalid, you'll be prompted again.");
+    print("");
+    updateStats();
+
+   
+    let nameResult = await getInput("What is your character's name?");
+    while(!nameResult.ok){
+      nameResult = await getInput("What is your character's name?");
+    }
+    const name = String(nameResult.value);
+    print(`Welcome to Flintlock Dungeon, ${name}!`);
+    print("");
+    let debug_mode = false;
+    if(name === "devcom"){ debug_mode = true; print("*** DEBUG MODE ACTIVATED ***"); }
+
+    let play = true;
+
+  
+    while(play && currenthp > 0){
+      // debug menu
+      if(debug_mode){
+        print("");
+        print("*** DEBUG MENU ***");
+        print("1) Continue normally  2) Edit stats  3) Edit equipment  4) Change floor  5) Choose next enemy");
+        let res = await getInput("Choose an option (or press 1):");
+        if(!res.ok){ continue; }
+        const debug_choice = Number(res.value);
+        if(debug_choice === 2){
+          print("--- Edit Stats ---");
+          let r = await getInput("Max HP (current: " + hp + "):");
+          if(r.ok && !isNaN(Number(r.value))){ hp = Math.max(1, Number(r.value)); }
+          r = await getInput("Current HP (current: " + currenthp + "):");
+          if(r.ok && !isNaN(Number(r.value))){ currenthp = Math.min(hp, Math.max(0, Number(r.value))); }
+          r = await getInput("Level (current: " + lvl + "):");
+          if(r.ok && !isNaN(Number(r.value))){ lvl = Math.max(0, Number(r.value)); }
+          r = await getInput("XP (current: " + xp + "):");
+          if(r.ok && !isNaN(Number(r.value))){ xp = Math.max(0, Number(r.value)); }
+          r = await getInput("Upgrade points (current: " + upg + "):");
+          if(r.ok && !isNaN(Number(r.value))){ upg = Math.max(0, Number(r.value)); }
+          r = await getInput("Shield/Defense (current: " + shield + "):");
+          if(r.ok && !isNaN(Number(r.value))){ shield = Math.max(0, Number(r.value)); cdef = shield + 1; }
+          print("Stats updated!");
+        } else if(debug_choice === 3){
+          print("--- Edit Equipment ---");
+          let r = await getInput("Potions (current: " + potion + "):");
+          if(r.ok && !isNaN(Number(r.value))){ potion = Math.max(0, Number(r.value)); }
+          r = await getInput("Totems (current: " + totem + "):");
+          if(r.ok && !isNaN(Number(r.value))){ totem = Math.max(0, Number(r.value)); }
+          r = await getInput("Idols (current: " + idol + "):");
+          if(r.ok && !isNaN(Number(r.value))){ idol = Math.max(0, Number(r.value)); }
+          r = await getInput("Dual Wield (0=no,1=yes):");
+          if(r.ok && !isNaN(Number(r.value))){ double = Number(r.value) ? 1:0; }
+          r = await getInput("Rapid Reload (0=no,1=yes):");
+          if(r.ok && !isNaN(Number(r.value))){ rapid = Number(r.value) ? 1:0; }
+          r = await getInput("Critical Hits (0=no,1=yes):");
+          if(r.ok && !isNaN(Number(r.value))){ crit = Number(r.value) ? 1:0; }
+          print("Equipment updated!");
+        } else if(debug_choice === 4){
+          let r = await getInput("Floor (current: " + floor + "):");
+          if(r.ok && !isNaN(Number(r.value))){ floor = Math.max(0, Number(r.value)); }
+          print("Floor set to " + floor);
+        } else if(debug_choice === 5){
+  print("--- Choose Enemy ---");
+  print("Tier 0-1:");
+  print("0) Cloaked Man  1) Practice Dummy");
+  print("Tier 2:");
+  print("2) Cave Rat  3) Weary Bat  4) Spooky Rock");
+  print("Tier 3:");
+  print("5) Crazed Rats  6) Mangy Dog  7) Young Beltleech");
+  print("Tier 4:");
+  print("8) Maggot Swarm  9) Decrepit Ghost  10) Young Caghouse");
+  print("Tier 5:");
+  print("11) Dellinid Prowler  12) Skeletal Guard  13) Naukin Scout");
+  print("Tier 6:");
+  print("14) Fleshy Protrusion  15) Hammerhead Tunneler  16) Myrrim Rotguard");
+  print("Tier 7:");
+  print("17) Predator Wyrm  18) Skittran Scouts  19) Roaming Caghouse");
+  print("Tier 8:");
+  print("20) Naukin Patrol  21) Rooted Myr  22) Marrow Hulk");
+  print("Tier 9:");
+  print("23) Skittran Arbalests  24) Terragan  25) Myrrim Goliath");
+  print("Tier 10:");
+  print("26) Heart of the Mountain");
+  
+  let r = await getInput("Choose enemy (0-26):");
+  if(r.ok && !isNaN(Number(r.value))){
+    const idx = Number(r.value);
+    const all = [
+      coin, pdummy,              // 0-1
+      crat, wbat, rock,          // 2-4
+      vrat, mutt, ybel,          // 5-7
+      magg, ygos, ycag,          // 8-10
+      dell, skel, nauk,          // 11-13
+      tent, wyrm, myrm,          // 14-16
+      pred, skit, cagh,          // 17-19
+      enak, mysa, marr,          // 20-22
+      skar, terr, myrg,          // 23-25
+      hrt                        // 26
+    ];
+    if(idx>=0 && idx<all.length){
+      window._debug_next_enemy = all[idx];
+      print("Next encounter set to: " + all[idx].name);
+    }
+  }
+} else {
+          // continue normally
+        }
+      }
+
+      print("");
+      print("Will you continue deeper into the dungeon? Or abandon all hope and flee now?");
+      print("1) Continue    2) Abandon");
+      let choice = await getInput("Choose 1 or 2:");
+      if(!choice.ok) continue;
+      if(Number(choice.value) === 2){ print("You quit. Farewell."); break; }
+
+      
+        let enemyPool;
+        if(window._debug_next_enemy){ 
+        enemyPool = [window._debug_next_enemy]; 
+        window._debug_next_enemy = null; 
+        }
+        else {
+        if(floor === 0) {
+            enemyPool = tier1;
+        }
+        else if(floor % 10 === 0) {
+            enemyPool = tier0;
+        }
+        else if(floor >= 1 && floor <= 5) {
+            enemyPool = tier2;
+        }
+        else if(floor >= 6 && floor <= 9) {
+            enemyPool = tier2.concat(tier3); 
+        }
+        else if(floor >= 11 && floor <= 15) {
+            enemyPool = tier2.concat(tier3); 
+        }
+        else if(floor >= 16 && floor <= 19) {
+            enemyPool = tier3.concat(tier4);
+        }
+        else if(floor >= 21 && floor <= 25) {
+            enemyPool = tier3.concat(tier4); 
+        }
+        else if(floor >= 26 && floor <= 29) {
+            enemyPool = tier4.concat(tier5); 
+        }
+        else if(floor >= 31 && floor <= 35) {
+            enemyPool = tier4.concat(tier5); 
+        }
+        else if(floor >= 36 && floor <= 39) {
+            enemyPool = tier5.concat(tier6); 
+        }
+        else if(floor >= 41 && floor <= 45) {
+            enemyPool = tier5.concat(tier6);
+        }
+        else if(floor >= 46 && floor <= 49) {
+            enemyPool = tier6.concat(tier7); 
+        }
+        else if(floor >= 51 && floor <= 55) {
+            enemyPool = tier6.concat(tier7); 
+        }
+        else if(floor >= 56 && floor <= 59) {
+            enemyPool = tier7.concat(tier8); 
+        }
+        else if(floor >= 61 && floor <= 65) {
+            enemyPool = tier7.concat(tier8); 
+        }
+        else if(floor >= 66 && floor <= 69) {
+            enemyPool = tier8.concat(tier9); 
+        }
+        else if(floor >= 71 && floor <= 75) {
+            enemyPool = tier8.concat(tier9); 
+        }
+        else if(floor >= 76 && floor <= 80) {
+            enemyPool = tier9; 
+        }
+        else if(floor === 81) {
+            enemyPool = tier10; 
+        }
+        else if(floor >= 82){
+          enemyPool = tier10.concat(tier9.concat(tier8))
+        }
+        }
+
+      const opp = deepClone(randomChoice(enemyPool));
+      opp.health = opp.max_health;
+      let round = 0;
+      print("");
+      print("A strange force draws you deeper into the dungeon...");
+      print("...");
+      print("...");
+      // print(`Something approaches... ${opp.name} appears from the darkness!`);
+      updateStats();
+
+
+if(opp.name === coin.name || opp === coin){
+  floor += 1
+  print("The suspicious figure lifts a hand, stopping you in your tracks. He is not hostile.");
+  print("He claims to be a travelling wizard, an adventurer like yourself.");
+  print("He is conducting research, and needs blood to complete it.");
+  print("If you give some of yours, he will recompense you greatly. Do you accept the offer?");
+  let sacRes = await getInput("1) Give blood   2) Refuse");
+  if(sacRes.ok && Number(sacRes.value) === 1){
+    print("You allow him to draw blood...");
+    hp -= 5;
+    if(currenthp > hp) currenthp = hp;
+    const rew1 = randomChoice(rng);
+    const rew2 = randomChoice(rng2);
+    const rew3 = randomChoice(rng3);
+    const rew4 = randomChoice(rng4);
+    if(rew1 > 0){ potion += rew1; print(`You find ${rew1} vial(s).`); }
+    if(rew2 > 0){ upg += rew2; print(`You gain ${rew2} UPG point(s).`); }
+    if(rew3 > 0){ totem += rew3; print(`You find ${rew3} totem(s).`); }
+    if(rew4 > 0){ idol += rew4; print(`You find ${rew4} idol(s).`); }
+  } else { 
+    print("You refuse."); 
+  }
+  updateStats();
+  continue; 
+}
+
+if (opp.name === pdummy.name){
+  print("You come across a harmless wooden effigy. It looks to be long-forgotten, but it does provide an opportunity to practice your aim. You look at the flintlock pistol in your hands. Perhaps a warm-up would be in order.")
+  print("")
+}
+
+if (opp.name === crat.name){
+  print("Skittering sounds grow closer, and a small lump of dark fur appears. At first it appears harmless, but then it unfurls into a menacing lump of claws and teeth. With a sharp screech, it begins to charge, and you draw your pistol.")
+}
+
+if (opp.name === wbat.name){
+  print("As you enter the next room, your boot connects with a small stone, sending it sailing into the inky space in front of you. Following its echoes, a squeak and urgent flapping emerge. The bat is clearly enraged by its rude awakening. Send it back to sleep.")
+}
+
+if (opp.name === rock.name){
+  print("A looming silhouette stands motionless before you. Hopefully, you spotted it before it spotted you. You duck back around the corner and train an eye on it, but it still doesn't move. You train a pistol on it, and as slowly and silently as you can manage, you approach. Once you get within 15 feet, you realize the nature of your foe: a harmless stalagmite. You look at your raised pistol. A little more target practice wouldn't hurt.")
+}
+
+if (opp.name === vrat.name){
+  print("A cacophony of sharp scratches and squeaks grows louder as you approach the next room. You round the corner and see a convulsing mass. Upon closer inspection, you realize it's a corpse, infested with small rats. You take one step too close, and the sounds stop. Dozens of reflective eyes turn towards you en masse. Their bloody feast interrupted, they charge towards their new meal.")
+}
+
+if (opp.name === mutt.name){
+  print("Out of the darkness approaches a dirty, mangy dog. It looks up at you with hungry, pleading eyes. You take out a piece of your rations, and kneel offering it to the poor, abandoned pup. Without warning, it bares its teeth and braces to charge. Friends are hard to come across this deep, it would seem.")
+}
+
+if (opp.name === ybel.name){
+  print("The sound of something heavy and wet slapping into the floor causes you to whip around. You scan the dim causeway behind you, but see nothing amiss. You continue on your way, but before long, you hear the sound of something dragging along the stone floor behind you. This time you whirl around fast enough to see what appears to be a section of the floor slithering towards you. You fire off a warning shot, and the strange shape rises up. The Beltleech is flat and dark, but it opens its mouth, revealing rows and rows of teeth that should not fit.")
+}
+
+if (opp.name === magg.name){
+  print("A glowing blue river gurgles a greeting for you in the next cavern. You drop and cup your hands, inspecting the fascinating liquid. You've heard of a variety of cave fish that can thrive in patches of water this deep, but this section is empty. A stream of bubbles whirl around your hand, dancing almost methodically. They rise, and you see they aren't bubbles at all. A horde of maggots rise from the water lifting themselves until they match you in height. With an eery silence, the mass surges towards you as a whole.")
+}
+
+if (opp.name === ygos.name){
+  print("The wide cavern before you contains the long-decayed remains of some kind of permanent settlement. You can make out pillars that long ago gave up on crumbling and now rest in masses barely resembling what must have once been a magnificent structure. Whispers attend you as you walk the abandoned halls, and you know you are not alone. Pale mist apparates before you, slowly assembling into the form of a humanoid, but you can't make out the exact nature of the likely-extinct race. As the face forms, it is malformed and twisted into a grimace, before flowing towards you, ghastly arms outstretched.")
+}
+
+if (opp.name === ycag.name){
+  print("Methodic thumping sounds grow in volume as you travel down the dimly lit catacombs. You find yourself facing a Caghouse, a strage creature not unsimilar from the turtles you'd collect back home. This being, however, is magnitudes larger, and its shell is jet black, indicating it as a youth. As it notices your presence, it drops onto all six legs and lets out a long, low humming sound from its beak. The hums fluctuate in tone, seeming to either sense you or communicate with you. Either way, it appears unsatisfied, as it drops low to the ground and begins to charge, the rough, bony tail behind it dragging loudly.")
+}
+
+if (opp.name === dell.name){
+  print("You sit down, exhausted. This cavern is unusually warm. You hear a strange clicking sound, accompanied by some utterly alien chirps. You turn around, searching in every direction for the origin of the noise. You are lucky this time: you manage to spot two reflective purple eyes just before they lunge towards you. The large, black cat soars over you after you duck just in time. It lands gracefully and whips around, long tail whipping and snapping dangerously.")
+}
+
+if (opp.name === skel.name){
+  print("The strange cavern comes to an impossibly wide underground opening, strewn with the corpse of some long-forgotten stronghold. Everything is deathly still, even the dust seems to stand still in the air. You make your way through the decrepit halls until you step on a large, circular brick. A symbol crawls out from beneath your boot, eery green light forming some character foreign to you. A line shoots out from beneath you forward, before sharply curving into a room you cannot see. You hold still for a moment, just to see the front half of an armored torso standing in the revealed doorway. A large, ironclad skeletal warrior steps into the hallway, blocking your path, wielding a rotting wooden shield and a rusted morningstar.")
+}
+
+if (opp.name === nauk.name){
+  print("For the last few miles, you've been seeing glowing reflective disks in the corner of your eye. You suspect something has been following you, hunting you, but it hasn't made a move yet. You tighten your grip and press forward, feversihly checking your blind spot. Naturally, it comes when you least expect it: a spear, whizzing right at your chest. Luckily, you move just in time, and it soars right past you. A small, furry creature is charging you, wielding a sharp spear.")
+}
+
+if (opp.name === tent.name){
+  print("The cavern is adorned with far too many stalagmites. You pick up a rock and hurl it into the cave, and it ricochets between a couple of stone pillars. Your instincts are not satisfied, however, so you throw another. This time, the stalagmite hit suddenly withdraws into the ground. A trail of rubble races towards you, ending with it exploding out from underneath you. Other than its violent emergence, it is entirely indistinguishable from the other stalagmites. You ready your pistol as it looms silently looms over you, towering and menacing.")
+}
+
+if (opp.name === pred.name){
+  print("The walls around you shake rythmically as you traverse the empty halls. You peer into one of the pockmarked holes around you and spot stony, orange skin rushing past.Predator Wyrms. Beasts known for their speed, you know you can't outrun them if they decide they're hungry, but with decent preparation you might just have a chance. You find a sturdy patch of stone they seem to have left untouched as of yet and prepare to fire as the rumbling grows closer.")
+}
+
+if (opp.name === myrm.name){
+  print("The presence of vibrant flora covering the walls means you've entered Myrmiddian territory. You've been warned about the highly territorial and seclusive people, but your path is clear, and there's no turning back now. You step carefully forward, doing your best to avoid stepping on any of the faintly-glowing moss, but it's no use. A sharp crack echoes as a brilliant figure detaches from the wall. The Myrmiddian faces you, wielding a large, gnarled blade and an imposing shield embroidered with intricate, mossy symbols.")
+}
+
+if (opp.name === wyrm.name){
+  print("A low rumbling heralds the approach of a large beast of some kind. The real question is which of the many subterranean predators is circling you this time. The ceiling above you crumbles, and a huge beast plummets towards you. You dive away as the beast collides with the ground where you once stood. The wyrm has a sharp, angular head, crowning a body studded with innumerable powerful limbs. It opens a gaping maw, letting out a low roar as it begins to storm forward.")
+}
+
+if (opp.name === skit.name){
+  print("You take a seat, worn out from a long day of hiking through rough tunnels and caverns. The stones around you are adorned with with primitive, offputting markings. You have no idea what the multi-limbed figures are supposed to be depicting, as there is little interaction between the inhabitants of the deep and those on the surface. A flurry of sharp, clacking noises approach rapidly, pulling you from you thoughts. Several figures ambush forward, their many limbs gripping ancient, scavenged weapons. Unnatural eyes study you from all angles. Making no sudden movements, you reach down and prepare to draw. These strange creatures are far from peaceful.")
+}
+
+if (opp.name === cagh.name){
+  print("A large Caghouse stands guard, blocking your way. Well, she would be blocking your path, if she weren't fast asleep. You ponder your options, you could either try and attack before she awakens, or sneak around silently. You eye your gear, wondering if anything would make too much noise while you move, you unclip a few items and slide them into your pockets, hoping it would help you, but you've taken too long. You look up to see the Caghousian guard lumbering to her feet, orange eyes locked onto you. She mutters something in a tongue you never cared to learn before lowering her head and charging.")
+}
+
+if (opp.name === enak.name){
+  print("You crawl towards a ledge overlooking what must have once been a center of underground commerce. There are dozens of Naukin milling around, rifling through rubble for who-knows-what. These are far better equipped than the rat-men you've encountered before, and far more organized, their meandering always done in pairs. You carefully slide down the ledge, hoping to sneak past without conflict. You press up against shadowed walls as patrols march past, but eventually your luck runs out and you find yourself cornered, directly in the path of a pair of spear-wielding Naukin. The leader spots you and freezes, while the one behind pulls out two hollow iron tubes and clangs them together, loudly alerting the camp to your intrusion.")
+}
+
+if (opp.name === mysa.name){
+  print("The beautiful, vibrant glow of the path ahead is so bright that you can see even without your lantern lit. However, the dark illumination reveals the corpses of many unfortunate Naukin and Skittran who ventured too deep and too far. You come to the epicenter of infection, finding yourself face-to-face with a strange tree-shaped being, stretching from the floor to the ceiling. A sickly sweet smell enters your nostrils, before a pulsing headache racks your mind, loudly repeating a single word: 'INTERLOPER'. You draw your weapons. Your mind is not welcoming to interlopers, either.")
+}
+
+if (opp.name === marr.name){
+  print("The piles of bones here have been stacked and ordered, not strewn about like in the other battlefields you've passed through. Someone was here, and recently, as footprints in the dust indicate. As you stoop to inspect the footprint, you notice a bone out of the corner of your eye rattling on its own. It slowly slides towards the nearest pile before disappearing into the mass. You stand as the whole pile begins to violently quake, threatening to collapse but never disassembling. The pile takes shape, a horrid mass of misplacd bones bound by the dry marrow leaking through the cracked skeletons, and rises to what could pass for feet. The hulking pile ascends to its full height, before leaning forward and opening its jaw, making no noise but filling the room with a thunderous, whipping wind.")
+}
+
+if (opp.name === skar.name){
+  print("For the past few hours you've been navigating winding stone bridges that web across an immeasurably deep cavern. You look down, the light from your lantern unable to find the anything beyond the next few bridges below. An opportunity forms in your mind, as this would be an excellent place to ambush any passing patrols that cross beneath you. Just as this thought manifests, an arrow clatters harshly off the stone beside you. You look up to find a trio of Skittran on the passage above you, all aiming primitive bows in your direction. You begin to run, arrows clattering all around you, and prepare to return fire.")
+}
+
+if (opp.name === terr.name){
+  print("The winding stone bridges have gone deeper and deeper, reaching impossibly far into the earth. You sit down and dangle your feet off the ledge, wondering if it would be easier to take some rope and climb down, when you spot movement below you. A horribly large insect is dragging a Naukin corpse towards the center of the bridge beneath you. It hunches down and begins to feast, horrible tearing sounds confirming the fate of the poor Rat-man. You train a pistol at the beast, await the perfect shot, and fire. The ball ricochets harmlessly off the well-armored back of the creature. You frantically begin reloading and go to take aim again, but the creature has paused. 6 large, black eyes are trained on you. You raise to your feet, pistol still aimed at the creature, when in a blur the beast crouches and lunges upwards, hurtling towards you. You feel it collide with the underneath of your bridge before scuttling around to meet you, razor-sharp appendages clacking ever closer.")
+}
+
+if (opp.name === myrg.name){
+  print("It has been some time since you've seen the exotic glow of the Myrmiddians, and are almost glad when you spot some ahead. The sensation fades rapidly as you detect that the clump of glowing moss is not, in fact, part of the walls as you've seen before. Instead, the hulk is one mass, and it's getting closer. The narrow stone bridge you are standing on offers no place to hide, as if that would make a difference. The Myrmiddian Goliath stomps ever closer, large club-like arms eerily rigid at its sides. The strange beast is only a few paces away by the time you snap out of shock and ready your weaponry.")
+}
+
+if (opp.name === hrt.name){
+  print("You have finally arrived at what must be the lowest point of the mountain. It was said that the spirit of the mountain would grant wishes, and after your trials that had better be true. Your path leads to a stone door. It takes all your strength, but you manage to wedge it open just enough to slip through. The inner dome you find yourself in is utterly smooth, the room extending around in all directions before you. In the middle, hanging from the ceiling, is a strange, circular stalctite. Something ripples across its surface, as though it were liquid, before returning to stony stillness. You feel a presence enter your mind, perusing your thoughts and memories for something, but you are unable to detect intent or resist the intrusion. After a moment, your mind goes still, and your vision fades away and is replaced by images. You see a world similar in every way to your own, but tinted a color you can't name, and utterly empty. Landscapes and cities are vacant of any form of life, the only notable exception being the towering peaks dotting the land. Your vision shifts, and you see a circle in a sea of black, and you feel like it is your home. The circle begins to shake, stretching and convulsing as though alive and tortured. You are filled with revulsion, and a foreign scent enters your lungs. You fight the images with all the fortitude you can muster, squeezing your eyes shut and shaking your head. Finally, you are free, returned to the empty stone room and facing the circular stalactite. The mental visitor returns, an inquisitive sensation resting gently on the top of your mind. It is asking a question, one you have the answer for. You draw your weapons and take aim. This horror must be stopped.")
+}
+
+if (final >= 2){
+  opp.health = opp.health * final
+  opp.base_strength = opp.base_strength * final
+  opp.defense = opp.defense * final
+  opp.xp_value = opp.xp_value * final
+}
+
+      let flee = null;
+      print("")
+      let fchoice = await getInput("What do you do? 1) FIGHT  2) FLEE");
+      if(!fchoice.ok) { 
+        updateStats();
+        continue; 
+      }
+      if(Number(fchoice.value) === 2){ 
+        flee = 2; 
+      } else {
+while(flee !== 2 && opp.health > 0 && currenthp > 0){
+  round++;
+
+
+  if(!gun_loaded && rapid === 0){
+    print("You hurriedly begin reloading and preparing to shoot again.");
+    gun_loaded = true;
+} else {
+    let dam = 0;
+    
+    if(double === 0){
+        print("You take aim and fire off a shot!");
+        dam = randomChoice(weapon);
+        if(crit === 1){
+            let chance = randomChoice(critchance) + d100();
+            if(chance >= 100) dam = weapon[weapon.length-1];
+        }
+    } else {
+        print("You raise your pistols and fire.");
+        let dam1 = randomChoice(weapon);
+        let dam2 = randomChoice(weapon);
+        if(crit === 1){
+            let c1 = randomChoice(critchance) + d100();
+            if(c1 >= 100) dam1 = weapon[weapon.length-1];
+            let c2 = randomChoice(critchance) + d100();
+            if(c2 >= 100) dam2 = weapon[weapon.length-1];
+        }
+        dam = dam1 + dam2;
+    }
+    
+    if(opp.name === ygos.name){
+      let dodge = d100();
+      if(crit === 1){
+        dodge += randomChoice(critchance);
+    }
+      if (dodge <= 75){
+        dam = 0
+        print("Your attack passes through the ethereal ghost, leaving it unharmed.")
+      }
+    }
+
+    if(dam > 0){
+    dam = Math.max(0, dam - opp.defense);
+  }
+    if(dam <= 0 && opp.name != ygos.name) print("Your shot(s) go wide, dealing no damage.");
+        else {print(`You do ${dam} damage.`);
+        opp.health -= dam;
+    }
+    
+    gun_loaded = false;
+    
+    if(rapid === 1){
+        gun_loaded = true;
+    }
+}
+
+  if(opp.health <= 0){
+    if (opp.name === hrt.name){
+      print(`The ${opp.name} collapses to the ground, defeated. You are victorious!`);
+    }
+    else {
+      print('The ground shakes. Thunder echoes. You have defeated the mountain itself! As vile energy seeps out of the cracks in the heart, you can hear the echoes of pained screeching echoing around. The beings here are beginning to mutate. Your quest is not over.')
+      final+=1
+    }
+      break;
+  }
+  else {
+    print("Your enemy takes a swing...");
+    let edam = 0;
+    if(opp.name === "Young Beltleech") {
+      edam = round;
+    } else if(opp.strength_type === "current_health") {
+      edam = opp.health;
+    } else {
+      if(opp.name === "Cave Rat" || opp.name === "Weary Bat") edam = d4() - 1;
+      else if(opp.name === "Crazed Rats") edam = d8() - 2;
+      else if(opp.name === "Mangy Dog" || opp.name === "Decrepit Ghost") edam = d6() - 1;
+      else if(opp.name === "Young Caghouse") edam = d8();
+      else if(opp.name === "Dellinid Prowler") edam = d6() + d6();
+      else if(opp.name === "Skeletal Guard") edam = d8() + 2;
+      else if(opp.name === "Naukin Scout") edam = d4() + d4() + d4();
+      else if(opp.name === "Fleshy Protrusion") edam = d8() + d4();
+      else if(opp.name === "Myrrim Rotguard") edam = d12() + 1;
+      else if(opp.name === "Predator Wyrm") edam = d8() + d8() + d8();
+      else if(opp.name === "Hammerhead Tunneler") edam = d10() + 2;
+      else if(opp.name === "Rooted Myr") edam = d12() + d12();
+      else if(opp.name === "Marrow Hulk") edam = d12() + 10;
+      else if(opp.name === "Terragan") edam = d10() + d10() + d10() + 5;
+      else if(opp.name === "Myrrim Goliath") edam = d40();
+      else if(opp.name === "Heart of the Mountain") edam = d20() + d20() + 10;
+    }
+    if(edam < 0) edam = 0;
+    print(`You take ${edam} damage!`);
+    currenthp -= edam;
+    if(currenthp < 0) currenthp = 0;
+    
+    if((opp.name === "Young Beltleech" || opp.name === "Rooted Myr" || opp.name === "Heart of the Mountain") && (opp.health > 0)){
+      const recovered = Math.floor(edam / 2);
+      if(recovered > 0){
+        opp.health = Math.min(opp.health + recovered, opp.max_health);
+        print(`The ${opp.name} recovers ${recovered} HP from its attack!`);
+      }
+    }
+  
+    updateStats();
+    if(currenthp > 0){
+      let r = await getInput("1) Continue the fight  2) Flee  3) Use a Potion");
+      if(!r.ok) continue;
+      const v = Number(r.value);
+      if(v === 2){ 
+        flee = 2; 
+        break; 
+      }
+      else if(v === 3){
+        if(potion > 0){
+          potion -= 1;
+          potion_usage += 1;
+          const healAmt = Math.floor((hp + 3) / 4);
+          currenthp = Math.min(currenthp + healAmt, hp);
+          print(`As swiftly as possible, you chug a potion and recover ${healAmt} HP. Current HP: ${currenthp}. Potions left: ${potion}`);
+          updateStats();
+        } else {
+          print("You reach down, but to your horror your potion bag is utterly empty!");
+        }
+      }
+    } else {
+              print("You feel yourself grow weak and collapse to your knees, bleeding.");
+              if(totem > 0){
+                totem -= 1; totem_usage += 1; currenthp = 1; 
+                print("You feel a strange vibrating motion in your pocket. You reach in and find one of your totems, rattling of its own accord. In a weak flash of light, the totem ignites in your hands and crumbles to ash. You feel a modicum of strength pour back into you. You don't have much time, but at least you're on your feet.");
+                updateStats();
+              } else if(idol > 0){
+                idol -= 1; idol_usage += 1; currenthp = hp; 
+                print("Your eyes grow heavy, and your head feels dizzy. An uncomfortable heat builds near your side, and you reach around to feel the source. One of the idols you found is glowing, and the light is getting brighter and brighter. In a brilliant flash, its gone, and you feel your strength fully restored. You make your way to your feet. Time to end this.");
+                updateStats();
+              } else {
+                print("Your vision fades, and you slump to the floor. Your adventure ends here");
+                play = false;
+                break;
+              }
+            }
+          }
+        } 
+      } 
+
+      if(!play) break;
+      if(flee === 2 && opp.health === opp.max_health){
+        print("Coward. You gain nothing from this experience.");
+        if(floor > 1) floor = Math.floor(Math.round(floor/2));
+      } else if(flee === 2 && opp.health < opp.max_health){
+        print("You manage to escape the fight with your life.");
+        if(floor > 1) floor = Math.floor(Math.round(floor/2));
+      } else {
+        xp += opp.xp_value;
+        victories++;
+        // level up
+        while(xp >= 10){
+          xp -= 10; lvl++; upg++;
+        }
+        if(upg > 0){
+          print(`You have ${upg} upgrade point(s). Do you want to spend them now?`);
+          let cha = await getInput("1) Enhance now  2) Save points for later");
+          if(cha.ok && Number(cha.value) === 1){
+            while(upg > 0){
+              print("");
+              print("Choose what to upgrade:");
+              print("1) Tweak the aim (Raise max damage)     2) Tighten the grip (Raise min damage)")
+              print("3) Brew some medecine (Raise min heal)     4) Gather some mushrooms (Raise max heal)");
+              print("5) Polish Armor (Increase max HP)      6) Unique upgrades     7) Done");
+              let u = await getInput("Choice (1-7):");
+              if(!u.ok) break;
+              const uc = Number(u.value);
+              if(uc === 1){upg--; 
+                if(weapon.length === 1) {
+                    weapon[0] += 1;
+                } else {
+                    weapon.push(weapon[weapon.length-1] + 3);
+                }
+                print("Max damage increased.");
+                } else if(uc === 2){ 
+                upg--; 
+                if(weapon.length === 1) {
+                    weapon[0] += 1;
+                } else {
+                    weapon.shift();
+                }
+                print("Min damage increased.");
+                }
+              else if(uc === 3){ upg--; if(heal.length === 1) heal[0] += 1; else heal.shift(); print("Min heal increased."); }
+              else if(uc === 4){ upg--; if(heal.length === 1) heal[0] += 1; else heal.push(heal[heal.length-1]+3); print("Max heal increased."); }
+              else if(uc === 5){ upg--; hp+=2; currenthp+=2; print("Max HP increased by 2."); updateStats(); }
+              else if(uc === 7){ print("Exiting upgrade menu."); break; }
+              else if(uc === 6){
+  print("Unique upgrades available:");
+  print(`1) Shield (cost ${cdef}) - Current: ${shield}`);
+  print(`2) Potion (cost 3) - Current: ${potion}`);
+  print(`3) Totem (cost 4) - Current: ${totem}`);
+  print(`4) Idol (cost 7) - Current: ${idol}`);
+  if(double===0) print("5) Dual Wield (cost 5)");
+  if(rapid===0) print("6) Rapid Reload (cost 5)");
+  if(crit===0) print("7) Critical Hits (cost 5)");
+  else if(crit===1) {
+    print("7) Raise max critical chance (cost 2)");
+    print("8) Raise min critical chance (cost 2)");
+  }
+  print("9) Back");
+  
+  let v = await getInput("Choose:");
+  if(!v.ok) continue;
+  const cho = Number(v.value);
+  if(cho === 1){
+    if(upg < cdef){ print("Not enough points."); }
+    else { upg -= cdef; cdef++; shield++; print("Shield increased."); }
+  } else if(cho === 2){
+    if(upg < 3) print("Not enough points."); else { upg -= 3; potion++; print("You brewed a potion."); }
+  } else if(cho === 3){
+    if(upg < 4) print("Not enough points."); else { upg -=4; totem++; print("You crafted a totem."); }
+  } else if(cho === 4){
+    if(upg < 7) print("Not enough points."); else { upg -=7; idol++; print("You polished an idol."); }
+  } else if(cho === 5 && double === 0){
+    if(upg < 5) print("Not enough points."); else { upg -=5; double = 1; print("Dual wield acquired."); }
+  } else if(cho === 6 && rapid === 0){
+    if(upg < 5) print("Not enough points."); else { upg -=5; rapid = 1; print("Rapid reload learned."); }
+  } else if(cho === 7 && crit === 0){
+    if(upg < 5) print("Not enough points."); else { upg -=5; crit = 1; print("Critical hits unlocked."); }
+  } else if(cho === 7 && crit === 1){
+    if(upg < 2) print("Not enough points."); 
+    else { 
+      upg -= 2; 
+      if(critchance.length === 1) critchance[0] += 1;
+      else critchance.push(critchance[critchance.length-1] + 1);
+      print("Max critical chance increased."); 
+    }
+  } else if(cho === 8 && crit === 1){
+    if(upg < 2) print("Not enough points."); 
+    else { 
+      upg -= 2; 
+      if(critchance.length === 1) critchance[0] += 1;
+      else critchance.shift();
+      print("Min critical chance increased."); 
+    }
+  } else if(cho === 9) {
+    print("Back to main upgrades.");
+  } else {
+    print("Invalid choice."); }
+  }
+}
+          } 
+        }
+        const rest = randomChoice(heal);
+        if(rest > 0 && currenthp < hp){
+          currenthp = Math.min(currenthp + rest, hp);
+          print(`You rest and heal ${rest} HP.`);
+        } else if(rest === 0 && currenthp < hp){
+          print("You cannot find rest; you heal nothing.");
+        }
+        let view = await getInput("View current stats? 1) Yes  2) No");
+        if(view.ok && Number(view.value) === 1){
+          print("");
+          print("*** STATS ***");
+          print(`Damage: ${weapon[0]} - ${weapon[weapon.length-1]}`);
+          print(`Max HP: ${hp}    Current HP: ${currenthp}`);
+          print(`Level: ${lvl}    Floor: ${floor}`);
+          print(`Lifetime XP: ${(lvl*10) + xp}    XP to Next Level: ${10 - xp}`);
+          print(`Defense: ${shield}    Unused UPG points: ${upg}`);
+          print(`Heal on Rest: ${heal[0]} - ${heal[heal.length-1]}`);
+          if(crit === 1) print(`Crit boost: ${critchance[0]} - ${critchance[critchance.length-1]}`);
+          print(`Items: ${potion} potions, ${totem} totems, ${idol} idols`);
+        }
+        if(floor === 0){
+          floor = 1;
+          print("You descend to Floor 1.");
+        } else {
+          let des = await getInput(`Descend further? 1) Yes  2) Stay on floor ${floor}`);
+          if(des.ok && Number(des.value) === 1){ floor++; print("You descend deeper."); }
+          else print("You remain on this floor.");
+        }
+      }
+      updateStats();
+    } 
+    print("");
+    print(`And so ends the tale of ${name}. You slew ${victories} enemies, and gained ${(lvl*10)+xp} experience.`);
+    print(`You used ${potion_usage} potions, ${totem_usage} totems, and ${idol_usage} idols.`);
+    let end = await getInput("See final stats? 1) Yes  2) No");
+    if(end.ok && Number(end.value) === 1){
+      print("");
+      print("*** FINAL STATS ***");
+      print(`Damage: ${weapon[0]} - ${weapon[weapon.length-1]}`);
+      print(`Max HP: ${hp}    Current HP: ${currenthp}`);
+      print(`Level: ${lvl}    Floor: ${floor}`);
+      print(`Lifetime XP: ${(lvl*10)+xp}`);
+      print(`Defense: ${shield}    Unused UPG points: ${upg}`);
+      print(`Heal on Rest: ${heal[0]} - ${heal[heal.length-1]}`);
+      if(crit === 1) print(`Crit boost: ${critchance[0]} - ${critchance[critchance.length-1]}`);
+      print(`Items: ${potion} potions, ${totem} totems, ${idol} idols`);
+      print(`You conquered the mountain ${final-1} times`);
+    }
+    print("");
+    print("GAME OVER — Hopefully next time you have better luck in the FLINTLOCK DUNGEON!!!");
+    input.disabled = true;
+    send.disabled = true;
+  } 
+  function randomChoice(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+  function deepClone(obj){
+    return new Creature(obj.name, obj.health, obj.base_strength, obj.defense, obj.xp_value, obj.strength_type, obj.max_health);
+  }
+  (async function waiter(){
+    while(true){
+      if(inputResolve && inputResolve.validOptions){
+      }
+      await new Promise(r => setTimeout(r, 100));
+    }
+  })();
+
+  printRich("Type your responses in the INPUT box and press Enter. For choices, enter the number for the option you want.", false);
+  print("");
+  mainGame().catch(err => { print("A fatal error occurred: " + err); console.error(err); });
+
+})();
+</script>
+</body>
+</html>
+
+<!-- helo -->
