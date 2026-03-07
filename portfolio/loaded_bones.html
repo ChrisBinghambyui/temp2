@@ -1516,8 +1516,8 @@ const CLASSES = [
   {id:"knight",name:"Knight",color:"#ef5350",hp:15,desc:"Roll dice one at a time. Match your limit exactly for powerful boons; exceed it and lose your turn."},
   {id:"cleric",name:"Cleric",color:"#ffca28",hp:15,desc:"When rolling doubles, heal by that amount."},
   {id:"warlock",name:"Warlock",color:"#ab47bc",hp:14,desc:"When applying status effects or shield, apply extra equal to level/2 (min 1)."},
-  {id:"druid",name:"Druid",color:"#66bb6a",hp:15,desc:"Once per turn, \"plant\" a die. Next turn it blooms into 2 dice of the same value."},
-  {id:"rogue",name:"Rogue",color:"#f06292",hp:13,desc:"Choose a lucky number before each fight. Whenever it's rolled, deal 2 bonus damage."},
+  {id:"druid",name:"Druid",color:"#66bb6a",hp:15,desc:"Once per turn, \"plant\" a die. Next turn it blooms into (1 + level) dice of the same value."},
+  {id:"rogue",name:"Rogue",color:"#f06292",hp:13,desc:"Choose a lucky number before each fight. Whenever it's rolled, deal (2 × level) bonus damage."},
 ];
 
 const BIOME_NAMES = {
@@ -1914,6 +1914,7 @@ function makeCombatant(name, maxHp, deckCards, handLimit, diceLimit, classId=nul
     dicePool:[], hiddenDice:[],
     handLimit, diceLimit,
     limitProgress:{}, oncePerCombat: new Set(),
+    reusablesUsedThisTurn: new Set(),
     classId, level,
     classState: {
       fencerUsed:false, druidUsed:false,
@@ -2005,9 +2006,12 @@ function triggerEndOfTurn(c) {
 function applyDruidBloom(c) {
   if (c.classId==='druid' && c.classState.druidPlanted !== null) {
     const val = c.classState.druidPlanted;
-    c.dicePool.push(val, val);
+    const numDice = 1 + (c.level || 1);
+    for (let i = 0; i < numDice; i++) {
+      c.dicePool.push(val);
+    }
     c.classState.druidPlanted = null;
-    return [`Druid bloom: 2 dice showing ${val} added`];
+    return [`Druid bloom: ${numDice} dice showing ${val} added`];
   }
   return [];
 }
@@ -2880,6 +2884,12 @@ function startEnemyTurn() {
               log(msg, 'enemy');
               if (!keepInHand) {
                 CB.enemy.discard.push(CB.enemy.hand.splice(ci,1)[0]);
+              } else {
+                // Track reusable cards used this turn
+                const cardInfo = parseCardId(eCard.id);
+                if (cardInfo && isReusable(cardInfo.limit)) {
+                  CB.enemy.reusablesUsedThisTurn.add(eCard);
+                }
               }
               moved = true;
               break;
@@ -2892,6 +2902,18 @@ function startEnemyTurn() {
         if (moved) break;
       }
       if (!moved) break;
+    }
+
+    // Discard reusable cards that were used this turn
+    if (CB.enemy.reusablesUsedThisTurn.size > 0) {
+      CB.enemy.hand = CB.enemy.hand.filter(card => {
+        if (CB.enemy.reusablesUsedThisTurn.has(card)) {
+          CB.enemy.discard.push(card);
+          return false;
+        }
+        return true;
+      });
+      CB.enemy.reusablesUsedThisTurn.clear();
     }
 
     const endMsgs = triggerEndOfTurn(CB.enemy);
@@ -2938,8 +2960,12 @@ function playSelectedCard() {
   if (!keepInHand) {
     CB.player.discard.push(CB.player.hand.splice(CB.selectedCard, 1)[0]);
   } else {
-    // keepInHand = still charging (limit not met), card stays in hand
-    // Do nothing - card stays in hand
+    // keepInHand = still charging (limit not met) or reusable card
+    // Track reusable cards used this turn so they can be discarded at end of turn
+    const info = parseCardId(card.id);
+    if (info && isReusable(info.limit)) {
+      CB.player.reusablesUsedThisTurn.add(card);
+    }
   }
 
   log(msg, 'player');
@@ -2957,6 +2983,18 @@ function playSelectedCard() {
 
 function endPlayerTurn() {
   if (CB.phase !== 'player') return;
+  
+  // Discard reusable cards that were used this turn
+  if (CB.player.reusablesUsedThisTurn.size > 0) {
+    CB.player.hand = CB.player.hand.filter(card => {
+      if (CB.player.reusablesUsedThisTurn.has(card)) {
+        CB.player.discard.push(card);
+        return false;
+      }
+      return true;
+    });
+    CB.player.reusablesUsedThisTurn.clear();
+  }
   
   // Unplayed cards stay in hand for next turn (they were already kept)
   // Only trigger end-of-turn effects
@@ -3525,6 +3563,11 @@ function updatePlayerControls() {
       dBtn.textContent = CB.selectedDie>=0 ? `Plant Die ${CB.selectedDie+1}` : 'Plant (select die)';
       dBtn.disabled = CB.selectedDie<0;
       dBtn.onclick = doDruidPlant;
+      // Add drag-drop handlers
+      dBtn.ondragover = allowDrop;
+      dBtn.ondragenter = enterPlantDropZone;
+      dBtn.ondragleave = leavePlantDropZone;
+      dBtn.ondrop = dropDieOnPlantButton;
       pcontrols.insertBefore(dBtn, pcontrols.firstChild);
     }
   }
@@ -3604,6 +3647,36 @@ function doDruidPlant() {
   log(`Druid plants a ${val}. It will bloom next turn.`,'player');
   updateCombatUI();
   updatePlayerControls();
+}
+
+function enterPlantDropZone(evt) {
+  evt.preventDefault();
+  const btn = evt.currentTarget;
+  if (btn && !btn.disabled) {
+    btn.style.boxShadow = '0 0 10px rgba(102, 187, 106, 0.8)';
+  }
+}
+
+function leavePlantDropZone(evt) {
+  const btn = evt.currentTarget;
+  if (btn) {
+    btn.style.boxShadow = '';
+  }
+}
+
+function dropDieOnPlantButton(evt) {
+  evt.preventDefault();
+  const btn = evt.currentTarget;
+  if (btn) btn.style.boxShadow = '';
+  
+  if (CB.phase !== 'player' || CB.player.classState.druidUsed) return;
+  
+  const dieIdx = parseInt(evt.dataTransfer.getData('text/plain'));
+  if (isNaN(dieIdx)) return;
+  
+  // Set selected die and plant it
+  CB.selectedDie = dieIdx;
+  doDruidPlant();
 }
 
 // ============================================================
