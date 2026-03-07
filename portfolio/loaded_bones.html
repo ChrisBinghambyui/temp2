@@ -2048,7 +2048,7 @@ function getPlayerHandLimit() {
   return 2 + (G.trainingHand||0);
 }
 
-function getPlayerDiceLimit() { return 2; }
+function getPlayerDiceLimit() { return 2 + (G.trainingDice||0); }
 
 function snapshotCardChargeProgress(c) {
   const out = {};
@@ -2246,8 +2246,8 @@ function startGame() {
     shopUnlocked: false,
     blacksmithUnlocked: false,
     thessaStarterGiven: false,
-    trainingHand: 0, trainingHp: 0, trainingRecovery: 0, trainingShield: 0,
-    trainingHpLevel: 0, trainingHandLevel: 0, trainingRecoveryLevel: 0, trainingShieldLevel: 0,
+    trainingHand: 0, trainingHp: 0, trainingRecovery: 0, trainingShield: 0, trainingDice: 0,
+    trainingHpLevel: 0, trainingHandLevel: 0, trainingRecoveryLevel: 0, trainingShieldLevel: 0, trainingDiceLevel: 0,
     cardChargeProgress: {},
     currentBiome: 1,
     currentTier: 1,
@@ -2312,8 +2312,9 @@ function startShipTutorialCombat() {
   };
 
   const handLimit = getPlayerHandLimit();
+  const diceLimit = getPlayerDiceLimit();
   const playerCards = G.deck.map(c => ({...c}));
-  const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, 2, G.classId, G.level, G.hp);
+  const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, diceLimit, G.classId, G.level, G.hp);
   player.limitProgress = {...(G.cardChargeProgress || {})};
   console.log('Restoring charge progress (prologue):', player.limitProgress);
 
@@ -2696,10 +2697,11 @@ function startNextCombat(legendary=false) {
   }
 
   const handLimit = getPlayerHandLimit();
+  const diceLimit = getPlayerDiceLimit();
   const playerCards = G.deck.map(c => ({...c}));
   
   const player = makeCombatant(
-    G.name, G.maxHp, playerCards, handLimit, 2,
+    G.name, G.maxHp, playerCards, handLimit, diceLimit,
     G.classId, G.level, ADV.playerHp
   );
   player.limitProgress = {...(G.cardChargeProgress || {})};
@@ -3082,7 +3084,10 @@ function afterVictoryChoice() {
     openModal(`<h2>Legendary Encounter!</h2>
       <p class="info-text">You've won 10 battles in a row! A Legendary enemy awaits...</p>
       <p class="info-text">Current HP: <span class="stat-hp">${ADV.playerHp}/${G.maxHp}</span></p>
-      <div class="mt-16"><button class="btn primary" onclick="closeModal();startNextCombat(true)">Face the Legend</button></div>`);
+      <div class="flex-row mt-16">
+        <button class="btn primary" onclick="closeModal();startNextCombat(true)">Face the Legend</button>
+        <button class="btn" onclick="closeModal();finishAdventure('retreat')">Retreat to Town</button>
+      </div>`);
     return;
   }
 
@@ -3937,6 +3942,7 @@ function renderTrainingModal() {
   const hpC = trainingCost(220, G.trainingHpLevel||0);
   const rC = trainingCost(160, G.trainingRecoveryLevel||0);
   const sC = trainingCost(190, G.trainingShield||0);
+  const dC = trainingCost(350, G.trainingDiceLevel||0);
   
   openModal(`
     <h2>Train with Thessa</h2>
@@ -3978,6 +3984,15 @@ function renderTrainingModal() {
           <button class="btn small primary" ${G.gold<sC?'disabled':''} onclick="buyTraining('shield',${sC})">${sC}g</button>
         </div>
       </div>
+      <div class="panel" style="padding:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:12px;color:var(--parchment)">Extra Die +1</div>
+            <div style="font-size:11px;color:var(--bone-dim)">Current: ${2+(G.trainingDiceLevel||0)} dice per turn</div>
+          </div>
+          <button class="btn small primary" ${G.gold<dC?'disabled':''} onclick="buyTraining('dice',${dC})">${dC}g</button>
+        </div>
+      </div>
     </div>
     <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>
   `);
@@ -4005,6 +4020,11 @@ function buyTraining(type, cost) {
     G.trainingShield=(G.trainingShield||0)+1;
     log(`Starting shield improved to ${G.trainingShield}.`,'system');
   }
+  else if (type==='dice') {
+    G.trainingDiceLevel=(G.trainingDiceLevel||0)+1;
+    G.trainingDice = G.trainingDiceLevel;
+    log(`Dice per turn improved: now ${2+G.trainingDiceLevel} dice.`,'system');
+  }
   updateTownUI();
   renderTrainingModal();
 }
@@ -4026,7 +4046,7 @@ const TUTORIAL_STEPS = [
   {
     id: 'dice_basics',
     title: 'Dice & Cards',
-    text: 'Each turn you roll 2 dice. Select a die, then a card (or card then die). Each card has a requirement — Any, Even, Odd, Min X, Exactly X. Spend a valid die to activate the card\'s effect.',
+    text: 'Each turn you roll dice (starting with 2, but trainable). Select a die, then a card (or card then die). Each card has a requirement — Any, Even, Odd, Min X, Exactly X. Spend a valid die to activate the card\'s effect.',
   },
   {
     id: 'end_turn',
