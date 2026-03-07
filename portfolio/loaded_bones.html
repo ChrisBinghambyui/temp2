@@ -1339,6 +1339,141 @@ function normalizeOwnedCards(state = G) {
   if (Array.isArray(state.inventory)) state.inventory = state.inventory.map(canonicalCardByName).filter(Boolean);
 }
 
+// ============================================================
+// DATA: UPGRADED CARDS (from blacksmith forge)
+// ============================================================
+const UPGRADED_CARDS = [
+["Afflict x","Apply 2 Poison, Apply 2 Blind","011000710000126200",10],
+["Afflict X","Apply 3 Poison, Apply 2 Blind","01-2-000-71-00-00-136200",10],
+["Afflict y","Apply 3 Poison, Apply 1 Blind","01-3-000-71-00-00-136100",10],
+["Afflict Y","Apply 4 Poison, Apply 2 Blind, Apply 1 Lock","01-4-000-71-00-00-143162",10],
+["Afflict XY","Apply 5 Poison, Apply 3 Blind, Apply 2 Lock","01-5-000-71-00-00-153263",10],
+["Bite x","Deal damage equal to die value","06-1-000-01-E0-00-000000",10],
+["Bite X","Deal damage equal to die value + 2","06-2-000-01-E2-00-000000",10],
+["Bite y","Deal 4 damage","06-3-200-01-04-00-000000",10],
+["Bite Y","Deal 5 damage and heal 1","06-4-200-01-05-00-810000",10],
+["Bite XY","Deal damage equal to die value + 4, Heal 2 HP","06-5-200-01-E4-00-820000",10],
+["Charge x","Deal 8 damage, Gain 3 Shield","13-1-113-01-08-00-730000",10],
+["Charge X","Deal 10 damage, Gain 10 Shield","13-2-120-01-10-00-7A0000",10],
+["Charge y","Deal 8 damage, Gain 8 Shield","13-3-118-01-08-00-780000",10],
+["Charge Y","Deal 12 damage, Gain 6 Shield","13-4-115-01-12-00-760000",10],
+["Charge XY","Deal 15 damage, Gain 12 Shield, Apply 1 Lock","13-5-112-01-15-00-7C3100",10],
+["Chomp x","Deal 10 damage","14-1-108-01-10-00-000000",10],
+["Chomp X","Deal 14 damage, Heal 3 HP","14-2-110-01-14-00-830000",10],
+["Chomp y","Deal 12 damage","14-3-112-01-12-00-000000",10],
+["Chomp Y","Deal 18 damage, Heal 4 HP","14-4-108-01-18-00-840000",10],
+["Chomp XY","Deal 20 damage, Heal 5 HP","14-5-115-01-20-00-850000",10],
+["Frosted Dagger x","Deal damage equal to die value, On 6: Apply 1 Poison and 1 Frozen","33-1-000-01-E0-16-114100",10],
+["Frosted Dagger X","Deal damage equal to die value + 1, On 5-6: Apply 2 Poison and 2 Frozen","33-3-000-01-E1-35-124260",10],
+["Frosted Dagger y","Deal damage equal to die value, On 5-6: Apply 1 Poison and 1 Frozen","33-2-000-01-E0-35-114100",10],
+["Frosted Dagger Y","Deal damage equal to die value + 2, On 4-6: Apply 2 Poison and 2 Frozen","33-4-000-01-E2-34-124260",10],
+["Frosted Dagger XY","Deal damage equal to die value + 3, On 4-6: Apply 3 Poison and 3 Frozen","33-5-000-01-E3-34-134360",10],
+];
+
+// Merge upgraded cards into lookup
+UPGRADED_CARDS.forEach(([name,desc,id,rarity]) => {
+  CARD_BY_NAME[name] = {name,desc,id,rarity};
+});
+
+// ============================================================
+// CARD FAMILY & UPGRADE SYSTEM
+// ============================================================
+// Maps base card names to their card family
+const CARD_FAMILIES = {
+  'Afflict': 'afflict',
+  'Bite': 'bite',
+  'Charge': 'charge',
+  'Chomp': 'chomp',
+  'Frosted Dagger': 'frosteddagger',
+};
+
+// Upgrade paths: defines how duplicates combine
+// { base: { x: 'x variant', y: 'y variant', xx: 'X variant', etc } }
+const UPGRADE_PATHS = {
+  'afflict': {
+    'base': ['Afflict x', 'Afflict y'],  // 2 base → either x or y
+    'Afflict x': ['Afflict X'],           // 2 x → X
+    'Afflict y': ['Afflict Y'],           // 2 y → Y
+    'Afflict X': ['Afflict XY'],          // X + Y → XY
+    'Afflict Y': ['Afflict XY'],
+  },
+  'bite': {
+    'base': ['Bite x', 'Bite y'],
+    'Bite x': ['Bite X'],
+    'Bite y': ['Bite Y'],
+    'Bite X': ['Bite XY'],
+    'Bite Y': ['Bite XY'],
+  },
+  'charge': {
+    'base': ['Charge x', 'Charge y'],
+    'Charge x': ['Charge X'],
+    'Charge y': ['Charge Y'],
+    'Charge X': ['Charge XY'],
+    'Charge Y': ['Charge XY'],
+  },
+  'chomp': {
+    'base': ['Chomp x', 'Chomp y'],
+    'Chomp x': ['Chomp X'],
+    'Chomp y': ['Chomp Y'],
+    'Chomp X': ['Chomp XY'],
+    'Chomp Y': ['Chomp XY'],
+  },
+  'frosteddagger': {
+    'base': ['Frosted Dagger x', 'Frosted Dagger y'],
+    'Frosted Dagger x': ['Frosted Dagger X'],
+    'Frosted Dagger y': ['Frosted Dagger Y'],
+    'Frosted Dagger X': ['Frosted Dagger XY'],
+    'Frosted Dagger Y': ['Frosted Dagger XY'],
+  },
+};
+
+// Get the family for a card (e.g., "Bite x" → "bite")
+function getCardFamily(cardName) {
+  for (const [base, family] of Object.entries(CARD_FAMILIES)) {
+    if (cardName.startsWith(base)) return family;
+  }
+  return null;
+}
+
+// Get the base card name for a family (e.g., "bite" → "Bite")
+function getBaseCardForFamily(family) {
+  for (const [base, fam] of Object.entries(CARD_FAMILIES)) {
+    if (fam === family) return base;
+  }
+  return null;
+}
+
+// Get possible forgings for a card (what it can upgrade to)
+function getPossibleForgings(cardName) {
+  const family = getCardFamily(cardName);
+  if (!family || !UPGRADE_PATHS[family]) return [];
+  
+  const baseCard = getBaseCardForFamily(family);
+  const path = UPGRADE_PATHS[family];
+  
+  // For base cards, return x and y variants
+  if (cardName === baseCard) {
+    return path['base'] || [];
+  }
+  
+  // For upgraded cards, return what they can become
+  return path[cardName] || [];
+}
+
+// Get the upgrade tier of a card (determines forge cost)
+function getCardUpgradeTier(cardName) {
+  if (cardName.endsWith(' XY')) return 4;
+  if (cardName.endsWith(' X') || cardName.endsWith(' Y')) return 3;
+  if (cardName.endsWith(' x') || cardName.endsWith(' y')) return 2;
+  return 1; // base card
+}
+
+// Calculate forge cost for a card
+function calculateForgeCost(cardName) {
+  const tier = getCardUpgradeTier(cardName);
+  return 50 * Math.pow(2, tier);
+}
+
 // Starter cards
 const STARTER_CARDS = ["Wooden Sword","Slingshot","Small Stone","Makeshift Shield","Bandage","Sharpened Stick"];
 
@@ -3203,6 +3338,7 @@ function finishAdventure(result) {
   if (G.trainingRecovery > 0 && G.hp > 0) {
     const rec = Math.ceil(G.maxHp * (G.trainingRecovery/100));
     G.hp = Math.min(G.maxHp, G.hp+rec);
+    log(`Recovered ${rec} HP from training.`, 'heal');
   }
 
   let xpGained = ADV.totalXp;
@@ -3240,16 +3376,51 @@ function finishAdventure(result) {
     log('The Naukin shopkeep lets you in.', 'system');
   }
 
-  // Unlock biomes based on legendary victories (at fight 11, after 10 consecutive wins)
-  if (victory && ADV.winStreak >= 10) {
-    const b=ADV.biome, t=ADV.tier;
-    if (b===1&&t===1) { G.unlockedBiomes.add('2-1'); G.unlockedBiomes.add('1-2'); }
-    if (b===1&&t===2) { G.unlockedBiomes.add('1-3'); }
-    if (b===1&&t===3) { G.unlockedBiomes.add('2-1'); }
-    if (b===2&&t===2) { G.blacksmithUnlocked=true; log('The Blacksmith has opened for you.','system'); }
-    // Generally: complete tier 3 unlocks next biome tier 1
-    if (t===3 && b<6) G.unlockedBiomes.add(`${b+1}-1`);
-    if (t<3) G.unlockedBiomes.add(`${b}-${t+1}`);
+  // Unlock biomes based on victories
+  if (victory) {
+    const b = ADV.biome;
+    const t = ADV.tier;
+    const unlocked = [];
+    
+    // Tier 1 victories unlock: same biome tier 2 AND next biome tier 1
+    if (t === 1) {
+      // Unlock tier 2 of same biome
+      const key1 = `${b}-2`;
+      if (!G.unlockedBiomes.has(key1)) {
+        G.unlockedBiomes.add(key1);
+        unlocked.push(`${BIOME_NAMES[b]} Tier 2`);
+      }
+      // Unlock tier 1 of next biome (if exists)
+      if (b < 6) {
+        const key2 = `${b+1}-1`;
+        if (!G.unlockedBiomes.has(key2)) {
+          G.unlockedBiomes.add(key2);
+          unlocked.push(`${BIOME_NAMES[b+1]} Tier 1`);
+        }
+      }
+    }
+    // Tier 2+ victories unlock: same biome next tier
+    else {
+      // Unlock next tier of same biome (if exists - currently max tier is 3)
+      if (t < 3) {
+        const key = `${b}-${t+1}`;
+        if (!G.unlockedBiomes.has(key)) {
+          G.unlockedBiomes.add(key);
+          unlocked.push(`${BIOME_NAMES[b]} Tier ${t+1}`);
+        }
+      }
+    }
+    
+    // Log unlocks
+    if (unlocked.length > 0) {
+      log(`New routes unlocked: ${unlocked.join(', ')}`, 'victory');
+    }
+    
+    // Special unlocks
+    if (b === 2 && t === 2 && ADV.winStreak >= 10) {
+      G.blacksmithUnlocked = true;
+      log('The Blacksmith has opened for you.', 'system');
+    }
   }
 
   updateTownUI();
@@ -3937,6 +4108,7 @@ function renderShopModal(sale=false) {
       }).join('')}
     </div>
     <div class="mt-16 flex-row">
+      <button class="btn" onclick="openSellCards()">Sell Cards</button>
       <button class="btn" onclick="closeModal()">Leave</button>
     </div>
   `);
@@ -3954,6 +4126,83 @@ function buyShopCard(i) {
   updateTownUI();
 }
 
+function calculateSellPrice(card) {
+  const rarity = card.rarity || 1;
+  const [pmin, pmax] = SHOP_PRICE_RANGES[rarity];
+  const basePrice = Math.floor((pmin + pmax) / 2);
+  return Math.round(basePrice * 0.5);
+}
+
+function openSellCards() {
+  renderSellCardsModal();
+}
+
+function renderSellCardsModal() {
+  const invCounts = countCards(G.inventory);
+  const allCardNames = Object.keys(invCounts);
+  
+  if (!allCardNames.length) {
+    openModal(`<h2>No Cards to Sell</h2>
+      <p class="info-text">You don't have any cards in your inventory to sell.</p>
+      <div class="mt-16">
+        <button class="btn" onclick="renderShopModal(${currentShopOffers[0]?.sale||false})">Back to Shop</button>
+      </div>`);
+    return;
+  }
+  
+  let cardsHTML = `<div style="display:flex;flex-wrap:wrap;gap:10px;">`;
+  allCardNames.sort().forEach(name => {
+    const card = CARD_BY_NAME[name];
+    if (!card) return;
+    const owned = invCounts[name];
+    const sellPrice = calculateSellPrice(card);
+    const color = RARITY_COLORS[card.rarity||1];
+    cardsHTML += `<div onclick="sellCard('${name}')" class="card" style="cursor:pointer;">
+      <div class="card-rarity-bar" style="background:${color}"></div>
+      <div class="card-name">${card.name}</div>
+      <div style="font-size:9px;font-family:'Courier Prime',monospace;color:${color};">${RARITY_LABELS[card.rarity]}</div>
+      <div class="card-desc">${card.desc}</div>
+      <div style="position:absolute;top:6px;right:6px;background:var(--blood);color:white;font-family:'Courier Prime',monospace;font-size:10px;padding:1px 5px;">x${owned}</div>
+      <div style="font-family:'Courier Prime',monospace;font-size:11px;color:var(--gold-light);margin-top:6px;">Sell: ${sellPrice}g</div>
+    </div>`;
+  });
+  cardsHTML += `</div>`;
+  
+  openModal(`
+    <h2>Sell Cards</h2>
+    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span></div>
+    <p class="info-text" style="font-size:12px;margin-bottom:16px;">Click a card to sell it for 50% of its shop value.</p>
+    ${cardsHTML}
+    <div class="mt-16 flex-row">
+      <button class="btn" onclick="renderShopModal(${currentShopOffers[0]?.sale||false})">Back to Shop</button>
+      <button class="btn" onclick="closeModal()">Leave</button>
+    </div>
+  `);
+}
+
+function sellCard(cardName) {
+  const card = CARD_BY_NAME[cardName];
+  if (!card) return;
+  
+  // Find and remove one instance from inventory
+  let found = false;
+  for (let i = 0; i < G.inventory.length; i++) {
+    if (G.inventory[i].name === cardName) {
+      G.inventory.splice(i, 1);
+      found = true;
+      break;
+    }
+  }
+  
+  if (!found) return;
+  
+  const sellPrice = calculateSellPrice(card);
+  G.gold += sellPrice;
+  log(`Sold ${cardName} for ${sellPrice}g.`, 'loot');
+  updateTownUI();
+  renderSellCardsModal();
+}
+
 // ============================================================
 // BLACKSMITH
 // ============================================================
@@ -3966,92 +4215,143 @@ function openBlacksmith() {
   renderBlacksmithModal();
 }
 
-function getUpgradeCandidates(card) {
-  const name = card.name;
-  const suffixes = [' x',' y'];
-  const base = name;
-  
-  // Check if it's already base, x/y, X/Y
-  const results = [];
-  for (const suf of [' x',' y']) {
-    const n = base+suf;
-    if (CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]);
-  }
-  if (!results.length) {
-    // Try XY path
-    if (name.endsWith(' x')) { const n=name.slice(0,-2)+' X'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
-    else if (name.endsWith(' y')) { const n=name.slice(0,-2)+' Y'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
-    else if (name.endsWith(' X')||name.endsWith(' Y')) { const base2=name.slice(0,-2); const n=base2+' XY'; if(CARD_BY_NAME[n]) results.push(CARD_BY_NAME[n]); }
-  }
-  return results;
+function getUpgradeCandidates(cardName) {
+  // Use the new UPGRADE_PATHS system
+  return getPossibleForgings(cardName);
 }
 
 function renderBlacksmithModal() {
   const invCounts = countCards(G.inventory);
+  const deckCounts = countCards(G.deck);
   const upgradeable = [];
   
+  // Find all cards with 2+ copies that can be upgraded
   Object.keys(invCounts).sort().forEach(name => {
-    if (invCounts[name]>=2) {
+    const totalCount = (invCounts[name] || 0) + (deckCounts[name] || 0);
+    if (totalCount >= 2) {
       const card = CARD_BY_NAME[name];
       if (!card) return;
-      const candidates = getUpgradeCandidates(card);
-      if (candidates.length>0) upgradeable.push({name, card, candidates, count:invCounts[name]});
+      const candidates = getPossibleForgings(name);
+      if (candidates.length > 0) {
+        upgradeable.push({name, card, candidates, count: totalCount});
+      }
     }
   });
 
   if (!upgradeable.length) {
     openModal(`<h2>Blacksmith</h2>
       <p class="info-text">"You need 2 identical copies of a card that can be upgraded."</p>
-      <p class="info-text">Collect duplicates through adventuring or the shop.</p>
+      <p class="info-text">Available cards: Afflict, Bite, Charge, Chomp, Frosted Dagger</p>
       <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>`);
     return;
   }
 
-  openModal(`
+  const modalContent = `
     <h2>Blacksmith</h2>
-    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span><br>Sacrifice 2 identical cards to forge 1 upgraded version.</div>
+    <div class="info-text mb-16">Gold: <span class="gold-text">${G.gold}</span></div>
     <div style="display:flex;flex-wrap:wrap;gap:12px;">
-      ${upgradeable.map(({name,card,candidates,count},i)=>{
-        const tier = 1; // simplified
-        const cost = 100;
-        const cantAfford = G.gold < cost;
-        const color=RARITY_COLORS[card.rarity||1];
-        return `<div onclick="${cantAfford?'':`forgeCard('${name}',${i})`}" class="card" style="cursor:${cantAfford?'not-allowed':'pointer'};">
+      ${upgradeable.map(({name, card, candidates, count}) => {
+        const cost = calculateForgeCost(name);
+        const canAfford = G.gold >= cost;
+        const color = RARITY_COLORS[card.rarity || 1];
+        return `<div class="card" style="cursor:pointer;opacity:${canAfford ? '1' : '0.6'};" onclick="${canAfford ? `renderForgeOptions('${name}')` : ''}">
           <div class="card-rarity-bar" style="background:${color}"></div>
-          <div class="card-name">${name} x${count}</div>
+          <div class="card-name">${name}</div>
           <div class="card-desc">${card.desc}</div>
-          <div style="color:var(--gold-light);font-size:11px;font-family:'Courier Prime',monospace;margin-top:6px;">→ ${candidates[0].name}</div>
-          <div style="color:${cantAfford?'#888':'var(--gold-light)'};font-size:11px;font-family:'Courier Prime',monospace;">${cost}g</div>
+          <div style="color:var(--gold-light);font-size:11px;margin-top:8px;font-weight:bold;">Available: ${count}</div>
+          <div style="color:${canAfford ? 'var(--teal-light)' : '#888'};font-size:11px;font-weight:bold;">Cost: ${cost}g</div>
         </div>`;
       }).join('')}
     </div>
     <div class="mt-16"><button class="btn" onclick="closeModal()">Leave</button></div>
-  `);
+  `;
+  
+  openModal(modalContent);
 }
 
-function forgeCard(name, idx) {
-  const cost = 100;
-  if (G.gold < cost) return;
-  const card = CARD_BY_NAME[name];
+function renderForgeOptions(cardName) {
+  const card = CARD_BY_NAME[cardName];
   if (!card) return;
-  const candidates = getUpgradeCandidates(card);
-  if (!candidates.length) return;
   
-  // Remove 2 copies
+  const candidates = getPossibleForgings(cardName);
+  if (candidates.length === 0) return;
+  
+  const invCounts = countCards(G.inventory);
+  const deckCounts = countCards(G.deck);
+  const totalCount = (invCounts[cardName] || 0) + (deckCounts[cardName] || 0);
+  const cost = calculateForgeCost(cardName);
+  const canAfford = G.gold >= cost;
+  
+  const modalContent = `
+    <h2>Forge: ${cardName}</h2>
+    <div class="info-text mb-16">
+      You have <span class="gold-text">${totalCount} copies</span> of ${cardName}.<br>
+      Cost: <span class="${canAfford ? 'gold-text' : 'danger-text'}">${cost}g</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      ${candidates.map(upgradedName => {
+        const upgradedCard = CARD_BY_NAME[upgradedName];
+        const color = RARITY_COLORS[upgradedCard?.rarity || 10];
+        return `<div onclick="${canAfford ? `forgeCard('${cardName}', '${upgradedName}')` : ''}" class="card" style="cursor:${canAfford ? 'pointer' : 'not-allowed'};opacity:${canAfford ? '1' : '0.6'};">
+          <div class="card-rarity-bar" style="background:${color}"></div>
+          <div class="card-name">${upgradedName}</div>
+          <div class="card-desc">${upgradedCard?.desc || 'Unknown'}</div>
+          <div style="color:var(--teal-light);font-size:11px;margin-top:6px;text-align:center;font-weight:bold;">2x ${cardName} → 1x ${upgradedName}</div>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="mt-16">
+      <button class="btn" onclick="renderBlacksmithModal()">Back</button>
+    </div>
+  `;
+  
+  openModal(modalContent);
+}
+
+function forgeCard(baseName, upgradedName) {
+  const baseCard = CARD_BY_NAME[baseName];
+  const upgradedCard = CARD_BY_NAME[upgradedName];
+  
+  if (!baseCard || !upgradedCard) {
+    log('Card data not found!', 'error');
+    return;
+  }
+  
+  const cost = calculateForgeCost(baseName);
+  if (G.gold < cost) {
+    log(`Not enough gold! Need ${cost}g but have ${G.gold}g.`, 'error');
+    renderBlacksmithModal();
+    return;
+  }
+  
+  // Remove 2 copies from inventory first
   let removed = 0;
-  for (let i=G.inventory.length-1;i>=0&&removed<2;i--) {
-    if (G.inventory[i].name===name) { G.inventory.splice(i,1); removed++; }
-  }
-  // Also from deck
-  removed = 0;
-  for (let i=G.deck.length-1;i>=0&&removed<2;i--) {
-    if (G.deck[i].name===name) { G.deck.splice(i,1); removed++; }
+  for (let i = G.inventory.length - 1; i >= 0 && removed < 2; i--) {
+    if (G.inventory[i].name === baseName) {
+      G.inventory.splice(i, 1);
+      removed++;
+    }
   }
   
-  const upgraded = candidates[0];
-  G.inventory.push(upgraded);
+  // Remove from deck if needed
+  if (removed < 2) {
+    for (let i = G.deck.length - 1; i >= 0 && removed < 2; i--) {
+      if (G.deck[i].name === baseName) {
+        G.deck.splice(i, 1);
+        removed++;
+      }
+    }
+  }
+  
+  if (removed < 2) {
+    log('Could not find 2 copies to forge!', 'error');
+    return;
+  }
+  
+  // Deduct cost and add upgraded card
   G.gold -= cost;
-  log(`Forged 2x ${name} → 1x ${upgraded.name}.`, 'loot');
+  G.inventory.push({...upgradedCard});
+  log(`Forged 2x ${baseName} → 1x ${upgradedName} (${cost}g).`, 'loot');
   updateTownUI();
   renderBlacksmithModal();
 }
@@ -4305,6 +4605,10 @@ function deserializeGameState(saveData) {
     unlockedBiomes: new Set(saveData.G.unlockedBiomes || []),
     cardChargeProgress: saveData.G.cardChargeProgress || {},
   };
+  
+  // Recalculate training recovery from level (in case save predates trainingRecovery field)
+  G.trainingRecovery = (G.trainingRecoveryLevel || 0) * 5;
+  
   normalizeOwnedCards(G);
   return true;
 }
