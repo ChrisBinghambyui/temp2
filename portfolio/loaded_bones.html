@@ -1063,8 +1063,8 @@ input[type="text"]:focus { border-color: var(--gold); }
     </div>
 
     <div style="margin-top:30px">
-      <button class="btn primary" onclick="startGame()">Begin Your Tale</button>
-      <button class="btn" style="margin-left:12px" onclick="showScreen('title-screen')">Back</button>
+      <button class="btn primary" id="charcreate-begin-btn" onclick="startGame()">Begin Your Tale</button>
+      <button class="btn" id="charcreate-back-btn" style="margin-left:12px" onclick="showScreen('title-screen')">Back</button>
     </div>
   </div>
 
@@ -1080,7 +1080,7 @@ input[type="text"]:focus { border-color: var(--gold); }
     <div class="section-label" id="starter-pick-label">Choose 3 items (0/3 chosen)</div>
     <div id="starter-cards-grid" style="display:flex;flex-wrap:wrap;gap:12px;margin:12px 0;"></div>
     <button class="btn primary" id="starter-confirm-btn" onclick="confirmStarterCards()" disabled>Take Your Equipment</button>
-    <button class="btn" style="margin-left:10px" onclick="autoSelectStarterCards()">Auto-Select 3</button>
+    <button class="btn" id="starter-autoselect-btn" style="margin-left:10px" onclick="autoSelectStarterCards()">Auto-Select 3</button>
   </div>
 
   <!-- TOWN SCREEN -->
@@ -1169,7 +1169,7 @@ input[type="text"]:focus { border-color: var(--gold); }
     <div class="info-text" style="margin-bottom:20px">Select a biome to adventure in. Win 10 battles to face the legendary boss!</div>
     <div class="biome-grid" id="biome-grid"></div>
     <div style="margin-top:20px">
-      <button class="btn" onclick="showTown()">Return to Town</button>
+      <button class="btn" id="adventure-return-btn" onclick="showTown()">Return to Town</button>
     </div>
   </div>
 
@@ -1211,7 +1211,7 @@ input[type="text"]:focus { border-color: var(--gold); }
         
         <div class="combat-controls" id="player-controls">
           <button class="btn small primary" id="btn-play-card" onclick="playSelectedCard()" disabled>Play Card</button>
-          <button class="btn small" onclick="endPlayerTurn()">End Turn</button>
+          <button class="btn small" id="btn-end-turn" onclick="endPlayerTurn()">End Turn</button>
         </div>
       </div>
 
@@ -1530,7 +1530,10 @@ function getCardUpgradeTier(cardName) {
 // Calculate forge cost for a card
 function calculateForgeCost(cardName) {
   const tier = getCardUpgradeTier(cardName);
-  return 50 * Math.pow(2, tier);
+  const rarity = CARD_BY_NAME[cardName]?.rarity || 1;
+  const tierBase = [0, 250, 700, 1700, 4200][tier] || 4200;
+  const rarityMultiplier = {1: 1.0, 2: 1.8, 3: 3.0, 4: 5.0, 5: 8.0, 6: 12.0}[rarity] || 1.0;
+  return Math.round((tierBase * rarityMultiplier) / 10) * 10;
 }
 
 // Starter cards
@@ -1687,7 +1690,7 @@ const ENEMY_FLAVOR = {
   "Hatebound Priest": "A Hatebound Priest, conducting dark rites in the Pit's deepest passages. It heals itself from your suffering. The blessing it has received is a hideous inversion of grace.",
   "Condemned Taskmaster": "A Condemned who has risen by breaking others. The Taskmaster wears its authority like a wound — everything about it is designed to inflict.",
   // Pit Tier 3
-  "Pit Lord": "The supreme warlord of the Pit — a Pit Lord, vast and armored in hatred made physical. It has waged war since before Ascus existed. You are a very small obstacle in a very long campaign.",
+  "Pit Lord": "The supreme warlord of the Pit — a Pit Lord, vast and armored in hatred made metal. It has waged war since before the world was. You are a very small obstacle in a very long campaign.",
   "Blood Judge": "The Blood Judge: executioner, condemner, the final word on worthiness in the Pit's brutal hierarchy. It has condemned thousands. It regards you with professional interest.",
   "Prophet of Fire": "The Prophet of Fire — a dark religious leader burning with divine purpose and literal flame. It has seen the end of things and found it beautiful. It would like to share the experience with you.",
 };
@@ -1704,7 +1707,14 @@ function getEnemyFlavor(name) {
     || fallback;
 }
 
-const SHOP_PRICE_RANGES = {1:[30,45],2:[90,130],3:[220,300],4:[500,700],5:[1000,1400],6:[2500,3500]};
+const SHOP_PRICE_RANGES = {
+  1: [80, 130],
+  2: [220, 340],
+  3: [700, 1000],
+  4: [1800, 2500],
+  5: [4500, 6200],
+  6: [11000, 15000]
+};
 
 // ============================================================
 // GAME STATE
@@ -1712,71 +1722,26 @@ const SHOP_PRICE_RANGES = {1:[30,45],2:[90,130],3:[220,300],4:[500,700],5:[1000,
 let G = {}; // global game state
 
 const LANGUAGE_KEY = 'loadedBones_language';
+const I18N_STRICT_KEY = 'loadedBones_i18nStrict';
 const DEFAULT_LANGUAGE = 'en';
 const SUPPORTED_LANGUAGES = ['en', 'no', 'es'];
 let currentLanguage = DEFAULT_LANGUAGE;
+let activeLanguage = null;
 const LOCALIZATION_STATE = {
   textOriginal: new WeakMap(),
   attrOriginal: new WeakMap(),
   observer: null,
   applying: false,
-  pending: false,
-  wordCache: {},
-  exactCache: {}
+  pending: false
 };
-
-function getLocale(lang) {
-  const all = window.I18N_LOCALES || {};
-  return all[lang] || all[DEFAULT_LANGUAGE] || {};
-}
-
-function getLocaleValue(lang, key) {
-  const obj = getLocale(lang);
-  return key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), obj);
-}
 
 function applyVars(text, vars = {}) {
   if (typeof text !== 'string') return text;
   return text.replace(/\{(\w+)\}/g, (_, k) => (vars[k] !== undefined ? String(vars[k]) : `{${k}}`));
 }
 
-function t(key, vars = {}, fallback = '') {
-  const localized = getLocaleValue(currentLanguage, key);
-  const english = getLocaleValue(DEFAULT_LANGUAGE, key);
-  const raw = localized !== undefined ? localized : (english !== undefined ? english : fallback);
-  return applyVars(raw, vars);
-}
-
-function getAutoLocale() {
-  const locale = getLocale(currentLanguage);
-  return locale.auto || { exact: {}, patterns: [], words: {} };
-}
-
 function escapeRegExp(s) {
   return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function getWordEntries(lang) {
-  if (LOCALIZATION_STATE.wordCache[lang]) return LOCALIZATION_STATE.wordCache[lang];
-  const locale = getLocale(lang);
-  const words = (locale.auto && locale.auto.words) || {};
-  const entries = Object.keys(words)
-    .sort((a, b) => b.length - a.length)
-    .map((k) => [new RegExp(`\\b${escapeRegExp(k)}\\b`, 'gi'), words[k]]);
-  LOCALIZATION_STATE.wordCache[lang] = entries;
-  return entries;
-}
-
-function getExactMap(lang) {
-  if (LOCALIZATION_STATE.exactCache[lang]) return LOCALIZATION_STATE.exactCache[lang];
-  const locale = getLocale(lang);
-  const exact = (locale.auto && locale.auto.exact) || {};
-  const map = {};
-  Object.keys(exact).forEach((k) => {
-    map[k.toLowerCase()] = exact[k];
-  });
-  LOCALIZATION_STATE.exactCache[lang] = map;
-  return map;
 }
 
 function applyCaseStyle(source, replacement) {
@@ -1788,41 +1753,169 @@ function applyCaseStyle(source, replacement) {
   return replacement;
 }
 
+function isStrictI18nMode() {
+  try {
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('i18nStrict') === '1') return true;
+  } catch (e) {
+    // Ignore URL parsing issues and continue checking other sources.
+  }
+
+  try {
+    if (window.localStorage && localStorage.getItem(I18N_STRICT_KEY) === '1') return true;
+  } catch (e) {
+    // Ignore storage issues and fall back to runtime flag.
+  }
+
+  return window.LOADED_BONES_STRICT_I18N === true;
+}
+
+class LanguageRuntime {
+  constructor(code) {
+    this.code = code;
+    const all = window.I18N_LOCALES || {};
+    const requestedLocale = all[code];
+    this.locale = requestedLocale || all[DEFAULT_LANGUAGE] || {};
+    this.defaultLocale = all[DEFAULT_LANGUAGE] || {};
+    this.exactMap = null;
+    this.patterns = null;
+    if (!requestedLocale) {
+      const message = `[i18n] Locale '${code}' not found. Falling back to '${DEFAULT_LANGUAGE}'.`;
+      if (isStrictI18nMode()) {
+        throw new Error(message);
+      }
+      console.warn(message);
+    }
+    this.validateCompleteness();
+  }
+
+  resolveKey(key, fromDefault = false) {
+    const source = fromDefault ? this.defaultLocale : this.locale;
+    return key.split('.').reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), source);
+  }
+
+  getString(key, vars = {}, fallback = '') {
+    const localized = this.resolveKey(key, false);
+    const english = this.resolveKey(key, true);
+    const raw = localized !== undefined ? localized : (english !== undefined ? english : fallback);
+    return applyVars(raw, vars);
+  }
+
+  getAuto() {
+    return this.locale.auto || { exact: {}, patterns: [], words: {} };
+  }
+
+  getExactMap() {
+    if (this.exactMap) return this.exactMap;
+    const exact = this.getAuto().exact || {};
+    const map = {};
+    Object.keys(exact).forEach((k) => {
+      map[k.toLowerCase()] = exact[k];
+    });
+    this.exactMap = map;
+    return map;
+  }
+
+  getPatterns() {
+    if (this.patterns) return this.patterns;
+    const rawPatterns = this.getAuto().patterns || [];
+    this.patterns = rawPatterns
+      .filter((rule) => Array.isArray(rule) && rule.length >= 2)
+      .map((rule) => ({ re: new RegExp(rule[0], rule[2] || 'i'), replacement: rule[1] }));
+    return this.patterns;
+  }
+
+  translateText(source) {
+    if (this.code === DEFAULT_LANGUAGE || typeof source !== 'string') return source;
+
+    const exact = this.getAuto().exact || {};
+    const exactMap = this.getExactMap();
+    const patterns = this.getPatterns();
+
+    const match = source.match(/^(\s*)([\s\S]*?)(\s*)$/);
+    const lead = match ? match[1] : '';
+    const core = match ? match[2] : source;
+    const tail = match ? match[3] : '';
+    if (!core) return source;
+
+    if (Object.prototype.hasOwnProperty.call(exact, core)) {
+      return `${lead}${exact[core]}${tail}`;
+    }
+
+    const coreLower = core.toLowerCase();
+    if (Object.prototype.hasOwnProperty.call(exactMap, coreLower)) {
+      return `${lead}${applyCaseStyle(core, exactMap[coreLower])}${tail}`;
+    }
+
+    let out = core;
+    patterns.forEach(({ re, replacement }) => {
+      out = out.replace(re, replacement);
+    });
+    return `${lead}${out}${tail}`;
+  }
+
+  validateCompleteness() {
+    const required = [
+      'menu.begin',
+      'menu.continue',
+      'town.actions.adventureName',
+      'combat.logTitle',
+      'tutorial.header',
+      'statusHelp.poison.title',
+      'cardNames.Wooden Sword',
+      'enemyFlavor.Wolf',
+      'auto.exact',
+      'auto.patterns'
+    ];
+    const missing = required.filter((key) => this.resolveKey(key, false) === undefined);
+    if (missing.length > 0) {
+      const message = `[i18n] Locale '${this.code}' is missing keys: ${missing.join(', ')}`;
+      if (isStrictI18nMode()) {
+        throw new Error(message);
+      }
+      console.warn(message);
+    }
+  }
+}
+
+const LANGUAGE_RUNTIMES = {};
+
+function getLanguageRuntime(lang) {
+  const code = SUPPORTED_LANGUAGES.includes(lang) ? lang : DEFAULT_LANGUAGE;
+  if (!LANGUAGE_RUNTIMES[code]) {
+    LANGUAGE_RUNTIMES[code] = new LanguageRuntime(code);
+  }
+  return LANGUAGE_RUNTIMES[code];
+}
+
+function setActiveLanguageRuntime(lang) {
+  activeLanguage = getLanguageRuntime(lang);
+  currentLanguage = activeLanguage.code;
+  return activeLanguage;
+}
+
+function getCurrentLanguageRuntime() {
+  return activeLanguage || setActiveLanguageRuntime(currentLanguage);
+}
+
+function isDefaultLanguage() {
+  return getCurrentLanguageRuntime().code === DEFAULT_LANGUAGE;
+}
+
+function getLocale(lang) {
+  return getLanguageRuntime(lang).locale;
+}
+
+function getLocaleValue(lang, key) {
+  return getLanguageRuntime(lang).resolveKey(key, false);
+}
+
+function t(key, vars = {}, fallback = '') {
+  return getCurrentLanguageRuntime().getString(key, vars, fallback);
+}
+
 function translateVisibleText(source) {
-  if (currentLanguage === DEFAULT_LANGUAGE || typeof source !== 'string') return source;
-
-  const auto = getAutoLocale();
-  const exact = auto.exact || {};
-  const patterns = auto.patterns || [];
-  const exactMap = getExactMap(currentLanguage);
-
-  const match = source.match(/^(\s*)([\s\S]*?)(\s*)$/);
-  const lead = match ? match[1] : '';
-  const core = match ? match[2] : source;
-  const tail = match ? match[3] : '';
-
-  if (!core) return source;
-
-  if (Object.prototype.hasOwnProperty.call(exact, core)) {
-    return `${lead}${exact[core]}${tail}`;
-  }
-
-  const coreLower = core.toLowerCase();
-  if (Object.prototype.hasOwnProperty.call(exactMap, coreLower)) {
-    return `${lead}${applyCaseStyle(core, exactMap[coreLower])}${tail}`;
-  }
-
-  let out = core;
-  patterns.forEach((rule) => {
-    if (!Array.isArray(rule) || rule.length < 2) return;
-    const re = new RegExp(rule[0], rule[2] || 'i');
-    out = out.replace(re, rule[1]);
-  });
-
-  // Word-level fallback disabled to prevent language blending
-  // Only use exact phrases and patterns for clean translations
-
-  return `${lead}${out}${tail}`;
+  return getCurrentLanguageRuntime().translateText(source);
 }
 
 function shouldSkipLocalizationNode(node) {
@@ -1847,7 +1940,7 @@ function localizeTextNode(node) {
 
   // Always translate from the stored original, never update it
   const src = originals.get(node);
-  const translated = currentLanguage === DEFAULT_LANGUAGE ? src : translateVisibleText(src);
+  const translated = isDefaultLanguage() ? src : translateVisibleText(src);
   if (node.nodeValue !== translated) node.nodeValue = translated;
 }
 
@@ -1873,7 +1966,7 @@ function localizeAttributes(el) {
 
     // Always translate from the stored original
     const src = cache[attr];
-    const translated = currentLanguage === DEFAULT_LANGUAGE ? src : translateVisibleText(src);
+    const translated = isDefaultLanguage() ? src : translateVisibleText(src);
     if (current !== translated) el.setAttribute(attr, translated);
   });
 }
@@ -1978,6 +2071,21 @@ function applyLanguageToMenuAndTown() {
   setText('title-begin-btn', translateVisibleText(t('menu.begin', {}, 'Begin')));
   setText('continue-btn', translateVisibleText(t('menu.continue', {}, 'Continue')));
 
+  // Character creation buttons
+  setText('charcreate-begin-btn', t('charCreate.beginTale', {}, 'Begin Your Tale'));
+  setText('charcreate-back-btn', t('charCreate.back', {}, 'Back'));
+
+  // Difficulty buttons
+  setText('diff-easy', t('charCreate.easy', {}, 'Easy'));
+  setText('diff-normal', t('charCreate.normal', {}, 'Normal'));
+  setText('diff-punishing', t('charCreate.punishing', {}, 'Punishing'));
+
+  // Starter/adventure/combat controls that can persist across screen switches
+  setText('starter-autoselect-btn', t('starterScreen.autoSelect', {}, 'Auto-Select 3'));
+  setText('adventure-return-btn', translateVisibleText('Return to Town'));
+  setText('btn-play-card', translateVisibleText('Play Card'));
+  setText('btn-end-turn', translateVisibleText('End Turn'));
+
   // Character creation (if visible)
   const nameInput = document.getElementById('player-name-input');
   if (nameInput) {
@@ -2013,15 +2121,9 @@ function applyLanguageToMenuAndTown() {
 
 function setLanguage(lang, savePreference = true) {
   if (!SUPPORTED_LANGUAGES.includes(lang)) lang = DEFAULT_LANGUAGE;
-  currentLanguage = lang;
-  if (G) G.language = lang;
-  if (savePreference) localStorage.setItem(LANGUAGE_KEY, lang);
-  
-  // Clear all caches including originals when switching languages
-  LOCALIZATION_STATE.wordCache = {};
-  LOCALIZATION_STATE.exactCache = {};
-  LOCALIZATION_STATE.textOriginal = new WeakMap();
-  LOCALIZATION_STATE.attrOriginal = new WeakMap();
+  const runtime = setActiveLanguageRuntime(lang);
+  if (G) G.language = runtime.code;
+  if (savePreference) localStorage.setItem(LANGUAGE_KEY, runtime.code);
   
   populateLanguageSelectors();
   applyLanguageToMenuAndTown();
@@ -4537,7 +4639,7 @@ const SHOP_EXCLUDED = new Set(["Wooden Sword","Slingshot","Small Stone","Makeshi
 const SHOP_CONFIG = {
   numOffers: 6,        // Number of cards to display in shop
   saleChance: 0.05,    // 5% chance of sale day
-  saleDiscount: 0.5    // 50% off on sale day
+  saleDiscount: 0.75   // 25% off on sale day
 };
 
 let currentShopOffers = [];
@@ -4649,7 +4751,7 @@ function calculateSellPrice(card) {
   }
   const [pmin, pmax] = priceRange;
   const basePrice = Math.floor((pmin + pmax) / 2);
-  return Math.round(basePrice * 0.5);
+  return Math.round(basePrice * 0.35);
 }
 
 function openSellCards() {
