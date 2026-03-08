@@ -4225,6 +4225,16 @@ function endCombat(result) {
     ADV.totalGold += goldEarned;
     log(`Victory! +${xpEarned} XP, +${goldEarned} gold (x${mult.toFixed(2)}).`, 'victory');
 
+    // Training recovery applies between battles, so heal before the next-fight choice.
+    if (G.trainingRecovery > 0 && ADV.playerHp > 0) {
+      const missingHp = Math.max(0, G.maxHp - ADV.playerHp);
+      const rec = Math.min(missingHp, Math.ceil(G.maxHp * (G.trainingRecovery / 100)));
+      if (rec > 0) {
+        ADV.playerHp += rec;
+        log(`Recovered ${rec} HP from training.`, 'heal');
+      }
+    }
+
     // If legendary boss defeated, immediately return to town
     if (ADV.legendary) {
       log('=== LEGENDARY BOSS DEFEATED ===', 'victory');
@@ -4327,13 +4337,6 @@ function finishAdventure(result) {
   const defeatOnly = result === 'defeat';
   
   G.hp = Math.max(0, ADV.playerHp);
-
-  // Training recovery
-  if (G.trainingRecovery > 0 && G.hp > 0) {
-    const rec = Math.ceil(G.maxHp * (G.trainingRecovery/100));
-    G.hp = Math.min(G.maxHp, G.hp+rec);
-    log(`Recovered ${rec} HP from training.`, 'heal');
-  }
 
   let xpGained = ADV.totalXp;
   let goldGained = ADV.totalGold;
