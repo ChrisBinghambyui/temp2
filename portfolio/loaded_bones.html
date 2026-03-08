@@ -622,6 +622,11 @@ input[type="text"]:focus { border-color: var(--gold); }
   margin-bottom: 4px;
 }
 .combatant-name.enemy { color: #c06060; }
+.combatant-name.enemy.has-flavor {
+  cursor: help;
+  text-decoration: underline dotted rgba(192,96,96,0.7);
+  text-underline-offset: 3px;
+}
 .legendary-badge {
   display: inline-block;
   font-family: 'Courier Prime', monospace;
@@ -1015,6 +1020,7 @@ input[type="text"]:focus { border-color: var(--gold); }
 </div>
 
 <div id="status-tooltip" class="status-tooltip" hidden></div>
+<div id="enemy-flavor-tooltip" class="status-tooltip" hidden></div>
 <div id="xp-tooltip" class="xp-tooltip" hidden></div>
 
 <!-- LOG TOGGLE BUTTON (Mobile) -->
@@ -1336,7 +1342,7 @@ const ALL_CARDS = [
 ["Inferno","Deal double die value damage","43-0-000-03-A2-00-Z00041",4],
 ["Jab","Deal damage equal to die value","41-0-000-01-E0-00-000000",1],
 ["Jade Spear","Deal 6 damage, Apply 1 Bleed, Apply 1 Frozen","42-0-200-01-06-00-514100",3],
-["Judgement","Deal 18 damage, Heal 6 HP, Apply 2 Blind (exactly 6)","43-0-000-76-18-00-862600",4],
+["Judgement","Deal 18 damage, Heal 6 HP, Apply 2 Blind (exactly 6)","43-0-000-76-18-00-866200",4],
 ["Life Drain","Deal damage equal to die value, Heal half damage dealt","44-0-200-01-E0-00-Z00011",2],
 ["Lightning Bolt","Deal triple die value damage","45-0-104-01-A3-00-000000",3],
 ["Lightning Storm","Deal 20 damage, Apply 2 Blind (limit 20)","46-0-120-01-20-00-620000",4],
@@ -2151,6 +2157,21 @@ function getEnemyFlavor(name) {
   return getLocaleValue(currentLanguage, `enemyFlavor.${clean}`)
     || getLocaleValue(currentLanguage, `enemyFlavor.${name}`)
     || fallback;
+}
+
+function getCombatEnemyFlavor(enemy) {
+  if (!enemy || !enemy.name) return null;
+  const cleanEnemyName = enemy.name.replace(/^⚡ LEGENDARY /, '');
+  const localizedFlavor = getLocaleValue(currentLanguage, `enemyFlavor.${cleanEnemyName}`)
+    || getLocaleValue(currentLanguage, `enemyFlavor.${enemy.name}`);
+
+  return localizedFlavor
+    || (currentLanguage === DEFAULT_LANGUAGE
+      ? getEnemyFlavor(enemy.name)
+      : t('combat.genericEnemyFlavor', {
+          name: translateVisibleText(cleanEnemyName),
+          biome: getBiomeNameLocalized(ADV.biome)
+        }, `${cleanEnemyName} blocks your path.`));
 }
 
 const SHOP_PRICE_RANGES = {
@@ -3874,16 +3895,7 @@ function startNextCombat(legendary=false) {
   showScreen('combat-screen');
   
   // Show flavor text before combat
-  const cleanEnemyName = enemy.name.replace(/^⚡ LEGENDARY /, '');
-  const localizedFlavor = getLocaleValue(currentLanguage, `enemyFlavor.${cleanEnemyName}`)
-    || getLocaleValue(currentLanguage, `enemyFlavor.${enemy.name}`);
-  const flavor = localizedFlavor
-    || (currentLanguage === DEFAULT_LANGUAGE
-      ? getEnemyFlavor(enemy.name)
-      : t('combat.genericEnemyFlavor', {
-          name: translateVisibleText(cleanEnemyName),
-          biome: getBiomeNameLocalized(ADV.biome)
-        }, `${cleanEnemyName} blocks your path.`));
+  const flavor = getCombatEnemyFlavor(enemy);
 
   if (flavor) {
     const isLeg = legendary;
@@ -4453,7 +4465,11 @@ function updateCombatUI() {
 
   // Enemy stats
   const isLegendary = ADV.legendary;
-  document.getElementById('c-enemy-name').textContent = e.name;
+  const enemyNameEl = document.getElementById('c-enemy-name');
+  enemyNameEl.textContent = e.name;
+  const hasFlavor = !!getCombatEnemyFlavor(e);
+  enemyNameEl.classList.toggle('has-flavor', hasFlavor);
+  if (!hasFlavor) hideEnemyFlavorTooltip();
   document.getElementById('legendary-badge-area').innerHTML = isLegendary ? '<span class="legendary-badge">LEGENDARY</span>' : '';
   document.getElementById('c-enemy-hp-text').textContent = `${Math.max(0,e.hp)}/${e.maxHp}`;
   document.getElementById('c-enemy-hp-bar').style.width = Math.max(0,e.hp/e.maxHp*100)+'%';
@@ -4497,6 +4513,7 @@ const STATUS_HELP = {
 };
 
 let activeStatusBadge = null;
+let activeEnemyNameAnchor = null;
 
 function positionStatusTooltip(tooltipEl, badgeEl) {
   const rect = badgeEl.getBoundingClientRect();
@@ -4530,6 +4547,31 @@ function hideStatusTooltip() {
   if (!tooltipEl) return;
   tooltipEl.hidden = true;
   activeStatusBadge = null;
+}
+
+function showEnemyFlavorTooltip(anchorEl) {
+  if (!anchorEl || !CB.enemy) return;
+  const tooltipEl = document.getElementById('enemy-flavor-tooltip');
+  if (!tooltipEl) return;
+
+  const flavor = getCombatEnemyFlavor(CB.enemy);
+  if (!flavor) {
+    hideEnemyFlavorTooltip();
+    return;
+  }
+
+  const title = t('combat.enemyFlavorTooltipTitle', {}, translateVisibleText('Enemy Lore'));
+  tooltipEl.innerHTML = `<div class="status-tooltip-title">${title}</div><div>${translateVisibleText(flavor)}</div>`;
+  tooltipEl.hidden = false;
+  positionStatusTooltip(tooltipEl, anchorEl);
+  activeEnemyNameAnchor = anchorEl;
+}
+
+function hideEnemyFlavorTooltip() {
+  const tooltipEl = document.getElementById('enemy-flavor-tooltip');
+  if (!tooltipEl) return;
+  tooltipEl.hidden = true;
+  activeEnemyNameAnchor = null;
 }
 
 function setupStatusTooltips() {
@@ -4570,6 +4612,47 @@ function setupStatusTooltips() {
     if (!activeStatusBadge) return;
     const tooltipEl = document.getElementById('status-tooltip');
     if (tooltipEl && !tooltipEl.hidden) positionStatusTooltip(tooltipEl, activeStatusBadge);
+  }, true);
+}
+
+function setupEnemyFlavorTooltip() {
+  const enemyNameEl = document.getElementById('c-enemy-name');
+  if (!enemyNameEl) return;
+
+  const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+  enemyNameEl.addEventListener('mouseenter', () => {
+    if (!supportsHover) return;
+    showEnemyFlavorTooltip(enemyNameEl);
+  });
+
+  enemyNameEl.addEventListener('mouseleave', () => {
+    if (!supportsHover) return;
+    hideEnemyFlavorTooltip();
+  });
+
+  enemyNameEl.addEventListener('click', (evt) => {
+    evt.stopPropagation();
+    const tooltipEl = document.getElementById('enemy-flavor-tooltip');
+    if (!tooltipEl || tooltipEl.hidden) showEnemyFlavorTooltip(enemyNameEl);
+    else hideEnemyFlavorTooltip();
+  });
+
+  document.addEventListener('click', (evt) => {
+    if (evt.target.closest('#c-enemy-name') || evt.target.closest('#enemy-flavor-tooltip')) return;
+    hideEnemyFlavorTooltip();
+  });
+
+  window.addEventListener('resize', () => {
+    if (!activeEnemyNameAnchor) return;
+    const tooltipEl = document.getElementById('enemy-flavor-tooltip');
+    if (tooltipEl && !tooltipEl.hidden) positionStatusTooltip(tooltipEl, activeEnemyNameAnchor);
+  });
+
+  document.addEventListener('scroll', () => {
+    if (!activeEnemyNameAnchor) return;
+    const tooltipEl = document.getElementById('enemy-flavor-tooltip');
+    if (tooltipEl && !tooltipEl.hidden) positionStatusTooltip(tooltipEl, activeEnemyNameAnchor);
   }, true);
 }
 
@@ -5871,6 +5954,7 @@ window.addEventListener('load', () => {
   scheduleLocalizationPass(document.body);
   setDiff('normal');
   setupStatusTooltips();
+  setupEnemyFlavorTooltip();
   document.addEventListener('click', (evt) => {
     if (!evt.target.closest('#town-xp-track')) hideTownXpTooltip();
   });
