@@ -741,6 +741,32 @@ input[type="text"]:focus { border-color: var(--gold); }
 }
 .round-num { font-size: 22px; color: var(--parchment); font-weight: 600; }
 
+/* =================== FEEDBACK BUTTON =================== */
+#feedback-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  background: rgba(13,11,8,0.85);
+  border: 1px solid var(--parchment-dark);
+  color: var(--parchment);
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 11px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  line-height: 1.4;
+}
+#feedback-btn:hover {
+  background: rgba(90,69,32,0.9);
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
 /* =================== COMBAT PHASE BANNER =================== */
 .phase-banner {
   position: fixed; top: 0; left: 0; right: 340px;
@@ -1041,6 +1067,9 @@ input[type="text"]:focus { border-color: var(--gold); }
 </style>
 </head>
 <body>
+
+<!-- FEEDBACK BUTTON -->
+<a id="feedback-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSekRdEyZID3Kygw4YYl_YvNLabhpWJH-uixi2_n1PdW0qRtPA/viewform?usp=sharing&ouid=101055319341169915281" target="_blank" rel="noopener noreferrer">✦ Feedback</a>
 
 <!-- LOG PANEL -->
 <div id="log-panel">
@@ -3864,6 +3893,13 @@ function startAdventure(biome, tier) {
     return;
   }
 
+  const _minDeck = getPlayerHandLimit() + 4;
+  if (G.inventory.length >= _minDeck && G.deck.length < _minDeck) {
+    openModal(`<h2>Deck Too Small</h2><p class="info-text">You need at least <span class="gold-text">${_minDeck}</span> cards in your active deck before entering battle (hand size + 4). Visit Inventory &amp; Deck to bulk up.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">OK</button></div>`);
+    return;
+  }
+
   G.currentBiome = biome;
   G.currentTier = tier;
   ADV = {
@@ -4329,8 +4365,9 @@ function addDropToInventory(cardName, addToDeck) {
   const card = CARD_BY_NAME[cardName] || CB._pendingDrop;
   if (card) {
     G.inventory.push(card);
-    if (addToDeck) G.deck.push(card);
-    log(`${card.name} added to ${addToDeck?'deck':'inventory'}.`, 'loot');
+    const actuallyAddedToDeck = addToDeck && (countCards(G.deck)[card.name]||0) < 3;
+    if (actuallyAddedToDeck) G.deck.push(card);
+    log(`${card.name} added to ${actuallyAddedToDeck?'deck':'inventory'}${addToDeck&&!actuallyAddedToDeck?' (deck already has 3 copies)':''}.`, 'loot');
   }
   closeModal();
   afterVictoryChoice();
@@ -5115,7 +5152,7 @@ function openAddCardToDeck() {
   const deckCounts = countCards(G.deck);
   const addable = [];
   Object.keys(invCounts).sort().forEach(name=>{
-    const avail = invCounts[name]-(deckCounts[name]||0);
+    const avail = Math.min(invCounts[name], 3) - (deckCounts[name]||0);
     if (avail>0) addable.push({name, avail});
   });
   if (!addable.length) {
@@ -5144,7 +5181,7 @@ function addCardToDeck(name) {
   if (!card) return;
   const invCounts = countCards(G.inventory);
   const deckCounts = countCards(G.deck);
-  if ((deckCounts[name]||0) >= (invCounts[name]||0)) {
+  if ((deckCounts[name]||0) >= Math.min(invCounts[name]||0, 3)) {
     log('No more copies available.','system'); return;
   }
   G.deck.push(card);
