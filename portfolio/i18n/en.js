@@ -5,6 +5,7 @@ window.I18N_LOCALES.en = {
     titleSubtitle: "A Dice & Card Adventure",
     begin: "Begin",
     continue: "Continue",
+    importSave: "Import Save",
     languageLabel: "Language"
   },
   town: {

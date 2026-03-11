@@ -5,6 +5,7 @@ window.I18N_LOCALES.no = {
     titleSubtitle: "Et terning- og korteventyr",
     begin: "Begynn",
     continue: "Fortsett",
+    importSave: "Importer lagring",
     languageLabel: "Sprak"
   },
   town: {

@@ -5,6 +5,7 @@ window.I18N_LOCALES.es = {
     titleSubtitle: "Una aventura de dados y cartas",
     begin: "Comenzar",
     continue: "Continuar",
+    importSave: "Importar guardado",
     languageLabel: "Idioma"
   },
   town: {

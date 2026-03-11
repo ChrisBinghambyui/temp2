@@ -1102,6 +1102,7 @@ input[type="text"]:focus { border-color: var(--gold); }
       <div class="title-subtitle" id="title-subtitle">A Dice & Card Adventure</div>
       <button class="btn primary" id="title-begin-btn" style="font-size:15px; padding:14px 40px; letter-spacing:4px" onclick="showCharCreate()">Begin</button>
       <button class="btn primary" id="continue-btn" style="font-size:15px; padding:14px 40px; letter-spacing:4px; margin-left:12px; display:none;" onclick="loadAndResume()">Continue</button>
+      <button class="btn" id="title-import-btn" style="font-size:15px; padding:14px 30px; letter-spacing:2px; margin-left:12px;" onclick="importSave()">Import Save</button>
     </div>
   </div>
 
@@ -1395,7 +1396,7 @@ const ALL_CARDS = [
 ["Frosted Spear","Deal 3 damage (reusable, min 3)","34-0-200-33-03-00-000000",1],
 ["Gore","Deal damage equal to die value, On 6: Apply 1 Bleed","35-0-000-01-E0-16-510000",1],
 ["Haunting Wail","Apply 3 Blind, Apply 1 Frozen","36-0-000-01-00-00-634100",3],
-["Hellfire","Deal quintuple die value damage (odd only)","37-0-000-03-A5-00-000000",5],
+["Hellfire","Deal triple die value damage (odd only)","37-0-000-03-A3-00-000000",5],
 ["Howl","Heal 2 HP (limit 8)","38-0-108-01-00-00-820000",1],
 ["Hype Up","Heal 4 HP, Apply 1 Blind to self and opponent (activates when limit reaches 0)","39-0-112-01-00-00-Z00029",3],
 ["Ice Magic","Heal 2 HP, Remove all negative effects (max 2)","39-0-000-22-00-00-Z00010",2],
@@ -1655,9 +1656,9 @@ const UPGRADED_CARDS = [
 ["Haunting Wail y","Apply 3 Blind, Apply 2 Lock","36-3-108-01-00-00-633200",10],
 ["Hellfire X","Deal quadruple die value damage","37-2-104-01-A4-00-000000",10],
 ["Hellfire XY","Deal quintuple die value damage","37-5-104-01-A5-00-000000",10],
-["Hellfire Y","Deal quintuple die value damage","37-4-103-01-A5-00-000000",10],
+["Hellfire Y","Deal quintuple die value damage (odd only)","37-4-103-03-A5-00-000000",10],
 ["Hellfire x","Deal triple die value damage","37-1-104-01-A3-00-000000",10],
-["Hellfire y","Deal quadruple die value damage","37-3-103-01-A4-00-000000",10],
+["Hellfire y","Deal quadruple die value damage (odd only)","37-3-103-03-A4-00-000000",10],
 ["Howl X","Heal 3 HP, Remove 1 negative effect","38-2-105-01-00-00-Z00027",10],
 ["Howl XY","Heal 5 HP, Remove all negative effects, Gain 3 Shield","38-5-104-01-00-00-Z00028",10],
 ["Howl Y","Heal 4 HP, Gain 2 Shield","38-4-106-01-00-00-847200",10],
@@ -2598,6 +2599,7 @@ function applyLanguageToMenuAndTown() {
   setText('title-subtitle', t('menu.titleSubtitle', {}, 'A Dice & Card Adventure'));
   setText('title-begin-btn', translateVisibleText(t('menu.begin', {}, 'Begin')));
   setText('continue-btn', translateVisibleText(t('menu.continue', {}, 'Continue')));
+  setText('title-import-btn', translateVisibleText(t('menu.importSave', {}, 'Import Save')));
 
   // Character creation buttons
   setText('charcreate-begin-btn', t('charCreate.beginTale', {}, 'Begin Your Tale'));
@@ -4605,8 +4607,8 @@ function showStatusTooltip(badgeEl) {
 
   // Get translated title and text
   const title = t(`statusHelp.${key}.title`, {}, help.title);
-  const textTemplate = t(`statusHelp.${key}.text`, {v: value}, help.text(value));
-  const text = textTemplate.replace('{v}', value).replace('{v}', value*2); // Handle burn case
+  const tooltipValue = key === 'burn' ? value * 2 : value;
+  const text = t(`statusHelp.${key}.text`, { v: tooltipValue }, help.text(value));
   
   tooltipEl.innerHTML = `<div class="status-tooltip-title">${title}</div><div>${text}</div>`;
   tooltipEl.hidden = false;
@@ -5942,6 +5944,20 @@ function showThessaTownIntro(outcome = 'defeat') {
 // SAVE/LOAD SYSTEM
 // ============================================================
 
+const GAME_BUILD = '2026.03.11';
+const UPDATE_NOTES = {
+  '2026.03.11': {
+    summary: 'Cross-device save handoff is smoother.',
+    added: [
+      'Main menu now includes Import Save.',
+    ],
+    changed: [
+      'Imported saves are now written to local storage immediately and unlock Continue.',
+    ],
+    removed: []
+  }
+};
+
 const SAVE_KEY = 'loadedBones_autosave';
 const SAVE_VERSION = 1;
 
@@ -5949,6 +5965,7 @@ function serializeGameState() {
   // Convert Sets to arrays for JSON serialization
   const saveData = {
     version: SAVE_VERSION,
+    build: GAME_BUILD,
     timestamp: Date.now(),
     G: {
       ...G,
@@ -5982,15 +5999,32 @@ function deserializeGameState(saveData) {
   return true;
 }
 
-function autoSave() {
+function showUpdateSummaryIfNeeded(saveData) {
+  const lastSeenBuild = saveData?.G?.lastSeenBuild || saveData?.build || null;
+  if (lastSeenBuild === GAME_BUILD) return;
+
+  const notes = UPDATE_NOTES[GAME_BUILD];
+  if (!notes) return;
+
+  log(`Update ${GAME_BUILD}`, 'system');
+  if (notes.summary) log(`Summary: ${notes.summary}`, 'system');
+  log(`Added: ${notes.added?.length ? notes.added.join(' ') : 'None.'}`, 'system');
+  log(`Changed: ${notes.changed?.length ? notes.changed.join(' ') : 'None.'}`, 'system');
+  log(`Removed: ${notes.removed?.length ? notes.removed.join(' ') : 'None.'}`, 'system');
+
+  G.lastSeenBuild = GAME_BUILD;
+  autoSave(true);
+}
+
+function autoSave(silent = false) {
   try {
     const saveData = serializeGameState();
     localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
-    log('Game saved.', 'system');
+    if (!silent) log('Game saved.', 'system');
     return true;
   } catch (err) {
     console.error('Failed to save game:', err);
-    log('Failed to save game.', 'system');
+    if (!silent) log('Failed to save game.', 'system');
     return false;
   }
 }
@@ -6022,6 +6056,7 @@ function loadAndResume() {
   // Resume from town screen
   showTown();
   log(`Welcome back, ${G.name}!`, 'system');
+  showUpdateSummaryIfNeeded(saveData);
 }
 
 function exportSave() {
@@ -6052,8 +6087,12 @@ function importSave() {
       try {
         const saveData = JSON.parse(event.target.result);
         if (deserializeGameState(saveData)) {
+          localStorage.setItem(SAVE_KEY, JSON.stringify(saveData));
+          const continueBtn = document.getElementById('continue-btn');
+          if (continueBtn) continueBtn.style.display = 'inline-block';
           log(`Loaded save: ${G.name}`, 'system');
           showTown();
+          showUpdateSummaryIfNeeded(saveData);
         } else {
           alert('Invalid save file format');
         }
