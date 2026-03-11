@@ -990,7 +990,7 @@ input[type="text"]:focus { border-color: var(--gold); }
   border: 2px solid var(--bone);
   font-size: 20px;
   cursor: pointer;
-  z-index: 99;
+  z-index: 201;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   transition: transform 0.2s ease;
   font-weight: 600;
@@ -3270,8 +3270,19 @@ function showScreen(id) {
 
 function toggleLogPanel() {
   const logPanel = document.getElementById('log-panel');
+  const isOpen = logPanel.classList.contains('visible');
   logPanel.classList.toggle('visible');
+  if (!isOpen) {
+    history.pushState({ logOpen: true }, '');
+  }
 }
+
+window.addEventListener('popstate', () => {
+  const logPanel = document.getElementById('log-panel');
+  if (logPanel.classList.contains('visible')) {
+    logPanel.classList.remove('visible');
+  }
+});
 
 function log(msg, type='system') {
   const el = document.getElementById('log-entries');
