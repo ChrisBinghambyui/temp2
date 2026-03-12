@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A recipe site">
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
@@ -28,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="recipes.css">
+    <script defer src="recipes.js"></script>
     <title>RecipeBook</title>
 </head>
 <body>
@@ -39,7 +41,7 @@
     </header>
     <div class="search-area">
         <div class="search-bar">
-            <input type="text" placeholder="Find a recipe" aria-label="Search for a recipe">
+            <input id="search" type="text" placeholder="Find a recipe" aria-label="Search for a recipe">
             <button type="button" aria-label="Search">
                 <img src="images/search.svg" alt="search icon">
             </button>
@@ -48,7 +50,7 @@
     <main class="recipe-list">
         <article class="recipe-card">
             <img src="images/apple-crisp.jpg" alt="Apple Crisp in a bowl topped with vanilla ice cream" class="recipe-img">
-            <div class="recipe-info">
+            <!-- <div class="recipe-info">
                 <span class="recipe-tag">dessert</span>
                 <h2 class="recipe-title">Apple Crisp</h2>
                 <span
@@ -63,7 +65,7 @@
                     <span aria-hidden="true" class="icon-star-empty">☆</span>
                 </span>
                 <p class="recipe-desc">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
+            </div> -->
         </article>
     </main>
     <div class="social">
@@ -72,7 +74,6 @@
         <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
         <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
     </div>
-
     <footer>
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     </footer>
