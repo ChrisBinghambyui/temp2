@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A recipe site">
+    <meta name="author" content="Christopher Bingham">
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
     <meta property="og:type" content="website">
@@ -19,7 +20,7 @@
     <meta name="twitter:image" content="images/social-preview-image.png">
 
     <!-- One favicon (ICO works everywhere) -->
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="images/recipe-book.png" type="image/x-icon">
 
     <!-- One Apple Touch Icon (iOS home screen) — must be 180x180px -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -39,14 +40,16 @@
             <span class="logo-title">RecipeBook</span>
         </div>
     </header>
-    <div class="search-area">
-        <div class="search-bar">
-            <input id="search" type="text" placeholder="Find a recipe" aria-label="Search for a recipe">
-            <button type="button" aria-label="Search">
-                <img src="images/search.svg" alt="search icon">
-            </button>
+    <nav aria-label="Recipe site navigation">
+        <div class="search-area">
+            <div class="search-bar">
+                <input id="search" type="text" placeholder="Find a recipe" aria-label="Search for a recipe">
+                <button type="button" aria-label="Search">
+                    <img src="images/search.svg" alt="search icon">
+                </button>
+            </div>
         </div>
-    </div>
+    </nav>
     <main class="recipe-list">
         <article class="recipe-card">
             <img src="images/apple-crisp.jpg" alt="Apple Crisp in a bowl topped with vanilla ice cream" class="recipe-img">
