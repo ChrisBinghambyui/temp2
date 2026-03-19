@@ -1195,10 +1195,10 @@ input[type="text"]:focus { border-color: var(--gold); }
         <div class="town-action-desc" id="town-action-adventure-desc">Head into the wilderness and fight enemies</div>
         <div class="town-action-icon">⚔️</div>
       </div>
-      <div class="town-action" onclick="doRest()">
-        <div class="town-action-name" id="town-action-rest-name">Rest</div>
-        <div class="town-action-desc" id="town-action-rest-desc">Sleep at the tavern and recover all HP</div>
-        <div class="town-action-icon">🛏️</div>
+      <div class="town-action" onclick="openBestiary()">
+        <div class="town-action-name" id="town-action-rest-name">Bestiary</div>
+        <div class="town-action-desc" id="town-action-rest-desc">Review foes you've faced, their cards, and status effects</div>
+        <div class="town-action-icon">📖</div>
       </div>
       <div class="town-action" onclick="openInventory()">
         <div class="town-action-name" id="town-action-inventory-name">Inventory & Deck</div>
@@ -1234,7 +1234,7 @@ input[type="text"]:focus { border-color: var(--gold); }
   <!-- ADVENTURE DESTINATION SCREEN -->
   <div id="adventure-screen" class="screen">
     <div class="panel-title" style="font-family:'Cinzel Decorative','Cinzel',serif;font-size:28px;margin-bottom:16px;">Choose Your Destination</div>
-    <div class="info-text" style="margin-bottom:20px">Select a biome to adventure in. Win 10 battles to face the legendary boss!</div>
+    <div class="info-text" style="margin-bottom:20px">Select a biome to adventure in. Every 10th battle is a legendary boss, and your run can continue as long as you survive.</div>
     <div class="biome-grid" id="biome-grid"></div>
     <div style="margin-top:20px">
       <button class="btn" id="adventure-return-btn" onclick="showTown()">Return to Town</button>
@@ -1315,6 +1315,7 @@ input[type="text"]:focus { border-color: var(--gold); }
           <div class="round-label">Round</div>
           <div class="round-num" id="round-number">1</div>
         </div>
+        <div id="encounter-level-display" style="margin-top:8px;"></div>
         <div id="win-streak-display" style="margin-top:8px;"></div>
       </div>
     </div>
@@ -1484,11 +1485,11 @@ const UPGRADED_CARDS = [
 ["Apocalypse Y","Deal 35 damage, Apply 3 Burn","03-4-132-01-35-00-230000",10],
 ["Apocalypse x","Deal 30 damage, Apply 2 Burn","03-1-132-01-30-00-220000",10],
 ["Apocalypse y","Deal 32 damage, Apply 2 Burn","03-3-135-01-32-00-220000",10],
-["Bash X","Deal damage equal to double current shield, then remove half of current shield (rounded up), Gain 2 Shield","04-2-000-01-00-00-Z00003",10],
-["Bash XY","Deal damage equal to triple current shield, then remove half of current shield (rounded down), Gain 3 Shield","04-5-000-01-00-00-Z00006",10],
-["Bash Y","Deal damage equal to triple current shield, then remove all shield","04-4-000-01-00-00-Z00005",10],
+["Bash X","Deal damage equal to double current shield, then remove half of current shield (rounded up), Gain 2 Shield","04-2-000-01-00-00-Z00085",10],
+["Bash XY","Deal damage equal to triple current shield, then remove half of current shield (rounded down), Gain 3 Shield","04-5-000-01-00-00-Z00088",10],
+["Bash Y","Deal damage equal to triple current shield, then remove all shield","04-4-000-01-00-00-Z00087",10],
 ["Bash x","Deal damage equal to double current shield, then remove half of current shield (rounded down)","04-1-000-01-00-00-Z00002",10],
-["Bash y","Deal damage equal to double current shield, then remove half of current shield (rounded up)","04-3-000-01-00-00-Z00004",10],
+["Bash y","Deal damage equal to double current shield, then remove half of current shield (rounded up)","04-3-000-01-00-00-Z00086",10],
 ["Bellow X","Deal damage equal to die value, On 6: Apply 2 Frozen + 1 Poison + trigger poison","05-2-000-01-E0-16-11421Z",10],
 ["Bellow XY","Deal damage equal to die value + 2, On 5-6: Apply 3 Frozen and 3 Poison + trigger poison (reusable)","05-5-200-01-E2-35-13431Z",10],
 ["Bellow Y","Deal damage equal to die value + 2, On 5-6: Apply 2 Frozen (reusable)","05-4-200-01-E2-35-420000",10],
@@ -1549,11 +1550,11 @@ const UPGRADED_CARDS = [
 ["Condemn Y","Deal damage equal to die value + 12, Sacrifice 4 HP (reusable)","42-4-200-23-EC-00-940000",10],
 ["Condemn x","Deal damage equal to die value + 9, Sacrifice 2 HP (reusable)","42-1-200-23-E9-00-920000",10],
 ["Condemn y","Deal damage equal to die value + 10, Sacrifice 3 HP (reusable)","42-3-200-23-EA-00-930000",10],
-["Control X","Draw a new card, and roll a new die","16-2-000-71-00-00-Z00015",10],
-["Control XY","Sacrifice 1 HP, draw 3 new cards, and roll 2 new dice","16-5-000-71-00-00-Z00018",10],
-["Control Y","Sacrifice 3 HP, draw 2 new cards, and roll 2 new dice","16-4-000-71-00-00-Z00017",10],
-["Control x","Sacrifice 1 HP, draw a new card, and roll a new die","16-1-000-71-00-00-Z00014",10],
-["Control y","Sacrifice 2 HP, draw 2 new cards, and roll a new die","16-3-000-71-00-00-Z00016",10],
+["Control X","Draw a new card, and roll a new die","16-2-000-71-00-00-Z00091",10],
+["Control XY","Sacrifice 1 HP, draw 3 new cards, and roll 2 new dice","16-5-000-71-00-00-Z00093",10],
+["Control Y","Sacrifice 3 HP, draw 2 new cards, and roll 2 new dice","16-4-000-71-00-00-Z00092",10],
+["Control x","Sacrifice 1 HP, draw a new card, and roll a new die","16-1-000-71-00-00-Z00089",10],
+["Control y","Sacrifice 2 HP, draw 2 new cards, and roll a new die","16-3-000-71-00-00-Z00090",10],
 ["Curse X","Apply 3 Poison, Apply 4 Blind, Apply 1 Lock","17-2-000-71-00-00-134631",10],
 ["Curse XY","Apply 5 Poison, Apply 5 Blind, Apply 2 Lock","17-5-000-71-00-00-155532",10],
 ["Curse Y","Apply 4 Poison, Apply 3 Blind, Apply 1 Lock","17-4-000-71-00-00-144331",10],
@@ -2629,8 +2630,8 @@ function applyLanguageToMenuAndTown() {
 
   setText('town-action-adventure-name', t('town.actions.adventureName', {}, 'Adventure'));
   setText('town-action-adventure-desc', t('town.actions.adventureDesc', {}, 'Head into the wilderness and fight enemies'));
-  setText('town-action-rest-name', t('town.actions.restName', {}, 'Rest'));
-  setText('town-action-rest-desc', t('town.actions.restDesc', {}, 'Sleep at the tavern and recover all HP'));
+  setText('town-action-rest-name', t('town.actions.bestiaryName', {}, 'Bestiary'));
+  setText('town-action-rest-desc', t('town.actions.bestiaryDesc', {}, "Review foes you've faced, their cards, and status effects"));
   setText('town-action-inventory-name', t('town.actions.inventoryName', {}, 'Inventory & Deck'));
   setText('town-action-inventory-desc', t('town.actions.inventoryDesc', {}, 'Manage your cards and active deck'));
   setText('town-action-shop-name', t('town.actions.shopName', {}, 'Shop'));
@@ -2730,6 +2731,37 @@ function rand(min, max) { return min + Math.floor(Math.random() * (max - min + 1
 function randItem(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 
+const RARITY_DROP_WEIGHTS = {
+  1: 0.50,
+  2: 0.25,
+  3: 0.15,
+  4: 0.05,
+  5: 0.03,
+  6: 0.02,
+};
+
+function pickWeightedCardByRarity(cards) {
+  const pool = (cards || []).filter(Boolean);
+  if (!pool.length) return null;
+
+  let totalWeight = 0;
+  const weighted = pool.map((card) => {
+    const rarity = card?.rarity || CARD_BY_NAME[card?.name]?.rarity || 1;
+    const weight = RARITY_DROP_WEIGHTS[rarity] || 0.01;
+    totalWeight += weight;
+    return { card, weight };
+  });
+
+  if (totalWeight <= 0) return randItem(pool);
+
+  let roll = Math.random() * totalWeight;
+  for (const entry of weighted) {
+    roll -= entry.weight;
+    if (roll <= 0) return entry.card;
+  }
+  return weighted[weighted.length - 1].card;
+}
+
 // ============================================================
 // CARD LOGIC (parse ID -> resolve effects)
 // ============================================================
@@ -2795,6 +2827,50 @@ function getLimitValue(limit) {
 function isReusable(limit) { return limit.length===3 && limit[0]==='2'; }
 function isOncePerCombat(limit) { return limit === '222'; }
 
+const REUSABLE_BALANCE_CONFIG = {
+  defaultTurnCap: 3,
+  diePenalty: 1,
+  turnCapsByFamily: {
+    splinter: 2,
+    swipe: 2,
+    shield: 2,
+    stonehide: 2,
+    evade: 2,
+    lifedrain: 2,
+  }
+};
+
+function getReusableUsageKey(card) {
+  if (!card || !card.name) return 'unknown';
+  return getCardFamily(card.name) || normalizeCardNameKey(card.name);
+}
+
+function getReusableTurnCap(card) {
+  const key = getReusableUsageKey(card);
+  return REUSABLE_BALANCE_CONFIG.turnCapsByFamily[key] || REUSABLE_BALANCE_CONFIG.defaultTurnCap;
+}
+
+function getReusableBadgeText(card) {
+  const info = parseCardId(card?.id);
+  if (!info) return '';
+  if (isOncePerCombat(info.limit)) return 'Once/Battle';
+  if (!isReusable(info.limit)) return 'Single-use';
+  return `Reusable (${getReusableTurnCap(card)}/turn)`;
+}
+
+function canUseReusableThisTurn(source, card) {
+  const key = getReusableUsageKey(card);
+  const cap = getReusableTurnCap(card);
+  const used = (source.reusableUseCounts && source.reusableUseCounts[key]) || 0;
+  return { ok: used < cap, used, cap, key };
+}
+
+function registerReusableUse(source, card) {
+  if (!source.reusableUseCounts) source.reusableUseCounts = {};
+  const key = getReusableUsageKey(card);
+  source.reusableUseCounts[key] = (source.reusableUseCounts[key] || 0) + 1;
+}
+
 function applyShieldedDamage(target, amount) {
   if (amount <= 0) return 0;
   let remaining = amount;
@@ -2805,6 +2881,63 @@ function applyShieldedDamage(target, amount) {
   }
   if (remaining > 0) target.hp -= remaining;
   return remaining;
+}
+
+function clearNegativeStatuses(combatant) {
+  combatant.poison = 0;
+  combatant.bleed = 0;
+  combatant.lock = 0;
+  combatant.freeze = 0;
+  combatant.blind = 0;
+}
+
+function countNegativeStatuses(combatant) {
+  return (combatant.poison || 0) + (combatant.bleed || 0) + (combatant.lock || 0) + (combatant.freeze || 0) + (combatant.blind || 0);
+}
+
+function transferNegativeStatuses(source, target, mult = 1) {
+  const packs = {
+    poison: (source.poison || 0) * mult,
+    bleed: (source.bleed || 0) * mult,
+    lock: (source.lock || 0) * mult,
+    freeze: (source.freeze || 0) * mult,
+    blind: (source.blind || 0) * mult
+  };
+  if (packs.poison) target.poison = (target.poison || 0) + packs.poison;
+  if (packs.bleed) target.bleed = (target.bleed || 0) + packs.bleed;
+  if (packs.lock) target.lock = (target.lock || 0) + packs.lock;
+  if (packs.freeze) target.freeze = (target.freeze || 0) + packs.freeze;
+  if (packs.blind) target.blind = (target.blind || 0) + packs.blind;
+  clearNegativeStatuses(source);
+  return packs;
+}
+
+function doubleNegativeStatuses(combatant) {
+  combatant.poison = (combatant.poison || 0) * 2;
+  combatant.bleed = (combatant.bleed || 0) * 2;
+  combatant.lock = (combatant.lock || 0) * 2;
+  combatant.freeze = (combatant.freeze || 0) * 2;
+  combatant.blind = (combatant.blind || 0) * 2;
+}
+
+function drawCardsForZEffect(source, count) {
+  let drawn = 0;
+  for (let i = 0; i < count; i++) {
+    if (!source.deck || source.deck.length === 0) {
+      if (!source.discard || source.discard.length === 0) break;
+      source.deck = source.discard.splice(0);
+      shuffle(source.deck);
+    }
+    const card = source.deck.pop();
+    if (!card) break;
+    source.hand.push(card);
+    drawn++;
+  }
+  return drawn;
+}
+
+function addDiceForZEffect(source, count) {
+  for (let i = 0; i < count; i++) source.dicePool.push(rand(1, 6));
 }
 
 // Special Z-card effects
@@ -2897,12 +3030,7 @@ function resolveZEffect(zCode, source, target, dieVal) {
       break;
     }
     case 12: { // mirror hide
-      const pp=target.poison||0,bl=target.bleed||0,lo=target.lock||0,fr=target.freeze||0,bi=target.blind||0;
-      target.poison+=(source.poison||0); source.poison=0;
-      target.bleed+=(source.bleed||0); source.bleed=0;
-      target.lock+=(source.lock||0); source.lock=0;
-      target.freeze+=(source.freeze||0); source.freeze=0;
-      target.blind+=(source.blind||0); source.blind=0;
+      transferNegativeStatuses(source, target, 1);
       msg = `transferred all negative effects to ${target.name}`;
       break;
     }
@@ -2973,6 +3101,210 @@ function resolveZEffect(zCode, source, target, dieVal) {
       msg=`gained 8 Shield, healed 5 HP, removed all negative effects`;
       break;
     }
+    case 53: { // mirror hide x
+      transferNegativeStatuses(source, target, 1);
+      msg = `transferred all negative effects to ${target.name}`;
+      break;
+    }
+    case 54: { // mirror hide X
+      transferNegativeStatuses(source, target, 1);
+      source.shield += 2;
+      msg = `transferred all negative effects to ${target.name}, gained 2 Shield`;
+      break;
+    }
+    case 55: { // mirror hide y
+      doubleNegativeStatuses(target);
+      msg = `doubled all negative effects on ${target.name}`;
+      break;
+    }
+    case 56: { // mirror hide Y
+      clearNegativeStatuses(source);
+      doubleNegativeStatuses(target);
+      msg = `removed all negative effects from self, doubled all negative effects on ${target.name}`;
+      break;
+    }
+    case 57: { // mirror hide XY
+      transferNegativeStatuses(source, target, 2);
+      source.shield += 5;
+      msg = `transferred doubled negative effects to ${target.name}, gained 5 Shield`;
+      break;
+    }
+    case 58: { // phase shift base
+      source.shield += 4;
+      clearNegativeStatuses(source);
+      msg = `gained 4 Shield, removed all negative effects`;
+      break;
+    }
+    case 59: { // phase shift x
+      source.shield += 5;
+      clearNegativeStatuses(source);
+      msg = `gained 5 Shield, removed all negative effects`;
+      break;
+    }
+    case 60: { // phase shift X
+      source.shield += 6;
+      clearNegativeStatuses(source);
+      msg = `gained 6 Shield, removed all negative effects`;
+      break;
+    }
+    case 61: { // phase shift y
+      source.shield += 4;
+      source.hp = Math.min(source.maxHp, source.hp + 2);
+      clearNegativeStatuses(source);
+      msg = `gained 4 Shield, healed 2 HP, removed all negative effects`;
+      break;
+    }
+    case 62: { // phase shift Y
+      const removed = countNegativeStatuses(source);
+      clearNegativeStatuses(source);
+      const gain = Math.floor(removed / 2);
+      source.shield += gain;
+      source.hp = Math.min(source.maxHp, source.hp + gain);
+      msg = `removed all negative effects, gained ${gain} Shield and healed ${gain} HP`;
+      break;
+    }
+    case 63: { // phase shift XY
+      const removed = countNegativeStatuses(source);
+      clearNegativeStatuses(source);
+      source.shield += removed;
+      source.hp = Math.min(source.maxHp, source.hp + removed);
+      msg = `removed all negative effects, gained ${removed} Shield and healed ${removed} HP`;
+      break;
+    }
+    case 89: { // control x
+      source.hp -= 1;
+      const drawn = drawCardsForZEffect(source, 1);
+      addDiceForZEffect(source, 1);
+      msg = `sacrificed 1 HP, drew ${drawn} card, rolled 1 new die`;
+      break;
+    }
+    case 90: { // control y
+      source.hp -= 2;
+      const drawn = drawCardsForZEffect(source, 2);
+      addDiceForZEffect(source, 1);
+      msg = `sacrificed 2 HP, drew ${drawn} cards, rolled 1 new die`;
+      break;
+    }
+    case 91: { // control X
+      const drawn = drawCardsForZEffect(source, 1);
+      addDiceForZEffect(source, 1);
+      msg = `drew ${drawn} card, rolled 1 new die`;
+      break;
+    }
+    case 92: { // control Y
+      source.hp -= 3;
+      const drawn = drawCardsForZEffect(source, 2);
+      addDiceForZEffect(source, 2);
+      msg = `sacrificed 3 HP, drew ${drawn} cards, rolled 2 new dice`;
+      break;
+    }
+    case 93: { // control XY
+      source.hp -= 1;
+      const drawn = drawCardsForZEffect(source, 3);
+      addDiceForZEffect(source, 2);
+      msg = `sacrificed 1 HP, drew ${drawn} cards, rolled 2 new dice`;
+      break;
+    }
+    case 85: { // bash X: double shield, keep half up, gain 2 shield
+      const originalShield = source.shield;
+      const dealt = applyShieldedDamage(target, originalShield * 2);
+      source.shield = Math.ceil(originalShield / 2) + 2;
+      msg = `dealt ${dealt} damage, kept ${Math.ceil(originalShield / 2)} Shield, gained 2 Shield`;
+      break;
+    }
+    case 86: { // bash y: double shield, keep half up
+      const originalShield = source.shield;
+      const dealt = applyShieldedDamage(target, originalShield * 2);
+      source.shield = Math.ceil(originalShield / 2);
+      msg = `dealt ${dealt} damage, kept ${source.shield} Shield`;
+      break;
+    }
+    case 87: { // bash Y: triple shield, remove all shield
+      const originalShield = source.shield;
+      const dealt = applyShieldedDamage(target, originalShield * 3);
+      source.shield = 0;
+      msg = `dealt ${dealt} damage, removed all Shield`;
+      break;
+    }
+    case 88: { // bash XY: triple shield, keep half down, gain 3 shield
+      const originalShield = source.shield;
+      const dealt = applyShieldedDamage(target, originalShield * 3);
+      source.shield = Math.floor(originalShield / 2) + 3;
+      msg = `dealt ${dealt} damage, kept ${Math.floor(originalShield / 2)} Shield, gained 3 Shield`;
+      break;
+    }
+    case 36: { // ice magic x
+      const heal = Math.min(source.maxHp - source.hp, 3);
+      source.hp += heal;
+      clearNegativeStatuses(source);
+      msg = `healed ${heal} HP, removed all negative effects`;
+      break;
+    }
+    case 37: { // ice magic X
+      const heal = Math.min(source.maxHp - source.hp, 4);
+      source.hp += heal;
+      source.shield += 2;
+      clearNegativeStatuses(source);
+      msg = `healed ${heal} HP, gained 2 Shield, removed all negative effects`;
+      break;
+    }
+    case 38: { // ice magic y
+      const heal = Math.min(source.maxHp - source.hp, 2);
+      source.hp += heal;
+      clearNegativeStatuses(source);
+      msg = `healed ${heal} HP, removed all negative effects`;
+      break;
+    }
+    case 39: { // ice magic Y
+      const heal = Math.min(source.maxHp - source.hp, 3);
+      source.hp += heal;
+      source.shield += 3;
+      clearNegativeStatuses(source);
+      msg = `healed ${heal} HP, gained 3 Shield, removed all negative effects`;
+      break;
+    }
+    case 40: { // ice magic XY
+      const heal = Math.min(source.maxHp - source.hp, 5);
+      source.hp += heal;
+      source.shield += 5;
+      clearNegativeStatuses(source);
+      msg = `healed ${heal} HP, gained 5 Shield, removed all negative effects`;
+      break;
+    }
+    case 47: { // life drain x
+      const dealt = applyShieldedDamage(target, dieVal + 2);
+      const heal = Math.ceil(dealt / 2);
+      source.hp = Math.min(source.maxHp, source.hp + heal);
+      msg = `dealt ${dealt} damage, healed ${heal} HP`;
+      break;
+    }
+    case 48: { // life drain X
+      const dealt = applyShieldedDamage(target, dieVal + 4);
+      const heal = Math.ceil(dealt / 2);
+      source.hp = Math.min(source.maxHp, source.hp + heal);
+      msg = `dealt ${dealt} damage, healed ${heal} HP`;
+      break;
+    }
+    case 49: { // life drain y
+      const dealt = applyShieldedDamage(target, dieVal + 1);
+      const heal = Math.ceil(dealt / 2);
+      source.hp = Math.min(source.maxHp, source.hp + heal);
+      msg = `dealt ${dealt} damage, healed ${heal} HP`;
+      break;
+    }
+    case 50: { // life drain Y
+      const dealt = applyShieldedDamage(target, dieVal + 2);
+      const heal = Math.ceil(dealt / 2);
+      source.hp = Math.min(source.maxHp, source.hp + heal);
+      msg = `dealt ${dealt} damage, healed ${heal} HP`;
+      break;
+    }
+    case 51: { // life drain XY
+      const dealt = applyShieldedDamage(target, dieVal + 4);
+      source.hp = Math.min(source.maxHp, source.hp + dealt);
+      msg = `dealt ${dealt} damage, healed ${dealt} HP`;
+      break;
+    }
     default:
       msg = `special effect (Z${z})`;
   }
@@ -2983,12 +3315,19 @@ function resolveCardUse(source, target, card, dieVal) {
   const info = parseCardId(card.id);
   if (!info) return {ok:false, msg:"Invalid card ID."};
   const reusable = isReusable(info.limit);
+  const isOPC = isOncePerCombat(info.limit);
+  const unlimitedReusable = reusable && !isOPC;
 
   if (!checkDieReq(info.dieReq, dieVal)) return {ok:false, msg:`Requires ${descDieReq(info.dieReq)}, but die shows ${dieVal}.`};
 
   const cardKey = card.name + '::' + card.id;
-  const isOPC = isOncePerCombat(info.limit);
   if (isOPC && source.oncePerCombat.has(cardKey)) return {ok:false, msg:`${card.name} can only be used once per combat.`};
+  if (unlimitedReusable) {
+    const reusableCheck = canUseReusableThisTurn(source, card);
+    if (!reusableCheck.ok) {
+      return {ok:false, msg:`${card.name} reached its ${reusableCheck.cap}/turn limit.`};
+    }
+  }
 
   const limitVal = getLimitValue(info.limit);
   let effectTriggersNow = true;
@@ -3012,7 +3351,12 @@ function resolveCardUse(source, target, card, dieVal) {
     source.burn = Math.max(0, source.burn - 1);
   }
 
-  if (!effectTriggersNow) return {ok:true, msg:chargeMsg, keepInHand:true};
+  const effectiveReusableDie = unlimitedReusable ? Math.max(1, dieVal - REUSABLE_BALANCE_CONFIG.diePenalty) : dieVal;
+
+  if (!effectTriggersNow) {
+    if (unlimitedReusable) registerReusableUse(source, card);
+    return {ok:true, msg:chargeMsg, keepInHand:true};
+  }
 
   // Check trigger
   const trigMet = checkTrigger(info.trigger, dieVal);
@@ -3020,18 +3364,20 @@ function resolveCardUse(source, target, card, dieVal) {
   // Z-special effects
   if (info.status.startsWith('Z')) {
     const zCode = info.status.slice(1);
-    // For legendary enemy, scale dieVal upward for Z damage calcs
-    const effectiveDie = (ADV.legendary && source === CB.enemy) ? Math.ceil(dieVal * 1.5) : dieVal;
+    // Scale enemy special effects with encounter power.
+    const enemyPowerMult = (source === CB.enemy) ? (CB.enemy.powerMultiplier || 1) : 1;
+    const effectiveDie = (source === CB.enemy) ? Math.ceil(effectiveReusableDie * enemyPowerMult) : effectiveReusableDie;
     const zMsg = resolveZEffect(zCode, source, target, effectiveDie);
+    if (unlimitedReusable) registerReusableUse(source, card);
     return {ok:true, msg:`${source.name} uses ${card.name} with a ${dieVal}: ${zMsg}.`, keepInHand: reusable};
   }
 
   // Normal damage
-  const dmgAmt = evalDamage(info.damage, dieVal);
+  const dmgAmt = evalDamage(info.damage, effectiveReusableDie);
   let hpDmg = 0;
   if (dmgAmt > 0) {
-    const legendary_mult = (ADV.legendary && source === CB.enemy) ? 1.5 : 1;
-    hpDmg = applyShieldedDamage(target, Math.ceil(dmgAmt * legendary_mult));
+    const enemyPowerMult = (source === CB.enemy) ? (CB.enemy.powerMultiplier || 1) : 1;
+    hpDmg = applyShieldedDamage(target, Math.ceil(dmgAmt * enemyPowerMult));
   }
 
   // Status pairs
@@ -3042,7 +3388,18 @@ function resolveCardUse(source, target, card, dieVal) {
       const code = sb[i];
       const tok = sb[i+1];
       if (code === '0') continue;
-      let amt = amountFromToken(tok, dieVal);
+      if (code === '1' && tok === 'Z') {
+        const poisonDamage = target.poison || 0;
+        if (poisonDamage > 0) {
+          target.hp -= poisonDamage;
+          target.poison = Math.max(0, target.poison - 1);
+          statusMsgs.push(`triggered Poison for ${poisonDamage} damage`);
+        } else {
+          statusMsgs.push(`triggered Poison (no stacks)`);
+        }
+        continue;
+      }
+      let amt = amountFromToken(tok, effectiveReusableDie);
       if (amt <= 0) continue;
 
       // Warlock bonus: applies to all status effects and shield
@@ -3073,6 +3430,7 @@ function resolveCardUse(source, target, card, dieVal) {
   msg += '.';
 
   // Reusable cards remain in hand so they can consume multiple dice in one turn.
+  if (unlimitedReusable) registerReusableUse(source, card);
   return {ok:true, msg, keepInHand: reusable};
 }
 
@@ -3103,6 +3461,7 @@ function makeCombatant(name, maxHp, deckCards, handLimit, diceLimit, classId=nul
     handLimit, diceLimit,
     limitProgress:{}, oncePerCombat: new Set(),
     reusablesUsedThisTurn: new Set(),
+    reusableUseCounts: {},
     classId, level,
     classState: {
       fencerUses:0, druidUsed:false,
@@ -3216,17 +3575,25 @@ function applyDruidBloom(c) {
 // ============================================================
 let CB = {}; // combat state
 
-function spawnEnemy(biome, tier, legendary=false) {
+function spawnEnemy(biome, tier, legendary=false, powerMultiplier=1, encounterLevel=1) {
   const pool = ENEMY_DATA.filter(e => e.biome===biome && e.tier===tier);
   if (!pool.length) return null;
   const base = randItem(pool);
   const cards = base.cards.map(n => CARD_BY_NAME[n] || {name:n, desc:'?', id:'01-0-000-01-E0-00-000000', rarity:1});
   let hp = base.hp;
-  if (legendary) hp = Math.ceil(hp*1.5);
-  return makeCombatant(
+  hp = Math.ceil(hp * Math.max(1, powerMultiplier || 1));
+  const enemy = makeCombatant(
     legendary ? `⚡ LEGENDARY ${base.name}` : base.name,
     hp, cards, 3, base.dice
   );
+  enemy.baseName = base.name;
+  enemy.cardNames = [...base.cards];
+  enemy.biome = base.biome;
+  enemy.tier = base.tier;
+  enemy.legendary = legendary;
+  enemy.powerMultiplier = Math.max(1, powerMultiplier || 1);
+  enemy.encounterLevel = Math.max(1, encounterLevel || 1);
+  return enemy;
 }
 
 function resetCombatState(c) {
@@ -3366,8 +3733,8 @@ function buildCardHTML(card, selected=false, unplayable=false, showPrice=false, 
     const lv = getLimitValue(info.limit);
     const reusable = isReusable(info.limit);
     const opc = isOncePerCombat(info.limit);
-    if (reusable) limitText = `<div class="card-reusable-badge">↩ Reusable</div>`;
-    else if (opc) limitText = `<div class="card-reusable-badge" style="color:var(--legendary)">Once/Battle</div>`;
+    if (opc) limitText = `<div class="card-reusable-badge" style="color:var(--legendary)">Once/Battle</div>`;
+    else if (reusable) limitText = `<div class="card-reusable-badge">↩ ${getReusableBadgeText(card)}</div>`;
     else if (lv > 0) limitText = `<div class="card-limit-text">Limit: ${lv}</div>`;
   }
   const sel = selected ? 'selected' : '';
@@ -3474,6 +3841,7 @@ function startGame() {
     currentTier: 1,
     selectedClass: G.selectedClass,
     selectedDifficulty: G.selectedDifficulty || 'normal',
+    bestiary: {},
   };
 
   // Starting deck
@@ -3485,6 +3853,299 @@ function startGame() {
   });
 
   showIntroStory();
+}
+
+const BESTIARY_STATUS_ORDER = ['Poison','Burn','Lock','Freeze','Bleed','Blind','Shield','Heal','Sacrifice'];
+const BESTIARY_STATUS_CLASS = {
+  Poison: 'status-poison',
+  Burn: 'status-burn',
+  Lock: 'status-lock',
+  Freeze: 'status-freeze',
+  Bleed: 'status-bleed',
+  Blind: 'status-blind',
+  Shield: 'status-shield',
+  Heal: 'status-shield',
+  Sacrifice: 'status-bleed'
+};
+
+function ensureBestiaryState() {
+  if (!G || typeof G !== 'object') return;
+  if (!G.bestiary || typeof G.bestiary !== 'object' || Array.isArray(G.bestiary)) {
+    G.bestiary = {};
+  }
+}
+
+function inferStatusEffectsFromDescription(desc) {
+  const text = String(desc || '').toLowerCase();
+  const found = new Set();
+  if (text.includes('poison')) found.add('Poison');
+  if (text.includes('burn')) found.add('Burn');
+  if (text.includes('lock')) found.add('Lock');
+  if (text.includes('freeze') || text.includes('frozen')) found.add('Freeze');
+  if (text.includes('bleed')) found.add('Bleed');
+  if (text.includes('blind')) found.add('Blind');
+  if (text.includes('shield')) found.add('Shield');
+  if (text.includes('heal')) found.add('Heal');
+  if (text.includes('sacrifice')) found.add('Sacrifice');
+  return found;
+}
+
+function inferStatusEffectsFromCardName(cardName) {
+  const card = CARD_BY_NAME[cardName];
+  if (!card) return [];
+
+  const effects = inferStatusEffectsFromDescription(card.desc);
+  const info = parseCardId(card.id);
+  if (!info) return Array.from(effects);
+
+  if (!info.status.startsWith('Z')) {
+    for (let i = 0; i < 6; i += 2) {
+      const code = info.status[i];
+      const tok = info.status[i + 1];
+      if (code === '0') continue;
+      if (code === '1') effects.add('Poison');
+      else if (code === '2') effects.add('Burn');
+      else if (code === '3') effects.add('Lock');
+      else if (code === '4') effects.add('Freeze');
+      else if (code === '5') effects.add('Bleed');
+      else if (code === '6') effects.add('Blind');
+      else if (code === '7') effects.add('Shield');
+      else if (code === '8') effects.add('Heal');
+      else if (code === '9') effects.add('Sacrifice');
+      if (code === '1' && tok === 'Z') effects.add('Poison');
+    }
+  }
+
+  return Array.from(effects);
+}
+
+function sortBestiaryStatusEffects(statuses) {
+  return [...new Set(statuses || [])].sort((a, b) => {
+    const ai = BESTIARY_STATUS_ORDER.indexOf(a);
+    const bi = BESTIARY_STATUS_ORDER.indexOf(b);
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+}
+
+function registerEnemyEncounter(enemy) {
+  ensureBestiaryState();
+  if (!enemy) return;
+
+  const name = enemy.baseName || String(enemy.name || '').replace(/^⚡\s*LEGENDARY\s*/i, '').trim();
+  if (!name) return;
+
+  const cardNames = Array.isArray(enemy.cardNames) ? enemy.cardNames : (enemy.deck || []).map(c => c?.name).filter(Boolean);
+  const statusEffects = new Set();
+  cardNames.forEach(cardName => inferStatusEffectsFromCardName(cardName).forEach(s => statusEffects.add(s)));
+
+  const prev = G.bestiary[name] || {
+    name,
+    encounters: 0,
+    wins: 0,
+    cards: [],
+    statusEffects: [],
+    biome: enemy.biome || G.currentBiome || 1,
+    tier: enemy.tier || G.currentTier || 1,
+    legendarySeen: false,
+  };
+
+  const mergedCards = [...new Set([...(prev.cards || []), ...cardNames])];
+  const mergedStatuses = sortBestiaryStatusEffects([...(prev.statusEffects || []), ...Array.from(statusEffects)]);
+
+  G.bestiary[name] = {
+    ...prev,
+    name,
+    encounters: (prev.encounters || 0) + 1,
+    cards: mergedCards,
+    statusEffects: mergedStatuses,
+    biome: prev.biome || enemy.biome || G.currentBiome || 1,
+    tier: prev.tier || enemy.tier || G.currentTier || 1,
+    legendarySeen: Boolean(prev.legendarySeen || enemy.legendary),
+    lastSeen: Date.now(),
+  };
+}
+
+function registerEnemyVictory(enemy) {
+  ensureBestiaryState();
+  if (!enemy) return;
+  const name = enemy.baseName || String(enemy.name || '').replace(/^⚡\s*LEGENDARY\s*/i, '').trim();
+  if (!name) return;
+  if (!G.bestiary[name]) registerEnemyEncounter(enemy);
+  G.bestiary[name].wins = (G.bestiary[name].wins || 0) + 1;
+}
+
+let BESTIARY_FILTERS = {
+  biome: 'all',
+  status: 'all',
+  cardText: ''
+};
+
+function getSortedBestiaryEntries() {
+  const entries = Object.values(G.bestiary || {});
+  entries.sort((a, b) => {
+    if ((a.biome || 0) !== (b.biome || 0)) return (a.biome || 0) - (b.biome || 0);
+    if ((a.tier || 0) !== (b.tier || 0)) return (a.tier || 0) - (b.tier || 0);
+    return String(a.name || '').localeCompare(String(b.name || ''));
+  });
+  return entries;
+}
+
+function getBestiaryFilterOptions(entries) {
+  const biomeSet = new Set();
+  const statusSet = new Set();
+  entries.forEach((entry) => {
+    if (entry.biome) biomeSet.add(entry.biome);
+    (entry.statusEffects || []).forEach((status) => statusSet.add(status));
+  });
+
+  const biomes = Array.from(biomeSet).sort((a, b) => a - b);
+  const statuses = sortBestiaryStatusEffects(Array.from(statusSet));
+  return { biomes, statuses };
+}
+
+function filterBestiaryEntries(entries) {
+  const biomeFilter = BESTIARY_FILTERS.biome;
+  const statusFilter = BESTIARY_FILTERS.status;
+  const cardText = String(BESTIARY_FILTERS.cardText || '').trim().toLowerCase();
+
+  return entries.filter((entry) => {
+    if (biomeFilter !== 'all' && String(entry.biome || '') !== biomeFilter) return false;
+    if (statusFilter !== 'all' && !(entry.statusEffects || []).includes(statusFilter)) return false;
+    if (cardText) {
+      const cards = (entry.cards || []).map((card) => String(card).toLowerCase());
+      if (!cards.some((card) => card.includes(cardText))) return false;
+    }
+    return true;
+  });
+}
+
+function renderBestiaryEntries(entries) {
+  const cardsHtml = (cards) => (cards || []).map(cardName => {
+    const card = CARD_BY_NAME[cardName];
+    const rarityColor = card ? (RARITY_COLORS[card.rarity || 1] || 'var(--common)') : 'var(--common)';
+    return `<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border:1px solid var(--card-border);border-radius:4px;font-size:11px;line-height:1.2;background:rgba(30,26,20,0.7);">
+      <span style="width:8px;height:8px;border-radius:50%;background:${rarityColor};display:inline-block;"></span>${translateVisibleText(cardName)}
+    </span>`;
+  }).join(' ');
+
+  const statusHtml = (statuses) => {
+    if (!(statuses || []).length) return `<span class="status-badge status-shield">None</span>`;
+    return statuses.map(status => {
+      const cls = BESTIARY_STATUS_CLASS[status] || 'status-shield';
+      return `<span class="status-badge ${cls}">${translateVisibleText(status)}</span>`;
+    }).join(' ');
+  };
+
+  if (!entries.length) {
+    return `<div class="panel"><p class="info-text">No enemies match those filters.</p></div>`;
+  }
+
+  return entries.map(entry => {
+    const biomeName = getBiomeNameLocalized(entry.biome || 1);
+    const legBadge = entry.legendarySeen ? `<span class="legendary-badge" style="margin-left:8px;">Legendary Seen</span>` : '';
+    return `<div class="panel" style="margin-bottom:12px;">
+      <div class="flex-row" style="justify-content:space-between;align-items:flex-start;">
+        <div>
+          <div class="panel-title" style="font-size:20px;margin-bottom:6px;">${translateVisibleText(entry.name)} ${legBadge}</div>
+          <div class="player-meta">${translateVisibleText(biomeName)} T${entry.tier || 1} · Encounters: ${entry.encounters || 0} · Wins: ${entry.wins || 0}</div>
+        </div>
+      </div>
+      <div class="section-label" style="margin-top:12px;">Known Cards</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;">${cardsHtml(entry.cards)}</div>
+      <div class="section-label" style="margin-top:12px;">Known Status Effects</div>
+      <div class="status-row">${statusHtml(entry.statusEffects)}</div>
+    </div>`;
+  }).join('');
+}
+
+function updateBestiaryFilterState() {
+  const biomeSelect = document.getElementById('bestiary-filter-biome');
+  const statusSelect = document.getElementById('bestiary-filter-status');
+  const cardInput = document.getElementById('bestiary-filter-card');
+  if (biomeSelect) BESTIARY_FILTERS.biome = biomeSelect.value;
+  if (statusSelect) BESTIARY_FILTERS.status = statusSelect.value;
+  if (cardInput) BESTIARY_FILTERS.cardText = cardInput.value || '';
+}
+
+function updateBestiaryResults() {
+  updateBestiaryFilterState();
+  const entries = getSortedBestiaryEntries();
+  const filtered = filterBestiaryEntries(entries);
+  const resultsEl = document.getElementById('bestiary-results');
+  const countEl = document.getElementById('bestiary-filter-count');
+  if (resultsEl) resultsEl.innerHTML = renderBestiaryEntries(filtered);
+  if (countEl) countEl.textContent = `${filtered.length}/${entries.length} entries`;
+}
+
+function clearBestiaryFilters() {
+  BESTIARY_FILTERS.biome = 'all';
+  BESTIARY_FILTERS.status = 'all';
+  BESTIARY_FILTERS.cardText = '';
+
+  const biomeSelect = document.getElementById('bestiary-filter-biome');
+  const statusSelect = document.getElementById('bestiary-filter-status');
+  const cardInput = document.getElementById('bestiary-filter-card');
+  if (biomeSelect) biomeSelect.value = 'all';
+  if (statusSelect) statusSelect.value = 'all';
+  if (cardInput) cardInput.value = '';
+
+  updateBestiaryResults();
+}
+
+function openBestiary() {
+  ensureBestiaryState();
+  const entries = getSortedBestiaryEntries();
+  if (!entries.length) {
+    openModal(`<h2>Bestiary</h2>
+      <p class="info-text">No entries yet. Venture out and face enemies to record them here.</p>
+      <div class="mt-16"><button class="btn" onclick="closeModal()">Close</button></div>`);
+    return;
+  }
+
+  const options = getBestiaryFilterOptions(entries);
+  const biomeOptionsHtml = [`<option value="all">All Biomes</option>`]
+    .concat(options.biomes.map((biome) => {
+      const selected = BESTIARY_FILTERS.biome === String(biome) ? ' selected' : '';
+      return `<option value="${biome}"${selected}>${translateVisibleText(getBiomeNameLocalized(biome))}</option>`;
+    }))
+    .join('');
+
+  const statusOptionsHtml = [`<option value="all">All Status Effects</option>`]
+    .concat(options.statuses.map((status) => {
+      const selected = BESTIARY_FILTERS.status === status ? ' selected' : '';
+      return `<option value="${status}"${selected}>${translateVisibleText(status)}</option>`;
+    }))
+    .join('');
+
+  const filtered = filterBestiaryEntries(entries);
+
+  openModal(`<h2>Bestiary</h2>
+    <p class="info-text">Enemies you have faced, the cards you've seen them use, and status effects they can produce.</p>
+    <div class="panel" style="margin-top:12px;margin-bottom:12px;">
+      <div class="flex-row" style="align-items:flex-end;gap:10px;">
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:150px;">
+          <label class="form-label" style="margin-bottom:0;">Biome</label>
+          <select id="bestiary-filter-biome" onchange="updateBestiaryResults()" style="background:#1d140b;color:var(--parchment);border:1px solid var(--card-border);border-radius:6px;padding:6px;">${biomeOptionsHtml}</select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;min-width:180px;">
+          <label class="form-label" style="margin-bottom:0;">Status</label>
+          <select id="bestiary-filter-status" onchange="updateBestiaryResults()" style="background:#1d140b;color:var(--parchment);border:1px solid var(--card-border);border-radius:6px;padding:6px;">${statusOptionsHtml}</select>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;flex:1;min-width:190px;">
+          <label class="form-label" style="margin-bottom:0;">Card Name</label>
+          <input id="bestiary-filter-card" type="text" value="${String(BESTIARY_FILTERS.cardText || '').replace(/"/g, '&quot;')}" oninput="updateBestiaryResults()" placeholder="Search known enemy cards..." style="background:#1d140b;color:var(--parchment);border:1px solid var(--card-border);border-radius:6px;padding:6px 8px;font-family:'Crimson Pro',serif;font-size:14px;">
+        </div>
+      </div>
+      <div class="player-meta" id="bestiary-filter-count" style="margin-top:10px;">${filtered.length}/${entries.length} entries</div>
+      <div style="margin-top:10px;display:flex;justify-content:flex-end;">
+        <button class="btn" onclick="clearBestiaryFilters()">Clear Filters</button>
+      </div>
+    </div>
+    <div id="bestiary-results" style="margin-top:12px;">${renderBestiaryEntries(filtered)}</div>
+    <div class="mt-16"><button class="btn" onclick="closeModal()">Close</button></div>`);
 }
 
 function showIntroStory() {
@@ -3847,6 +4508,31 @@ let PROLOGUE = {
   phase: null,
 };
 
+function getBossBoostByIndex(bossIndex) {
+  // Boss 10 starts at +50% boost, then each boss doubles the previous boss boost.
+  const idx = Math.max(1, Number(bossIndex) || 1);
+  return 0.5 * Math.pow(2, idx - 1);
+}
+
+function getEncounterPowerMultiplier(encounterLevel) {
+  const level = Math.max(1, Number(encounterLevel) || 1);
+  const isBoss = level % 10 === 0;
+  const completedBosses = Math.floor(level / 10);
+
+  if (isBoss) {
+    return 1 + getBossBoostByIndex(completedBosses);
+  }
+
+  // Non-boss enemies use half the boost of the previous boss.
+  if (completedBosses <= 0) return 1;
+  return 1 + getBossBoostByIndex(completedBosses) * 0.5;
+}
+
+function isLegendaryEncounter(encounterLevel) {
+  const level = Math.max(1, Number(encounterLevel) || 1);
+  return level % 10 === 0;
+}
+
 function goAdventure() {
   try {
     if (!G.deck.length) {
@@ -3933,10 +4619,16 @@ function startAdventure(biome, tier) {
   startNextCombat();
 }
 
-function startNextCombat(legendary=false) {
+function startNextCombat(legendaryOverride = null) {
   normalizeOwnedCards();
+  const encounterLevel = ADV.winStreak + 1;
+  const legendary = (typeof legendaryOverride === 'boolean') ? legendaryOverride : isLegendaryEncounter(encounterLevel);
+  const powerMultiplier = getEncounterPowerMultiplier(encounterLevel);
+
   ADV.legendary = legendary;
-  const enemy = spawnEnemy(ADV.biome, ADV.tier, legendary);
+  ADV.encounterLevel = encounterLevel;
+
+  const enemy = spawnEnemy(ADV.biome, ADV.tier, legendary, powerMultiplier, encounterLevel);
   if (!enemy) {
     log('No enemies found for this area.', 'system');
     endAdventure('retreat');
@@ -3970,6 +4662,8 @@ function startNextCombat(legendary=false) {
     selectedDie: -1,
     rogueLuckyPending: G.classId==='rogue',
   };
+
+  registerEnemyEncounter(enemy);
 
   if (legendary) {
     log(`⚡ LEGENDARY ${enemy.name} appears!`, 'victory');
@@ -4042,6 +4736,7 @@ function startPlayerTurn() {
   CB.phase = 'player';
   CB.selectedCard = -1;
   CB.selectedDie = -1;
+  CB.player.reusableUseCounts = {};
 
   // Start of turn effects
   const msgs = triggerStartOfTurn(CB.player);
@@ -4120,6 +4815,7 @@ function startEnemyTurn() {
   CB.phase = 'enemy';
   setPhaseBanner("Enemy's Turn", 'enemy');
   updatePlayerControls();
+  CB.enemy.reusableUseCounts = {};
 
   // Delay for drama
   setTimeout(() => {
@@ -4298,6 +4994,7 @@ function endCombat(result) {
   }
 
   if (result === 'victory') {
+    registerEnemyVictory(CB.enemy);
     log(`${CB.enemy.name} is defeated!`, 'victory');
     ADV.winStreak++;
 
@@ -4321,16 +5018,14 @@ function endCombat(result) {
       }
     }
 
-    // If legendary boss defeated, immediately return to town
     if (ADV.legendary) {
       log('=== LEGENDARY BOSS DEFEATED ===', 'victory');
-      finishAdventure('victory');
-      return;
     }
 
     // Card drop (10%)
     if (Math.random() < 0.10) {
-      const dropped = randItem(CB.enemy.hand.length>0 ? CB.enemy.hand : CB.enemy.deck);
+      const dropSource = CB.enemy.hand.length>0 ? CB.enemy.hand : CB.enemy.deck;
+      const dropped = pickWeightedCardByRarity(dropSource);
       if (dropped) {
         log(`Loot drop! ${CB.enemy.name} dropped ${dropped.name}!`, 'loot');
         openModal(`<h2>Card Drop!</h2>
@@ -4393,13 +5088,16 @@ function addDropToInventory(cardName, addToDeck) {
 
 function afterVictoryChoice() {
   // Legendary boss?
-  if (ADV.winStreak === 10) {
+  if ((ADV.winStreak + 1) % 10 === 0) {
+    const nextBossLevel = ADV.winStreak + 1;
+    const nextBossMult = getEncounterPowerMultiplier(nextBossLevel);
     log('=== LEGENDARY BOSS ENCOUNTER ===', 'victory');
     openModal(`<h2>Legendary Encounter!</h2>
-      <p class="info-text">You've won 10 battles in a row! A Legendary enemy awaits...</p>
+      <p class="info-text">You're heading into Encounter ${nextBossLevel}. A Legendary enemy awaits...</p>
       <p class="info-text">Current HP: <span class="stat-hp">${ADV.playerHp}/${G.maxHp}</span></p>
+      <p class="info-text">Boss power: <span class="gold-text">x${nextBossMult.toFixed(2)}</span></p>
       <div class="flex-row mt-16">
-        <button class="btn primary" onclick="closeModal();startNextCombat(true)">Face the Legend</button>
+        <button class="btn primary" onclick="closeModal();startNextCombat()">Face the Legend</button>
         <button class="btn" onclick="closeModal();finishAdventure('retreat')">Retreat to Town</button>
       </div>`, true);
     return;
@@ -4413,7 +5111,7 @@ function afterVictoryChoice() {
     <p class="info-text">Current HP: <span class="stat-hp">${ADV.playerHp}/${G.maxHp}</span></p>
     <p class="info-text">Next battle multiplier: <span class="gold-text">x${nextMult.toFixed(2)}</span></p>
     <div class="flex-row mt-16">
-      <button class="btn primary" onclick="closeModal();startNextCombat(false)">Keep Fighting</button>
+      <button class="btn primary" onclick="closeModal();startNextCombat()">Keep Fighting</button>
       <button class="btn" onclick="closeModal();finishAdventure('retreat')">Retreat to Town</button>
     </div>`, true);
 }
@@ -4569,6 +5267,9 @@ function updateCombatUI() {
 
   // Round
   document.getElementById('round-number').textContent = CB.round;
+  const encounterLevel = Math.max(1, Number((ADV && ADV.encounterLevel) || (ADV && ADV.winStreak ? ADV.winStreak + 1 : 1)) || 1);
+  const encounterBadge = `<div class="win-streak-badge">Encounter: ${encounterLevel}</div>`;
+  document.getElementById('encounter-level-display').innerHTML = encounterBadge;
   document.getElementById('win-streak-display').innerHTML = ADV.winStreak>0 ? `<div class="win-streak-badge">Win Streak: ${ADV.winStreak}</div>` : '';
 
   // Dice
@@ -4784,8 +5485,8 @@ function renderHand() {
         limitExtra = `<div class="card-limit-bar"><div class="card-limit-fill" style="width:${pct}%"></div></div>
           <div class="card-limit-text">${prog}/${lv}</div>`;
       }
-      if (isReusable(info.limit)) limitExtra += `<div class="card-reusable-badge">↩ Reusable</div>`;
       if (isOncePerCombat(info.limit)) limitExtra += `<div class="card-reusable-badge" style="color:var(--legendary)">Once/Battle</div>`;
+      else if (isReusable(info.limit)) limitExtra += `<div class="card-reusable-badge">↩ ${getReusableBadgeText(card)}</div>`;
     }
     const reqStr = info ? `<div style="font-family:'Courier Prime',monospace;font-size:9px;color:var(--teal-light);margin-top:3px;">Req: ${descDieReq(info.dieReq)}</div>` : '';
     const color = RARITY_COLORS[card.rarity||1];
@@ -5117,10 +5818,19 @@ function renderInventoryModal() {
     const owned = invCounts[name];
     const inDeck = deckCounts[name]||0;
     const color = RARITY_COLORS[card.rarity||1];
+    const info = parseCardId(card.id);
+    let usage = getReusableBadgeText(card) || 'Single-use';
+    let usageColor = 'var(--bone-dim)';
+    if (info && isOncePerCombat(info.limit)) {
+      usageColor = 'var(--legendary)';
+    } else if (info && isReusable(info.limit)) {
+      usageColor = 'var(--gold)';
+    }
     invHTML += `<div class="card" style="cursor:default;position:relative;">
       <div class="card-rarity-bar" style="background:${color}"></div>
       <div class="card-name">${translateVisibleText(card.name)}</div>
       <div class="card-desc">${translateVisibleText(card.desc)}</div>
+      <div style="font-family:'Courier Prime',monospace;font-size:9px;color:${usageColor};margin-top:4px;letter-spacing:0.5px;">${usage}</div>
       <div style="position:absolute;top:6px;right:6px;background:var(--blood);color:white;font-family:'Courier Prime',monospace;font-size:10px;padding:1px 5px;">x${owned}</div>
       <div style="color:var(--teal-light);font-family:'Courier Prime',monospace;font-size:9px;margin-top:4px;">In deck: ${inDeck}</div>
     </div>`;
@@ -5296,13 +6006,13 @@ function generateShopOffers(numOffers = SHOP_CONFIG.numOffers) {
 }
 
 function getRarityForShop() {
-  const roll = Math.random();
-  if (roll < 0.50) return 1;
-  else if (roll < 0.75) return 2;
-  else if (roll < 0.90) return 3;
-  else if (roll < 0.95) return 4;
-  else if (roll < 0.98) return 5;
-  else return 6;
+  let roll = Math.random();
+  const rarities = [1, 2, 3, 4, 5, 6];
+  for (const rarity of rarities) {
+    roll -= (RARITY_DROP_WEIGHTS[rarity] || 0);
+    if (roll < 0) return rarity;
+  }
+  return 1;
 }
 
 function generateShopPrice(rarity) {
@@ -6002,7 +6712,10 @@ function deserializeGameState(saveData) {
     ...saveData.G,
     unlockedBiomes: new Set(saveData.G.unlockedBiomes || []),
     cardChargeProgress: saveData.G.cardChargeProgress || {},
+    bestiary: saveData.G.bestiary || {},
   };
+
+  ensureBestiaryState();
 
   const loadedLang = SUPPORTED_LANGUAGES.includes(saveData.G?.language) ? saveData.G.language : currentLanguage;
   setLanguage(loadedLang, false);
