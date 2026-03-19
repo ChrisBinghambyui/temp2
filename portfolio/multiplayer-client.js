@@ -47,6 +47,11 @@ class MultiplayerManager {
     this.socket.on('playerLeft', (data) => this.emit('playerLeft', data));
     this.socket.on('playerDisconnected', (data) => this.emit('playerDisconnected', data));
     this.socket.on('combatAction', (data) => this.emit('combatAction', data));
+    
+    // Deck builder events
+    this.socket.on('deckBuilderStarted', (data) => this.emit('deckBuilderStarted', data));
+    this.socket.on('opponentDeckReady', (data) => this.emit('opponentDeckReady', data));
+    this.socket.on('bothPlayersDecksReady', (data) => this.emit('bothPlayersDecksReady', data));
   }
 
   // ==================== ROOM MANAGEMENT ====================
@@ -115,6 +120,32 @@ class MultiplayerManager {
     });
   }
 
+  // ==================== DECK BUILDER ====================
+
+  enterDeckBuilder(callback) {
+    if (!this.isConnected || !this.currentRoom) {
+      callback({ success: false, error: 'Not in a room' });
+      return;
+    }
+
+    this.socket.emit('enterDeckBuilder', (response) => {
+      callback(response);
+    });
+  }
+
+  submitDeck(deckCards, callback) {
+    if (!this.isConnected || !this.currentRoom) {
+      callback({ success: false, error: 'Not in a room' });
+      return;
+    }
+
+    this.socket.emit('submitDeck', deckCards, (response) => {
+      callback(response);
+    });
+  }
+
+  // ==================== GAME ACTIONS ====================
+
   rollDice(diceCount, callback) {
     if (!this.isConnected || !this.currentRoom) {
       callback({ success: false, error: 'Not in a room' });
@@ -125,7 +156,6 @@ class MultiplayerManager {
       callback(response);
     });
   }
-
   playCard(cardIndex, targetPlayerId, callback) {
     if (!this.isConnected || !this.currentRoom) {
       callback({ success: false, error: 'Not in a room' });

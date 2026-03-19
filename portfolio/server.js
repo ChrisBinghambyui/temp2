@@ -132,6 +132,76 @@ io.on('connection', (socket) => {
     callback({ success: true });
   });
 
+  // Enter deck building phase
+  socket.on('enterDeckBuilder', (callback) => {
+    const player = players.get(socket.id);
+    if (!player) return;
+    
+    const room = getRoom(player.roomCode);
+    if (!room) return;
+    
+    if (!room.deckSubmissions) {
+      room.deckSubmissions = {};
+    }
+    
+    room.status = 'deckBuilding';
+    
+    io.to(player.roomCode).emit('deckBuilderStarted', {
+      status: 'deckBuilding'
+    });
+    
+    callback({ success: true });
+  });
+
+  // Submit deck for the match
+  socket.on('submitDeck', (deckCards, callback) => {
+    const player = players.get(socket.id);
+    if (!player) return;
+    
+    const room = getRoom(player.roomCode);
+    if (!room) return;
+    
+    if (!room.deckSubmissions) {
+      room.deckSubmissions = {};
+    }
+    
+    // Store the deck for this player
+    room.deckSubmissions[socket.id] = {
+      deck: Array.isArray(deckCards) ? deckCards : [],
+      ready: true
+    };
+    
+    // Notify opponent that this player is ready
+    io.to(player.roomCode).emit('opponentDeckReady', {
+      playerName: player.name
+    });
+    
+    // Check if both players have submitted decks
+    const submittedCount = Object.keys(room.deckSubmissions).filter(id => room.deckSubmissions[id]?.ready).length;
+    
+    if (submittedCount === 2 && room.players.length === 2) {
+      // Both players are ready to start the game
+      const response = {
+        success: true,
+        bothReady: true,
+        gameState: {
+          players: room.players,
+          decks: room.deckSubmissions,
+          status: 'ready_to_start'
+        }
+      };
+      
+      io.to(player.roomCode).emit('bothPlayersDecksReady', response);
+      callback(response);
+    } else {
+      callback({
+        success: true,
+        bothReady: false,
+        message: 'Deck submitted. Waiting for opponent.'
+      });
+    }
+  });
+
   // Start the game
   socket.on('startGame', (gameData, callback) => {
     const player = players.get(socket.id);
@@ -142,17 +212,23 @@ io.on('connection', (socket) => {
     
     room.status = 'inProgress';
     room.gameState = {
-      players: room.players.map(p => ({
-        socketId: p.socketId,
-        name: p.name,
-        character: p.character,
-        hp: gameData.hpByClass[p.character] || 20,
-        maxHp: gameData.hpByClass[p.character] || 20,
-        dicePool: [],
-        hand: [],
-        shield: 0,
-        statuses: []
-      })),
+      players: room.players.map(p => {
+        // Get the submitted deck for this player, or use empty array as fallback
+        const submittedDeck = room.deckSubmissions?.[p.socketId]?.deck || [];
+        
+        return {
+          socketId: p.socketId,
+          name: p.name,
+          character: p.character,
+          hp: gameData.hpByClass[p.character] || 20,
+          maxHp: gameData.hpByClass[p.character] || 20,
+          deck: submittedDeck,
+          dicePool: [],
+          hand: [],
+          shield: 0,
+          statuses: []
+        };
+      }),
       turn: 0,
       round: 1,
       activePlayerIndex: 0

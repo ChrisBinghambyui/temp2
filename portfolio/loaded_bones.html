@@ -896,6 +896,145 @@ input[type="text"]:focus { border-color: var(--gold); }
   font-family: 'Courier Prime', monospace;
 }
 
+/* =================== DECK BUILDER =================== */
+.deck-builder-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 16px;
+}
+.deck-builder-section {
+  display: flex;
+  flex-direction: column;
+}
+.deck-builder-label {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--parchment);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.deck-builder-inventory {
+  border: 1px solid var(--card-border);
+  background: rgba(13, 11, 8, 0.5);
+  padding: 12px;
+  border-radius: 4px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+}
+.deck-builder-inventory .inventory-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.deck-card {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+.deck-card:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+.deck-card.selected {
+  border-color: var(--teal-light);
+  box-shadow: 0 0 8px rgba(61, 158, 138, 0.4);
+  opacity: 1;
+}
+.deck-card.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.deck-card.disabled:hover {
+  transform: none;
+}
+.deck-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+  font-size: 12px;
+}
+.deck-info-row .info-label {
+  color: var(--bone-dim);
+}
+.deck-info-row .info-value {
+  color: var(--parchment);
+  font-weight: 600;
+}
+.deck-preview-list {
+  border: 1px solid var(--card-border);
+  background: rgba(13, 11, 8, 0.5);
+  padding: 12px;
+  border-radius: 4px;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 400px;
+}
+.deck-preview-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.1);
+  font-size: 11px;
+}
+.deck-preview-item:hover {
+  background: rgba(212, 160, 23, 0.05);
+}
+.deck-preview-name {
+  flex: 1;
+  color: var(--bone);
+}
+.deck-preview-remove {
+  color: var(--blood-bright);
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 8px;
+}
+.deck-preview-remove:hover {
+  color: var(--blood);
+}
+.deck-requirement-message {
+  font-size: 11px;
+  color: var(--blood-bright);
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(192, 57, 43, 0.1);
+  border-radius: 3px;
+  border-left: 2px solid var(--blood-bright);
+}
+.ready-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(61, 158, 138, 0.1);
+  border: 1px solid rgba(61, 158, 138, 0.3);
+  border-radius: 4px;
+}
+.ready-indicator.not-ready {
+  background: rgba(192, 57, 43, 0.1);
+  border-color: rgba(192, 57, 43, 0.3);
+}
+.ready-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  animation: pulse 1.5s infinite;
+}
+.ready-indicator.not-ready .ready-indicator-dot {
+  background: var(--blood-bright);
+  animation: none;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
 /* =================== XP BAR =================== */
 .xp-bar-wrap { width: 100%; margin: 6px 0; }
 .xp-bar-track {
@@ -1289,6 +1428,51 @@ input[type="text"]:focus { border-color: var(--gold); }
         <button class="btn" onclick="backFromMultiplayer()">Back to Town</button>
       </div>
       <div id="multiplayer-status" class="info-text" style="margin-top:10px;"></div>
+    </div>
+
+    <div id="lobby-deck-builder" style="display:none;">
+      <h2 style="color:var(--parchment); margin-bottom:4px;">Build Your Deck</h2>
+      <div class="info-text" style="margin-bottom:16px;">Select cards from your inventory to build your battle deck.</div>
+      
+      <div class="deck-info-row">
+        <div class="info-label">Deck Cards Selected:</div>
+        <div class="info-value"><span id="deck-card-count">0</span> / 30</div>
+      </div>
+      <div class="deck-info-row">
+        <div class="info-label">Opponent Status:</div>
+        <div class="info-value"><span id="opponent-deck-status">Waiting...</span></div>
+      </div>
+
+      <div style="margin-bottom: 4px; font-family: 'Cinzel', serif; font-size: 12px; color: var(--bone-dim);">Card Limit: 3 of each card</div>
+      <div id="deck-requirement-msg" class="deck-requirement-message" style="display:none;">Deck must contain at least 30 cards to proceed.</div>
+
+      <div class="deck-builder-wrapper">
+        <!-- INVENTORY SIDE -->
+        <div class="deck-builder-section">
+          <div class="deck-builder-label">Your Inventory</div>
+          <div class="deck-builder-inventory" id="deck-builder-inventory"></div>
+        </div>
+
+        <!-- SELECTED DECK SIDE -->
+        <div class="deck-builder-section">
+          <div class="deck-builder-label">Your Deck (30 Cards)</div>
+          <div class="ready-indicator" id="your-deck-ready-indicator">
+            <div class="ready-indicator-dot"></div>
+            <span id="your-deck-ready-text">Building deck...</span>
+          </div>
+          <div class="ready-indicator" id="opponent-deck-ready-indicator" style="margin-top: 8px;">
+            <div class="ready-indicator-dot"></div>
+            <span id="opponent-deck-ready-text">Opponent: Building deck...</span>
+          </div>
+          <div class="deck-preview-list" id="deck-preview-list"></div>
+        </div>
+      </div>
+
+      <div class="mt-16 flex-row">
+        <button id="ready-deck-btn" class="btn primary" onclick="readyDeckForMultiplayer()" disabled>Ready Up</button>
+        <button class="btn" onclick="backFromMultiplayer()">Cancel</button>
+      </div>
+      <div id="deck-builder-status" class="info-text" style="margin-top:10px;"></div>
     </div>
   </div>
 
@@ -4558,6 +4742,15 @@ const MP_COMBAT = {
   localSocketId: null,
 };
 
+// Deck building state
+let mpDeckBuilder = {
+  selectedCards: [],
+  isReady: false,
+  opponentReady: false,
+  minDeckSize: 30,
+  maxCardCopies: 3,
+};
+
 function ensureMultiplayerClient() {
   if (typeof multiplayer === 'undefined') {
     log('Multiplayer client is missing. Confirm multiplayer-client.js is loaded.', 'system');
@@ -4603,6 +4796,25 @@ function bindMultiplayerUiEventsOnce() {
     }
   });
 
+  multiplayer.on('deckBuilderStarted', () => {
+    log('Deck-building phase started', 'system');
+  });
+
+  multiplayer.on('opponentDeckReady', (data) => {
+    mpDeckBuilder.opponentReady = true;
+    updateReadyIndicators();
+    
+    const statusEl = document.getElementById('deck-builder-status');
+    if (statusEl) {
+      statusEl.innerHTML = `<span class="success-text">${data.playerName} is ready. Your turn!</span>`;
+    }
+  });
+
+  multiplayer.on('bothPlayersDecksReady', (data) => {
+    log('Both players ready! Starting match...', 'system');
+    // The proceedToMultiplayerCombat is already called after a short delay in readyDeckForMultiplayer
+  });
+
   multiplayer.on('gameStarted', (gameState) => {
     startMultiplayerCombat(gameState);
   });
@@ -4630,9 +4842,11 @@ function resetMultiplayerLobbyPanels() {
   const main = document.getElementById('lobby-main');
   const waiting = document.getElementById('lobby-waiting');
   const character = document.getElementById('lobby-character');
+  const deckBuilder = document.getElementById('lobby-deck-builder');
   if (main) main.style.display = 'block';
   if (waiting) waiting.style.display = 'none';
   if (character) character.style.display = 'none';
+  if (deckBuilder) deckBuilder.style.display = 'none';
 
   const createStatus = document.getElementById('create-status');
   const joinStatus = document.getElementById('join-status');
@@ -4646,6 +4860,11 @@ function resetMultiplayerLobbyPanels() {
     startBtn.disabled = true;
     startBtn.textContent = 'Ready';
   }
+
+  // Reset deck builder state
+  mpDeckBuilder.selectedCards = [];
+  mpDeckBuilder.isReady = false;
+  mpDeckBuilder.opponentReady = false;
 
   selectedMultiplayerClass = '';
   multiplayerBothReady = false;
@@ -4810,6 +5029,231 @@ function startMultiplayerGame() {
     return;
   }
 
+  // Instead of immediately starting, show deck builder
+  showMultiplayerDeckBuilder();
+}
+
+function showMultiplayerDeckBuilder() {
+  // Hide character select, show deck builder
+  const characterPanel = document.getElementById('lobby-character');
+  const deckPanel = document.getElementById('lobby-deck-builder');
+  
+  if (characterPanel) characterPanel.style.display = 'none';
+  if (deckPanel) deckPanel.style.display = 'block';
+
+  // Initialize deck builder state
+  mpDeckBuilder.selectedCards = [];
+  mpDeckBuilder.isReady = false;
+  mpDeckBuilder.opponentReady = false;
+
+  // Notify server that we're moving to deck building phase
+  multiplayer.enterDeckBuilder?.((resp) => {
+    if (resp?.success) {
+      log('Entered deck-building phase', 'system');
+    }
+  });
+
+  renderDeckBuilderInventory();
+  updateDeckPreview();
+  updateReadyIndicators();
+}
+
+function renderDeckBuilderInventory() {
+  const container = document.getElementById('deck-builder-inventory');
+  if (!container) return;
+
+  // Get unique cards from starting inventory
+  const uniqueCards = [];
+  const cardMap = new Map();
+
+  // Start with default multiplayer cards if we don't have a full inventory
+  const cardsToShow = (Array.isArray(G.inventory) && G.inventory.length > 0) 
+    ? G.inventory 
+    : getMultiplayerFallbackDeck();
+
+  for (const card of cardsToShow) {
+    const key = card?.name || '';
+    if (!cardMap.has(key)) {
+      cardMap.set(key, card);
+      uniqueCards.push(card);
+    }
+  }
+
+  // Sort by name
+  uniqueCards.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+  // Count occurrences
+  const cardCountMap = new Map();
+  for (const card of cardsToShow) {
+    const key = card?.name || '';
+    cardCountMap.set(key, (cardCountMap.get(key) || 0) + 1);
+  }
+
+  container.innerHTML = `
+    <div class="inventory-grid">
+      ${uniqueCards.map((card, idx) => {
+        const inDeck = mpDeckBuilder.selectedCards.filter(c => c.name === card.name).length;
+        const totalOwned = cardCountMap.get(card.name) || 1;
+        const canAdd = inDeck < mpDeckBuilder.maxCardCopies && mpDeckBuilder.selectedCards.length < mpDeckBuilder.minDeckSize;
+        const isDisabled = !canAdd && inDeck === 0;
+        
+        return `
+          <div class="card ${card.rarity || 'common'} deck-card ${inDeck > 0 ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}" 
+               onclick="toggleCardInDeck('${card.name.replace(/'/g, "\\'")}', ${idx})"
+               style="opacity: ${isDisabled ? 0.3 : (inDeck > 0 ? 1 : 0.7)};">
+            <div class="card-frame">
+              <div class="card-name">${card.name}</div>
+              <div class="card-cost">${card.cost || 0}</div>
+              <div class="card-effect">${card.effect || ''}</div>
+              ${inDeck > 0 ? `<div class="inv-card-in-deck">+${inDeck}</div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
+function toggleCardInDeck(cardName, cardIdx) {
+  const card = CARD_BY_NAME[cardName];
+  if (!card) return;
+
+  const inDeck = mpDeckBuilder.selectedCards.filter(c => c.name === cardName).length;
+
+  // Try to add
+  if (inDeck < mpDeckBuilder.maxCardCopies && mpDeckBuilder.selectedCards.length < mpDeckBuilder.minDeckSize) {
+    mpDeckBuilder.selectedCards.push({...card});
+  } else if (inDeck > 0) {
+    // Remove last occurrence
+    const lastIdx = mpDeckBuilder.selectedCards.map((c, i) => c.name === cardName ? i : -1).filter(i => i >= 0).pop();
+    if (lastIdx >= 0) {
+      mpDeckBuilder.selectedCards.splice(lastIdx, 1);
+    }
+  }
+
+  renderDeckBuilderInventory();
+  updateDeckPreview();
+  updateReadyIndicators();
+}
+
+function updateDeckPreview() {
+  const preview = document.getElementById('deck-preview-list');
+  const countEl = document.getElementById('deck-card-count');
+  const reqMsgEl = document.getElementById('deck-requirement-msg');
+  
+  if (countEl) countEl.textContent = mpDeckBuilder.selectedCards.length;
+
+  if (reqMsgEl) {
+    if (mpDeckBuilder.selectedCards.length < mpDeckBuilder.minDeckSize) {
+      reqMsgEl.style.display = 'block';
+    } else {
+      reqMsgEl.style.display = 'none';
+    }
+  }
+
+  if (!preview) return;
+
+  // Count occurrences
+  const cardCounts = {};
+  for (const card of mpDeckBuilder.selectedCards) {
+    const name = card.name;
+    cardCounts[name] = (cardCounts[name] || 0) + 1;
+  }
+
+  // Group by card name
+  const uniqueNames = Object.keys(cardCounts).sort();
+  
+  preview.innerHTML = uniqueNames.map(name => {
+    const count = cardCounts[name];
+    const card = CARD_BY_NAME[name];
+    return `
+      <div class="deck-preview-item">
+        <span class="deck-preview-name">${name} (${count}x)</span>
+        <span class="deck-preview-remove" onclick="removeCardFromDeck('${name.replace(/'/g, "\\'")}')">✕</span>
+      </div>
+    `;
+  }).join('');
+}
+
+function removeCardFromDeck(cardName) {
+  const lastIdx = mpDeckBuilder.selectedCards.map((c, i) => c.name === cardName ? i : -1).filter(i => i >= 0).pop();
+  if (lastIdx >= 0) {
+    mpDeckBuilder.selectedCards.splice(lastIdx, 1);
+  }
+
+  renderDeckBuilderInventory();
+  updateDeckPreview();
+  updateReadyIndicators();
+}
+
+function updateReadyIndicators() {
+  const readyBtn = document.getElementById('ready-deck-btn');
+  const youReadyEl = document.getElementById('your-deck-ready-indicator');
+  const yourTextEl = document.getElementById('your-deck-ready-text');
+  const oppReadyEl = document.getElementById('opponent-deck-ready-indicator');
+  const oppTextEl = document.getElementById('opponent-deck-ready-text');
+
+  const canReady = mpDeckBuilder.selectedCards.length >= mpDeckBuilder.minDeckSize;
+
+  if (readyBtn) {
+    readyBtn.disabled = !canReady;
+    readyBtn.textContent = canReady ? 'Ready Up' : `Ready Up (${mpDeckBuilder.minDeckSize - mpDeckBuilder.selectedCards.length} more)`;
+  }
+
+  if (youReadyEl) {
+    if (mpDeckBuilder.isReady) {
+      youReadyEl.classList.remove('not-ready');
+      if (yourTextEl) yourTextEl.textContent = '✓ Your deck is ready';
+    } else {
+      youReadyEl.classList.add('not-ready');
+      if (yourTextEl) yourTextEl.textContent = 'Building deck...';
+    }
+  }
+
+  if (oppReadyEl) {
+    if (mpDeckBuilder.opponentReady) {
+      oppReadyEl.classList.remove('not-ready');
+      if (oppTextEl) oppTextEl.textContent = '✓ Opponent deck ready';
+    } else {
+      oppReadyEl.classList.add('not-ready');
+      if (oppTextEl) oppTextEl.textContent = 'Opponent: Building deck...';
+    }
+  }
+}
+
+function readyDeckForMultiplayer() {
+  if (mpDeckBuilder.selectedCards.length < mpDeckBuilder.minDeckSize) {
+    const statusEl = document.getElementById('deck-builder-status');
+    if (statusEl) statusEl.innerHTML = `<span class="danger-text">Need ${mpDeckBuilder.minDeckSize - mpDeckBuilder.selectedCards.length} more cards.</span>`;
+    return;
+  }
+
+  mpDeckBuilder.isReady = true;
+  updateReadyIndicators();
+
+  // Send deck to server
+  const deckData = mpDeckBuilder.selectedCards.map(c => ({...c}));
+  multiplayer.submitDeck?.(deckData, (resp) => {
+    const statusEl = document.getElementById('deck-builder-status');
+    if (!resp?.success) {
+      if (statusEl) statusEl.innerHTML = '<span class="danger-text">Failed to submit deck.</span>';
+      return;
+    }
+    
+    if (resp?.bothReady) {
+      if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Starting match...</span>';
+      // Wait a moment then start the game
+      setTimeout(() => {
+        proceedToMultiplayerCombat(resp.gameState);
+      }, 1000);
+    } else {
+      if (statusEl) statusEl.textContent = 'Deck submitted. Waiting for opponent...';
+    }
+  });
+}
+
+function proceedToMultiplayerCombat(gameState) {
+  // Start the actual game with the selected decks
   multiplayer.startGame({
     hpByClass: {
       Fencer: 18,
@@ -4820,11 +5264,11 @@ function startMultiplayerGame() {
       Rogue: 17
     }
   }, (resp) => {
-    if (!resp?.success && statusEl) {
-      statusEl.textContent = 'Failed to start match.';
+    if (!resp?.success) {
+      log('Failed to start match', 'system');
       return;
     }
-    if (statusEl) statusEl.textContent = 'Match started. Syncing state...';
+    log('Match started with selected decks', 'system');
   });
 }
 
@@ -4986,8 +5430,14 @@ function startMultiplayerCombat(gameState) {
 
   const handLimit = getPlayerHandLimit();
   const diceLimit = getPlayerDiceLimit();
-  const localDeck = getLocalDeckForMultiplayer();
-  const enemyDeck = [];
+  
+  // Use deck from gameState if available (from deck builder submission), otherwise fall back to local deck
+  const localDeck = Array.isArray(local.deck) && local.deck.length > 0 
+    ? local.deck.map(c => ({...c})) 
+    : getLocalDeckForMultiplayer();
+  const enemyDeck = Array.isArray(remote.deck) && remote.deck.length > 0
+    ? remote.deck.map(c => ({...c}))
+    : [];
 
   const localCombatant = makeCombatant(
     local.name || G.name || 'Player',
