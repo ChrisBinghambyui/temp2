@@ -16,6 +16,8 @@
 <meta name="twitter:description" content="A dice and card adventure game. Roll your loaded bones to activate spellcards and triumph over legendary foes.">
 <meta name="twitter:image" content="images/Die.gif">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script src="multiplayer-client.js"></script>
 <style>
 :root {
   --bg: #0d0b08;
@@ -1220,6 +1222,11 @@ input[type="text"]:focus { border-color: var(--gold); }
         <div class="town-action-desc" id="town-action-training-desc">Improve your stats with Thessa's coaching</div>
         <div class="town-action-icon">💪</div>
       </div>
+      <div class="town-action" onclick="showMultiplayerLobby()">
+        <div class="town-action-name" id="town-action-multiplayer-name">Multiplayer</div>
+        <div class="town-action-desc" id="town-action-multiplayer-desc">Create or join a room code and duel another player</div>
+        <div class="town-action-icon">🌐</div>
+      </div>
     </div>
     
     <div style="margin-top:32px; padding-top:24px; border-top: 1px solid var(--card-border); text-align:center;">
@@ -1228,6 +1235,60 @@ input[type="text"]:focus { border-color: var(--gold); }
       <button class="btn" id="town-export-btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="exportSave()">📥 Export Save</button>
       <button class="btn" id="town-import-btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="importSave()">📤 Import Save</button>
       <button class="btn" id="town-main-menu-btn" style="font-size:12px; padding:10px 16px; margin-left:8px;" onclick="showScreen('title-screen')">🏠 Main Menu</button>
+    </div>
+  </div>
+
+  <!-- MULTIPLAYER SCREEN -->
+  <div id="multiplayer-screen" class="screen" style="padding: 32px 24px; width: 100%; max-width: 960px; margin: 0 auto;">
+    <div class="panel-title" style="font-family:'Cinzel Decorative','Cinzel',serif;font-size:30px;color:var(--parchment);margin-bottom:12px;">Multiplayer PvP</div>
+    <div class="info-text" style="margin-bottom:14px;">Challenge another player using a room code.</div>
+    <div class="info-text" style="margin-bottom:20px;">Connection: <span id="connection-status" style="color:var(--bone-dim);">Connecting...</span></div>
+
+    <div id="lobby-main" style="display:block;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="panel">
+          <div class="section-label">Create Room</div>
+          <input type="text" id="create-name" placeholder="Your name" maxlength="24" style="margin-bottom:10px;">
+          <button class="btn primary" onclick="createMultiplayerRoom()">Create Room</button>
+          <div id="create-status" class="info-text" style="margin-top:10px; min-height:24px;"></div>
+        </div>
+
+        <div class="panel">
+          <div class="section-label">Join Room</div>
+          <input type="text" id="join-name" placeholder="Your name" maxlength="24" style="margin-bottom:8px;">
+          <input type="text" id="join-code" placeholder="Room code" maxlength="6" style="text-transform:uppercase; margin-bottom:10px;">
+          <button class="btn primary" onclick="joinMultiplayerRoom()">Join Room</button>
+          <div id="join-status" class="info-text" style="margin-top:10px; min-height:24px;"></div>
+        </div>
+      </div>
+
+      <div class="mt-16 flex-row">
+        <button class="btn" onclick="backFromMultiplayer()">Back to Town</button>
+      </div>
+    </div>
+
+    <div id="lobby-waiting" style="display:none; text-align:center;">
+      <h2 style="color:var(--parchment); margin-bottom:12px;">Waiting for opponent...</h2>
+      <div class="stat-box" style="display:inline-block; margin-bottom:10px;">
+        <div class="stat-label">Room Code</div>
+        <div id="waiting-room-code" class="stat-value" style="color:var(--gold-light); font-family:'Courier Prime',monospace; letter-spacing:2px;">------</div>
+      </div>
+      <div class="info-text" id="waiting-status">Share this room code with your opponent.</div>
+      <div class="mt-16 flex-row" style="justify-content:center;">
+        <button class="btn" onclick="cancelWaiting()">Cancel</button>
+        <button class="btn" onclick="leaveMultiplayerRoomFromTown()">Leave Room</button>
+      </div>
+    </div>
+
+    <div id="lobby-character" style="display:none;">
+      <h2 style="color:var(--parchment); margin-bottom:8px;">Choose Your Class</h2>
+      <div class="info-text" style="margin-bottom:16px;">Opponent: <span id="opponent-name">Unknown</span></div>
+      <div class="class-grid" id="multiplayer-class-grid"></div>
+      <div class="mt-16 flex-row">
+        <button id="start-mp-game-btn" class="btn primary" onclick="startMultiplayerGame()" disabled>Ready</button>
+        <button class="btn" onclick="backFromMultiplayer()">Back to Town</button>
+      </div>
+      <div id="multiplayer-status" class="info-text" style="margin-top:10px;"></div>
     </div>
   </div>
 
@@ -2640,6 +2701,8 @@ function applyLanguageToMenuAndTown() {
   setText('town-action-blacksmith-desc', t('town.actions.blacksmithDesc', {}, 'Forge 2 identical cards into an upgrade'));
   setText('town-action-training-name', t('town.actions.trainingName', {}, 'Training'));
   setText('town-action-training-desc', t('town.actions.trainingDesc', {}, 'Improve your stats with Thessa\'s coaching'));
+  setText('town-action-multiplayer-name', t('town.actions.multiplayerName', {}, 'Multiplayer'));
+  setText('town-action-multiplayer-desc', t('town.actions.multiplayerDesc', {}, 'Create or join a room code and duel another player'));
 
   setText('town-game-management-title', t('town.gameManagement', {}, 'Game Management'));
   setText('town-save-btn', `💾 ${t('town.buttons.save', {}, 'Save')}`);
@@ -4477,6 +4540,546 @@ function hideTownXpTooltip() {
   if (tip) tip.hidden = true;
 }
 
+// Multiplayer server URL configuration:
+// OPTION 1 (Local Network): Friends on same WiFi/LAN
+// const MULTIPLAYER_SERVER_URL = 'http://192.168.1.100:3000'; // Replace with your local IP
+// OPTION 2 (Internet-wide): Friends on different connections (requires ngrok tunnel running)
+// const MULTIPLAYER_SERVER_URL = 'https://your-url.ngrok.io'; // Replace with your ngrok public URL
+// OPTION 3 (Hosted): HelioHost or other hosting
+// const MULTIPLAYER_SERVER_URL = 'https://your-domain.com';
+const MULTIPLAYER_SERVER_URL = 'http://192.168.1.100:3000'; // Update this IP to match your machine
+let multiplayerUiBound = false;
+let multiplayerPlayers = [];
+let selectedMultiplayerClass = '';
+let multiplayerBothReady = false;
+const MP_COMBAT = {
+  active: false,
+  myTurn: false,
+  localSocketId: null,
+};
+
+function ensureMultiplayerClient() {
+  if (typeof multiplayer === 'undefined') {
+    log('Multiplayer client is missing. Confirm multiplayer-client.js is loaded.', 'system');
+    return false;
+  }
+  return true;
+}
+
+function setMultiplayerConnectionStatus(text, color) {
+  const el = document.getElementById('connection-status');
+  if (!el) return;
+  el.textContent = text;
+  el.style.color = color;
+}
+
+function bindMultiplayerUiEventsOnce() {
+  if (!ensureMultiplayerClient() || multiplayerUiBound) return;
+
+  multiplayer.on('connected', () => setMultiplayerConnectionStatus('Connected', 'var(--teal-light)'));
+  multiplayer.on('disconnected', () => setMultiplayerConnectionStatus('Disconnected', 'var(--blood-bright)'));
+
+  multiplayer.on('playerJoined', (data) => {
+    multiplayerPlayers = data?.players || [];
+    if (multiplayerPlayers.length === 2) {
+      handleBothPlayersReady(multiplayerPlayers);
+    }
+  });
+
+  multiplayer.on('bothPlayersReady', (data) => {
+    multiplayerPlayers = data?.players || multiplayerPlayers;
+    multiplayerBothReady = true;
+    handleBothPlayersReady(multiplayerPlayers);
+
+    const statusEl = document.getElementById('multiplayer-status');
+    if (statusEl) {
+      statusEl.textContent = multiplayer.isHost ? 'Both players locked in. Host can start the match.' : 'Both players locked in. Waiting for host to start.';
+    }
+
+    const startBtn = document.getElementById('start-mp-game-btn');
+    if (startBtn) {
+      startBtn.disabled = !multiplayer.isHost;
+      startBtn.textContent = multiplayer.isHost ? 'Start Match' : 'Waiting for Host';
+    }
+  });
+
+  multiplayer.on('gameStarted', (gameState) => {
+    startMultiplayerCombat(gameState);
+  });
+
+  multiplayer.on('combatAction', (evt) => {
+    handleRemoteCombatAction(evt);
+  });
+
+  multiplayer.on('playerLeft', () => {
+    const statusEl = document.getElementById('multiplayer-status');
+    if (statusEl) statusEl.textContent = 'Opponent left the room.';
+    multiplayerBothReady = false;
+  });
+
+  multiplayer.on('playerDisconnected', () => {
+    const statusEl = document.getElementById('multiplayer-status');
+    if (statusEl) statusEl.textContent = 'Opponent disconnected.';
+    multiplayerBothReady = false;
+  });
+
+  multiplayerUiBound = true;
+}
+
+function resetMultiplayerLobbyPanels() {
+  const main = document.getElementById('lobby-main');
+  const waiting = document.getElementById('lobby-waiting');
+  const character = document.getElementById('lobby-character');
+  if (main) main.style.display = 'block';
+  if (waiting) waiting.style.display = 'none';
+  if (character) character.style.display = 'none';
+
+  const createStatus = document.getElementById('create-status');
+  const joinStatus = document.getElementById('join-status');
+  const statusEl = document.getElementById('multiplayer-status');
+  if (createStatus) createStatus.textContent = '';
+  if (joinStatus) joinStatus.textContent = '';
+  if (statusEl) statusEl.textContent = '';
+
+  const startBtn = document.getElementById('start-mp-game-btn');
+  if (startBtn) {
+    startBtn.disabled = true;
+    startBtn.textContent = 'Ready';
+  }
+
+  selectedMultiplayerClass = '';
+  multiplayerBothReady = false;
+}
+
+function renderMultiplayerClassGrid() {
+  const grid = document.getElementById('multiplayer-class-grid');
+  if (!grid) return;
+
+  const classes = [
+    { key: 'Fencer', css: 'class-fencer', desc: 'Quick strikes, high crit', hp: 18 },
+    { key: 'Knight', css: 'class-knight', desc: 'Heavy armor, block', hp: 24 },
+    { key: 'Cleric', css: 'class-cleric', desc: 'Healing, support', hp: 20 },
+    { key: 'Warlock', css: 'class-warlock', desc: 'Curses, damage', hp: 19 },
+    { key: 'Druid', css: 'class-druid', desc: 'Nature, shields', hp: 21 },
+    { key: 'Rogue', css: 'class-rogue', desc: 'Stealth, evasion', hp: 17 }
+  ];
+
+  grid.innerHTML = classes.map(c => `
+    <div class="class-card" data-mp-class="${c.key}" onclick="selectMultiplayerClass('${c.key}', this)">
+      <div class="class-name ${c.css}">${c.key}</div>
+      <div class="class-desc">${c.desc}</div>
+      <div class="class-hp">HP: ${c.hp}</div>
+    </div>`).join('');
+}
+
+function showMultiplayerLobby() {
+  if (!ensureMultiplayerClient()) {
+    openModal(`<h2>Multiplayer Unavailable</h2><p class="info-text">Multiplayer client script was not found. Verify script includes in the page head.</p><div class="mt-16"><button class="btn" onclick="closeModal()">Close</button></div>`);
+    return;
+  }
+
+  bindMultiplayerUiEventsOnce();
+  renderMultiplayerClassGrid();
+  resetMultiplayerLobbyPanels();
+
+  if (!multiplayer.isConnected) {
+    setMultiplayerConnectionStatus('Connecting...', 'var(--bone-dim)');
+    multiplayer.connect(MULTIPLAYER_SERVER_URL);
+  } else {
+    setMultiplayerConnectionStatus('Connected', 'var(--teal-light)');
+  }
+
+  showScreen('multiplayer-screen');
+}
+
+function createMultiplayerRoom() {
+  if (!ensureMultiplayerClient()) return;
+
+  const nameEl = document.getElementById('create-name');
+  const statusEl = document.getElementById('create-status');
+  const playerName = (nameEl?.value || '').trim();
+
+  if (!playerName) {
+    if (statusEl) statusEl.innerHTML = '<span class="danger-text">Enter your name first.</span>';
+    return;
+  }
+  if (!multiplayer.isConnected) {
+    if (statusEl) statusEl.innerHTML = '<span class="danger-text">Still connecting to server. Try again in a moment.</span>';
+    return;
+  }
+
+  multiplayer.createRoom(playerName, (resp) => {
+    if (!statusEl) return;
+    if (!resp?.success) {
+      statusEl.innerHTML = `<span class="danger-text">${resp?.error || 'Failed to create room.'}</span>`;
+      return;
+    }
+
+    document.getElementById('lobby-main').style.display = 'none';
+    document.getElementById('lobby-waiting').style.display = 'block';
+    document.getElementById('waiting-room-code').textContent = resp.roomCode;
+    document.getElementById('waiting-status').textContent = 'Share this room code with your opponent.';
+    statusEl.innerHTML = `<span class="success-text">Room created: ${resp.roomCode}</span>`;
+    log(`Multiplayer room ${resp.roomCode} created.`, 'system');
+  });
+}
+
+function joinMultiplayerRoom() {
+  if (!ensureMultiplayerClient()) return;
+
+  const nameEl = document.getElementById('join-name');
+  const codeEl = document.getElementById('join-code');
+  const statusEl = document.getElementById('join-status');
+  const playerName = (nameEl?.value || '').trim();
+  const roomCode = (codeEl?.value || '').trim().toUpperCase();
+
+  if (!playerName || !roomCode) {
+    if (statusEl) statusEl.innerHTML = '<span class="danger-text">Enter both name and room code.</span>';
+    return;
+  }
+  if (!multiplayer.isConnected) {
+    if (statusEl) statusEl.innerHTML = '<span class="danger-text">Still connecting to server. Try again in a moment.</span>';
+    return;
+  }
+
+  multiplayer.joinRoom(roomCode, playerName, (resp) => {
+    if (!statusEl) return;
+    if (!resp?.success) {
+      statusEl.innerHTML = `<span class="danger-text">${resp?.error || 'Failed to join room.'}</span>`;
+      return;
+    }
+    statusEl.innerHTML = `<span class="success-text">Joined room ${roomCode}.</span>`;
+  });
+}
+
+function handleBothPlayersReady(players) {
+  if (!Array.isArray(players) || players.length < 2) return;
+
+  document.getElementById('lobby-main').style.display = 'none';
+  document.getElementById('lobby-waiting').style.display = 'none';
+  document.getElementById('lobby-character').style.display = 'block';
+
+  const opponent = players.find(p => p.socketId !== multiplayer.playerId);
+  const opponentNameEl = document.getElementById('opponent-name');
+  if (opponentNameEl) opponentNameEl.textContent = opponent?.name || 'Opponent';
+
+  const statusEl = document.getElementById('multiplayer-status');
+  if (statusEl && !multiplayerBothReady) {
+    statusEl.textContent = 'Both players connected. Pick your class.';
+  }
+
+  const startBtn = document.getElementById('start-mp-game-btn');
+  if (startBtn) {
+    if (multiplayerBothReady) {
+      startBtn.disabled = !multiplayer.isHost;
+      startBtn.textContent = multiplayer.isHost ? 'Start Match' : 'Waiting for Host';
+    } else {
+      startBtn.disabled = true;
+      startBtn.textContent = 'Ready';
+    }
+  }
+}
+
+function selectMultiplayerClass(className, cardEl = null) {
+  selectedMultiplayerClass = className;
+  document.querySelectorAll('#multiplayer-class-grid .class-card').forEach(c => c.classList.remove('selected'));
+  if (cardEl) cardEl.classList.add('selected');
+
+  const statusEl = document.getElementById('multiplayer-status');
+  if (statusEl) statusEl.textContent = `Selected: ${className}. Waiting for both players to lock in.`;
+
+  multiplayer.selectCharacter(className, (resp) => {
+    if (!resp?.success && statusEl) {
+      statusEl.textContent = 'Failed to lock in class. Try again.';
+    }
+  });
+}
+
+function startMultiplayerGame() {
+  const statusEl = document.getElementById('multiplayer-status');
+  if (!selectedMultiplayerClass) {
+    if (statusEl) statusEl.textContent = 'Select a class first.';
+    return;
+  }
+  if (!multiplayer.isHost) {
+    if (statusEl) statusEl.textContent = 'Only the host can start the match.';
+    return;
+  }
+  if (!multiplayerBothReady) {
+    if (statusEl) statusEl.textContent = 'Waiting for both players to lock in class.';
+    return;
+  }
+
+  multiplayer.startGame({
+    hpByClass: {
+      Fencer: 18,
+      Knight: 24,
+      Cleric: 20,
+      Warlock: 19,
+      Druid: 21,
+      Rogue: 17
+    }
+  }, (resp) => {
+    if (!resp?.success && statusEl) {
+      statusEl.textContent = 'Failed to start match.';
+      return;
+    }
+    if (statusEl) statusEl.textContent = 'Match started. Syncing state...';
+  });
+}
+
+function classNameToId(name) {
+  return String(name || '').trim().toLowerCase();
+}
+
+function getMultiplayerFallbackDeck() {
+  const defaults = ['Rusty Dagger', 'Jab', 'Swipe', 'Bandage', 'Makeshift Shield', 'Small Stone'];
+  return defaults.map(n => CARD_BY_NAME[n]).filter(Boolean).map(c => ({...c}));
+}
+
+function getLocalDeckForMultiplayer() {
+  if (Array.isArray(G.deck) && G.deck.length > 0) {
+    return G.deck.map(c => ({...c}));
+  }
+  return getMultiplayerFallbackDeck();
+}
+
+function hydrateNetworkCombatant(raw, fallback = null) {
+  const base = raw ? JSON.parse(JSON.stringify(raw)) : JSON.parse(JSON.stringify(fallback || {}));
+
+  base.deck = Array.isArray(base.deck) ? base.deck : [];
+  base.hand = Array.isArray(base.hand) ? base.hand : [];
+  base.discard = Array.isArray(base.discard) ? base.discard : [];
+  base.dicePool = Array.isArray(base.dicePool) ? base.dicePool : [];
+  base.hiddenDice = Array.isArray(base.hiddenDice) ? base.hiddenDice : [];
+  base.limitProgress = base.limitProgress || {};
+  base.oncePerCombat = new Set(Array.isArray(raw?.oncePerCombat) ? raw.oncePerCombat : []);
+  base.reusablesUsedThisTurn = new Set();
+  base.reusableUseCounts = base.reusableUseCounts || {};
+  base.classState = {
+    fencerUses: 0,
+    druidUsed: false,
+    knightTotal: 0,
+    knightLocked: false,
+    druidPlanted: null,
+    rogueLucky: null,
+    _swipeCount: 0,
+    ...(base.classState || {})
+  };
+
+  return base;
+}
+
+function snapshotCombatantForNetwork(c) {
+  if (!c) return null;
+  return {
+    ...JSON.parse(JSON.stringify(c)),
+    oncePerCombat: Array.from(c.oncePerCombat || []),
+    reusablesUsedThisTurn: [],
+  };
+}
+
+function getMultiplayerCombatSnapshot() {
+  return {
+    round: CB.round,
+    phase: CB.phase,
+    player: snapshotCombatantForNetwork(CB.player),
+    enemy: snapshotCombatantForNetwork(CB.enemy),
+  };
+}
+
+function emitMultiplayerCombatAction(type, extra = {}) {
+  if (!MP_COMBAT.active || !ensureMultiplayerClient()) return;
+  multiplayer.sendCombatAction({
+    type,
+    state: getMultiplayerCombatSnapshot(),
+    ...extra,
+  });
+}
+
+function applyRemoteMultiplayerSnapshot(payload) {
+  const state = payload?.state;
+  if (!state || !state.player || !state.enemy) return;
+
+  // Payload is from actor's perspective (actor as player), so invert for local view.
+  CB.player = hydrateNetworkCombatant(state.enemy, CB.player);
+  CB.enemy = hydrateNetworkCombatant(state.player, CB.enemy);
+  CB.round = Number(state.round) || CB.round || 1;
+  CB.phase = 'enemy';
+  CB.selectedCard = -1;
+  CB.selectedDie = -1;
+}
+
+function handleRemoteCombatAction(payload) {
+  if (!MP_COMBAT.active || !payload || payload.actorId === multiplayer.playerId) return;
+
+  if (payload.type === 'turnStart') {
+    MP_COMBAT.myTurn = false;
+    applyRemoteMultiplayerSnapshot(payload);
+    setPhaseBanner("Opponent's Turn", 'enemy');
+    if (payload.rolls && Array.isArray(payload.rolls)) {
+      log(`${payload.actorName} rolled: ${payload.rolls.join(', ')}`, 'enemy');
+    }
+    updateCombatUI();
+    updatePlayerControls();
+    return;
+  }
+
+  if (payload.type === 'cardPlayed') {
+    applyRemoteMultiplayerSnapshot(payload);
+    if (payload.message) {
+      log(payload.message, 'enemy');
+    } else if (payload.cardName) {
+      log(`${payload.actorName} used ${payload.cardName}.`, 'enemy');
+    }
+    updateCombatUI();
+    updatePlayerControls();
+    return;
+  }
+
+  if (payload.type === 'endTurn') {
+    applyRemoteMultiplayerSnapshot(payload);
+    MP_COMBAT.myTurn = true;
+    startPlayerTurn();
+    return;
+  }
+
+  if (payload.type === 'combatEnd') {
+    applyRemoteMultiplayerSnapshot(payload);
+    const result = payload.result === 'victory' ? 'defeat' : 'victory';
+    finishMultiplayerMatch(result);
+  }
+}
+
+function finishMultiplayerMatch(result) {
+  MP_COMBAT.active = false;
+  MP_COMBAT.myTurn = false;
+
+  const title = result === 'victory' ? 'Victory!' : 'Defeat';
+  const body = result === 'victory'
+    ? 'Your opponent has fallen. The duel is yours.'
+    : 'Your opponent has defeated you this round.';
+
+  openModal(`<h2>${title}</h2><p class="info-text">${body}</p>
+    <div class="mt-16"><button class="btn primary" onclick="closeModal();showTown()">Return to Town</button></div>`, true);
+}
+
+function startMultiplayerCombat(gameState) {
+  if (!ensureMultiplayerClient()) return;
+
+  const players = Array.isArray(gameState?.players) ? gameState.players : [];
+  if (players.length < 2) {
+    log('Multiplayer start failed: missing player data.', 'system');
+    return;
+  }
+
+  const local = players.find(p => p.socketId === multiplayer.playerId) || players[0];
+  const remote = players.find(p => p.socketId !== multiplayer.playerId) || players[1];
+  const activeSocket = players[Number(gameState?.activePlayerIndex) || 0]?.socketId;
+
+  const localClassName = local.character || selectedMultiplayerClass || G.className || 'Fencer';
+  const localClassId = classNameToId(localClassName) || 'fencer';
+  const remoteClassId = classNameToId(remote.character || 'Fencer') || 'fencer';
+
+  G.classId = localClassId;
+  G.className = localClassName;
+
+  const handLimit = getPlayerHandLimit();
+  const diceLimit = getPlayerDiceLimit();
+  const localDeck = getLocalDeckForMultiplayer();
+  const enemyDeck = [];
+
+  const localCombatant = makeCombatant(
+    local.name || G.name || 'Player',
+    Number(local.maxHp) || Number(local.hp) || G.maxHp || 20,
+    localDeck,
+    handLimit,
+    diceLimit,
+    localClassId,
+    G.level || 1,
+    Number(local.hp) || Number(local.maxHp) || G.maxHp || 20
+  );
+
+  const remoteCombatant = makeCombatant(
+    remote.name || 'Opponent',
+    Number(remote.maxHp) || Number(remote.hp) || 20,
+    enemyDeck,
+    handLimit,
+    diceLimit,
+    remoteClassId,
+    G.level || 1,
+    Number(remote.hp) || Number(remote.maxHp) || 20
+  );
+
+  CB = {
+    player: localCombatant,
+    enemy: remoteCombatant,
+    round: Number(gameState?.round) || 1,
+    phase: 'enemy',
+    selectedCard: -1,
+    selectedDie: -1,
+    rogueLuckyPending: false,
+  };
+
+  // Provide basic adventure defaults so combat UI can render badges safely.
+  ADV = {
+    ...(ADV || {}),
+    legendary: false,
+    winStreak: 0,
+    encounterLevel: 1,
+    biome: G.currentBiome || 1,
+    tier: G.currentTier || 1,
+    playerHp: CB.player.hp,
+  };
+
+  MP_COMBAT.active = true;
+  MP_COMBAT.localSocketId = multiplayer.playerId;
+  MP_COMBAT.myTurn = activeSocket === multiplayer.playerId;
+
+  showScreen('combat-screen');
+  updateCombatUI();
+
+  if (MP_COMBAT.myTurn) {
+    log('Your multiplayer turn begins.', 'system');
+    startPlayerTurn();
+  } else {
+    setPhaseBanner("Opponent's Turn", 'enemy');
+    updatePlayerControls();
+    log('Opponent is acting. You will see actions live.', 'system');
+  }
+}
+
+function cancelWaiting() {
+  if (!ensureMultiplayerClient()) return;
+  multiplayer.leaveRoom();
+  MP_COMBAT.active = false;
+  MP_COMBAT.myTurn = false;
+  resetMultiplayerLobbyPanels();
+}
+
+function backFromMultiplayer() {
+  if (ensureMultiplayerClient()) multiplayer.leaveRoom();
+  resetMultiplayerLobbyPanels();
+  showTown();
+}
+
+function openMultiplayerHub() { showMultiplayerLobby(); }
+function createMultiplayerRoomFromTown() { createMultiplayerRoom(); }
+function joinMultiplayerRoomFromTown() { joinMultiplayerRoom(); }
+function leaveMultiplayerRoomFromTown() { cancelWaiting(); }
+
+function copyMultiplayerRoomCode(code) {
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(code).then(() => {
+      log(`Copied room code ${code}.`, 'system');
+    }).catch(() => {
+      log(`Room code: ${code}`, 'system');
+    });
+    return;
+  }
+  log(`Room code: ${code}`, 'system');
+}
+
 function toggleTownXpTooltip(evt) {
   const tip = document.getElementById('xp-tooltip');
   if (!tip) return;
@@ -4733,6 +5336,13 @@ function setRogueLucky(n) {
 // COMBAT TURN LOGIC
 // ============================================================
 function startPlayerTurn() {
+  if (MP_COMBAT.active && !MP_COMBAT.myTurn) {
+    CB.phase = 'enemy';
+    setPhaseBanner("Opponent's Turn", 'enemy');
+    updatePlayerControls();
+    return;
+  }
+
   CB.phase = 'player';
   CB.selectedCard = -1;
   CB.selectedDie = -1;
@@ -4809,9 +5419,22 @@ function startPlayerTurn() {
   updateCombatUI();
   setPhaseBanner('Your Turn', 'player');
   updatePlayerControls();
+
+  if (MP_COMBAT.active) {
+    emitMultiplayerCombatAction('turnStart', {
+      rolls: [...CB.player.dicePool],
+    });
+  }
 }
 
 function startEnemyTurn() {
+  if (MP_COMBAT.active) {
+    CB.phase = 'enemy';
+    setPhaseBanner("Opponent's Turn", 'enemy');
+    updatePlayerControls();
+    return;
+  }
+
   CB.phase = 'enemy';
   setPhaseBanner("Enemy's Turn", 'enemy');
   updatePlayerControls();
@@ -4897,6 +5520,7 @@ function startEnemyTurn() {
 function playSelectedCard() {
   if (CB.selectedCard < 0 || CB.selectedDie < 0) return;
   if (CB.phase !== 'player') return;
+  if (MP_COMBAT.active && !MP_COMBAT.myTurn) return;
 
   const card = CB.player.hand[CB.selectedCard];
   const dieVal = CB.player.dicePool[CB.selectedDie];
@@ -4939,11 +5563,20 @@ function playSelectedCard() {
   updateCombatUI();
   updatePlayerControls();
 
+  if (MP_COMBAT.active) {
+    emitMultiplayerCombatAction('cardPlayed', {
+      cardName: card.name,
+      dieVal,
+      message: msg,
+    });
+  }
+
   if (CB.enemy.hp <= 0) { endCombat('victory'); }
 }
 
 function endPlayerTurn() {
   if (CB.phase !== 'player') return;
+  if (MP_COMBAT.active && !MP_COMBAT.myTurn) return;
   
   // Discard reusable cards that were used this turn
   if (CB.player.reusablesUsedThisTurn.size > 0) {
@@ -4964,6 +5597,16 @@ function endPlayerTurn() {
   
   updateCombatUI();
   if (CB.player.hp <= 0) { endCombat('defeat'); return; }
+
+  if (MP_COMBAT.active) {
+    MP_COMBAT.myTurn = false;
+    emitMultiplayerCombatAction('endTurn');
+    CB.phase = 'enemy';
+    setPhaseBanner("Opponent's Turn", 'enemy');
+    updatePlayerControls();
+    return;
+  }
+
   startEnemyTurn();
 }
 
@@ -4982,6 +5625,12 @@ function confirmRetreat() {
 }
 
 function endCombat(result) {
+  if (MP_COMBAT.active) {
+    emitMultiplayerCombatAction('combatEnd', { result });
+    finishMultiplayerMatch(result);
+    return;
+  }
+
   CB.phase = 'over';
   ADV.playerHp = Math.max(0, CB.player.hp);
   G.cardChargeProgress = snapshotCardChargeProgress(CB.player);
@@ -5602,9 +6251,12 @@ function dropDieOnCard(evt, cardIdx) {
 }
 
 function updatePlayerControls() {
+  const isMyTurn = !MP_COMBAT.active || MP_COMBAT.myTurn;
   const btn = document.getElementById('btn-play-card');
-  const canPlay = CB.phase==='player' && CB.selectedCard>=0 && CB.selectedDie>=0;
+  const canPlay = CB.phase==='player' && isMyTurn && CB.selectedCard>=0 && CB.selectedDie>=0;
   if (btn) btn.disabled = !canPlay;
+  const endTurnBtn = document.getElementById('btn-end-turn');
+  if (endTurnBtn) endTurnBtn.disabled = !(CB.phase === 'player' && isMyTurn);
 
   // Knight class ability
   const pcontrols = document.getElementById('player-controls');
@@ -5616,7 +6268,7 @@ function updatePlayerControls() {
   const oldDruid = document.getElementById('druid-plant-btn');
   if (oldDruid) oldDruid.remove();
 
-  if (CB.phase==='player') {
+  if (CB.phase==='player' && isMyTurn) {
     if (CB.player.classId==='knight' && !CB.player.classState.knightLocked) {
       const limit = 9 + (G.level-1)*6;
       const knightBtn = document.createElement('button');
@@ -5672,6 +6324,7 @@ function doKnightRoll() {
     log(`Knight bust! Rolled ${newDie}, exceeded ${limit}. All dice lost!`, 'player');
     updateCombatUI();
     updatePlayerControls();
+    if (MP_COMBAT.active) emitMultiplayerCombatAction('turnStart', { rolls: [...CB.player.dicePool] });
   } else if (CB.player.classState.knightTotal === limit) {
     log(`Knight jackpot! Total exactly ${limit}.`, 'player');
     updateCombatUI();
@@ -5683,10 +6336,12 @@ function doKnightRoll() {
         <button class="btn primary" onclick="knightBoon(3)">Gain a 6-die</button>
       </div>`);
     CB.player.classState.knightLocked = true;
+    if (MP_COMBAT.active) emitMultiplayerCombatAction('turnStart', { rolls: [...CB.player.dicePool] });
   } else {
     log(`Knight rolls ${newDie}. Total: ${CB.player.classState.knightTotal}/${limit}.`, 'player');
     updateCombatUI();
     updatePlayerControls();
+    if (MP_COMBAT.active) emitMultiplayerCombatAction('turnStart', { rolls: [...CB.player.dicePool] });
   }
 }
 
@@ -5723,6 +6378,7 @@ function doFencerReroll() {
   
   updateCombatUI();
   updatePlayerControls();
+  if (MP_COMBAT.active) emitMultiplayerCombatAction('turnStart', { rolls: [...CB.player.dicePool] });
 }
 
 function doDruidPlant() {
@@ -5734,6 +6390,7 @@ function doDruidPlant() {
   log(`Druid plants a ${val}. It will bloom next turn.`,'player');
   updateCombatUI();
   updatePlayerControls();
+  if (MP_COMBAT.active) emitMultiplayerCombatAction('turnStart', { rolls: [...CB.player.dicePool] });
 }
 
 function enterPlantDropZone(evt) {

@@ -1,0 +1,19 @@
+{
+  "name": "loaded-bones-multiplayer",
+  "version": "1.0.0",
+  "description": "Multiplayer PvP backend for LOADED BONES dice and card game",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["game", "multiplayer", "pvp"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^4.7.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
