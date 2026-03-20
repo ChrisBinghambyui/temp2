@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=EB+Garamond:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #c3a253;
+  --secondary-color: #9b9b96;
+  --accent1-color: #faf8e9;
+  --accent2-color: #131315;
+
+  --heading-font: "EB Garamond", Garamond, serif;
+  --paragraph-font: "Cardo", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--accent2-color);
+  font-family: var(--paragraph-font);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(195, 162, 83, 0.2), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(155, 155, 150, 0.18), transparent 45%),
+    linear-gradient(180deg, #f3f0e1 0%, var(--accent1-color) 55%, #ece7d5 100%);
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 230px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem clamp(1rem, 2vw, 2rem);
+  background: color-mix(in srgb, var(--secondary-color) 72%, white 28%);
+  border-bottom: 2px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent2-color);
+  text-decoration: none;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+}
+
+.brand-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border: 1px solid var(--accent2-color);
+  border-radius: 0.25rem;
+  background: var(--accent1-color);
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent2-color);
+  font-family: var(--heading-font);
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  border-bottom-color: var(--primary-color);
+}
+
+.builder {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 1.5rem auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.panel {
+  background: color-mix(in srgb, var(--accent1-color) 92%, white 8%);
+  border: 1px solid color-mix(in srgb, var(--secondary-color) 65%, black 35%);
+  padding: 1rem;
+  box-shadow: 0 6px 14px rgba(19, 19, 21, 0.08);
+  animation: rise 0.5s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-wide {
+  grid-column: 1 / -1;
+}
+
+.mode-select,
+.lineage-select,
+.birthsign-select,
+.derived,
+.equip,
+.spells {
+  grid-column: span 2;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--heading-font);
+}
+
+.subtext {
+  margin: 0.5rem 0;
+  color: color-mix(in srgb, var(--accent2-color) 80%, var(--secondary-color) 20%);
+}
+
+.mode-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mode-card {
+  display: grid;
+  gap: 0.35rem;
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(19, 19, 21, 0.12);
+}
+
+.mode-card.active {
+  border-color: var(--primary-color);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--primary-color) 55%, white 45%);
+  background: color-mix(in srgb, var(--primary-color) 17%, #fffdf5 83%);
+}
+
+.mode-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-title {
+  font-family: var(--heading-font);
+  font-weight: 700;
+}
+
+.mode-copy {
+  color: color-mix(in srgb, var(--accent2-color) 78%, var(--secondary-color) 22%);
+  font-size: 0.95rem;
+}
+
+label,
+select,
+input,
+textarea,
+button {
+  font-family: var(--paragraph-font);
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 0.45rem;
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+}
+
+.skill-controls,
+.choice-grid,
+.attributes-grid,
+.stat-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.attributes-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.attribute-row {
+  border: 1px dashed var(--secondary-color);
+  padding: 0.5rem;
+  background: #fffdf5;
+}
+
+.attribute-row .topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.points-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.points-control button,
+.plus-btn,
+.btn {
+  border: 1px solid var(--accent2-color);
+  background: var(--primary-color);
+  color: var(--accent2-color);
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+.plus-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.adjust-cell {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.minus-btn {
+  background: color-mix(in srgb, var(--secondary-color) 70%, white 30%);
+}
+
+.btn-accent {
+  background: var(--accent2-color);
+  color: var(--accent1-color);
+  border-color: var(--accent1-color);
+}
+
+.pill {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-color) 50%, white 50%);
+  font-weight: 700;
+}
+
+.skill-controls {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 0.6rem;
+}
+
+.pool {
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.45rem;
+  text-align: center;
+}
+
+.skill-pickers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.picker-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid var(--secondary-color);
+  padding: 0.45rem;
+  background: #fffdf5;
+}
+
+.table-wrap {
+  overflow: auto;
+  margin-top: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffdf5;
+}
+
+th,
+td {
+  border: 1px solid var(--secondary-color);
+  padding: 0.4rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.stat-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card {
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.5rem;
+}
+
+.clean-list {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.lineage-detail {
+  margin-top: 0.8rem;
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.7rem;
+}
+
+#archetypeDetail {
+  margin-top: 0.7rem;
+}
+
+#birthsignDetail {
+  margin-top: 0.7rem;
+}
+
+.lineage-detail h3 {
+  margin: 0 0 0.4rem;
+}
+
+.lineage-detail p {
+  margin: 0.25rem 0;
+}
+
+.lineage-detail ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.spell-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.3rem;
+  margin-top: 0.55rem;
+  padding-top: 0.45rem;
+  border-top: 1px dashed var(--secondary-color);
+}
+
+.spell-detail {
+  margin-top: 0.4rem;
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.55rem;
+}
+
+.spell-detail h4 {
+  margin: 0 0 0.35rem;
+  font-family: var(--heading-font);
+}
+
+.spell-detail p {
+  margin: 0.2rem 0;
+}
+
+.detail-muted {
+  color: color-mix(in srgb, var(--accent2-color) 72%, var(--secondary-color) 28%);
+}
+
+.preview {
+  white-space: pre-wrap;
+  background: #121212;
+  color: #f5f5f5;
+  padding: 0.6rem;
+  min-height: 80px;
+  overflow: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.skills-sections {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skill-section {
+  border: 1px solid var(--secondary-color);
+  background: #fffdf5;
+  padding: 0.55rem;
+}
+
+.skill-section h3 {
+  margin: 0 0 0.45rem;
+}
+
+.skill-divider {
+  height: 1px;
+  background: color-mix(in srgb, var(--secondary-color) 60%, white 40%);
+}
+
+.site-footer {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding: 0.8rem;
+  text-align: center;
+  border: 1px solid var(--secondary-color);
+  background: color-mix(in srgb, var(--secondary-color) 25%, var(--accent1-color) 75%);
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .mode-select,
+  .lineage-select,
+  .birthsign-select,
+  .derived,
+  .equip,
+  .spells {
+    grid-column: 1 / -1;
+  }
+
+  .attributes-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-pickers,
+  .skill-controls,
+  .stat-grid,
+  .mode-cards {
+    grid-template-columns: 1fr;
+  }
+}

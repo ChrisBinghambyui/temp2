@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolls & Steel — Character Record</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=IM+Fell+English:ital@0;1&family=Uncial+Antiqua&display=swap');
+
+  :root {
+    --ink: #1a1008;
+    --ink-light: #3a2a18;
+    --parchment: #f4ead5;
+    --parchment-dark: #e8d9b8;
+    --parchment-mid: #ede0c4;
+    --gold: #8b6914;
+    --gold-light: #c4972a;
+    --red: #7a1c1c;
+    --border: #6b4f1e;
+    --line: #c8b080;
+    --shadow: rgba(0,0,0,0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #2a1f0e;
+    font-family: 'IM Fell English', Georgia, serif;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--parchment);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E"),
+      radial-gradient(ellipse at 20% 30%, #f8f0de 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 70%, #e8d4a8 0%, transparent 60%);
+    border: 3px solid var(--border);
+    box-shadow: 0 0 40px rgba(0,0,0,0.6), inset 0 0 60px rgba(139,105,20,0.08);
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media print {
+    @page { size: 8.5in 11in; margin: 0; }
+    body { background: white; padding: 0; gap: 0; }
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      box-shadow: none;
+      border: none;
+    }
+    .bottom-grid {
+      break-before: page;
+      page-break-before: always;
+    }
+  }
+
+  /* Decorative corner pieces - top-left only to avoid bleed onto page 2 */
+  .page::before {
+    content: '';
+    position: absolute;
+    width: 60px; height: 60px;
+    border: 2px solid var(--gold);
+    z-index: 10;
+    pointer-events: none;
+    top: 6px; left: 6px; border-right: none; border-bottom: none;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    background: var(--parchment-dark);
+    color: var(--ink);
+    padding: 10px 14px 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-bottom: 3px solid var(--gold);
+    border-top: 1.5px solid var(--border);
+  }
+
+  .header-emblem {
+    width: 62px; height: 62px;
+    flex-shrink: 0;
+    border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    color: var(--gold);
+    background: var(--parchment-mid);
+  }
+
+  .header-title {
+    flex: 1;
+  }
+  .header-title h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 3px;
+    line-height: 1;
+  }
+  .header-title p {
+    font-family: 'Cinzel', serif;
+    font-size: 8.5px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    margin-top: 3px;
+    text-transform: uppercase;
+  }
+
+  .header-identity {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px 10px;
+    flex: 2.2;
+  }
+  .header-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .header-field label {
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  .header-field .field-line {
+    border-bottom: 1.5px solid var(--border);
+    height: 16px;
+    width: 100%;
+    background: rgba(255,255,255,0.45);
+  }
+
+  /* ─── MAIN GRID ─── */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 110px 210px 1fr 190px;
+    grid-template-rows: auto;
+    gap: 0;
+    padding: 6px;
+  }
+
+  /* ─── PANELS ─── */
+  .panel {
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    position: relative;
+    margin: 3px;
+  }
+
+  .panel-label {
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--parchment);
+    background: var(--ink-light);
+    padding: 2px 4px;
+    border-bottom: 1px solid var(--gold);
+  }
+
+  .panel-label-bottom {
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--parchment);
+    background: var(--ink-light);
+    padding: 2px 4px;
+    border-top: 1px solid var(--gold);
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+  }
+
+  /* ─── COLUMN 1: ATTRIBUTES ─── */
+  .col-attributes {
+    grid-column: 1;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .attr-block {
+    margin: 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 4px 22px;
+    position: relative;
+    min-height: 80px;
+  }
+
+  .attr-name {
+    font-family: 'Cinzel', serif;
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .attr-score-box {
+    width: 46px; height: 46px;
+    border: 2px solid var(--border);
+    background: var(--parchment-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
+  }
+
+  .attr-abbr {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: var(--ink-light);
+    color: var(--parchment);
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 2px;
+    border-top: 1px solid var(--gold);
+  }
+
+  /* ─── COLUMN 2: CENTER-LEFT ─── */
+  .col-center-left {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Derived stats row */
+  .derived-row {
+    display: flex;
+    gap: 0;
+    margin: 3px;
+  }
+  .derived-box {
+    flex: 1;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 4px 18px;
+    position: relative;
+    text-align: center;
+    margin: 0 2px;
+  }
+  .derived-box:first-child { margin-left: 0; }
+  .derived-box:last-child { margin-right: 0; }
+
+  .derived-box .val-box {
+    width: 38px; height: 38px;
+    border: 1.5px solid var(--border);
+    background: var(--parchment-dark);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  /* Leveling panel */
+  .level-panel {
+    margin: 0 3px 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    padding: 6px 8px;
+  }
+
+  .tally-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 4px 0;
+  }
+  .tally-label {
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    letter-spacing: 1px;
+    color: var(--ink-light);
+    width: 95px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+  }
+  .tally-boxes {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+  .tally-box {
+    width: 9px; height: 9px;
+    border: 1px solid var(--border);
+    background: var(--parchment-dark);
+  }
+
+  /* Saving throws / misc derived */
+  .misc-derived {
+    margin: 0 3px 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    padding: 4px 6px;
+  }
+  .misc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding: 2px 0;
+    font-size: 8px;
+  }
+  .misc-row:last-child { border-bottom: none; }
+  .misc-row .mlabel {
+    font-family: 'Cinzel', serif;
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .misc-row .mval {
+    border-bottom: 1px solid var(--border);
+    width: 36px;
+    height: 13px;
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* HP/MP/FP pools */
+  .pools-section {
+    margin: 0 3px 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .pool-panel {
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    position: relative;
+  }
+  .pool-content {
+    padding: 4px 6px 6px;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .pool-big {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .pool-label-sm {
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    letter-spacing: 1px;
+    color: var(--ink-light);
+    text-transform: uppercase;
+  }
+  .pool-box {
+    width: 100%;
+    height: 22px;
+    border: 1px solid var(--border);
+    background: var(--parchment-dark);
+  }
+
+  /* Death saves / status */
+  .status-panel {
+    margin: 0 3px 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    padding: 5px 7px;
+  }
+  .status-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 3px 0;
+  }
+  .status-circle {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: var(--parchment-dark);
+    flex-shrink: 0;
+  }
+  .status-text {
+    font-family: 'Cinzel', serif;
+    font-size: 7px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    flex: 1;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+  }
+
+  /* ─── COLUMN 3: CENTER-RIGHT SKILLS ─── */
+  .col-skills {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3px;
+    margin: 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    padding: 4px 6px;
+  }
+
+  .skill-row {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 1px solid var(--line);
+    padding: 2.5px 0;
+    min-width: 0;
+  }
+  .skill-cb {
+    width: 9px; height: 9px;
+    border: 1px solid var(--border);
+    background: var(--parchment-dark);
+    flex-shrink: 0;
+  }
+  .skill-val {
+    width: 24px;
+    height: 12px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.3);
+    flex-shrink: 0;
+  }
+  .skill-name {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 7.5px;
+    color: var(--ink);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .skill-attr {
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    color: var(--gold);
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+  }
+
+  /* Combat section below skills */
+  .combat-section {
+    margin: 0 3px 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+  }
+
+  .weapon-row {
+    border-bottom: 1px solid var(--line);
+    padding: 5px 6px;
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    gap: 4px;
+    align-items: center;
+  }
+  .weapon-row:last-child { border-bottom: none; }
+  .weapon-name-field {
+    border-bottom: 1px solid var(--border);
+    height: 14px;
+    background: rgba(255,255,255,0.3);
+  }
+  .weapon-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+  .weapon-cell label {
+    font-family: 'Cinzel', serif;
+    font-size: 5.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .weapon-cell .wval {
+    width: 36px;
+    height: 14px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* Armor row */
+  .ar-row {
+    display: flex;
+    gap: 4px;
+    padding: 4px 6px;
+    border-bottom: 1px solid var(--line);
+    align-items: center;
+  }
+  .ar-cell {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ar-cell label {
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+  .ar-box {
+    width: 100%;
+    height: 16px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.3);
+  }
+
+  /* ─── COLUMN 4: RIGHT PANEL ─── */
+  .col-right {
+    grid-column: 4;
+    grid-row: 1 / 4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-panel {
+    margin: 3px 3px 0 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    flex: 1;
+    padding: 4px 7px 6px;
+    display: flex;
+    flex-direction: column;
+  }
+  .right-panel:last-child { margin-bottom: 3px; }
+
+  .right-panel .rp-label {
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  .lined-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .write-line {
+    border-bottom: 1px solid var(--line);
+    height: 16px;
+    width: 100%;
+  }
+
+  .trait-row {
+    display: flex;
+    gap: 3px;
+    align-items: flex-start;
+    margin: 2px 0;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+  }
+  .trait-name-field {
+    flex: 1.2;
+    border-bottom: 1px solid transparent;
+    height: 14px;
+    font-size: 7px;
+    font-family: 'IM Fell English', serif;
+  }
+  .trait-colon {
+    font-size: 8px;
+    color: var(--gold);
+    line-height: 14px;
+  }
+  .trait-desc-field {
+    flex: 2;
+    border-bottom: 1px solid transparent;
+    height: 14px;
+  }
+
+  /* ─── BOTTOM SECTION ─── */
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    padding: 0 6px 6px;
+    break-before: page;
+    page-break-before: always;
+  }
+
+  .bottom-panel {
+    margin: 3px;
+    border: 1.5px solid var(--border);
+    background: rgba(255,255,255,0.18);
+    position: relative;
+  }
+
+  .spell-entry {
+    border-bottom: 1px solid var(--line);
+    padding: 4px 6px;
+  }
+  .spell-entry:last-child { border-bottom: none; }
+
+  .spell-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 0.5fr;
+    gap: 4px;
+    margin-bottom: 2px;
+  }
+  .spell-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+  .spell-field label {
+    font-family: 'Cinzel', serif;
+    font-size: 5.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--ink-light);
+  }
+  .spell-field .sval {
+    height: 13px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.3);
+  }
+  .spell-effect-line {
+    border-bottom: 1px solid var(--line);
+    height: 12px;
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  .inventory-row {
+    display: grid;
+    grid-template-columns: 1fr 40px 80px;
+    gap: 4px;
+    border-bottom: 1px solid var(--line);
+    padding: 3px 6px;
+    align-items: center;
+  }
+  .inventory-row:last-child { border-bottom: none; }
+  .inv-field {
+    height: 13px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255,255,255,0.3);
+  }
+  .inv-label {
+    font-family: 'Cinzel', serif;
+    font-size: 5.5px;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .cond-boxes {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+  }
+  .cond-box {
+    width: 12px; height: 13px;
+    border: 1px solid var(--border);
+    background: var(--parchment-dark);
+    font-family: 'Cinzel', serif;
+    font-size: 6px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink-light);
+  }
+
+  /* Footer note */
+  .footer-note {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 6.5px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    padding: 5px;
+    border-top: 1px solid var(--line);
+    text-transform: uppercase;
+  }
+
+  /* Section dividers */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 0 6px;
+  }
+
+  /* Gold dot ornament */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-size: 10px;
+    line-height: 1;
+    padding: 2px 0;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; width: 100%; border: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <div class="header">
+    <div class="header-emblem">⚔</div>
+    <div class="header-title">
+      <h1>Scrolls &amp; Steel</h1>
+      <p>Character Record</p>
+    </div>
+    <div class="header-identity">
+      <div class="header-field">
+        <label>Character Name</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="header-field">
+        <label>Lineage (Race)</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="header-field">
+        <label>Archetype</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="header-field">
+        <label>Birthsign</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="header-field">
+        <label>Level</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="header-field">
+        <label>Player Name</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ MAIN GRID ══════════════ -->
+  <div class="main-grid">
+
+    <!-- ── COL 1: CORE ATTRIBUTES ── -->
+    <div class="col-attributes">
+      <div style="margin:3px 3px 1px; font-family:'Cinzel',serif; font-size:6.5px; font-weight:700; letter-spacing:2px; text-align:center; text-transform:uppercase; color:var(--parchment); background:var(--ink-light); padding:2px 4px; border-bottom:1px solid var(--gold);">Attributes</div>
+
+      <div class="attr-block">
+        <div class="attr-name">Strength</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">STR · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Endurance</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">END · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Agility</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">AGI · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Speed</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">SPD · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Intelligence</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">INT · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Willpower</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">WIL · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Personality</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">PER · Cap 100</div>
+      </div>
+      <div class="attr-block">
+        <div class="attr-name">Luck</div>
+        <div class="attr-score-box"></div>
+        <div class="attr-abbr">LCK · Cap 100</div>
+      </div>
+    </div>
+
+    <!-- ── COL 2: CENTER-LEFT ── -->
+    <div class="col-center-left">
+
+      <!-- Derived Top Row: Initiative, AR, Movement -->
+      <div class="derived-row">
+        <div class="derived-box">
+          <div class="val-box"></div>
+          <div class="panel-label-bottom" style="position:relative;border-top:1px solid var(--gold);margin-top:3px;">Initiative</div>
+        </div>
+        <div class="derived-box">
+          <div class="val-box"></div>
+          <div class="panel-label-bottom" style="position:relative;border-top:1px solid var(--gold);margin-top:3px;">Move (m)</div>
+        </div>
+        <div class="derived-box">
+          <div class="val-box"></div>
+          <div class="panel-label-bottom" style="position:relative;border-top:1px solid var(--gold);margin-top:3px;">Carry Wgt</div>
+        </div>
+      </div>
+
+      <!-- Pools: HP / FP / MP -->
+      <div class="pools-section">
+        <div class="pool-panel">
+          <div class="panel-label">Health Points (HP)</div>
+          <div class="pool-content">
+            <div class="pool-big">
+              <div class="pool-label-sm">Current</div>
+              <div class="pool-box"></div>
+            </div>
+            <div style="font-family:'Cinzel',serif;font-size:8px;color:var(--gold);line-height:22px;">/</div>
+            <div class="pool-big">
+              <div class="pool-label-sm">Maximum</div>
+              <div class="pool-box"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pool-panel">
+          <div class="panel-label">Fatigue Points (FP)</div>
+          <div class="pool-content">
+            <div class="pool-big">
+              <div class="pool-label-sm">Current</div>
+              <div class="pool-box"></div>
+            </div>
+            <div style="font-family:'Cinzel',serif;font-size:8px;color:var(--gold);line-height:22px;">/</div>
+            <div class="pool-big">
+              <div class="pool-label-sm">Maximum</div>
+              <div class="pool-box"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pool-panel">
+          <div class="panel-label">Magicka Points (MP)</div>
+          <div class="pool-content">
+            <div class="pool-big">
+              <div class="pool-label-sm">Current</div>
+              <div class="pool-box"></div>
+            </div>
+            <div style="font-family:'Cinzel',serif;font-size:8px;color:var(--gold);line-height:22px;">/</div>
+            <div class="pool-big">
+              <div class="pool-label-sm">Maximum</div>
+              <div class="pool-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leveling Tally -->
+      <div class="level-panel">
+        <div class="panel-label" style="margin:-6px -8px 5px;border-bottom:1px solid var(--gold);">Leveling Tally</div>
+        <div class="tally-row">
+          <div class="tally-label">Major (Level @ 10)</div>
+          <div class="tally-boxes">
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+          </div>
+        </div>
+        <div class="tally-row">
+          <div class="tally-label">Minor (Bonus @ 20)</div>
+          <div class="tally-boxes">
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+            <div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div><div class="tally-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Misc Derived Stats -->
+      <div class="misc-derived">
+        <div class="panel-label" style="margin:-4px -6px 4px;border-bottom:1px solid var(--gold);">Derived Statistics</div>
+        <div class="misc-row">
+          <span class="mlabel">Luck Bonus / Points</span>
+          <div class="mval"></div>
+        </div>
+        <div class="misc-row">
+          <span class="mlabel">Melee Damage Bonus</span>
+          <div class="mval"></div>
+        </div>
+        <div class="misc-row">
+          <span class="mlabel">Agility Damage Bonus</span>
+          <div class="mval"></div>
+        </div>
+        <div class="misc-row">
+          <span class="mlabel">Death Threshold (−HP)</span>
+          <div class="mval"></div>
+        </div>
+      </div>
+
+      <!-- Status & Conditions -->
+      <div class="status-panel">
+        <div class="panel-label" style="margin:-5px -7px 5px;border-bottom:1px solid var(--gold);">Status &amp; Conditions</div>
+        <div class="status-row">
+          <div class="status-circle"></div>
+          <div class="status-text" style="font-size:6.5px;">Staggered <span style="color:var(--red)">(0 FP · +10 to rolls, no spells)</span></div>
+        </div>
+        <div class="status-row">
+          <div class="status-circle"></div>
+          <div class="status-text" style="font-size:6.5px;">Knocked Down <span style="color:var(--red)">(Full Action to stand)</span></div>
+        </div>
+        <div class="status-row">
+          <div class="status-circle"></div>
+          <div class="status-text" style="font-size:6.5px;">Dying <span style="color:var(--red)">(0 HP · see Death Threshold)</span></div>
+        </div>
+        <div style="margin-top:4px;font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;color:var(--ink-light);">Active Diseases / Poisons</div>
+        <div class="write-line" style="margin-top:2px;"></div>
+        <div style="margin-top:4px;font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;color:var(--ink-light);">Other Conditions</div>
+        <div class="write-line" style="margin-top:2px;"></div>
+      </div>
+
+      <!-- COMBAT CHEAT SHEET -->
+      <div style="margin:0 3px 3px; border:1.5px solid #7a5c2e; background:#f0e6c8; position:relative; flex:1;">
+        <div style="font-family:'Cinzel',serif;font-size:6.5px;font-weight:700;letter-spacing:2px;text-align:center;text-transform:uppercase;color:#f0e6c8;background:#5a3e1a;padding:2px 4px;border-bottom:1px solid #a07830;">⚔ Combat Reference ⚔</div>
+        <div style="padding:4px 6px; font-family:'Cinzel',serif; font-size:6.5px; color:#3a2208; line-height:1.5;">
+
+          <div style="font-weight:700;letter-spacing:1px;border-bottom:1px solid #b09050;margin-bottom:2px;padding-bottom:1px;color:#5a3e1a;">ACTION ECONOMY</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">Action:</span> Attack, Cast Spell, Use Item, Grapple</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">Bonus:</span> Off-hand attack, Quick draw, Short spell</div>
+          <div style="margin-bottom:4px;"><span style="color:#7a5010;font-weight:700;">Reaction:</span> Block, Dodge, Opportunity attack</div>
+
+          <div style="font-weight:700;letter-spacing:1px;border-bottom:1px solid #b09050;margin-bottom:2px;padding-bottom:1px;color:#5a3e1a;">ATTACK ROLL</div>
+          <div style="margin-bottom:1px;">Roll d100 ≤ <span style="color:#7a5010;font-weight:700;">Skill + Luck Bonus</span> to hit</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">Critical:</span> Roll ≤ 10% of skill value</div>
+          <div style="margin-bottom:4px;"><span style="color:#7a5010;font-weight:700;">Fumble:</span> Roll 96–100</div>
+
+          <div style="font-weight:700;letter-spacing:1px;border-bottom:1px solid #b09050;margin-bottom:2px;padding-bottom:1px;color:#5a3e1a;">DAMAGE &amp; DEFENSE</div>
+          <div style="margin-bottom:1px;">Damage − <span style="color:#7a5010;font-weight:700;">Total AR</span> = HP lost</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">1H + Shield:</span> +5 to-hit penalty</div>
+          <div style="margin-bottom:4px;"><span style="color:#7a5010;font-weight:700;">Spells:</span> Cost MP + 1 FP on cast</div>
+
+          <div style="font-weight:700;letter-spacing:1px;border-bottom:1px solid #b09050;margin-bottom:2px;padding-bottom:1px;color:#5a3e1a;">CONDITIONS</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">Staggered (0 FP):</span> +10 to rolls, no spells, Disadv. attacks</div>
+          <div style="margin-bottom:1px;"><span style="color:#7a5010;font-weight:700;">Knocked Down:</span> Full Action to stand</div>
+          <div><span style="color:#7a5010;font-weight:700;">Dying (0 HP):</span> Death at −[Threshold] HP</div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── COL 3: SKILLS + COMBAT ── -->
+    <div class="col-skills">
+
+      <!-- SKILLS -->
+      <div class="skills-grid">
+        <div style="grid-column:1/-1; font-family:'Cinzel',serif; font-size:6.5px; font-weight:700; letter-spacing:2px; text-align:center; text-transform:uppercase; color:var(--parchment); background:var(--ink-light); padding:2px; border-bottom:1px solid var(--gold); margin:-4px -6px 3px;">
+          Skills · ✓ on meaningful use · Misc needs 2 ticks
+        </div>
+
+        <!-- Left column -->
+        <div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Long Blade</span><span class="skill-attr">STR/AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Short Blade</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Blunt Weapon</span><span class="skill-attr">STR</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Axe</span><span class="skill-attr">STR</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Spear</span><span class="skill-attr">STR/AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Marksman</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Block</span><span class="skill-attr">STR/AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Fistfight</span><span class="skill-attr">STR/DEX</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Unarmored</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Light Armor</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Medium Armor</span><span class="skill-attr">END</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Heavy Armor</span><span class="skill-attr">END/STR</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Athletics</span><span class="skill-attr">SPD/END</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Acrobatics</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Sneak</span><span class="skill-attr">AGI</span></div>
+          <div class="skill-row" style="border-bottom:none"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Security</span><span class="skill-attr">AGI/INT</span></div>
+        </div>
+
+        <!-- Right column -->
+        <div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Speechcraft</span><span class="skill-attr">PER</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Mercantile</span><span class="skill-attr">PER/INT</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Alchemy</span><span class="skill-attr">INT</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Enchanting</span><span class="skill-attr">INT/WIL</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Conjuration</span><span class="skill-attr">INT/WIL</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Alteration</span><span class="skill-attr">INT/WIL</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Elementalism</span><span class="skill-attr">INT/WIL</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Illusion</span><span class="skill-attr">INT/PER</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Divination</span><span class="skill-attr">WIL/INT</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Vitalism</span><span class="skill-attr">WIL</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name">Armorer</span><span class="skill-attr">STR/INT</span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name" style="color:var(--gold);font-style:italic;">——</span><span class="skill-attr"></span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name" style="color:var(--gold);font-style:italic;">——</span><span class="skill-attr"></span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name" style="color:var(--gold);font-style:italic;">——</span><span class="skill-attr"></span></div>
+          <div class="skill-row"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name" style="color:var(--gold);font-style:italic;">——</span><span class="skill-attr"></span></div>
+          <div class="skill-row" style="border-bottom:none"><div class="skill-cb"></div><div class="skill-val"></div><span class="skill-name" style="color:var(--gold);font-style:italic;">——</span><span class="skill-attr"></span></div>
+        </div>
+      </div>
+
+      <!-- COMBAT: Armor Rating -->
+      <div class="combat-section">
+        <div class="panel-label">Combat &amp; Defense</div>
+        <div class="ar-row">
+          <div class="ar-cell">
+            <label>Base AR</label>
+            <div class="ar-box"></div>
+          </div>
+          <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--gold);align-self:flex-end;padding-bottom:2px;">+</div>
+          <div class="ar-cell">
+            <label>Skill Bonus</label>
+            <div class="ar-box"></div>
+          </div>
+          <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--gold);align-self:flex-end;padding-bottom:2px;">+</div>
+          <div class="ar-cell">
+            <label>Shield Bonus</label>
+            <div class="ar-box"></div>
+          </div>
+          <div style="font-family:'Cinzel',serif;font-size:10px;color:var(--gold);align-self:flex-end;padding-bottom:2px;">=</div>
+          <div class="ar-cell">
+            <label>Total AR</label>
+            <div class="ar-box" style="border-bottom:2px solid var(--border);font-weight:700;"></div>
+          </div>
+        </div>
+
+        <!-- Weapons -->
+        <div style="padding:2px 6px;font-family:'Cinzel',serif;font-size:6px;color:var(--ink-light);letter-spacing:0.5px;border-bottom:1px solid var(--line);">
+          Weapons · Base Roll = Target Skill + Luck Bonus · One-handed + shield: +5 penalty
+        </div>
+
+        <!-- Weapon header -->
+        <div style="display:grid;grid-template-columns:1fr 46px 46px 30px 60px;gap:4px;padding:2px 6px;background:rgba(0,0,0,0.04);border-bottom:1px solid var(--line);">
+          <div class="inv-label" style="text-align:left;">Weapon Name</div>
+          <div class="inv-label">Prim. Dmg</div>
+          <div class="inv-label">Sec. Dmg</div>
+          <div class="inv-label">FP</div>
+          <div class="inv-label">Tags / Cond</div>
+        </div>
+
+        <div class="weapon-row" style="display:grid;grid-template-columns:1fr 46px 46px 30px 60px;gap:4px;padding:4px 6px;border-bottom:1px solid var(--line);">
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+        </div>
+        <div class="weapon-row" style="display:grid;grid-template-columns:1fr 46px 46px 30px 60px;gap:4px;padding:4px 6px;border-bottom:1px solid var(--line);">
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+        </div>
+        <div class="weapon-row" style="display:grid;grid-template-columns:1fr 46px 46px 30px 60px;gap:4px;padding:4px 6px;">
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+          <div class="weapon-name-field"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── COL 4: RIGHT PANEL ── -->
+    <div class="col-right">
+
+      <!-- Innate Traits -->
+      <div class="right-panel">
+        <div class="rp-label">Innate Traits</div>
+        <div style="margin-bottom:3px;">
+          <div style="font-family:'Cinzel',serif;font-size:6.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Racial Ability</div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+        </div>
+        <div style="margin-bottom:3px;">
+          <div style="font-family:'Cinzel',serif;font-size:6.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Birthsign Boon</div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+        </div>
+        <div>
+          <div style="font-family:'Cinzel',serif;font-size:6.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Archetype Bonus</div>
+          <div class="write-line"></div>
+          <div class="write-line"></div>
+        </div>
+      </div>
+
+      <!-- Diseases & Afflictions -->
+      <div class="right-panel">
+        <div class="rp-label">Diseases &amp; Afflictions</div>
+        <div class="lined-area">
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row" style="border-bottom:none"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        </div>
+      </div>
+
+      <!-- Additional Notes -->
+      <div class="right-panel" style="flex:1.5">
+        <div class="rp-label">Companions &amp; Allies</div>
+        <div class="lined-area">
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row" style="border-bottom:none"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        </div>
+      </div>
+
+      <!-- Factions & Reputation -->
+      <div class="right-panel" style="flex:1.2">
+        <div class="rp-label">Factions &amp; Reputation</div>
+        <div class="lined-area">
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+          <div class="trait-row" style="border-bottom:none"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div><!-- /main-grid -->
+
+  <div class="section-divider"></div>
+
+  <!-- ══════════════ BOTTOM SECTION ══════════════ -->
+  <div class="bottom-grid">
+
+    <!-- SPELLS -->
+    <div class="bottom-panel">
+      <div class="panel-label">Magic &amp; Spells · Cost: MP + 1 FP per casting</div>
+
+      <div class="spell-entry">
+        <div class="spell-top">
+          <div class="spell-field"><label>Spell Name</label><div class="sval"></div></div>
+          <div class="spell-field"><label>School</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Rank</label><div class="sval"></div></div>
+          <div class="spell-field"><label>MP Cost</label><div class="sval"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:2px;">
+          <div class="spell-field"><label>Range</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Duration</label><div class="sval"></div></div>
+        </div>
+        <div style="font-family:'Cinzel',serif;font-size:5.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Effect</div>
+        <div class="spell-effect-line"></div>
+        <div class="spell-effect-line"></div>
+      </div>
+
+      <div class="spell-entry">
+        <div class="spell-top">
+          <div class="spell-field"><label>Spell Name</label><div class="sval"></div></div>
+          <div class="spell-field"><label>School</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Rank</label><div class="sval"></div></div>
+          <div class="spell-field"><label>MP Cost</label><div class="sval"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:2px;">
+          <div class="spell-field"><label>Range</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Duration</label><div class="sval"></div></div>
+        </div>
+        <div style="font-family:'Cinzel',serif;font-size:5.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Effect</div>
+        <div class="spell-effect-line"></div>
+        <div class="spell-effect-line"></div>
+      </div>
+
+      <div class="spell-entry" style="border-bottom:none">
+        <div class="spell-top">
+          <div class="spell-field"><label>Spell Name</label><div class="sval"></div></div>
+          <div class="spell-field"><label>School</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Rank</label><div class="sval"></div></div>
+          <div class="spell-field"><label>MP Cost</label><div class="sval"></div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:2px;">
+          <div class="spell-field"><label>Range</label><div class="sval"></div></div>
+          <div class="spell-field"><label>Duration</label><div class="sval"></div></div>
+        </div>
+        <div style="font-family:'Cinzel',serif;font-size:5.5px;text-transform:uppercase;color:var(--ink-light);letter-spacing:0.5px;">Effect</div>
+        <div class="spell-effect-line"></div>
+        <div class="spell-effect-line"></div>
+      </div>
+      <div class="panel-label-bottom">Schools: Conjuration · Alteration · Elementalism · Illusion · Divination · Vitalism</div>
+    </div>
+
+    <!-- INVENTORY -->
+    <div class="bottom-panel">
+      <div class="panel-label">Inventory &amp; Equipment</div>
+
+      <!-- Gold row -->
+      <div style="display:flex;align-items:center;gap:8px;padding:4px 8px;border-bottom:1px solid var(--line);">
+        <span style="font-family:'Cinzel',serif;font-size:7px;text-transform:uppercase;color:var(--ink-light);letter-spacing:1px;">Gold (Currency):</span>
+        <div style="flex:1;border-bottom:1px solid var(--border);height:14px;background:rgba(255,255,255,0.3);"></div>
+      </div>
+
+      <!-- Header -->
+      <div style="display:grid;grid-template-columns:1fr 32px 70px;gap:4px;padding:2px 6px;background:rgba(0,0,0,0.04);border-bottom:1px solid var(--line);">
+        <div class="inv-label" style="text-align:left;">Item / Kit</div>
+        <div class="inv-label">Wgt</div>
+        <div class="inv-label">Condition</div>
+      </div>
+
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+      <div class="inventory-row" style="border-bottom:none">
+        <div class="inv-field"></div>
+        <div class="inv-field"></div>
+        <div class="cond-boxes">
+          <div class="cond-box">P</div><div class="cond-box">G</div><div class="cond-box">W</div><div class="cond-box">D</div><div class="cond-box">B</div>
+        </div>
+      </div>
+
+      <div class="panel-label-bottom">P=Perfect · G=Good · W=Worn · D=Damaged · B=Broken</div>
+    </div>
+
+    <!-- ABILITIES / FEATURES -->
+    <div class="bottom-panel">
+      <div class="panel-label">Features &amp; Traits</div>
+      <div style="padding:5px 7px; display:flex; flex-direction:column; gap:2px; height:100%;">
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+      <div class="panel-label-bottom">Other Proficiencies &amp; Languages</div>
+    </div>
+
+  </div><!-- /bottom-grid -->
+
+  <!-- ══════════════ PAGE 2 LOWER COLUMNS ══════════════ -->
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:0; padding:0 6px 6px; flex:1; min-height:0;">
+
+    <!-- FEATS & BOONS -->
+    <div class="bottom-panel" style="margin:3px; min-height:6in;">
+      <div class="panel-label">Feats &amp; Boons</div>
+      <div style="padding:5px 8px 6px; display:flex; flex-direction:column; gap:0;">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:4px;padding:2px 0 3px;border-bottom:1px solid var(--border);margin-bottom:2px;">
+          <div style="font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-light);">Feat / Boon</div>
+          <div style="font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-light);">Effect / Description</div>
+        </div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+        <div class="trait-row" style="border-bottom:none"><div class="trait-name-field" style="border-bottom:1px solid var(--line)"></div><div class="trait-colon">:</div><div class="trait-desc-field" style="border-bottom:1px solid var(--line)"></div></div>
+      </div>
+    </div>
+
+    <!-- QUESTS -->
+    <div class="bottom-panel" style="margin:3px; min-height:6in;">
+      <div class="panel-label">Quest Log</div>
+      <div style="padding:5px 8px 6px; display:flex; flex-direction:column; gap:0;">
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;padding:2px 0 3px;border-bottom:1px solid var(--border);margin-bottom:2px;">
+          <div style="font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-light);">✓</div>
+          <div style="font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-light);">Quest / Objective</div>
+          <div style="font-family:'Cinzel',serif;font-size:6px;text-transform:uppercase;letter-spacing:0.5px;color:var(--ink-light);text-align:center;">Status</div>
+        </div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;border-bottom:1px solid var(--line);padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+        <div style="display:grid;grid-template-columns:16px 1fr 44px;gap:4px;padding:3px 0;align-items:center;"><div class="tally-box" style="width:10px;height:10px;"></div><div style="height:13px;"></div><div style="border-bottom:1px solid var(--line);height:13px;"></div></div>
+      </div>
+    </div>
+
+  </div><!-- /page 2 lower columns -->
+
+  <div class="footer-note">✦ &nbsp; Scrolls &amp; Steel TTRPG &nbsp;·&nbsp; Character Record &nbsp; ✦</div>
+
+</div>
+</body>
+</html>
