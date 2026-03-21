@@ -76,13 +76,13 @@ class MultiplayerManager {
         this.playerId = this.socket.id;
         this.isHost = true;
         this.mode = 'multiplayer';
-
-        if (profile && typeof profile === 'object') {
-          this.updateProfile(profile, () => callback(response));
-          return;
-        }
       }
       callback(response);
+
+      // Profile sync is best-effort and must never block room creation UI.
+      if (response.success && profile && typeof profile === 'object') {
+        this.updateProfile(profile, () => {});
+      }
     });
   }
 
@@ -105,13 +105,13 @@ class MultiplayerManager {
         this.playerId = this.socket.id;
         this.isHost = false;
         this.mode = 'multiplayer';
-
-        if (profile && typeof profile === 'object') {
-          this.updateProfile(profile, () => callback(response));
-          return;
-        }
       }
       callback(response);
+
+      // Profile sync is best-effort and must never block room join UI.
+      if (response.success && profile && typeof profile === 'object') {
+        this.updateProfile(profile, () => {});
+      }
     });
   }
 
