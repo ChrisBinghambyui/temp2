@@ -4813,6 +4813,7 @@ let mpDeckBuilder = {
   selectedCards: [],
   isReady: false,
   opponentReady: false,
+  matchStartRequested: false,
   minDeckSize: 30,
   maxCardCopies: 3,
 };
@@ -4882,7 +4883,13 @@ function bindMultiplayerUiEventsOnce() {
 
   multiplayer.on('bothPlayersDecksReady', (data) => {
     log('Both players ready! Starting match...', 'system');
-    // The proceedToMultiplayerCombat is already called after a short delay in readyDeckForMultiplayer
+    const statusEl = document.getElementById('deck-builder-status');
+    if (multiplayer.isHost) {
+      if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Host is launching match...</span>';
+      proceedToMultiplayerCombat(data?.gameState || null);
+    } else if (statusEl) {
+      statusEl.textContent = 'Both players ready. Waiting for host to launch match...';
+    }
   });
 
   multiplayer.on('gameStarted', (gameState) => {
@@ -4935,6 +4942,7 @@ function resetMultiplayerLobbyPanels() {
   mpDeckBuilder.selectedCards = [];
   mpDeckBuilder.isReady = false;
   mpDeckBuilder.opponentReady = false;
+  mpDeckBuilder.matchStartRequested = false;
 
   selectedMultiplayerClass = '';
   multiplayerBothReady = false;
@@ -5135,6 +5143,7 @@ function showMultiplayerDeckBuilder() {
   mpDeckBuilder.selectedCards = seededDeck.slice(0, mpDeckBuilder.minDeckSize);
   mpDeckBuilder.isReady = false;
   mpDeckBuilder.opponentReady = false;
+  mpDeckBuilder.matchStartRequested = false;
 
   // Notify server that we're moving to deck building phase
   multiplayer.enterDeckBuilder?.((resp) => {
@@ -5331,11 +5340,12 @@ function readyDeckForMultiplayer() {
     }
     
     if (resp?.bothReady) {
-      if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Starting match...</span>';
-      // Wait a moment then start the game
-      setTimeout(() => {
+      if (multiplayer.isHost) {
+        if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Starting match...</span>';
         proceedToMultiplayerCombat(resp.gameState);
-      }, 1000);
+      } else if (statusEl) {
+        statusEl.textContent = 'Both players ready. Waiting for host to launch match...';
+      }
     } else {
       if (statusEl) statusEl.textContent = 'Deck submitted. Waiting for opponent...';
     }
@@ -5343,6 +5353,9 @@ function readyDeckForMultiplayer() {
 }
 
 function proceedToMultiplayerCombat(gameState) {
+  if (mpDeckBuilder.matchStartRequested) return;
+  mpDeckBuilder.matchStartRequested = true;
+
   // Start the actual game with the selected decks
   multiplayer.startGame({
     hpByClass: {
@@ -5355,6 +5368,7 @@ function proceedToMultiplayerCombat(gameState) {
     }
   }, (resp) => {
     if (!resp?.success) {
+      mpDeckBuilder.matchStartRequested = false;
       log('Failed to start match', 'system');
       return;
     }

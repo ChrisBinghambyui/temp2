@@ -64,7 +64,10 @@ class MultiplayerManager {
     }
 
     const isObj = playerData && typeof playerData === 'object';
-    const playerName = isObj ? String(playerData.name || '').trim() : String(playerData || '').trim();
+    const rawName = isObj ? playerData?.name : playerData;
+    const playerName = (typeof rawName === 'string' && rawName.trim() && rawName.trim() !== '[object Object]')
+      ? rawName.trim()
+      : 'Host';
     const profile = isObj ? playerData.profile : null;
 
     this.socket.emit('createRoom', playerName, (response) => {
@@ -90,7 +93,10 @@ class MultiplayerManager {
     }
 
     const isObj = playerData && typeof playerData === 'object';
-    const playerName = isObj ? String(playerData.name || '').trim() : String(playerData || '').trim();
+    const rawName = isObj ? playerData?.name : playerData;
+    const playerName = (typeof rawName === 'string' && rawName.trim() && rawName.trim() !== '[object Object]')
+      ? rawName.trim()
+      : 'Guest';
     const profile = isObj ? playerData.profile : null;
 
     this.socket.emit('joinRoom', roomCode, playerName, (response) => {

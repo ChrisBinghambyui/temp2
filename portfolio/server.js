@@ -19,14 +19,17 @@ const players = new Map(); // socketId -> { name, roomCode, character }
 
 function normalizePlayerPayload(input) {
   if (typeof input === 'string') {
-    return { name: input.trim(), profile: null };
+    const safe = input.trim();
+    return { name: safe && safe !== '[object Object]' ? safe : '', profile: null };
   }
 
-  const name = String(input?.name || '').trim();
+  const name = typeof input?.name === 'string'
+    ? input.name.trim()
+    : '';
   const rawProfile = input?.profile && typeof input.profile === 'object' ? input.profile : null;
 
   if (!rawProfile) {
-    return { name, profile: null };
+    return { name: name !== '[object Object]' ? name : '', profile: null };
   }
 
   const profile = {
@@ -41,7 +44,7 @@ function normalizePlayerPayload(input) {
   };
 
   profile.hp = Math.min(profile.hp, profile.maxHp);
-  return { name, profile };
+  return { name: name !== '[object Object]' ? name : '', profile };
 }
 
 function generateRoomCode() {
