@@ -127,6 +127,50 @@ body {
 .log-entry.defeat { color: var(--blood-bright); }
 .log-entry.loot { color: #a0d0a0; }
 .log-entry.story { color: var(--parchment); font-style: italic; font-size: 12px; }
+.log-entry.player-chat { color: #9be7ff; }
+.log-entry.enemy-chat { color: #ffc1c1; }
+
+#log-chat-row {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--card-border);
+  background: rgba(20, 14, 8, 0.9);
+}
+
+#combat-chat-input {
+  flex: 1;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  color: var(--bone);
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+}
+
+#combat-chat-input:focus {
+  outline: none;
+  border-color: var(--teal);
+}
+
+#combat-chat-send {
+  padding: 8px 10px;
+  min-width: 58px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  background: rgba(42, 107, 94, 0.2);
+  color: var(--bone);
+  font-family: 'Courier Prime', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#combat-chat-send:hover {
+  border-color: var(--teal);
+  background: rgba(42, 107, 94, 0.35);
+}
 
 /* =================== MAIN LAYOUT =================== */
 #main {
@@ -1219,6 +1263,10 @@ input[type="text"]:focus { border-color: var(--gold); }
     <button id="log-close-btn" onclick="toggleLogPanel()">×</button>
   </div>
   <div id="log-entries"></div>
+  <div id="log-chat-row">
+    <input type="text" id="combat-chat-input" maxlength="180" placeholder="Team chat..." onkeydown="if(event.key==='Enter'){sendCombatChat();}">
+    <button id="combat-chat-send" onclick="sendCombatChat()">Send</button>
+  </div>
 </div>
 
 <div id="status-tooltip" class="status-tooltip" hidden></div>
@@ -3910,6 +3958,24 @@ function log(msg, type='system') {
   scheduleLocalizationPass(div);
 }
 
+function sendCombatChat() {
+  const input = document.getElementById('combat-chat-input');
+  if (!input) return;
+
+  const text = String(input.value || '').trim();
+  if (!text) return;
+  input.value = '';
+
+  if (!MP_COMBAT.active || !ensureMultiplayerClient()) {
+    log(`You: ${text}`, 'player-chat');
+    return;
+  }
+
+  const clipped = text.slice(0, 180);
+  log(`You: ${clipped}`, 'player-chat');
+  emitMultiplayerCombatAction('chat', { message: clipped });
+}
+
 function clearLog() {
   document.getElementById('log-entries').innerHTML = '';
 }
@@ -4798,6 +4864,10 @@ function bindMultiplayerUiEventsOnce() {
 
   multiplayer.on('deckBuilderStarted', () => {
     log('Deck-building phase started', 'system');
+    const deckPanel = document.getElementById('lobby-deck-builder');
+    if (!deckPanel || deckPanel.style.display !== 'block') {
+      showMultiplayerDeckBuilder();
+    }
   });
 
   multiplayer.on('opponentDeckReady', (data) => {
@@ -4911,6 +4981,23 @@ function showMultiplayerLobby() {
   showScreen('multiplayer-screen');
 }
 
+function getMultiplayerPlayerProfile(playerName = '') {
+  const currentDeck = Array.isArray(G.deck) ? G.deck.map(c => ({ ...c })) : [];
+  return {
+    name: String(playerName || G.name || 'Adventurer').trim(),
+    profile: {
+      level: Number(G.level) || 1,
+      hp: Number(G.hp) || Number(G.maxHp) || 20,
+      maxHp: Number(G.maxHp) || 20,
+      classId: G.classId || null,
+      className: G.className || null,
+      handLimit: getPlayerHandLimit(),
+      diceLimit: getPlayerDiceLimit(),
+      deck: currentDeck,
+    }
+  };
+}
+
 function createMultiplayerRoom() {
   if (!ensureMultiplayerClient()) return;
 
@@ -4927,7 +5014,7 @@ function createMultiplayerRoom() {
     return;
   }
 
-  multiplayer.createRoom(playerName, (resp) => {
+  multiplayer.createRoom(getMultiplayerPlayerProfile(playerName), (resp) => {
     if (!statusEl) return;
     if (!resp?.success) {
       statusEl.innerHTML = `<span class="danger-text">${resp?.error || 'Failed to create room.'}</span>`;
@@ -4961,7 +5048,7 @@ function joinMultiplayerRoom() {
     return;
   }
 
-  multiplayer.joinRoom(roomCode, playerName, (resp) => {
+  multiplayer.joinRoom(roomCode, getMultiplayerPlayerProfile(playerName), (resp) => {
     if (!statusEl) return;
     if (!resp?.success) {
       statusEl.innerHTML = `<span class="danger-text">${resp?.error || 'Failed to join room.'}</span>`;
@@ -5041,8 +5128,11 @@ function showMultiplayerDeckBuilder() {
   if (characterPanel) characterPanel.style.display = 'none';
   if (deckPanel) deckPanel.style.display = 'block';
 
-  // Initialize deck builder state
-  mpDeckBuilder.selectedCards = [];
+  // Initialize deck builder state from the current active deck when available.
+  const seededDeck = Array.isArray(G.deck) && G.deck.length > 0
+    ? G.deck.map(c => ({ ...c }))
+    : [];
+  mpDeckBuilder.selectedCards = seededDeck.slice(0, mpDeckBuilder.minDeckSize);
   mpDeckBuilder.isReady = false;
   mpDeckBuilder.opponentReady = false;
 
@@ -5357,6 +5447,15 @@ function applyRemoteMultiplayerSnapshot(payload) {
 function handleRemoteCombatAction(payload) {
   if (!MP_COMBAT.active || !payload || payload.actorId === multiplayer.playerId) return;
 
+  if (payload.type === 'chat') {
+    const text = String(payload.message || '').trim();
+    if (text) {
+      const speaker = payload.actorName || 'Opponent';
+      log(`${speaker}: ${text}`, 'enemy-chat');
+    }
+    return;
+  }
+
   if (payload.type === 'turnStart') {
     MP_COMBAT.myTurn = false;
     applyRemoteMultiplayerSnapshot(payload);
@@ -5428,8 +5527,10 @@ function startMultiplayerCombat(gameState) {
   G.classId = localClassId;
   G.className = localClassName;
 
-  const handLimit = getPlayerHandLimit();
-  const diceLimit = getPlayerDiceLimit();
+  const handLimit = Number(local.handLimit) || getPlayerHandLimit();
+  const diceLimit = Number(local.diceLimit) || getPlayerDiceLimit();
+  const enemyHandLimit = Number(remote.handLimit) || handLimit;
+  const enemyDiceLimit = Number(remote.diceLimit) || diceLimit;
   
   // Use deck from gameState if available (from deck builder submission), otherwise fall back to local deck
   const localDeck = Array.isArray(local.deck) && local.deck.length > 0 
@@ -5446,7 +5547,7 @@ function startMultiplayerCombat(gameState) {
     handLimit,
     diceLimit,
     localClassId,
-    G.level || 1,
+    Number(local.level) || G.level || 1,
     Number(local.hp) || Number(local.maxHp) || G.maxHp || 20
   );
 
@@ -5454,10 +5555,10 @@ function startMultiplayerCombat(gameState) {
     remote.name || 'Opponent',
     Number(remote.maxHp) || Number(remote.hp) || 20,
     enemyDeck,
-    handLimit,
-    diceLimit,
+    enemyHandLimit,
+    enemyDiceLimit,
     remoteClassId,
-    G.level || 1,
+    Number(remote.level) || 1,
     Number(remote.hp) || Number(remote.maxHp) || 20
   );
 

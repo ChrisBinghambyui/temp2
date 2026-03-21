@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=EB+Garamond:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Metamorphous&display=swap");
 
 :root {
   --primary-color: #c3a253;
@@ -6,7 +6,7 @@
   --accent1-color: #faf8e9;
   --accent2-color: #131315;
 
-  --heading-font: "EB Garamond", Garamond, serif;
+  --heading-font: "Metamorphous", serif;
   --paragraph-font: "Cardo", Georgia, serif;
 }
 

@@ -56,13 +56,13 @@ class MultiplayerManager {
 
   // ==================== ROOM MANAGEMENT ====================
 
-  createRoom(playerName, callback) {
+  createRoom(playerData, callback) {
     if (!this.isConnected) {
       callback({ success: false, error: 'Not connected to server' });
       return;
     }
 
-    this.socket.emit('createRoom', playerName, (response) => {
+    this.socket.emit('createRoom', playerData, (response) => {
       if (response.success) {
         this.currentRoom = response.roomCode;
         this.playerId = this.socket.id;
@@ -73,13 +73,13 @@ class MultiplayerManager {
     });
   }
 
-  joinRoom(roomCode, playerName, callback) {
+  joinRoom(roomCode, playerData, callback) {
     if (!this.isConnected) {
       callback({ success: false, error: 'Not connected to server' });
       return;
     }
 
-    this.socket.emit('joinRoom', roomCode, playerName, (response) => {
+    this.socket.emit('joinRoom', roomCode, playerData, (response) => {
       if (response.success) {
         this.currentRoom = roomCode;
         this.playerId = this.socket.id;

@@ -17,6 +17,33 @@ app.use(express.json());
 const rooms = new Map(); // roomCode -> { players, gameState, turn }
 const players = new Map(); // socketId -> { name, roomCode, character }
 
+function normalizePlayerPayload(input) {
+  if (typeof input === 'string') {
+    return { name: input.trim(), profile: null };
+  }
+
+  const name = String(input?.name || '').trim();
+  const rawProfile = input?.profile && typeof input.profile === 'object' ? input.profile : null;
+
+  if (!rawProfile) {
+    return { name, profile: null };
+  }
+
+  const profile = {
+    level: Math.max(1, Number(rawProfile.level) || 1),
+    maxHp: Math.max(1, Number(rawProfile.maxHp) || 1),
+    hp: Math.max(1, Number(rawProfile.hp) || 1),
+    classId: typeof rawProfile.classId === 'string' ? rawProfile.classId : null,
+    className: typeof rawProfile.className === 'string' ? rawProfile.className : null,
+    handLimit: Number(rawProfile.handLimit) || null,
+    diceLimit: Number(rawProfile.diceLimit) || null,
+    deck: Array.isArray(rawProfile.deck) ? rawProfile.deck : []
+  };
+
+  profile.hp = Math.min(profile.hp, profile.maxHp);
+  return { name, profile };
+}
+
 function generateRoomCode() {
   return Math.random().toString(36).substring(2, 8).toUpperCase();
 }
@@ -49,7 +76,9 @@ io.on('connection', (socket) => {
   console.log(`Player connected: ${socket.id}`);
 
   // Create a new game room
-  socket.on('createRoom', (playerName, callback) => {
+  socket.on('createRoom', (playerPayload, callback) => {
+    const { name: parsedName, profile } = normalizePlayerPayload(playerPayload);
+    const playerName = parsedName || 'Host';
     const roomCode = createRoom();
     const room = getRoom(roomCode);
     
@@ -58,16 +87,19 @@ io.on('connection', (socket) => {
       name: playerName,
       roomCode: roomCode,
       character: null,
-      isHost: true
+      isHost: true,
+      profile
     });
-    room.players.push({ socketId: socket.id, name: playerName, isHost: true });
+    room.players.push({ socketId: socket.id, name: playerName, isHost: true, profile });
     
     console.log(`Room created: ${roomCode} by ${playerName}`);
     callback({ success: true, roomCode });
   });
 
   // Join an existing game room
-  socket.on('joinRoom', (roomCode, playerName, callback) => {
+  socket.on('joinRoom', (roomCode, playerPayload, callback) => {
+    const { name: parsedName, profile } = normalizePlayerPayload(playerPayload);
+    const playerName = parsedName || 'Guest';
     const room = getRoom(roomCode);
     
     if (!room) {
@@ -90,9 +122,10 @@ io.on('connection', (socket) => {
       name: playerName,
       roomCode: roomCode,
       character: null,
-      isHost: false
+      isHost: false,
+      profile
     });
-    room.players.push({ socketId: socket.id, name: playerName, isHost: false });
+    room.players.push({ socketId: socket.id, name: playerName, isHost: false, profile });
     
     console.log(`${playerName} joined room: ${roomCode}`);
     
@@ -215,14 +248,24 @@ io.on('connection', (socket) => {
       players: room.players.map(p => {
         // Get the submitted deck for this player, or use empty array as fallback
         const submittedDeck = room.deckSubmissions?.[p.socketId]?.deck || [];
+        const profile = p.profile || {};
+        const profileDeck = Array.isArray(profile.deck) ? profile.deck : [];
+        const deck = submittedDeck.length > 0 ? submittedDeck : profileDeck;
+        const classKey = p.character;
+        const fallbackClassHp = gameData.hpByClass[classKey] || 20;
+        const maxHp = Math.max(1, Number(profile.maxHp) || fallbackClassHp);
+        const hp = Math.max(1, Math.min(maxHp, Number(profile.hp) || maxHp));
         
         return {
           socketId: p.socketId,
           name: p.name,
           character: p.character,
-          hp: gameData.hpByClass[p.character] || 20,
-          maxHp: gameData.hpByClass[p.character] || 20,
-          deck: submittedDeck,
+          level: Math.max(1, Number(profile.level) || 1),
+          handLimit: Number(profile.handLimit) || null,
+          diceLimit: Number(profile.diceLimit) || null,
+          hp,
+          maxHp,
+          deck,
           dicePool: [],
           hand: [],
           shield: 0,
