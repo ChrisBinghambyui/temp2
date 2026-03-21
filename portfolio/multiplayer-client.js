@@ -26,6 +26,7 @@ class MultiplayerManager {
     this.socket.on('connect', () => {
       console.log('Connected to multiplayer server');
       this.isConnected = true;
+      this.playerId = this.socket.id;
       this.emit('connected');
     });
 
@@ -62,12 +63,21 @@ class MultiplayerManager {
       return;
     }
 
-    this.socket.emit('createRoom', playerData, (response) => {
+    const isObj = playerData && typeof playerData === 'object';
+    const playerName = isObj ? String(playerData.name || '').trim() : String(playerData || '').trim();
+    const profile = isObj ? playerData.profile : null;
+
+    this.socket.emit('createRoom', playerName, (response) => {
       if (response.success) {
         this.currentRoom = response.roomCode;
         this.playerId = this.socket.id;
         this.isHost = true;
         this.mode = 'multiplayer';
+
+        if (profile && typeof profile === 'object') {
+          this.updateProfile(profile, () => callback(response));
+          return;
+        }
       }
       callback(response);
     });
@@ -79,13 +89,33 @@ class MultiplayerManager {
       return;
     }
 
-    this.socket.emit('joinRoom', roomCode, playerData, (response) => {
+    const isObj = playerData && typeof playerData === 'object';
+    const playerName = isObj ? String(playerData.name || '').trim() : String(playerData || '').trim();
+    const profile = isObj ? playerData.profile : null;
+
+    this.socket.emit('joinRoom', roomCode, playerName, (response) => {
       if (response.success) {
         this.currentRoom = roomCode;
         this.playerId = this.socket.id;
         this.isHost = false;
         this.mode = 'multiplayer';
+
+        if (profile && typeof profile === 'object') {
+          this.updateProfile(profile, () => callback(response));
+          return;
+        }
       }
+      callback(response);
+    });
+  }
+
+  updateProfile(profile, callback = () => {}) {
+    if (!this.isConnected || !this.currentRoom) {
+      callback({ success: false, error: 'Not in a room' });
+      return;
+    }
+
+    this.socket.emit('updateProfile', profile, (response) => {
       callback(response);
     });
   }

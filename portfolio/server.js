@@ -45,7 +45,13 @@ function normalizePlayerPayload(input) {
 }
 
 function generateRoomCode() {
-  return Math.random().toString(36).substring(2, 8).toUpperCase();
+  const alphabet = 'ABCDEFGHIJKLMNPQRSTUVWXYZ123456789';
+  let code = '';
+  for (let i = 0; i < 6; i++) {
+    const idx = Math.floor(Math.random() * alphabet.length);
+    code += alphabet[idx];
+  }
+  return code;
 }
 
 function createRoom() {
@@ -136,6 +142,34 @@ io.on('connection', (socket) => {
     });
     
     callback({ success: true, roomCode });
+  });
+
+  socket.on('updateProfile', (profilePayload, callback) => {
+    const player = players.get(socket.id);
+    if (!player) {
+      if (callback) callback({ success: false, error: 'Player not found' });
+      return;
+    }
+
+    const room = getRoom(player.roomCode);
+    if (!room) {
+      if (callback) callback({ success: false, error: 'Room not found' });
+      return;
+    }
+
+    const normalized = normalizePlayerPayload({
+      name: player.name,
+      profile: profilePayload
+    }).profile;
+
+    player.profile = normalized;
+
+    const roomPlayer = room.players.find(p => p.socketId === socket.id);
+    if (roomPlayer) {
+      roomPlayer.profile = normalized;
+    }
+
+    if (callback) callback({ success: true });
   });
 
   // Select character and start game
@@ -256,9 +290,13 @@ io.on('connection', (socket) => {
         const maxHp = Math.max(1, Number(profile.maxHp) || fallbackClassHp);
         const hp = Math.max(1, Math.min(maxHp, Number(profile.hp) || maxHp));
         
+        const safeName = typeof p.name === 'string'
+          ? p.name
+          : String(p?.name?.name || p.name || '').trim() || 'Player';
+
         return {
           socketId: p.socketId,
-          name: p.name,
+          name: safeName,
           character: p.character,
           level: Math.max(1, Number(profile.level) || 1),
           handLimit: Number(profile.handLimit) || null,

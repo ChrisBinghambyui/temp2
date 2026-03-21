@@ -5067,7 +5067,7 @@ function handleBothPlayersReady(players) {
 
   const opponent = players.find(p => p.socketId !== multiplayer.playerId);
   const opponentNameEl = document.getElementById('opponent-name');
-  if (opponentNameEl) opponentNameEl.textContent = opponent?.name || 'Opponent';
+  if (opponentNameEl) opponentNameEl.textContent = safeMultiplayerName(opponent?.name, 'Opponent');
 
   const statusEl = document.getElementById('multiplayer-status');
   if (statusEl && !multiplayerBothReady) {
@@ -5366,6 +5366,19 @@ function classNameToId(name) {
   return String(name || '').trim().toLowerCase();
 }
 
+function safeMultiplayerName(value, fallback = 'Player') {
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    return trimmed || fallback;
+  }
+  if (value && typeof value === 'object' && typeof value.name === 'string') {
+    const trimmed = value.name.trim();
+    return trimmed || fallback;
+  }
+  const text = String(value || '').trim();
+  return text && text !== '[object Object]' ? text : fallback;
+}
+
 function getMultiplayerFallbackDeck() {
   const defaults = ['Rusty Dagger', 'Jab', 'Swipe', 'Bandage', 'Makeshift Shield', 'Small Stone'];
   return defaults.map(n => CARD_BY_NAME[n]).filter(Boolean).map(c => ({...c}));
@@ -5518,7 +5531,9 @@ function startMultiplayerCombat(gameState) {
 
   const local = players.find(p => p.socketId === multiplayer.playerId) || players[0];
   const remote = players.find(p => p.socketId !== multiplayer.playerId) || players[1];
-  const activeSocket = players[Number(gameState?.activePlayerIndex) || 0]?.socketId;
+  const activeSocket = players[Number(gameState?.activePlayerIndex) || 0]?.socketId || players[0]?.socketId || null;
+  const localName = safeMultiplayerName(local?.name, G.name || 'Player');
+  const remoteName = safeMultiplayerName(remote?.name, 'Opponent');
 
   const localClassName = local.character || selectedMultiplayerClass || G.className || 'Fencer';
   const localClassId = classNameToId(localClassName) || 'fencer';
@@ -5541,7 +5556,7 @@ function startMultiplayerCombat(gameState) {
     : [];
 
   const localCombatant = makeCombatant(
-    local.name || G.name || 'Player',
+    localName,
     Number(local.maxHp) || Number(local.hp) || G.maxHp || 20,
     localDeck,
     handLimit,
@@ -5552,7 +5567,7 @@ function startMultiplayerCombat(gameState) {
   );
 
   const remoteCombatant = makeCombatant(
-    remote.name || 'Opponent',
+    remoteName,
     Number(remote.maxHp) || Number(remote.hp) || 20,
     enemyDeck,
     enemyHandLimit,
@@ -5585,7 +5600,7 @@ function startMultiplayerCombat(gameState) {
 
   MP_COMBAT.active = true;
   MP_COMBAT.localSocketId = multiplayer.playerId;
-  MP_COMBAT.myTurn = activeSocket === multiplayer.playerId;
+  MP_COMBAT.myTurn = activeSocket ? activeSocket === multiplayer.playerId : !!multiplayer.isHost;
 
   showScreen('combat-screen');
   updateCombatUI();
