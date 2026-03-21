@@ -279,6 +279,18 @@ io.on('connection', (socket) => {
     
     const room = getRoom(player.roomCode);
     if (!room) return;
+
+    // Idempotent start: if already running, send current state so late callers can recover.
+    if (room.status === 'inProgress' && room.gameState) {
+      if (callback) callback({ success: true, alreadyStarted: true, gameState: room.gameState });
+      return;
+    }
+
+    const readyDeckCount = Object.keys(room.deckSubmissions || {}).filter(id => room.deckSubmissions[id]?.ready).length;
+    if (room.players.length !== 2 || readyDeckCount !== 2) {
+      if (callback) callback({ success: false, error: 'Both players must submit decks before starting.' });
+      return;
+    }
     
     room.status = 'inProgress';
     room.gameState = {
@@ -294,7 +306,7 @@ io.on('connection', (socket) => {
         const hp = Math.max(1, Math.min(maxHp, Number(profile.hp) || maxHp));
         
         const safeName = typeof p.name === 'string'
-          ? p.name
+          ? (p.name.trim() && p.name.trim() !== '[object Object]' ? p.name.trim() : 'Player')
           : String(p?.name?.name || p.name || '').trim() || 'Player';
 
         return {
@@ -319,7 +331,7 @@ io.on('connection', (socket) => {
     };
     
     io.to(player.roomCode).emit('gameStarted', room.gameState);
-    callback({ success: true });
+    callback({ success: true, gameState: room.gameState });
   });
 
   // Player rolls dice

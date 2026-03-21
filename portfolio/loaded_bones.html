@@ -4884,12 +4884,8 @@ function bindMultiplayerUiEventsOnce() {
   multiplayer.on('bothPlayersDecksReady', (data) => {
     log('Both players ready! Starting match...', 'system');
     const statusEl = document.getElementById('deck-builder-status');
-    if (multiplayer.isHost) {
-      if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Host is launching match...</span>';
-      proceedToMultiplayerCombat(data?.gameState || null);
-    } else if (statusEl) {
-      statusEl.textContent = 'Both players ready. Waiting for host to launch match...';
-    }
+    if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Launching match...</span>';
+    proceedToMultiplayerCombat(data?.gameState || null);
   });
 
   multiplayer.on('gameStarted', (gameState) => {
@@ -5340,12 +5336,8 @@ function readyDeckForMultiplayer() {
     }
     
     if (resp?.bothReady) {
-      if (multiplayer.isHost) {
-        if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Starting match...</span>';
-        proceedToMultiplayerCombat(resp.gameState);
-      } else if (statusEl) {
-        statusEl.textContent = 'Both players ready. Waiting for host to launch match...';
-      }
+      if (statusEl) statusEl.innerHTML = '<span class="success-text">Both players ready! Starting match...</span>';
+      proceedToMultiplayerCombat(resp.gameState);
     } else {
       if (statusEl) statusEl.textContent = 'Deck submitted. Waiting for opponent...';
     }
@@ -5510,7 +5502,7 @@ function handleRemoteCombatAction(payload) {
   if (payload.type === 'endTurn') {
     applyRemoteMultiplayerSnapshot(payload);
     MP_COMBAT.myTurn = true;
-    startPlayerTurn();
+    beginMultiplayerLocalTurn();
     return;
   }
 
@@ -5519,6 +5511,22 @@ function handleRemoteCombatAction(payload) {
     const result = payload.result === 'victory' ? 'defeat' : 'victory';
     finishMultiplayerMatch(result);
   }
+}
+
+function beginMultiplayerLocalTurn() {
+  if (!MP_COMBAT.active) {
+    startPlayerTurn();
+    return;
+  }
+
+  const isRogue = CB?.player?.classId === 'rogue';
+  const hasLucky = !!CB?.player?.classState?.rogueLucky;
+  if (isRogue && !hasLucky) {
+    promptRogueLucky();
+    return;
+  }
+
+  startPlayerTurn();
 }
 
 function finishMultiplayerMatch(result) {
@@ -5621,7 +5629,7 @@ function startMultiplayerCombat(gameState) {
 
   if (MP_COMBAT.myTurn) {
     log('Your multiplayer turn begins.', 'system');
-    startPlayerTurn();
+    beginMultiplayerLocalTurn();
   } else {
     setPhaseBanner("Opponent's Turn", 'enemy');
     updatePlayerControls();
