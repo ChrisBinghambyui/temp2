@@ -2380,7 +2380,7 @@ const ENEMY_DATA = [
   {name:"Hungry Frost Wyrm",hp:28,dice:3,biome:2,tier:3,cards:["Bite X","Bite Y","Bellow y"]},
   // Forest Tier 1
   {name:"Naukin Scouts",hp:16,dice:3,biome:3,tier:1,cards:["Jab x","Jab y","Fortify"]},
-  {name:"Skittari Hunters",hp:18,dice:3,biome:3,tier:1,cards:["Snipe","Rusty Dagger x"]},
+  {name:"Arantza Hunters",hp:18,dice:3,biome:3,tier:1,cards:["Snipe","Rusty Dagger x"]},
   {name:"Reclaimed Boneguard",hp:18,dice:3,biome:3,tier:1,cards:["Splinter","Shield","Bash"]},
   // Forest Tier 2
   {name:"Dire Bear",hp:28,dice:4,biome:3,tier:2,cards:["Swipe y","Bite y","Roar"]},
@@ -2392,7 +2392,7 @@ const ENEMY_DATA = [
   {name:"Emerald Lich",hp:35,dice:5,biome:3,tier:3,cards:["Necromancy","Afflict","Shield X","Life Drain x"]},
   // Ruins Tier 1
   {name:"Brass Golem",hp:24,dice:3,biome:4,tier:1,cards:["Bash y","Shield y","Fortify"]},
-  {name:"Skittari Looters",hp:22,dice:3,biome:4,tier:1,cards:["Dagger x","Shortbow x","Control"]},
+  {name:"Arantza Looters",hp:22,dice:3,biome:4,tier:1,cards:["Dagger x","Shortbow x","Control"]},
   {name:"Bloated Zombie",hp:26,dice:3,biome:4,tier:1,cards:["Bite x","Rupture","Life Drain"]},
   // Ruins Tier 2
   {name:"Iron Bulwark",hp:40,dice:4,biome:4,tier:2,cards:["Bash X","Shield Y","Fortify X"]},
@@ -2455,7 +2455,7 @@ const ENEMY_FLAVOR = {
   "Hungry Frost Wyrm": "The apex predator of the tundra: an ice dragon, lean from a hard winter, moving with the sluggish menace of something that has never truly needed to hurry.",
   // Forest Tier 1
   "Naukin Scouts": "A trio of Naukin scouts — ratmen in tight formation, watchful and fast. The Naukin are reclusive and organized, and they do not appreciate trespassers in their forest.",
-  "Skittari Hunters": "Six-armed spider-folk, primitive but tactical. The Skittari scavenge ruins and hunt ancient paths through this forest. They have already spotted you.",
+  "Arantza Hunters": "Six-armed spider-folk, primitive but tactical. The Arantza scavenge ruins and hunt ancient paths through this forest. They have already spotted you.",
   "Reclaimed Boneguard": "A skeleton draped in moss and root-growth, the forest slowly reclaiming what the undead should never have kept. Its morning star still swings true.",
   // Forest Tier 2
   "Dire Bear": "An enormous bear with a scar across its muzzle and ruin in its eyes. The forest here is old and strange, and so are the things that live within it.",
@@ -2466,8 +2466,8 @@ const ENEMY_FLAVOR = {
   "Barkskin Colossus": "A massive creature armored in living bark, moving through the old-growth like it owns everything under the canopy. It probably does.",
   "Emerald Lich": "An Emerald Lich — an archmage of the old world whose body has been consumed by nature-corruption. Vines thread through its ribcage. Its magic smells like rot and old rain.",
   // Ruins Tier 1
-  "Brass Golem": "A brass automaton, still animated by whatever enchantment the old civilization baked into it. The Skittari worship these ruins; this golem protects them.",
-  "Skittari Looters": "Spider-folk in scavenged metal armor, picking through ancient rubble. They carry weapons that don't quite fit their hands. They don't care.",
+  "Brass Golem": "A brass automaton, still animated by whatever enchantment the old civilization baked into it. The Arantza worship these ruins; this golem protects them.",
+  "Arantza Looters": "Spider-folk in scavenged metal armor, picking through ancient rubble. They carry weapons that don't quite fit their hands. They don't care.",
   "Bloated Zombie": "A shambling corpse, swollen and foul, dragging itself through the ruin corridors. Whoever it was in life, that is long gone.",
   // Ruins Tier 2
   "Iron Bulwark": "A golem of iron rather than brass — heavier, newer, more purposeful. It was built to guard something specific. It no longer remembers what. It guards you now.",
@@ -3122,6 +3122,12 @@ function getLimitValue(limit) {
 function isReusable(limit) { return limit.length===3 && limit[0]==='2'; }
 function isOncePerCombat(limit) { return limit === '222'; }
 
+// Card instance ID generator - ensures each card copy has a unique identifier
+let CARD_INSTANCE_ID_COUNTER = 0;
+function generateCardInstanceId() {
+  return ++CARD_INSTANCE_ID_COUNTER;
+}
+
 const REUSABLE_BALANCE_CONFIG = {
   defaultTurnCap: 3,
   diePenalty: 1,
@@ -3136,7 +3142,12 @@ const REUSABLE_BALANCE_CONFIG = {
 };
 
 function getReusableUsageKey(card) {
+  // Use card's instanceId for per-card tracking instead of family
+  // This ensures multiple copies of the same card track usage independently
   if (!card || !card.name) return 'unknown';
+  if (card.instanceId !== undefined) {
+    return `card_instance_${card.instanceId}`;
+  }
   return getCardFamily(card.name) || normalizeCardNameKey(card.name);
 }
 
@@ -4510,7 +4521,7 @@ function startShipTutorialCombat() {
 
   const handLimit = getPlayerHandLimit();
   const diceLimit = getPlayerDiceLimit();
-  const playerCards = G.deck.map(c => ({...c}));
+  const playerCards = G.deck.map(c => ({...c, instanceId: generateCardInstanceId()}));
   const player = makeCombatant(G.name, G.maxHp, playerCards, handLimit, diceLimit, G.classId, G.level, G.hp);
   player.limitProgress = {...(G.cardChargeProgress || {})};
   console.log('Restoring charge progress (prologue):', player.limitProgress);
@@ -4518,7 +4529,7 @@ function startShipTutorialCombat() {
   const enemyCards = ['Rusty Dagger', 'Jab', 'Swipe']
     .map(n => CARD_BY_NAME[n])
     .filter(Boolean)
-    .map(c => ({...c}));
+    .map(c => ({...c, instanceId: generateCardInstanceId()}));
   const enemy = makeCombatant('Strange Sailor', 14, enemyCards, 2, 2);
 
   CB = {
@@ -5392,17 +5403,20 @@ function getMultiplayerFallbackDeck() {
 
 function getLocalDeckForMultiplayer() {
   if (Array.isArray(G.deck) && G.deck.length > 0) {
-    return G.deck.map(c => ({...c}));
+    return G.deck.map(c => ({...c, instanceId: generateCardInstanceId()}));
   }
-  return getMultiplayerFallbackDeck();
+  return getMultiplayerFallbackDeck().map(c => ({...c, instanceId: generateCardInstanceId()}));
 }
 
 function hydrateNetworkCombatant(raw, fallback = null) {
   const base = raw ? JSON.parse(JSON.stringify(raw)) : JSON.parse(JSON.stringify(fallback || {}));
 
-  base.deck = Array.isArray(base.deck) ? base.deck : [];
-  base.hand = Array.isArray(base.hand) ? base.hand : [];
-  base.discard = Array.isArray(base.discard) ? base.discard : [];
+  // Ensure all cards have instance IDs (for backward compatibility with network messages)
+  const ensureInstanceIds = (arr) => Array.isArray(arr) ? arr.map(c => ({...c, instanceId: c.instanceId || generateCardInstanceId()})) : [];
+
+  base.deck = ensureInstanceIds(base.deck);
+  base.hand = ensureInstanceIds(base.hand);
+  base.discard = ensureInstanceIds(base.discard);
   base.dicePool = Array.isArray(base.dicePool) ? base.dicePool : [];
   base.hiddenDice = Array.isArray(base.hiddenDice) ? base.hiddenDice : [];
   base.limitProgress = base.limitProgress || {};
@@ -5571,10 +5585,10 @@ function startMultiplayerCombat(gameState) {
   
   // Use deck from gameState if available (from deck builder submission), otherwise fall back to local deck
   const localDeck = Array.isArray(local.deck) && local.deck.length > 0 
-    ? local.deck.map(c => ({...c})) 
-    : getLocalDeckForMultiplayer();
+    ? local.deck.map(c => ({...c, instanceId: generateCardInstanceId()})) 
+    : getLocalDeckForMultiplayer().map(c => ({...c, instanceId: generateCardInstanceId()}));
   const enemyDeck = Array.isArray(remote.deck) && remote.deck.length > 0
-    ? remote.deck.map(c => ({...c}))
+    ? remote.deck.map(c => ({...c, instanceId: generateCardInstanceId()}))
     : [];
 
   const localCombatant = makeCombatant(
@@ -5828,7 +5842,7 @@ function startNextCombat(legendaryOverride = null) {
 
   const handLimit = getPlayerHandLimit();
   const diceLimit = getPlayerDiceLimit();
-  const playerCards = G.deck.map(c => ({...c}));
+  const playerCards = G.deck.map(c => ({...c, instanceId: generateCardInstanceId()}));
   
   const player = makeCombatant(
     G.name, G.maxHp, playerCards, handLimit, diceLimit,

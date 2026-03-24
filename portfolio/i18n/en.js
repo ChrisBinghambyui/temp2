@@ -284,7 +284,7 @@ window.I18N_LOCALES.en = {
     "Hungry Frost Wyrm": "The apex predator of the tundra: a frost wyrm, lean from a hard winter, moving with the lazy threat of something that has never truly needed to hurry.",
     // Forest
     "Naukin Scouts": "A trio of naukin scouts—ratmen in tight formation, alert and quick. Naukin are withdrawn and orderly, and they do not appreciate trespassers in their forest.",
-    "Skittari Hunters": "Six-armed spiderfolk, primitive but tactical. Skittari plunder ruins and hunt old roads through this forest. They have already spotted you.",
+    "Arantza Hunters": "Six-armed spiderfolk, primitive but tactical. Arantza plunder ruins and hunt old roads through this forest. They have already spotted you.",
     "Reclaimed Boneguard": "A skeleton draped in moss and root growth, the forest slowly reclaiming what the undead should never have kept. The morning star still swings with certainty.",
     "Dire Bear": "An enormous bear with a scar across its snout and ruined eyes. The forest here is old and strange, and so are the things that live in it.",
     "Khinari Bladedancer": "A khinari warrior of the bladedancer caste—lithe, elegant, and savage. They have perfected their art on everything that walks these woods.",
@@ -293,8 +293,8 @@ window.I18N_LOCALES.en = {
     "Barkskin Colossus": "A massive creature armored in living bark, moving through the old forest as though it owns everything beneath the canopy. It probably does.",
     "Emerald Lich": "An emerald lich—an archmagus from the old world whose body has been consumed by nature's corruption. Vines pull through its ribcage. The magic smells of rot and old rain.",
     // Ruins
-    "Brass Golem": "A brass automaton, still animated by the sorcery the old civilization baked into it. Skittari worship these ruins; this golem guards them.",
-    "Skittari Looters": "Spiderfolk in scrap-metal armor, picking through ancient building debris. They carry weapons that don't quite fit their hands. They don't care.",
+    "Brass Golem": "A brass automaton, still animated by the sorcery the old civilization baked into it. Arantza worship these ruins; this golem guards them.",
+    "Arantza Looters": "Spiderfolk in scrap-metal armor, picking through ancient building debris. They carry weapons that don't quite fit their hands. They don't care.",
     "Bloated Zombie": "A shambling corpse, bloated and full, dragging itself through ruin corridors. Whoever it was in life is long gone.",
     "Iron Bulwark": "A golem of iron rather than brass—heavier, newer, more purposeful. It was built to protect something specific. It no longer remembers what. It guards you now.",
     "Stone Drake": "A drake of petrified scales, old enough that stone has begun growing through flesh. Its eyes still burn.",

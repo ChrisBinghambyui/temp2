@@ -229,7 +229,7 @@ CREATURE_DEFINITIONS = {
       {"name": "Fortify", "requirement": "Any", "effect": "Gain 3 Shield"}
     ]
   },
-  "Skittari Hunters": {
+  "Arantza Hunters": {
     "hp": 18,
     "dice": 3,
     "abilities": [
@@ -312,7 +312,7 @@ CREATURE_DEFINITIONS = {
       {"name": "Fortify", "requirement": "Any", "effect": "Gain 3 Shield"}
     ]
   },
-  "Skittari Looters": {
+  "Arantza Looters": {
     "hp": 22,
     "dice": 3,
     "abilities": [
@@ -586,7 +586,7 @@ CREATURE_GROUP_IDS = {
     "Hungry Frost Wyrm": 6,
     # Forest (IDs 7-9)
     "Naukin Scouts": 7,
-    "Skittari Hunters": 7,
+    "Arantza Hunters": 7,
     "Reclaimed Boneguard": 7,
     "Dire Bear": 8,
     "Khinari Bladedancer": 8,
@@ -596,7 +596,7 @@ CREATURE_GROUP_IDS = {
     "Emerald Lich": 9,
     # Ruins (IDs 10-12)
     "Brass Golem": 10,
-    "Skittari Looters": 10,
+    "Arantza Looters": 10,
     "Bloated Zombie": 10,
     "Iron Bulwark": 11,
     "Stone Drake": 11,
@@ -1274,7 +1274,7 @@ khinari_hunting_party = ENEMY(name='Khinari Hunting Party', intro=None, hp=30, d
 hungry_frost_wyrm = ENEMY(name='Hungry Frost Wyrm', intro=None, hp=28, dice=3, biome=2, biome_tier=3, cards=[bitexx, biteyy, bellowy])
 
 naukin_scouts = ENEMY(name='Naukin Scouts', intro=None, hp=16, dice=3, biome=3, biome_tier=1, cards=[jabx, jaby, fortify])
-skittari_hunters = ENEMY(name='Skittari Hunters', intro=None, hp=18, dice=3, biome=3, biome_tier=1, cards=[snipe, rustydaggerx])
+arantza_hunters = ENEMY(name='Arantza Hunters', intro=None, hp=18, dice=3, biome=3, biome_tier=1, cards=[snipe, rustydaggerx])
 reclaimed_boneguard = ENEMY(name='Reclaimed Boneguard', intro=None, hp=18, dice=3, biome=3, biome_tier=1, cards=[splinter, shield, bash])
 
 dire_bear = ENEMY(name='Dire Bear', intro=None, hp=28, dice=4, biome=3, biome_tier=2, cards=[swipey, bitey, roar])
@@ -1286,7 +1286,7 @@ barkskin_colossus = ENEMY(name='Barkskin Colossus', intro=None, hp=50, dice=4, b
 emerald_lich = ENEMY(name='Emerald Lich', intro=None, hp=35, dice=5, biome=3, biome_tier=3, cards=[necromancy, afflict, shieldxx, lifedrainx])
 
 brass_golem = ENEMY(name='Brass Golem', intro=None, hp=24, dice=3, biome=4, biome_tier=1, cards=[bashy, shieldy, fortify])
-skittari_looters = ENEMY(name='Skittari Looters', intro=None, hp=22, dice=3, biome=4, biome_tier=1, cards=[daggerx, shortbowx, control])
+arantza_looters = ENEMY(name='Arantza Looters', intro=None, hp=22, dice=3, biome=4, biome_tier=1, cards=[daggerx, shortbowx, control])
 bloated_zombie = ENEMY(name='Bloated Zombie', intro=None, hp=26, dice=3, biome=4, biome_tier=1, cards=[bitex, rupture, lifedrain])
 
 iron_bulwark = ENEMY(name='Iron Bulwark', intro=None, hp=40, dice=4, biome=4, biome_tier=2, cards=[bashxx, shieldyy, fortifyxx])

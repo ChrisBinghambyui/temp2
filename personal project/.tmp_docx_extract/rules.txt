@@ -2615,11 +2615,11 @@ Base Movement
 25m
 Racial Ability
 Spell-Scarred: You have to make a WIL save to resist or be affected by beneficial magic (healing spells, buffs) cast by others — your body rejects the intrusion. However, you have Advantage on rolls to resist harmful magic (damage spells, debuffs, mind-affecting effects). Additionally, once per combat, when an enemy casts a spell targeting you, you may attempt to mute it: make an AGI roll (+0). On a success, the spell’s MP cost is wasted and it fails.
-Lineage: Skittari — the Broodborn
-The Skittari are bipedal spider-folk — primitive in the sense that their culture is oral, decentralized, and largely pre-agricultural, not in the sense of being simple. They are older than most of the cultures that would call them primitive, and their memory of the world’s early shape is carried in stories that scholars have been trying to transcribe for a hundred years with limited success.
-Skittari anatomy is immediately arresting. They have three pairs of arms: two pairs in the normal humanoid configuration with hands at the ends, and one pair that juts from just below the shoulder blades, ending not in hands but in tapered chitinous points used for climbing and combat. These back-limbs are often called Their faces have eight eyes arranged in two vertical rows along the sides of the skull — the upper four larger, the lower four smaller — with a wide, angular mouth positioned at roughly mid-face. Their skin is covered in fine dark bristle-hairs and their coloration varies from near-black to dark amber to a grey-brown that makes them nearly invisible in shadow.
+Lineage: Arantza — the Broodborn
+The Arantza are bipedal spider-folk — primitive in the sense that their culture is oral, decentralized, and largely pre-agricultural, not in the sense of being simple. They are older than most of the cultures that would call them primitive, and their memory of the world’s early shape is carried in stories that scholars have been trying to transcribe for a hundred years with limited success.
+Arantza anatomy is immediately arresting. They have three pairs of arms: two pairs in the normal humanoid configuration with hands at the ends, and one pair that juts from just below the shoulder blades, ending not in hands but in tapered chitinous points used for climbing and combat. These back-limbs are often called Their faces have eight eyes arranged in two vertical rows along the sides of the skull — the upper four larger, the lower four smaller — with a wide, angular mouth positioned at roughly mid-face. Their skin is covered in fine dark bristle-hairs and their coloration varies from near-black to dark amber to a grey-brown that makes them nearly invisible in shadow.
 Languages
-Skittari Click (tonal, involving cheliceral vibrations difficult for non-Skittari to produce); Common Tongue (learned, usually accented)
+Arantza Click (tonal, involving cheliceral vibrations difficult for non-Arantza to produce); Common Tongue (learned, usually accented)
 Lifespan
 30–50 years; mature fast, age fast
 Height
@@ -3056,7 +3056,7 @@ The world of Aethermoor is not a flat gray floor. Dungeons have pits. Battlefiel
 Difficult Terrain
 Difficult terrain includes: deep mud, shallow water, rubble, steep slopes, thick undergrowth, ice, and similar obstacles. Moving through difficult terrain costs double movement. A character with a normal move of 20m moves only 10m per turn through difficult terrain.
 EXAMPLES: Thick mud costs double movement and may require an Athletics check (Normal) to avoid being slowed. Icy surfaces cost double movement and require an Acrobatics check (Normal) or the character falls Prone. Dense undergrowth costs double movement for non-Forest-Born races.
-Difficult terrain does not affect creatures that are immune to it (e.g., flying creatures, certain supernatural entities, Skittari climbing on walls above it).
+Difficult terrain does not affect creatures that are immune to it (e.g., flying creatures, certain supernatural entities, Arantza climbing on walls above it).
 Environmental Hazards and Created Effects
 Terrain can be altered by combat. These rules cover the most common effects:
 BURNING GROUND: A Fireball or similar fire spell hitting a flammable surface (dry wood, oil, dry grass) can ignite a zone (~5m radius). Each round, any creature standing in burning ground takes 1d6 fire damage at the start of their turn (no AR applies). Burning ground is also difficult terrain. A burning zone typically persists for 1d6 rounds before burning out, or until doused.
