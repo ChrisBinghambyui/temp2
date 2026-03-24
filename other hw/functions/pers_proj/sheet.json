@@ -1,0 +1,101 @@
+{
+  "name": "Unnamed Adventurer",
+  "mode": "archetype",
+  "archetype": "Crusader",
+  "lineage": "Ashveld",
+  "birthsign": "The Hearthfire",
+  "attributes": {
+    "STR": 55,
+    "END": 60,
+    "AGI": 40,
+    "SPD": 30,
+    "INT": 25,
+    "WIL": 50,
+    "PER": 30,
+    "LCK": 30
+  },
+  "skills": {
+    "Long Blade": 45,
+    "Short Blade": 5,
+    "Blunt Weapon": 25,
+    "Axe": 5,
+    "Spear": 5,
+    "Marksman": 5,
+    "Block": 40,
+    "Unarmored": 5,
+    "Light Armor": 5,
+    "Medium Armor": 25,
+    "Heavy Armor": 40,
+    "Athletics": 45,
+    "Acrobatics": 5,
+    "Sneak": 5,
+    "Security": 5,
+    "Speechcraft": 25,
+    "Mercantile": 5,
+    "Alchemy": 10,
+    "Enchanting": 10,
+    "Conjuration": 30,
+    "Alteration": 5,
+    "Elementalism": 5,
+    "Illusion": 5,
+    "Divination": 25,
+    "Vitalism": 45,
+    "Armorer": 5,
+    "Fistfight": 5
+  },
+  "derived": {
+    "Health (HP)": "12",
+    "Magicka (MP)": "5",
+    "Fatigue (FP)": "18",
+    "Initiative": "4",
+    "Luck Bonus": "3",
+    "Melee Damage Bonus": "2",
+    "Agility Damage Bonus": "2",
+    "Movement (land)": "20m"
+  },
+  "lineageAbilities": [
+    "Hardy Adaptation: natural environmental hazards cost no extra FP and are resisted with advantage."
+  ],
+  "birthsignBoon": "Improved FP recovery and support pulse.",
+  "archetypeBonus": "Vitalism spells while in heavy armor cost 1 less MP (min 1). Start with an Iron Longsword, Iron Shield, Iron Chainmail, and two Apprentice Vitalism spells.",
+  "startingSpells": [
+    {
+      "school": "Vitalism",
+      "spell": "Restore Health (Minor)",
+      "cost": "2 MP",
+      "effect": "Touch (2m). Restore 1d6+1 HP."
+    },
+    {
+      "school": "Vitalism",
+      "spell": "Restore Fatigue",
+      "cost": "2 MP",
+      "effect": "Touch (2m). Instant. Restore 1d6+1 FP."
+    }
+  ],
+  "selectedEquipment": {
+    "weapon": {
+      "name": "Iron Longsword",
+      "skill": "Long Blade",
+      "fp": 2,
+      "primary": "1d6 Slashing",
+      "secondary": "1d6 Piercing",
+      "tags": "VERSATILE",
+      "notes": "One-handed with shield is +5 to attack roll.",
+      "price": "40g"
+    },
+    "armor": {
+      "name": "Steel Plate (full)",
+      "type": "Heavy Armor",
+      "baseAr": 6,
+      "notes": "Heavy armor baseline from Chapter 8.",
+      "price": "450g"
+    },
+    "shield": {
+      "name": "No Shield",
+      "arBonus": "+0 AR",
+      "notes": "No block reaction from shield."
+    },
+    "kit": null
+  },
+  "notes": ""
+}

@@ -1,0 +1,100 @@
+if play != "quit":
+        print("A strange force draws you deeper into the dungeon...")
+        print("...")
+        print("...")
+        opp = random.choice(enemy)
+        opp.health = opp.max_health
+        round = 0
+        print(f"Something approaches... {opp.name} appears from the darkness!")
+        
+        flee = get_valid_input("What do you do? \n  1) FIGHT \n  2) FLEE \n", [1, 2])
+        
+        while flee != 2 and opp.health > 0 and opp != coin:
+            round += 1
+            if round % 2 == 0 and rapid == 0:
+                print("You hurridly begin reloading and preparing to shoot again.")
+            else:
+                chance = 0
+                if double == 0:
+                    print("You take aim and fire off a shot!")
+                    dam = random.choice(weapon)
+                    if crit == 1:
+                        chance = random.choice(critchance) + d100()
+                        if chance >= 100:
+                            dam = weapon[-1]
+                    if dam <= 0:
+                        print("Your shot goes wide, dealing no damage.")
+                    elif chance >= 100:
+                        print("Critical hit!")
+                        print(f"You do {dam} damage.")
+                        opp.health = opp.health - dam
+                    else:
+                        print(f"You do {dam} damage.")
+                        opp.health = opp.health - dam
+                elif double == 1:
+                    print("You raise your pistols and fire.")
+                    dam1 = random.choice(weapon)
+                    dam2 = random.choice(weapon)
+                    if crit == 1:
+                        chance1 = random.choice(critchance) + d100()
+                        if chance1 >= 100:
+                            dam1 = weapon[-1]
+                        chance2 = random.choice(critchance) + d100()
+                        if chance2 >= 100:
+                            dam2 = weapon[-1]
+                        chance = max(chance1, chance2)
+                    if dam1 + dam2 <= 0:
+                        print("Your shots go wide, dealing no damage.")
+                    elif chance >= 100:
+                        print("Critical hit!")
+                        print(f"You do {dam1 + dam2} damage.")
+                        opp.health = opp.health - (dam1 + dam2)
+                    else:
+                        print(f"You do {dam1 + dam2} damage.")
+                        opp.health = opp.health - (dam1 + dam2)
+            
+            if opp.health <= 0:
+                print(f"The {opp.name} collapses to the ground, defeated. You are victorious!")
+                break
+            elif opp.health > 0:
+                print("Your enemy takes a swing...")
+                edam = opp.get_strength()
+                if edam < 0:
+                    edam = 0
+                print(f"You take {edam} damage!")
+                currenthp = currenthp - edam
+                if currenthp < 0:
+                    currenthp = 0
+                
+                if currenthp > 0:
+                    print(f"You are now at {currenthp} hp.")
+                    flee = get_valid_input("What do you do? \n  1) Continue the fight \n  2) Flee \n  3) Use a Potion\n", [1, 2, 3])
+                    
+                    if flee == 3 and potion > 0:
+                        potion -= 1
+                        heal_amount = (hp + 3) // 4
+                        currenthp = min(currenthp + heal_amount, hp)
+                        potion_usage += 1
+                        print(f"You quickly pull out a potion and chug it down. The liquid invigorates you. You are now at {currenthp} HP and have {potion} potions left.")
+                        flee = 1
+                    elif flee == 3 and potion == 0:
+                        print("Your pockets are empty, and it dawns on you that you're all out of potions!")
+                        flee = 1
+                elif currenthp <= 0:
+                    print("You feel yourself grow weak and collapse to the ground, bleeding.")
+                    if totem > 0:
+                        totem -= 1
+                        currenthp = 1
+                        flee = 1
+                        totem_usage += 1
+                        print("As your vision fades, you feel something in your pocket grow warm. You use your remaining strength to grab at it.\nAs your grasping fingers find the totem, a trickle of energy enters your body. You have just enough strength to carry on for a few more minutes.\nYou rise to your feet and eye your opponent. You only have seconds left. Better make them count.")
+                    elif idol > 0:
+                        idol -= 1
+                        currenthp = hp
+                        flee = 1
+                        idol_usage += 1
+                        print("As you begin to fall, you hear a loud crack. The dark interior of the dungeon is filled with light for a brief second.\nYou reach into your pocket and find a metal idol. You pull it out and inspect it.\nIt begins to crumble in your hands, but as it does, you feel strength flow into you. You look over at your opponent.\nThey're still dazed, but not for long. Time to finish this.")
+                    else:
+                        print("Your vision fades, and your limbs grow heavy. You collapse onto the cold stone floor. The dark room grows darker around you.\nPerhaps this foolhardy venture wasn't worth it after all.")
+                        play = "quit"
+                        break

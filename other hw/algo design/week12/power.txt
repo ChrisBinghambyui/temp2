@@ -1,0 +1,94 @@
+Step 1 By Hand: 5 minutes
+Step 2 Approach: 5 minutes
+Step 3 Pseudocode: 60 minutes
+Step 4 Copilot: 10 minutes
+Step 5 Compare and Contrast: 15 minutes
+Step 6 Update: 10 minutes
+Step 7 Trace: 45 minutes
+Step 8 Efficiency: 10 minutes
+
+Step 1: By hand
+1- 148.2
+2- 148.4
+3- 151
+4- 152.5
+5- 148.5
+
+Step 2: Approach
+I'd grab the arrays, and then average them. Since the main list is a list, I'd use indexes to get values 0-9, then values 1-10, etc. As I get these, I can store them in new lists, and then get the average for each.
+
+step3: puhsoodoccode
+    define function average(tested_list, windowsize):
+        counter = windowSize
+        index = 0
+        while counter > 0:
+            assert tested_list[index] is FLOAT or INT
+            total += tested_list[index]
+            counter-=1
+            index+=1
+        return total / windowsize
+        
+    define function main():
+        GET windowsize
+        ASSERT WindowSize is FLOAT or INT
+        assert windowsize > 0
+        GET numbers
+        assert len(numbers) > 0
+        assert len(numbers) > windowsize
+        let iterations = (len(numbers)-windowSize) + 1
+        let tested_list = numbers
+        let current_best = 0
+        while iterations > 0:
+            avg = average(tested_list, windowsize)
+            if avg > current_best:
+                current_best = avg
+            iterations -= 1
+            tested_list.pop([0])
+        print current_best
+
+step4: ai puhsoodocode
+    FUNCTION GetGreatestAverage(mainList):
+        SET windowSize TO 10
+        SET allAverages TO empty list
+        
+        // Ensure the list is long enough to have at least one subarray
+        IF length of mainList < windowSize:
+            RETURN "List too short"
+
+        // Loop through the list using indexes
+        // We stop at (Length - WindowSize) so we don't go out of bounds
+        FOR i FROM 0 TO (length of mainList - windowSize):
+            
+            // 1. Grab the subarray using indexes (e.g., 0-9, 1-10, etc.)
+            SET currentSubarray TO mainList from index i to i + windowSize
+            
+            // 2. Calculate the average of the currentSubarray
+            SET currentSum TO 0
+            FOR EACH number IN currentSubarray:
+                currentSum = currentSum + number
+            
+            SET currentAverage TO currentSum / windowSize
+            
+            // 3. Store the average in a new list
+            APPEND currentAverage TO allAverages
+
+        // 4. Find and return the greatest average from our stored list
+        SET maxAverage TO first element of allAverages
+        FOR EACH avg IN allAverages:
+            IF avg > maxAverage:
+                maxAverage = avg
+                
+        RETURN maxAverage
+    END FUNCTION
+
+step 5: compare and contrast
+Provide an analysis as to the pros and cons of the two solutions?
+- well for one the ai knows better pseudocode terms than i do. i also forgot to put in asserts. Other than that both do the job fairly similarly, with mine using while statements and the ai using for statements.
+How can your solution be improved based on what Copilot provided?
+- add asserts and fix pseudodocde terms
+How can Copilot's solution be improved based on what you know?
+- I think it would be harder to adjust it's solution to be able to handle variable window sizes. It's real easy to just set it to a different flat number, but if i wanted to ,say, make it always check half, so for a list of 50 it'd be a size of 25. I think my code would be easier to adjust to accomodate that kind of thing.
+Does the pseudocode in Step 3 and Step 4 match the algorithm you performed in Step 1?
+- ayup
+
+step8 efficiency: O(n) because the number of iterations is tied to the amount of data. You could maybe argue that my way of doing it is o(n^2) because the windowsize is adjustable too, and although that makes the incline sharper, i don't think it's exponential.
