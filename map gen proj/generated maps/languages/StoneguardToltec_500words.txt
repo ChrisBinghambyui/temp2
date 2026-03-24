@@ -1,0 +1,602 @@
+STONEGUARD TOLTEC-JAPANESE - 500 Common Word Translations
+Fantasy Language based on StoneguardToltec name patterns
+Linguistic roots: Pre-Aztec Toltec / early Nahuatl (9th-12th c.) primary
+with Medieval-to-Meiji Japanese (12th-19th c.) secondary
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Toltec/early Nahuatl):
+  Nahuatl: tl- cluster (characteristic), -tl (absolutive suffix),
+  tetl (stone/rock), atl (water), tlitl (fire), tlalli (earth),
+  ilhuicatl (sky), tonalpohualli (day-count/calendar), metztli (moon),
+  citlalin (star), tlahtoa (speak), itta (see), yauh (go), huitz (come),
+  mati (know), maca (give), cui (take), chichi (dog), coatl (serpent),
+  quetzal (precious feather/bird), tolteca (master craftsperson),
+  teotl (god/divine force), nahuatl (clear sound/language),
+  ollin (movement), tonal (day-soul/spirit), calli (house),
+  xochitl (flower), yolotl (heart), tlacatl (person/man),
+  huey (great/big), qualli (good), nelli (true)
+
+KEY SOURCE WORDS (Medieval-Meiji Japanese):
+  wa/ware (I/me), nanji (you), kare (he), kanojo (she), wareware (we),
+  to (and/with), ga (subject marker), no (of/possessive), ni (at/in),
+  de (by/at), kara (from), made (until), mo (also/even), ka (question),
+  aru (be/exist), suru (do), iku (go), kuru (come), miru (see),
+  iu/yuu (say), shiru (know), ageru (give), toru (take), aruku (walk),
+  hito (person), onna (woman), ko/kodomo (child), ou/kimi (king/lord),
+  tsuchi (earth), hi (fire), mizu (water), sora (sky), hi (day),
+  tsuki (moon), hoshi (star), oki (great), yoi (good), makoto (true)
+
+PHONETIC BRIDGE STRATEGY:
+  Nahuatl: tl- initial/final cluster, -tl absolutive, -lli/-lli-tl,
+  open a/e/i/o vowels, compound words (noun+noun+tl)
+  Japanese: CV open syllables, -shi/-chi/-tsu affricates, -ru verb ending,
+  compound kanji-style stacking, honorific prefixes (o-, go-)
+  Bridge: Both share open vowel syllables, CV structure, k/t/s sounds,
+  compound word-building, and absence of consonant clusters (except Nahuatl tl-)
+  Fantasy suffix system: -tli (noun, fr. Nahuatl absolutive -tl + -i),
+  -yaru (verb, fr. Japanese -ru + Nahuatl ya-), -olli (adj/quality, fr.
+  Nahuatl ollin = movement + Japanese -i adj ending), -tonal (spirit/place,
+  fr. Nahuatl tonal = day-soul), -shi (secondary verb, fr. Japanese -shi adj)
+
+===================================================================================
+RANK | ENGLISH       | STONEGUARD              | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | tletl                   | Nah. tletl (that/the fire-stone) stylized
+2    | a / an        | centli                  | Nah. cen (one/a) + -tli
+3    | to            | yayaru                  | Nah. ya (go/to) + Jpn. -yaru
+6    | it            | yotonal                 | Nah. yo (it/there) + -tonal
+8    | that          | nontli                  | Nah. non (that) + -tli
+10   | it            | yotonal                 | same
+11   | for           | ipampatli               | Nah. ipampa (for/because) + -tli
+14   | this          | initli                  | Nah. in (this/the) + -itli
+20   | this          | initli                  | same
+22   | his           | iyaolli                 | Nah. iyo (his/her) + -olli
+28   | her           | iyaolli                 | same — Nahuatl gender-neutral
+29   | she           | quenami                 | Nah. quenami (she/like) stylized
+31   | an            | centli                  | same as a
+34   | one           | ceyolli                 | Nah. ce (one) + -yolli
+35   | all           | mochitli                | Nah. mochi (all/every) + -tli
+37   | there         | ompatonal               | Nah. ompa (there) + -tonal
+38   | their         | innolli                 | Nah. inn (their) + -olli
+39   | what          | tleintli                | Nah. tlein (what) + -tli
+45   | who           | aquintli                | Nah. aquin (who) + -tli
+49   | me            | nechtli                 | Nah. nech (me/to me) + -tli
+50   | when          | quenmantli              | Nah. quenman (when) + -tli
+55   | no            | ahmolli                 | Nah. ahmo (no/not) + -olli
+63   | your          | motonal                 | Nah. mo (your) + -tonal
+64   | good          | quallioshi              | Nah. qualli (good) + Jpn. -oshi
+65   | some          | occentli                | Nah. occe (some/another) + -tli
+69   | other         | occentolli              | Nah. occe (other) + -tolli
+83   | two           | ometli                  | Nah. ome (two) + -tli
+85   | our           | totonal                 | Nah. to (our) + -tonal
+95   | these         | inehtli                 | Nah. ineh (these) + -tli
+99   | us            | technolli               | Nah. tech (us/to us) + -nolli
+120  | got           | quihuiyaru              | Nah. quihuiya (got/brought) + -yaru
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | yezquyaru               | Nah. yez (to be/will be) + -quyaru
+70   | there         | ompatonal               | same as there
+72   | seem          | iximatiyaru             | Nah. iximati (to seem/know face) + -yaru
+78   | think         | nemilyaru               | Nah. nemil (to think/live) + -yaru
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | itlatli                 | Nah. itla (of/something) + -tli
+5    | and           | yoantli                 | Nah. yoan (and/also) + -tli
+12   | not           | ahmolli                 | Nah. ahmo (not) + -olli
+13   | on            | ixpanatli               | Nah. ixpan (on/before) + -atli
+14   | with          | ivantli                 | Nah. ivan (with) + -tli
+19   | at            | icantonal               | Nah. ican (at/where) + -tonal
+21   | but           | yecetli                 | Nah. yece (but/however) + -tli
+23   | by            | ipantli                 | Nah. ipan (on/by) + -tli
+24   | from          | ixtli                   | Nah. ix (from/face) + -tli
+30   | or            | anocenolli              | Nah. anoce (or) + -nolli
+32   | will          | yezquiyaru              | Nah. yezqui (will be) + -yaru
+33   | my            | notonal                 | Nah. no (my) + -tonal
+36   | would         | mahcenolli              | Nah. mahce (would/if only) + -nolli
+40   | so            | iuhquintli              | Nah. iuhquin (so/thus) + -tli
+41   | up            | tlacpanolli             | Nah. tlacpan (up/above) + -olli
+42   | out           | quizayaru               | Nah. quiza (out/exit) + -yaru
+43   | if            | intlaolli               | Nah. intla (if) + -olli
+44   | about         | ixquicholli             | Nah. ixquich (about/all of) + -olli
+60   | because       | ipampatonal             | Nah. ipampa (because) + -tonal
+61   | into          | itechtli                | Nah. itech (into/concerning) + -tli
+71   | only          | zannolli                | Nah. zan (only/just) + -nolli
+76   | its           | iyaolli                 | same as his/her
+77   | over          | icpactli                | Nah. icpac (over/on top) + -tli
+79   | also          | yoantonal               | Nah. yoan (also/and) + -tonal
+80   | back          | teyolyaru               | Nah. teyol (back/heart) stylized
+81   | after         | zatepanolli             | Nah. zatepa (after) + -nolli
+82   | use           | tequiyaru               | Nah. tequi (use/work/cut) + -yaru
+87   | first         | achtonolli              | Nah. achto (first) + -nolli
+88   | well          | qualliyoshi             | Nah. qualli (well/good) + Jpn. -yoshi
+90   | even          | yoancetli               | Nah. yoan+ce (even/and-one) + -tli
+94   | any           | occentolli              | Nah. occe (any/other) + -tolli
+102  | need          | monequitli              | Nah. moneqi (need/necessary) + -tli
+104  | often         | miyaquintli             | Nah. miyaquin (often/many times) + -tli
+106  | high          | tlacpanolli             | Nah. tlacpan (high/above) + -olli
+110  | never         | ayacnolli               | Nah. ayac (never/nobody) + -nolli
+112  | north         | mictlampatli            | Nah. mictlampa (north/death-dir) + -tli
+114  | seem          | iximatiyaru             | same as seem
+116  | next          | nechcatonal             | Nah. nechca (next/near) + -tonal
+119  | begin         | pehuayaru               | Nah. pehua (to begin) + -yaru
+129  | both          | omentetli               | Nah. omentin (both/two-people) + -tli
+133  | until         | ixquicholli             | Nah. ixquich (until/all of) + -olli
+147  | ever          | cemicactli              | Nah. cemicac (ever/always) + -tli
+150  | though        | macihuitli              | Nah. macihuia (though) + -tli
+154  | soon          | achinolli               | Nah. achi (soon/a little) + -nolli
+158  | direct        | melatonal               | Nah. mela (direct/straight) + -tonal
+160  | leave         | calaquiyaru             | Nah. calaquia (leave/enter) stylized
+169  | wind          | ehecatli                | Nah. ehecatl (wind) + -i — attested
+172  | since         | ixtlamatli              | Nah. ixtlama (since/know-face) + -tli
+183  | against       | ixnamicolli             | Nah. ixnamiqui (against/face-meet) + -olli
+192  | during        | ipantonal               | Nah. ipan (during/on) + -tonal
+194  | true          | nelliolli               | Nah. nelli (true) + -olli
+219  | toward        | itztiyaru               | Nah. itzti (toward/go-face) + -yaru
+225  | center        | tlatlantonal            | Nah. tlatlan (center/buried) + -tonal
+251  | still         | ocnolli                 | Nah. oc (still/yet) + -nolli
+261  | above         | icpactonal              | Nah. icpac (above) + -tonal
+287  | behind        | teputztonal             | Nah. teputz (behind/back) + -tonal
+330  | yes           | quemanolli              | Nah. queman (yes/when) + -olli
+332  | fill          | temiiyaru               | Nah. temi (to fill) + -iyaru
+338  | yet           | ocnolli                 | same as still
+339  | among         | nepantlaolli            | Nah. nepantla (among/middle) + -olli
+340  | perhaps       | achinolli               | Nah. achi (perhaps/a little) + -nolli
+343  | am            | yezquibi                | Nah. yezqui (am/I am) + -bi
+446  | whether       | intlaolli               | same as if
+451  | shall         | yezquiyaru              | same as will
+457  | either        | anocenolli              | same as or
+488  | else          | occentolli              | same as other
+489  | quite         | ceminolli               | Nah. cemin (quite/wholly) + -olli
+490  | quite         | ceminolli               | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | chihuayaru              | Nah. chihua (to do/make) + -yaru
+9    | have          | piayaru                 | Nah. pia (to have/keep) + -yaru
+15   | he            | yehtonal                | Nah. yeh (he/she) + -tonal
+16   | as            | iuhquintonal            | Nah. iuhquin (as/like) + -tonal
+17   | you           | tehtli                  | Nah. teh (you) + -tli
+18   | do            | chihuayaru              | same
+25   | they          | yehhuantli              | Nah. yehhuantin (they) + -tli
+26   | we            | techtonal               | Nah. tech (we/us) + -tonal
+27   | say           | itoayaru                | Nah. itoa (to say) + -yaru
+46   | get           | cuiyaru                 | Nah. cui (to get/take) + -yaru
+47   | which         | catitli                 | Nah. cati (which/who is) + -tli
+48   | go            | yauhyaru                | Nah. yauh (to go) + -yaru
+51   | make          | chihuayaru              | same as do
+52   | can           | hueliyaru               | Nah. hueli (can/be able) + -yaru
+53   | like          | neciyaru                | Nah. neci (to like/appear) + -yaru
+54   | time          | cahuitli                | Nah. cahuitl (time) + -i
+56   | just          | zannolli                | same as only
+57   | him           | yehtli                  | Nah. yeh (him) + -tli
+58   | know          | matiyaru                | Nah. mati (to know) + -yaru
+59   | take          | cuiyaru                 | same as get
+62   | year          | xihuitli                | Nah. xihuitl (year/grass) + -i
+66   | could         | hueliholli              | Nah. hueli (could) + -holli
+67   | them          | yehhuantonal            | Nah. yehhuantin (them) + -tonal
+68   | see           | ittayaru                | Nah. itta (to see) + -yaru
+73   | look          | xixittayaru             | Nah. xitta (to look at) + -yaru
+74   | only          | zannolli                | same
+75   | come          | huitzayaru              | Nah. huitza (to come) + -yaru
+84   | use           | tequiyaru               | same as use above
+86   | work          | tequitli                | Nah. tequitl (work) + -i — attested
+89   | way           | ohtli                   | Nah. ohtli (road/way) + -i — attested
+91   | new           | yancuictli              | Nah. yancuic (new) + -tli
+92   | want          | nequiyaru               | Nah. neqi (to want) + -yaru
+93   | because       | ipampatonal             | same as because
+96   | give          | macayaru                | Nah. maca (to give) + -yaru
+97   | day           | tonaltli                | Nah. tonal (day/soul) + -tli
+98   | most          | cencatli                | Nah. cenca (most/very) + -tli
+100  | great         | hueyolli                | Nah. huey (great) + -olli
+101  | between       | nepantlatli             | Nah. nepantla (between/middle) + -tli
+103  | large         | hueyotonal              | Nah. huey (large) + -otonal
+105  | hand          | maitli                  | Nah. maitl (hand) + -i
+107  | place         | icantli                 | Nah. ican (place/where) + -tli
+108  | hold          | piayoshi                | Nah. pia (to hold) + Jpn. -yoshi
+109  | turn          | malacachoyaru           | Nah. malacacho (to turn/spin) + -yaru
+111  | few           | achicnolli              | Nah. achic (few/a little) + -nolli
+113  | open          | tlapoyaru               | Nah. tlapo (to open) + -yaru
+115  | together      | nenepolli               | Nah. nenepo (together) + -olli
+117  | white         | iztactli                | Nah. iztac (white) + -tli
+118  | children      | pilhhuantli             | Nah. pilhuan (children) + -tli
+121  | walk          | nemiyaru                | Nah. nemi (to walk/live) + -yaru
+122  | example       | machiyotonal            | Nah. machiyotl (example/sign) + -tonal
+123  | ease          | papaquitli              | Nah. papaqi (ease/joy) + -tli
+124  | paper         | amatli                  | Nah. amatl (paper/tree) + -i — attested
+125  | group         | necalitli               | Nah. necali (group/contest) + -tli
+126  | always        | cemicactonal            | Nah. cemicac (always) + -tonal
+127  | music         | cuicatli                | Nah. cuicatl (song/music) + -i — attested
+128  | those         | yehhuantnolli           | Nah. yehhuantin (those) + -olli
+130  | mark          | machiyolli              | Nah. machiyo (mark/sign) + -olli
+131  | book          | amoxnolli               | Nah. amox (book/codex) + -nolli
+132  | letter        | tlahcuilolli            | Nah. tlahcuilo (letter/writing) + -olli
+134  | mile          | cahuanolli              | Nah. cahuan (distance) + -olli
+135  | river         | atoyatli                | Nah. atoyal (river) + -tli
+136  | car           | omeyolli                | Nah. ome (two/wheel) + -yolli
+137  | feet          | icxitli                 | Nah. icxitl (feet) + -i — attested
+138  | care          | tlazohtlayaru           | Nah. tlazohtla (to care/love) + -yaru
+139  | second        | ontlaolli               | Nah. ontla (second) + -olli
+140  | enough        | ixquicholli             | Nah. ixquich (enough/all) + -olli
+141  | plain         | tlapalnolli             | Nah. tlapal (plain/color) + -nolli
+142  | girl          | ichpocholli             | Nah. ichpoch (girl/maiden) + -olli
+143  | usual         | mochicantonal           | Nah. mochican (usual/always) + -tonal
+144  | young         | xocoyolli               | Nah. xocoyo (young/youngest) + -olli
+145  | ready         | mochihuatli             | Nah. mochihua (ready/becoming) + -tli
+146  | above         | icpactonal              | same as above
+148  | red           | tlatlauhquitli          | Nah. tlatlauhqui (red) + -tli
+149  | list          | tlahpalolli             | Nah. tlahpal (list/strength) + -olli
+151  | feel          | namiquiyaru             | Nah. namiqi (to feel/meet) + -yaru
+152  | talk          | tlahtoyaru              | Nah. tlahto (to talk) + -yaru
+153  | bird          | tototli                 | Nah. totol (bird) + -tli
+155  | body          | nacayotli               | Nah. nacayotl (body/flesh) + -i
+156  | dog           | chichitonal             | Nah. chichi (dog) + -tonal
+157  | family        | channolli               | Nah. chan (family/home) + -nolli
+159  | pose          | tlaliayaru              | Nah. tlalia (to pose/place) + -yaru
+161  | song          | cuicatonal              | Nah. cuicatl (song) + -tonal
+162  | measure       | tlamelaholli            | Nah. tlamelah (measure/straight) + -olli
+163  | door          | tlacuahtli              | Nah. tlacuah (door/gate) + -tli
+164  | product       | tlamachtli              | Nah. tlamach (product/gift) + -tli
+165  | black         | tliltli                 | Nah. tlil (black) + -tli
+166  | short         | achicnolli              | Nah. achic (short/little) + -nolli
+167  | numeral       | tlapohualnolli          | Nah. tlapohua (numeral/count) + -nolli
+168  | class         | tlacanolli              | Nah. tlaca (class/people) + -nolli
+170  | question      | tlanequitli             | Nah. tlaneqi (question/want) + -tli
+171  | happen        | mochihuayaru            | Nah. mochihua (to happen) + -yaru
+173  | ship          | acalotli                | Nah. acalo (boat/canoe) + -tli
+174  | area          | icantonal               | Nah. ican (area/place) + -tonal
+175  | half          | tlacotonal              | Nah. tlaco (half) + -tonal
+176  | rock          | tetlolli                | Nah. tetl (rock/stone) + -olli
+177  | order         | nahuatilli              | Nah. nahuatil (order/law) + -li
+178  | fire          | tlitonal                | Nah. tletl (fire) + -tonal
+179  | south         | huitztlampatli          | Nah. huitztlampa (south) + -tli
+180  | problem       | tlahtzolli              | Nah. tlahtzol (problem/filth) + -li
+181  | piece         | tlaxcalnolli            | Nah. tlaxcal (piece/tortilla) + -nolli
+182  | told          | ilhuiyaru               | Nah. ilhuia (told/say-to) + -yaru
+184  | pass          | panoayaru               | Nah. panoa (to pass) + -yaru
+185  | since         | ixtlamatonal            | Nah. ixtlama (since) + -tonal
+186  | top           | icpactli                | Nah. icpac (top/above) + -tli
+187  | whole         | cemitonal               | Nah. cemi (whole/all) + -tonal
+188  | king          | tlatoanitli             | Nah. tlatoani (ruler/king) + -tli
+189  | space         | yohualtonal             | Nah. yohual (space/night) + -tonal
+190  | heard         | cacnolli                | Nah. cac (heard) + -nolli
+191  | best          | cencatonal              | Nah. cenca (best/most) + -tonal
+192  | hour          | cahuitonal              | Nah. cahui (hour/time) + -tonal
+193  | better        | achtotonal              | Nah. achto (better/first) + -tonal
+195  | during        | ipantonal               | same as during
+196  | hundred       | cempoallinolli          | Nah. cempoalli (hundred) + -nolli
+197  | five          | macuilnolli             | Nah. macuilli (five) + -nolli
+198  | remember      | ilnamiquiyaru           | Nah. ilnamiqi (to remember) + -yaru
+199  | step          | icxipantli              | Nah. icxipan (step/foot-upon) + -tli
+200  | early         | yohualtontonal          | Nah. yohualt (early/little-night) + -tonal
+201  | hold          | piayoshi                | same as hold
+202  | west          | cihuatlampatli          | Nah. cihuatlampa (west/woman-dir) + -tli
+203  | ground        | tlalnolli               | Nah. tlalli (ground/earth) + -nolli
+204  | interest      | tlanequitonal           | Nah. tlaneqi (interest/want) + -tonal
+205  | reach         | axitiyaru               | Nah. axiti (to reach) + -yaru
+206  | fast          | icuacnolli              | Nah. icuac (fast/when) + -nolli
+207  | verb          | tlahtolnolli            | Nah. tlahtol (verb/speech) + -nolli
+208  | sing          | cuicayaru               | Nah. cuica (to sing) + -yaru
+209  | listen        | cacitoyaru              | Nah. cacito (to listen) + -yaru
+210  | six           | chicuacetli             | Nah. chicuace (six) + -tli
+211  | table         | tlapechtli              | Nah. tlapech (table/platform) + -tli
+212  | travel        | huiyayaru               | Nah. huiya (to travel/go) + -yaru
+213  | less          | achicnolli              | Nah. achic (less/little) + -nolli
+214  | morning       | tlahtlatonal            | Nah. tlahuat (morning/clear) + -tonal
+215  | ten           | matlacnolli             | Nah. matlac (ten) + -nolli
+216  | simple        | centetonal              | Nah. cente (simple/single) + -tonal
+217  | several       | miyacnolli              | Nah. miyac (several/many) + -nolli
+218  | vowel         | cacitlatli              | Nah. cacitla (vowel/voice-thing) + -tli
+220  | war           | yaoyotli                | Nah. yaoyotl (war) + -i — attested
+221  | lay           | tlaztayaru              | Nah. tlazta (to lay/set down) + -yaru
+222  | against       | ixnamicolli             | same as against
+223  | pattern       | machiyotonal            | Nah. machiyotl (pattern/sign) + -tonal
+224  | slow          | yeyecanolli             | Nah. yeyeca (slow/try) + -nolli
+226  | love          | tlazohtlatonal          | Nah. tlazohtla (love) + -tonal
+227  | person        | tlacatli                | Nah. tlacatl (person) + -i — attested
+228  | money         | teocuitlatl             | Nah. teocuitlatl (gold/money) + stylized
+229  | serve         | tequipanoyaru           | Nah. tequipanoa (to serve) + -yaru
+230  | appear        | neciyaru                | Nah. neci (to appear/be seen) + -yaru
+231  | road          | ohtonal                 | Nah. ohtli (road) + -tonal
+232  | map           | tlalmachinolli          | Nah. tlalmachi (map/earth-measure) + -olli
+233  | rain          | quiahuitli              | Nah. quiahuitl (rain) + -i — attested
+234  | rule          | nahuatilnolli           | Nah. nahuatil (rule/law) + -nolli
+235  | govern        | tlatoyaru               | Nah. tlato (to govern/speak) + -yaru
+236  | pull          | tlanayaru               | Nah. tlana (to pull) + -yaru
+237  | cold          | cetztonal               | Nah. cetz (cold) + -tonal
+238  | notice        | ittacayaru              | Nah. ittaca (to notice/look) + -yaru
+239  | voice         | tlahtolnolli            | Nah. tlahtol (voice/speech) + -nolli
+240  | fall          | huetziyaru              | Nah. huetzi (to fall) + -yaru
+241  | power         | chicahuaztli            | Nah. chicahuaztl (power/strength) + -i
+242  | town          | altepetli               | Nah. altepetl (city/town) + -i — attested
+243  | fine          | quallinolli             | Nah. qualli (fine/good) + -nolli
+244  | drive         | huicayaru               | Nah. huica (to drive/carry) + -yaru
+245  | lead          | yacanayaru              | Nah. yacana (to lead) + -yaru
+246  | cry           | choquiyaru              | Nah. choquia (to cry) + -yaru
+247  | dark          | yohualtli               | Nah. yohual (dark/night) + -tli
+248  | machine       | tlachihualnolli         | Nah. tlachihua (machine/made-thing) + -nolli
+249  | note          | machiyotli              | Nah. machiyotl (note/sign) + -i
+250  | wait          | chiayaru                | Nah. chia (to wait) + -yaru
+252  | figure        | ixiptlatonal            | Nah. ixiptla (figure/image) + -tonal
+253  | star          | citlalinnolli           | Nah. citlalin (star) + -nolli
+254  | box           | petlacalnolli           | Nah. petlacal (box/chest) + -nolli
+255  | noun          | tocaitli                | Nah. tocaitl (noun/name) + -i
+256  | field         | milnotonal              | Nah. milli (field/cultivated) + -tonal
+257  | rest          | cehuitonal              | Nah. cehui (to rest/cease) + -tonal
+258  | correct       | melalcanolli            | Nah. melalca (correct/straight) + -nolli
+259  | able          | hueliholli              | same as could/able
+260  | pound         | tlamihmatinolli         | Nah. tlamihmat (pound/careful) + -nolli
+262  | beauty        | yoltonehtli             | Nah. yolton (beauty/little heart) + -tli
+263  | drive         | huicayaru               | same as drive
+264  | stood         | icatinolli              | Nah. icati (stood/standing) + -nolli
+265  | contain       | piayolli                | Nah. pia (to contain/keep) + -yolli
+266  | front         | ixpantonal              | Nah. ixpan (front/before) + -tonal
+267  | teach         | temachtiyaru            | Nah. temachti (to teach) + -yaru
+268  | week          | chiconahuihuitltli      | Nah. chiconahuihuitl (seven-days) + -tli
+269  | final         | tzonquizatonal          | Nah. tzonquiza (final/end) + -tonal
+270  | gave          | macnolli                | Nah. mac (gave) + -nolli
+271  | green         | xoxouhquitli            | Nah. xoxouhqui (green) + -tli
+272  | oh            | ahnolli                 | Nah. ah (oh/exclamation) + -nolli
+273  | quick         | icuactonal              | Nah. icuac (quick/when) + -tonal
+274  | develop       | tlapaliyaru             | Nah. tlapalia (to develop/grow) + -yaru
+275  | ocean         | hueitlalnolli           | Nah. hueiatl (great-water/ocean) + -nolli
+276  | warm          | tonalyoshi              | Nah. tonal (warm/sun) + Jpn. -yoshi
+277  | free          | titonolli               | Nah. titon (free/self) + -olli
+278  | minute        | tlapohualnolli          | Nah. tlapohua (minute/count) + -nolli
+279  | strong        | chicahuanolli           | Nah. chicahua (strong) + -nolli
+280  | special       | tlazonolli              | Nah. tlazo (special/dear) + -nolli
+281  | behind        | teputztonal             | same as behind
+282  | clear         | tlanextitonal           | Nah. tlanexti (clear/light) + -tonal
+283  | tail          | cuitlapilnolli          | Nah. cuitlapil (tail) + -nolli
+284  | produce       | chihuacatonal           | Nah. chihuaca (produce/make) + -tonal
+285  | fact          | nellitonal              | Nah. nelli (fact/true) + -tonal
+286  | street        | ohtlatonal              | Nah. ohtla (street/road) + -tonal
+288  | lot           | miyacnolli              | Nah. miyac (lot/many) + -nolli
+289  | nothing       | ahtletonal              | Nah. ahtle (nothing) + -tonal
+290  | course        | ohnolli                 | Nah. oh (course/road) + -nolli
+291  | stay          | mononolli               | Nah. mono (to stay/alone) + -nolli
+292  | wheel         | malacatltonal           | Nah. malacatl (wheel/spindle) + -tonal
+293  | full          | teminolli               | Nah. temi (full/fill) + -nolli
+294  | force         | tlapalnolli             | Nah. tlapal (force/color) + -nolli
+295  | blue          | xoxouhquitonal          | Nah. xoxouhqui (blue/green) + -tonal
+296  | object        | tlanolli                | Nah. tlan (object/near) + -olli
+297  | decide        | tlaneltocayaru          | Nah. tlaneltoca (decide/believe) + -yaru
+298  | surface       | ixnolli                 | Nah. ix (surface/face) + -nolli
+299  | deep          | tlacatonal              | Nah. tlaca (deep/person) + -tonal
+300  | moon          | meztliolli              | Nah. metztli (moon) + -olli
+301  | island        | atltepetonal            | Nah. atl+tepe (island/water-hill) + -tonal
+302  | foot          | icxiolli                | Nah. icxi (foot) + -olli
+303  | system        | tlamachnolli            | Nah. tlamach (system/gift) + -nolli
+304  | busy          | tequipanolli            | Nah. tequipan (busy/working) + -olli
+305  | test          | temachnolli             | Nah. temach (test/teach) + -nolli
+306  | record        | amoxtonal               | Nah. amox (record/book) + -tonal
+307  | boat          | acaltonal               | Nah. acal (boat) + -tonal
+308  | common        | mochicantonal           | same as usual
+309  | gold          | teocuitlatonal          | Nah. teocuitlatl (gold) + -tonal
+310  | possible      | hueliyoshi              | Nah. hueli (possible/able) + Jpn. -yoshi
+311  | plane         | tlapalnolli             | Nah. tlapal (plane/flat) + -nolli
+312  | stead         | icantli                 | same as place
+313  | dry           | huaquanolli             | Nah. huaqua (dry) + -nolli
+314  | wonder        | teyolpacholli           | Nah. teyolpach (wonder/heavy-heart) + -olli
+315  | laugh         | huetzquitoyaru          | Nah. huetzqui (to laugh) + -yaru
+316  | thousand      | tzontlitonal            | Nah. tzontli (four-hundred/great-count) stylized
+317  | ago           | ocyenolli               | Nah. ocye (ago/already) + -nolli
+318  | ran           | motlaloyaru             | Nah. motlalo (to run) + -yaru
+319  | check         | tlachinolli             | Nah. tlachi (to check/look) + -nolli
+320  | game          | netotiliztonal          | Nah. netotiliz (game/dance) + -tonal
+321  | shape         | ixayacanolli            | Nah. ixayaca (shape/face-mask) + -nolli
+322  | equate        | centetonal              | Nah. cente (equate/same-one) + -tonal
+323  | hot           | tonalyaru               | Nah. tonal (hot/sun) + -yaru
+324  | miss          | polihuiyaru             | Nah. polihu (to miss/perish) + -yaru
+325  | brought       | huicnolli               | Nah. huic (brought/carried) + -nolli
+326  | heat          | tonaltonal              | Nah. tonal (heat/sun) + -tonal
+327  | snow          | ceyonolli               | Nah. ceyotl (snow/frost) + -nolli
+328  | tire          | cihuitonal              | Nah. cihui (tire/hunger) + -tonal
+329  | bring         | huicayoshi              | Nah. huica (to bring) + Jpn. -yoshi
+331  | distant       | huecatonal              | Nah. hueca (distant) + -tonal
+333  | east          | tlapallampatli          | Nah. tlapalla (east/dawn) + -mpatli
+334  | paint         | tlapaloyaru             | Nah. tlapalo (to paint) + -yaru
+335  | language      | tlahtolnolli            | Nah. tlahtol (language/speech) + -nolli
+336  | among         | nepantlaolli            | same as among
+337  | grand         | hueytonal               | Nah. huey (grand/great) + -tonal
+341  | drop          | chalchiyaru             | Nah. chalchi (drop/jade) + -yaru
+342  | heart         | yollonolli              | Nah. yollo (heart) + -nolli
+344  | present       | axcantonal              | Nah. axcan (present/now) + -tonal
+345  | heavy         | etznolli                | Nah. etz (heavy/blood) + -nolli
+346  | dance         | netotiyaru              | Nah. netoti (to dance) + -yaru
+347  | engine        | tlachihualnolli         | same as machine
+348  | position      | tlacannolli             | Nah. tlacan (position/command) + -nolli
+349  | arm           | matzinnolli             | Nah. matzin (arm/hand-hon.) + -nolli
+350  | wide          | patlahuanolli           | Nah. patlahua (wide) + -nolli
+351  | sail          | ehecanemiyaru           | Nah. eheca+nemi (to sail/wind-live) + -yaru
+352  | material      | tlanolli                | Nah. tlan (material/near) + -olli
+353  | size          | hueyotonal              | Nah. hueyo (size/greatness) + -tonal
+354  | vary          | xeliyaru                | Nah. xeli (to vary/divide) + -yaru
+355  | settle        | tlaliayoshi             | Nah. tlalia (to settle/place) + Jpn. -yoshi
+356  | speak         | tlahtoyaru              | same as talk
+357  | weight        | eztonal                 | Nah. ez (weight/blood) + -tonal
+358  | general       | mochicanolli            | Nah. mochican (general/always) + -olli
+359  | ice           | ceyotli                 | Nah. ceyotl (ice/frost) + -i
+360  | matter        | tlatolnolli             | Nah. tlatol (matter/speech) + -nolli
+361  | circle        | malacachnolli           | Nah. malacach (circle/spiral) + -nolli
+362  | pair          | ometonal                | Nah. ome (pair/two) + -tonal
+363  | include       | calaquiyoshi            | Nah. calaquia (include/enter) + Jpn. -yoshi
+364  | divide        | xeliyolli               | Nah. xeli (to divide) + -yolli
+365  | syllable      | tlahtolnolli            | Nah. tlahtol (syllable/speech) + -nolli
+366  | felt          | namicnolli              | Nah. namic (felt/met) + -nolli
+367  | perhaps       | achinolli               | same as perhaps
+368  | pick          | pepenayaru              | Nah. pepena (to pick/gather) + -yaru
+369  | sudden        | zazanicanolli           | Nah. zazanica (sudden) + -nolli
+370  | count         | pohuyaru                | Nah. pohua (to count) + -yaru
+371  | square        | nahcampanotonal         | Nah. nahcampa (square/four-dir) + -tonal
+372  | reason        | nenequinolli            | Nah. neneqi (reason/want) + -nolli
+373  | length        | huecatonal              | Nah. hueca (length/distant) + -tonal
+374  | represent     | ixiptlayaru             | Nah. ixiptla (to represent/image) + -yaru
+375  | art           | toltecayotl             | Nah. toltecayotl (art/craft) + stylized
+376  | subject       | tlatolnolli             | same as matter
+377  | region        | tlalmilnolli            | Nah. tlalmil (region/farmland) + -nolli
+378  | energy        | chicahuanolli           | same as strong
+379  | hunt          | tlacuayaru              | Nah. tlacua (to hunt/eat) + -yaru
+380  | probable      | huelnolli               | Nah. huel (probable/well) + -nolli
+381  | bed           | petlatonal              | Nah. petlatl (bed/mat) + -tonal
+382  | brother       | teiccanolli             | Nah. teicca (brother/sibling) + -nolli
+383  | egg           | totoltlanolli           | Nah. totoltlan (egg/bird-place) + -nolli
+384  | ride          | cuaitoyaru              | Nah. cuaito (to ride/go-head) + -yaru
+385  | cell          | centlapalnolli          | Nah. centlapal (cell/one-side) + -nolli
+386  | believe       | tlaneltocayaru          | same as decide/believe
+387  | fraction      | tlaxelnolli             | Nah. tlaxel (fraction/division) + -nolli
+388  | forest        | cuauhtlanolli           | Nah. cuauhtla (forest) + -nolli
+389  | sit           | tlalliayaru             | Nah. tlallia (to sit/place) + -yaru
+390  | race          | yaonolli                | Nah. yao (race/war-group) + -nolli
+391  | window        | tlachialonolli          | Nah. tlachialon (window/look-thing) + -nolli
+392  | store         | tianguiznolli           | Nah. tianguiz (store/market) + -nolli
+393  | summer        | tonalnolli              | Nah. tonal (summer/sun) + -nolli
+394  | train         | ohtlanolli              | Nah. ohtla (train/road-line) + -nolli
+395  | sleep         | cochiyaru               | Nah. cochi (to sleep) + -yaru
+396  | prove         | tlaneltocatonal         | Nah. tlaneltoca (prove/believe) + -tonal
+397  | lone          | cemolli                 | Nah. cemo (lone/one) + -olli
+398  | leg           | metznolli               | Nah. metz (leg/moon) + -nolli
+399  | exercise      | mauizotonal             | Nah. mauizo (exercise/honor) + -tonal
+400  | wall          | tenamitonal             | Nah. tenami (wall/fence) + -tonal
+401  | catch         | nacazhuiyaru            | Nah. nacazhu (to catch) + -yaru
+402  | mount         | tlecoyaru               | Nah. tleco (to mount/climb) + -yaru
+403  | wish          | temachnolli             | Nah. temach (wish/teach) + -nolli
+404  | sky           | ilhuicatonal            | Nah. ilhuicatl (sky) + -tonal
+405  | board         | huapaltonal             | Nah. huapal (board/plank) + -tonal
+406  | joy           | papaquiliztonal         | Nah. papaquiliz (joy) + -tonal
+407  | winter        | cehualnolli             | Nah. cehual (winter/shade) + -nolli
+408  | sat           | tlalinnolli             | Nah. tlali (sat/placed) + -nolli
+409  | written       | tlahcuilolnolli         | Nah. tlahcuilol (written) + -nolli
+410  | wild          | xolonolli               | Nah. xolo (wild/servant) + -nolli
+411  | instrument    | tlatequinolli           | Nah. tlatequi (instrument/tool) + -nolli
+412  | kept          | mopiannolli             | Nah. mopian (kept/self-kept) + -nolli
+413  | glass         | tezcanolli              | Nah. tezca (glass/mirror) + -nolli
+414  | grass         | zacatonal               | Nah. zacatl (grass) + -tonal
+415  | cow           | cuahnolli               | Nah. cuah (horned/cow) + -nolli
+416  | job           | tequitonal              | Nah. tequitl (job/tribute) + -tonal
+417  | edge          | tenonolli               | Nah. tenon (edge/lip) + -olli
+418  | sign          | machiyotonal            | same as pattern/sign
+419  | visit         | caltiyaru               | Nah. calti (to visit/enter-house) + -yaru
+420  | past          | ocyetonal               | Nah. ocye (past/already) + -tonal
+421  | soft          | yamamanolli             | Nah. yamaman (soft) + -olli
+422  | fun           | netotiliztli            | Nah. netotiliz (fun/dance) + -tli
+423  | bright        | tlanextitli             | Nah. tlanexti (bright/light) + -tli
+424  | gas           | ehecatonal              | Nah. ehecatl (gas/wind) + -tonal
+425  | weather       | quiyahuittonal          | Nah. quiyahuitt (weather/rain) + -tonal
+426  | month         | metztlitonal            | Nah. metztli (month/moon) + -tonal
+427  | million       | tzontlinolli            | Nah. tzontli (great-count) + -nolli
+428  | bear          | cuetlachnolli           | Nah. cuetlach (bear/wolf) + -nolli
+429  | finish        | tzonquizayaru           | Nah. tzonquiza (to finish) + -yaru
+430  | happy         | papaquiyoshi            | Nah. papaqi (happy/joy) + Jpn. -yoshi
+431  | hope          | tlapaliyolli            | Nah. tlapalia (hope/grow) + -yolli
+432  | flower        | xochitonal              | Nah. xochitl (flower) + -tonal
+433  | clothe        | tlaquenolli             | Nah. tlaque (to clothe) + -nolli
+434  | strange       | ixcuepanolli            | Nah. ixcuepa (strange/face-turn) + -nolli
+435  | gone          | polihuinolli            | Nah. polihu (gone/perished) + -nolli
+436  | jump          | choloyaru               | Nah. cholo (to jump/flee) + -yaru
+437  | baby          | piltontonal             | Nah. pilton (baby/little-child) + -tonal
+438  | eight         | chicueynolli            | Nah. chicuei (eight) + -nolli
+439  | village       | calmilnolli             | Nah. calmil (village/house-field) + -nolli
+440  | meet          | namiquiyaru             | Nah. namiqi (to meet) + -yaru
+441  | root          | nelhuayotonal           | Nah. nelhuayo (root) + -tonal
+442  | buy           | coayaru                 | Nah. coa (to buy) + -yaru
+443  | raise         | quetzayaru              | Nah. quetza (to raise/stand) + -yaru
+444  | solve         | tlaxtlahuayaru          | Nah. tlaxtlahua (to solve/pay) + -yaru
+445  | metal         | tepoznolli              | Nah. tepoz (metal/copper) + -nolli
+447  | push          | tlayanayaru             | Nah. tlayana (to push) + -yaru
+448  | seven         | chicomenolli            | Nah. chicome (seven) + -nolli
+449  | paragraph     | tlahcuilolnolli         | same as written (text-block)
+450  | third         | excannolli              | Nah. excan (third/three-places) + -nolli
+452  | held          | mopiannolli             | same as kept
+453  | hair          | tzontliolli             | Nah. tzontli (hair/400) + -olli
+454  | describe      | tlapohuayaru            | Nah. tlapohua (describe/count) + -yaru
+455  | cook          | tlacuayoshi             | Nah. tlacua (to cook/eat) + Jpn. -yoshi
+456  | floor         | tlalixnolli             | Nah. tlalix (floor/earth-face) + -nolli
+458  | result        | tzonquizanolli          | Nah. tzonquiza (result/end) + -nolli
+459  | burn          | tlecuiyaru              | Nah. tlecui (to burn/take fire) + -yaru
+460  | hill          | tepetonal               | Nah. tepetl (hill/mountain) + -tonal
+461  | safe          | mopiannolli             | same as kept/safe
+462  | cat           | miztontonal             | Nah. miztontli (cat/small puma) + -tonal
+463  | century       | cemxiuhnolli            | Nah. cemxihuit (century/one-year) + -nolli
+464  | consider      | tlanequiyaru            | Nah. tlaneqi (consider/want) + -yaru
+465  | type          | tlacanolli              | same as class
+466  | law           | nahuatilnolli           | same as rule
+467  | bit           | achinnolli              | Nah. achin (bit/little) + -nolli
+468  | coast         | atentlitonal            | Nah. atentli (coast/water-edge) + -tonal
+469  | copy          | ixcuepanolli            | Nah. ixcuepa (copy/face-turn) + -nolli
+470  | phrase        | tlahtolnolli            | same as speech
+471  | silent        | ixconolli               | Nah. ixco (silent/on-face) + -nolli
+472  | tall          | hueynolli               | Nah. huey (tall/great) + -nolli
+473  | sand          | xalnolli                | Nah. xalli (sand) + -nolli
+474  | soil          | tlalnolli               | same as ground
+475  | roll          | malaconolli             | Nah. malaco (to roll/spin) + -nolli
+476  | temperature   | tonaltonal              | same as heat/sun
+477  | finger        | mapilnolli              | Nah. mapil (finger) + -nolli
+478  | industry      | tequitlanolli           | Nah. tequitla (industry/work) + -nolli
+479  | value         | tlazonolli              | Nah. tlazo (value/dear) + -nolli
+480  | fight         | yaoyaru                 | Nah. yao (to fight/war) + -yaru
+481  | lie           | tlaztayoshi             | same as lay
+482  | beat          | tepachoyaru             | Nah. tepacho (to beat/press) + -yaru
+483  | excite        | teyolhuyaru             | Nah. teyolhu (to excite) + -yaru
+484  | natural       | tlalticpatonal          | Nah. tlalticpa (natural/earthly) + -tonal
+485  | view          | tlachialnolli           | Nah. tlachial (view/look) + -nolli
+486  | sense         | namiquinolli            | Nah. namiqi (sense/meet) + -nolli
+487  | ear           | nacaznolli              | Nah. nacaz (ear) + -nolli
+491  | case          | tlacannolli             | same as position
+492  | middle        | nepantlanolli           | Nah. nepantla (middle) + -nolli
+493  | kill          | mictiyaru               | Nah. micti (to kill) + -yaru
+494  | son           | pilnolli                | Nah. pilli (son/noble) + -nolli
+495  | lake          | coatlatonal             | Nah. coatl+atl (lake/serpent-water) + -tonal
+496  | moment        | cahuitonal              | same as hour
+497  | scale         | tlamelanolli            | Nah. tlamela (scale/straight) + -nolli
+498  | loud          | cencanolli              | Nah. cenca (loud/very) + -nolli
+499  | spring        | xopannolli              | Nah. xopan (spring season) + -nolli
+500  | observe       | tlachiyaru              | Nah. tlachi (to observe/look) + -yaru
+
+===================================================================================
+PHONETIC GUIDE FOR STONEGUARD
+===================================================================================
+
+Pre-Aztec Toltec / Early Nahuatl sounds:
+  tl  = lateral affricate (unique to Nahuatl — blow through tl simultaneously)
+  tz  = voiceless affricate (as in "cats")
+  hu  = labiovelar (as in "w" before vowels: huey = "wey")
+  qu  = /k/ before e/i (qualli = "kwalli")
+  x   = /sh/ sound (xochitl = "shochitl")
+  ch  = /ch/ (chichi = "chichi")
+  Absolutive suffix -tl/-tli (all free nouns take this — core feature)
+
+Medieval-Meiji Japanese sounds adding texture:
+  shi = /ʃi/ (voiceless palatal + i)
+  chi = /tʃi/ (palatal affricate + i)
+  tsu = /tsɯ/ (dental affricate + back vowel)
+  -ru = verb infinitive (plain form)
+  -yoshi = positive quality (good/worthy — fr. yoshi = good/ready)
+  Compound stacking: noun + noun + -tl mirrors Japanese kanji compounding
+
+Key attested Nahuatl words used:
+  tletl (fire), tetl (stone), atl (water), tlalli (earth), ehecatl (wind),
+  metztli (moon), citlalin (star), tlatoani (ruler/king), ohtli (road),
+  cuicatl (song/music), amatl (paper), tequitl (work), yaoyotl (war),
+  xochitl (flower), altepetl (city), tlacatl (person), quiahuitl (rain),
+  cuauhtla (forest), xopan (spring), zacatl (grass), maitl (hand),
+  icxitl (foot), nacaz (ear), pilhuan (children), toltecayotl (art/craft)
+
+Stoneguard suffix system:
+  -tli  = primary noun (absolutive — all free nouns) fr. Nahuatl -tl
+  -nolli = secondary noun (compound/derived things)
+  -olli  = adjective/quality (fr. Nahuatl ollin = movement)
+  -tonal = place/spirit noun (fr. Nahuatl tonal = day-soul)
+  -yaru  = primary verb ending (action) fr. Jpn. -ru + Nah. ya-
+  -yoshi = secondary verb/adj (positive quality) fr. Jpn. yoshi
+  -yolli = intensive noun (inner/heart quality) fr. Nah. yollo = heart
+
+Japanese bridge words appearing in Stoneguard:
+  -yoshi (good/worthy), -shi (adj ending), -yaru (do/give),
+  quallioshi (good), tonalyoshi (warm), hueliyoshi (possible)
+  These appear where Nahuatl roots meet Japanese verb/adj structures
+
+===================================================================================
+END OF FILE — StoneguardToltec_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

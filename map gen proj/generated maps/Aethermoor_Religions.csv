@@ -1,0 +1,17 @@
+Id,Name,Color,Type,Form,Supreme Deity,Area mi2,Believers,Origins,Potential,Expansionism
+1,Church of Auren,#f4d03f,Organized,Monotheism,"Auren, the Bright Judge",0,0,"",global,4.2
+2,Order of Myrith,#2e86c1,Organized,Monotheism,"Myrith, the Deep Current",0,0,"",global,3.8
+3,Thal-Vor's Church,#717d7e,Organized,Monotheism,"Thal-Vor, the Bone-Deep",0,0,"",state,2.1
+4,Sereveth Mystery Cult,#6c3483,Cult,Cult,"Sereveth, the Whisper Queen",0,0,"",culture,1.4
+5,Forge-Church of Gorvath,#e67e22,Organized,Monotheism,Gorvath of the Forge,0,0,"",culture,2.6
+6,Green Hand of Lira-Sun,#27ae60,Organized,Monotheism,"Lira-Sun, the Green Hand",0,0,"",global,4.5
+7,The Chronicler's Libraries,#1a5276,Organized,Monotheism,The Chronicler (no personal name),0,0,"",global,3.1
+8,Storm Faith of Vel-Ashur,#c0392b,Organized,Monotheism,"Vel-Ashur, the Storm Between",0,0,"",global,3.9
+9,Crossroads of the Wanderer,#bdc3c7,Folk,Animism,The Wanderer (no fixed name),0,0,"",culture,0.0
+10,Void-Keepers,#1c2833,Folk,Animism,The Hollow King,0,0,"",culture,0.0
+11,Deep-Earth Cults,#4d5d27,Folk,Animism,The Root-That-Drinks,0,0,"",culture,0.0
+12,Wild-Places Faith,#7d6608,Folk,Shamanism,The First Mare,0,0,"",culture,0.8
+13,Iron Mouth Oath-Binders,#784212,Organized,Dualism,The Iron Mouth,0,0,"",state,1.5
+14,Threshold Rites,#5b2c6f,Folk,Animism,She Who Waits at the Shore,0,0,"",culture,0.0
+15,The Vaeln (Eldest Court),#0e6655,Cult,Polytheism,"The Vaeln (fifty fey, no supreme)",0,0,"",global,0.3
+0,No religion,,,,"",0,0,"",,

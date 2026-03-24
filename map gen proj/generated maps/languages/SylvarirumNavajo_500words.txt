@@ -1,0 +1,646 @@
+SYLVARIRUM NAVAJO - 500 Common Word Translations
+Fantasy Language based on SylvarirumNavajo name patterns
+Linguistic roots: Diné bizaad (Navajo) — real roots with constructed fill
+Attested Navajo words used where possible; constructed Navajo-pattern words fill gaps.
+
+KEY SOURCE WORDS (Diné bizaad / Navajo):
+  nizhóní (beautiful/good), hózhó (harmony/beauty/balance), shí (I/my),
+  nił (with you), diné (people/person), dinétah (homeland), nahasdzáán (earth),
+  yádiłhił (sky), jį́ (day), tł'ęę' (night), tó (water), kǫ' (fire),
+  tsé (rock/stone), dzil (mountain), tsin (wood/tree), niyol (wind),
+  chizh (firewood), ałhą́ą́' (together), haa (how/what), haash (what is it),
+  shijéí (my heart), bił (with it), naaki (two), tááʼ (three), dįʼ (four),
+  ashdlaʼ (five), hashtł'ish (mud), dził (mountain — variant)
+
+NOTE: Navajo is a tonal, polysynthetic language. Tones (high/low) are marked
+with accent: á (high), a (low). Nasalization marked with ą. Glottal stop = ʼ.
+In Sylvarirum, tones are softened for fantasy use but phonemic shapes preserved.
+Constructed words follow Navajo phonotactics: CV, CVC, CCVC patterns with
+characteristic consonants: zh, sh, ts, tł, dz, gh, hw, kw, łʼ.
+
+===================================================================================
+RANK | ENGLISH       | SYLVARIRUM NAVAJO       | NAVAJO ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | shi                     | Nav. shi- (the/my — definiteness marker)
+2    | a / an        | la                      | Nav. la (one/a certain)
+6    | it            | bił                     | Nav. bi- (it/its) + ł
+14   | this          | dii                     | Nav. díí (this) — attested
+38   | what          | haa                     | Nav. haa (what/how) — attested
+45   | who           | haash                   | Nav. haash (who/what is) — attested
+63   | your          | ni                      | Nav. ni- (your/you) — attested
+85   | our           | nihił                   | Nav. nihi- (our/we) stylized
+99   | us            | nihí                    | Nav. nihí (us/we) — attested
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | hólǫ                    | Nav. hólǫ (there is/exists) — attested
+70   | there         | aadi                    | Nav. aadi (there/over there) — attested
+72   | seem          | yishłééh                | Nav. constructed fr. łééh (becoming)
+78   | think         | nitsékees               | Nav. nitsékees (to think) — attested
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | bił                     | Nav. bi- (of/its) particle
+5    | and           | dóó                     | Nav. dóó (and) — attested
+12   | not           | doo                     | Nav. doo...da (not) — attested
+13   | on            | bikáá                   | Nav. bikáá' (on top of) — attested
+14   | with          | nił                     | Nav. nił (with you) — attested
+21   | but           | ndi                     | Nav. ndi (but/however) — attested
+23   | by            | bił                     | Nav. bi- (by/with it)
+24   | from          | biih                    | Nav. biih (into/from) stylized
+30   | or            | éí doodaii              | Nav. éí doodaʼii (or/either) stylized
+32   | into          | góneʼ                   | Nav. góne' (inside/into) — attested
+43   | if            | dishniigo               | Nav. constructed fr. -go (if/when clause)
+44   | about         | baa                     | Nav. baa (about/concerning) — attested
+60   | because       | háálá                   | Nav. háálá (because) — attested
+71   | only          | tʼáá                    | Nav. tʼáá (just/only) — attested
+82   | also          | altso                   | Nav. altso (all/also/together) stylized
+83   | after         | bizhiʼ                  | Nav. constructed fr. -zhiʼ (after/behind)
+90   | even          | nidi                    | Nav. nidi (even/although) — attested
+95   | these         | díídii                  | Nav. díí plural stylized
+120  | until         | tsídii                  | Nav. constructed fr. tsí (until/up to)
+154  | soon          | tsxíłgo                 | Nav. tsxíłgo (quickly/soon) — attested
+172  | since         | bizhiigo                | Nav. constructed fr. -zhii + -go
+183  | against       | bił ndaaz               | Nav. constructed (against/heavy with)
+192  | during        | biyiʼ                   | Nav. biyiʼ (inside/during) — attested
+219  | toward        | bíighah                 | Nav. bíighah (toward/alongside) attested
+251  | still         | tʼáá ałtso              | Nav. tʼáá altso (still/yet/all) stylized
+261  | above         | bikáaʼgi                | Nav. bikáa'gi (above/on top) stylized
+287  | behind        | bizhiʼdi                | Nav. constructed (behind/after-place)
+332  | yes           | aoo                     | Nav. aoo' (yes) — attested
+338  | yet           | ndi                     | Nav. ndi (but/yet) — same as but
+339  | among         | alnahji                 | Nav. constructed fr. alna (among/across)
+340  | perhaps       | shił béédahoziní        | Nav. constructed (perhaps/I wonder)
+451  | shall         | dooleeł                 | Nav. dooleeł (will be/shall) — attested
+457  | either        | éí doodaii              | Nav. (either/or) same as or
+488  | else          | łaʼ                     | Nav. łaʼ (another/other/else) — attested
+490  | quite         | tʼáá                    | Nav. tʼáá (quite/just/simply) attested
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | iiłééh                  | Nav. constructed fr. -łééh (to do/make)
+9    | have          | shił hólǫ               | Nav. shił hólǫ (I have/it exists with me)
+18   | say           | diits'a                 | Nav. diits'a (to say/speak) stylized
+47   | get           | nayiiłnih               | Nav. constructed fr. -nih (to obtain)
+51   | make          | ályaa                   | Nav. ályaa (made/created) — attested
+52   | can           | hólǫgo                  | Nav. hólǫ + -go (being able/can)
+53   | like          | ayóó                    | Nav. ayóó (very/like/love) — attested
+56   | know          | bééhózin                | Nav. bééhózin (to know) — attested
+57   | take          | yiyiiłnih               | Nav. constructed fr. -nih (to take)
+59   | see           | yiilta                  | Nav. constructed fr. -ta (to see/read)
+68   | look          | yiists'a                | Nav. constructed fr. iists'a (to look)
+72   | come          | naaghá                  | Nav. naaghá (going around/coming) attested
+76   | think         | nitsékees               | Nav. nitsékees (to think) — attested
+84   | use           | bił naanish             | Nav. bił naanish (to work with/use)
+86   | work          | naanish                 | Nav. naanish (work/to work) — attested
+92   | want          | nizhé                   | Nav. constructed fr. nizh- (desire/want)
+96   | give          | nił hózhó               | Nav. constructed (to give harmony/give)
+107  | hold          | yiłtseed                | Nav. constructed fr. -tseed (to hold/grip)
+109  | turn          | naashtł'izh             | Nav. constructed fr. tł'izh (to turn/twist)
+115  | walk          | naagháh                 | Nav. naagháh (walking/going) — attested
+118  | begin         | ałniʼ                   | Nav. ałniʼ (middle/begin) stylized
+123  | seem          | yishłééh                | Nav. constructed (seeming/becoming)
+127  | open          | yilzhod                 | Nav. constructed fr. -zhod (to open/spread)
+137  | care          | baa nitsékees           | Nav. (to think about/care for)
+141  | feel          | shił hózhó              | Nav. shił hózhó (feel harmony/feel)
+143  | talk          | yáłti                   | Nav. yáłtiʼ (to talk/speak) — attested
+148  | run           | niyol                   | Nav. niyol (wind — used for running fast)
+150  | leave         | yighááh                 | Nav. constructed fr. ghááh (to leave/go)
+155  | go            | iiʼííł                  | Nav. constructed fr. íił (to go)
+159  | fill          | yiłtsxiz                | Nav. constructed fr. -tsxiz (to fill/pack)
+165  | happen        | naazniił                | Nav. constructed fr. naaz- (to happen/fall)
+174  | pass          | naashnish               | Nav. constructed fr. naash (to pass/move)
+179  | reach         | yizhniih                | Nav. constructed fr. -niih (to reach)
+189  | remember      | baa nahosdzaa           | Nav. constructed (to recall/earth-thought)
+191  | hear          | yistsʼáʼ                | Nav. yists'a (to hear) — attested
+199  | move          | naashnish               | Nav. naashnish (to move/work) stylized
+201  | fall          | naaztį                  | Nav. constructed fr. -ztį (to fall/lie)
+206  | travel        | naaghá                  | Nav. naaghá (to travel/go around)
+208  | sing          | hataał                  | Nav. hataał (to sing/chant) — attested
+209  | listen        | yistsʼáʼgo              | Nav. yists'a + -go (listening)
+222  | pull          | yiyiił                  | Nav. constructed fr. -iił (to pull/drag)
+224  | follow        | biih naagháh            | Nav. (to go into/follow)
+226  | appear        | yilzhiiʼ                | Nav. constructed fr. -zhiiʼ (to appear)
+229  | serve         | bił naanish             | Nav. (to work with/serve)
+233  | govern        | nahałtin                | Nav. nahałtin (law/teaching) stylized
+235  | rule          | nahatá                  | Nav. nahatá (planning/ruling) — attested
+237  | notice        | yiiltsą                 | Nav. yiiltsą (to see/notice) — attested
+239  | cry           | yicha                   | Nav. yicha (to cry) — attested
+243  | drive         | niiłch'ił               | Nav. constructed fr. -ch'ił (to drive)
+248  | wait          | nizhónígo               | Nav. (wait beautifully/wait in harmony)
+253  | lead          | biʼdiilnish             | Nav. constructed fr. -nish (to lead/direct)
+263  | stand         | siłtsooz                | Nav. constructed fr. -łtsooz (to stand)
+265  | contain       | biyiʼ hólǫ              | Nav. (exists inside/contains)
+268  | teach         | nahałtin                | Nav. nahałtin (to teach/law) — attested
+273  | develop       | naalzhiiʼ               | Nav. constructed fr. naał- (to grow/develop)
+276  | produce       | ályaaígíí               | Nav. ályaa + -ígíí (that which is made)
+281  | decide        | naat'á                  | Nav. naat'á (to decide/plan) stylized
+287  | prove         | bił ałhosh              | Nav. constructed (to show truth)
+292  | stay          | nizhónígo hólǫ          | Nav. (to remain in harmony/stay)
+294  | force         | aojah                   | Constructed (steppe-borrowed fr. Bovari)
+297  | push          | yiłtsooz                | Nav. constructed fr. -łtsooz (to push)
+305  | test          | bił naalnish            | Nav. (to work with/test)
+313  | laugh         | yidzaaz                 | Nav. yidzaaz (to laugh) — attested
+315  | wonder        | nitsékees baa           | Nav. (to think about/wonder)
+319  | check         | yiiltsą                 | Nav. yiiltsą (to look at/check)
+322  | shape         | ályaa                   | Nav. ályaa (to shape/make)
+328  | heat          | siłtso                  | Nav. constructed fr. łtso (yellow/warm)
+332  | bring         | nayiiłnih               | Nav. (to bring/obtain — same as get)
+335  | paint         | yił hózhó               | Nav. (to make beautiful/paint)
+348  | dance         | nzhóní naagháh          | Nav. (to walk in beauty/dance) stylized
+356  | vary          | łaʼ yizhdiilzhaazh      | Nav. constructed (to differ/be other)
+358  | speak         | yáłti                   | Nav. yáłtiʼ (to speak) — attested
+360  | settle        | nizhóní hólǫ            | Nav. (harmony exists here/settle)
+368  | hunt          | nayiisnii               | Nav. constructed fr. -snii (to hunt/seek)
+371  | count         | ałkéé                   | Nav. ałkéé (in order/counting) stylized
+379  | represent     | biił naalnish           | Nav. (to work as/represent)
+384  | sit           | siʼą                    | Nav. siʼą (to sit/be seated) — attested
+386  | believe       | bééhózingo              | Nav. (to know as true/believe)
+388  | ride          | łééchąąʼí               | Nav. łééchąąʼí (dog — horse-like) stylized
+392  | catch         | yiyiilnih               | Nav. constructed fr. -nih (to catch/take)
+394  | wish          | nizhé                   | Nav. constructed (wish/want — same as want)
+400  | sleep         | łééhsod                 | Nav. constructed fr. -sod (to sleep)
+402  | mount         | yikaah                  | Nav. constructed fr. -kaah (to mount/climb)
+405  | fly           | niyolgo                 | Nav. niyol + -go (going like wind/flying)
+412  | keep          | yiłtseed                | Nav. (to hold/keep — same as hold)
+415  | cut           | yizhdiił                | Nav. constructed fr. -zhdiił (to cut)
+418  | visit         | naaghá bił              | Nav. (to go around with/visit)
+425  | jump          | yiłwod                  | Nav. constructed fr. -łwod (to jump/run)
+429  | finish        | ałtsé                   | Nav. ałtsé (first/finished) stylized
+431  | hope          | hózhóogo                | Nav. hózhóogo (in beauty/hopefulness)
+433  | dress         | yił push                | Nav. constructed (to clothe)
+435  | grow          | naalzhiiʼ               | Nav. constructed (to grow — same as develop)
+437  | meet          | ałhą́ą́ naagháh          | Nav. ałhą́ą́ (together) + naagháh (to go)
+441  | raise         | yíníkáah                | Nav. constructed fr. -káah (to raise/lift)
+443  | solve         | bił hózhó               | Nav. (to make harmony with/solve)
+455  | cook          | yishjish                | Nav. constructed fr. -jish (to cook/pound)
+457  | burn          | kǫʼgo                   | Nav. kǫ' (fire) + -go (fire-action/burning)
+464  | describe      | yáłtiʼgo baa            | Nav. (to speak about/describe)
+466  | copy          | ałtsé bił               | Nav. (first-with/to mirror)
+473  | roll          | naashtłizh              | Nav. constructed fr. -tłizh (to roll/twist)
+476  | excite        | yił ayóó                | Nav. (very much with/excite)
+480  | fight         | ałkéé naanish           | Nav. (to work against each other/fight)
+482  | beat          | yizhdił                 | Nav. constructed fr. -zdił (to beat/strike)
+493  | break         | yikʼazh                 | Nav. constructed fr. -k'azh (to break)
+497  | kill          | náhást'éíd              | Nav. constructed (grave/ending — euphemism)
+
+--- NOUNS: PEOPLE ---
+15   | he            | bił                     | Nav. bi- (he/his/it)
+16   | she           | bił                     | Nav. bi- (she — same form, context differs)
+17   | you           | ni                      | Nav. ni (you) — attested
+25   | they          | nihił                   | Nav. nihi- (they/their) stylized
+26   | we            | nihí                    | Nav. nihí (we) — attested
+33   | my            | shí                     | Nav. shí (I/my) — attested
+57   | him           | bił                     | Nav. bi- object form
+59   | me            | shił                    | Nav. shił (with me/me) — attested
+60   | people        | diné                    | Nav. diné (people/the People) — attested
+65   | some          | łaʼ                     | Nav. łaʼ (some/other/one) — attested
+67   | them          | nihił                   | Nav. nihi- (them/their)
+100  | great         | nitsaa                  | Nav. nitsaa (large/great) — attested
+131  | children      | awéé                    | Nav. awéé' (baby/child) — attested
+133  | girl          | at'ééd                  | Nav. at'ééd (girl) — attested
+143  | boy           | ashkii                  | Nav. ashkii (boy) — attested
+157  | family        | ałhą́ą́                  | Nav. ałhą́ą́ (together/family-group)
+161  | man           | hastiin                 | Nav. hastiin (man/mister) — attested
+165  | woman         | asdzáá                  | Nav. asdzáá (woman) — attested
+168  | king          | naatʼáanii              | Nav. naatʼáanii (leader/chief) — attested
+226  | person        | diné                    | Nav. diné (person/human) — attested
+228  | friend        | bilahʼ                  | Nav. constructed fr. bila (friend/companion)
+348  | brother       | shinaaʼí                | Nav. shinaaʼí (my older brother) — attested
+382  | baby          | awéé                    | Nav. awéé' (baby) — attested
+430  | son           | shiyáázh                | Nav. shiyáázh (my son) — attested
+494  | mother        | shimá                   | Nav. shimá (my mother) — attested
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | kéyah                   | Nav. kéyah (land/territory) — attested
+97   | day           | jį́                      | Nav. jį́ (day) — attested
+135  | river         | tónteel                 | Nav. tó (water) + nteel (wide) — attested
+136  | mile          | naagháhdi               | Nav. naagháh (traveling) + -di (place)
+174  | rock          | tsé                     | Nav. tsé (rock/stone) — attested
+176  | fire          | kǫʼ                     | Nav. kǫ' (fire) — attested
+178  | south         | shádiʼááh               | Nav. shádiʼááh (south/sunny side) attested
+179  | north         | náhookǫs                | Nav. náhookǫs (north/Polaris) — attested
+181  | piece         | łaʼ                     | Nav. łaʼ (one/a piece) stylized
+188  | space         | yádiłhił                | Nav. yádiłhił (sky/space) — attested
+190  | ground        | nahasdzáán              | Nav. nahasdzáán (earth/ground) — attested
+196  | hour          | ahéʼéłtį                | Nav. constructed fr. -ełtį (time period)
+203  | west          | eʼeʼah                  | Nav. eʼeʼah (west/where sun sets) attested
+212  | morning       | abíní                   | Nav. abíní (morning) — attested
+233  | rain          | niłtsą                  | Nav. niłtsą (rain) — attested
+240  | cold          | hakʼaz                  | Nav. hakʼaz (cold) — attested
+242  | dark          | chahałheeł              | Nav. chahałheeł (darkness) — attested
+247  | light         | łigai                   | Nav. łigai (white/light) — attested
+250  | wave          | tónteel bitłʼaah        | Nav. (wide water edge/wave) stylized
+252  | heart         | shijéí                  | Nav. shijéí (my heart) — attested
+254  | star          | sǫʼ                     | Nav. sǫʼ (star) — attested
+255  | box           | jeeshóó                 | Nav. constructed fr. jeeshóó (bundle/box)
+266  | field         | keʼéltséhí              | Nav. constructed (open ground/field)
+268  | rest          | hózhóogo                | Nav. hózhóogo (in beauty/at rest)
+274  | ocean         | tónteel                 | Nav. tónteel (wide water/ocean) — attested
+277  | minute        | ałtsé ahéʼéłtį          | Nav. (small time/moment)
+285  | fact          | ałtsé bééhózin          | Nav. (first knowing/truth)
+287  | street        | atiin                   | Nav. atiin (road/path) — attested
+290  | lot           | łaʼ nitsaa              | Nav. (one great/a lot)
+299  | course        | atiin                   | Nav. atiin (road/course — same as street)
+301  | wheel         | naashchʼaaʼí            | Nav. constructed fr. naash (rolling thing)
+303  | force         | aojah                   | Constructed blend (force — same as push)
+305  | moon          | ooljééʼ                 | Nav. ooljééʼ (moon) — attested
+306  | island        | tó biyaadi              | Nav. tó (water) + biyaadi (under/surrounded)
+308  | foot          | kéłchí                  | Nav. kéł (shoe/foot base) stylized
+312  | boat          | tsin naagháhí           | Nav. tsin (wood) + naagháhí (going thing)
+316  | plane         | niyolgo tsits'aa        | Nav. (wind-going metal bird) stylized
+318  | thousand      | mííl                    | Nav. mííl (thousand) — attested
+320  | game          | naʼadlo                 | Nav. naʼadlo (gambling/game) — attested
+323  | heat          | siłtso                  | Nav. constructed (warm/heat — same as heat verb)
+327  | snow          | zas                     | Nav. zas (snow) — attested
+334  | east          | haʼaʼaah                | Nav. haʼaʼaah (east/where sun rises) attested
+336  | language      | bizaad                  | Nav. bizaad (language/word) — attested
+339  | ball          | jooł                    | Nav. jooł (ball) — attested
+341  | drop          | tóchʼil                 | Nav. constructed fr. tó (water) + chʼil
+345  | engine        | chidí bił               | Nav. chidí (car/engine) stylized
+347  | arm           | ibid                    | Nav. constructed fr. ibid (arm/limb)
+352  | material      | bił ályaaígíí           | Nav. (that which is made of/material)
+353  | size          | nitsaago                | Nav. nitsaa + -go (of bigness/size)
+360  | ice           | tin                     | Nav. tin (ice) — attested
+361  | matter        | nitsaa baa              | Nav. (of great concern/matter)
+363  | pair          | naaki                   | Nav. naaki (two) — attested
+366  | length        | nineezgo                | Nav. nineez (long) + -go — attested
+367  | syllable      | bizaad łaʼ              | Nav. (one word-part/syllable)
+374  | subject       | baa nitsékees           | Nav. (what is thought about/subject)
+375  | region        | kéyah                   | Nav. kéyah (land/region — same as place)
+376  | energy        | aojah                   | Constructed (energy/force)
+379  | art           | hózhóogo ályaa          | Nav. (made in beauty/art)
+384  | circle        | naashnishí              | Nav. constructed (going-around shape)
+387  | fraction      | łaʼ                     | Nav. łaʼ (one/a part — same as piece)
+388  | forest        | tsin biyaadi            | Nav. tsin (trees) + biyaadi (among)
+391  | race          | niyolgo naagháh         | Nav. (going fast like wind/race)
+392  | window        | tsé bee ííʼíí           | Nav. (glass/see-through thing) stylized
+393  | store         | nalyéhé                 | Nav. nalyéhé (trading post/store) attested
+394  | summer        | shį́į́                   | Nav. shį́į́ (summer) — attested
+395  | train         | kǫʼ naagháhí            | Nav. kǫ' (fire) + naagháhí (going thing)
+399  | wall          | tsé biziiz              | Nav. tsé (rock) + biziiz (its wall) stylized
+401  | mount         | dzil                    | Nav. dzil (mountain) — attested
+403  | sky           | yádiłhił                | Nav. yádiłhił (sky) — attested
+407  | board         | tsinłtsooí              | Nav. tsin (wood) + łtsooí (flat) stylized
+408  | joy           | hózhó                   | Nav. hózhó (beauty/harmony/joy) — attested
+409  | winter        | haigo                   | Nav. haigo (winter) — attested
+412  | glass         | tsé bee ííʼíí           | Nav. (see-through stone/glass) stylized
+413  | grass         | tłʼoh                   | Nav. tłʼoh (grass/hay) — attested
+414  | cow           | béégashii               | Nav. béégashii (cow) — attested
+416  | job           | naanish                 | Nav. naanish (work/job) — attested
+417  | edge          | bikaʼ                   | Nav. bikaʼ (its edge/surface) stylized
+419  | sign          | bił hózhó naashchʼaaʼ   | Nav. constructed (beautiful mark/sign)
+422  | fun           | naʼadlo                 | Nav. naʼadlo (play/fun — same as game)
+423  | bright        | łigai                   | Nav. łigai (bright/white — same as light)
+424  | gas           | niłchʼi                 | Nav. niłchʼi (air/wind/gas) — attested
+425  | weather       | niłchʼi baa             | Nav. (concerning the air/weather)
+426  | month         | ooljééʼ                 | Nav. ooljééʼ (moon/month — same as moon)
+427  | million       | mííl nitsaa             | Nav. (great thousands/million)
+428  | bear          | shash                   | Nav. shash (bear) — attested
+429  | flower        | chʼil łitsooí           | Nav. chʼil (plant) + łitsooí (yellow/bloom)
+432  | hair          | tsii                    | Nav. tsii (head/hair) stylized
+436  | village       | kéyah hólǫní            | Nav. (where people/land exists — village)
+438  | root          | chʼil bizhiʼ            | Nav. chʼil (plant) + bizhiʼ (its root)
+442  | metal         | béésh                   | Nav. béésh (metal/knife/blade) — attested
+445  | paragraph     | bizaad nitsaaí          | Nav. (big block of words/paragraph)
+449  | third         | táá                     | Nav. tááʼ (three) — attested
+452  | floor         | nahasdzáán bikaʼ        | Nav. (earth surface/floor)
+453  | result        | ałtsé bił hólǫ          | Nav. (what comes to be first/result)
+454  | hill          | dziltł'iish             | Nav. dzil (mountain) + tł'iish stylized
+456  | cat           | mósí                    | Nav. mósí (cat) — attested
+460  | century       | naaki naaʼahóhai        | Nav. (two eagles — hundred years) stylized
+461  | type          | łaʼ ályaaígíí           | Nav. (one kind of made thing/type)
+462  | law           | nahałtin                | Nav. nahałtin (teaching/law) — attested
+463  | bit           | ałtsé                   | Nav. ałtsé (a little/first/small)
+464  | coast         | tónteel bikaʼ           | Nav. (wide water edge/coast)
+467  | phrase        | bizaad                  | Nav. bizaad (word/phrase — same as language)
+469  | sand          | séí                     | Nav. séí (sand) — attested
+470  | soil          | nahasdzáán              | Nav. nahasdzáán (earth/soil — same as ground)
+473  | temperature   | siłtso baa              | Nav. (concerning warmth/temperature)
+474  | finger        | shilá                   | Nav. shilá (my hand/finger) stylized
+475  | industry      | naanish nitsaa          | Nav. (great work/industry)
+476  | value         | ayóóígo                 | Nav. ayóó (very/valued) + -go stylized
+479  | view          | yiiltsą                 | Nav. yiiltsą (to see/view — same as notice)
+480  | sense         | shił hózhó              | Nav. (harmony with me/sense/feel)
+481  | ear           | bijaa                   | Nav. bijaa' (ear) — attested
+487  | case          | baa                     | Nav. baa (about/case/concerning)
+488  | middle        | ałniʼ                   | Nav. ałniʼ (middle/centre) — attested
+492  | lake          | tó ntsaaí               | Nav. tó (water) + ntsaaí (large/lake)
+493  | moment        | ałtsé                   | Nav. ałtsé (a little/moment)
+495  | scale         | nitsaago baa            | Nav. (of size/measure/scale)
+496  | loud          | nitsaaí diits'a         | Nav. (loud speaking/great sound)
+497  | spring        | dąąʼ                    | Nav. dąąʼ (spring season) — attested
+500  | cloud         | k'os                    | Nav. k'os (cloud) — attested
+
+--- ADJECTIVES ---
+36   | all           | altso                   | Nav. altso (all/everything) — attested
+40   | so            | áko                     | Nav. áko (so/therefore) — attested
+41   | up            | bikaʼgi                 | Nav. bikaʼgi (on top/up) stylized
+42   | out           | hodiina                 | Nav. constructed (outside/out)
+66   | some          | łaʼ                     | Nav. łaʼ (some/a/other)
+69   | other         | łaʼ                     | Nav. łaʼ (another/other — same)
+70   | than          | bił                     | Nav. bi- (than/with — comparison)
+74   | how           | haa                     | Nav. haa (how/what) — attested
+89   | new           | nayiisnii               | Nav. constructed (new/fresh)
+90   | even          | nidi                    | Nav. nidi (even/although)
+91   | way           | atiin                   | Nav. atiin (way/road — same as street)
+93   | any           | łaʼ                     | Nav. łaʼ (any/some/a)
+98   | most          | ałtso nitsaa            | Nav. (all great/most)
+101  | large         | nitsaa                  | Nav. nitsaa (large) — attested
+103  | often         | náánáʼ                  | Nav. constructed fr. náá- (again/often)
+105  | high          | yaago                   | Nav. yaa (up/high) + -go stylized
+111  | few           | ałtsé                   | Nav. ałtsé (small/few/first)
+113  | white         | łigai                   | Nav. łigai (white) — attested
+117  | young         | awéé                    | Nav. awéé (young/baby — same as child)
+118  | ready         | hólǫgo                  | Nav. (being ready/it exists for)
+120  | usual         | tʼáá                    | Nav. tʼáá (just/usual/simply)
+121  | plain         | tʼáá                    | Nav. tʼáá (plain/simple)
+122  | above         | bikaʼgi                 | Nav. bikaʼgi (above/on top)
+124  | second        | naaki                   | Nav. naaki (two/second)
+125  | enough        | áltso                   | Nav. altso (all/enough)
+126  | ever          | tʼáá ałtso              | Nav. (always/all the time)
+127  | red           | łichxíʼí                | Nav. łichxíʼí (red) — attested
+128  | old           | sáni                    | Nav. sáni (old/aged) — attested
+130  | though        | ndi                     | Nav. ndi (though/but)
+132  | short         | ałtsé                   | Nav. ałtsé (small/short)
+138  | true          | ałtsé bééhózin          | Nav. (first knowing/truth)
+139  | full          | yiłtsxiz                | Nav. (filled/full — same as fill)
+140  | whole         | altso                   | Nav. altso (whole/all)
+144  | fast          | tsxíłgo                 | Nav. tsxíłgo (fast/quickly) — attested
+145  | simple        | tʼáá                    | Nav. tʼáá (simply/just)
+146  | several       | łaʼ nitsaa              | Nav. (some great/several)
+148  | best          | nizhóní                 | Nav. nizhóní (beautiful/best) — attested
+149  | better        | nizhónigo               | Nav. nizhóní + -go (more beautiful)
+151  | early         | abíní                   | Nav. abíní (early/morning — same)
+153  | complete      | altso                   | Nav. altso (complete/all)
+156  | certain       | bééhózin                | Nav. bééhózin (certain/known)
+163  | general       | ałhą́ą́                  | Nav. ałhą́ą́ (general/together)
+164  | special       | nizhóní                 | Nav. nizhóní (special/beautiful)
+166  | correct       | bééhózin                | Nav. (known/correct — same as certain)
+167  | able          | hólǫgo                  | Nav. (being/able to exist)
+168  | fine          | nizhóní                 | Nav. nizhóní (fine/beautiful)
+170  | beautiful     | nizhóní                 | Nav. nizhóní (beautiful) — attested
+171  | gone          | yighááh                 | Nav. (gone/departed — same as leave)
+172  | quick         | tsxíłgo                 | Nav. tsxíłgo (quick — same as fast)
+173  | free          | hózhóogo                | Nav. (in harmony/free/at peace)
+175  | warm          | siłtso                  | Nav. (warm — same as heat noun)
+176  | strong        | nitsaa                  | Nav. nitsaa (strong/great/large)
+177  | clear         | łigai                   | Nav. łigai (clear/white — same as white)
+178  | deep          | hayoołkáał              | Nav. constructed (deep/into the earth)
+180  | possible      | hólǫgo                  | Nav. (possible/it can be)
+182  | dry           | hakʼaz                  | Nav. hakʼaz (cold/dry) stylized
+184  | wild          | chʼil biyaadi           | Nav. (among wild plants/wild)
+185  | natural       | nahasdzáán bił          | Nav. (with the earth/natural)
+186  | safe          | hózhóogo                | Nav. (in harmony/safe)
+187  | busy          | naanish bił             | Nav. (with work/busy)
+189  | common        | tʼáá                    | Nav. tʼáá (common/just/ordinary)
+192  | distant       | hazhóʼógo               | Nav. constructed (far/distant)
+193  | heavy         | ndasdziiʼ               | Nav. constructed (heavy/weighty)
+195  | present       | kǫǫ                     | Nav. kǫǫ (here/present) — attested
+197  | wide          | nteel                   | Nav. nteel (wide/broad) — attested
+200  | broken        | yikʼazh                 | Nav. (broken — same as break)
+202  | hot           | siłtso nitsaa           | Nav. (very warm/hot)
+204  | tall          | nineez                  | Nav. nineez (tall/long) — attested
+205  | soft          | dił                     | Nav. constructed fr. dił (soft/gentle)
+207  | direct        | atiin                   | Nav. atiin (direct/road — same as way)
+208  | sudden        | tsxíłgo                 | Nav. tsxíłgo (suddenly/fast)
+213  | exact         | bééhózin                | Nav. (known exactly/exact)
+216  | happy         | hózhó                   | Nav. hózhó (happy/harmonious — same as joy)
+217  | probable      | hólǫgo                  | Nav. (it probably exists/probable)
+218  | last          | ałniʼ                   | Nav. ałniʼ (last/middle/final) stylized
+219  | lone          | łaʼ                     | Nav. łaʼ (one/alone)
+220  | written       | naaltsoos               | Nav. naaltsoos (paper/written) — attested
+221  | silent        | hózhóogo                | Nav. (in quiet harmony/silent)
+222  | strange       | łaʼ bił                 | Nav. (other with/strange)
+
+--- NUMBERS ---
+83   | two           | naaki                   | Nav. naaki (two) — attested
+197  | five          | ashdlaʼ                 | Nav. ashdlaʼ (five) — attested
+210  | six           | hastą́ą́                 | Nav. hastą́ą́ (six) — attested
+215  | ten           | neeznáá                 | Nav. neeznáá (ten) — attested
+439  | eight         | tseebíí                 | Nav. tseebíí (eight) — attested
+449  | seven         | tsostsʼid               | Nav. tsostsʼid (seven) — attested
+450  | three         | táá                     | Nav. tááʼ (three) — attested
+
+--- TIME WORDS ---
+54   | time          | ahéʼéłtį                | Nav. constructed (time/period)
+96   | day           | jį́                      | Nav. jį́ (day) — attested
+188  | year          | naaʼahóhai              | Nav. naaʼahóhai (year/Thanksgiving) stylized
+193  | hour          | ahéʼéłtį                | Nav. (hour/time period — same)
+196  | week          | damóo                   | Nav. damóo (week/Sunday) — attested
+213  | minute        | ałtsé ahéʼéłtį          | Nav. (small time/minute)
+214  | morning       | abíní                   | Nav. abíní (morning) — attested
+426  | month         | ooljééʼ                 | Nav. ooljééʼ (moon/month — same as moon)
+
+===================================================================================
+PHONETIC GUIDE FOR SYLVARIRUM NAVAJO
+===================================================================================
+
+Navajo sounds preserved in Sylvarirum:
+  ł   = voiceless lateral fricative (like Welsh "ll" in Llanberis)
+  tł  = lateral affricate (t + ł combined)
+  ts  = affricate (as in "cats")
+  zh  = voiced fricative (as in "measure")
+  ʼ   = glottal stop (brief throat closure)
+  ą   = nasalized a (air through nose)
+  į   = nasalized i
+  High tone: á, í, ó, ú (marked with acute accent)
+  Low tone: a, i, o, u (unmarked)
+
+Syllable structure:
+  Navajo favors: CV, CVC, CCVC
+  Common initial clusters: ts-, tł-, sh-, zh-, hw-, dz-, gh-
+  Common endings: -ʼ (glottal), -ł (lateral), -d, -zh, -s
+
+Word-building patterns from name list:
+  bi-    = his/her/its (possessive prefix — very common)
+  shi-   = my (1st person prefix)
+  ni-    = your (2nd person prefix)
+  nihi-  = our/their (plural prefix)
+  -go    = subordinate clause marker / manner suffix
+  -di    = locative (at/in a place)
+  -gi    = locative variant
+  -íí    = nominalizer (the one that...)
+  -ígíí  = relative nominalizer (that which...)
+  naagháh = going around / traveling (movement root)
+  hózhó  = beauty/harmony/balance (core cultural concept)
+
+===================================================================================
+
+
+241  | power          | aojah                    |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | eis                      |
+8     | that           | ét                       |
+10    | it             | bił                      |
+11    | for            | biniiyé                  |
+19    | at             | di                       |
+20    | this           | dii                      |
+22    | his            | bił                      |
+27    | say            | diits'a                  |
+28    | her            | bił                      |
+29    | she            | bił                      |
+31    | an             | la                       |
+34    | one            | la                       |
+35    | all            | altso                    |
+37    | there          | aadi                     |
+39    | what           | haa                      |
+46    | get            | nayiiłnih                |
+48    | go             | iiʼííł                   |
+49    | me             | shił                     |
+50    | when           | hahgo                    |
+55    | no             | dooda                    |
+58    | know           | bééhózin                 |
+61    | into           | góneʼ                    |
+62    | year           | naaʼahóhai               |
+64    | good           | nizhóní                  |
+75    | come           | naaghá                   |
+77    | over           | bikaʼgi                  |
+79    | also           | altso                    |
+80    | back           | nináánáʼ                 |
+81    | after          | bizhiʼ                   |
+82    | use            | bił naanish              |
+87    | first          | ałtsé                    |
+88    | well           | nizhónígo                |
+94    | any            | łaʼ                      |
+102   | need           | hólǫgo                   |
+104   | often          | náánáʼ                   |
+106   | high           | yaago                    |
+108   | hold           | yiłtseed                 |
+110   | never          | dooda aoo                |
+112   | north          | náhookǫs                 |
+114   | seem           | yishłééh                 |
+116   | next           | ałniʼ                    |
+119   | begin          | ałniʼgo                  |
+129   | both           | naaki altso              |
+134   | mile           | naagháhdi                |
+142   | girl           | at'ééd                   |
+147   | ever           | tʼáá                     |
+152   | talk           | yáłti                    |
+158   | direct         | atiin                    |
+160   | leave          | yighááh                  |
+162   | measure        | nitsaago                 |
+169   | wind           | niyol                    |
+194   | true           | ałtsé bééhózin           |
+198   | remember       | yad                      |
+211   | table          | tsinaabąąs               |
+223   | pattern        | naaltsoos bił            |
+225   | center         | ałniʼ                    |
+227   | person         | diné                     |
+230   | appear         | yilzhiiʼ                 |
+231   | road           | atiin                    |
+232   | map            | bee naagháhí             |
+234   | rule           | nahatá                   |
+236   | pull           | yiyiił                   |
+238   | notice         | yiiltsą                  |
+244   | drive          | niiłch'ił                |
+245   | lead           | biʼdiilnish              |
+246   | cry            | yicha                    |
+249   | note           | hazhóʼógo                |
+256   | field          | keʼéltséhí               |
+257   | rest           | hózhóogo                 |
+258   | correct        | bééhózin                 |
+259   | able           | hólǫgo                   |
+260   | pound          | naaldlooshii             |
+262   | beauty         | nizhóní bił              |
+264   | stood          | siʼą                     |
+267   | teach          | nahałtin                 |
+269   | final          | ałniʼ                    |
+270   | gave           | yuramba                  |
+271   | green          | tátłʼid                  |
+272   | oh             | haʼáát'íí                |
+275   | ocean          | tónteel                  |
+278   | minute         | ałtsé ahéʼéłtį           |
+279   | strong         | nitsaa                   |
+280   | special        | nizhóní                  |
+282   | clear          | łigai                    |
+283   | tail           | bizhiʼ                   |
+284   | produce        | ályaaígíí                |
+286   | street         | atiin                    |
+288   | lot            | łaʼ nitsaa               |
+289   | nothing        | doo hólǫ da              |
+291   | stay           | nizhóní hólǫ             |
+293   | full           | yiłtsxiz                 |
+295   | blue           | dootłʼizh                |
+296   | object         | nitsaa baa               |
+298   | surface        | bikaʼ                    |
+300   | moon           | ooljééʼ                  |
+302   | foot           | kéłchí                   |
+304   | busy           | naanish bił              |
+307   | boat           | tsin naagháhí            |
+309   | gold           | óola                     |
+310   | possible       | hólǫgo                   |
+311   | plane          | niyolgo tsits'aa         |
+314   | wonder         | nitsékees baa            |
+317   | ago            | bizhiigo                 |
+321   | shape          | ályaa                    |
+324   | miss           | doo hólǫ                 |
+325   | brought        | nayiiłnih past           |
+326   | heat           | siłtso                   |
+329   | bring          | nayiiłnih                |
+330   | yes            | aoo                      |
+331   | distant        | hazhóʼógo                |
+333   | east           | haʼaʼaah                 |
+337   | grand          | nitsaa                   |
+342   | heart          | shijéí                   |
+343   | am             | nishłį                   |
+344   | present        | kǫǫ                      |
+346   | dance          | nzhóní naagháh           |
+349   | arm            | ibid                     |
+350   | wide           | nteel                    |
+351   | sail           | tónteel biił             |
+354   | vary           | łaʼ yizhdiilzhaazh       |
+355   | settle         | nizhóní hólǫ             |
+357   | weight         | ndasdziiʼ                |
+359   | ice            | tin                      |
+362   | pair           | naaki                    |
+364   | divide         | nahaneʼ                  |
+365   | syllable       | bizaad łaʼ               |
+369   | sudden         | tsxíłgo                  |
+370   | count          | ałkéé                    |
+372   | reason         | haa lá                   |
+373   | length         | nineezgo                 |
+377   | region         | kéyah                    |
+378   | energy         | aojah                    |
+380   | probable       | hólǫgo                   |
+381   | bed            | dah asdząą               |
+383   | egg            | ayęęzhii                 |
+385   | cell           | djinba                   |
+389   | sit            | siʼą                     |
+390   | race           | jarysh                   |
+396   | prove          | bił ałhosh               |
+397   | lone           | łaʼ                      |
+398   | leg            | jáád                     |
+404   | sky            | yádiłhił                 |
+406   | joy            | hózhó                    |
+410   | wild           | chʼil biyaadi            |
+411   | instrument     | bee naanishí             |
+420   | past           | naagháhgo                |
+421   | soft           | dił                      |
+434   | strange        | łaʼ bił                  |
+440   | meet           | ałhą́ą́ naagháh          |
+444   | solve          | bił hózhó                |
+446   | whether        | dishniigo                |
+447   | push           | turt                     |
+448   | seven          | tsostsʼid                |
+458   | result         | ałtsé bił hólǫ           |
+459   | burn           | kǫʼgo                    |
+465   | type           | łaʼ ályaaígíí            |
+468   | coast          | tónteel bikaʼ            |
+471   | silent         | hózhóogo                 |
+472   | tall           | nineez                   |
+477   | finger         | shilá                    |
+478   | industry       | naanish nitsaa           |
+483   | excite         | yił ayóó                 |
+484   | natural        | nahasdzáán bił           |
+485   | view           | yiiltsą                  |
+486   | sense          | shił hózhó               |
+489   | quite          | tʼáá                     |
+491   | case           | baa                      |
+498   | loud           | nitsaaí diits'a          |
+499   | spring         | dąąʼ                     |
+
+END OF FILE — SylvarirumNavajo_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

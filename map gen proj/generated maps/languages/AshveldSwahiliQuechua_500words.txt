@@ -1,0 +1,599 @@
+ASHVELD SWAHILI-QUECHUA - 500 Common Word Translations
+Fantasy Language based on AshveldSwahili-Quechua name patterns
+Linguistic roots: Swahili (Bantu, any era) + Quechua (Andean/Incan)
+Blending strategy: Quechua's open vowels (a, i, u) and -q/-k/-y endings
+bridge naturally with Swahili's vowel-final words and ki-/ku-/m-/wa- prefix system.
+Phonetic bridges prioritized — words that could belong to either language used freely.
+
+KEY SOURCE WORDS:
+  Swahili: mtu (person), maji (water), moto (fire), ardhi (earth), mbingu (sky),
+  jua (sun), mwezi (moon), nyota (star), siku (day), usiku (night), nchi (land),
+  njia (road/way), kuja (to come), kwenda (to go), kusema (to say), kuona (to see),
+  kupenda (to love/like), kujua (to know), kutoa (to give), kuchukua (to take),
+  kubwa (big/great), nzuri (good/beautiful), kweli (truth), watu (people),
+  Quechua: runa (person), yaku (water), nina (fire), allpa (earth), hanaq (sky/above),
+  inti (sun), killa (moon), quyllur (star), punchaw (day), tuta (night), llaqta (town),
+  ñan (road/path), hamuy (to come), riy (to go), rimay (to speak), qaway (to see),
+  munay (to love/want), yachay (to know), quy (to give), hapiy (to take/catch),
+  hatun (big/great), sumaq (good/beautiful), chiqan (truth/straight), runakuna (people)
+
+PHONETIC BRIDGE NOTES:
+  Both languages share: open a/i/u vowels, k/q stops, no complex consonant clusters
+  Swahili ku- prefix (verb infinitive) bridges with Quechua verb stems ending in -y
+  Swahili m-/wa- animate prefixes bridge with Quechua -runa/-kuna plurals
+  Shared sounds: k, m, n, w, y, s, t, ch (Swahili ch = Quechua ch)
+  Bridge words: words using only a,i,u,k,m,n,w,y,s feel native to both
+
+===================================================================================
+RANK | ENGLISH       | ASHVELD SW-QU           | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | ki                      | Sw. ki- (class prefix/the) — attested
+2    | a / an        | moja                    | Sw. moja (one/a) — attested
+3    | to            | ku                      | Sw. ku- (infinitive/to) — attested
+6    | it            | kitu                    | Sw. kitu (thing/it) — attested
+8    | that          | kile                    | Sw. kile (that) — attested
+10   | it            | kitu                    | Sw. kitu (same as above)
+11   | for           | kwa                     | Sw. kwa (for/by/with) — attested
+14   | this          | hiki                    | Sw. hiki (this) — attested
+20   | this          | hiki                    | Sw. hiki (same)
+22   | his           | yake                    | Sw. yake (his/her/its) — attested
+28   | her           | yake                    | Sw. yake (same — gender neutral)
+29   | she           | yeye                    | Sw. yeye (she/he) — attested
+31   | an            | moja                    | Sw. moja (one/a — same as a)
+34   | one           | kimoja                  | Sw. kimoja (one single) — attested
+35   | all           | yote                    | Sw. yote (all/every) — attested
+37   | there         | kule                    | Sw. kule (there) — attested
+38   | their         | yao                     | Sw. yao (their) — attested
+39   | what          | nini                    | Sw. nini (what) — attested
+45   | who           | nani                    | Sw. nani (who) — attested
+49   | me            | mimi                    | Sw. mimi (me/I) — attested
+50   | when          | lini                    | Sw. lini (when) — attested
+55   | no            | hapana                  | Sw. hapana (no/not) — attested
+63   | your          | yako                    | Sw. yako (your/yours) — attested
+64   | good          | nzuri                   | Sw. nzuri (good/beautiful) — attested
+65   | some          | baadhi                  | Sw. baadhi (some) — attested
+85   | our           | yetu                    | Sw. yetu (our) — attested
+95   | these         | hizi                    | Sw. hizi (these) — attested
+99   | us            | sisi                    | Sw. sisi (us/we) — attested
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | kuwa                    | Sw. kuwa (to be) — attested
+70   | there         | kule                    | Sw. kule (there — same)
+72   | seem          | kuonekana               | Sw. kuonekana (to seem/appear) attested
+78   | think         | yachay                  | Qu. yachay (to know/think) — attested
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | ya                      | Sw. ya (of/belonging to) — attested
+5    | and           | na                      | Sw. na (and/with) — attested
+12   | not           | si                      | Sw. si (not/is not) — attested
+13   | on            | juu ya                  | Sw. juu ya (on top of) — attested
+14   | with          | pamoja                  | Sw. pamoja (with/together) — attested
+19   | at            | katika                  | Sw. katika (at/in) — attested
+21   | but           | lakini                  | Sw. lakini (but) — attested
+23   | by            | kwa                     | Sw. kwa (by/for — same as for)
+24   | from          | kutoka                  | Sw. kutoka (from) — attested
+30   | or            | au                      | Sw. au (or) — attested
+32   | will          | ataqa                   | Qu. -ta + Sw. -a (future marker blend)
+33   | my            | yangu                   | Sw. yangu (my/mine) — attested
+36   | would         | ingekuwa                | Sw. ingekuwa (would be) — attested
+40   | so            | hivyo                   | Sw. hivyo (so/thus) — attested
+41   | up            | juu                     | Sw. juu (up/above) — attested
+42   | out           | nje                     | Sw. nje (out/outside) — attested
+43   | if            | kama                    | Sw. kama (if/like/as) — attested
+44   | about         | kuhusu                  | Sw. kuhusu (about) — attested
+60   | because       | kwa sababu              | Sw. kwa sababu (because) — attested
+61   | into          | ndani ya                | Sw. ndani ya (inside/into) — attested
+71   | only          | tu                      | Sw. tu (only/just) — attested
+76   | its           | yake                    | Sw. yake (its — same as his/her)
+77   | over          | juu ya                  | Sw. juu ya (over — same as on)
+79   | also          | pia                     | Sw. pia (also/too) — attested
+80   | back          | nyuma                   | Sw. nyuma (back/behind) — attested
+81   | after         | baada ya                | Sw. baada ya (after) — attested
+82   | use           | kutumia                 | Sw. kutumia (to use) — attested
+87   | first         | kwanza                  | Sw. kwanza (first) — attested
+88   | well          | vizuri                  | Sw. vizuri (well/nicely) — attested
+90   | even          | hata                    | Sw. hata (even/until) — attested
+94   | any           | yoyote                  | Sw. yoyote (any/whichever) — attested
+102  | need          | haja                    | Sw. haja (need) — attested
+104  | often         | mara nyingi             | Sw. mara nyingi (often) — attested
+106  | high          | juu                     | Sw. juu (high — same as up)
+110  | never         | kamwe                   | Sw. kamwe (never) — attested
+112  | north         | kaskazini               | Sw. kaskazini (north) — attested
+114  | seem          | kuonekana               | Sw. (same as seem above)
+116  | next          | ijayo                   | Sw. ijayo (next/coming) — attested
+119  | begin         | kuanza                  | Sw. kuanza (to begin) — attested
+120  | got           | alipata                 | Sw. alipata (got/received) — attested
+129  | both          | wote wawili             | Sw. wote wawili (both) — attested
+133  | until         | hadi                    | Sw. hadi (until) — attested
+147  | ever          | wakati wowote           | Sw. (at any time) stylized
+150  | though        | ingawa                  | Sw. ingawa (though/although) — attested
+154  | soon          | hivi karibuni           | Sw. hivi karibuni (soon) — attested
+158  | direct        | moja kwa moja           | Sw. (directly/straight) — attested
+160  | leave         | kuacha                  | Sw. kuacha (to leave) — attested
+169  | wind          | upepo                   | Sw. upepo (wind) — attested
+172  | since         | tangu                   | Sw. tangu (since) — attested
+183  | against       | dhidi ya                | Sw. dhidi ya (against) — attested
+192  | during        | wakati wa               | Sw. wakati wa (during) — attested
+194  | true          | kweli                   | Sw. kweli (true/truth) — attested
+219  | toward        | kuelekea                | Sw. kuelekea (toward) — attested
+225  | center        | katikati                | Sw. katikati (center/middle) — attested
+251  | still         | bado                    | Sw. bado (still/not yet) — attested
+261  | above         | juu ya                  | Sw. juu ya (above — same as on/over)
+287  | behind        | nyuma ya                | Sw. nyuma ya (behind) — attested
+330  | yes           | ndiyo                   | Sw. ndiyo (yes) — attested
+332  | fill          | kujaza                  | Sw. kujaza (to fill) — attested
+338  | yet           | bado                    | Sw. bado (yet — same as still)
+339  | among         | miongoni mwa            | Sw. miongoni mwa (among) — attested
+340  | perhaps       | labda                   | Sw. labda (perhaps) — attested
+343  | am            | niko                    | Sw. niko (I am/present) — attested
+446  | whether       | kama                    | Sw. kama (whether/if — same as if)
+451  | shall         | itabidi                 | Sw. itabidi (shall/must) — attested
+457  | either        | au...au                 | Sw. au...au (either...or) — attested
+488  | else          | kingine                 | Sw. kingine (other/else) — attested
+489  | quite         | kabisa                  | Sw. kabisa (quite/completely) — attested
+490  | quite         | kabisa                  | Sw. kabisa (same)
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | kufanya                 | Sw. kufanya (to do/make) — attested
+9    | have          | kuwa na                 | Sw. kuwa na (to have) — attested
+15   | he            | yeye                    | Sw. yeye (he — same as she)
+16   | as            | kama                    | Sw. kama (as/like) — attested
+17   | you           | wewe                    | Sw. wewe (you) — attested
+18   | do            | kufanya                 | Sw. kufanya (same as do)
+25   | they          | wao                     | Sw. wao (they) — attested
+26   | we            | sisi                    | Sw. sisi (we — same as us)
+27   | say           | kusema                  | Sw. kusema (to say) — attested
+46   | get           | kupata                  | Sw. kupata (to get/find) — attested
+47   | which         | ambayo                  | Sw. ambayo (which) — attested
+48   | go            | kwenda                  | Sw. kwenda (to go) — attested
+51   | make          | kutengeneza             | Sw. kutengeneza (to make) — attested
+52   | can           | kuweza                  | Sw. kuweza (to be able/can) — attested
+53   | like          | kupenda                 | Sw. kupenda (to like/love) — attested
+54   | time          | wakati                  | Sw. wakati (time) — attested
+56   | just          | tu                      | Sw. tu (just — same as only)
+57   | him           | yeye                    | Sw. yeye (him — same form)
+58   | know          | kujua                   | Sw. kujua (to know) — attested
+59   | take          | kuchukua                | Sw. kuchukua (to take) — attested
+62   | year          | mwaka                   | Sw. mwaka (year) — attested
+66   | could         | angeweza                | Sw. angeweza (could) — attested
+67   | them          | wao                     | Sw. wao (them — same as they)
+68   | see           | kuona                   | Sw. kuona (to see) — attested
+69   | other         | nyingine                | Sw. nyingine (other) — attested
+72   | come          | kuja                    | Sw. kuja (to come) — attested
+73   | look          | kutazama                | Sw. kutazama (to look) — attested
+74   | only          | tu                      | Sw. tu (only — same)
+75   | come          | kuja                    | Sw. kuja (same)
+84   | use           | kutumia                 | Sw. kutumia (same as use above)
+86   | work          | kazi                    | Sw. kazi (work) — attested
+89   | way           | njia                    | Sw. njia (way/road) — attested
+91   | new           | mpya                    | Sw. mpya (new) — attested
+92   | want          | kutaka                  | Sw. kutaka (to want) — attested
+93   | because       | kwa sababu              | Sw. (same as because above)
+96   | give          | kutoa                   | Sw. kutoa (to give) — attested
+97   | day           | siku                    | Sw. siku (day) — attested
+98   | most          | zaidi                   | Sw. zaidi (most/more) — attested
+100  | great         | hatun                   | Qu. hatun (great/large) — attested
+101  | between       | kati ya                 | Sw. kati ya (between) — attested
+103  | large         | kubwa                   | Sw. kubwa (large/big) — attested
+105  | hand          | mkono                   | Sw. mkono (hand) — attested
+107  | place         | mahali                  | Sw. mahali (place) — attested
+108  | hold          | kushikilia              | Sw. kushikilia (to hold) — attested
+109  | turn          | kugeuza                 | Sw. kugeuza (to turn) — attested
+111  | few           | chache                  | Sw. chache (few) — attested
+113  | open          | kufungua                | Sw. kufungua (to open) — attested
+115  | together      | pamoja                  | Sw. pamoja (together — same as with)
+117  | white         | nyeupe                  | Sw. nyeupe (white) — attested
+118  | children      | watoto                  | Sw. watoto (children) — attested
+121  | walk          | kutembea                | Sw. kutembea (to walk) — attested
+122  | example       | mfano                   | Sw. mfano (example) — attested
+123  | ease          | urahisi                 | Sw. urahisi (ease/simplicity) — attested
+124  | paper         | karatasi                | Sw. karatasi (paper) — attested
+125  | group         | kikundi                 | Sw. kikundi (group) — attested
+126  | always        | daima                   | Sw. daima (always) — attested
+127  | music         | muziki                  | Sw. muziki (music) — attested
+128  | those         | wale                    | Sw. wale (those) — attested
+130  | mark          | alama                   | Sw. alama (mark/sign) — attested
+131  | book          | kitabu                  | Sw. kitabu (book) — attested
+132  | letter        | barua                   | Sw. barua (letter) — attested
+134  | mile          | maili                   | Sw. maili (mile) — attested
+135  | river         | mto                     | Sw. mto (river) — attested
+136  | car           | gari                    | Sw. gari (vehicle/car) — attested
+137  | feet          | miguu                   | Sw. miguu (feet/legs) — attested
+138  | care          | kujali                  | Sw. kujali (to care) — attested
+139  | second        | pili                    | Sw. pili (second) — attested
+140  | enough        | tosha                   | Sw. tosha (enough) — attested
+141  | plain         | tambarare               | Sw. tambarare (plain/flat) — attested
+142  | girl          | msichana                | Sw. msichana (girl) — attested
+143  | usual         | kawaida                 | Sw. kawaida (usual/normal) — attested
+144  | young         | wachanga                | Sw. wachanga (young ones) — attested
+145  | ready         | tayari                  | Sw. tayari (ready) — attested
+146  | above         | juu ya                  | Sw. juu ya (above — same)
+148  | red           | nyekundu                | Sw. nyekundu (red) — attested
+149  | list          | orodha                  | Sw. orodha (list) — attested
+151  | feel          | kuhisi                  | Sw. kuhisi (to feel) — attested
+152  | talk          | kuzungumza              | Sw. kuzungumza (to talk) — attested
+153  | bird          | ndege                   | Sw. ndege (bird) — attested
+155  | body          | mwili                   | Sw. mwili (body) — attested
+156  | dog           | mbwa                    | Sw. mbwa (dog) — attested
+157  | family        | familia                 | Sw. familia (family) — attested
+159  | pose          | mkao                    | Sw. mkao (posture/pose) — attested
+161  | song          | wimbo                   | Sw. wimbo (song) — attested
+162  | measure       | kipimo                  | Sw. kipimo (measure) — attested
+163  | door          | mlango                  | Sw. mlango (door) — attested
+164  | product       | bidhaa                  | Sw. bidhaa (product/goods) — attested
+165  | black         | nyeusi                  | Sw. nyeusi (black) — attested
+166  | short         | fupi                    | Sw. fupi (short) — attested
+167  | numeral       | nambari                 | Sw. nambari (number) — attested
+168  | class         | darasa                  | Sw. darasa (class/school) — attested
+170  | question      | swali                   | Sw. swali (question) — attested
+171  | happen        | kutokea                 | Sw. kutokea (to happen) — attested
+173  | ship          | meli                    | Sw. meli (ship) — attested
+174  | area          | eneo                    | Sw. eneo (area) — attested
+175  | half          | nusu                    | Sw. nusu (half) — attested
+176  | rock          | mwamba                  | Sw. mwamba (rock) — attested
+177  | order         | amri                    | Sw. amri (order/command) — attested
+178  | fire          | moto                    | Sw. moto (fire) — attested
+179  | south         | kusini                  | Sw. kusini (south) — attested
+180  | problem       | tatizo                  | Sw. tatizo (problem) — attested
+181  | piece         | kipande                 | Sw. kipande (piece) — attested
+182  | told          | alimwambia              | Sw. alimwambia (told) stylized
+184  | pass          | kupita                  | Sw. kupita (to pass) — attested
+185  | since         | tangu                   | Sw. tangu (since — same)
+186  | top           | juu                     | Sw. juu (top — same as up/high)
+187  | whole         | nzima                   | Sw. nzima (whole/complete) — attested
+188  | king          | mfalme                  | Sw. mfalme (king) — attested
+189  | space         | nafasi                  | Sw. nafasi (space/opportunity) attested
+190  | heard         | alisikia                | Sw. alisikia (heard) stylized
+191  | best          | bora                    | Sw. bora (best/better) — attested
+192  | hour          | saa                     | Sw. saa (hour/clock) — attested
+193  | better        | bora zaidi              | Sw. (better/more best) stylized
+195  | during        | wakati wa               | Sw. (same as during above)
+196  | hundred       | mia                     | Sw. mia (hundred) — attested
+197  | five          | pichqa                  | Qu. pichqa (five) — attested
+198  | remember      | kukumbuka               | Sw. kukumbuka (to remember) attested
+199  | step          | hatua                   | Sw. hatua (step) — attested
+200  | early         | mapema                  | Sw. mapema (early) — attested
+201  | hold          | kushikilia              | Sw. (same as hold above)
+202  | west          | magharibi               | Sw. magharibi (west) — attested
+203  | ground        | ardhi                   | Sw. ardhi (ground/earth) — attested
+204  | interest      | nia                     | Sw. nia (interest/intention) — attested
+205  | reach         | kufikia                 | Sw. kufikia (to reach) — attested
+206  | fast          | haraka                  | Sw. haraka (fast/hurry) — attested
+207  | verb          | kitenzi                 | Sw. kitenzi (verb) — attested
+208  | sing          | kuimba                  | Sw. kuimba (to sing) — attested
+209  | listen        | kusikiliza              | Sw. kusikiliza (to listen) — attested
+210  | six           | suqta                   | Qu. suqta (six) — attested
+211  | table         | meza                    | Sw. meza (table) — attested
+212  | travel        | kusafiri                | Sw. kusafiri (to travel) — attested
+213  | less          | kidogo                  | Sw. kidogo (less/little) — attested
+214  | morning       | asubuhi                 | Sw. asubuhi (morning) — attested
+215  | ten           | chunka                  | Qu. chunka (ten) — attested
+216  | simple        | rahisi                  | Sw. rahisi (simple/easy) — attested
+217  | several       | kadhaa                  | Sw. kadhaa (several) — attested
+218  | vowel         | irawo                   | blend: Qu. ira + Sw. -wo (vowel) stylized
+219  | toward        | kuelekea                | Sw. (same as toward above)
+220  | war           | vita                    | Sw. vita (war) — attested
+221  | lay           | kulala                  | Sw. kulala (to lay/sleep) — attested
+222  | against       | dhidi ya                | Sw. (same as against above)
+223  | pattern       | mfumo                   | Sw. mfumo (pattern/system) — attested
+224  | slow          | polepole                | Sw. polepole (slow/slowly) — attested
+226  | love          | upendo                  | Sw. upendo (love) — attested
+227  | person        | mtu                     | Sw. mtu (person) — attested
+228  | money         | pesa                    | Sw. pesa (money) — attested
+229  | serve         | kutumikia               | Sw. kutumikia (to serve) — attested
+230  | appear        | kuonekana               | Sw. kuonekana (same as seem)
+231  | road          | barabara                | Sw. barabara (road) — attested
+232  | map           | ramani                  | Sw. ramani (map) — attested
+233  | rain          | mvua                    | Sw. mvua (rain) — attested
+234  | rule          | sheria                  | Sw. sheria (rule/law) — attested
+235  | govern        | kutawala                | Sw. kutawala (to govern) — attested
+236  | pull          | kuvuta                  | Sw. kuvuta (to pull) — attested
+237  | cold          | baridi                  | Sw. baridi (cold) — attested
+238  | notice        | kutambua                | Sw. kutambua (to notice/realize) attested
+239  | voice         | sauti                   | Sw. sauti (voice) — attested
+240  | fall          | kuanguka                | Sw. kuanguka (to fall) — attested
+241  | power         | nguvu                   | Sw. nguvu (power/strength) — attested
+242  | town          | mji                     | Sw. mji (town/city) — attested
+243  | fine          | sawa sawa               | Sw. sawa sawa (fine/alright) — attested
+244  | drive         | kuendesha               | Sw. kuendesha (to drive) — attested
+245  | lead          | kuongoza                | Sw. kuongoza (to lead) — attested
+246  | cry           | kulia                   | Sw. kulia (to cry) — attested
+247  | dark          | giza                    | Sw. giza (dark/darkness) — attested
+248  | machine       | mashine                 | Sw. mashine (machine) — attested
+249  | note          | kumbuka                 | Sw. kumbuka (note/reminder) — attested
+250  | wait          | kusubiri                | Sw. kusubiri (to wait) — attested
+252  | figure        | takwimu                 | Sw. takwimu (figure/data) — attested
+253  | star          | nyota                   | Sw. nyota (star) — attested
+254  | box           | sanduku                 | Sw. sanduku (box) — attested
+255  | noun          | nomino                  | Sw. nomino (noun) — attested
+256  | field         | shamba                  | Sw. shamba (field/farm) — attested
+257  | rest          | kupumzika               | Sw. kupumzika (to rest) — attested
+258  | correct       | sahihi                  | Sw. sahihi (correct) — attested
+259  | able          | kuweza                  | Sw. kuweza (able — same as can)
+260  | pound         | ratili                  | Sw. ratili (pound weight) — attested
+261  | done          | imekwisha               | Sw. imekwisha (done/finished) attested
+262  | beauty        | uzuri                   | Sw. uzuri (beauty) — attested
+263  | drive         | kuendesha               | Sw. (same as drive)
+264  | stood         | alisimama               | Sw. alisimama (stood) stylized
+265  | contain       | kuwa na                 | Sw. kuwa na (to contain/have) stylized
+266  | front         | mbele                   | Sw. mbele (front/ahead) — attested
+267  | teach         | kufundisha              | Sw. kufundisha (to teach) — attested
+268  | week          | wiki                    | Sw. wiki (week) — attested
+269  | final         | mwisho                  | Sw. mwisho (final/end) — attested
+270  | gave          | alitoa                  | Sw. alitoa (gave) stylized
+271  | green         | kijani                  | Sw. kijani (green) — attested
+272  | oh            | oo                      | Sw. oo (oh/exclamation) — attested
+273  | quick         | haraka                  | Sw. haraka (quick — same as fast)
+274  | develop       | kukuza                  | Sw. kukuza (to develop/grow) attested
+275  | ocean         | bahari                  | Sw. bahari (ocean/sea) — attested
+276  | warm          | joto                    | Sw. joto (warm/heat) — attested
+277  | free          | huru                    | Sw. huru (free) — attested
+278  | minute        | dakika                  | Sw. dakika (minute) — attested
+279  | strong        | kali                    | Sw. kali (strong/fierce) — attested
+280  | special       | maalum                  | Sw. maalum (special) — attested
+281  | behind        | nyuma                   | Sw. nyuma (behind — same as back)
+282  | clear         | wazi                    | Sw. wazi (clear/open) — attested
+283  | tail          | mkia                    | Sw. mkia (tail) — attested
+284  | produce       | kuzalisha               | Sw. kuzalisha (to produce) — attested
+285  | fact          | ukweli                  | Sw. ukweli (fact/truth) — attested
+286  | street        | mtaa                    | Sw. mtaa (street/neighborhood) attested
+288  | lot           | wingi                   | Sw. wingi (lot/many/plural) — attested
+289  | nothing       | kitu chochote           | Sw. (nothing/any thing) stylized
+290  | course        | njia                    | Sw. njia (course — same as way)
+291  | stay          | kukaa                   | Sw. kukaa (to stay/sit) — attested
+292  | wheel         | gurudumu                | Sw. gurudumu (wheel) — attested
+293  | full          | kamili                  | Sw. kamili (full/complete) — attested
+294  | force         | nguvu                   | Sw. nguvu (force — same as power)
+295  | blue          | bluu                    | Sw. bluu (blue) — attested
+296  | object        | kitu                    | Sw. kitu (object/thing — same as it)
+297  | decide        | kuamua                  | Sw. kuamua (to decide) — attested
+298  | surface       | uso                     | Sw. uso (face/surface) — attested
+299  | deep          | kina                    | Sw. kina (deep/depth) — attested
+300  | moon          | killa                   | Qu. killa (moon) — attested
+301  | island        | kisiwa                  | Sw. kisiwa (island) — attested
+302  | foot          | mguu                    | Sw. mguu (foot/leg) — attested
+303  | system        | mfumo                   | Sw. mfumo (system — same as pattern)
+304  | busy          | shughuli                | Sw. shughuli (busy/activity) — attested
+305  | test          | mtihani                 | Sw. mtihani (test/exam) — attested
+306  | record        | rekodi                  | Sw. rekodi (record) — attested
+307  | boat          | mashua                  | Sw. mashua (boat) — attested
+308  | common        | kawaida                 | Sw. kawaida (common — same as usual)
+309  | gold          | dhahabu                 | Sw. dhahabu (gold) — attested
+310  | possible      | inawezekana             | Sw. inawezekana (possible) — attested
+311  | plane         | ndege                   | Sw. ndege (plane/bird — same as bird)
+312  | stead         | badala ya               | Sw. badala ya (instead of) — attested
+313  | dry           | kavu                    | Sw. kavu (dry) — attested
+314  | wonder        | kushangaa               | Sw. kushangaa (to wonder) — attested
+315  | laugh         | kucheka                 | Sw. kucheka (to laugh) — attested
+316  | thousand      | waranqa                 | Qu. waranqa (thousand) — attested
+317  | ago           | iliyopita               | Sw. iliyopita (ago/past) — attested
+318  | ran           | alikimbia               | Sw. alikimbia (ran) stylized
+319  | check         | kuangalia               | Sw. kuangalia (to check/look at) attested
+320  | game          | mchezo                  | Sw. mchezo (game/play) — attested
+321  | shape         | umbo                    | Sw. umbo (shape/form) — attested
+322  | equate        | kulinganisha            | Sw. kulinganisha (to equate) — attested
+323  | hot           | moto                    | Sw. moto (hot — same as fire)
+324  | miss          | kukosa                  | Sw. kukosa (to miss/lack) — attested
+325  | brought       | kuleta                  | Sw. kuleta (to bring/brought) attested
+326  | heat          | joto                    | Sw. joto (heat — same as warm)
+327  | snow          | theluji                 | Sw. theluji (snow) — attested
+328  | tire          | kuchoka                 | Sw. kuchoka (to tire) — attested
+329  | bring         | kuleta                  | Sw. kuleta (to bring — same)
+331  | distant       | mbali                   | Sw. mbali (distant/far) — attested
+333  | east          | mashariki               | Sw. mashariki (east) — attested
+334  | paint         | kupaka rangi            | Sw. kupaka rangi (to paint) attested
+335  | language      | lugha                   | Sw. lugha (language) — attested
+336  | among         | miongoni                | Sw. miongoni (among — same)
+337  | grand         | hatun                   | Qu. hatun (grand/great — same)
+341  | drop          | tone                    | Sw. tone (drop) — attested
+342  | heart         | moyo                    | Sw. moyo (heart) — attested
+344  | present       | sasa                    | Sw. sasa (present/now) — attested
+345  | heavy         | zito                    | Sw. zito (heavy) — attested
+346  | dance         | kucheza                 | Sw. kucheza (to dance/play) — attested
+347  | engine        | injini                  | Sw. injini (engine) — attested
+348  | position      | nafasi                  | Sw. nafasi (position — same as space)
+349  | arm           | mkono                   | Sw. mkono (arm — same as hand)
+350  | wide          | pana                    | Sw. pana (wide) — attested
+351  | sail          | tanga                   | Sw. tanga (sail) — attested
+352  | material      | kitambaa                | Sw. kitambaa (material/cloth) — attested
+353  | size          | ukubwa                  | Sw. ukubwa (size/bigness) — attested
+354  | vary          | kutofautiana            | Sw. kutofautiana (to vary) — attested
+355  | settle        | kukaa                   | Sw. kukaa (to settle — same as stay)
+356  | speak         | kusema                  | Sw. kusema (to speak — same as say)
+357  | weight        | uzito                   | Sw. uzito (weight) — attested
+358  | general       | jumla                   | Sw. jumla (general/total) — attested
+359  | ice           | barafu                  | Sw. barafu (ice) — attested
+360  | matter        | jambo                   | Sw. jambo (matter/thing) — attested
+361  | circle        | mzingo                  | Sw. mzingo (circle) — attested
+362  | pair          | jozi                    | Sw. jozi (pair) — attested
+363  | include       | kujumuisha              | Sw. kujumuisha (to include) — attested
+364  | divide        | kugawanya               | Sw. kugawanya (to divide) — attested
+365  | syllable      | silabi                  | Sw. silabi (syllable) — attested
+366  | felt          | alihisi                 | Sw. alihisi (felt) stylized
+367  | perhaps       | labda                   | Sw. labda (perhaps — same)
+368  | pick          | kuchagua                | Sw. kuchagua (to pick/choose) attested
+369  | sudden        | ghafla                  | Sw. ghafla (sudden/suddenly) — attested
+370  | count         | kuhesabu                | Sw. kuhesabu (to count) — attested
+371  | square        | mraba                   | Sw. mraba (square) — attested
+372  | reason        | sababu                  | Sw. sababu (reason) — attested
+373  | length        | urefu                   | Sw. urefu (length) — attested
+374  | represent     | kuwakilisha             | Sw. kuwakilisha (to represent) attested
+375  | art           | sanaa                   | Sw. sanaa (art) — attested
+376  | subject       | somo                    | Sw. somo (subject/lesson) — attested
+377  | region        | mkoa                    | Sw. mkoa (region) — attested
+378  | energy        | nishati                 | Sw. nishati (energy) — attested
+379  | hunt          | kuwinda                 | Sw. kuwinda (to hunt) — attested
+380  | probable      | uwezekano               | Sw. uwezekano (probable/likely) attested
+381  | bed           | kitanda                 | Sw. kitanda (bed) — attested
+382  | brother       | ndugu                   | Sw. ndugu (brother/sibling) — attested
+383  | egg           | yai                     | Sw. yai (egg) — attested
+384  | ride          | kupanda                 | Sw. kupanda (to ride/climb) — attested
+385  | cell          | seli                    | Sw. seli (cell) — attested
+386  | believe       | kuamini                 | Sw. kuamini (to believe) — attested
+387  | fraction      | sehemu                  | Sw. sehemu (fraction/part) — attested
+388  | forest        | msitu                   | Sw. msitu (forest) — attested
+389  | sit           | kukaa                   | Sw. kukaa (to sit — same as stay)
+390  | race          | mbio                    | Sw. mbio (race/speed) — attested
+391  | window        | dirisha                 | Sw. dirisha (window) — attested
+392  | store         | duka                    | Sw. duka (store/shop) — attested
+393  | summer        | wakati wa joto          | Sw. (hot season/summer) stylized
+394  | train         | treni                   | Sw. treni (train) — attested
+395  | sleep         | kulala                  | Sw. kulala (to sleep — same as lay)
+396  | prove         | kuthibitisha            | Sw. kuthibitisha (to prove) — attested
+397  | lone          | peke yake               | Sw. peke yake (alone/lone) — attested
+398  | leg           | mguu                    | Sw. mguu (leg — same as foot)
+399  | exercise      | mazoezi                 | Sw. mazoezi (exercise) — attested
+400  | wall          | ukuta                   | Sw. ukuta (wall) — attested
+401  | catch         | kukamata                | Sw. kukamata (to catch) — attested
+402  | mount         | kupanda                 | Sw. kupanda (to mount — same as ride)
+403  | wish          | kutaka                  | Sw. kutaka (to wish — same as want)
+404  | sky           | mbingu                  | Sw. mbingu (sky) — attested
+405  | board         | ubao                    | Sw. ubao (board/plank) — attested
+406  | joy           | furaha                  | Sw. furaha (joy) — attested
+407  | winter        | kipindi cha baridi       | Sw. (cold season/winter) stylized
+408  | sat           | alikaa                  | Sw. alikaa (sat) stylized
+409  | written       | imeandikwa              | Sw. imeandikwa (written) — attested
+410  | wild          | mwitu                   | Sw. mwitu (wild/forest) — attested
+411  | instrument    | chombo                  | Sw. chombo (instrument/vessel) attested
+412  | kept          | alihifadhi              | Sw. alihifadhi (kept) stylized
+413  | glass         | kioo                    | Sw. kioo (glass/mirror) — attested
+414  | grass         | nyasi                   | Sw. nyasi (grass) — attested
+415  | cow           | ng'ombe                 | Sw. ng'ombe (cow) — attested
+416  | job           | kazi                    | Sw. kazi (job — same as work)
+417  | edge          | ukingo                  | Sw. ukingo (edge/border) — attested
+418  | sign          | ishara                  | Sw. ishara (sign) — attested
+419  | visit         | kutembelea              | Sw. kutembelea (to visit) — attested
+420  | past          | iliyopita               | Sw. iliyopita (past — same as ago)
+421  | soft          | laini                   | Sw. laini (soft) — attested
+422  | fun           | burudani                | Sw. burudani (fun/entertainment) attested
+423  | bright        | angavu                  | Sw. angavu (bright) — attested
+424  | gas           | gesi                    | Sw. gesi (gas) — attested
+425  | weather       | hali ya hewa            | Sw. hali ya hewa (weather) — attested
+426  | month         | mwezi                   | Sw. mwezi (month/moon) — attested
+427  | million       | milioni                 | Sw. milioni (million) — attested
+428  | bear          | dubu                    | Sw. dubu (bear) — attested
+429  | finish        | kumaliza                | Sw. kumaliza (to finish) — attested
+430  | happy         | furaha                  | Sw. furaha (happy — same as joy)
+431  | hope          | matumaini               | Sw. matumaini (hope) — attested
+432  | flower        | ua                      | Sw. ua (flower) — attested
+433  | clothe        | kuvaa                   | Sw. kuvaa (to clothe/wear) — attested
+434  | strange       | ajabu                   | Sw. ajabu (strange/wonder) — attested
+435  | gone          | ameenda                 | Sw. ameenda (gone/left) — attested
+436  | jump          | kuruka                  | Sw. kuruka (to jump) — attested
+437  | baby          | mtoto                   | Sw. mtoto (baby/child) — attested
+438  | eight         | pusaq                   | Qu. pusaq (eight) — attested
+439  | village       | kijiji                  | Sw. kijiji (village) — attested
+440  | meet          | kukutana                | Sw. kukutana (to meet) — attested
+441  | root          | mizizi                  | Sw. mizizi (roots) — attested
+442  | buy           | kununua                 | Sw. kununua (to buy) — attested
+443  | raise         | kuinua                  | Sw. kuinua (to raise) — attested
+444  | solve         | kutatua                 | Sw. kutatua (to solve) — attested
+445  | metal         | chuma                   | Sw. chuma (metal/iron) — attested
+447  | push          | kusukuma                | Sw. kusukuma (to push) — attested
+448  | seven         | qanchis                 | Qu. qanchis (seven) — attested
+449  | paragraph     | aya                     | Sw. aya (paragraph/verse) — attested
+450  | third         | tatu                    | Sw. tatu (three/third) — attested
+451  | shall         | itabidi                 | Sw. itabidi (shall — same)
+452  | held          | alishikilia             | Sw. alishikilia (held) stylized
+453  | hair          | nywele                  | Sw. nywele (hair) — attested
+454  | describe      | kuelezea                | Sw. kuelezea (to describe) — attested
+455  | cook          | kupika                  | Sw. kupika (to cook) — attested
+456  | floor         | sakafu                  | Sw. sakafu (floor) — attested
+458  | result        | matokeo                 | Sw. matokeo (result) — attested
+459  | burn          | kuungua                 | Sw. kuungua (to burn) — attested
+460  | hill          | kilima                  | Sw. kilima (hill) — attested
+461  | safe          | salama                  | Sw. salama (safe/peace) — attested
+462  | cat           | paka                    | Sw. paka (cat) — attested
+463  | century       | karne                   | Sw. karne (century) — attested
+464  | consider      | kufikiria               | Sw. kufikiria (to consider) — attested
+465  | type          | aina                    | Sw. aina (type/kind) — attested
+466  | law           | sheria                  | Sw. sheria (law — same as rule)
+467  | bit           | kidogo                  | Sw. kidogo (bit/little — same as less)
+468  | coast         | pwani                   | Sw. pwani (coast) — attested
+469  | copy          | nakala                  | Sw. nakala (copy) — attested
+470  | phrase        | msemo                   | Sw. msemo (phrase/saying) — attested
+471  | silent        | kimya                   | Sw. kimya (silent/quiet) — attested
+472  | tall          | refu                    | Sw. refu (tall) — attested
+473  | sand          | mchanga                 | Sw. mchanga (sand) — attested
+474  | soil          | udongo                  | Sw. udongo (soil) — attested
+475  | roll          | kuvingirika             | Sw. kuvingirika (to roll) — attested
+476  | temperature   | joto                    | Sw. joto (temperature — same as warm)
+477  | finger        | kidole                  | Sw. kidole (finger) — attested
+478  | industry      | viwanda                 | Sw. viwanda (industry) — attested
+479  | value         | thamani                 | Sw. thamani (value) — attested
+480  | fight         | kupigana                | Sw. kupigana (to fight) — attested
+481  | lie           | kulala                  | Sw. kulala (to lie/sleep — same)
+482  | beat          | kupiga                  | Sw. kupiga (to beat/hit) — attested
+483  | excite        | kusisimua               | Sw. kusisimua (to excite) — attested
+484  | natural       | asili                   | Sw. asili (natural/origin) — attested
+485  | view          | mtazamo                 | Sw. mtazamo (view/perspective) attested
+486  | sense         | hisia                   | Sw. hisia (sense/feeling) — attested
+487  | ear           | sikio                   | Sw. sikio (ear) — attested
+491  | case          | kesi                    | Sw. kesi (case) — attested
+492  | middle        | katikati                | Sw. katikati (middle — same as center)
+493  | kill          | kuua                    | Sw. kuua (to kill) — attested
+494  | son           | mwana                   | Sw. mwana (son/child) — attested
+495  | lake          | ziwa                    | Sw. ziwa (lake) — attested
+496  | moment        | dakika moja             | Sw. (one minute/moment) stylized
+497  | scale         | kipimo                  | Sw. kipimo (scale — same as measure)
+498  | loud          | kwa sauti               | Sw. kwa sauti (loudly) — attested
+499  | spring        | chemchemi               | Sw. chemchemi (spring/source) attested
+500  | observe       | kuangalia               | Sw. kuangalia (to observe) — attested
+
+--- QUECHUA BRIDGE WORDS ---
+(Numbers and select words where Quechua bridges naturally with Swahili phonetics)
+83   | two           | iskay                   | Qu. iskay (two) — attested
+84   | how           | imayna                  | Qu. imayna (how) — attested
+100  | great         | hatun                   | Qu. hatun (great/large) — attested
+197  | five          | pichqa                  | Qu. pichqa (five) — attested
+210  | six           | suqta                   | Qu. suqta (six) — attested
+215  | ten           | chunka                  | Qu. chunka (ten) — attested
+253  | star          | quyllur                 | Qu. quyllur (star) — attested
+300  | moon          | killa                   | Qu. killa (moon) — attested
+316  | thousand      | waranqa                 | Qu. waranqa (thousand) — attested
+337  | grand         | hatun                   | Qu. hatun (grand — same as great)
+438  | eight         | pusaq                   | Qu. pusaq (eight) — attested
+448  | seven         | qanchis                 | Qu. qanchis (seven) — attested
+78   | think         | yachay                  | Qu. yachay (to think/know) — attested
+
+===================================================================================
+PHONETIC GUIDE FOR ASHVELD SWAHILI-QUECHUA
+===================================================================================
+
+Shared phonetic features (the bridge zone):
+  Both languages: open vowels a, i, u dominate
+  Both languages: k/q stops are common and natural
+  Both languages: no heavy consonant clusters
+  Both languages: words tend to end in vowels
+  Bridge consonants: m, n, w, y, s, t, k/q, ch
+
+Swahili features preserved:
+  ng'  = velar nasal + glottal (ng'ombe — unique to Bantu)
+  nz   = prenasalized z (nzuri, nzima)
+  mb   = prenasalized b (mbingu, mbwa, mbali)
+  nd   = prenasalized d (ndege, ndugu)
+  Noun class prefixes: m-/mi- (person/tree), ki-/vi- (thing), u- (abstract),
+  wa- (people plural), ma- (plural/liquid), ku- (verb infinitive)
+
+Quechua features preserved:
+  q    = uvular stop (deeper than k — quyllur, qanchis, qaway)
+  ll   = lateral affricate (llaqta, killa)
+  ñ    = palatal nasal (ñan = road)
+  -y   = verb infinitive ending (rimay, munay, hapiy)
+  -kuna = plural marker (runakuna = people)
+  -sapa = augmentive (hatun, sapa)
+  Vowel harmony: a/i/u only (no e or o in classical Quechua)
+
+Blend construction rules for new Ashveld words:
+  Quechua root + Swahili ku- prefix = verb (e.g. ku-rimay = to speak)
+  Swahili noun + Quechua -kuna = plural (e.g. mtu-kuna = persons)
+  Quechua -y ending + Swahili -a ending = bridge verbs ending in -ya
+  Numbers: Quechua numbers used (iskay, tawa, pichqa, suqta, qanchis, pusaq,
+  isqun, chunka, waranqa) — their k/q/a sounds fit Swahili phonology naturally
+
+===================================================================================
+END OF FILE — AshveldSwahiliQuechua_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

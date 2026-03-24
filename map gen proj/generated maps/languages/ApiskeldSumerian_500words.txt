@@ -1,0 +1,590 @@
+APISKELD SUMERIAN - 500 Common Word Translations
+Fantasy Language based on ApiskeldSumerian name patterns
+Linguistic roots: Classical Sumerian (Ur III period, 2100-2000 BC) primary
+with Georgian flavoring (consonant clusters, vowel-final words)
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Classical Sumerian, Ur III):
+  lu (person/man), munus (woman), dumu (child/son), en (lord), lugal (king),
+  kalam (land/country), ki (earth/place), an (sky/heaven), a (water),
+  izi/gibil (fire), ud (day/sun), nanna (moon), mul (star), ge (night),
+  nig (thing/matter), dug (good/speak), zu (know), tum (bring/take),
+  dim (make/create), sum (give), gal (great/big), mah (exalted/great),
+  zi (life/true), sig (small/low), nam (fate/essence), ur (dog/warrior),
+  igi (eye/face/before), ka (mouth/word), sag (head/first), ub (corner/place),
+  du (go/build), gin (go/come), na (stone/advice), sar (write/garden)
+
+KEY SOURCE WORDS (Georgian):
+  კაცი/katsi (man), გული/guli (heart), წყალი/tsqali (water), ცეცხლი/tsetskhli (fire),
+  მიწა/mitsa (earth), ცა/tsa (sky), დღე/dghe (day), ღამე/ghame (night),
+  მთა/mtha (mountain), ტყე/tqe (forest), სახელი/sakheli (name),
+  კარგი/kargi (good), დიდი/didi (great/big), პატარა/patara (small),
+  სიყვარული/siqvaruli (love), ხელი/kheli (hand), თავი/tavi (head/self)
+
+PHONETIC BRIDGE STRATEGY:
+  Sumerian: CV syllable structure (lu, ki, an, ud, mul), ergative suffixes (-e, -ra, -ak)
+  Georgian: consonant clusters (kh, gh, ts, dz, ch, tq) + vowel finals
+  Bridge: Georgian clusters soften Sumerian's open syllables into richer forms
+  Shared: k, g, n, m, z, s sounds; short open vowels a/i/u
+  Fantasy suffix system: -ul (noun/being), -aki (place/abstract), -ir (verb),
+  -ang (adjective), -um (collective/great), -ezi (diminutive/fine)
+
+===================================================================================
+RANK | ENGLISH       | APISKELD                | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | kiez                    | Sum. ki (the/place marker) + -ez
+2    | a / an        | laul                    | Sum. la (a/one) + -ul
+3    | to            | suir                    | Sum. su (to/toward) + -ir
+6    | it            | bikul                   | Sum. bi (it/this) + -kul
+8    | that          | beul                    | Sum. be (that/there) + -ul
+10   | it            | bikul                   | same
+11   | for           | anakim                  | Sum. ana (for/to) + -kim
+14   | this          | naaul                   | Sum. naa (this) + -ul
+20   | this          | naaul                   | same
+22   | his           | aniel                   | Sum. ani (his/her) + -el
+28   | her           | aniel                   | Sum. ani (her — same form)
+29   | she           | munum                   | Sum. munus (she/woman) stylized
+31   | an            | laul                    | same as a
+34   | one           | dikul                   | Sum. dik (one/unique) + -ul
+35   | all           | tamum                   | Sum. tam (all/totality) + -um
+37   | there         | phaaul                  | Sum. pha (there) + -ul
+38   | their         | anieum                  | Sum. anie (their) + -um
+39   | what          | anakez                  | Sum. ana (what/for) + -kez
+45   | who           | abakez                  | Sum. aba (who/father) + -kez
+49   | me            | gaul                    | Sum. ga (me/I) + -ul
+50   | when          | enakez                  | Sum. ena (when) + -kez
+55   | no            | nulul                   | Sum. nul (no/not) + -ul
+63   | your          | zaiel                   | Sum. zai (your) + -el
+64   | good          | dugakez                 | Sum. dug (good/speak) + -akez
+65   | some          | lahul                   | Sum. la (some/not) + -hul
+69   | other         | zanul                   | Sum. zan (other/change) + -ul
+83   | two           | minum                   | Sum. min (two) + -um
+85   | our           | mezieum                 | Sum. mez (our) + -ieum
+95   | these         | naakum                  | Sum. naa (these) + -kum
+99   | us            | mezul                   | Sum. mez (us/we) + -ul
+120  | got           | tumakim                 | Sum. tum (got/brought) + -akim
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | gamir                   | Sum. gam (to be/bow) + -ir
+70   | there         | phaaul                  | same as there
+72   | seem          | igigir                  | Sum. igi (face/appear) + -gir
+78   | think         | subakir                 | Sum. suba (think/counsel) + -kir
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | akul                    | Sum. -ak (of/genitive) + -ul
+5    | and           | naakez                  | Sum. na (and/stone) + -akez
+12   | not           | nulul                   | same as no
+13   | on            | zakim                   | Sum. za (on/stone) + -kim
+14   | with          | daakim                  | Sum. da (with/beside) + -kim
+19   | at            | kirim                   | Sum. ki (at/place) + -rim
+21   | but           | anzekim                 | Sum. anze (but/however) + -kim
+23   | by            | takim                   | Sum. ta (by/from) + -kim
+24   | from          | taakez                  | Sum. ta (from) + -akez
+30   | or            | enaul                   | Sum. ena (or/when) + -ul
+32   | will          | lugamir                 | Sum. luga (will/lead) + -mir
+33   | my            | gakim                   | Sum. ga (my/I) + -kim
+36   | would         | nanimir                 | Sum. nani (would/if) + -mir
+40   | so            | kishakim                | Sum. kisha (so/thus) + -kim
+41   | up            | anum                    | Sum. an (up/sky) + -um
+42   | out           | barakim                 | Sum. bara (out/away) + -kim
+43   | if            | tukakim                 | Sum. tuka (if) + -kim
+44   | about         | zakakim                 | Sum. zaka (about) + -kim
+60   | because       | mekakim                 | Sum. me (because/divine) + -kakim
+61   | into          | shakim                  | Sum. sha (into/heart) + -kim
+71   | only          | anzeul                  | Sum. anze (only/alone) + -ul
+76   | its           | aniel                   | same as his/her
+77   | over          | anukim                  | Sum. anu (over/sky) + -kim
+79   | also          | mashkim                 | Sum. mash (also/twin) + -kim
+80   | back          | ginakim                 | Sum. gina (back/true) + -kim
+81   | after         | usikim                  | Sum. usi (after) + -kim
+82   | use           | tumir                   | Sum. tum (use/bring) + -ir
+87   | first         | sagum                   | Sum. sag (first/head) + -um
+88   | well          | dugakim                 | Sum. dug (well/good) + -akim
+90   | even          | mashkim                 | Sum. mash (even/twin) + -kim
+94   | any           | laakim                  | Sum. la (any/not) + -akim
+102  | need          | gaeshkim                | Sum. gaesh (need) + -kim
+104  | often         | ushkim                  | Sum. ush (often/follow) + -kim
+106  | high          | galum                   | Sum. gal (high/great) + -um
+110  | never         | nulnamkim               | Sum. nul+nam (never/not-fate)
+112  | north         | irigakim                | Sum. irig (north/direction) + -akim
+114  | seem          | igigir                  | same as seem
+116  | next          | usiakez                 | Sum. usi (next/after) + -akez
+119  | begin         | sagumir                 | Sum. sag (begin/head) + -umir
+129  | both          | minukim                 | Sum. min (both/two) + -ukim
+133  | until         | enakim                  | Sum. ena (until/when) + -kim
+147  | ever          | namkim                  | Sum. nam (ever/fate) + -kim
+150  | though        | anzeakez                | Sum. anze (though) + -akez
+154  | soon          | ginakez                 | Sum. gina (soon/true) + -kez
+158  | direct        | ginaul                  | Sum. gina (direct/true) + -ul
+160  | leave         | baramir                 | Sum. bara (to leave/away) + -mir
+169  | wind          | imukim                  | Sum. imu (wind/storm) + -kim
+172  | since         | taeshkim                | Sum. taesh (since/from time) + -kim
+183  | against       | gegumir                 | Sum. gegu (against) + -mir
+192  | during        | shaakez                 | Sum. sha (during/heart) + -akez
+194  | true          | ginaul                  | Sum. gina (true) + -ul
+219  | toward        | sukim                   | Sum. su (toward/hand) + -kim
+225  | center        | kimakim                 | Sum. kima (center/like) + -kim
+251  | still         | ginakez                 | Sum. gina (still/true) + -kez
+261  | above         | anukim                  | same as over
+287  | behind        | egirul                  | Sum. egir (behind/after) + -ul
+330  | yes           | haeul                   | Georgian hae (yes) + -ul
+332  | fill          | damir                   | Sum. da (to fill/beside) + -mir
+338  | yet           | ginakez                 | same as still
+339  | among         | sharakez                | Sum. shara (among) + -kez
+340  | perhaps       | meeshkez                | Sum. meesh (perhaps) + -kez
+343  | am            | gamir                   | Sum. gam (am/is) + -ir
+446  | whether       | tukakim                 | same as if
+451  | shall         | lugamir                 | same as will
+457  | either        | enaul                   | same as or
+488  | else          | zankim                  | Sum. zan (else/other) + -kim
+489  | quite         | maakim                  | Sum. maa (quite/very) + -kim
+490  | quite         | maakim                  | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | dimumir                 | Sum. dim (to do/make) + -umir
+9    | have          | tamir                   | Sum. ta (to have/from) + -mir
+15   | he            | anezul                  | Sum. anez (he) + -ul
+16   | as            | kimakim                 | Sum. kima (as/like) + -kim
+17   | you           | zaaul                   | Sum. zaa (you) + -ul
+18   | do            | dimumir                 | same
+25   | they          | anieshum                | Sum. aniesh (they) + -um
+26   | we            | mezakez                 | Sum. mez (we) + -akez
+27   | say           | kamir                   | Sum. ka (to say/mouth) + -mir
+46   | get           | tumir                   | Sum. tum (to get/bring) + -ir
+47   | which         | meshakim                | Sum. mesha (which) + -kim
+48   | go            | dumir                   | Sum. du (to go/build) + -mir
+51   | make          | dimumir                 | Sum. dim (to make) + -umir
+52   | can           | zumir                   | Sum. zu (can/know) + -mir
+53   | like          | kigakim                 | Sum. kiga (like/love) + -kim
+54   | time          | udum                    | Sum. ud (time/day) + -um
+56   | just          | anzeul                  | same as only
+57   | him           | anezul                  | same as he
+58   | know          | zumir                   | Sum. zu (to know) + -mir
+59   | take          | tumir                   | Sum. tum (to take) + -ir
+62   | year          | munum                   | Sum. mun (year) + -um
+66   | could         | zumakez                 | Sum. zu (could/know) + -makez
+67   | them          | anieshkim               | Sum. aniesh (them) + -kim
+68   | see           | igirir                  | Sum. igi (to see/eye) + -rir
+73   | look          | igirmir                 | Sum. igi (to look) + -rmir
+74   | only          | anzeul                  | same
+75   | come          | ginmir                  | Sum. gin (to come) + -mir
+84   | use           | tumezkim                | Sum. tum (to use) + -ezkim
+86   | work          | akum                    | Sum. ak (work/do) + -um
+89   | way           | ginakim                 | Sum. gina (way/true) + -kim
+91   | new           | gibulum                 | Sum. gibil (new/fire) + -um
+92   | want          | gaeshumir               | Sum. gaesh (want/need) + -umir
+93   | because       | mekakim                 | same as because
+96   | give          | sumir                   | Sum. sum (to give) + -ir
+97   | day           | udul                    | Sum. ud (day) + -ul
+98   | most          | galakez                 | Sum. gal (most/great) + -akez
+100  | great         | galakim                 | Sum. gal (great) + -akim
+101  | between       | sharakez                | Sum. shara (between/among) + -kez
+103  | large         | galul                   | Sum. gal (large) + -ul
+105  | hand          | suul                    | Sum. su (hand) + -ul
+107  | place         | kiakez                  | Sum. ki (place) + -akez
+108  | hold          | dashmir                 | Sum. dash (to hold) + -mir
+109  | turn          | nimir                   | Sum. ni (to turn/fear) + -mir
+111  | few           | sigum                   | Sum. sig (few/small/low) + -um
+113  | open          | zinumir                 | Sum. zin (to open/rise) + -umir
+115  | together      | daakim                  | Sum. da (together/with) + -kim
+117  | white         | babbarum                | Sum. babbar (white) + -um
+118  | children      | dumudum                 | Sum. dumu (children) + -dum
+121  | walk          | duakez                  | Sum. du (to walk/go) + -akez
+122  | example       | kalakim                 | Sum. kala (example/strong) + -kim
+123  | ease          | geshakim                | Sum. gesha (ease/comfort) + -kim
+124  | paper         | dububul                 | Sum. dubub (clay/tablet) + -ul
+125  | group         | ereshum                 | Sum. eresh (group/city) + -um
+126  | always        | namumir                 | Sum. namu (always/fate) + -mir
+127  | music         | tigirum                 | Sum. tigir (drum/music) + -um
+128  | those         | beshum                  | Sum. besh (those) + -um
+130  | mark          | jeshakez                | Georgian jesh (mark/cross) + -akez
+131  | book          | dububakim               | Sum. dubub (tablet/book) + -akim
+132  | letter        | sardul                  | Sum. sar (write/letter) + -ul
+134  | mile          | kaskal                  | Sum. kaskal (road/distance) — attested
+135  | river         | idignakim               | Sum. idigna (river — Tigris root) + -kim
+136  | car           | girukim                 | Sum. giru (wheel/vehicle) + -kim
+137  | feet          | egirdul                 | Sum. egir (feet/behind) + -ul
+138  | care          | niginakim               | Sum. nigina (care/true thing) + -kim
+139  | second        | minum                   | Sum. min (second/two) + -um
+140  | enough        | dakim                   | Sum. da (enough/with) + -kim
+141  | plain         | edinum                  | Sum. edin (plain/steppe) + -um
+142  | girl          | kibirakim               | Sum. kibira (girl/young woman) + -kim
+143  | usual         | ginakez                 | Sum. gina (usual/true) + -kez
+144  | young         | turul                   | Sum. tur (young/small) + -ul
+145  | ready         | gatumir                 | Georgian gat (ready) + -umir
+146  | above         | anukim                  | same as over/above
+148  | red           | sarum                   | Sum. sar (red/write) + -um
+149  | list          | sardul                  | Sum. sar (list/write) + -ul
+151  | feel          | shukamir                | Sum. shuka (to feel) + -mir
+152  | talk          | kaakez                  | Sum. ka (to talk/mouth) + -akez
+153  | bird          | musenul                 | Sum. musen (bird) + -ul
+155  | body          | uzuul                   | Sum. uzu (body/flesh) + -ul
+156  | dog           | urul                    | Sum. ur (dog/warrior) + -ul
+157  | family        | imunum                  | Sum. imun (family/kin) + -um
+159  | pose          | nigirul                 | Sum. nigir (pose/herald) + -ul
+161  | song          | ezenum                  | Sum. ezen (song/festival) + -um
+162  | measure       | nindakim                | Sum. ninda (measure/bread) + -kim
+163  | door          | gaakim                  | Sum. ga (door/milk) + -akim
+164  | product       | niginakim               | Sum. nigina (product/true thing) + -kim
+165  | black         | gigium                  | Sum. gigi (black) + -um
+166  | short         | sigukim                 | Sum. sig (short/small) + -ukim
+167  | numeral       | shumum                  | Sum. shum (number/give) + -um
+168  | class         | ereshkim                | Sum. eresh (class/city) + -kim
+170  | question      | inakim                  | Sum. ina (question/in) + -kim
+171  | happen        | inimir                  | Sum. ini (to happen) + -mir
+173  | ship          | magurdum                | Sum. magur (ship) + -um
+174  | area          | kieshkim                | Sum. kiesh (area/place) + -kim
+175  | half          | suhusum                 | Sum. suhus (half/foundation) + -um
+176  | rock          | nadul                   | Sum. na (rock/stone) + -ul
+177  | order         | galukim                 | Sum. galu (order/man) + -kim
+178  | fire          | gibulum                 | Sum. gibil (fire/new) + -um
+179  | south         | ursankim                | Sum. ursan (south/hero) + -kim
+180  | problem       | nigukim                 | Sum. nigu (problem) + -kim
+181  | piece         | teshkim                 | Sum. tesh (piece/pride) + -kim
+182  | told          | kamir                   | Sum. ka (told/said) + -mir
+184  | pass          | duakez                  | Sum. du (to pass/go) + -akez
+185  | since         | taeshkim                | same as since
+186  | top           | sagdum                  | Sum. sag (top/head) + -um
+187  | whole         | tamum                   | Sum. tam (whole/all) + -um
+188  | king          | lugalum                 | Sum. lugal (king) + -um — attested
+189  | space         | anakidum                | Sum. an+ki (space/sky-earth) + -um
+190  | heard         | gedimir                 | Sum. gedi (heard) + -mir
+191  | best          | damkim                  | Sum. dam (best/spouse) + -kim
+192  | hour          | udeshakim               | Sum. ud+esha (hour) + -kim
+193  | better        | dugakim                 | Sum. dug (better/good) + -akim
+195  | during        | shaakez                 | same
+196  | hundred       | nishim                  | Sum. nish (hundred) + -im
+197  | five          | iakim                   | Sum. ia (five) + -kim
+198  | remember      | subakmir                | Sum. suba (remember/counsel) + -mir
+199  | step          | gindul                  | Sum. gind (step) + -ul
+200  | early         | sagkidum                | Sum. sag+kid (early/first-time) + -um
+201  | hold          | dashmir                 | same as hold
+202  | west          | martukim                | Sum. martu (west/Amorite) + -kim
+203  | ground        | kidul                   | Sum. kid (ground/mat) + -ul
+204  | interest      | niginakim               | Sum. nigina (interest) + -kim
+205  | reach         | dulumir                 | Sum. dulum (reach/darkness) + -ir
+206  | fast          | girmirim                | Sum. girmir (fast/fierce) + -im
+207  | verb          | kadumir                 | Sum. ka+du (verb/mouth-go) + -ir
+208  | sing          | ezenmir                 | Sum. ezen (to sing/celebrate) + -mir
+209  | listen        | geshtimir               | Sum. geshti (to listen/ear) + -mir
+210  | six           | ashkim                  | Sum. ash (six) + -kim
+211  | table         | bankidum                | Sum. bank+kid (table/platform) + -um
+212  | travel        | kashkalakim             | Sum. kaskal (to travel/road) + -akim
+213  | less          | sigakim                 | Sum. sig (less/small) + -akim
+214  | morning       | dutukim                 | Sum. dutu (morning/sun) + -kim
+215  | ten           | ukim                    | Sum. u (ten) + -kim
+216  | simple        | tarsikim                | Georgian tarsi (simple) + -kim
+217  | several       | ereshkim                | Sum. eresh (several/city) + -kim
+218  | vowel         | kaakim                  | Sum. ka (vowel/mouth) + -akim
+220  | war           | merukim                 | Sum. meru (war/wind) + -kim
+221  | lay           | nualumir                | Sum. nualu (to lay) + -mir
+222  | against       | gegumir                 | same as against
+223  | pattern       | gishkim                 | Sum. gish (pattern/wood) + -kim
+224  | slow          | garakim                 | Sum. gara (slow) + -kim
+226  | love          | kigaum                  | Sum. kiga (love/dear) + -um
+227  | person        | ludum                   | Sum. lu (person) + -um
+228  | money         | kubakim                 | Sum. kuba (silver/money) + -kim
+229  | serve         | ushmir                  | Sum. ush (to serve/follow) + -mir
+230  | appear        | igigir                  | same as seem
+231  | road          | kaskaldum               | Sum. kaskal (road) + -um
+232  | map           | kidulakim               | Sum. ki+dul (map/earth-cover) + -kim
+233  | rain          | shengekim               | Sum. shenge (rain) + -kim
+234  | rule          | galukim                 | Sum. galu (rule/man) + -kim
+235  | govern        | lugalmir                | Sum. lugal (to govern/king) + -mir
+236  | pull          | gutmir                  | Sum. gut (to pull) + -mir
+237  | cold          | eninkim                 | Sum. enin (cold) + -kim
+238  | notice        | igirakez                | Sum. igi (to notice/eye) + -akez
+239  | voice         | kadum                   | Sum. ka (voice/mouth) + -um
+240  | fall          | eshumir                 | Sum. eshum (to fall) + -ir
+241  | power         | meluhakim               | Sum. meluha (power/far land) + -kim
+242  | town          | ereshdum                | Sum. eresh (town/city) + -um
+243  | fine          | dugakim                 | Sum. dug (fine/good) + -akim
+244  | drive         | girumir                 | Sum. giru (to drive/wheel) + -mir
+245  | lead          | sagmir                  | Sum. sag (to lead/head) + -mir
+246  | cry           | eshkimir                | Georgian eshki (cry) + -mir
+247  | dark          | dulumum                 | Sum. dulum (dark) + -um
+248  | machine       | gishnakim               | Sum. gish (machine/wood) + -nakim
+249  | note          | sardul                  | Sum. sar (note/write) + -ul
+250  | wait          | gudimir                 | Sum. gudi (to wait) + -mir
+252  | figure        | zuulkim                 | Sum. zuul (figure/form) + -kim
+253  | star          | muldul                  | Sum. mul (star) + -ul
+254  | box           | kisakim                 | Sum. kisa (box/purse) + -kim
+255  | noun          | kadum                   | Sum. ka (noun/mouth) + -um
+256  | field         | gdankim                 | Georgian gdan (field) + -kim
+257  | rest          | suenakim                | Sum. suena (rest/shoe) + -kim
+258  | correct       | ginakim                 | Sum. gina (correct/true) + -kim
+259  | able          | zuakim                  | Sum. zu (able/know) + -akim
+260  | pound         | gunnakim                | Sum. gunn (pound/weight) + -akim
+262  | beauty        | ninakim                 | Sum. nina (beauty/city) + -kim
+263  | drive         | girumir                 | same as drive
+264  | stood         | ginmir                  | Sum. gin (stood/came) + -mir
+265  | contain       | shamir                  | Sum. sha (to contain/heart) + -mir
+266  | front         | igisagum                | Sum. igi+sag (front/face-head) + -um
+267  | teach         | nazhimir                | Sum. nazhi (to teach) + -mir
+268  | week          | udmindum                | Sum. ud+min (week/two-days) + -um
+269  | final         | egirkim                 | Sum. egir (final/after) + -kim
+270  | gave          | sumir                   | Sum. sum (gave/give) + -ir
+271  | green         | sigkim                  | Sum. sig (green/small) + -kim
+272  | oh            | ahum                    | Sum. ah (oh/alas) + -um
+273  | quick         | girmirim                | same as fast
+274  | develop       | pelimir                 | Georgian peli (develop) + -mir
+275  | ocean         | abzukim                 | Sum. abzu (ocean/deep water) + -kim
+276  | warm          | lazakim                 | Sum. laza (warm/flame) + -kim
+277  | free          | anzeakim                | Sum. anze (free/alone) + -akim
+278  | minute        | udeshkim                | Sum. udesh (small time) + -kim
+279  | strong        | kalagum                 | Sum. kalag (strong) + -um
+280  | special       | nigeshakim              | Sum. nigesha (special thing) + -kim
+281  | behind        | egirul                  | same as behind
+282  | clear         | babbarakim              | Sum. babbar (clear/white) + -akim
+283  | tail          | zibadum                 | Sum. zibad (tail) + -um
+284  | produce       | dimmir                  | Sum. dim (to produce/make) + -mir
+285  | fact          | ginadum                 | Sum. gina (fact/truth) + -um
+286  | street        | siltakim                | Sum. silta (street/path) + -kim
+288  | lot           | galukim                 | Sum. galu (lot/many) + -kim
+289  | nothing       | numeshkim               | Sum. numesh (nothing/no-thing) + -kim
+290  | course        | kashkalakim             | same as travel/road
+291  | stay          | damir                   | Sum. da (to stay/beside) + -mir
+292  | wheel         | giruul                  | Sum. giru (wheel) + -ul
+293  | full          | dakim                   | Sum. da (full/with) + -kim
+294  | force         | meluhakim               | same as power
+295  | blue          | zagikim                 | Sum. zagi (blue/lapis) + -kim
+296  | object        | nigul                   | Sum. nig (object/thing) + -ul
+297  | decide        | inimir                  | Sum. ini (to decide) + -mir
+298  | surface       | igidum                  | Sum. igi (surface/face) + -um
+299  | deep          | abzuakim                | Sum. abzu (deep) + -akim
+300  | moon          | nannadum                | Sum. nanna (moon) + -um — attested
+301  | island        | nazikim                 | Sum. naz (island/neck) + -ikim
+302  | foot          | giridum                 | Sum. giri (foot/path) + -um
+303  | system        | meshkim                 | Sum. me (system/divine order) + -shkim
+304  | busy          | akumir                  | Sum. aku (busy/eat) + -mir
+305  | test          | nazhikim                | Sum. nazhi (test/teach) + -kim
+306  | record        | sarkim                  | Sum. sar (record/write) + -kim
+307  | boat          | magurkim                | Sum. magur (boat) + -kim
+308  | common        | ginakez                 | Sum. gina (common/usual) + -kez
+309  | gold          | gushkinum               | Sum. gushkin (gold) + -um — attested
+310  | possible      | zuakim                  | Sum. zu (possible/know) + -akim
+311  | plane         | annakim                 | Sum. an (sky/plane) + -nakim
+312  | stead         | kiakez                  | same as place
+313  | dry           | heshkim                 | Georgian hesh (dry) + -kim
+314  | wonder        | zumir                   | Sum. zu (wonder/know) + -mir
+315  | laugh         | nezemir                 | Sum. neze (laugh) + -mir
+316  | thousand      | limalim                 | Sum. limal (thousand) + -im
+317  | ago           | egirakim                | Sum. egir (ago/after) + -akim
+318  | ran           | kashkamir               | Sum. kashka (ran) + -mir
+319  | check         | igirakez                | same as notice
+320  | game          | ezenkim                 | Sum. ezen (game/festival) + -kim
+321  | shape         | zuulkim                 | Sum. zuul (shape/form) + -kim
+322  | equate        | minmir                  | Sum. min (to equate/two) + -mir
+323  | hot           | lazakim                 | Sum. laza (hot/flame) + -kim
+324  | miss          | nulmir                  | Sum. nul (to miss/not) + -mir
+325  | brought       | tumir                   | Sum. tum (brought) + -ir
+326  | heat          | lazadum                 | Sum. laza (heat) + -um
+327  | snow          | mishkim                 | Sum. mish (snow/white) + -kim
+328  | tire          | eshgimir                | Sum. eshgi (tire/weary) + -mir
+329  | bring         | tumir                   | Sum. tum (to bring) + -ir
+331  | distant       | suhuskim                | Sum. suhuski (distant) + -kim
+333  | east          | uddakim                 | Sum. udda (east/sunrise) + -kim
+334  | paint         | sarmir                  | Sum. sar (to paint/write) + -mir
+335  | language      | emekim                  | Sum. eme (language/tongue) + -kim
+336  | among         | sharakez                | same as among
+337  | grand         | mahum                   | Sum. mah (grand/exalted) + -um
+341  | drop          | sheshmir                | Sum. shesh (drop/brother) + -mir
+342  | heart         | shadum                  | Sum. sha (heart) + -um
+344  | present       | inanakim                | Sum. inan (present/now) + -akim
+345  | heavy         | dunnakim                | Sum. dunn (heavy/strong) + -akim
+346  | dance         | ezenmir                 | Sum. ezen (to dance/celebrate) + -mir
+347  | engine        | gishnakim               | same as machine
+348  | position      | kiakez                  | same as place
+349  | arm           | aadum                   | Sum. aa (arm/water) + -um
+350  | wide          | dagalakim               | Sum. dagal (wide) + -akim
+351  | sail          | magurmir                | Sum. magur (to sail/boat) + -mir
+352  | material      | nigkim                  | Sum. nig (material/thing) + -kim
+353  | size          | galakim                 | Sum. gal (size/great) + -akim
+354  | vary          | gyurmir                 | Georgian gyur (to vary) + -mir
+355  | settle        | damir                   | Sum. da (to settle/beside) + -mir
+356  | speak         | kamir                   | Sum. ka (to speak/mouth) + -mir
+357  | weight        | gunnadum                | Sum. gunn (weight/pound) + -um
+358  | general       | tamakez                 | Sum. tam (general/all) + -akez
+359  | ice           | jeshkim                 | Georgian jesh (ice) + -kim
+360  | matter        | nigdum                  | Sum. nig (matter/thing) + -um
+361  | circle        | ninakim                 | Sum. nin (circle/lady) + -akim
+362  | pair          | mindum                  | Sum. min (pair/two) + -um
+363  | include       | shamir                  | Sum. sha (to include/heart) + -mir
+364  | divide        | zeshmir                 | Sum. zesh (to divide) + -mir
+365  | syllable      | kaeshkim                | Sum. ka+esh (syllable) + -kim
+366  | felt          | shukamir                | same as feel
+367  | perhaps       | meeshkez                | same as perhaps
+368  | pick          | tukmir                  | Sum. tuk (to pick/take) + -mir
+369  | sudden        | logpang                 | borrowed — Apisdren bridge
+370  | count         | nishmir                 | Sum. nish (to count/hundred) + -mir
+371  | square        | kibiradum               | Sum. kibira (square/sandal) + -um
+372  | reason        | subakdum                | Sum. suba (reason/counsel) + -um
+373  | length        | dallakim                | Sum. dalla (length/bright) + -kim
+374  | represent     | igigimir                | Sum. igi+gi (to represent/return-face) + -mir
+375  | art           | nazhidum                | Sum. nazhi (art/craft) + -um
+376  | subject       | nigkidum                | Sum. nig+ki (subject/thing-place) + -um
+377  | region        | kieshdum                | Sum. kiesh (region/place) + -um
+378  | energy        | mehkim                  | Sum. me (energy/divine order) + -hkim
+379  | hunt          | kalikim                 | Sum. kali (to hunt) + -kim
+380  | probable      | meeshkum                | Sum. meesh (probable) + -um
+381  | bed           | nazhikim                | Sum. nazhi (bed/rest) + -kim
+382  | brother       | seshdum                 | Sum. sesh (brother) + -um
+383  | egg           | nundakim                | Sum. nund (egg) + -akim
+384  | ride          | shummir                 | Sum. shum (to ride/give) + -mir
+385  | cell          | kisakum                 | Sum. kisa (cell/purse) + -um
+386  | believe       | takim                   | Sum. ta (to believe/from) + -kim
+387  | fraction      | teshkim                 | Sum. tesh (fraction/piece) + -kim
+388  | forest        | tirikim                 | Sum. tiri (forest) + -kim
+389  | sit           | tukulmir                | Sum. tukul (to sit/weapon) + -mir
+390  | race          | mershakim               | Sum. mersha (race) + -kim
+391  | window        | igishakim               | Sum. igi+sha (window/eye-heart) + -kim
+392  | store         | garakim                 | Sum. gara (store/slow) + -kim
+393  | summer        | emeshkim                | Sum. emesh (summer) + -kim — attested
+394  | train         | kashkalnakim            | Sum. kaskal (train/road-line) + -nakim
+395  | sleep         | nazhimir                | Sum. nazhi (to sleep/rest) + -mir
+396  | prove         | ginamir                 | Sum. gina (to prove/true) + -mir
+397  | lone          | anzeul                  | same as only
+398  | leg           | girikim                 | Sum. giri (leg/foot) + -kim
+399  | exercise      | akmir                   | Sum. ak (exercise/do) + -mir
+400  | wall          | badukim                 | Sum. badu (wall/built) + -kim
+401  | catch         | tumir                   | Sum. tum (to catch/take) + -ir
+402  | mount         | anumir                  | Sum. anu (to mount/sky) + -mir
+403  | wish          | gaeshmir                | Sum. gaesh (wish/need) + -mir
+404  | sky           | andum                   | Sum. an (sky) + -um
+405  | board         | gishakim                | Sum. gish (board/wood) + -akim
+406  | joy           | hulim                   | Sum. hul (joy) + -im — attested
+407  | winter        | enthenakim              | Sum. enthen (winter) + -akim — attested
+408  | sat           | tukulmir                | same as sit
+409  | written       | sardum                  | Sum. sar (written) + -um
+410  | wild          | merukim                 | Sum. meru (wild/wind) + -kim
+411  | instrument    | gishtikim               | Sum. gishti (instrument) + -kim
+412  | kept          | dashkim                 | Sum. dash (kept/held) + -kim
+413  | glass         | shelnakim               | Georgian shel (glass) + -nakim
+414  | grass         | uakim                   | Sum. ua (grass) + -kim
+415  | cow           | abukim                  | Sum. abu (cow/father) + -kim
+416  | job           | akdum                   | Sum. ak (job/work) + -um
+417  | edge          | zarim                   | Sum. zar (edge/bundle) + -im
+418  | sign          | jeshakez                | Georgian jesh (sign) + -akez
+419  | visit         | kashkamir               | Sum. kashka (to visit/run) + -mir
+420  | past          | egirdum                 | Sum. egir (past/after) + -um
+421  | soft          | sagakim                 | Sum. saga (soft) + -kim
+422  | fun           | ezenim                  | Sum. ezen (fun/festival) + -im
+423  | bright        | dallakim                | Sum. dalla (bright) + -kim
+424  | gas           | imuakim                 | Sum. imu (gas/wind) + -akim
+425  | weather       | anudakim                | Sum. an+ud (weather/sky-day) + -kim
+426  | month         | itidakim                | Sum. itid (month) + -akim — attested
+427  | million       | limalnakim              | Sum. limal (million/thousand) + -nakim
+428  | bear          | urzakim                 | Sum. urza (bear) + -kim
+429  | finish        | tillakim                | Sum. till (finish/end) + -akim
+430  | happy         | hulakez                 | Sum. hul (happy/joy) + -akez
+431  | hope          | gaeshdum                | Sum. gaesh (hope/need) + -um
+432  | flower        | kishkim                 | Sum. kish (flower/city) + -kim
+433  | clothe        | tugumir                 | Sum. tugu (to clothe) + -mir
+434  | strange       | zanmekim                | Sum. zan+me (strange/other-divine) + -kim
+435  | gone          | baramir                 | Sum. bara (gone/away) + -mir
+436  | jump          | zagumir                 | Sum. zagu (to jump) + -mir
+437  | baby          | dumuturkim              | Sum. dumu+tur (baby/small-child) + -kim
+438  | eight         | ushushkim               | Sum. ushush (eight) + -kim
+439  | village       | durakim                 | Sum. dura (village/strong) + -kim
+440  | meet          | igigimir                | Sum. igi+gi (to meet/face-return) + -mir
+441  | root          | shurdum                 | Sum. shur (root/rain) + -um
+442  | buy           | shamu                   | Sum. sham (to buy) + -u — attested
+443  | raise         | zagumir                 | Sum. zagu (to raise) + -mir
+444  | solve         | dulumir                 | Sum. dulum (to solve) + -ir
+445  | metal         | zabarkim                | Sum. zabar (bronze/metal) + -kim
+447  | push          | gutmir                  | Sum. gut (to push/pull) + -mir
+448  | seven         | iminnakim               | Sum. imin (seven) + -nakim — attested
+449  | paragraph     | sarnakim                | Sum. sar (paragraph/write) + -nakim
+450  | third         | eshnakim                | Sum. esh (third/shrine) + -nakim
+452  | held          | dashmir                 | same as hold/held
+453  | hair          | saharkim                | Sum. sahar (hair/dust) + -kim
+454  | describe      | sarmir                  | Sum. sar (to describe/write) + -mir
+455  | cook          | mushmir                 | Sum. mush (to cook) + -mir
+456  | floor         | kidkim                  | Sum. kid (floor/mat) + -kim
+458  | result        | drubakim                | Sum. drub (result/fruit) + -akim
+459  | burn          | gibulmir                | Sum. gibil (to burn/fire) + -mir
+460  | hill          | hursankim               | Sum. hursan (hill/mountain) + -kim
+461  | safe          | nazhakez                | Sum. nazha (safe) + -kez
+462  | cat           | surkim                  | Sum. sur (cat/squeeze) + -kim
+463  | century       | mushnakim               | Sum. mush (century/snake) + -nakim
+464  | consider      | subakir                 | Sum. suba (consider/counsel) + -ir
+465  | type          | nigezkim                | Sum. nigez (type/kind) + -kim
+466  | law           | dinarkim                | Sum. dinar (law/coin) + -kim
+467  | bit           | turezkim                | Sum. turez (bit/small) + -kim
+468  | coast         | abzuigishakim           | Sum. abzu+igi (coast/deep-face) + -kim
+469  | copy          | sarmir                  | Sum. sar (to copy/write) + -mir
+470  | phrase        | kaemekim                | Sum. ka+eme (phrase/mouth-tongue)
+471  | silent        | sendukim                | Sum. sendu (silent) + -kim
+472  | tall          | galdum                  | Sum. gal (tall/great) + -um
+473  | sand          | sahardum                | Sum. sahar (sand/dust) + -um
+474  | soil          | kidum                   | Sum. ki (soil/earth) + -um
+475  | roll          | girumir                 | Sum. giru (to roll/wheel) + -mir
+476  | temperature   | lazanakim               | Sum. laza+na (temperature/flame-stone) + -kim
+477  | finger        | suezkim                 | Sum. suez (finger) + -kim
+478  | industry      | aknakim                 | Sum. ak+na (industry/work-stone) + -kim
+479  | value         | rinnakim                | Sum. rinn (value) + -akim
+480  | fight         | merumir                 | Sum. meru (to fight/wind) + -mir
+481  | lie           | nualumir                | same as lay
+482  | beat          | rdungakim               | Georgian rdung (to beat) + -akim
+483  | excite        | hulmir                  | Sum. hul (to excite/joy) + -mir
+484  | natural       | kinamkim                | Sum. ki+nam (natural/earth-fate) + -kim
+485  | view          | igidum                  | Sum. igi (view/face) + -um
+486  | sense         | tsorakim                | Georgian tsor (sense) + -akim
+487  | ear           | geshtiakim              | Sum. geshti (ear) + -akim
+491  | case          | nigkiakim               | Sum. nig+ki (case/thing-place) + -akim
+492  | middle        | sharakez                | Sum. shara (middle/among)
+493  | kill          | gazhmir                 | Georgian gazh (to kill) + -mir
+494  | son           | dumuakim                | Sum. dumu (son/child) + -akim
+495  | lake          | tiamkidum               | Sum. tiam+ki (lake/water-place) + -um
+496  | moment        | udeshkim                | same as minute
+497  | scale         | nindadum                | Sum. ninda (scale/measure) + -um
+498  | loud          | galkadum                | Sum. gal+ka (loud/great-mouth) + -um
+499  | spring        | shegikim                | Sum. shegi (spring/early) + -kim
+500  | observe       | igiakez                 | Sum. igi (to observe/eye) + -akez
+
+===================================================================================
+PHONETIC GUIDE FOR APISKELD
+===================================================================================
+
+Classical Sumerian sounds:
+  All syllables are CV or CVC (consonant-vowel or C-V-C)
+  Sumerian had no consonant clusters in native words
+  Key consonants: g, k, d, t, b, p, m, n, sh, z, s, r, l, h
+  Ergative language: agent of transitive verb marked with -e
+  Genitive: -ak (of) — appears as -akim/-akez in Apiskeld
+  Key Sumerian roots used: an (sky), ki (earth), a (water), me (divine order),
+  lugal (king), dumu (child), igi (eye/face), ka (mouth), sag (head),
+  gal (great), tur (small), nanna (moon), mul (star), ud (day/sun)
+
+Georgian consonant clusters adding texture:
+  kh  = aspirated velar (Georgian characteristic)
+  gh  = voiced velar fricative
+  ts  = affricate (as in "cats")
+  dz  = voiced affricate
+  tq  = ejective (Georgian unique sound, simplified)
+  Used in: jesh, gazh, rdung, hesh, gdan, shel, tarsi
+
+Apiskeld suffix system:
+  -ul   = primary noun ending (singular/concrete)
+  -um   = collective/abstract noun
+  -kim  = locative/relational particle (place/concerning)
+  -akez = genitive/topic particle (of/about)
+  -akim = adjectival/descriptive ending
+  -mir  = primary verb ending (action)
+  -ir   = secondary verb (state/being)
+  -dum  = place noun (location/large thing)
+  -im   = emphatic/festival noun
+
+Attested Sumerian words used directly (unchanged):
+  lugal (king), nanna (moon), mul (star), kaskal (road),
+  gushkin (gold), emesh (summer), enthen (winter), ezen (festival),
+  imin (seven), itid (month), sham (to buy), sesh (brother),
+  dumu (child/son), hul (joy), gibil (fire/new), dagal (wide),
+  abzu (deep water), babbar (white), gina (true), kalag (strong)
+
+===================================================================================
+END OF FILE — ApiskeldSumerian_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

@@ -1,0 +1,582 @@
+APISDREN BHUTAN-AKSUMITE - 500 Common Word Translations
+Fantasy Language based on ApisdrenBhutan-Askumite name patterns
+Linguistic roots: Dzongkha/Tibetan (Bhutanese) + Ge'ez/Aksumite (ancient Ethiopian)
+Stylization: Fantasy-leaning, consistent feel prioritized over direct translation.
+Phonetic bridges: Both languages share short open syllables, velar/uvular stops
+(k, q, kh), nasal clusters (-ng, -nd, -mb), and vowel-final words.
+
+KEY SOURCE WORDS:
+  Dzongkha/Tibetan: kho (he), mo (she), nga (I/me), khyed (you), kho-tsho (they),
+  yod (there is/have), ma (not), la (honorific/yes), gi (of/possessive),
+  yul (country/place), chu (water), me (fire), sa (earth/ground), nam (sky),
+  nyi-ma (sun), da-wa (moon), kar-ma (star/action), nyin (day), tsa (root/hot),
+  chenpo (great), yagpo (good), den (truth/real), mi (person), dung (longing)
+  Ge'ez/Aksumite: ʾegziʾ (lord), hagär (country), mai (water), ʾəsät (fire),
+  mədr (earth), samay (sky), ʾIyäsus (name root), birhan (light), lelit (night),
+  tsom (fast/river), ʾabiy (great), tsäda (white), qal (word/voice), nägär (thing/matter),
+  ḥaylu (power/force), zämän (time/era), ʾənda (like/as), tsəge (flower)
+
+PHONETIC BRIDGE STRATEGY:
+  Shared: k/q stops, open a/i/u vowels, nasal endings (-ng, -m, -n)
+  Tibetan short syllables (chu, me, sa, nam) blend with Ge'ez CVC roots (qal, mai, mədr)
+  Bridge suffix system: -ang (Tibetan nasal) + Ge'ez vowel-final = -anga, -enga
+  Vocalic harmony: a and ä merge to a; ə rendered as e; retroflex lost, simplified
+  Fantasy stylization: consonant clusters softened, tonal marks dropped,
+  consistent suffixes applied: -en (noun), -ang (adjective), -eïr (verb), -om (place/abstract)
+
+===================================================================================
+RANK | ENGLISH       | APISDREN                | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | khen                    | Tib. khe (that/the) + -n
+2    | a / an        | zhen                    | Ge'ez ze (a/one/this) + -n
+3    | to            | laeïr                   | Tib. la (to/toward) + -eïr
+6    | it            | khoten                  | Tib. kho (he/it) + -ten
+8    | that          | dehen                   | Ge'ez -ze/-de (that) + -en
+10   | it            | khoten                  | same as above
+11   | for           | dongom                  | Tib. don (purpose/for) + -om
+14   | this          | diren                   | Tib. di (this) + -en
+20   | this          | diren                   | same
+22   | his           | khoel                   | Tib. kho (his) + -el
+28   | her           | moel                    | Tib. mo (her) + -el
+29   | she           | monga                   | Tib. mo (she) + -nga
+31   | an            | zhen                    | same as a
+34   | one           | chigom                  | Tib. chig (one) + -om
+35   | all           | tamang                  | Tib. tamche (all) + -ang
+37   | there         | phaen                   | Tib. pha (there/that side) + -en
+38   | their         | khongel                 | Tib. khong (they/their) + -el
+39   | what          | karen                   | Tib. ka (what) + -en
+45   | who           | suen                    | Tib. su (who) + -en
+49   | me            | ngaen                   | Tib. nga (I/me) + -en
+50   | when          | nambren                 | Tib. nam (when/time) + -en
+55   | no            | manen                   | Tib. ma (not/no) + -en
+63   | your          | khyedel                 | Tib. khyed (your) + -el
+64   | good          | yagpang                 | Tib. yagpo (good) + -ang
+65   | some          | zhigang                 | Tib. zhig (some/a) + -ang
+85   | our           | ngangel                 | Tib. ngang (our/within) + -el
+95   | these         | ditsang                 | Tib. di-tsho (these) + -ang
+99   | us            | ngatshen                | Tib. nga-tsho (us) + -en
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | yodeïr                  | Tib. yod (to be/exist) + -eïr
+70   | there         | phaen                   | same as there above
+72   | seem          | nangweïr                | Tib. nang (to appear/inside) + -weïr
+78   | think         | sameïr                  | Ge'ez sam (to think/hear) + -eïr
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | gien                    | Tib. gi (of/possessive) + -en
+5    | and           | dangen                  | Tib. dang (and/with) + -en
+12   | not           | manen                   | Tib. ma (not) + -en
+13   | on            | kangom                  | Tib. kang (on/which) + -om
+14   | with          | naeïr                   | Ge'ez na (with/and) + -eïr
+19   | at            | neïr                    | Tib. ne (at/from) + -ïr
+21   | but           | yangmen                 | Tib. yang (also/but) + -en
+23   | by            | kyen                    | Tib. kyi (by/of) + -en
+24   | from          | nesen                   | Tib. nas (from) + -en
+30   | or            | yawen                   | Tib. yam (or/and also) + -en
+32   | will          | gebeïr                  | Ge'ez geb (to come/will) + -eïr
+33   | my            | ngaom                   | Tib. nga (my) + -om
+36   | would         | gyureïr                 | Tib. gyur (to become/would) + -eïr
+40   | so            | deben                   | Ge'ez -de (so/thus) + -en
+41   | up            | yaren                   | Tib. yar (up/upward) + -en
+42   | out           | chiren                  | Tib. chi (out/external) + -en
+43   | if            | nagen                   | Tib. na (if/then) + -en
+44   | about         | koron                   | Ge'ez koro (about/concerning) + -n
+60   | because       | chiru                   | Tib. chir (because/for that) + -u
+61   | into          | nangom                  | Tib. nang (inside/into) + -om
+71   | only          | khonam                  | Tib. kho-na (only/just) + -m
+76   | its           | khoel                   | same as his
+77   | over          | gangen                  | Tib. gang (over/above) + -en
+79   | also          | yangeng                 | Tib. yang (also) + -eng
+80   | back          | logren                  | Tib. log (back/return) + -en
+81   | after         | jesen                   | Tib. jes (after/following) + -en
+82   | use           | kolen                   | Ge'ez kol (to use/employ) + -en
+87   | first         | dangpom                 | Tib. dang-po (first) + -m
+88   | well          | legsang                 | Tib. legs (well/good) + -ang
+90   | even          | yangmen                 | Tib. yang (even — same as but)
+94   | any           | gaang                   | Tib. ga (any/which) + -ang
+102  | need          | gonmen                  | Tib. gon (need/before) + -en
+104  | often         | yangyang                | Tib. yang-yang (often/repeatedly)
+106  | high          | thoang                  | Tib. tho (high/upper) + -ang
+110  | never         | namyang                 | Tib. nam-yang (never) — attested
+112  | north         | changom                 | Tib. chang (north) + -om
+114  | seem          | nangweïr                | same as seem above
+116  | next          | jemen                   | Tib. je (next/following) + -en
+119  | begin         | tsueïr                  | Tib. tsu (start/begin) + -eïr
+129  | both          | ngatsen                 | Tib. ngas (both/we two) + -en
+133  | until         | baren                   | Tib. bar (until/between) + -en
+147  | ever          | nammen                  | Tib. nam (ever/time) + -en
+150  | though        | yangdang                | Tib. yang-dang (though/even with)
+154  | soon          | nyuren                  | Tib. nyur (quick/soon) + -en
+158  | direct        | trangen                 | Tib. trang (straight/direct) + -en
+160  | leave         | droeïr                  | Tib. dro (to go/leave) + -eïr
+169  | wind          | lungom                  | Tib. lung (wind/breath) + -om
+172  | since         | nesang                  | Tib. nas (since/from) + -ang
+183  | against       | gegeïr                  | Ge'ez geg (against/obstacle) + -eïr
+192  | during        | bareng                  | Tib. bar (during/between) + -eng
+194  | true          | denang                  | Tib. den (true/real) + -ang
+219  | toward        | cheyen                  | Tib. chey (toward) + -en
+225  | center        | kyidom                  | Tib. kyid (central/happy) + -om
+251  | still         | yangden                 | Tib. yang (still/yet) + -en
+261  | above         | gangen                  | same as over
+287  | behind        | ogren                   | Tib. og (below/behind) + -en
+330  | yes           | laen                    | Tib. la (yes/honorific) + -en
+332  | fill          | kangseïr                | Tib. kang (to fill/which) + -seïr
+338  | yet           | yangden                 | same as still
+339  | among         | bardom                  | Tib. bar (among/between) + -om
+340  | perhaps       | docha                   | Tib. do-cha (perhaps/maybe)
+343  | am            | yinmen                  | Tib. yin (am/is) + -en
+446  | whether       | nagen                   | Tib. na (whether/if — same as if)
+451  | shall         | gyabeïr                 | Tib. gya (to do/shall) + -eïr
+457  | either        | yawen                   | same as or
+488  | else          | zhanen                  | Tib. zhan (other/else) + -en
+489  | quite         | thabang                 | Ge'ez tha (quite/very) + -bang
+490  | quite         | thabang                 | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | jaeïr                   | Tib. ja (to do/make) + -eïr
+9    | have          | yodeïr                  | Tib. yod (to have/exist) — same as be
+15   | he            | khoen                   | Tib. kho (he) + -en
+16   | as            | taren                   | Ge'ez tar (as/like) + -en
+17   | you           | khyeden                 | Tib. khyed (you) + -en
+18   | do            | jaeïr                   | same
+25   | they          | khongeng                | Tib. khong (they) + -eng
+26   | we            | ngatshen                | same as us
+27   | say           | zeïr                    | Ge'ez ze (to say/speak) + -ïr
+46   | get           | thobseïr                | Tib. thob (to get/obtain) + -seïr
+47   | which         | garen                   | Tib. ga (which) + -en
+48   | go            | droeïr                  | Tib. dro (to go) + -eïr
+51   | make          | sobeïr                  | Ge'ez sob (to make/create) + -eïr
+52   | can           | thubseïr                | Tib. thub (can/able) + -seïr
+53   | like          | gaweïr                  | Tib. ga (like/want) + -weïr
+54   | time          | dusom                   | Tib. dus (time) + -om
+56   | just          | khonam                  | same as only
+57   | him           | khoen                   | same as he
+58   | know          | sheseïr                 | Tib. she (to know) + -seïr
+59   | take          | langseïr                | Tib. lang (to take/rise) + -seïr
+62   | year          | lomen                   | Tib. lo (year) + -en
+66   | could         | thubpeng                | Tib. thub (could/able) + -peng
+67   | them          | khongen                 | Tib. khong (them) + -en
+68   | see           | thongeïr                | Tib. thong (to see) + -eïr
+73   | look          | nangseïr                | Tib. nang (to look/appear) + -seïr
+74   | only          | khonam                  | same
+75   | come          | yongeïr                 | Tib. yong (to come) + -eïr
+84   | use           | koleïr                  | Ge'ez kol (to use) + -eïr
+86   | work          | leom                    | Ge'ez le (work/deed) + -om
+89   | way           | lamom                   | Tib. lam (way/path) + -om
+91   | new           | sareng                  | Ge'ez sar (new/fresh) + -eng
+92   | want          | dodseïr                 | Tib. dod (to want/desire) + -seïr
+93   | because       | chiru                   | same as because above
+96   | give          | terngeïr                | Ge'ez tern (to give) + -eïr
+97   | day           | nyinom                  | Tib. nyin (day) + -om
+98   | most          | mangkang                | Tib. mang (many/most) + -kang
+100  | great         | chenang                 | Tib. chen (great/big) + -ang
+101  | between       | bareng                  | Tib. bar (between) + -eng
+103  | large         | chenang                 | same as great
+105  | hand          | lagom                   | Tib. lag (hand) + -om
+107  | place         | nesen                   | Tib. ne (place/from) + -en
+108  | hold          | dzineïr                 | Tib. dzin (to hold) + -eïr
+109  | turn          | koreïr                  | Ge'ez kor (to turn/revolve) + -eïr
+111  | few           | nyungeng                | Tib. nyung (few/little) + -eng
+113  | open          | chegeïr                 | Tib. cheg (to open/cut) + -eïr
+115  | together      | chigkang                | Tib. chig (one/together) + -kang
+117  | white         | karang                  | Tib. kar (white) + -ang
+118  | children      | putsom                  | Ge'ez put (child/young) + -som
+121  | walk          | gomeïr                  | Ge'ez gom (to walk/step) + -eïr
+122  | example       | peldenom                | Tib. pel-den (glorious/example) + -om
+123  | ease          | desang                  | Ge'ez des (ease/joy) + -ang
+124  | paper         | shogen                  | Tib. shog (paper/page) + -en
+125  | group         | tsomang                 | Tib. tso (group/lake) + -mang
+126  | always        | tagom                   | Tib. tag (always/constantly) + -om
+127  | music         | yangom                  | Tib. yang (melody/music) + -om
+128  | those         | phaten                  | Tib. pha (those/that side) + -ten
+130  | mark          | tagden                  | Ge'ez tag (mark/sign) + -den
+131  | book          | pechom                  | Tib. pech (book/text) + -om
+132  | letter        | yigom                   | Tib. yig (letter/writing) + -om
+134  | mile          | gyndom                  | Tib. gyom (distance/pace) + -d
+135  | river         | tsangom                 | Tib. tsang (river/pure) + -om
+136  | car           | korseïr                 | Ge'ez kor (wheel/vehicle) stylized
+137  | feet          | zhaben                  | Tib. zhab (foot/respect) + -en
+138  | care          | tsomen                  | Tib. tsom (care/effort) + -en
+139  | second        | nyispaen                | Tib. nyis-pa (second) + -en
+140  | enough        | dogpang                 | Tib. dog (enough/jealous) + -ang
+141  | plain         | tangom                  | Tib. tang (plain/send) + -om
+142  | girl          | bumon                   | Tib. bum (young woman/vase) + -on
+143  | usual         | takpang                 | Tib. tak (usually/always) + -ang
+144  | young         | zhonang                 | Tib. zhon (young/ride) + -ang
+145  | ready         | gatang                  | Ge'ez gat (ready/prepared) + -ang
+146  | above         | gangen                  | same as over/above
+148  | red           | mareng                  | Ge'ez mar (red/blood) + -eng
+149  | list          | lingom                  | Ge'ez ling (list/line) + -om
+151  | feel          | tsoreïr                 | Tib. tsor (to feel/sense) + -eïr
+152  | talk          | zeïr                    | Ge'ez ze (to speak/talk — same as say)
+153  | bird          | jangom                  | Tib. jang (bird/green) + -om
+155  | body          | pusom                   | Tib. pus (body/knee) + -om
+156  | dog           | khyiom                  | Tib. khyi (dog) + -om
+157  | family        | midenom                 | Ge'ez mid (family/kin) + -en + -om
+159  | pose          | nyalseïr                | Tib. nyal (to lie/pose) + -seïr
+161  | song          | lusang                  | Tib. lu (song) + -sang
+162  | measure       | tsalom                  | Ge'ez tsal (measure/level) + -om
+163  | door          | goen                    | Tib. go (door/head) + -en
+164  | product       | somsang                 | Ge'ez som (product/produce) + -sang
+165  | black         | nagpang                 | Tib. nag (black) + -ang
+166  | short         | tungeng                 | Tib. tung (short/drink) + -eng
+167  | numeral       | grangseng               | Tib. grangs (number) + -eng
+168  | class         | rigsom                  | Tib. rig (class/knowledge) + -som
+170  | question      | dringen                 | Tib. dring (question/middle) + -en
+171  | happen        | jungeïr                 | Ge'ez jung (to happen/arise) + -eïr
+173  | ship          | drubom                  | Tib. drub (to accomplish/vessel) + -om
+174  | area          | yuldom                  | Tib. yul (area/country) + -dom
+175  | half          | chesom                  | Tib. ches (half/more) + -om
+176  | rock          | dragom                  | Tib. drag (rock/fierce) + -om
+177  | order         | katibom                 | Ge'ez katib (order/written) + -om
+178  | fire          | meang                   | Tib. me (fire) + -ang
+179  | south         | lhomen                  | Tib. lho (south) + -en
+180  | problem       | tsedom                  | Tib. tsed (problem/play) + -om
+181  | piece         | chareng                 | Ge'ez char (piece/part) + -eng
+182  | told          | labseïr                 | Ge'ez lab (to tell/say) + -seïr
+184  | pass          | dreïr                   | Tib. dre (to pass/mix) + -ïr
+185  | since         | nesang                  | same as since above
+186  | top           | togom                   | Tib. tog (top/knob) + -om
+187  | whole         | tamang                  | Tib. tam (whole/all) + -ang
+188  | king          | gyaleng                 | Tib. gyal (king/victory) + -eng
+189  | space         | namkhaom                | Tib. nam-kha (space/sky) + -om
+190  | heard         | thobeïr                 | Tib. thob (heard/obtained) + -eïr
+191  | best          | damang                  | Tib. dam (best/sacred) + -ang
+192  | hour          | chuseng                 | Tib. chus (hour/water-measure) + -eng
+193  | better        | legpang                 | Tib. leg (better/good) + -ang
+195  | during        | bareng                  | same as during/between
+196  | hundred       | gyaom                   | Tib. gya (hundred) + -om
+197  | five          | ngaom                   | Tib. nga (five) + -om
+198  | remember      | drengeïr                | Tib. dren (to remember/lead) + -eïr
+199  | step          | gomsang                 | Tib. gom (step/meditation) + -sang
+200  | early         | ngapoeng                | Tib. nga-po (early) + -eng
+201  | hold          | dzineïr                 | same as hold above
+202  | west          | nubeng                  | Tib. nub (west/set) + -eng
+203  | ground        | saeng                   | Tib. sa (ground/earth) + -eng
+204  | interest      | dodom                   | Tib. dod (interest/desire) + -om
+205  | reach         | thugseïr                | Tib. thug (to reach/meet) + -seïr
+206  | fast          | gyokpang                | Tib. gyok (fast) + -ang
+207  | verb          | jaeïr                   | Tib. ja (verb/to do) — same as do
+208  | sing          | lueïr                   | Tib. lu (to sing — same root as song)
+209  | listen        | nyengeïr                | Tib. nyen (to listen) + -eïr
+210  | six           | drukeng                 | Tib. druk (six/dragon) + -eng
+211  | table         | chogtseng               | Tib. chog-tse (table) + -eng
+212  | travel        | dorseïr                 | Ge'ez dor (to travel/journey) + -seïr
+213  | less          | nyungpang               | Tib. nyung (less/few) + -ang
+214  | morning       | shiboen                 | Ge'ez shibo (morning) + -en
+215  | ten           | chuom                   | Tib. chu (ten) + -om
+216  | simple        | terseng                 | Ge'ez ter (simple/plain) + -seng
+217  | several       | mangpang                | Tib. mang (several/many) + -ang
+218  | vowel         | drangseng               | Tib. drang (vowel/straight) + -seng
+220  | war           | dalong                  | Tib. dal (war/slow) + -ong
+221  | lay           | nyaleïr                 | Tib. nyal (to lay/rest) + -eïr
+222  | against       | gegeïr                  | same as against above
+223  | pattern       | rigdeïr                 | Tib. rig (pattern/knowledge) + -deïr
+224  | slow          | dalang                  | Tib. dal (slow) + -ang
+226  | love          | gadenom                 | Ge'ez gad (love/affection) + -en + -om
+227  | person        | miden                   | Tib. mi (person) + -den
+228  | money         | ngulom                  | Tib. ngul (silver/money) + -om
+229  | serve         | korseïr                 | Ge'ez kor (to serve/revolve) + -seïr
+230  | appear        | nangseïr                | same as look/appear
+231  | road          | lameng                  | Tib. lam (road/path) + -eng
+232  | map           | satreng                 | Tib. sa-tri (map/earth-drawing) + -eng
+233  | rain          | chareng                 | Tib. char (rain) + -eng
+234  | rule          | katibeng                | Ge'ez katib (rule/written law) + -eng
+235  | govern        | dzingeïr                | Tib. dzin (to govern/hold) + -geïr
+236  | pull          | dengseïr                | Tib. deng (to pull/draw) + -seïr
+237  | cold          | drangpang               | Tib. drang (cold/straight) + -ang
+238  | notice        | thobeïr                 | Tib. thob (to notice/get) + -eïr
+239  | voice         | qalong                  | Ge'ez qal (voice/word) + -ong
+240  | fall          | lungseïr                | Tib. lung (to fall/breath) + -seïr
+241  | power         | thubdong                | Tib. thub (power/able) + -dong
+242  | town          | dropom                  | Tib. dro (town/going) + -om
+243  | fine          | legpang                 | Tib. leg (fine/good) + -ang
+244  | drive         | korseïr                 | Ge'ez kor (to drive/revolve) + -seïr
+245  | lead          | drenseïr                | Tib. dren (to lead/remember) + -seïr
+246  | cry           | ngueïr                  | Tib. ngu (to cry/weep) + -eïr
+247  | dark          | munpang                 | Tib. mun (dark) + -ang
+248  | machine       | khorlong                | Tib. khor (wheel/machine) + -long
+249  | note          | yigdeng                 | Tib. yig-den (note/letter-true) + -eng
+250  | wait          | gudseïr                 | Ge'ez gud (to wait/guard) + -seïr
+252  | figure        | rigpang                 | Tib. rig (figure/knowledge) + -ang
+253  | star          | karmaeng                | Tib. kar-ma (star/action) + -eng
+254  | box           | gaeïr                   | Tib. ga (box/joy) + -eïr
+255  | noun          | mingen                  | Tib. ming (name/noun) + -en
+256  | field         | tangmong                | Tib. tang (field/plain) + -mong
+257  | rest          | ngaleïr                 | Tib. nyal (to rest) stylized
+258  | correct       | denang                  | Tib. den (correct/true) + -ang
+259  | able          | thubang                 | Tib. thub (able) + -ang
+260  | pound         | sereng                  | Ge'ez ser (weight/measure) + -eng
+262  | beauty        | dzomang                 | Tib. dzo (beauty/hybrid) + -mang
+263  | drive         | korseïr                 | same as drive
+264  | stood         | langsang                | Tib. lang (stood/arose) + -sang
+265  | contain       | nangdzineïr             | Tib. nang + dzin (to contain/hold inside)
+266  | front         | dongen                  | Tib. dong (front/face) + -en
+267  | teach         | lobseïr                 | Tib. lob (to teach/learn) + -seïr
+268  | week          | dundom                  | Tib. dun (seven/week) + -dom
+269  | final         | thamen                  | Ge'ez tham (final/end) + -en
+270  | gave          | terbeïr                 | Ge'ez ter (gave/gave up) + -beïr
+271  | green         | jangeng                 | Tib. jang (green/north) + -eng
+272  | oh            | omen                    | Ge'ez om (exclamation) + -en
+273  | quick         | gyokpang                | same as fast
+274  | develop       | pelseïr                 | Tib. pel (to develop/increase) + -seïr
+275  | ocean         | gyatsom                 | Tib. gyatso (ocean) + -m
+276  | warm          | drompang                | Tib. drom (warm/cosy) + -ang
+277  | free          | rangsang                | Tib. rang (self/free) + -sang
+278  | minute        | kemom                   | Ge'ez kem (minute/moment) + -om
+279  | strong        | tsenpang                | Tib. tsen (strong/name) + -ang
+280  | special       | dangpang                | Tib. dang (special/clear) + -ang
+281  | behind        | ogren                   | same as behind above
+282  | clear         | sangpang                | Tib. sang (clear/pure) + -ang
+283  | tail          | mjubeng                 | Tib. mjub (tail/end) + -eng
+284  | produce       | sobeïr                  | Ge'ez sob (to produce/make) + -eïr
+285  | fact          | denangs                 | Tib. den (fact/truth) + -angs
+286  | street        | lamteng                 | Tib. lam-te (street/road-place) + -ng
+288  | lot           | mangeng                 | Tib. mang (lot/many) + -eng
+289  | nothing       | mageyang                | Tib. ma-ge (nothing/not-good) + -yang
+290  | course        | lamreng                 | Tib. lam (course/path) + -reng
+291  | stay          | deïr                    | Tib. de (to stay/that) + -ïr
+292  | wheel         | khorom                  | Tib. khor (wheel) + -om
+293  | full          | gangpang                | Tib. gang (full/which) + -ang
+294  | force         | thubdong                | same as power
+295  | blue          | ngomtrang               | Tib. ngom (blue/proud) + -trang
+296  | object        | ngereng                 | Ge'ez nger (object/thing) + -eng
+297  | decide        | thengeïr                | Tib. then (to decide/pull) + -geïr
+298  | surface       | dongsang                | Tib. dong (surface/face) + -sang
+299  | deep          | thingpang               | Tib. thing (deep/drip) + -ang
+300  | moon          | dawaom                  | Tib. da-wa (moon) + -om
+301  | island        | lingom                  | Tib. ling (island/garden) + -om
+302  | foot          | zhabom                  | Tib. zhab (foot) + -om
+303  | system        | riglugseng              | Tib. rig-lugs (system/tradition) + -eng
+304  | busy          | gyeseïr                 | Tib. gye (busy/eight) + -seïr
+305  | test          | tsomseïr                | Tib. tsom (to test/try) + -seïr
+306  | record        | yigtsomeng              | Tib. yig-tsom (record/writing) + -eng
+307  | boat          | drupeng                 | Tib. dru (boat) + -eng
+308  | common        | takpang                 | same as usual/common
+309  | gold          | sereng                  | Tib. ser (gold) + -eng
+310  | possible      | thubpang                | Tib. thub (possible/able) + -ang
+311  | plane         | namdrubeng              | Tib. nam-drub (sky-vessel) + -eng
+312  | stead         | nesen                   | Tib. ne (place/stead) + -en
+313  | dry           | kempang                 | Ge'ez kem (dry/measure) + -ang
+314  | wonder        | ngomseïr                | Tib. ngom (to wonder/be proud) + -seïr
+315  | laugh         | zhomseïr                | Tib. zhom (to laugh/destroy) + -seïr
+316  | thousand      | tongom                  | Tib. tong (thousand/empty) + -om
+317  | ago           | ngoneng                 | Tib. ngon (ago/before) + -eng
+318  | ran           | gyokseïr                | Tib. gyok (ran/ran fast) + -seïr
+319  | check         | chapseïr                | Ge'ez chap (to check/examine) + -seïr
+320  | game          | tsenom                  | Tib. tse (game/life) + -nom
+321  | shape         | zukpang                 | Tib. zuk (shape/form) + -ang
+322  | equate        | nyamseïr                | Tib. nyam (to equate/weaken) + -seïr
+323  | hot           | tsapang                 | Tib. tsa (hot/root) + -ang
+324  | miss          | dorseïr                 | Tib. dor (to miss/throw away) + -seïr
+325  | brought       | labseïr                 | Ge'ez lab (brought/spoken) + -seïr
+326  | heat          | droneng                 | Tib. dron (heat/warm) + -eng
+327  | snow          | kangeng                 | Tib. kang (snow/foot) + -eng
+328  | tire          | khelpang                | Tib. khel (tired/arrived) + -ang
+329  | bring         | labseïr                 | same as brought
+331  | distant       | thagpang                | Tib. thag (distant/rope) + -ang
+333  | east          | shareng                 | Tib. shar (east/risen) + -eng
+334  | paint         | rigseïr                 | Ge'ez rig (to paint/draw) + -seïr
+335  | language      | khedang                 | Tib. khe (language/profit) + -dang
+336  | among         | bardom                  | same as among above
+337  | grand         | chenang                 | same as great
+341  | drop          | thirseïr                | Tib. thir (to drop/spin) + -seïr
+342  | heart         | nyingom                 | Tib. nying (heart/essence) + -om
+344  | present       | danden                  | Tib. dan (present/now) + -den
+345  | heavy         | jipang                  | Tib. ji (heavy/how) + -ang
+346  | dance         | garseïr                 | Tib. gar (to dance) + -seïr
+347  | engine        | khorlong                | same as machine
+348  | position      | nesen                   | Tib. ne (position/place) + -en
+349  | arm           | lagpang                 | Tib. lag (arm/hand) + -ang
+350  | wide          | gyapang                 | Tib. gya (wide/hundred) + -ang
+351  | sail          | drubeïr                 | Tib. dru (to sail/boat) + -eïr
+352  | material      | dzeïr                   | Tib. dze (material/make) + -ïr
+353  | size          | chenpang                | Tib. chen (size/great) + -ang
+354  | vary          | gyurseïr                | Tib. gyur (to vary/change) + -seïr
+355  | settle        | neseïr                  | Tib. ne (to settle/stay) + -seïr
+356  | speak         | zeïr                    | Ge'ez ze (to speak — same as say)
+357  | weight        | jieng                   | Tib. ji (weight/how) + -eng
+358  | general       | tamang                  | Tib. tam (general/all) + -ang
+359  | ice           | khyageng                | Tib. khyag (ice) + -eng
+360  | matter        | dongpang                | Tib. dong (matter/face) + -ang
+361  | circle        | khoreng                 | Tib. khor (circle/wheel) + -eng
+362  | pair          | nyisong                 | Tib. nyis (two/pair) + -ong
+363  | include       | nangseïr                | Tib. nang (to include/inside) + -seïr
+364  | divide        | cheseïr                 | Tib. che (to divide/big) + -seïr
+365  | syllable      | yigeng                  | Tib. yig (syllable/letter) + -eng
+366  | felt          | tsoreïr                 | same as feel
+367  | perhaps       | docha                   | same as perhaps above
+368  | pick          | khaseïr                 | Tib. kha (to pick/mouth) + -seïr
+369  | sudden        | logpang                 | Tib. log (sudden/return) + -ang
+370  | count         | grangsseïr              | Tib. grangs (to count/number) + -seïr
+371  | square        | gyeleng                 | Ge'ez gyel (square/flat) + -eng
+372  | reason        | gom                     | Tib. go (reason/understand) + -m
+373  | length        | ringpang                | Tib. ring (long/length) + -ang
+374  | represent     | tentonseïr              | Tib. ten-ton (to show/represent) + -seïr
+375  | art           | rigpom                  | Tib. rig (art/knowledge) + -om
+376  | subject       | doneng                  | Tib. don (subject/meaning) + -eng
+377  | region        | yuldom                  | same as area
+378  | energy        | thubpong                | Tib. thub (energy/power) + -ong
+379  | hunt          | trobeïr                 | Ge'ez trob (to hunt/seek) + -eïr
+380  | probable      | nyenang                 | Tib. nyen (probable/near) + -ang
+381  | bed           | nyalom                  | Tib. nyal (bed/rest) + -om
+382  | brother       | pugsom                  | Tib. pugs (brother/sibling) + -om
+383  | egg           | gongom                  | Tib. gong (egg/price) + -om
+384  | ride          | zhonseïr                | Tib. zhon (to ride) + -seïr
+385  | cell          | tsangom                 | Tib. tsang (cell/pure vessel) + -om
+386  | believe       | yidseïr                 | Tib. yid (to believe/mind) + -seïr
+387  | fraction      | chaeng                  | Tib. cha (fraction/part) + -eng
+388  | forest        | naktsom                 | Tib. nag-tsho (forest/dark-lake) + -m
+389  | sit           | degseïr                 | Tib. deg (to sit) + -seïr
+390  | race          | gyaleng                 | Tib. gyal (race/victory) + -eng
+391  | window        | goeneng                 | Tib. goe-ne (window/door-space) + -ng
+392  | store         | dzomeng                 | Tib. dzo (store/hybrid) + -meng
+393  | summer        | yareng                  | Tib. yar (summer/up) + -eng
+394  | train         | namkorlong              | Tib. nam-khor (sky-wheel-train) + -ong
+395  | sleep         | nyleïr                  | Tib. nyl (to sleep) + -eïr
+396  | prove         | dentonseïr              | Tib. den-ton (to prove/show true) + -seïr
+397  | lone          | chigpang                | Tib. chig (lone/one) + -ang
+398  | leg           | kangom                  | Tib. kang (leg/foot) + -om
+399  | exercise      | lobdraseïr              | Tib. lob-dra (exercise/training) + -seïr
+400  | wall          | rigkangeng              | Ge'ez rig-kang (wall/enclosure) + -eng
+401  | catch         | dzingeïr                | Tib. dzin (to catch/hold) + -geïr
+402  | mount         | dzagseïr                | Tib. dzag (to mount/climb) + -seïr
+403  | wish          | monlomseïr              | Tib. mon-lom (wish/aspiration) + -seïr
+404  | sky           | namkhaeng               | Tib. nam-kha (sky) + -eng
+405  | board         | shogpang                | Tib. shog (board/paper) + -ang
+406  | joy           | desang                  | Ge'ez des (joy) + -ang
+407  | winter        | guneng                  | Tib. gun (winter) + -eng
+408  | sat           | degseïr                 | same as sit
+409  | written       | yigpang                 | Tib. yig (written/letter) + -ang
+410  | wild          | rangpang                | Tib. rang (wild/self) + -ang
+411  | instrument    | cheleng                 | Ge'ez chel (instrument/tool) + -eng
+412  | kept          | dzinpang                | Tib. dzin (kept/held) + -ang
+413  | glass         | sheleng                 | Tib. shel (glass/crystal) + -eng
+414  | grass         | tsaeng                  | Tib. tsa (grass/root) + -eng
+415  | cow           | bageng                  | Ge'ez bag (cow/cattle) + -eng
+416  | job           | leomeng                 | Ge'ez le (job/work) + -omeng
+417  | edge          | thaben                  | Tib. tha (edge/end) + -en
+418  | sign          | tagpang                 | Tib. tag (sign/always) + -ang
+419  | visit         | dorseïr                 | Ge'ez dor (to visit/journey) + -seïr
+420  | past          | ngonang                 | Tib. ngon (past/before) + -ang
+421  | soft          | jampang                 | Tib. jam (soft/gentle) + -ang
+422  | fun           | desong                  | Ge'ez des (fun/joy) + -ong
+423  | bright        | salang                  | Ge'ez sal (bright/radiant) + -ang
+424  | gas           | lungeng                 | Tib. lung (gas/wind) + -eng
+425  | weather       | namshi                  | Tib. nam-shi (weather/sky-condition)
+426  | month         | dawaeng                 | Tib. da-wa (month/moon) + -eng
+427  | million       | gyatong                 | Tib. gya-tong (million/sky-empty) + -ng
+428  | bear          | domeng                  | Tib. dom (bear) + -eng
+429  | finish        | tsarseïr                | Tib. tsar (to finish/complete) + -seïr
+430  | happy         | kyidang                 | Tib. kyid (happy) + -ang
+431  | hope          | rebaeng                 | Tib. re-ba (hope) + -eng
+432  | flower        | tsigeng                 | Ge'ez tsig (flower) + -eng
+433  | clothe        | gonseïr                 | Tib. gon (to clothe/wear) + -seïr
+434  | strange       | ngomtsepang             | Tib. ngom-tse (strange/proud) + -ang
+435  | gone          | droseïr                 | Tib. dro (gone/going) + -seïr
+436  | jump          | longseïr                | Tib. long (to jump/arise) + -seïr
+437  | baby          | phrogeng                | Tib. phro (baby/emanate) + -geng
+438  | eight         | gyeeng                  | Tib. gye (eight) + -eng
+439  | village       | driomeng                | Tib. drio (village) + -meng
+440  | meet          | thugseïr                | Tib. thug (to meet/reach) + -seïr
+441  | root          | tsaom                   | Tib. tsa (root) + -om
+442  | buy           | nyomseïr                | Tib. nyom (to buy/even) + -seïr
+443  | raise         | langseïr                | Tib. lang (to raise/rise) + -seïr
+444  | solve         | drolseïr                | Tib. drol (to solve/free) + -seïr
+445  | metal         | lcagsom                 | Tib. lcags (iron/metal) + -om
+447  | push          | bseïr                   | Tib. b (to push/press) stylized
+448  | seven         | duneng                  | Tib. dun (seven) + -eng
+449  | paragraph     | yigcheng                | Tib. yig-che (paragraph/big-text) + -ng
+450  | third         | sumpaeng                | Tib. sum-pa (third) + -eng
+452  | held          | dzinseïr                | Tib. dzin (held) + -seïr
+453  | hair          | traleng                 | Tib. tral (hair) + -eng
+454  | describe      | jodseïr                 | Tib. jod (to describe/say) + -seïr
+455  | cook          | tobseïr                 | Ge'ez tob (to cook) + -seïr
+456  | floor         | sabaeng                 | Tib. sa-ba (floor/ground-level) + -eng
+458  | result        | drebueng                | Tib. dre-bu (result/fruit) + -eng
+459  | burn          | tseseïr                 | Tib. tse (to burn/life) + -seïr
+460  | hill          | rigeng                  | Tib. ri (mountain/hill) + -eng
+461  | safe          | sangpang                | Tib. sang (safe/pure) + -ang
+462  | cat           | shimeng                 | Ge'ez shim (cat) + -eng
+463  | century       | dondongom               | Tib. don-dong (century/meaning-circle) + -om
+464  | consider      | semeïr                  | Ge'ez sem (to consider/hear) + -eïr
+465  | type          | rigdeng                 | Tib. rig (type/knowledge) + -deng
+466  | law           | katibang                | Ge'ez katib (law/written) + -ang
+467  | bit           | chungeng                | Tib. chung (bit/small) + -eng
+468  | coast         | gyatshoang              | Tib. gyatsho (coast/ocean-edge) + -ang
+469  | copy          | parpang                 | Tib. par (copy/print) + -ang
+470  | phrase        | tsigeng                 | Tib. tsig (phrase/word) + -eng
+471  | silent        | linpang                 | Tib. lin (silent/still) + -ang
+472  | tall          | ringpang                | Tib. ring (tall/long) + -ang
+473  | sand          | beyang                  | Tib. be (sand/flat) + -yang
+474  | soil          | saeng                   | Tib. sa (soil/earth) + -eng
+475  | roll          | khorseïr                | Tib. khor (to roll/wheel) + -seïr
+476  | temperature   | dronseng                | Tib. dron (temperature/warm) + -seng
+477  | finger        | zemeng                  | Ge'ez zem (finger/digit) + -eng
+478  | industry      | letsomeng               | Tib. le-tsom (industry/work-effort) + -eng
+479  | value         | rinseng                 | Tib. rin (value/price) + -seng
+480  | fight         | tsangseïr               | Tib. tsang (to fight/pure) + -seïr
+481  | lie           | nyaleïr                 | same as lay
+482  | beat          | rdungseïr               | Tib. rdung (to beat/strike) + -seïr
+483  | excite        | gyeseïr                 | Tib. gye (to excite/eight) + -seïr
+484  | natural       | rangzhinpang            | Tib. rang-zhin (natural/self-nature) + -ang
+485  | view          | thongpang               | Tib. thong (view/see) + -ang
+486  | sense         | tsorseng                | Tib. tsor (sense/feel) + -seng
+487  | ear           | namnyen                 | Tib. nam-nyen (ear/sky-listen) + -en
+491  | case          | doneng                  | Tib. don (case/meaning) + -eng
+492  | middle        | barseng                 | Tib. bar (middle/between) + -seng
+493  | kill          | sodseïr                 | Ge'ez sod (to kill) + -seïr
+494  | son           | puen                    | Tib. pu (son) + -en
+495  | lake          | tshoeng                 | Tib. tsho (lake) + -eng
+496  | moment        | kemom                   | Ge'ez kem (moment — same as minute)
+497  | scale         | tsalseng                | Ge'ez tsal (scale/measure) + -seng
+498  | loud          | shuang                  | Ge'ez shu (loud/voice) + -ang
+499  | spring        | chikhaeng               | Tib. chi-kha (spring/outer-mouth) + -eng
+500  | observe       | thongseïr               | Tib. thong (to observe/see) + -seïr
+
+69   | other         | zhanen                  | Tib. zhan (other) + -en
+83   | two           | nyiseng                 | Tib. nyis (two) + -eng
+120  | got           | thobpang                | Tib. thob (got/obtained) + -ang
+
+===================================================================================
+PHONETIC GUIDE FOR APISDREN
+===================================================================================
+
+Tibetan/Dzongkha sounds used in Apisdren:
+  ng  = velar nasal (as in "sing") — very common word-initially and finally
+  kh  = aspirated k (as in "khaki")
+  zh  = voiced fricative (as in "measure")
+  ts  = affricate (as in "cats")
+  dz  = voiced affricate (as in "adze")
+  ny  = palatal nasal (as in "canyon")
+  dr  = retroflex cluster (Tibetan characteristic)
+  Tonal distinctions dropped for fantasy usability
+
+Ge'ez/Aksumite sounds used in Apisdren:
+  q   = uvular stop (deeper than k)
+  ts  = affricate (shared with Tibetan — a key bridge point)
+  Triconsonantal roots simplified to CV/CVC for blending
+  Gutturals (ḥ, ʾ) softened to h/voiced stops
+
+Bridge construction rules:
+  Both use: k, m, n, ng, ts, open a/e/i vowels
+  Tibetan short syllables (me, sa, lu, gar) + Ge'ez -eng/-ang/-om suffixes
+  Ge'ez CVC roots (qal, lab, kem) + Tibetan -pang/-ang/-seïr endings
+  The overlap creates Apisdren's signature rhythm: short-stem + soft-suffix
+
+Apisdren suffix system:
+  -eng  = primary noun suffix
+  -ang  = adjective/quality suffix
+  -om   = place/abstract noun
+  -seïr = verb (action)
+  -eïr  = verb (state/being)
+  -pang = intensified adjective
+  -sang = past/completed form
+  -dong = power/force augment
+
+===================================================================================
+END OF FILE — ApisdrenBhutanAksumite_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

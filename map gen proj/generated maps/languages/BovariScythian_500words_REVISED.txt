@@ -1,0 +1,637 @@
+BOVARI SCYTHIAN - 500 Common Word Translations (REVISED)
+Fantasy Language based on BovariScythian name patterns
+Linguistic roots: Old Iranian / Avestan + Kazakh (Turkic)
+Attested Scythian/Avestan words used where possible; Kazakh fills remaining gaps.
+Words are stylized and evolved — not direct translations.
+
+KEY SOURCE WORDS:
+  Avestan/Old Iranian: ahu (lord/being), arta (truth/order), xshathra (power/realm),
+  daeva (spirit), aša (righteousness), druj (lie/chaos), spenta (holy/bountiful),
+  arya (noble), maz (great), haoma (sacred), fravashi (spirit), yazata (divine)
+  Kazakh: жер/zher (earth), су/su (water), от/ot (fire), күн/kun (sun/day),
+  ай/ay (moon), тау/tau (mountain), дала/dala (steppe), жол/zhol (road/way),
+  ел/el (people/nation), адам/adam (person), жақсы/zhaksy (good), үлкен/ulken (great)
+
+===================================================================================
+RANK | ENGLISH       | BOVARI SCYTHIAN         | ROOTS / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | ska                     | Av. particle of specificity
+2    | a / an        | ahu                     | Av. ahu (a being/one)
+6    | it            | tara                    | Av. tara (that one)
+14   | this          | aita                    | Av. aita (this)
+38   | what          | chi                     | Kaz. shi/chi (what)
+45   | who           | kas                     | Kaz. kas (who)
+63   | your          | khavan                  | Av. khva (self/your)
+85   | our           | ahma                    | Av. ahma (our/us)
+99   | us            | ahme                    | Av. ahme (to us)
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | asti                    | Av. asti (is/exists)
+70   | there         | avat                    | Av. avat (there/that place)
+72   | seem          | vispat                  | Av. vispa (all/appearing)
+78   | think         | mananh                  | Av. mananh (mind/thought)
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | hya                     | Av. hya (of/which)
+5    | and           | uta                     | Av. uta (and/also)
+12   | not           | noit                    | Av. noit (not)
+13   | on            | upairi                  | Av. upairi (upon/over)
+14   | with          | haca                    | Av. haca (with/from)
+21   | but           | vaso                    | Av. vaso (but/yet)
+23   | by            | pati                    | Av. pati (by/at)
+24   | from          | hakat                   | Av. haca + t (from)
+30   | or            | ya                      | Av. ya (or/which)
+32   | into          | antar                   | Av. antar (within/into)
+43   | if            | yezi                    | Av. yezi (if/when)
+44   | about         | paiti                   | Av. paiti (toward/about)
+60   | because       | yavat                   | Av. yavat (because/as long as)
+71   | only          | aevo                    | Av. aevo (one/only)
+82   | also          | uta                     | Av. uta (and/also — same as and)
+83   | after         | pasca                   | Av. pasca (after/behind)
+90   | even          | api                     | Av. api (even/also)
+95   | these         | aitaon                  | Av. aita plural form
+120  | until         | yavat                   | Av. yavat (until/as long as)
+154  | soon          | zuta                    | Kaz. zuten (quickly/soon)
+172  | since         | hacaet                  | Av. haca + et (since/from then)
+183  | against       | paiti-var               | Av. paiti + var (against/ward)
+192  | during        | antarat                 | Av. antar extended (during)
+219  | toward        | paiti                   | Av. paiti (toward)
+251  | still         | havo                    | Av. havo (still/even now)
+261  | above         | upairi                  | Av. upairi (above/over)
+287  | behind        | pascat                  | Av. pasca + t (behind)
+332  | yes           | oi                      | Kaz. oi (yes/indeed)
+338  | yet           | vaso                    | Av. vaso (yet/but)
+339  | among         | antara                  | Av. antara (among/between)
+340  | perhaps       | matha                   | Av. matha (perhaps/maybe)
+451  | shall         | hishta                  | Av. hishta (shall/will stand)
+457  | either        | ya-ya                   | Av. ya...ya (either...or)
+488  | else          | anya                    | Av. anya (other/else)
+490  | quite         | mazant                  | Av. mazant (great/quite, fr. maz)
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | kar                     | Av. kar (to do/make)
+9    | have          | darat                   | Av. darat (to hold/have)
+18   | say           | mrut                    | Av. mrut (to say/speak)
+47   | get           | alda                    | Kaz. alda (to get/take ahead)
+51   | make          | karsh                   | Av. karsh (to make/draw)
+52   | can           | tavan                   | Kaz. tavan (can/be able)
+53   | like          | suyun                   | Kaz. suyun (to love/enjoy)
+56   | know          | vida                    | Av. vid (to know/find)
+57   | take          | al                      | Kaz. al (to take)
+59   | see           | vaina                   | Av. vaina (to see)
+68   | look          | spas                    | Av. spas (to watch/look)
+72   | come          | gam                     | Av. gam (to come/go)
+76   | think         | man                     | Av. man (to think/consider)
+84   | use           | ber                     | Kaz. ber (to give/use)
+86   | work          | karez                   | Av./Kaz. karez (to work/channel)
+92   | want          | kama                    | Av. kama (desire/want)
+96   | give          | da                      | Av. da (to give)
+107  | hold          | dar                     | Av. dar (to hold)
+109  | turn          | varsh                   | Av. varsh (to turn/work)
+115  | walk          | shyav                   | Av. shyav (to go/walk)
+118  | begin         | fradata                 | Av. frada (to advance/begin)
+123  | seem          | vispa                   | Av. vispa (to appear/all)
+127  | open          | vivar                   | Av. vi+var (to open/uncover)
+137  | care          | uruvar                  | Av. uruvar (to tend/care)
+141  | feel          | hish                    | Av. hish (to feel/sense)
+143  | talk          | mruta                   | Av. mrut extended (to talk)
+148  | run           | zhugu                   | Kaz. zhugu (to run)
+150  | leave         | shyavat                 | Av. shyav + at (to depart)
+155  | go            | shyav                   | Av. shyav (to go)
+159  | fill          | par                     | Av. par (to fill/fulfill)
+165  | happen        | bava                    | Av. bava (to become/happen)
+174  | pass          | guzar                   | Kaz./Av. guzar (to pass)
+179  | reach         | rasa                    | Av. rasa (to reach/arrive)
+189  | remember      | yad                     | Kaz. yad (to remember)
+191  | hear          | srav                    | Av. srav (to hear)
+199  | move          | zhyl                    | Kaz. zhyl (to move/flow)
+201  | fall          | pata                    | Av. pata (to fall)
+206  | travel        | yat                     | Av. yat (to travel/journey)
+208  | sing          | gav                     | Av. gav (to sing/chant)
+209  | listen        | sraota                  | Av. sraota (to listen)
+222  | pull          | tart                    | Kaz. tart (to pull/draw)
+224  | follow        | pasca-shyav             | Av. pasca + shyav (to follow)
+226  | appear        | vispar                  | Av. vispa + r (to appear)
+229  | serve         | banda                   | Av. banda (to bind/serve)
+233  | govern        | xshay                   | Av. xshay (to rule/reign)
+235  | rule          | xshatra                 | Av. xshatra (power/rule)
+237  | notice        | spasat                  | Av. spas + at (to notice)
+239  | cry           | griv                    | Av. griv (to grieve/cry)
+243  | drive         | ran                     | Kaz. ran (to drive/lead)
+248  | wait          | kut                     | Kaz. kut (to wait/abide)
+253  | lead          | fra-shyav               | Av. fra + shyav (to lead forward)
+263  | stand         | hishta                  | Av. hishta (to stand)
+265  | contain       | darat-antar             | Av. dar + antar (to contain within)
+268  | teach         | fradat                  | Av. frada + t (to advance/teach)
+273  | develop       | vardh                   | Av. vardh (to grow/increase)
+276  | produce       | karsh                   | Av. karsh (to make/produce)
+281  | decide        | varat                   | Av. var (to choose/decide)
+287  | prove         | areta                   | Av. arta (truth) + a (to prove true)
+292  | stay          | hishta                  | Av. hishta (to stand/stay)
+294  | force         | aojah                   | Av. aojah (force/strength)
+297  | push          | turt                    | Kaz. turt (to push)
+305  | test          | spas                    | Av. spas (to examine/watch)
+313  | laugh         | khuld                   | Kaz. khuld (to laugh)
+315  | wonder        | vispat                  | Av. vispa + t (to wonder)
+319  | check         | aiwyn                   | Kaz. aiwyn (to check/inspect)
+322  | shape         | karsh                   | Av. karsh (to shape/draw)
+328  | heat          | tapay                   | Kaz. tapay (to warm/heat)
+332  | bring         | bar                     | Av. bar (to carry/bring)
+335  | paint         | rang                    | Kaz. rang (color/to paint)
+348  | dance         | bi                      | Kaz. bi (to dance)
+356  | vary          | vispata                 | Av. vispa + ta (to vary/differ)
+358  | speak         | mru                     | Av. mru (to speak formally)
+360  | settle        | nist                    | Kaz. nist (to settle/sit)
+368  | hunt          | shkar                   | Av./Kaz. shkar (to hunt)
+371  | count         | san                     | Kaz. san (to count/number)
+379  | represent     | drazhda                 | Av. drazhda (to hold up/represent)
+384  | sit           | nish                    | Av. nish (to sit/settle)
+386  | believe       | baoda                   | Av. baoda (to perceive/believe)
+388  | ride          | min                     | Kaz. min (to ride/mount)
+392  | catch         | gir                     | Av./Kaz. gir (to seize/catch)
+394  | wish          | kama                    | Av. kama (wish/desire)
+400  | sleep         | khvap                   | Av. khvap (to sleep)
+402  | mount         | bar-tau                 | Kaz. bar + tau (to go + mountain)
+405  | fly           | par                     | Av./Kaz. par (to fly/soar)
+412  | keep          | dar                     | Av. dar (to hold/keep)
+415  | cut           | bur                     | Kaz. bur (to cut/sever)
+418  | visit         | yat-paiti               | Av. yat + paiti (to travel toward)
+425  | jump          | atyr                    | Kaz. atyr (to leap/jump)
+429  | finish        | frashat                 | Av. frasha (completion) + t
+431  | hope          | asha                    | Av. asha (truth/hope/righteousness)
+433  | dress         | push                    | Av. push (to clothe/wear)
+435  | grow          | vardh                   | Av. vardh (to grow)
+437  | meet          | ham-gam                 | Av. ham + gam (to come together)
+441  | raise         | barz                    | Av. barz (high/to raise)
+443  | solve         | vish                    | Av. vish (to find/resolve)
+447  | push          | turt                    | Kaz. turt (to push)
+455  | cook          | paz                     | Av./Kaz. paz (to cook/ripen)
+457  | burn          | suj                     | Kaz. suj (to burn)
+462  | consider      | man                     | Av. man (to consider/think)
+464  | describe      | mru-visa                | Av. mru + visa (to speak clearly)
+466  | copy          | aynala                  | Kaz. aynala (mirror/copy)
+473  | roll          | ornala                  | Kaz. ornala (to roll/settle)
+476  | excite        | josh                    | Kaz. josh (to excite/boil up)
+480  | fight         | ham-var                 | Av. ham + var (to contest/fight)
+481  | lie (recline) | khvap                   | Av. khvap (to lie/sleep)
+482  | beat          | zad                     | Kaz./Av. zad (to strike/beat)
+493  | break         | shkan                   | Kaz. shkan (to break/shatter)
+497  | kill          | jan                     | Kaz. jan (life) — used euphemistically for "end life"
+
+--- NOUNS: PEOPLE ---
+15   | he            | hvo                     | Av. hvo (he/himself)
+16   | she           | hva                     | Av. hva (she/herself)
+17   | you           | tum                     | Av. tum (thou/you)
+25   | they          | te                      | Av. te (they/those)
+26   | we            | vaem                    | Av. vaem (we)
+33   | my            | mana                    | Av. mana (my/of me)
+57   | him           | hvoem                   | Av. hvo + em (him)
+59   | me            | mam                     | Av. mam (me)
+60   | people        | el                      | Kaz. el (people/nation)
+65   | some          | parunam                 | Av. paru (many/some)
+67   | them          | taeish                  | Av. taeish (them/those)
+100  | great         | maz                     | Av. maz (great)
+131  | children      | apana                   | Av. apana (offspring)
+133  | girl          | kazhna                  | Kaz. qyz (girl) stylized
+143  | boy           | puthra                  | Av. puthra (son/boy)
+157  | family        | nmana                   | Av. nmana (house/family)
+161  | man           | nar                     | Av. nar (man)
+165  | woman         | nairi                   | Av. nairi (woman)
+168  | king          | xshayath                | Av. xshayath (king/ruler)
+226  | person        | adam                    | Kaz. adam (person)
+228  | friend        | dosta                   | Kaz. dost (friend) + a
+348  | brother       | bratar                  | Av. bratar (brother)
+382  | baby          | kichik                  | Kaz. kichik (small/little one)
+430  | son           | puthra                  | Av. puthra (son)
+494  | mother        | matar                   | Av. matar (mother)
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | dala                    | Kaz. dala (steppe/open place)
+97   | day           | kun                     | Kaz. kun (day/sun)
+135  | river         | danu                    | Av./Scythian danu (river — attested)
+136  | mile          | yol                     | Kaz. zhol (road/distance) stylized
+174  | rock          | sang                    | Av./Kaz. sang (stone/rock)
+176  | fire          | atar                    | Av. atar (fire — sacred)
+178  | south         | ontur                   | Kaz. ontur (south)
+179  | north         | soltust                 | Kaz. soltust (north) stylized
+181  | piece         | bolk                    | Kaz. boluk (piece/portion)
+188  | space         | dala                    | Kaz. dala (open space/steppe)
+190  | ground        | zher                    | Kaz. zher (earth/ground)
+196  | hour          | saat                    | Kaz. saat (hour/time)
+203  | west          | batys                   | Kaz. batys (west)
+212  | morning       | tang                    | Kaz. tang (dawn/morning)
+233  | rain          | jamgyr                  | Kaz. jamgyr (rain)
+240  | cold          | sukhta                  | Av. sukhta (cold/frozen)
+242  | dark          | tamah                   | Av. tama (darkness) + h
+247  | light         | raocah                  | Av. raocah (light/radiance)
+250  | wave          | tolkin                  | Kaz. tolkyn (wave)
+252  | heart         | zhurek                  | Kaz. zhurek (heart)
+254  | star          | staora                  | Av. staora (star)
+255  | box           | sanda                   | Kaz. sandyk (chest/box) stylized
+266  | field         | dala                    | Kaz. dala (field/steppe)
+268  | rest          | tynys                   | Kaz. tynys (rest/peace)
+274  | ocean         | darya                   | Av./Kaz. darya (great water/sea)
+277  | minute        | sanat                   | Kaz. saat + at (small time)
+285  | fact          | arta                    | Av. arta (truth/order)
+287  | street        | zhol                    | Kaz. zhol (road/way)
+290  | lot           | kop                     | Kaz. kop (many/much)
+299  | course        | yat                     | Av. yat (journey/course)
+301  | wheel         | donh                    | Kaz. donh (wheel) stylized
+303  | force         | aoj                     | Av. aoj (force/strength)
+305  | moon          | ay                      | Kaz. ay (moon)
+306  | island        | ara                     | Av. ara (place between waters)
+308  | foot          | tabat                   | Kaz. tabat (sole/foot) stylized
+312  | boat          | keme                    | Kaz. keme (boat/vessel)
+316  | plane         | parvaz                  | Kaz./Av. parvaz (flight)
+318  | thousand      | ming                    | Kaz. ming (thousand)
+320  | game          | oyin                    | Kaz. oyin (game/play)
+323  | heat          | tap                     | Kaz. tap (heat/warmth)
+327  | snow          | kar                     | Kaz. kar (snow)
+334  | east          | shygys                  | Kaz. shygys (east)
+336  | language      | tili                    | Kaz. til (tongue/language) + i
+339  | ball          | domp                    | Kaz. domp (ball/round thing)
+341  | drop          | tamshi                  | Kaz. tamshi (drop/drip)
+345  | engine        | kozgal                  | Kaz. kozgal (motion/engine)
+347  | arm           | kol                     | Kaz. kol (arm/hand)
+352  | material      | zat                     | Kaz. zat (thing/substance)
+353  | size          | ulshim                  | Kaz. olshem (measure/size) stylized
+360  | ice           | muz                     | Kaz. muz (ice)
+361  | matter        | masa                    | Av. masa (matter/substance)
+363  | pair          | jup                     | Kaz. jup (pair/two)
+366  | length        | uzyn                    | Kaz. uzyn (long/length)
+367  | syllable      | buma                    | Kaz. buma (sound unit) stylized
+374  | subject       | oray                    | Kaz. oray (topic/subject)
+375  | region        | zher                    | Kaz. zher (land/region)
+376  | energy        | kush                    | Kaz. kush (strength/energy)
+379  | art           | oner                    | Kaz. oner (skill/art)
+384  | circle        | aynal                   | Kaz. aynal (circle/mirror-ring)
+387  | fraction      | boluk                   | Kaz. boluk (portion/piece)
+388  | forest        | orman                   | Kaz. orman (forest)
+391  | race          | jarysh                  | Kaz. jarysh (race/contest)
+392  | window        | tereze                  | Kaz. tereze (window)
+393  | store         | qor                     | Kaz. qor (store/reserve)
+394  | summer        | zhaz                    | Kaz. zhaz (summer)
+395  | train         | zhol-katar              | Kaz. zhol + katar (road-line)
+399  | wall          | qabyr                   | Kaz. qabyrga (wall/rib) stylized
+401  | mount         | tau                     | Kaz. tau (mountain)
+403  | sky           | asman                   | Kaz. asman (sky/heaven)
+407  | board         | takhta                  | Kaz. takhta (board/plank)
+408  | joy           | quvanj                  | Kaz. quvanj (joy/pride)
+409  | winter        | qys                     | Kaz. qys (winter)
+412  | glass         | ayna                    | Kaz. ayna (mirror/glass)
+413  | grass         | shop                    | Kaz. shop (grass/herb) stylized
+414  | cow           | siyir                   | Kaz. siyir (cow)
+416  | job           | karez                   | Av./Kaz. karez (work/task)
+417  | edge          | zhiyek                  | Kaz. zhiyek (edge/border)
+419  | sign          | belgi                   | Kaz. belgi (sign/mark)
+422  | fun           | oyin                    | Kaz. oyin (play/fun — same as game)
+423  | bright        | raoc                    | Av. raocah shortened (bright)
+424  | gas           | bu                      | Kaz. bu (steam/vapor)
+425  | weather       | aua                     | Kaz. aua (weather/air)
+426  | month         | ay                      | Kaz. ay (moon/month — same as moon)
+427  | million       | sansyz                  | Kaz. sansyz (countless/million)
+428  | bear          | ayuu                    | Kaz. ayuu (bear)
+429  | flower        | gul                     | Kaz. gul (flower/rose)
+432  | hair          | shal                    | Kaz. shal (hair) stylized
+436  | village       | aul                     | Kaz. aul (village/settlement)
+438  | root          | tamyr                   | Kaz. tamyr (root/vein)
+442  | metal         | temir                   | Kaz. temir (iron/metal)
+445  | paragraph     | matin                   | Kaz. matin (text/block)
+449  | third         | ushinshi                | Kaz. ushinshi (third)
+452  | floor         | zherliq                 | Kaz. zher + liq (ground-like)
+453  | result        | natige                  | Kaz. natige (result/outcome)
+454  | hill          | adyr                    | Kaz. adyr (hill/ridge)
+456  | cat           | mысык / mysyk           | Kaz. mysyk (cat)
+460  | century       | gasyr                   | Kaz. gasyr (century)
+461  | type          | tur                     | Kaz. tur (type/kind)
+462  | law           | arta                    | Av. arta (order/law/truth)
+463  | bit           | bolk                    | Kaz. boluk small (bit/piece)
+464  | coast         | zhagha                  | Kaz. zhagha (shore/coast)
+467  | phrase        | soz                     | Kaz. soz (word/phrase)
+469  | sand          | qum                     | Kaz. qum (sand)
+470  | soil          | topyraq                 | Kaz. topyraq (soil/earth)
+473  | temperature   | tap-olshem              | Kaz. tap + olshem (heat-measure)
+474  | finger        | sausaq                  | Kaz. sausaq (finger)
+475  | industry      | onsirish                | Kaz. onsirish (production/industry)
+476  | value         | quna                    | Kaz. quna (value/worth)
+479  | view          | koru                    | Kaz. koru (view/sight)
+480  | sense         | sezim                   | Kaz. sezim (feeling/sense)
+481  | ear           | qulaq                   | Kaz. qulaq (ear)
+487  | case          | jagai                   | Kaz. jagai (case/situation)
+488  | middle        | orta                    | Kaz. orta (middle/centre)
+492  | lake          | kol                     | Kaz. kol (lake — different from arm)
+493  | moment        | sat                     | Kaz. sat (moment/instant)
+495  | scale         | olshem                  | Kaz. olshem (measure/scale)
+496  | loud          | qatyran                 | Kaz. qatyran (loud/strong-voiced)
+497  | spring        | koktim                  | Kaz. koktim (spring season)
+500  | cloud         | bulyt                   | Kaz. bulyt (cloud)
+
+--- ADJECTIVES ---
+36   | all           | vispa                   | Av. vispa (all/every)
+40   | so            | invar                   | Av. invar (thus/so)
+41   | up            | barz                    | Av. barz (high/up)
+42   | out           | fra                     | Av. fra (forth/out)
+66   | some          | paru                    | Av. paru (many/some)
+69   | other         | anya                    | Av. anya (other)
+70   | than          | tat                     | Av. tat (than/that)
+74   | how           | katara                  | Av. katara (how/which way)
+89   | new           | nava                    | Av. nava (new)
+90   | even          | api                     | Av. api (even/also)
+91   | way           | patho                   | Av. patho (path/way)
+93   | any           | paru                    | Av. paru (any/many)
+98   | most          | mazist                  | Av. mazist (greatest, fr. maz)
+101  | large         | maz                     | Av. maz (great/large)
+103  | often         | paro                    | Av. paro (before/often)
+105  | high          | barez                   | Av. barez (high/exalted)
+111  | few           | kamna                   | Av. kamna (little/few)
+113  | white         | ashan                   | Av. ashan (bright/white)
+117  | young         | yuvan                   | Av. yuvan (young)
+118  | ready         | ama                     | Av. ama (strong/ready)
+120  | usual         | hama                    | Av. hama (same/usual)
+121  | plain         | ham                     | Av. ham (even/plain)
+122  | above         | upairi                  | Av. upairi (above)
+124  | second        | bitiya                  | Av. bitiya (second)
+125  | enough        | bas                     | Kaz. bas (enough/head)
+126  | ever          | yava                    | Av. yava (ever/always)
+127  | red           | suxra                   | Av. suxra (red/scarlet)
+128  | old           | paoirya                 | Av. paoirya (first/old/ancient)
+130  | though        | vaso                    | Av. vaso (though/yet)
+132  | short         | kamna                   | Av. kamna (little/short)
+138  | true          | arta                    | Av. arta (true/righteous)
+139  | full          | par                     | Av. par (full/complete)
+140  | whole         | vispa                   | Av. vispa (whole/all)
+144  | fast          | tiz                     | Kaz. tiz (fast/quick)
+145  | simple        | ham                     | Av. ham (plain/simple)
+146  | several       | paru                    | Av. paru (several/many)
+148  | best          | vahishta                | Av. vahishta (best/most good)
+149  | better        | vahyo                   | Av. vahyo (better)
+151  | early         | paoiri                  | Av. paoiri (first/early)
+153  | complete      | vispa                   | Av. vispa (complete/all)
+156  | certain       | drigu                   | Av. drigu (sure/firm)
+163  | general       | hama-vispa              | Av. hama + vispa (all-same/general)
+164  | special       | srira                   | Av. srira (beautiful/special)
+166  | correct       | arta                    | Av. arta (correct/true)
+167  | able          | tavan                   | Kaz. tavan (able/capable)
+168  | fine          | hu                      | Av. hu (good/fine prefix)
+170  | beautiful     | srira                   | Av. srira (beautiful)
+171  | gone          | shyavat                 | Av. shyav + at (gone/departed)
+172  | quick         | tiz                     | Kaz. tiz (quick)
+173  | free          | azat                    | Kaz./Av. azat (free/noble)
+175  | warm          | garma                   | Av. garma (warm/hot)
+176  | strong        | aojah                   | Av. aojah (strong/forceful)
+177  | clear         | raoc                    | Av. raoc (clear/bright)
+178  | deep          | gaur                    | Av. gaur (deep)
+180  | possible      | tavan                   | Kaz. tavan (possible/able)
+182  | dry           | ushka                   | Av. ushka (dry)
+184  | wild          | vayra                   | Av. vayra (wild/wind-like)
+185  | natural       | dala                    | Kaz. dala (natural/of the steppe)
+186  | safe          | druva                   | Av. druva (firm/safe)
+187  | busy          | karez                   | Av./Kaz. karez (working)
+189  | common        | hama                    | Av. hama (common/same)
+192  | distant       | dura                    | Av. dura (far/distant)
+193  | heavy         | sankay                  | Kaz. sankay (heavy)
+195  | present       | idha                    | Av. idha (here/now)
+197  | wide          | parav                   | Av. parav (wide/broad)
+200  | broken        | shkan                   | Kaz. shkan (broken)
+202  | hot           | garma                   | Av. garma (hot — same as warm)
+204  | tall          | barz                    | Av. barz (tall/high)
+205  | soft          | narm                    | Kaz./Av. narm (soft/gentle)
+207  | direct        | erezh                   | Av. erezh (straight/direct)
+208  | sudden        | nag                     | Kaz. nag (sudden/abrupt) stylized
+213  | exact         | artat                   | Av. arta + t (exactly true)
+216  | happy         | quvanjly                | Kaz. quvanjly (happy/joyful)
+217  | probable      | matha                   | Av. matha (perhaps/probable)
+218  | last          | pascat                  | Av. pasca + t (last/behind)
+219  | lone          | aevo                    | Av. aevo (one/alone)
+220  | written       | nipisht                 | Av. nipisht (written)
+221  | silent        | khvaf                   | Av. khvaf (quiet/sleeping)
+222  | strange       | anya                    | Av. anya (other/strange)
+
+--- NUMBERS ---
+83   | two           | dva                     | Av. dva (two)
+197  | five          | panca                   | Av. panca (five)
+210  | six           | khshvash                | Av. khshvash (six)
+215  | ten           | dasa                    | Av. dasa (ten)
+439  | eight         | asta                    | Av. asta (eight)
+449  | seven         | hapta                   | Av. hapta (seven — attested)
+450  | three         | thri                    | Av. thri (three)
+
+--- TIME WORDS ---
+54   | time          | zaman                   | Kaz. zaman (time/era)
+96   | day           | kun                     | Kaz. kun (day/sun)
+188  | year          | jyl                     | Kaz. jyl (year)
+193  | hour          | saat                    | Kaz. saat (hour)
+196  | week          | apta                    | Av. hapta (seven) stylized
+213  | minute        | sanat                   | Kaz. (small-saat)
+214  | morning       | tang                    | Kaz. tang (dawn)
+426  | month         | ay                      | Kaz. ay (moon/month)
+
+===================================================================================
+PHONETIC GUIDE FOR BOVARI SCYTHIAN
+===================================================================================
+
+Avestan/Old Iranian sounds:
+  x   = voiceless velar fricative (as in Scots "loch")
+  sh  = voiceless palatal fricative (as in "shoe")
+  zh  = voiced equivalent (as in "measure")
+  ae  = front open vowel (as in "cat" elongated)
+  ao  = back rounded diphthong
+  Final -h = breathy release, not silent
+
+Kazakh sounds adapted:
+  q   = uvular stop (deeper than k, from the throat)
+  gh  = voiced uvular fricative
+  y   = palatal glide (as in "yes")
+  ы (y) = back unrounded vowel — rendered as y or i
+
+Word-building patterns:
+  Av. prefix hu-   = good/positive (hu-kar = good deed)
+  Av. prefix fra-  = forward/out (fra-shyav = to lead out)
+  Av. prefix vi-   = apart/open (vi-var = to open)
+  Av. prefix ham-  = together (ham-gam = to meet)
+  Kaz. suffix -ly  = adjectival (quvanjly = joyful)
+  Kaz. suffix -liq = quality noun (zherliq = ground-like)
+  Kaz. suffix -ish = verbal noun (onsirish = production)
+
+===================================================================================
+
+
+241  | power          | aojah                    |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | kŭ                       |
+8     | that           | tat                      |
+10    | it             | tara                     |
+11    | for            | rādha                    |
+19    | at             | pati                     |
+20    | this           | aita                     |
+22    | his            | hvo                      |
+27    | say            | mrut                     |
+28    | her            | hva                      |
+29    | she            | hva                      |
+31    | an             | aevo                     |
+34    | one            | aevo                     |
+35    | all            | vispa                    |
+37    | there          | avat                     |
+39    | what           | chi                      |
+46    | get            | al                       |
+48    | go             | shyav                    |
+49    | me             | mam                      |
+50    | when           | kada                     |
+55    | no             | noit                     |
+58    | know           | vida                     |
+61    | into           | antar                    |
+62    | year           | jyl                      |
+64    | good           | hu                       |
+75    | come           | gam                      |
+77    | over           | upairi                   |
+79    | also           | uta                      |
+80    | back           | pasca                    |
+81    | after          | pasca                    |
+82    | use            | taxvat                   |
+87    | first          | paoiri                   |
+88    | well           | vahyo                    |
+94    | any            | paru                     |
+102   | need           | kama                     |
+104   | often          | paro                     |
+106   | high           | barez                    |
+108   | hold           | dar                      |
+110   | never          | noit yava                |
+112   | north          | soltust                  |
+114   | seem           | vispar                   |
+116   | next           | nava                     |
+119   | begin          | fradata                  |
+129   | both           | dva vispa                |
+134   | mile           | yol                      |
+142   | girl           | kazhna                   |
+147   | ever           | yava                     |
+152   | talk           | mruta                    |
+158   | direct         | erezh                    |
+160   | leave          | shyavat                  |
+162   | measure        | ulshim                   |
+169   | wind           | vayra                    |
+194   | true           | arta                     |
+198   | remember       | yad                      |
+211   | table          | takhta                   |
+223   | pattern        | hama                     |
+225   | center         | orta                     |
+227   | person         | adam                     |
+230   | appear         | vispar                   |
+231   | road           | zhol                     |
+232   | map            | koru                     |
+234   | rule           | xshay                    |
+236   | pull           | tart                     |
+238   | notice         | spasat                   |
+244   | drive          | ardagat                  |
+245   | lead           | fra-shyav                |
+246   | cry            | griv                     |
+249   | note           | belgi                    |
+256   | field          | dala                     |
+257   | rest           | tynys                    |
+258   | correct        | arta                     |
+259   | able           | tavan                    |
+260   | pound          | sankay                   |
+262   | beauty         | srira                    |
+264   | stood          | hishta                   |
+267   | teach          | fradat                   |
+269   | final          | pascat                   |
+270   | gave           | da past                  |
+271   | green          | sabz                     |
+272   | oh             | oh                       |
+275   | ocean          | darya                    |
+278   | minute         | sanat                    |
+279   | strong         | aojah                    |
+280   | special        | srira                    |
+282   | clear          | raoc                     |
+283   | tail           | pascat                   |
+284   | produce        | taxarvat                 |
+286   | street         | zhol                     |
+288   | lot            | kop                      |
+289   | nothing        | noit zat                 |
+291   | stay           | hishta                   |
+293   | full           | par                      |
+295   | blue           | kabud                    |
+296   | object         | zat                      |
+298   | surface        | ruy                      |
+300   | moon           | ay                       |
+302   | foot           | tabat                    |
+304   | busy           | karez                    |
+307   | boat           | keme                     |
+309   | gold           | zar                      |
+310   | possible       | tavan                    |
+311   | plane          | parvaz                   |
+314   | wonder         | vispat                   |
+317   | ago            | pas                      |
+321   | shape          | karsh                    |
+324   | miss           | kam                      |
+325   | brought        | bar past                 |
+326   | heat           | tap                      |
+329   | bring          | bar                      |
+330   | yes            | oi                       |
+331   | distant        | dura                     |
+333   | east           | shygys                   |
+337   | grand          | maz                      |
+342   | heart          | zhurek                   |
+343   | am             | asti                     |
+344   | present        | idha                     |
+346   | dance          | sairkat                  |
+349   | arm            | kol                      |
+350   | wide           | parav                    |
+351   | sail           | daryago                  |
+354   | vary           | vispata                  |
+355   | settle         | nist                     |
+357   | weight         | sankay                   |
+359   | ice            | muz                      |
+362   | pair           | jup                      |
+364   | divide         | bur                      |
+365   | syllable       | buma                     |
+369   | sudden         | nag                      |
+370   | count          | san                      |
+372   | reason         | madvax                   |
+373   | length         | uzyn                     |
+377   | region         | zher                     |
+378   | energy         | kush                     |
+380   | probable       | matha                    |
+381   | bed            | khvap zher               |
+383   | egg            | yumurta                  |
+385   | cell           | kichik                   |
+389   | sit            | nish                     |
+390   | race           | jarysh                   |
+396   | prove          | areta                    |
+397   | lone           | aevo                     |
+398   | leg            | but                      |
+404   | sky            | asman                    |
+406   | joy            | quvanj                   |
+410   | wild           | vayra                    |
+411   | instrument     | asbab                    |
+420   | past           | pas                      |
+421   | soft           | narm                     |
+434   | strange        | anya                     |
+440   | meet           | ham-gam                  |
+444   | solve          | vish                     |
+446   | whether        | ya                       |
+447   | push           | turt                     |
+448   | seven          | hapta                    |
+458   | result         | natige                   |
+459   | burn           | suj                      |
+465   | type           | tur                      |
+468   | coast          | zhagha                   |
+471   | silent         | khvaf                    |
+472   | tall           | barz                     |
+477   | finger         | sausaq                   |
+478   | industry       | onsirish                 |
+483   | excite         | josh                     |
+484   | natural        | dala                     |
+485   | view           | koru                     |
+486   | sense          | sezim                    |
+489   | quite          | mazant                   |
+491   | case           | jagai                    |
+498   | loud           | qatyran                  |
+499   | spring         | koktim                   |
+
+END OF FILE — BovariScythian_500words_REVISED.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

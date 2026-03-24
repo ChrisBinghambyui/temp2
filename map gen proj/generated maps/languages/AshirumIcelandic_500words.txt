@@ -1,0 +1,649 @@
+ASHIRUM ICELANDIC - 500 Common Word Translations
+Fantasy Language based on AshirumIcelandic name patterns
+Linguistic roots: Old Norse (8th-13th c.) + Modern Icelandic blend
+Attested Old Norse and Icelandic words used where possible; constructed fill
+follows Norse phonotactics.
+
+KEY SOURCE WORDS:
+  Old Norse: maðr (man), kona (woman), barn (child), land (land), vatn (water),
+  eldr (fire), himinn (sky), jörð (earth), dagr (day), nótt (night), veðr (weather),
+  vegr (way/road), fara (to go), vera (to be), gefa (to give), taka (to take),
+  sjá (to see), segja (to say), vita (to know), vilja (to want), ganga (to walk),
+  koma (to come), standa (to stand), hafa (to have), gera (to do/make),
+  mikill (great/large), góðr (good), gamall (old), ungr (young), sterkr (strong)
+
+  Modern Icelandic: já (yes), nei (no), og (and), en (but), af (of/from),
+  með (with), við (at/by), til (to/until), um (about), frá (from),
+  fara (to go), vera (to be), gera (to do), sjá (to see), tala (to talk),
+  stór (large), lítill (small), góður (good), fallegur (beautiful), sterkur (strong)
+
+NOTE: Ashirum blends the harder consonants of Old Norse (ð, þ, kv, sk, str, gr)
+with the melodic vowel shifts of Modern Icelandic (au, ei, ó, æ, ö).
+Name list patterns: Eld-Borg, Eld-Fell, Gjall-Borg, Krafla-Dal, Raud-Fell,
+Skall-Borg, Sur-Fell, Surtsey, Hekla, Grimr, Skarphedin — favour hard
+consonant-initial stems with -r endings and compound structures.
+
+===================================================================================
+RANK | ENGLISH       | ASHIRUM ICELANDIC       | OLD NORSE / ICELANDIC ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | inn                     | ON inn/in/it (the) — attested
+2    | a / an        | einn                    | ON einn (one/a) — attested
+6    | it            | þat                     | ON þat (it/that) — attested
+14   | this          | þessi                   | ON þessi (this) — attested
+38   | what          | hvat                    | ON hvat (what) — attested
+45   | who           | hverr                   | ON hverr (who/which) — attested
+63   | your          | þinn                    | ON þinn (your/thy) — attested
+85   | our           | várr                    | ON várr (our) — attested
+99   | us            | oss                     | ON oss (us) — attested
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | vera                    | ON/Icel. vera (to be) — attested
+70   | there         | þar                     | ON þar (there) — attested
+72   | seem          | þykkja                  | ON þykkja (to seem/appear) — attested
+78   | think         | hyggja                  | ON hyggja (to think/consider) — attested
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | af                      | ON/Icel. af (of/from) — attested
+5    | and           | ok                      | ON ok (and) — attested
+12   | not           | eigi                    | ON eigi (not) — attested
+13   | on            | á                       | ON á (on/upon) — attested
+14   | with          | með                     | ON/Icel. með (with) — attested
+21   | but           | en                      | ON/Icel. en (but/and) — attested
+23   | by            | við                     | ON/Icel. við (by/at/with) — attested
+24   | from          | frá                     | ON/Icel. frá (from) — attested
+30   | or            | eða                     | ON eða (or) — attested
+32   | into          | í                       | ON í (in/into) — attested
+43   | if            | ef                      | ON/Icel. ef (if) — attested
+44   | about         | um                      | ON/Icel. um (about/around) — attested
+60   | because       | þvíat                   | ON þvíat (because) — attested
+71   | only          | einungis                | Icel. einungis (only) — attested
+82   | also          | ok svá                  | ON ok svá (and so/also) stylized
+83   | after         | eptir                   | ON eptir (after/behind) — attested
+90   | even          | jafnvel                 | Icel. jafnvel (even/equally) — attested
+95   | these         | þessir                  | ON þessir (these) — attested
+120  | until         | til þess                | ON til þess (until/to that) stylized
+154  | soon          | bráðum                  | ON bráðum (soon/quickly) — attested
+172  | since         | síðan                   | ON/Icel. síðan (since/then) — attested
+183  | against       | gegn                    | ON gegn (against/toward) — attested
+192  | during        | meðan                   | ON meðan (while/during) — attested
+219  | toward        | til                     | ON/Icel. til (to/toward) — attested
+251  | still         | enn                     | ON/Icel. enn (still/yet) — attested
+261  | above         | yfir                    | ON/Icel. yfir (over/above) — attested
+287  | behind        | aftan                   | ON aftan (behind/from behind) — attested
+332  | yes           | já                      | Icel. já (yes) — attested
+338  | yet           | enn                     | ON enn (yet/still — same as still)
+339  | among         | meðal                   | ON meðal (among/between) — attested
+340  | perhaps       | kannski                 | Icel. kannski (perhaps/maybe) — attested
+451  | shall         | skulu                   | ON skulu (shall/must) — attested
+457  | either        | annaðhvort              | Icel. annaðhvort (either) — attested
+488  | else          | annars                  | ON/Icel. annars (else/other) — attested
+490  | quite         | alveg                   | Icel. alveg (quite/completely) — attested
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | gera                    | ON/Icel. gera (to do/make) — attested
+9    | have          | hafa                    | ON/Icel. hafa (to have) — attested
+18   | say           | segja                   | ON/Icel. segja (to say) — attested
+47   | get           | fá                      | ON/Icel. fá (to get/receive) — attested
+51   | make          | smíða                   | ON smíða (to make/forge) — attested
+52   | can           | mega                    | ON mega (to be able/may) — attested
+53   | like          | líka                    | Icel. líka (to like/please) — attested
+56   | know          | vita                    | ON/Icel. vita (to know) — attested
+57   | take          | taka                    | ON/Icel. taka (to take) — attested
+59   | see           | sjá                     | ON/Icel. sjá (to see) — attested
+68   | look          | líta                    | ON líta (to look/see) — attested
+72   | come          | koma                    | ON/Icel. koma (to come) — attested
+76   | think         | hyggja                  | ON hyggja (to think) — attested
+84   | use           | nota                    | Icel. nota (to use) — attested
+86   | work          | vinna                   | ON/Icel. vinna (to work/win) — attested
+92   | want          | vilja                   | ON/Icel. vilja (to want/will) — attested
+96   | give          | gefa                    | ON/Icel. gefa (to give) — attested
+107  | hold          | halda                   | ON/Icel. halda (to hold/keep) — attested
+109  | turn          | snúa                    | ON/Icel. snúa (to turn) — attested
+115  | walk          | ganga                   | ON ganga (to walk/go) — attested
+118  | begin         | hefja                   | ON hefja (to begin/lift) — attested
+123  | seem          | þykkja                  | ON þykkja (to seem — same as seem)
+127  | open          | opna                    | Icel. opna (to open) — attested
+137  | care          | hirða                   | ON hirða (to care for/tend) — attested
+141  | feel          | finna                   | ON finna (to find/feel) — attested
+143  | talk          | tala                    | ON/Icel. tala (to talk/speak) — attested
+148  | run           | hlaupa                  | ON hlaupa (to run/leap) — attested
+150  | leave         | fara                    | ON/Icel. fara (to go/leave) — attested
+155  | go            | fara                    | ON/Icel. fara (to go — same as leave)
+159  | fill          | fylla                   | ON/Icel. fylla (to fill) — attested
+165  | happen        | gerast                  | ON/Icel. gerast (to happen/become) attested
+174  | pass          | líða                    | ON líða (to pass/go by) — attested
+179  | reach         | ná                      | ON/Icel. ná (to reach/catch) — attested
+189  | remember      | muna                    | ON/Icel. muna (to remember) — attested
+191  | hear          | heyra                   | ON/Icel. heyra (to hear) — attested
+199  | move          | hreyfa                  | Icel. hreyfa (to move) — attested
+201  | fall          | falla                   | ON/Icel. falla (to fall) — attested
+206  | travel        | ferðast                 | Icel. ferðast (to travel) — attested
+208  | sing          | syngja                  | ON/Icel. syngja (to sing) — attested
+209  | listen        | hlusta                  | Icel. hlusta (to listen) — attested
+222  | pull          | draga                   | ON/Icel. draga (to pull/drag) — attested
+224  | follow        | fylgja                  | ON/Icel. fylgja (to follow) — attested
+226  | appear        | birtast                 | Icel. birtast (to appear) — attested
+229  | serve         | þjóna                   | ON/Icel. þjóna (to serve) — attested
+233  | govern        | stjórna                 | Icel. stjórna (to govern) — attested
+235  | rule          | ráða                    | ON ráða (to rule/advise) — attested
+237  | notice        | taka eftir              | Icel. taka eftir (to notice) — attested
+239  | cry           | gráta                   | ON/Icel. gráta (to cry/weep) — attested
+243  | drive         | keyra                   | Icel. keyra (to drive) — attested
+248  | wait          | bíða                    | ON/Icel. bíða (to wait/endure) — attested
+253  | lead          | leiða                   | ON/Icel. leiða (to lead) — attested
+263  | stand         | standa                  | ON/Icel. standa (to stand) — attested
+265  | contain       | innihalda               | Icel. innihalda (to contain) — attested
+268  | teach         | kenna                   | ON/Icel. kenna (to teach/know) — attested
+273  | develop       | þróa                    | Icel. þróa (to develop) — attested
+276  | produce       | framleiða               | Icel. framleiða (to produce) — attested
+281  | decide        | ákveða                  | Icel. ákveða (to decide) — attested
+287  | prove         | sanna                   | ON/Icel. sanna (to prove/verify) — attested
+292  | stay          | dvelja                  | ON dvelja (to stay/dwell) — attested
+294  | force         | þvinga                  | Icel. þvinga (to force) — attested
+297  | push          | ýta                     | Icel. ýta (to push) — attested
+305  | test          | prófa                   | Icel. prófa (to test/try) — attested
+313  | laugh         | hlæja                   | ON/Icel. hlæja (to laugh) — attested
+315  | wonder        | undra                   | ON/Icel. undra (to wonder) — attested
+319  | check         | kanna                   | Icel. kanna (to check/explore) — attested
+322  | shape         | móta                    | Icel. móta (to shape/form) — attested
+328  | heat          | hita                    | Icel. hita (to heat) — attested
+332  | bring         | færa                    | ON/Icel. færa (to bring/move) — attested
+335  | paint         | mála                    | ON/Icel. mála (to paint/mark) — attested
+348  | dance         | dansa                   | Icel. dansa (to dance) — attested
+356  | vary          | breyta                  | Icel. breyta (to change/vary) — attested
+358  | speak         | mæla                    | ON mæla (to speak formally) — attested
+360  | settle        | setjast                 | ON/Icel. setjast (to settle/sit) — attested
+368  | hunt          | veiða                   | ON/Icel. veiða (to hunt/fish) — attested
+371  | count         | telja                   | ON/Icel. telja (to count/tell) — attested
+379  | represent     | tákna                   | Icel. tákna (to represent/symbolize) attested
+384  | sit           | sitja                   | ON/Icel. sitja (to sit) — attested
+386  | believe       | trúa                    | ON/Icel. trúa (to believe/trust) — attested
+388  | ride          | ríða                    | ON/Icel. ríða (to ride) — attested
+392  | catch         | grípa                   | ON/Icel. grípa (to catch/seize) — attested
+394  | wish          | óska                    | ON/Icel. óska (to wish) — attested
+400  | sleep         | sofa                    | ON/Icel. sofa (to sleep) — attested
+402  | mount         | klifra                  | Icel. klifra (to climb/mount) — attested
+405  | fly           | fljúga                  | ON/Icel. fljúga (to fly) — attested
+412  | keep          | geyma                   | Icel. geyma (to keep/store) — attested
+415  | cut           | skera                   | ON/Icel. skera (to cut) — attested
+418  | visit         | heimsækja               | Icel. heimsækja (to visit) — attested
+425  | jump          | hoppa                   | Icel. hoppa (to jump) — attested
+429  | finish        | ljúka                   | ON/Icel. ljúka (to finish/close) — attested
+431  | hope          | vona                    | Icel. vona (to hope) — attested
+433  | dress         | klæða                   | ON/Icel. klæða (to clothe) — attested
+435  | grow          | vaxa                    | ON/Icel. vaxa (to grow) — attested
+437  | meet          | mæta                    | Icel. mæta (to meet) — attested
+441  | raise         | hefja                   | ON hefja (to raise/lift — same as begin)
+443  | solve         | leysa                   | Icel. leysa (to solve/release) — attested
+455  | cook          | elda                    | Icel. elda (to cook — from eldr/fire) attested
+457  | burn          | brenna                  | ON/Icel. brenna (to burn) — attested
+464  | describe      | lýsa                    | ON/Icel. lýsa (to describe/light up) attested
+466  | copy          | afrita                  | Icel. afrita (to copy) — attested
+473  | roll          | rúlla                   | Icel. rúlla (to roll) — attested
+476  | excite        | æsa                     | Icel. æsa (to excite/agitate) — attested
+480  | fight         | berjast                 | ON/Icel. berjast (to fight) — attested
+482  | beat          | berja                   | ON berja (to beat/strike) — attested
+493  | break         | brjóta                  | ON/Icel. brjóta (to break) — attested
+497  | kill          | drepa                   | ON/Icel. drepa (to kill/strike) — attested
+
+--- NOUNS: PEOPLE ---
+15   | he            | hann                    | ON/Icel. hann (he) — attested
+16   | she           | hún                     | ON/Icel. hún (she) — attested
+17   | you           | þú                      | ON/Icel. þú (you/thou) — attested
+25   | they          | þeir                    | ON/Icel. þeir (they) — attested
+26   | we            | vér                     | ON vér (we) — attested
+33   | my            | minn                    | ON/Icel. minn (my/mine) — attested
+57   | him           | hann                    | ON/Icel. hann (him — same form)
+59   | me            | mér                     | ON/Icel. mér (me/to me) — attested
+60   | people        | fólk                    | ON/Icel. fólk (people/folk) — attested
+65   | some          | sumir                   | ON sumir (some/certain) — attested
+67   | them          | þá                      | ON þá (them/those) — attested
+100  | great         | mikill                  | ON mikill (great/large) — attested
+131  | children      | börn                    | ON/Icel. börn (children) — attested
+133  | girl          | stúlka                  | Icel. stúlka (girl) — attested
+143  | boy           | drengr                  | ON drengr (boy/young man) — attested
+157  | family        | fjölskylda              | Icel. fjölskylda (family) — attested
+161  | man           | maðr                    | ON maðr (man) — attested
+165  | woman         | kona                    | ON/Icel. kona (woman) — attested
+168  | king          | konungr                 | ON konungr (king) — attested
+226  | person        | maðr                    | ON maðr (person/man — same)
+228  | friend        | vinr                    | ON vinr (friend) — attested
+348  | brother       | bróðir                  | ON/Icel. bróðir (brother) — attested
+382  | baby          | ungbarn                 | ON ungbarn (young child/baby) — attested
+430  | son           | sonr                    | ON sonr (son) — attested
+494  | mother        | móðir                   | ON/Icel. móðir (mother) — attested
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | staðr                   | ON staðr (place/stead) — attested
+97   | day           | dagr                    | ON dagr (day) — attested
+135  | river         | á                       | ON á (river) — attested
+136  | mile          | leiðarmál               | ON (road-measure) stylized
+174  | rock          | grjót                   | ON grjót (rock/stone) — attested
+176  | fire          | eldr                    | ON eldr (fire) — attested
+178  | south         | suðr                    | ON suðr (south) — attested
+179  | north         | norðr                   | ON norðr (north) — attested
+181  | piece         | stykki                  | Icel. stykki (piece) — attested
+188  | space         | rúm                     | ON/Icel. rúm (space/room) — attested
+190  | ground        | jörð                    | ON jörð (earth/ground) — attested
+196  | hour          | klukkustund             | Icel. klukkustund (hour) — attested
+203  | west          | vestr                   | ON vestr (west) — attested
+212  | morning       | morgunn                 | ON/Icel. morgunn (morning) — attested
+233  | rain          | regn                    | ON/Icel. regn (rain) — attested
+240  | cold          | kald                    | ON kald (cold) — attested
+242  | dark          | myrkr                   | ON myrkr (dark/darkness) — attested
+247  | light         | ljós                    | ON/Icel. ljós (light) — attested
+250  | wave          | bylgja                  | ON/Icel. bylgja (wave) — attested
+252  | heart         | hjarta                  | ON/Icel. hjarta (heart) — attested
+254  | star          | stjarna                 | ON/Icel. stjarna (star) — attested
+255  | box           | kassi                   | Icel. kassi (box) — attested
+266  | field         | völlr                   | ON völlr (field/plain) — attested
+268  | rest          | hvíld                   | ON/Icel. hvíld (rest) — attested
+274  | ocean         | haf                     | ON haf (ocean/sea) — attested
+277  | minute        | mínúta                  | Icel. mínúta (minute) — attested
+285  | fact          | staðreynd               | Icel. staðreynd (fact) — attested
+287  | street        | gata                    | ON/Icel. gata (street/path) — attested
+290  | lot           | mikið                   | ON/Icel. mikið (much/a lot) — attested
+299  | course        | leið                    | ON leið (way/course/route) — attested
+301  | wheel         | hjól                    | ON/Icel. hjól (wheel) — attested
+303  | force         | kraftr                  | ON kraftr (force/strength) — attested
+305  | moon          | máni                    | ON máni (moon) — attested
+306  | island        | ey                      | ON ey (island) — attested
+308  | foot          | fótr                    | ON/Icel. fótr (foot) — attested
+312  | boat          | bátr                    | ON bátr (boat) — attested
+316  | plane         | flugvél                 | Icel. flugvél (airplane) — attested
+318  | thousand      | þúsund                  | ON/Icel. þúsund (thousand) — attested
+320  | game          | leikr                   | ON leikr (game/play) — attested
+323  | heat          | hiti                    | ON/Icel. hiti (heat) — attested
+327  | snow          | snjór                   | ON snjór (snow) — attested
+334  | east          | austr                   | ON austr (east) — attested
+336  | language      | mál                     | ON/Icel. mál (language/speech) — attested
+339  | ball          | kúla                    | Icel. kúla (ball/sphere) — attested
+341  | drop          | dropi                   | ON/Icel. dropi (drop) — attested
+345  | engine        | vél                     | Icel. vél (machine/engine) — attested
+347  | arm           | armr                    | ON armr (arm) — attested
+352  | material      | efni                    | ON/Icel. efni (material/matter) — attested
+353  | size          | stærð                   | Icel. stærð (size) — attested
+360  | ice           | ís                      | ON/Icel. ís (ice) — attested
+361  | matter        | mál                     | ON mál (matter/case — same as language)
+363  | pair          | par                     | Icel. par (pair) — attested
+366  | length        | lengd                   | ON/Icel. lengd (length) — attested
+367  | syllable      | atkvæði                 | Icel. atkvæði (syllable/vote) — attested
+374  | subject       | efni                    | Icel. efni (subject/matter — same as material)
+375  | region        | héraðr                  | ON héraðr (region/district) — attested
+376  | energy        | orka                    | Icel. orka (energy) — attested
+379  | art           | list                    | ON/Icel. list (art/skill) — attested
+384  | circle        | hringr                  | ON hringr (circle/ring) — attested
+387  | fraction      | brot                    | ON/Icel. brot (fraction/break) — attested
+388  | forest        | skógr                   | ON skógr (forest) — attested
+391  | race          | kynþáttr                | Icel. kynþáttr (race/lineage) stylized
+392  | window        | gluggi                  | Icel. gluggi (window) — attested
+393  | store         | verslun                 | Icel. verslun (store/shop) — attested
+394  | summer        | sumar                   | ON/Icel. sumar (summer) — attested
+395  | train         | lest                    | Icel. lest (train) — attested
+399  | wall          | veggr                   | ON/Icel. veggr (wall) — attested
+401  | mount         | fell                    | ON fell (mountain/fell) — attested
+403  | sky           | himinn                  | ON/Icel. himinn (sky/heaven) — attested
+407  | board         | borð                    | ON borð (board/table) — attested
+408  | joy           | gleði                   | ON/Icel. gleði (joy/gladness) — attested
+409  | winter        | vetr                    | ON vetr (winter) — attested
+412  | glass         | gler                    | ON/Icel. gler (glass) — attested
+413  | grass         | gras                    | ON/Icel. gras (grass) — attested
+414  | cow           | kýr                     | ON/Icel. kýr (cow) — attested
+416  | job           | starf                   | Icel. starf (job/work) — attested
+417  | edge          | brún                    | ON brún (edge/brow) — attested
+419  | sign          | tákn                    | ON/Icel. tákn (sign/symbol) — attested
+422  | fun           | gaman                   | ON/Icel. gaman (fun/amusement) — attested
+423  | bright        | bjartr                  | ON bjartr (bright) — attested
+424  | gas           | gas                     | Icel. gas (gas) — attested
+425  | weather       | veðr                    | ON veðr (weather) — attested
+426  | month         | mánuðr                  | ON mánuðr (month) — attested
+427  | million       | milljón                 | Icel. milljón (million) — attested
+428  | bear          | björn                   | ON/Icel. björn (bear) — attested
+429  | flower        | blóm                    | ON/Icel. blóm (flower/bloom) — attested
+432  | hair          | hár                     | ON/Icel. hár (hair) — attested
+436  | village       | þorp                    | ON þorp (village/hamlet) — attested
+438  | root          | rót                     | ON/Icel. rót (root) — attested
+442  | metal         | málmr                   | ON málmr (metal) — attested
+445  | paragraph     | málsgrein               | Icel. málsgrein (paragraph) — attested
+449  | third         | þriðji                  | ON/Icel. þriðji (third) — attested
+452  | floor         | gólf                    | ON/Icel. gólf (floor) — attested
+453  | result        | niðurstaða              | Icel. niðurstaða (result) — attested
+454  | hill          | hóll                    | ON hóll (hill/mound) — attested
+456  | cat           | köttur                  | ON/Icel. köttur (cat) — attested
+460  | century       | öld                     | ON öld (century/age) — attested
+461  | type          | tegund                  | Icel. tegund (type/sort) — attested
+462  | law           | lög                     | ON/Icel. lög (law) — attested
+463  | bit           | biti                    | ON biti (bit/piece) — attested
+464  | coast         | strönd                  | ON strönd (coast/strand) — attested
+467  | phrase        | setning                 | Icel. setning (phrase/sentence) — attested
+469  | sand          | sandur                  | ON/Icel. sandur (sand) — attested
+470  | soil          | mold                    | ON mold (soil/earth) — attested
+473  | temperature   | hitastig                | Icel. hitastig (temperature) — attested
+474  | finger        | fingr                   | ON/Icel. fingr (finger) — attested
+475  | industry      | iðnaðr                  | ON iðnaðr (industry/craft) — attested
+476  | value         | gildi                   | ON/Icel. gildi (value/worth) — attested
+479  | view          | útsýni                  | Icel. útsýni (view/outlook) — attested
+480  | sense         | skilningr               | ON skilningr (sense/understanding) attested
+481  | ear           | eyra                    | ON/Icel. eyra (ear) — attested
+487  | case          | mál                     | ON mál (case/matter — same as language)
+488  | middle        | miðja                   | ON/Icel. miðja (middle) — attested
+492  | lake          | vatn                    | ON vatn (lake/water) — attested
+493  | moment        | augnablik               | Icel. augnablik (moment) — attested
+495  | scale         | kvarði                  | Icel. kvarði (scale/measure) — attested
+496  | loud          | háværr                  | ON háværr (loud) — attested
+497  | spring        | vor                     | ON/Icel. vor (spring season) — attested
+500  | cloud         | ský                     | ON/Icel. ský (cloud) — attested
+
+--- ADJECTIVES ---
+36   | all           | allr                    | ON allr (all/every) — attested
+40   | so            | svá                     | ON svá (so/thus) — attested
+41   | up            | upp                     | ON/Icel. upp (up) — attested
+42   | out           | út                      | ON/Icel. út (out) — attested
+66   | some          | sumir                   | ON sumir (some — same as above)
+69   | other         | annarr                  | ON annarr (other/another) — attested
+70   | than          | en                      | ON en (than/but — same as but)
+74   | how           | hvernig                 | Icel. hvernig (how) — attested
+89   | new           | nýr                     | ON/Icel. nýr (new) — attested
+90   | even          | jafnvel                 | Icel. jafnvel (even — same as above)
+91   | way           | vegr                    | ON vegr (way/road) — attested
+93   | any           | nokkurr                 | ON nokkurr (any/some) — attested
+98   | most          | mestr                   | ON mestr (most/greatest) — attested
+101  | large         | stór                    | Icel. stór (large) — attested
+103  | often         | oft                     | ON/Icel. oft (often) — attested
+105  | high          | hár                     | ON hár (high — distinct from hair by context)
+111  | few           | fár                     | ON fár (few) — attested
+113  | white         | hvítr                   | ON hvítr (white) — attested
+117  | young         | ungr                    | ON ungr (young) — attested
+118  | ready         | tilbúinn                | Icel. tilbúinn (ready) — attested
+120  | usual         | venjulegur              | Icel. venjulegur (usual) — attested
+121  | plain         | slétt                   | ON slétt (flat/plain) — attested
+122  | above         | yfir                    | ON yfir (above — same as above prep)
+124  | second        | annarr                  | ON annarr (second/other — same as other)
+125  | enough        | nóg                     | Icel. nóg (enough) — attested
+126  | ever          | alltaf                  | Icel. alltaf (always/ever) — attested
+127  | red           | rauðr                   | ON rauðr (red) — attested
+128  | old           | gamall                  | ON gamall (old) — attested
+130  | though        | þó                      | ON/Icel. þó (though/yet) — attested
+132  | short         | stuttr                  | Icel. stuttr (short) — attested
+138  | true          | sannr                   | ON sannr (true/real) — attested
+139  | full          | fullr                   | ON fullr (full) — attested
+140  | whole         | heill                   | ON heill (whole/healthy) — attested
+144  | fast          | skjótr                  | ON skjótr (fast/swift) — attested
+145  | simple        | einfaldur               | Icel. einfaldur (simple) — attested
+146  | several       | nokkrir                 | Icel. nokkrir (several) — attested
+148  | best          | bezt                    | ON bezt (best) — attested
+149  | better        | betri                   | ON/Icel. betri (better) — attested
+151  | early         | snemma                  | Icel. snemma (early) — attested
+153  | complete      | fullkominn              | Icel. fullkominn (complete) — attested
+156  | certain       | viss                    | ON/Icel. viss (certain/sure) — attested
+163  | general       | almennur                | Icel. almennur (general) — attested
+164  | special       | sérstakur               | Icel. sérstakur (special) — attested
+166  | correct       | réttr                   | ON réttr (correct/right) — attested
+167  | able          | fær                     | ON/Icel. fær (able/capable) — attested
+168  | fine          | fínn                    | Icel. fínn (fine/nice) — attested
+170  | beautiful     | fagr                    | ON fagr (beautiful/fair) — attested
+171  | gone          | farinn                  | ON/Icel. farinn (gone/departed) — attested
+172  | quick         | skjótr                  | ON skjótr (quick — same as fast)
+173  | free          | frjáls                  | ON/Icel. frjáls (free) — attested
+175  | warm          | hlýr                    | ON/Icel. hlýr (warm) — attested
+176  | strong        | sterkr                  | ON sterkr (strong) — attested
+177  | clear         | skær                    | ON skær (clear/bright) — attested
+178  | deep          | djúpr                   | ON/Icel. djúpr (deep) — attested
+180  | possible      | mögulegt                | Icel. mögulegt (possible) — attested
+182  | dry           | þurr                    | ON þurr (dry) — attested
+184  | wild          | villtr                  | ON villtr (wild/lost) — attested
+185  | natural       | náttúrulegur            | Icel. náttúrulegur (natural) — attested
+186  | safe          | öruggur                 | Icel. öruggur (safe) — attested
+187  | busy          | upptekinn               | Icel. upptekinn (busy/occupied) — attested
+189  | common        | algengur                | Icel. algengur (common) — attested
+192  | distant       | fjarlægur               | Icel. fjarlægur (distant) — attested
+193  | heavy         | þungr                   | ON þungr (heavy) — attested
+195  | present       | nútíma                  | Icel. nútíma (present/modern) — attested
+197  | wide          | víðr                    | ON víðr (wide) — attested
+200  | broken        | brotinn                 | ON/Icel. brotinn (broken) — attested
+202  | hot           | heitr                   | ON heitr (hot) — attested
+204  | tall          | hár                     | ON hár (tall/high — same as high)
+205  | soft          | mjúkr                   | ON mjúkr (soft) — attested
+207  | direct        | beinlínis               | Icel. beinlínis (direct) — attested
+208  | sudden        | skyndilegt              | Icel. skyndilegt (sudden) — attested
+213  | exact         | nákvæmur                | Icel. nákvæmur (exact) — attested
+216  | happy         | glaðr                   | ON glaðr (glad/happy) — attested
+217  | probable      | líklegt                 | Icel. líklegt (probable) — attested
+218  | last          | síðastur                | Icel. síðastur (last) — attested
+219  | lone          | einstakur               | Icel. einstakur (lone/unique) — attested
+220  | written       | skrifaðr                | ON skrifaðr (written) — attested
+221  | silent        | þögull                  | ON þögull (silent/quiet) — attested
+222  | strange       | undarlegur              | Icel. undarlegur (strange) — attested
+
+--- NUMBERS ---
+83   | two           | tveir                   | ON/Icel. tveir (two) — attested
+197  | five          | fimm                    | ON/Icel. fimm (five) — attested
+210  | six           | sex                     | ON/Icel. sex (six) — attested
+215  | ten           | tíu                     | ON/Icel. tíu (ten) — attested
+439  | eight         | átta                    | ON/Icel. átta (eight) — attested
+449  | seven         | sjau                    | ON/Icel. sjau (seven) — attested
+450  | three         | þrír                    | ON/Icel. þrír (three) — attested
+
+--- TIME WORDS ---
+54   | time          | tími                    | ON/Icel. tími (time) — attested
+96   | day           | dagr                    | ON dagr (day — same as above)
+188  | year          | ár                      | ON/Icel. ár (year) — attested
+193  | hour          | klukkustund             | Icel. klukkustund (hour — same as above)
+196  | week          | vika                    | ON/Icel. vika (week) — attested
+213  | minute        | mínúta                  | Icel. mínúta (minute — same as above)
+214  | morning       | morgunn                 | ON morgunn (morning — same as above)
+426  | month         | mánuðr                  | ON mánuðr (month — same as above)
+
+===================================================================================
+PHONETIC GUIDE FOR ASHIRUM ICELANDIC
+===================================================================================
+
+Old Norse sounds preserved in Ashirum:
+  ð   = voiced dental fricative (as in English "the")
+  þ   = voiceless dental fricative (as in English "thin")
+  ö   = front rounded vowel (as in German "ö")
+  æ   = front open vowel (as in "cat" but longer)
+  ý   = long front rounded vowel
+  á   = long open back vowel (as in "father")
+  ó   = long back rounded vowel
+  ú   = long high back rounded vowel
+
+Characteristic consonant clusters from name list:
+  sk-  = initial cluster (Skarphedin, Skall-Borg)
+  str- = triple cluster (sterkr, strönd)
+  gr-  = voiced stop + liquid (grjót, gras)
+  kv-  = labio-velar (kvenna)
+  -rð  = final cluster (jörð, veðr)
+  -ðr  = medial cluster (bróðir, móðir)
+  -ll  = geminate lateral (völlr, hóll, fell)
+
+Compound naming patterns (from name list):
+  Eld-  = fire- (Eldborg, Eldfell, Eldgja)
+  Gjall- = resounding- (Gjallborg)
+  Raud- = red- (Raudfell, Raudvik)
+  Skall- = skull/bare- (Skallborg, Skallagrim)
+  Krafla- = seething- (Krafladal)
+  Sur-  = sour/acidic- (Surfell, Surtsey fr. Surtur)
+
+===================================================================================
+
+
+241  | power          | máttr                    |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | til                      |
+8     | that           | þat                      |
+10    | it             | þat                      |
+11    | for            | fyrir                    |
+19    | at             | á                        |
+20    | this           | þessi                    |
+22    | his            | hans                     |
+27    | say            | segja                    |
+28    | her            | hennar                   |
+29    | she            | hún                      |
+31    | an             | einn                     |
+34    | one            | einn                     |
+35    | all            | allr                     |
+37    | there          | þar                      |
+39    | what           | hvat                     |
+46    | get            | fá                       |
+48    | go             | fara                     |
+49    | me             | mér                      |
+50    | when           | þegar                    |
+55    | no             | nei                      |
+58    | know           | vita                     |
+61    | into           | í                        |
+62    | year           | ár                       |
+64    | good           | góðr                     |
+75    | come           | koma                     |
+77    | over           | yfir                     |
+79    | also           | ok svá                   |
+80    | back           | aftur                    |
+81    | after          | eptir                    |
+82    | use            | nota                     |
+87    | first          | fyrst                    |
+88    | well           | vel                      |
+94    | any            | nokkurr                  |
+102   | need           | þurfa                    |
+104   | often          | oft                      |
+106   | high           | hár                      |
+108   | hold           | halda                    |
+110   | never          | aldrei                   |
+112   | north          | norðr                    |
+114   | seem           | þykkja                   |
+116   | next           | næstur                   |
+119   | begin          | hefja                    |
+129   | both           | báðir                    |
+134   | mile           | mílur                    |
+142   | girl           | stúlka                   |
+147   | ever           | jafnan                   |
+152   | talk           | tala                     |
+158   | direct         | beinlínis                |
+160   | leave          | fara                     |
+162   | measure        | mæla                     |
+169   | wind           | vindr                    |
+194   | true           | sannr                    |
+198   | remember       | muna                     |
+211   | table          | borð                     |
+223   | pattern        | mynstur                  |
+225   | center         | miðja                    |
+227   | person         | maðr                     |
+230   | appear         | birtast                  |
+231   | road           | vegr                     |
+232   | map            | kart                     |
+234   | rule           | ráða                     |
+236   | pull           | draga                    |
+238   | notice         | taka eftir               |
+244   | drive          | keyra                    |
+245   | lead           | leiða                    |
+246   | cry            | gráta                    |
+249   | note           | minnismiði               |
+256   | field          | völlr                    |
+257   | rest           | hvíld                    |
+258   | correct        | réttr                    |
+259   | able           | fær                      |
+260   | pound          | pund                     |
+262   | beauty         | fegurð                   |
+264   | stood          | stóð                     |
+267   | teach          | kenna                    |
+269   | final          | síðastur                 |
+270   | gave           | gaf                      |
+271   | green          | grænn                    |
+272   | oh             | ó                        |
+275   | ocean          | haf                      |
+278   | minute         | mínúta                   |
+279   | strong         | sterkr                   |
+280   | special        | sérstakur                |
+282   | clear          | skær                     |
+283   | tail           | hali                     |
+284   | produce        | framleiða                |
+286   | street         | gata                     |
+288   | lot            | mikið                    |
+289   | nothing        | ekkert                   |
+291   | stay           | dvelja                   |
+293   | full           | fullr                    |
+295   | blue           | blár                     |
+296   | object         | hlutur                   |
+298   | surface        | yfirborð                 |
+300   | moon           | máni                     |
+302   | foot           | fótr                     |
+304   | busy           | upptekin                 |
+307   | boat           | bátr                     |
+309   | gold           | gull                     |
+310   | possible       | mögulegt                 |
+311   | plane          | flugvél                  |
+314   | wonder         | undra                    |
+317   | ago            | fyrir                    |
+321   | shape          | lögun                    |
+324   | miss           | sakna                    |
+325   | brought        | flutti                   |
+326   | heat           | hiti                     |
+329   | bring          | færa                     |
+330   | yes            | já                       |
+331   | distant        | fjarlægur                |
+333   | east           | austr                    |
+337   | grand          | stórr                    |
+342   | heart          | hjarta                   |
+343   | am             | er                       |
+344   | present        | nútíma                   |
+346   | dance          | dansa                    |
+349   | arm            | armr                     |
+350   | wide           | víðr                     |
+351   | sail           | sigla                    |
+354   | vary           | breyta                   |
+355   | settle         | setjast                  |
+357   | weight         | þyngd                    |
+359   | ice            | ís                       |
+362   | pair           | par                      |
+364   | divide         | skipta                   |
+365   | syllable       | atkvæði                  |
+369   | sudden         | skyndilegt               |
+370   | count          | telja                    |
+372   | reason         | ástæða                   |
+373   | length         | lengd                    |
+377   | region         | héraðr                   |
+378   | energy         | orka                     |
+380   | probable       | líklegt                  |
+381   | bed            | rúm                      |
+383   | egg            | egg                      |
+385   | cell           | fruma                    |
+389   | sit            | sitja                    |
+390   | race           | kynþáttr                 |
+396   | prove          | sanna                    |
+397   | lone           | einstakur                |
+398   | leg            | leggr                    |
+404   | sky            | himinn                   |
+406   | joy            | gleði                    |
+410   | wild           | villtr                   |
+411   | instrument     | tól                      |
+420   | past           | liðinn                   |
+421   | soft           | mjúkr                    |
+434   | strange        | undarlegur               |
+440   | meet           | mæta                     |
+444   | solve          | leysa                    |
+446   | whether        | hvort                    |
+447   | push           | ýta                      |
+448   | seven          | sjau                     |
+458   | result         | niðurstaða               |
+459   | burn           | brenna                   |
+465   | type           | tegund                   |
+468   | coast          | strönd                   |
+471   | silent         | þögull                   |
+472   | tall           | hár                      |
+477   | finger         | fingr                    |
+478   | industry       | iðnaðr                   |
+483   | excite         | æsa                      |
+484   | natural        | náttúrulegur             |
+485   | view           | útsýni                   |
+486   | sense          | skilningr                |
+489   | quite          | alveg                    |
+491   | case           | mál                      |
+498   | loud           | háværr                   |
+499   | spring         | vor                      |
+
+END OF FILE — AshirumIcelandic_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

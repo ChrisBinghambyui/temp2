@@ -1,0 +1,658 @@
+SUNBLADE GREEK - 500 Common Word Translations
+Fantasy Language based on SunbladeGreek name patterns
+Linguistic roots: Mix of Homeric Greek (8th-6th c. BC), Classical Attic (5th-4th c. BC),
+and Koine (Hellenistic, 4th c. BC - 4th c. AD)
+Attested Greek words used throughout; era noted where relevant.
+
+KEY SOURCE WORDS:
+  Homeric: ἀνήρ/anēr (man), γυνή/gynē (woman), παῖς/pais (child), γαῖα/gaia (earth),
+  ὕδωρ/hydōr (water), πῦρ/pyr (fire), οὐρανός/ouranos (sky), ἠώς/ēōs (dawn),
+  ἥλιος/hēlios (sun), σελήνη/selēnē (moon), ἄστρον/astron (star), θάλασσα/thalassa (sea)
+  Classical: λόγος/logos (word/reason), πόλις/polis (city), ἀρετή/aretē (virtue),
+  νόμος/nomos (law), δῆμος/dēmos (people), φιλία/philia (friendship/love),
+  σοφία/sophia (wisdom), ἀλήθεια/alētheia (truth), καλός/kalos (beautiful/good)
+  Koine: εἰρήνη/eirēnē (peace), χάρις/charis (grace/joy), ζωή/zōē (life),
+  πίστις/pistis (faith/trust), ἀγάπη/agapē (love), κόσμος/kosmos (world/order)
+
+NOTE: Sunblade uses the Romanized phonetic forms throughout for fantasy usability.
+Greek's characteristic features preserved: aspirated stops (ph, th, kh),
+long/short vowel pairs (a/ā, e/ē, o/ō), the -os/-on/-ē/-is noun endings,
+and the characteristic prefix system (a-, ana-, apo-, dia-, epi-, kata-, syn-).
+Name list patterns: -polis, -ion, -os, -is, -eia, -aia — all canonical Greek endings.
+
+===================================================================================
+RANK | ENGLISH       | SUNBLADE GREEK          | GREEK ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | ho / hē / to            | Ancient Greek definite article — attested
+2    | a / an        | tis                     | Gk. τις (a certain/one) — attested
+6    | it            | auto                    | Gk. αὐτό (it/itself) — attested
+14   | this          | touto                   | Gk. τοῦτο (this) — attested
+38   | what          | ti                      | Gk. τί (what) — attested
+45   | who           | tis                     | Gk. τίς (who) — attested
+63   | your          | son                     | Gk. σόν (your/thine) — attested
+85   | our           | hēmōn                   | Gk. ἡμῶν (our/of us) — attested
+99   | us            | hēmas                   | Gk. ἡμᾶς (us) — attested
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | einai                   | Gk. εἶναι (to be) — attested
+70   | there         | ekei                    | Gk. ἐκεῖ (there) — attested
+72   | seem          | phainesthai             | Gk. φαίνεσθαι (to seem/appear) — attested
+78   | think         | noein                   | Gk. νοεῖν (to think/perceive) — attested
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | tou / tēs               | Gk. genitive article (of) — attested
+5    | and           | kai                     | Gk. καί (and) — attested
+12   | not           | ou / mē                 | Gk. οὐ/μή (not) — attested
+13   | on            | epi                     | Gk. ἐπί (on/upon) — attested
+14   | with          | syn                     | Gk. σύν (with/together) — attested
+21   | but           | alla                    | Gk. ἀλλά (but) — attested
+23   | by            | hypo                    | Gk. ὑπό (by/under) — attested
+24   | from          | apo                     | Gk. ἀπό (from/away) — attested
+30   | or            | ē                       | Gk. ἤ (or) — attested
+32   | into          | eis                     | Gk. εἰς (into/toward) — attested
+43   | if            | ei                      | Gk. εἰ (if) — attested
+44   | about         | peri                    | Gk. περί (about/around) — attested
+60   | because       | hoti                    | Gk. ὅτι (because/that) — attested
+71   | only          | monon                   | Gk. μόνον (only/alone) — attested
+82   | also          | kai                     | Gk. καί (also/even — same as and)
+83   | after         | meta                    | Gk. μετά (after/with) — attested
+90   | even          | kai                     | Gk. καί (even — same as and/also)
+95   | these         | tauta                   | Gk. ταῦτα (these) — attested
+120  | until         | heōs                    | Gk. ἕως (until/while) — attested
+154  | soon          | takheos                 | Gk. ταχέως (soon/quickly) — attested
+172  | since         | epei                    | Gk. ἐπεί (since/when) — attested
+183  | against       | kata                    | Gk. κατά (against/down) — attested
+192  | during        | en                      | Gk. ἐν (in/during) — attested
+219  | toward        | pros                    | Gk. πρός (toward/at) — attested
+251  | still         | eti                     | Gk. ἔτι (still/yet) — attested
+261  | above         | hyper                   | Gk. ὑπέρ (above/over) — attested
+287  | behind        | opisthen                | Gk. ὄπισθεν (behind/from behind) attested
+332  | yes           | nai                     | Gk. ναί (yes) — attested
+338  | yet           | eti                     | Gk. ἔτι (yet — same as still)
+339  | among         | en                      | Gk. ἐν (among/in — same as during)
+340  | perhaps       | isos                    | Gk. ἴσως (perhaps/equally) — attested
+451  | shall         | mellein                 | Gk. μέλλειν (to be about to/shall) attested
+457  | either        | ē...ē                   | Gk. ἤ...ἤ (either...or) — attested
+488  | else          | allos                   | Gk. ἄλλος (other/else) — attested
+490  | quite         | pantos                  | Gk. παντός (quite/of all) — attested
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | prattein                | Gk. πράττειν (to do/act) — attested
+9    | have          | ekhein                  | Gk. ἔχειν (to have/hold) — attested
+18   | say           | legein                  | Gk. λέγειν (to say/speak) — attested
+47   | get           | lambanein               | Gk. λαμβάνειν (to take/get) — attested
+51   | make          | poiein                  | Gk. ποιεῖν (to make/do/create) — attested
+52   | can           | dynasthai               | Gk. δύνασθαι (to be able/can) — attested
+53   | like          | philein                 | Gk. φιλεῖν (to like/love) — attested
+56   | know          | eidenai                 | Gk. εἰδέναι (to know) — attested
+57   | take          | lambanein               | Gk. λαμβάνειν (to take — same as get)
+59   | see           | horan                   | Gk. ὁρᾶν (to see) — attested
+68   | look          | blepein                 | Gk. βλέπειν (to look/see) — attested
+72   | come          | erkhesthai              | Gk. ἔρχεσθαι (to come/go) — attested
+76   | think         | phronein                | Gk. φρονεῖν (to think/be wise) — attested
+84   | use           | khresthai               | Gk. χρῆσθαι (to use/deal with) — attested
+86   | work          | ergazesthai             | Gk. ἐργάζεσθαι (to work) — attested
+92   | want          | boulesthai              | Gk. βούλεσθαι (to want/wish) — attested
+96   | give          | didonai                 | Gk. διδόναι (to give) — attested
+107  | hold          | kratein                 | Gk. κρατεῖν (to hold/rule) — attested
+109  | turn          | strephein               | Gk. στρέφειν (to turn) — attested
+115  | walk          | badizein                | Gk. βαδίζειν (to walk/go) — attested
+118  | begin         | arkhesthai              | Gk. ἄρχεσθαι (to begin/rule) — attested
+123  | seem          | phainesthai             | Gk. φαίνεσθαι (to seem — same as seem)
+127  | open          | anoigein                | Gk. ἀνοίγειν (to open) — attested
+137  | care          | epimelesthai            | Gk. ἐπιμελεῖσθαι (to care for) — attested
+141  | feel          | aisthesthai             | Gk. αἰσθάνεσθαι (to feel/perceive) attested
+143  | talk          | dialegein               | Gk. διαλέγειν (to talk/discuss) — attested
+148  | run           | trekhein                | Gk. τρέχειν (to run) — attested
+150  | leave         | apienai                 | Gk. ἀπιέναι (to leave/go away) — attested
+155  | go            | ienai                   | Gk. ἰέναι (to go) — attested
+159  | fill          | plēroun                 | Gk. πληροῦν (to fill/fulfill) — attested
+165  | happen        | gignesthai              | Gk. γίγνεσθαι (to happen/become) attested
+174  | pass          | parerkhesthai           | Gk. παρέρχεσθαι (to pass by) — attested
+179  | reach         | hikanesthai             | Gk. ἱκάνεσθαι (to reach/arrive) — attested
+189  | remember      | mimnēskesthai           | Gk. μιμνήσκεσθαι (to remember) — attested
+191  | hear          | akouein                 | Gk. ἀκούειν (to hear) — attested
+199  | move          | kinein                  | Gk. κινεῖν (to move) — attested
+201  | fall          | piptein                 | Gk. πίπτειν (to fall) — attested
+206  | travel        | hodoiporein             | Gk. ὁδοιπορεῖν (to travel/journey) attested
+208  | sing          | aeidein                 | Gk. ἀείδειν (to sing) — Homeric attested
+209  | listen        | akouein                 | Gk. ἀκούειν (to listen — same as hear)
+222  | pull          | helkein                 | Gk. ἕλκειν (to pull/drag) — attested
+224  | follow        | hepesthai               | Gk. ἕπεσθαι (to follow) — attested
+226  | appear        | phainesthai             | Gk. φαίνεσθαι (to appear — same as seem)
+229  | serve         | hypeērētein             | Gk. ὑπηρετεῖν (to serve) — attested
+233  | govern        | arkhein                 | Gk. ἄρχειν (to govern/rule) — attested
+235  | rule          | basileuein              | Gk. βασιλεύειν (to rule/reign) — attested
+237  | notice        | katanoein               | Gk. κατανοεῖν (to notice/observe) attested
+239  | cry           | klaien                  | Gk. κλαίειν (to cry/weep) — attested
+243  | drive         | elaunein                | Gk. ἐλαύνειν (to drive/march) — attested
+248  | wait          | menein                  | Gk. μένειν (to wait/remain/stay) — attested
+253  | lead          | agein                   | Gk. ἄγειν (to lead/bring) — attested
+263  | stand         | histanai                | Gk. ἱστάναι (to stand/set) — attested
+265  | contain       | periékhein              | Gk. περιέχειν (to contain/surround) attested
+268  | teach         | didaskein               | Gk. διδάσκειν (to teach) — attested
+273  | develop       | auxanein                | Gk. αὐξάνειν (to grow/develop) — attested
+276  | produce       | apophérein              | Gk. ἀποφέρειν (to produce/carry off) attested
+281  | decide        | krinein                 | Gk. κρίνειν (to decide/judge) — attested
+287  | prove         | apodeiknynai            | Gk. ἀποδεικνύναι (to prove/show) attested
+292  | stay          | menein                  | Gk. μένειν (to stay — same as wait)
+294  | force         | anankazein              | Gk. ἀναγκάζειν (to force/compel) attested
+297  | push          | ōthein                  | Gk. ὠθεῖν (to push/thrust) — attested
+305  | test          | peirazein               | Gk. πειράζειν (to test/try) — attested
+313  | laugh         | gelān                   | Gk. γελᾶν (to laugh) — attested
+315  | wonder        | thaumazein              | Gk. θαυμάζειν (to wonder/admire) attested
+319  | check         | skopein                 | Gk. σκοπεῖν (to check/examine) — attested
+322  | shape         | morphoun                | Gk. μορφοῦν (to shape/form) — attested
+328  | heat          | thermainein             | Gk. θερμαίνειν (to heat/warm) — attested
+332  | bring         | pherein                 | Gk. φέρειν (to bring/carry) — attested
+335  | paint         | graphein                | Gk. γράφειν (to paint/write/draw) attested
+348  | dance         | orcheisthai             | Gk. ὀρχεῖσθαι (to dance) — attested
+356  | vary          | alloioun                | Gk. ἀλλοιοῦν (to vary/change) — attested
+358  | speak         | agoreuein               | Gk. ἀγορεύειν (to speak publicly) attested
+360  | settle        | katoikizein             | Gk. κατοικίζειν (to settle/colonize) attested
+368  | hunt          | thēran                  | Gk. θηρᾶν (to hunt) — attested
+371  | count         | arithmein               | Gk. ἀριθμεῖν (to count/number) — attested
+379  | represent     | eikāzein                | Gk. εἰκάζειν (to represent/liken) attested
+384  | sit           | kathizein               | Gk. καθίζειν (to sit/set) — attested
+386  | believe       | pisteuein               | Gk. πιστεύειν (to believe/trust) — attested
+388  | ride          | hippazesthai            | Gk. ἱππάζεσθαι (to ride a horse) attested
+392  | catch         | lambanein               | Gk. λαμβάνειν (to catch — same as take)
+394  | wish          | eukheisthai             | Gk. εὔχεσθαι (to wish/pray) — attested
+400  | sleep         | katheudein              | Gk. καθεύδειν (to sleep) — attested
+402  | mount         | anabainein              | Gk. ἀναβαίνειν (to mount/go up) attested
+405  | fly           | petesthai               | Gk. πέτεσθαι (to fly) — attested
+412  | keep          | tērein                  | Gk. τηρεῖν (to keep/guard) — attested
+415  | cut           | temnein                 | Gk. τέμνειν (to cut) — attested
+418  | visit         | episkepesthai           | Gk. ἐπισκέπτεσθαι (to visit) — attested
+425  | jump          | hallesthai              | Gk. ἅλλεσθαι (to jump/leap) — attested
+429  | finish        | telein                  | Gk. τελεῖν (to finish/complete) — attested
+431  | hope          | elpizein                | Gk. ἐλπίζειν (to hope) — attested
+433  | dress         | amphiennynai            | Gk. ἀμφιέννυναι (to dress/clothe) attested
+435  | grow          | phyein                  | Gk. φύειν (to grow/produce) — attested
+437  | meet          | synantān                | Gk. συναντᾶν (to meet/encounter) attested
+441  | raise         | airein                  | Gk. αἴρειν (to raise/lift) — attested
+443  | solve         | lyein                   | Gk. λύειν (to solve/loosen/free) — attested
+455  | cook          | hepsein                 | Gk. ἕψειν (to cook/boil) — attested
+457  | burn          | kaiein                  | Gk. καίειν (to burn) — attested
+464  | describe      | graphein                | Gk. γράφειν (to describe/write — same as paint)
+466  | copy          | apographein             | Gk. ἀπογράφειν (to copy/record) attested
+473  | roll          | kylindein               | Gk. κυλίνδειν (to roll) — attested
+476  | excite        | egeírein                | Gk. ἐγείρειν (to excite/rouse) — attested
+480  | fight         | makhesthai              | Gk. μάχεσθαι (to fight) — attested
+482  | beat          | typtein                 | Gk. τύπτειν (to beat/strike) — attested
+493  | break         | rhēgnynai               | Gk. ῥήγνυναι (to break/burst) — attested
+497  | kill          | kteinein                | Gk. κτείνειν (to kill) — attested
+
+--- NOUNS: PEOPLE ---
+15   | he            | autos                   | Gk. αὐτός (he/himself) — attested
+16   | she           | autē                    | Gk. αὐτή (she/herself) — attested
+17   | you           | sy                      | Gk. σύ (you) — attested
+25   | they          | autoi                   | Gk. αὐτοί (they) — attested
+26   | we            | hēmeis                  | Gk. ἡμεῖς (we) — attested
+33   | my            | emon                    | Gk. ἐμόν (my/mine) — attested
+57   | him           | auton                   | Gk. αὐτόν (him) — attested
+59   | me            | eme                     | Gk. ἐμέ (me) — attested
+60   | people        | dēmos                   | Gk. δῆμος (people/demos) — attested
+65   | some          | tines                   | Gk. τινές (some/certain ones) — attested
+67   | them          | autous                  | Gk. αὐτούς (them) — attested
+100  | great         | megas                   | Gk. μέγας (great/large) — attested
+131  | children      | paides                  | Gk. παῖδες (children) — attested
+133  | girl          | korē                    | Gk. κόρη (girl/maiden) — attested
+143  | boy           | pais                    | Gk. παῖς (boy/child) — attested
+157  | family        | oikos                   | Gk. οἶκος (household/family) — attested
+161  | man           | anēr                    | Gk. ἀνήρ (man) — Homeric attested
+165  | woman         | gynē                    | Gk. γυνή (woman) — attested
+168  | king          | basileus                | Gk. βασιλεύς (king) — attested
+226  | person        | anthrōpos               | Gk. ἄνθρωπος (person/human) — attested
+228  | friend        | philos                  | Gk. φίλος (friend/dear) — attested
+348  | brother       | adelphos                | Gk. ἀδελφός (brother) — attested
+382  | baby          | brephos                 | Gk. βρέφος (infant/baby) — attested
+430  | son           | hyios                   | Gk. υἱός (son) — attested
+494  | mother        | mētēr                   | Gk. μήτηρ (mother) — attested
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | topos                   | Gk. τόπος (place/location) — attested
+97   | day           | hēmera                  | Gk. ἡμέρα (day) — attested
+135  | river         | potamos                 | Gk. ποταμός (river) — attested
+136  | mile          | stadion                 | Gk. στάδιον (stadion/distance) — attested
+174  | rock          | petra                   | Gk. πέτρα (rock/stone) — attested
+176  | fire          | pyr                     | Gk. πῦρ (fire) — Homeric attested
+178  | south         | notos                   | Gk. νότος (south/south wind) — attested
+179  | north         | boreas                  | Gk. Βορέας (north wind/north) — attested
+181  | piece         | morion                  | Gk. μόριον (piece/part) — attested
+188  | space         | khōra                   | Gk. χώρα (space/land/region) — attested
+190  | ground        | gaia                    | Gk. γαῖα (earth/ground) — Homeric attested
+196  | hour          | hōra                    | Gk. ὥρα (hour/season/time) — attested
+203  | west          | zephyros                | Gk. Ζέφυρος (west wind/west) — attested
+212  | morning       | ēōs                     | Gk. ἠώς (dawn/morning) — Homeric attested
+233  | rain          | hyetos                  | Gk. ὑετός (rain) — attested
+240  | cold          | psychros                | Gk. ψυχρός (cold) — attested
+242  | dark          | skotos                  | Gk. σκότος (darkness) — attested
+247  | light         | phōs                    | Gk. φῶς (light) — attested
+250  | wave          | kyma                    | Gk. κῦμα (wave) — attested
+252  | heart         | kardia                  | Gk. καρδία (heart) — attested
+254  | star          | astron                  | Gk. ἄστρον (star) — Homeric attested
+255  | box           | kybōtos                 | Gk. κυβωτός (box/chest) — attested
+266  | field         | pedion                  | Gk. πεδίον (field/plain) — attested
+268  | rest          | anapausis               | Gk. ἀνάπαυσις (rest/pause) — attested
+274  | ocean         | thalassa                | Gk. θάλασσα (sea/ocean) — attested
+277  | minute        | mikron khronon          | Gk. (small time) stylized
+285  | fact          | alētheia                | Gk. ἀλήθεια (truth/fact) — attested
+287  | street        | hodos                   | Gk. ὁδός (road/way/street) — attested
+290  | lot           | polys                   | Gk. πολύς (much/many/a lot) — attested
+299  | course        | dromos                  | Gk. δρόμος (course/race/road) — attested
+301  | wheel         | trokhos                 | Gk. τροχός (wheel) — attested
+303  | force         | dynamis                 | Gk. δύναμις (force/power) — attested
+305  | moon          | selēnē                  | Gk. σελήνη (moon) — attested
+306  | island        | nēsos                   | Gk. νῆσος (island) — attested
+308  | foot          | pous                    | Gk. πούς (foot) — attested
+312  | boat          | ploion                  | Gk. πλοῖον (boat/vessel) — attested
+316  | plane         | pterygion               | Gk. πτερύγιον (wing/flying thing) stylized
+318  | thousand      | khilioi                 | Gk. χίλιοι (thousand) — attested
+320  | game          | agon                    | Gk. ἀγών (game/contest/struggle) attested
+323  | heat          | thermē                  | Gk. θέρμη (heat) — attested
+327  | snow          | khiōn                   | Gk. χιών (snow) — attested
+334  | east          | apēliōtēs               | Gk. ἀπηλιώτης (east wind/east) — attested
+336  | language      | glōssa                  | Gk. γλῶσσα (tongue/language) — attested
+339  | ball          | sphaira                 | Gk. σφαῖρα (sphere/ball) — attested
+341  | drop          | stagōn                  | Gk. σταγών (drop) — attested
+345  | engine        | mēkhanē                 | Gk. μηχανή (machine/engine) — attested
+347  | arm           | brakhi on               | Gk. βραχίων (arm) — attested
+352  | material      | hylē                    | Gk. ὕλη (matter/material/wood) — attested
+353  | size          | megethos                | Gk. μέγεθος (size/greatness) — attested
+360  | ice           | krystallos              | Gk. κρύσταλλος (ice/crystal) — attested
+361  | matter        | hylē                    | Gk. ὕλη (matter — same as material)
+363  | pair          | syzygia                 | Gk. συζυγία (pair/union) — attested
+366  | length        | mēkos                   | Gk. μῆκος (length) — attested
+367  | syllable      | syllabē                 | Gk. συλλαβή (syllable) — attested
+374  | subject       | hypokeimenon            | Gk. ὑποκείμενον (subject/underlying) attested
+375  | region        | khōra                   | Gk. χώρα (region — same as space)
+376  | energy        | energeia                | Gk. ἐνέργεια (energy/activity) — attested
+379  | art           | tekhnē                  | Gk. τέχνη (art/craft/skill) — attested
+384  | circle        | kyklos                  | Gk. κύκλος (circle/cycle) — attested
+387  | fraction      | morion                  | Gk. μόριον (fraction/part — same as piece)
+388  | forest        | hylē                    | Gk. ὕλη (forest/wood — same as material)
+391  | race          | genos                   | Gk. γένος (race/kind/lineage) — attested
+392  | window        | thyris                  | Gk. θυρίς (window/small door) — attested
+393  | store         | apothekon               | Gk. ἀποθήκη (storehouse) — attested
+394  | summer        | theros                  | Gk. θέρος (summer/harvest) — attested
+395  | train         | hodos kineisthai        | Gk. (road-moving) stylized
+399  | wall          | teikhos                 | Gk. τεῖχος (wall/fortification) — attested
+401  | mount         | oros                    | Gk. ὄρος (mountain) — attested
+403  | sky           | ouranos                 | Gk. οὐρανός (sky/heaven) — attested
+407  | board         | sanís                   | Gk. σανίς (board/plank) — attested
+408  | joy           | khara                   | Gk. χαρά (joy) — Koine attested
+409  | winter        | kheimōn                 | Gk. χειμών (winter/storm) — attested
+412  | glass         | hyalos                  | Gk. ὕαλος (glass/crystal) — attested
+413  | grass         | poa                     | Gk. πόα (grass) — attested
+414  | cow           | bous                    | Gk. βοῦς (cow/ox) — attested
+416  | job           | ergon                   | Gk. ἔργον (work/deed/job) — attested
+417  | edge          | akrē                    | Gk. ἄκρη (edge/tip/extremity) — attested
+419  | sign          | sēmeion                 | Gk. σημεῖον (sign/signal) — attested
+422  | fun           | paidia                  | Gk. παιδιά (fun/play) — attested
+423  | bright        | lampos                  | Gk. λαμπός (bright/shining) stylized
+424  | gas           | pneuma                  | Gk. πνεῦμα (breath/spirit/gas) — attested
+425  | weather       | kairos                  | Gk. καιρός (weather/time/season) attested
+426  | month         | mēn                     | Gk. μήν (month) — attested
+427  | million       | myriades                | Gk. μυριάδες (ten-thousands/millions) attested
+428  | bear          | arktos                  | Gk. ἄρκτος (bear) — attested
+429  | flower        | anthos                  | Gk. ἄνθος (flower/bloom) — attested
+432  | hair          | thrix                   | Gk. θρίξ (hair) — attested
+436  | village       | kōmē                    | Gk. κώμη (village) — attested
+438  | root          | rhiza                   | Gk. ῥίζα (root) — attested
+442  | metal         | metallon                | Gk. μέταλλον (metal/mine) — attested
+445  | paragraph     | paragraphos             | Gk. παράγραφος (paragraph) — attested
+449  | third         | triton                  | Gk. τρίτον (third) — attested
+452  | floor         | edaphos                 | Gk. ἔδαφος (floor/ground) — attested
+453  | result        | apotelasma              | Gk. ἀποτέλεσμα (result/outcome) attested
+454  | hill          | lofos                   | Gk. λόφος (hill/crest) — attested
+456  | cat           | ailouros                | Gk. αἴλουρος (cat) — attested
+460  | century       | hekaton etē             | Gk. ἑκατόν ἔτη (hundred years) stylized
+461  | type          | typos                   | Gk. τύπος (type/pattern/blow) — attested
+462  | law           | nomos                   | Gk. νόμος (law/custom) — attested
+463  | bit           | mikron                  | Gk. μικρόν (small/bit) — attested
+464  | coast         | aktē                    | Gk. ἀκτή (coast/headland) — attested
+467  | phrase        | phrasis                 | Gk. φράσις (phrase/expression) — attested
+469  | sand          | ammos                   | Gk. ἄμμος (sand) — attested
+470  | soil          | gaia                    | Gk. γαῖα (earth/soil — same as ground)
+473  | temperature   | thermokrasia            | Gk. θερμοκρασία (temperature) stylized
+474  | finger        | daktylos                | Gk. δάκτυλος (finger/dactyl) — attested
+475  | industry      | ergasia                 | Gk. ἐργασία (industry/work) — attested
+476  | value         | axios                   | Gk. ἄξιος (value/worthy) — attested
+479  | view          | theōria                 | Gk. θεωρία (view/theory/sight) — attested
+480  | sense         | aisthēsis               | Gk. αἴσθησις (sense/perception) — attested
+481  | ear           | ous                     | Gk. οὖς (ear) — attested
+487  | case          | pragma                  | Gk. πρᾶγμα (case/thing/matter) — attested
+488  | middle        | mesos                   | Gk. μέσος (middle/centre) — attested
+492  | lake          | limnē                   | Gk. λίμνη (lake/marsh) — attested
+493  | moment        | stigmē                  | Gk. στιγμή (moment/point/dot) — attested
+495  | scale         | kanōn                   | Gk. κανών (scale/rule/standard) — attested
+496  | loud          | megalophōnos            | Gk. μεγαλόφωνος (loud/great-voiced) attested
+497  | spring        | eiar                    | Gk. ἔαρ (spring season) — attested
+500  | cloud         | nephos                  | Gk. νέφος (cloud/mass) — attested
+
+--- ADJECTIVES ---
+36   | all           | pas                     | Gk. πᾶς (all/every) — attested
+40   | so            | houtōs                  | Gk. οὕτως (so/thus) — attested
+41   | up            | anō                     | Gk. ἄνω (up/above) — attested
+42   | out           | exō                     | Gk. ἔξω (out/outside) — attested
+66   | some          | tines                   | Gk. τινές (some — same as above)
+69   | other         | allos                   | Gk. ἄλλος (other — same as else)
+70   | than          | ē                       | Gk. ἤ (than/or — same as or)
+74   | how           | pōs                     | Gk. πῶς (how) — attested
+89   | new           | neos                    | Gk. νέος (new/young) — attested
+90   | even          | kai                     | Gk. καί (even — same as and)
+91   | way           | tropos                  | Gk. τρόπος (way/manner/turn) — attested
+93   | any           | tis                     | Gk. τις (any/some — same as a)
+98   | most          | pleistos                | Gk. πλεῖστος (most/very many) — attested
+101  | large         | megas                   | Gk. μέγας (large — same as great)
+103  | often         | pollakis                | Gk. πολλάκις (often/many times) — attested
+105  | high          | hypsēlos                | Gk. ὑψηλός (high/lofty) — attested
+111  | few           | oligos                  | Gk. ὀλίγος (few/small) — attested
+113  | white         | leukos                  | Gk. λευκός (white/bright) — attested
+117  | young         | neos                    | Gk. νέος (young — same as new)
+118  | ready         | hetoimos                | Gk. ἕτοιμος (ready/prepared) — attested
+120  | usual         | synēthēs                | Gk. συνήθης (usual/customary) — attested
+121  | plain         | haplous                 | Gk. ἁπλοῦς (plain/simple) — attested
+122  | above         | hyper                   | Gk. ὑπέρ (above — same as prep)
+124  | second        | deuteros                | Gk. δεύτερος (second) — attested
+125  | enough        | hikanos                 | Gk. ἱκανός (enough/sufficient) — attested
+126  | ever          | aei                     | Gk. ἀεί (always/ever) — attested
+127  | red           | erythros                | Gk. ἐρυθρός (red) — attested
+128  | old           | palaios                 | Gk. παλαιός (old/ancient) — attested
+130  | though        | kaiper                  | Gk. καίπερ (though/although) — attested
+132  | short         | brachys                 | Gk. βραχύς (short/brief) — attested
+138  | true          | alēthēs                 | Gk. ἀληθής (true) — attested
+139  | full          | plērēs                  | Gk. πλήρης (full) — attested
+140  | whole         | holos                   | Gk. ὅλος (whole/entire) — attested
+144  | fast          | takhys                  | Gk. ταχύς (fast/swift) — attested
+145  | simple        | haplous                 | Gk. ἁπλοῦς (simple — same as plain)
+146  | several       | pleiones                | Gk. πλείονες (several/more) — attested
+148  | best          | aristos                 | Gk. ἄριστος (best/noble) — attested
+149  | better        | ameinōn                 | Gk. ἀμείνων (better) — attested
+151  | early         | prōios                  | Gk. πρώιος (early/at dawn) — attested
+153  | complete      | teleios                 | Gk. τέλειος (complete/perfect) — attested
+156  | certain       | bebaiōs                 | Gk. βεβαίως (certain/firm) — attested
+163  | general       | koinos                  | Gk. κοινός (general/common) — attested
+164  | special       | idios                   | Gk. ἴδιος (special/particular/own) attested
+166  | correct       | orthos                  | Gk. ὀρθός (correct/straight) — attested
+167  | able          | dynatos                 | Gk. δυνατός (able/powerful) — attested
+168  | fine          | kalos                   | Gk. καλός (fine/beautiful/good) — attested
+170  | beautiful     | kalos                   | Gk. καλός (beautiful — same as fine)
+171  | gone          | oikhomenos              | Gk. οἰχόμενος (gone/departed) — attested
+172  | quick         | takhys                  | Gk. ταχύς (quick — same as fast)
+173  | free          | eleutheros              | Gk. ἐλεύθερος (free) — attested
+175  | warm          | thermos                 | Gk. θερμός (warm/hot) — attested
+176  | strong        | ischyros                | Gk. ἰσχυρός (strong) — attested
+177  | clear         | saphēs                  | Gk. σαφής (clear/plain) — attested
+178  | deep          | bathys                  | Gk. βαθύς (deep) — attested
+180  | possible      | dynaton                 | Gk. δυνατόν (possible) — attested
+182  | dry           | xēros                   | Gk. ξηρός (dry) — attested
+184  | wild          | agrios                  | Gk. ἄγριος (wild/savage) — attested
+185  | natural       | physikos                | Gk. φυσικός (natural) — attested
+186  | safe          | asphalēs                | Gk. ἀσφαλής (safe/secure) — attested
+187  | busy          | asgholos                | Gk. ἄσχολος (busy/occupied) — attested
+189  | common        | koinos                  | Gk. κοινός (common — same as general)
+192  | distant       | porrō                   | Gk. πόρρω (distant/far) — attested
+193  | heavy         | barys                   | Gk. βαρύς (heavy) — attested
+195  | present       | parōn                   | Gk. παρών (present/being there) — attested
+197  | wide          | eurys                   | Gk. εὐρύς (wide/broad) — attested
+200  | broken        | thryptos                | Gk. θρυπτός (broken/crushed) stylized
+202  | hot           | kautos                  | Gk. καυτός (hot/burning) — attested
+204  | tall          | hypsēlos                | Gk. ὑψηλός (tall — same as high)
+205  | soft          | malakos                 | Gk. μαλακός (soft/gentle) — attested
+207  | direct        | euthys                  | Gk. εὐθύς (direct/straight) — attested
+208  | sudden        | exaiphnēs               | Gk. ἐξαίφνης (sudden) — attested
+213  | exact         | akribēs                 | Gk. ἀκριβής (exact/precise) — attested
+216  | happy         | eudaimōn                | Gk. εὐδαίμων (happy/flourishing) attested
+217  | probable      | eikos                   | Gk. εἰκός (probable/likely) — attested
+218  | last          | eschatos                | Gk. ἔσχατος (last/extreme) — attested
+219  | lone          | monos                   | Gk. μόνος (lone/alone/only) — attested
+220  | written       | graptos                 | Gk. γραπτός (written) — attested
+221  | silent        | sigēlos                 | Gk. σιγηλός (silent/quiet) — attested
+222  | strange       | atopos                  | Gk. ἄτοπος (strange/out of place) attested
+
+--- NUMBERS ---
+83   | two           | dyo                     | Gk. δύο (two) — attested
+197  | five          | pente                   | Gk. πέντε (five) — attested
+210  | six           | hex                     | Gk. ἕξ (six) — attested
+215  | ten           | deka                    | Gk. δέκα (ten) — attested
+439  | eight         | oktō                    | Gk. ὀκτώ (eight) — attested
+449  | seven         | hepta                   | Gk. ἑπτά (seven) — attested
+450  | three         | treis                   | Gk. τρεῖς (three) — attested
+
+--- TIME WORDS ---
+54   | time          | khronos                 | Gk. χρόνος (time/duration) — attested
+96   | day           | hēmera                  | Gk. ἡμέρα (day — same as above)
+188  | year          | etos                    | Gk. ἔτος (year) — attested
+193  | hour          | hōra                    | Gk. ὥρα (hour — same as above)
+196  | week          | hebdomas                | Gk. ἑβδομάς (week/seven days) — attested
+213  | minute        | lepton                  | Gk. λεπτόν (small/minute — also coin) stylized
+214  | morning       | prōia                   | Gk. πρωία (morning) — attested
+426  | month         | mēn                     | Gk. μήν (month — same as above)
+
+===================================================================================
+PHONETIC GUIDE FOR SUNBLADE GREEK
+===================================================================================
+
+Ancient Greek sounds (Romanized for fantasy use):
+  ph  = voiceless bilabial aspirate (as in "phone" — Gk. φ)
+  th  = voiceless dental aspirate (as in "thin" — Gk. θ)
+  kh  = voiceless velar aspirate (as in Scots "loch" — Gk. χ)
+  rh  = voiceless r (initial rho — Gk. ῥ)
+  ps  = affricate (as in "caps" — Gk. ψ)
+  ks  = affricate (as in "ax" — Gk. ξ)
+  ē   = long e (as in "they" — Gk. η)
+  ō   = long o (as in "go" — Gk. ω)
+  ai  = diphthong (as in "aisle" — Gk. αι)
+  oi  = diphthong (as in "boy" — Gk. οι)
+  au  = diphthong (as in "now" — Gk. αυ)
+  eu  = diphthong (Gk. ευ — no English equivalent)
+
+Characteristic noun endings from name list:
+  -os / -os   = masculine nominative (potamos, topos, logos)
+  -ē / -ē     = feminine nominative (hodos, gynē, selēnē)
+  -on / -on   = neuter nominative (astron, pedion, ergon)
+  -is / -is   = feminine i-stem (polis, pistis, phrasis)
+  -eia / -eia = abstract feminine (alētheia, energeia)
+  -ia / -ia   = action noun (paidia, ergasia)
+  -sis / -sis = process noun (aisthēsis, anapausis)
+  -ma / -ma   = result noun (pragma, apotelasma)
+
+Prefix system (all attested):
+  a- / an-   = without/not (atopos, asphalēs)
+  ana-       = up/back/again (anabainein)
+  apo-       = away from (apienai, apodeiknynai)
+  dia-       = through/across (dialegein)
+  epi-       = upon/at (epimelesthai, epei)
+  kata-      = down/against (kata, katanoein)
+  meta-      = after/with (meta)
+  para-      = beside/beyond (parerkhesthai)
+  peri-      = around/about (periékhein)
+  pro-       = before/forward (protos)
+  syn-/sym-  = together (synantān, syzygia)
+  hyper-     = over/above (hyper)
+  hypo-      = under/by (hypo)
+
+===================================================================================
+
+
+241  | power          | kratos                   |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | pros                     |
+8     | that           | hoti                     |
+10    | it             | auto                     |
+11    | for            | dia                      |
+19    | at             | epi                      |
+20    | this           | touto                    |
+22    | his            | autou                    |
+27    | say            | legein                   |
+28    | her            | autēs                    |
+29    | she            | autē                     |
+31    | an             | tis                      |
+34    | one            | heis                     |
+35    | all            | pas                      |
+37    | there          | ekei                     |
+39    | what           | ti                       |
+46    | get            | lambanein                |
+48    | go             | ienai                    |
+49    | me             | eme                      |
+50    | when           | hote                     |
+55    | no             | ou                       |
+58    | know           | eidenai                  |
+61    | into           | eis                      |
+62    | year           | etos                     |
+64    | good           | agathos                  |
+75    | come           | erkhesthai               |
+77    | over           | hyper                    |
+79    | also           | kai                      |
+80    | back           | opisō                    |
+81    | after          | meta                     |
+82    | use            | khresthai                |
+87    | first          | prōtos                   |
+88    | well           | eu                       |
+94    | any            | tis                      |
+102   | need           | khresthai                |
+104   | often          | pollakis                 |
+106   | high           | hypsēlos                 |
+108   | hold           | ekhein                   |
+110   | never          | oudepote                 |
+112   | north          | boreas                   |
+114   | seem           | phainesthai              |
+116   | next           | eita                     |
+119   | begin          | arkhesthai               |
+129   | both           | amphoteroi               |
+134   | mile           | stadion                  |
+142   | girl           | korē                     |
+147   | ever           | aei                      |
+152   | talk           | dialegein                |
+158   | direct         | euthys                   |
+160   | leave          | apienai                  |
+162   | measure        | metrein                  |
+169   | wind           | anemos                   |
+194   | true           | alēthēs                  |
+198   | remember       | mimnēskesthai            |
+211   | table          | trapeza                  |
+223   | pattern        | typos                    |
+225   | center         | mesos                    |
+227   | person         | anthrōpos                |
+230   | appear         | phainesthai              |
+231   | road           | hodos                    |
+232   | map            | pinax                    |
+234   | rule           | arkhein                  |
+236   | pull           | helkein                  |
+238   | notice         | katanoein                |
+244   | drive          | elaunein                 |
+245   | lead           | agein                    |
+246   | cry            | klaien                   |
+249   | note           | sēmeion                  |
+256   | field          | pedion                   |
+257   | rest           | anapausis                |
+258   | correct        | orthos                   |
+259   | able           | dynatos                  |
+260   | pound          | litra                    |
+262   | beauty         | kallos                   |
+264   | stood          | histanai                 |
+267   | teach          | didaskein                |
+269   | final          | teleutaios               |
+270   | gave           | edōka                    |
+271   | green          | khlōros                  |
+272   | oh             | ō                        |
+275   | ocean          | thalassa                 |
+278   | minute         | lepton                   |
+279   | strong         | ischyros                 |
+280   | special        | idios                    |
+282   | clear          | saphēs                   |
+283   | tail           | oura                     |
+284   | produce        | apophérein               |
+286   | street         | hodos                    |
+288   | lot            | polys                    |
+289   | nothing        | ouden                    |
+291   | stay           | menein                   |
+293   | full           | plērēs                   |
+295   | blue           | kyanos                   |
+296   | object         | pragma                   |
+298   | surface        | epiphaneia               |
+300   | moon           | selēnē                   |
+302   | foot           | pous                     |
+304   | busy           | asgholos                 |
+307   | boat           | ploion                   |
+309   | gold           | khrysos                  |
+310   | possible       | dynaton                  |
+311   | plane          | pterygion                |
+314   | wonder         | thaumazein               |
+317   | ago            | palai                    |
+321   | shape          | morphē                   |
+324   | miss           | leipein                  |
+325   | brought        | ēnenka                   |
+326   | heat           | thermē                   |
+329   | bring          | pherein                  |
+330   | yes            | nai                      |
+331   | distant        | porrō                    |
+333   | east           | apēliōtēs                |
+337   | grand          | megas                    |
+342   | heart          | kardia                   |
+343   | am             | eimi                     |
+344   | present        | parōn                    |
+346   | dance          | orcheisthai              |
+349   | arm            | brakhiōn                 |
+350   | wide           | eurys                    |
+351   | sail           | plein                    |
+354   | vary           | alloioun                 |
+355   | settle         | katoikizein              |
+357   | weight         | baros                    |
+359   | ice            | krystallos               |
+362   | pair           | syzygia                  |
+364   | divide         | diairein                 |
+365   | syllable       | syllabē                  |
+369   | sudden         | exaiphnēs                |
+370   | count          | arithmein                |
+372   | reason         | aitia                    |
+373   | length         | mēkos                    |
+377   | region         | khōra                    |
+378   | energy         | energeia                 |
+380   | probable       | eikos                    |
+381   | bed            | klinē                    |
+383   | egg            | ōion                     |
+385   | cell           | kyttaron                 |
+389   | sit            | kathizein                |
+390   | race           | genos                    |
+396   | prove          | apodeiknynai             |
+397   | lone           | monos                    |
+398   | leg            | skelos                   |
+404   | sky            | ouranos                  |
+406   | joy            | khara                    |
+410   | wild           | agrios                   |
+411   | instrument     | organon                  |
+420   | past           | parelthōn                |
+421   | soft           | malakos                  |
+434   | strange        | atopos                   |
+440   | meet           | synantān                 |
+444   | solve          | lyein                    |
+446   | whether        | eite                     |
+447   | push           | ōthein                   |
+448   | seven          | hepta                    |
+458   | result         | apotelasma               |
+459   | burn           | kaiein                   |
+465   | type           | typos                    |
+468   | coast          | aktē                     |
+471   | silent         | sigēlos                  |
+472   | tall           | hypsēlos                 |
+477   | finger         | daktylos                 |
+478   | industry       | ergasia                  |
+483   | excite         | egeírein                 |
+484   | natural        | physikos                 |
+485   | view           | theōria                  |
+486   | sense          | aisthēsis                |
+489   | quite          | pantos                   |
+491   | case           | pragma                   |
+498   | loud           | megalophōnos             |
+499   | spring         | eiar                     |
+
+END OF FILE — SunbladeGreek_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

@@ -1,0 +1,589 @@
+APISVELDIR BYZANTINE-MUGHAL - 500 Common Word Translations
+Fantasy Language based on ApisveldirByzantine-Mughal name patterns
+Linguistic roots: Byzantine Greek (medieval, 4th-15th c. AD) + broad Mughal
+blend of Classical Persian and Sanskrit roots
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Byzantine Greek):
+  ho/hē (the), eis (one/into), kai (and), ou/mē (not), en (in/at),
+  ek (from/out), pros (to/toward), meta (with/after), hypo (under/by),
+  einai (to be), ekhein (to have), poiein (to do/make), legein (to say),
+  horan (to see), erkhesthai (to come), ienai (to go), eidenai (to know),
+  anthrōpos (person), gynē (woman), pais (child), basileus (king),
+  gē (earth), pyr (fire), hydōr (water), ouranos (sky), hēmera (day),
+  megas (great), kalos (beautiful/good), alēthēs (true), kyrios (lord)
+
+KEY SOURCE WORDS (Persian/Sanskrit Mughal):
+  Persian: khub (good), bozorg (great), āb (water), ātash (fire), zamīn (earth),
+  āsmān (sky), rōz (day), māh (moon), sitāra (star), rang (color/paint),
+  dil (heart), dast (hand), sar (head), khāna (house/place), rāh (road/way),
+  dānistan (to know), dīdan (to see), guftan (to say), raftan (to go),
+  Sanskrit: jala (water), agni (fire), bhumi (earth), akasha (sky), dina (day),
+  chandra (moon), tara (star), hridaya (heart), hasta (hand), marga (path),
+  jana (person), raja (king), satya (truth), dharma (law/order), deva (divine)
+
+PHONETIC BRIDGE STRATEGY:
+  Byzantine Greek: -os/-is/-on endings, kh/th/ph aspirates, long vowels ē/ō
+  Persian/Sanskrit: open syllables, kh/sh/zh consonants, -an/-in/-ar endings
+  Bridge: Both share kh, r, n, m, s sounds and open vowel sequences
+  Fantasy suffix system: -ēl (noun/being, fr. Gk -ēl), -ān (place/abstract, fr. Pers -ān),
+  -ir (verb, blend of Gk -eirein + Pers -idan), -akh (adjective, fr. Pers -akh),
+  -om (collective, fr. Gk -ōm), -ara (graceful noun, fr. Sanskrit -ara)
+
+===================================================================================
+RANK | ENGLISH       | APISVELDIR              | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | khēl                    | ByzGk ho/hē + Pers khē stylized
+2    | a / an        | eisān                   | ByzGk eis (one/a) + -ān
+3    | to            | prosir                  | ByzGk pros (to/toward) + -ir
+6    | it            | autoēl                  | ByzGk auto (it/self) + -ēl
+8    | that          | ekeināl                 | ByzGk ekeinos (that) + -al
+10   | it            | autoēl                  | same
+11   | for           | khānakim                | Pers khāna (for/house) + -kim
+14   | this          | houtosān                | ByzGk houtos (this) + -ān
+20   | this          | houtosān                | same
+22   | his           | autoūēl                 | ByzGk autou (his) + -ēl
+28   | her           | autēsēl                 | ByzGk autēs (her) + -ēl
+29   | she           | autēāra                 | ByzGk autē (she) + -āra
+31   | an            | eisān                   | same as a
+34   | one           | heisel                  | ByzGk heis (one) + -el
+35   | all           | pasān                   | ByzGk pas (all) + -ān
+37   | there         | ekeiān                  | ByzGk ekei (there) + -ān
+38   | their         | autōnēl                 | ByzGk autōn (their) + -ēl
+39   | what          | tiān                    | ByzGk ti (what) + -ān
+45   | who           | tisāra                  | ByzGk tis (who) + -āra
+49   | me            | emēān                   | ByzGk emē (me) + -ān
+50   | when          | hopotān                 | ByzGk hopote (when) + -ān
+55   | no            | oukhān                  | ByzGk oukh (no/not) + -ān
+63   | your          | sonēl                   | ByzGk son (your) + -ēl
+64   | good          | khubāra                 | Pers khub (good) + -āra
+65   | some          | tinesān                 | ByzGk tines (some) + -ān
+69   | other         | allosēl                 | ByzGk allos (other) + -ēl
+83   | two           | dyoān                   | ByzGk dyo (two) + -ān
+85   | our           | hēmōnēl                 | ByzGk hēmōn (our) + -ēl
+95   | these         | houtaān                 | ByzGk houta (these) + -ān
+99   | us            | hēmasān                 | ByzGk hēmas (us) + -ān
+120  | got           | elabāra                 | ByzGk elab- (got/took) + -āra
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | einaiir                 | ByzGk einai (to be) + -ir
+70   | there         | ekeiān                  | same as there
+72   | seem          | phainirān               | ByzGk phain- (to seem/appear) + -irān
+78   | think         | noeisir                 | ByzGk noein (to think) + -isir
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | touēl                   | ByzGk tou (of/the) + -ēl
+5    | and           | kaiān                   | ByzGk kai (and) + -ān
+12   | not           | oukhān                  | ByzGk oukh (not) + -ān
+13   | on            | epiān                   | ByzGk epi (on/upon) + -ān
+14   | with          | metaān                  | ByzGk meta (with/after) + -ān
+19   | at            | enān                    | ByzGk en (at/in) + -ān
+21   | but           | allāān                  | ByzGk allā (but) + -ān
+23   | by            | hypoān                  | ByzGk hypo (by/under) + -ān
+24   | from          | apoān                   | ByzGk apo (from/away) + -ān
+30   | or            | ētān                    | ByzGk ē (or) + -tān
+32   | will          | mellirān                | ByzGk mellein (will/about to) + -ān
+33   | my            | emonēl                  | ByzGk emon (my) + -ēl
+36   | would         | ekhirān                 | ByzGk ekhein (would have) + -ān
+40   | so            | houtōsān                | ByzGk houtōs (so/thus) + -ān
+41   | up            | anōān                   | ByzGk anō (up/above) + -ān
+42   | out           | exōān                   | ByzGk exō (out/outside) + -ān
+43   | if            | eiān                    | ByzGk ei (if) + -ān
+44   | about         | periān                  | ByzGk peri (about/around) + -ān
+60   | because       | hotiān                  | ByzGk hoti (because/that) + -ān
+61   | into          | eisoān                  | ByzGk eis (into) + -oān
+71   | only          | mononān                 | ByzGk monon (only) + -ān
+76   | its           | autoūēl                 | same as his
+77   | over          | hyperān                 | ByzGk hyper (over/above) + -ān
+79   | also          | kaiān                   | ByzGk kai (also — same as and)
+80   | back          | opisthēl                | ByzGk opisthen (back/behind) + -ēl
+81   | after         | metaān                  | ByzGk meta (after — same as with)
+82   | use           | khrastirān              | ByzGk khrasthai (use) + -ān
+87   | first         | prōtoēl                 | ByzGk prōtos (first) + -ēl
+88   | well          | kalōsān                 | ByzGk kalōs (well/beautifully) + -ān
+90   | even          | kaiān                   | ByzGk kai (even — same as and)
+94   | any           | tinesān                 | ByzGk tines (any/some — same as some)
+102  | need          | khreiaān                | ByzGk khreia (need) + -ān
+104  | often         | pollakhisān             | ByzGk pollakhis (often) + -ān
+106  | high          | hypsēlosān              | ByzGk hypsēlos (high) + -ān
+110  | never         | oudepoteān              | ByzGk oudepote (never) + -ān
+112  | north         | boreāsān                | ByzGk boreas (north) + -ān
+114  | seem          | phainirān               | same as seem
+116  | next          | hexēsēl                 | ByzGk hexēs (next) + -ēl
+119  | begin         | arkhirān                | ByzGk arkhein (to begin) + -ān
+129  | both          | amphoteroiān            | ByzGk amphoteroi (both) + -ān
+133  | until         | heōsān                  | ByzGk heōs (until) + -ān
+147  | ever          | poteān                  | ByzGk pote (ever/once) + -ān
+150  | though        | kaiperān                | ByzGk kaiper (though) + -ān
+154  | soon          | takhēosān               | ByzGk takheos (soon/quickly) + -ān
+158  | direct        | euthysān                | ByzGk euthys (direct/straight) + -ān
+160  | leave         | apienahir               | ByzGk apienai (to leave) + -hir
+169  | wind          | zephyrosēl              | ByzGk zephyros (wind) + -ēl
+172  | since         | epeiān                  | ByzGk epei (since/when) + -ān
+183  | against       | kataān                  | ByzGk kata (against/down) + -ān
+192  | during        | enōān                   | ByzGk en (during/in) + -ōān
+194  | true          | alēthosān               | ByzGk alēthēs (true) + -ān
+219  | toward        | prosān                  | ByzGk pros (toward) + -ān
+225  | center        | mesitoēl                | ByzGk mesos (center) + -itoēl
+251  | still         | etiān                   | ByzGk eti (still/yet) + -ān
+261  | above         | hyperān                 | same as over
+287  | behind        | opisthēlān              | ByzGk opisthen (behind) + -ān
+330  | yes           | naīān                   | ByzGk nai (yes) + -ān
+332  | fill          | plērosir                | ByzGk plēroun (to fill) + -sir
+338  | yet           | etiān                   | same as still
+339  | among         | enamesān                | ByzGk en (among) + -mesān
+340  | perhaps       | isosān                  | ByzGk isōs (perhaps) + -ān
+343  | am            | eimiān                  | ByzGk eimi (I am) + -ān
+446  | whether       | eiān                    | same as if
+451  | shall         | mellirān                | same as will
+457  | either        | ētānētān                | ByzGk ē...ē (either...or)
+488  | else          | allosēlān               | ByzGk allos (else/other) + -ēlān
+489  | quite         | pantosān                | ByzGk pantos (quite/of all) + -ān
+490  | quite         | pantosān                | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | poiisir                 | ByzGk poiein (to do) + -isir
+9    | have          | ekhisir                 | ByzGk ekhein (to have) + -isir
+15   | he            | autosēl                 | ByzGk autos (he) + -ēl
+16   | as            | hōsān                   | ByzGk hōs (as/like) + -ān
+17   | you           | syān                    | ByzGk sy (you) + -ān
+18   | do            | poiisir                 | same
+25   | they          | autoiān                 | ByzGk autoi (they) + -ān
+26   | we            | hēmeisān                | ByzGk hēmeis (we) + -ān
+27   | say           | legisir                 | ByzGk legein (to say) + -isir
+46   | get           | lambanisir              | ByzGk lambanein (to get) + -isir
+47   | which         | hotiān                  | ByzGk hoti (which/that) + -ān
+48   | go            | ienaisir                | ByzGk ienai (to go) + -isir
+51   | make          | poiisir                 | ByzGk poiein (to make — same as do)
+52   | can           | dynasthaisir            | ByzGk dynasthai (can/able) + -isir
+53   | like          | phileisir               | ByzGk philein (to like/love) + -isir
+54   | time          | khronosēl               | ByzGk khronos (time) + -ēl
+56   | just          | mononān                 | same as only
+57   | him           | autonēl                 | ByzGk auton (him) + -ēl
+58   | know          | eidenaisir              | ByzGk eidenai (to know) + -isir
+59   | take          | lambanisir              | same as get
+62   | year          | etosēl                  | ByzGk etos (year) + -ēl
+66   | could         | edynātoān               | ByzGk edynato (could) + -ān
+67   | them          | autoūsān                | ByzGk autous (them) + -ān
+68   | see           | horeisir                | ByzGk horan (to see) + -eisir
+73   | look          | blepirān                | ByzGk blepein (to look) + -ān
+74   | only          | mononān                 | same
+75   | come          | eltheisir               | ByzGk elthein (to come) + -isir
+84   | use           | khrastirir              | ByzGk khrasthai (to use) + -ir
+86   | work          | ergonēl                 | ByzGk ergon (work) + -ēl
+89   | way           | hodoēl                  | ByzGk hodos (way/road) + -ēl
+91   | new           | neosān                  | ByzGk neos (new) + -ān
+92   | want          | boulisir                | ByzGk boulesthai (to want) + -isir
+93   | because       | hotiān                  | same as because
+96   | give          | didōnisir               | ByzGk didonai (to give) + -isir
+97   | day           | hēmeraēl                | ByzGk hēmera (day) + -ēl
+98   | most          | pleistosān              | ByzGk pleistos (most) + -ān
+100  | great         | megalosān               | ByzGk megas (great) + -ān
+101  | between       | metaxyān                | ByzGk metaxy (between) + -ān
+103  | large         | megaloēl                | ByzGk megas (large) + -ēl
+105  | hand          | kheiraēl                | ByzGk kheir (hand) + -aēl
+107  | place         | toposēl                 | ByzGk topos (place) + -ēl
+108  | hold          | kratisir                | ByzGk kratein (to hold) + -isir
+109  | turn          | strephisir              | ByzGk strephein (to turn) + -isir
+111  | few           | oligoān                 | ByzGk oligos (few) + -ān
+113  | open          | anoigisir               | ByzGk anoigein (to open) + -isir
+115  | together      | homouān                 | ByzGk homou (together) + -ān
+117  | white         | leukosān                | ByzGk leukos (white) + -ān
+118  | children      | paidaēl                 | ByzGk paida (children) + -ēl
+121  | walk          | badizisir               | ByzGk badizein (to walk) + -isir
+122  | example       | paradeigmaēl            | ByzGk paradeigma (example) + -ēl
+123  | ease          | eukholiaēl              | ByzGk eukolia (ease) + -ēl
+124  | paper         | kharaēl                 | ByzGk khartēs (paper) + -aēl
+125  | group         | homasēl                 | ByzGk homilos (group) + -asēl
+126  | always        | aeiān                   | ByzGk aei (always) + -ān
+127  | music         | mouseikēēl              | ByzGk mouseikē (music) + -ēl
+128  | those         | ekeinaiān               | ByzGk ekeinai (those) + -ān
+130  | mark          | sēmeionēl               | ByzGk sēmeion (mark/sign) + -ēl
+131  | book          | bibliomēl               | ByzGk biblion (book) + -ēl
+132  | letter        | grammataēl              | ByzGk gramma (letter) + -ēl
+134  | mile          | milionēl                | ByzGk milion (mile) + -ēl
+135  | river         | potamosēl               | ByzGk potamos (river) + -ēl
+136  | car           | trokhāraēl              | ByzGk trokhos (wheel/vehicle) + -āraēl
+137  | feet          | podesēl                 | ByzGk podes (feet) + -ēl
+138  | care          | epimeliairān            | ByzGk epimeleia (care) + -ān
+139  | second        | deuterosān              | ByzGk deuteros (second) + -ān
+140  | enough        | hikanosān               | ByzGk hikanos (enough) + -ān
+141  | plain         | pedinoēl                | ByzGk pedinos (plain/flat) + -ēl
+142  | girl          | koraēl                  | ByzGk korē (girl) + -aēl
+143  | usual         | synēthēsān              | ByzGk synēthēs (usual) + -ān
+144  | young         | neosān                  | ByzGk neos (young — same as new)
+145  | ready         | hetoimosān              | ByzGk hetoimos (ready) + -ān
+146  | above         | hyperān                 | same as over/above
+148  | red           | erythrosān              | ByzGk erythros (red) + -ān
+149  | list          | listosēl                | ByzGk + Pers list stylized + -ēl
+151  | feel          | aisthanisir             | ByzGk aisthanesthai (to feel) + -isir
+152  | talk          | laliirān                | ByzGk lalein (to talk) + -ān
+153  | bird          | orneonēl                | ByzGk orneon (bird) + -ēl
+155  | body          | sōmaēl                  | ByzGk sōma (body) + -ēl
+156  | dog           | kynosēl                 | ByzGk kyōn/kynos (dog) + -ēl
+157  | family        | oikosēl                 | ByzGk oikos (family/house) + -ēl
+159  | pose          | thesisēl                | ByzGk thesis (pose/position) + -ēl
+161  | song          | melōdiaēl               | ByzGk melōdia (song) + -ēl
+162  | measure       | metronēl                | ByzGk metron (measure) + -ēl
+163  | door          | thyraēl                 | ByzGk thyra (door) + -ēl
+164  | product       | karpomēl                | ByzGk karpos (fruit/product) + -ēl
+165  | black         | melanosān               | ByzGk melanos (black) + -ān
+166  | short         | brakhysān               | ByzGk brakhys (short) + -ān
+167  | numeral       | arithmosēl              | ByzGk arithmos (number) + -ēl
+168  | class         | taxisēl                 | ByzGk taxis (class/order) + -ēl
+170  | question      | erōtēmaēl               | ByzGk erōtēma (question) + -ēl
+171  | happen        | ginisir                 | ByzGk gignesthai (to happen) + -isir
+173  | ship          | ploionēl                | ByzGk ploion (ship) + -ēl
+174  | area          | khōraēl                 | ByzGk khōra (area/land) + -ēl
+175  | half          | hēmisyēl                | ByzGk hēmisy (half) + -ēl
+176  | rock          | petraēl                 | ByzGk petra (rock) + -ēl
+177  | order         | taxisirān               | ByzGk taxis (order) + -irān
+178  | fire          | atashēl                 | Pers ātash (fire) + -ēl
+179  | south         | notonēl                 | ByzGk notos (south) + -ēl
+180  | problem       | problēmaēl              | ByzGk problēma (problem) + -ēl
+181  | piece         | tmēmaēl                 | ByzGk tmēma (piece) + -ēl
+182  | told          | elekthēān               | ByzGk elekhthen (told/was said) + -ān
+184  | pass          | pareisir                | ByzGk parienai (to pass) + -isir
+185  | since         | epeiān                  | same as since
+186  | top           | akrōēl                  | ByzGk akrō (top/summit) + -ēl
+187  | whole         | holosān                 | ByzGk holos (whole) + -ān
+188  | king          | basilēosēl              | ByzGk basileos (king) + -ēl
+189  | space         | khōraēl                 | ByzGk khōra (space — same as area)
+190  | heard         | ēkousaān                | ByzGk ēkousa (heard) + -ān
+191  | best          | aristosān               | ByzGk aristos (best) + -ān
+192  | hour          | hōraēl                  | ByzGk hōra (hour) + -ēl
+193  | better        | ameinōnān               | ByzGk ameinōn (better) + -ān
+195  | during        | enōān                   | same as during
+196  | hundred       | hekatonēl               | ByzGk hekaton (hundred) + -ēl
+197  | five          | penteān                 | ByzGk pente (five) + -ān
+198  | remember      | mimnēskisir             | ByzGk mimnēskein (to remember) + -isir
+199  | step          | bēmaēl                  | ByzGk bēma (step/platform) + -ēl
+200  | early         | prōiosān                | ByzGk prōios (early) + -ān
+201  | hold          | kratisir                | same as hold
+202  | west          | dysmēēl                 | ByzGk dysmē (west/setting) + -ēl
+203  | ground        | gēēl                    | ByzGk gē (ground/earth) + -ēl
+204  | interest      | endiaferoēl             | ByzGk endiafer- (interest) + -oēl
+205  | reach         | hikānisir               | ByzGk hikanesthai (to reach) + -isir
+206  | fast          | takhysān                | ByzGk takhys (fast) + -ān
+207  | verb          | rhēmaēl                 | ByzGk rhēma (verb/word) + -ēl
+208  | sing          | aeideisir               | ByzGk aeidein (to sing) + -isir
+209  | listen        | akouisir                | ByzGk akouein (to listen) + -isir
+210  | six           | hexān                   | ByzGk hex (six) + -ān
+211  | table         | trapezaēl               | ByzGk trapeza (table) + -ēl
+212  | travel        | hodoisir                | ByzGk hodoiporein (travel) + -isir
+213  | less          | oligoterān              | ByzGk oligoteros (less) + -ān
+214  | morning       | prōiasēl                | ByzGk prōia (morning) + -ēl
+215  | ten           | dekaān                  | ByzGk deka (ten) + -ān
+216  | simple        | haploosān               | ByzGk haplous (simple) + -ān
+217  | several       | pleioneisān             | ByzGk pleiones (several) + -ān
+218  | vowel         | phōnēenēl               | ByzGk phōnēen (vowel) + -ēl
+220  | war           | polemosēl               | ByzGk polemos (war) + -ēl
+221  | lay           | klinisir                | ByzGk klinein (to lay/incline) + -isir
+222  | against       | kataān                  | same as against
+223  | pattern       | typosēl                 | ByzGk typos (pattern) + -ēl
+224  | slow          | bradysān                | ByzGk bradys (slow) + -ān
+226  | love          | dilēāra                 | Pers dil (heart/love) + -ēāra
+227  | person        | anthrōposēl             | ByzGk anthrōpos (person) + -ēl
+228  | money         | nomismaēl               | ByzGk nomisma (money/coin) + -ēl
+229  | serve         | hypēretisir             | ByzGk hypēretein (to serve) + -isir
+230  | appear        | phainirān               | same as seem
+231  | road          | hodoēl                  | ByzGk hodos (road — same as way)
+232  | map           | khartēsēl               | ByzGk khartēs (map/paper) + -ēl
+233  | rain          | hyetoēl                 | ByzGk hyetos (rain) + -ēl
+234  | rule          | nomosēl                 | ByzGk nomos (rule/law) + -ēl
+235  | govern        | arkhisir                | ByzGk arkhein (to govern) + -isir
+236  | pull          | helkisir                | ByzGk helkein (to pull) + -isir
+237  | cold          | psykhrosān              | ByzGk psykhros (cold) + -ān
+238  | notice        | katanoisir              | ByzGk katanoein (to notice) + -isir
+239  | voice         | phōnēēl                 | ByzGk phōnē (voice) + -ēl
+240  | fall          | peptisir                | ByzGk piptein (to fall) + -isir
+241  | power         | hayluēl                 | Ge'ez/Pers haylu (power) + -ēl
+242  | town          | polisēl                 | ByzGk polis (town/city) + -ēl
+243  | fine          | kalosān                 | ByzGk kalos (fine/beautiful) + -ān
+244  | drive         | elaunisir               | ByzGk elaunein (to drive) + -isir
+245  | lead          | agisir                  | ByzGk agein (to lead) + -isir
+246  | cry           | klaiisir                | ByzGk klaiein (to cry) + -isir
+247  | dark          | skotosēl                | ByzGk skotos (dark) + -ēl
+248  | machine       | mēkhanēēl               | ByzGk mēkhanē (machine) + -ēl
+249  | note          | sēmeionēl               | ByzGk sēmeion (note/sign) + -ēl
+250  | wait          | menisir                 | ByzGk menein (to wait) + -isir
+252  | figure        | morphēēl                | ByzGk morphē (figure/form) + -ēl
+253  | star          | sitaraēl                | Skt sitāra (star) + -ēl
+254  | box           | kibōtosēl               | ByzGk kibōtos (box/ark) + -ēl
+255  | noun          | onomanēl                | ByzGk onoma (noun/name) + -nēl
+256  | field         | pedinoēl                | ByzGk pedinos (field/plain) + -ēl
+257  | rest          | anapausisēl             | ByzGk anapausis (rest) + -ēl
+258  | correct       | orthosān                | ByzGk orthos (correct) + -ān
+259  | able          | dynastosān              | ByzGk dynastos (able) + -ān
+260  | pound         | litranēl                | ByzGk litra (pound) + -nēl
+262  | beauty        | kallosēl                | ByzGk kallos (beauty) + -ēl
+263  | drive         | elaunisir               | same as drive
+264  | stood         | estēkāra                | ByzGk estēka (stood) + -āra
+265  | contain       | perikhisir              | ByzGk perikhein (to contain) + -isir
+266  | front         | emprosthēl              | ByzGk emprosthen (front) + -ēl
+267  | teach         | didaskisir              | ByzGk didaskein (to teach) + -isir
+268  | week          | hebdomadaēl             | ByzGk hebdomada (week) + -ēl
+269  | final         | teleutaiosān            | ByzGk teleutaios (final) + -ān
+270  | gave          | edōkāra                 | ByzGk edōka (gave) + -āra
+271  | green         | khlōrosān               | ByzGk khlōros (green) + -ān
+272  | oh            | ōāra                    | ByzGk ō (oh/exclamation) + -āra
+273  | quick         | takhysān                | same as fast
+274  | develop       | auxānisir               | ByzGk auxanein (to develop/grow) + -isir
+275  | ocean         | thalassēēl              | ByzGk thalassa (ocean) + -ēl
+276  | warm          | thermosān               | ByzGk thermos (warm) + -ān
+277  | free          | eleutherosān            | ByzGk eleutheros (free) + -ān
+278  | minute        | leptonēl                | ByzGk lepton (minute/small) + -ēl
+279  | strong        | ischyrosān              | ByzGk ischyros (strong) + -ān
+280  | special       | idiosān                 | ByzGk idios (special/own) + -ān
+281  | behind        | opisthēlān              | same as behind
+282  | clear         | saphēsān                | ByzGk saphēs (clear) + -ān
+283  | tail          | ouraēl                  | ByzGk oura (tail) + -ēl
+284  | produce       | apopherisir             | ByzGk apopherein (to produce) + -isir
+285  | fact          | pragmaēl                | ByzGk pragma (fact/deed) + -ēl
+286  | street        | dromoēl                 | ByzGk dromos (street/race) + -ēl
+288  | lot           | polysān                 | ByzGk polys (lot/much) + -ān
+289  | nothing       | oudenēl                 | ByzGk ouden (nothing) + -ēl
+290  | course        | dromoēl                 | ByzGk dromos (course — same as street)
+291  | stay          | menisir                 | same as wait
+292  | wheel         | trokhosēl               | ByzGk trokhos (wheel) + -ēl
+293  | full          | plērēsān                | ByzGk plērēs (full) + -ān
+294  | force         | dynamosēl               | ByzGk dynamis (force) + -ēl
+295  | blue          | kyanoēl                 | ByzGk kyanos (blue) + -ēl
+296  | object        | pragmaēl                | same as fact/object
+297  | decide        | krinisir                | ByzGk krinein (to decide) + -isir
+298  | surface       | epiphaneiaēl            | ByzGk epiphaneia (surface) + -ēl
+299  | deep          | bathysān                | ByzGk bathys (deep) + -ān
+300  | moon          | selēnēēl                | ByzGk selēnē (moon) + -ēl
+301  | island        | nēsosēl                 | ByzGk nēsos (island) + -ēl
+302  | foot          | podosēl                 | ByzGk podos (foot) + -ēl
+303  | system        | systēmaēl               | ByzGk systēma (system) + -ēl
+304  | busy          | asgholosān              | ByzGk askholos (busy) + -ān
+305  | test          | dokimasiaēl             | ByzGk dokimasia (test) + -ēl
+306  | record        | anagraphēēl             | ByzGk anagraphē (record) + -ēl
+307  | boat          | ploionēl                | same as ship
+308  | common        | koinosān                | ByzGk koinos (common) + -ān
+309  | gold          | khrysonēl               | ByzGk khrysion (gold) + -ēl
+310  | possible      | dynastonān              | ByzGk dynastos (possible) + -ān
+311  | plane         | epitedosēl              | ByzGk epipedon (plane/flat) + -ēl
+312  | stead         | toposēl                 | same as place
+313  | dry           | xērosān                 | ByzGk xēros (dry) + -ān
+314  | wonder        | thaumazisir             | ByzGk thaumazein (to wonder) + -isir
+315  | laugh         | gelaisir                | ByzGk gelān (to laugh) + -isir
+316  | thousand      | khilioiān               | ByzGk khilioi (thousand) + -ān
+317  | ago           | palaiān                 | ByzGk palai (ago/long ago) + -ān
+318  | ran           | edrameāra               | ByzGk edramen (ran) + -āra
+319  | check         | skopisir                | ByzGk skopein (to check) + -isir
+320  | game          | agōnēl                  | ByzGk agōn (game/contest) + -ēl
+321  | shape         | morphēēl                | same as figure
+322  | equate        | isoūnisir               | ByzGk isoun (to equate) + -isir
+323  | hot           | thermoān                | ByzGk thermos (hot — same as warm)
+324  | miss          | elleipoisir             | ByzGk elleipein (to miss/lack) + -isir
+325  | brought       | ēnegkāra                | ByzGk ēnenka (brought) + -āra
+326  | heat          | thermēēl                | ByzGk thermē (heat) + -ēl
+327  | snow          | khionēēl                | ByzGk khiōn (snow) + -ēl
+328  | tire          | kopoisir                | ByzGk kopoun (to tire) + -isir
+329  | bring         | pherisir                | ByzGk pherein (to bring) + -isir
+331  | distant       | porrōān                 | ByzGk porrō (distant) + -ān
+333  | east          | anatolēēl               | ByzGk anatolē (east) + -ēl
+334  | paint         | graphisir               | ByzGk graphein (to paint/write) + -isir
+335  | language      | glōssēēl                | ByzGk glōssa (language) + -ēl
+336  | among         | enamesān                | same as among
+337  | grand         | megalosān               | same as great
+341  | drop          | stagōnēl                | ByzGk stagōn (drop) + -ēl
+342  | heart         | kardiaēl                | ByzGk kardia (heart) + -ēl
+344  | present       | parōnān                 | ByzGk parōn (present) + -ān
+345  | heavy         | barysān                 | ByzGk barys (heavy) + -ān
+346  | dance         | orkhisir                | ByzGk orkheisthai (to dance) + -isir
+347  | engine        | mēkhanēēl               | same as machine
+348  | position      | thesisēl                | same as pose
+349  | arm           | brakhionēl              | ByzGk brakhiōn (arm) + -ēl
+350  | wide          | euryān                  | ByzGk eurys (wide) + -ān
+351  | sail          | pleisir                 | ByzGk plein (to sail) + -isir
+352  | material      | hylēēl                  | ByzGk hylē (material) + -ēl
+353  | size          | megethosēl              | ByzGk megethos (size) + -ēl
+354  | vary          | alloioisir              | ByzGk alloioun (to vary) + -isir
+355  | settle        | katoikisir              | ByzGk katoikizein (to settle) + -isir
+356  | speak         | agoreuisir              | ByzGk agoreuein (to speak) + -isir
+357  | weight        | barosēl                 | ByzGk baros (weight) + -ēl
+358  | general       | koinosān                | same as common
+359  | ice           | krystallosēl            | ByzGk krystallos (ice) + -ēl
+360  | matter        | hylēēl                  | same as material
+361  | circle        | kyklosēl                | ByzGk kyklos (circle) + -ēl
+362  | pair          | zygiaēl                 | ByzGk zygia (pair/yoke) + -ēl
+363  | include       | perilambanisir          | ByzGk perilambanein (include) + -isir
+364  | divide        | diairisir               | ByzGk diairein (to divide) + -isir
+365  | syllable      | syllabēēl               | ByzGk syllabē (syllable) + -ēl
+366  | felt          | ēsthānāra               | ByzGk ēsthanen (felt) + -āra
+367  | perhaps       | isosān                  | same as perhaps
+368  | pick          | hairisir                | ByzGk hairein (to pick/take) + -isir
+369  | sudden        | exaiphnēsān             | ByzGk exaiphnēs (sudden) + -ān
+370  | count         | arithmisir              | ByzGk arithmein (to count) + -isir
+371  | square        | tetragonoēl             | ByzGk tetragōnon (square) + -ēl
+372  | reason        | aitiaēl                 | ByzGk aitia (reason/cause) + -ēl
+373  | length        | mēkosēl                 | ByzGk mēkos (length) + -ēl
+374  | represent     | eikāzisir               | ByzGk eikazein (to represent) + -isir
+375  | art           | tekhnēēl                | ByzGk tekhnē (art/skill) + -ēl
+376  | subject       | hypokeimenonēl          | ByzGk hypokeimenon (subject) + -ēl
+377  | region        | khōraēl                 | same as area/region
+378  | energy        | energeiaēl              | ByzGk energeia (energy) + -ēl
+379  | hunt          | thēreisir               | ByzGk thēran (to hunt) + -isir
+380  | probable      | eikosān                 | ByzGk eikos (probable) + -ān
+381  | bed           | klinēēl                 | ByzGk klinē (bed) + -ēl
+382  | brother       | adelphosēl              | ByzGk adelphos (brother) + -ēl
+383  | egg           | ōionēl                  | ByzGk ōion (egg) + -ēl
+384  | ride          | elaunisir               | ByzGk elaunein (to ride/drive) + -isir
+385  | cell          | kyttaronēl              | ByzGk kyttaron (cell) + -ēl
+386  | believe       | pisteisir               | ByzGk pisteuein (to believe) + -isir
+387  | fraction      | morionēl                | ByzGk morion (fraction/part) + -ēl
+388  | forest        | drymoēl                 | ByzGk drymos (forest/thicket) + -ēl
+389  | sit           | kathizisir              | ByzGk kathizein (to sit) + -isir
+390  | race          | genosēl                 | ByzGk genos (race/kind) + -ēl
+391  | window        | thyrisēl                | ByzGk thyris (window) + -ēl
+392  | store         | apothēkēēl              | ByzGk apothēkē (store) + -ēl
+393  | summer        | therosēl                | ByzGk theros (summer) + -ēl
+394  | train         | seirasēl                | ByzGk seira (chain/train) + -sēl
+395  | sleep         | katheudisir             | ByzGk katheudein (to sleep) + -isir
+396  | prove         | apodeikisir             | ByzGk apodeiknynai (prove) + -isir
+397  | lone          | monosān                 | ByzGk monos (lone/alone) + -ān
+398  | leg           | skelosēl                | ByzGk skelos (leg) + -ēl
+399  | exercise      | gumnasiaēl              | ByzGk gumnasia (exercise) + -ēl
+400  | wall          | teikosēl                | ByzGk teikhos (wall) + -ēl
+401  | catch         | krateisir               | ByzGk kratein (to catch/hold) + -isir
+402  | mount         | anabainisir             | ByzGk anabainein (to mount) + -isir
+403  | wish          | eukheisir               | ByzGk eukheisthai (to wish) + -isir
+404  | sky           | ouranoēl                | ByzGk ouranos (sky) + -ēl
+405  | board         | sanisēl                 | ByzGk sanis (board/plank) + -ēl
+406  | joy           | kharaēl                 | ByzGk khara (joy) + -ēl
+407  | winter        | kheimonēl               | ByzGk kheimōn (winter) + -ēl
+408  | sat           | ekathisāra              | ByzGk ekathisa (sat) + -āra
+409  | written       | graphtonān              | ByzGk grapton (written) + -ān
+410  | wild          | agriosān                | ByzGk agrios (wild) + -ān
+411  | instrument    | organoēl                | ByzGk organon (instrument) + -ēl
+412  | kept          | etērēthēāra             | ByzGk etērēthē (kept) + -āra
+413  | glass         | hyalosēl                | ByzGk hyalos (glass) + -ēl
+414  | grass         | poaēl                   | ByzGk poa (grass) + -ēl
+415  | cow           | bousēl                  | ByzGk bous (cow) + -ēl
+416  | job           | ergonēl                 | same as work
+417  | edge          | akrēēl                  | ByzGk akrē (edge/tip) + -ēl
+418  | sign          | sēmeionēl               | same as mark/note
+419  | visit         | episkeptisir            | ByzGk episkeptesthai (visit) + -isir
+420  | past          | parelthonān             | ByzGk parelthon (past) + -ān
+421  | soft          | malakosān               | ByzGk malakos (soft) + -ān
+422  | fun           | paidiaēl                | ByzGk paidia (fun/play) + -ēl
+423  | bright        | lamprosān               | ByzGk lampros (bright) + -ān
+424  | gas           | pneumaēl                | ByzGk pneuma (gas/breath/spirit) + -ēl
+425  | weather       | kairosēl                | ByzGk kairos (weather/time) + -ēl
+426  | month         | mēnosēl                 | ByzGk mēn (month) + -osēl
+427  | million       | myriadesēl              | ByzGk myriades (millions) + -ēl
+428  | bear          | arktosēl                | ByzGk arktos (bear) + -ēl
+429  | finish        | teleisir                | ByzGk telein (to finish) + -isir
+430  | happy         | makarioān               | ByzGk makarios (happy/blessed) + -ān
+431  | hope          | elpidaēl                | ByzGk elpis/elpida (hope) + -ēl
+432  | flower        | anthosēl                | ByzGk anthos (flower) + -ēl
+433  | clothe        | amphienisir             | ByzGk amphiennynai (to clothe) + -isir
+434  | strange       | atopōsān                | ByzGk atopos (strange) + -ān
+435  | gone          | oikhomenāra             | ByzGk oikhomenos (gone) + -āra
+436  | jump          | hallisir                | ByzGk hallesthai (to jump) + -isir
+437  | baby          | brephoēl                | ByzGk brephos (baby) + -ēl
+438  | eight         | oktōān                  | ByzGk oktō (eight) + -ān
+439  | village       | kōmēēl                  | ByzGk kōmē (village) + -ēl
+440  | meet          | synantaisir             | ByzGk synantān (to meet) + -isir
+441  | root          | rhizaēl                 | ByzGk rhiza (root) + -ēl
+442  | buy           | agorazisir              | ByzGk agorazein (to buy) + -isir
+443  | raise         | airisir                 | ByzGk airein (to raise) + -isir
+444  | solve         | lyisir                  | ByzGk lyein (to solve) + -isir
+445  | metal         | metallonēl              | ByzGk metallon (metal) + -ēl
+447  | push          | ōtheisir                | ByzGk ōthein (to push) + -isir
+448  | seven         | heptaān                 | ByzGk hepta (seven) + -ān
+449  | paragraph     | paragraphosēl           | ByzGk paragraphos (paragraph) + -ēl
+450  | third         | tritonān                | ByzGk triton (third) + -ān
+452  | held          | ekratesāra              | ByzGk ekratese (held) + -āra
+453  | hair          | thrixēl                 | ByzGk thrix (hair) + -ēl
+454  | describe      | graphisir               | same as paint/write
+455  | cook          | hepsisir                | ByzGk hepsein (to cook) + -isir
+456  | floor         | edaphosēl               | ByzGk edaphos (floor) + -ēl
+458  | result        | apotelasmaēl            | ByzGk apotelasma (result) + -ēl
+459  | burn          | kaiesir                 | ByzGk kaiein (to burn) + -isir
+460  | hill          | lophoēl                 | ByzGk lophos (hill) + -ēl
+461  | safe          | asphalosān              | ByzGk asphalos (safe) + -ān
+462  | cat           | ailourōēl               | ByzGk ailouros (cat) + -ēl
+463  | century       | aiōnēl                  | ByzGk aiōn (age/century) + -ēl
+464  | consider      | ennoisisir              | ByzGk ennoein (to consider) + -isir
+465  | type          | typosēl                 | same as pattern
+466  | law           | nomosēl                 | same as rule
+467  | bit           | mikroān                 | ByzGk mikron (bit/small) + -ān
+468  | coast         | aktēēl                  | ByzGk aktē (coast) + -ēl
+469  | copy          | apographisir            | ByzGk apographein (to copy) + -isir
+470  | phrase        | phrasinēl               | ByzGk phrasis (phrase) + -ēl
+471  | silent        | sigēlosān               | ByzGk sigēlos (silent) + -ān
+472  | tall          | hypsēlosān              | same as high
+473  | sand          | ammosēl                 | ByzGk ammos (sand) + -ēl
+474  | soil          | gēēl                    | same as ground
+475  | roll          | kylindisir              | ByzGk kylindein (to roll) + -isir
+476  | temperature   | thermokrasiaēl          | ByzGk thermokrasia (temperature) + -ēl
+477  | finger        | daktylosēl              | ByzGk daktylos (finger) + -ēl
+478  | industry      | ergasiaēl               | ByzGk ergasia (industry) + -ēl
+479  | value         | axiaēl                  | ByzGk axia (value/worth) + -ēl
+480  | fight         | makhisir                | ByzGk makhesthai (to fight) + -isir
+481  | lie           | klinisir                | same as lay
+482  | beat          | typisir                 | ByzGk typtein (to beat) + -isir
+483  | excite        | egeirisir               | ByzGk egeirein (to excite/rouse) + -isir
+484  | natural       | physikosān              | ByzGk physikos (natural) + -ān
+485  | view          | theōriaēl               | ByzGk theōria (view/theory) + -ēl
+486  | sense         | aisthēsinēl             | ByzGk aisthēsis (sense) + -ēl
+487  | ear           | ousēl                   | ByzGk ous (ear) + -ēl
+491  | case          | pragmaēl                | same as fact/matter
+492  | middle        | mesosēl                 | ByzGk mesos (middle) + -ēl
+493  | kill          | kteinis ir              | ByzGk kteinein (to kill) + -isir
+494  | son           | hyiosēl                 | ByzGk hyios (son) + -ēl
+495  | lake          | limnēēl                 | ByzGk limnē (lake) + -ēl
+496  | moment        | stigmēēl                | ByzGk stigmē (moment/point) + -ēl
+497  | scale         | kanonēl                 | ByzGk kanōn (scale/rule) + -ēl
+498  | loud          | megalophōnosān          | ByzGk megalophōnos (loud) + -ān
+499  | spring        | earinēl                 | ByzGk eiar (spring) + -inēl
+500  | observe       | theorisir               | ByzGk theōrein (to observe) + -isir
+
+===================================================================================
+PHONETIC GUIDE FOR APISVELDIR
+===================================================================================
+
+Byzantine Greek sounds preserved:
+  ē   = long e (as in "they") — very common in Apisveldir
+  ō   = long o (as in "go")
+  kh  = voiceless velar fricative (as in Scots "loch")
+  ph  = labiodental fricative (as in "f" — Byzantine shift from aspirate)
+  th  = dental fricative (as in "thin")
+  Final -ēl and -ān are the two most characteristic sounds of Apisveldir
+
+Persian/Sanskrit Mughal sounds adding texture:
+  ā   = long open a (Persian characteristic)
+  āra = flowing feminine/graceful suffix (Sanskrit -āra)
+  ān  = Persian place/collective suffix (Khurāsān, Gulbadān)
+  dil = heart (Persian — used in love compounds)
+  atash = fire (Persian — replaces Gk pyr in fire contexts)
+  sitāra = star (Sanskrit/Persian — replaces Gk astron)
+
+Apisveldir suffix system:
+  -ēl   = primary noun ending (concrete/living things)
+  -ān   = particle/adjective ending (abstract/qualities)
+  -āra  = graceful noun (elegant/flowing things, past forms)
+  -isir = primary verb ending (active actions)
+  -ir   = secondary verb (states/being)
+  -irān = verbal adjective (appearing/seeming)
+  -aēl  = compound noun (two-root words)
+  -nēl  = emphatic noun (significant/named things)
+
+Note on Mughal integration:
+  Persian/Sanskrit roots appear where they offer phonetic richness
+  not available in Byzantine Greek: atash (fire), dil (heart),
+  sitāra (star), khub (good), haylu (power), ān (place suffix).
+  These are woven in at roughly 15-20% of vocabulary, concentrated
+  in emotional/celestial/power words — fitting the gem-and-court
+  aesthetic of the name list (Chrysoberyl, Tanzanite, Corundum, etc.)
+
+===================================================================================
+END OF FILE — ApisveldirByzantineMughal_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

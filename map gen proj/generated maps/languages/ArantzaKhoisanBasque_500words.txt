@@ -1,0 +1,593 @@
+ARANTZA KHOISAN-BASQUE - 500 Common Word Translations
+Fantasy Language based on ArantzaKhoisan-Basque name patterns
+Linguistic roots: Broad Khoisan blend (ǀXam, Juǀ'hoan, ǂKhomani, Naro)
+with Old Basque (medieval, 10th-15th c.) primary
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Broad Khoisan):
+  ǀXam: ǀkui (person), ǀke (go), ǀna (see), ǁka (water), ǂka (fire),
+  !xo (big/great), !u (give), ǀa (eat/take), ǁki (know), ǀhun (die),
+  Juǀ'hoan: n!a (person), tsi (go), ǀui (water), dzi (eat), !oa (come),
+  kxʼao (man), ǂoa (good), n!ao (heart), ǁxao (cold), !xabe (tree),
+  Naro: ǂhana (good), ǁkao (big), ǀgoro (person), tshoa (go/walk),
+  ǂkui (fire), ǁnao (water), ǁhao (sky), tsua (day), ǁkao (great)
+
+KEY SOURCE WORDS (Old Basque, medieval):
+  Medieval Basque: gizon (man), emazte (woman), haur (child), jaun (lord),
+  errege (king), lur (earth/land), su (fire), ur (water), zeru (sky),
+  egun (day), ilargi (moon), izar (star), gau (night),
+  on (good), handi (great/big), egia (truth), dena (all),
+  joan (go), etorri (come), ikusi (see), esan (say), jakin (know),
+  eman (give), hartu (take), ibili (walk), egin (do/make)
+
+PHONETIC BRIDGE STRATEGY:
+  Khoisan: click consonants (ǀ ǁ ǂ ! ʘ) + voiced/aspirated variants,
+  short CV syllables, front vowels a/i/u, nasal-final words
+  Old Basque: -tza/-itza/-etxe endings, tx/tz affricates, -ari/-arri/-uri,
+  agglutinative suffixes (-ko/-eko possession, -an locative, -tik ablative)
+  Bridge: Both share open a/i/u vowels, short syllables, tx/tz/ts affricates
+  (Basque tz ≈ Khoisan ts; Basque tx ≈ Khoisan click release sounds)
+  Fantasy representation: clicks romanized as kx/qx/tx/ǀ-tz blends
+  so they're speakable in fantasy context while preserving the exotic quality.
+  Fantasy suffix system: -itza (noun, fr. Basque -itza), -anu (verb, fr. Basque -anu),
+  -kxo (adjective, fr. Khoisan !xo = big + Basque -ko), -tza (place/abstract),
+  -uri (being/person, fr. Basque -uri), -qxan (intensive, fr. Khoisan ǀXam -n)
+
+===================================================================================
+RANK | ENGLISH       | ARANTZA                 | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | tzak                    | Basq. hau/hori stylized + Khoi -tzak
+2    | a / an        | batitza                 | Basq. bat (one/a) + -itza
+3    | to            | tzuri                   | Basq. -ra (to) + Khoi ts- bridge
+6    | it            | horitza                 | Basq. hori (it/that) + -itza
+8    | that          | haitza                  | Basq. hura (that) + -itza
+10   | it            | horitza                 | same
+11   | for           | tzakori                 | Basq. -tzat (for) + Khoi -ori
+14   | this          | hauitza                 | Basq. hau (this) + -itza
+20   | this          | hauitza                 | same
+22   | his           | berekxo                 | Basq. bere (his/her) + -kxo
+28   | her           | berekxo                 | same — Basq. gender-neutral bere
+29   | she           | hauritz                 | Basq. hura (she) + -itz
+31   | an            | batitza                 | same as a
+34   | one           | batqxan                 | Basq. bat (one) + -qxan
+35   | all           | denakxo                 | Basq. dena (all) + -kxo
+37   | there         | hantza                  | Basq. han (there) + -tza
+38   | their         | eurenkxo                | Basq. euren (their) + -kxo
+39   | what          | zeritza                 | Basq. zer (what) + -itza
+45   | who           | noritza                 | Basq. nor (who) + -itza
+49   | me            | nitzak                  | Basq. ni (me/I) + -tzak
+50   | when          | noizitza                | Basq. noiz (when) + -itza
+55   | no            | ezitza                  | Basq. ez (no/not) + -itza
+63   | your          | zurekxo                 | Basq. zure (your) + -kxo
+64   | good          | onkxo                   | Basq. on (good) + -kxo
+65   | some          | batzuitza               | Basq. batzuk (some) + -itza
+69   | other         | bestekxo                | Basq. beste (other) + -kxo
+83   | two           | bitzitza                | Basq. bi (two) + -tzitza
+85   | our           | guretzak                | Basq. gure (our) + -tzak
+95   | these         | haueitza                | Basq. hauek (these) + -itza
+99   | us            | gutzak                  | Basq. gu (us) + -tzak
+120  | got           | kxarituritz             | Khoi kxari (got/found) + Basq. -itz
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | izananu                 | Basq. izan (to be) + -anu
+70   | there         | hantza                  | same as there
+72   | seem          | dirudienitz             | Basq. dirudi (seems) + -enitz
+78   | think         | uste izananu            | Basq. uste (think/believe) + -anu
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | rekxo                   | Basq. -ren (of/genitive) + -kxo
+5    | and           | etaitza                 | Basq. eta (and) + -itza
+12   | not           | ezitza                  | Basq. ez (not) + -itza
+13   | on            | gainekxo                | Basq. gain (on/over) + -kxo
+14   | with          | tzakxo                  | Basq. -tzat (with/as) + -kxo
+19   | at            | anitza                  | Basq. -an (at/in) + -itza
+21   | but           | baitzak                 | Basq. baina (but) + -tzak
+23   | by            | tikxo                   | Basq. -tik (by/from) + -kxo
+24   | from          | tikxori                 | Basq. -tik (from) + -kxori
+30   | or            | edokxo                  | Basq. edo (or) + -kxo
+32   | will          | izangoitz               | Basq. izango (will be) + -itz
+33   | my            | nireitza                | Basq. nire (my) + -itza
+36   | would         | litzakekxo              | Basq. litzake (would be) + -kxo
+40   | so            | horretzitza             | Basq. horrela (so/thus) + -itza
+41   | up            | goraitza                | Basq. gora (up/above) + -itza
+42   | out           | kanpoitza               | Basq. kanpo (out/outside) + -itza
+43   | if            | baldinitza              | Basq. baldin (if) + -itza
+44   | about         | buruzitza               | Basq. buruz (about/concerning) + -itza
+60   | because       | tzergatiitz             | Basq. zergatik (because) + -itz
+61   | into          | barnekxo                | Basq. barne (into/inside) + -kxo
+71   | only          | bakarritza              | Basq. bakarrik (only/alone) + -itza
+76   | its           | berekxo                 | same as his/her
+77   | over          | gaineitzak              | Basq. gain (over) + -itzak
+79   | also          | ereitza                 | Basq. ere (also/too) + -itza
+80   | back          | atzeitza                | Basq. atze (back/behind) + -itza
+81   | after         | ondorenitz              | Basq. ondoren (after) + -itz
+82   | use           | erabilianu              | Basq. erabili (to use) + -anu
+87   | first         | lehenitza               | Basq. lehen (first) + -itza
+88   | well          | ongiitza                | Basq. ongi (well/good) + -itza
+90   | even          | areitza                 | Basq. are (even) + -itza
+94   | any           | edozeitza               | Basq. edozein (any) + -itza
+102  | need          | beharitza               | Basq. behar (need) + -itza
+104  | often         | askotzakxo              | Basq. askotan (often) + -kxo
+106  | high          | altuitza                | Basq. altu (high) + -itza
+110  | never         | inoizekxo               | Basq. inoiz ez (never) + -kxo
+112  | north         | ipartzak                | Basq. ipar (north) + -tzak
+114  | seem          | dirudienitz             | same as seem
+116  | next          | hurrengokxo             | Basq. hurrengoa (next) + -kxo
+119  | begin         | hasianu                 | Basq. hasi (to begin) + -anu
+129  | both          | biekxo                  | Basq. biek (both/two-subject) + -kxo
+133  | until         | arteitza                | Basq. arte (until) + -itza
+147  | ever          | inoizitza               | Basq. inoiz (ever) + -itza
+150  | though        | nahizitza               | Basq. nahiz (though) + -itza
+154  | soon          | lasteritza              | Basq. laster (soon/fast) + -itza
+158  | direct        | zuzenitza               | Basq. zuzen (direct/straight) + -itza
+160  | leave         | uzteanu                 | Basq. utzi (to leave) + -anu
+169  | wind          | haizeitza               | Basq. haize (wind) + -itza
+172  | since         | ezkerozitza             | Basq. ezkero (since) + -itza
+183  | against       | aurkaitza               | Basq. aurka (against) + -itza
+192  | during        | bitartekxo              | Basq. bitarte (during) + -kxo
+194  | true          | egiakxo                 | Basq. egia (truth/true) + -kxo
+219  | toward        | alderatzak              | Basq. aldera (toward) + -tzak
+225  | center        | erditzak                | Basq. erdi (center/half) + -tzak
+251  | still         | oraindikxo              | Basq. oraindik (still/yet) + -kxo
+261  | above         | gainekoitza             | Basq. gaineko (above) + -itza
+287  | behind        | atzekoitza              | Basq. atzeko (behind) + -itza
+330  | yes           | baikxo                  | Basq. bai (yes) + -kxo
+332  | fill          | beteanu                 | Basq. bete (to fill) + -anu
+338  | yet           | oraindikxo              | same as still
+339  | among         | artekoitza              | Basq. arteko (among/between) + -itza
+340  | perhaps       | agianitz                | Basq. agian (perhaps) + -itz
+343  | am            | naitzak                 | Basq. naiz (I am) + -tzak
+446  | whether       | baldinitza              | same as if
+451  | shall         | beharkoitz              | Basq. beharko (shall/will need) + -itz
+457  | either        | edokxo edokxo           | Basq. edo...edo (either...or)
+488  | else          | bestekxo                | same as other
+489  | quite         | nahikoitza              | Basq. nahiko (quite) + -itza
+490  | quite         | nahikoitza              | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | eginanu                 | Basq. egin (to do/make) + -anu
+9    | have          | ukan anu                | Basq. ukan/edun (to have) + -anu
+15   | he            | berakxo                 | Basq. bera (he) + -kxo
+16   | as            | bezalaitza              | Basq. bezala (as/like) + -itza
+17   | you           | zutzak                  | Basq. zu (you) + -tzak
+18   | do            | eginanu                 | same
+25   | they          | eurekxo                 | Basq. eurek (they) + -kxo
+26   | we            | gutzak                  | same as us
+27   | say           | esan anu                | Basq. esan (to say) + -anu
+46   | get           | lortzanu                | Basq. lortu (to get) + -anu
+47   | which         | zeineitza               | Basq. zein (which) + -itza
+48   | go            | joan anu                | Basq. joan (to go) + -anu
+51   | make          | eginanu                 | same as do
+52   | can           | ahaltzak                | Basq. ahal (can/ability) + -tzak
+53   | like          | gustatu anu             | Basq. gustatu (to like) + -anu
+54   | time          | denboritza              | Basq. denbora (time) + -itza
+56   | just          | bakarritza              | same as only
+57   | him           | beratzak                | Basq. bera (him) + -tzak
+58   | know          | jakinanu                | Basq. jakin (to know) + -anu
+59   | take          | hartuanu                | Basq. hartu (to take) + -anu
+62   | year          | urteitza                | Basq. urte (year) + -itza
+66   | could         | ahaltzakxo              | Basq. ahal (could) + -tzakxo
+67   | them          | eurei kxo               | Basq. eurei (them) + -kxo
+68   | see           | ikusianu                | Basq. ikusi (to see) + -anu
+73   | look          | begiratuanu             | Basq. begiratu (to look) + -anu
+74   | only          | bakarritza              | same
+75   | come          | etorrianu               | Basq. etorri (to come) + -anu
+84   | use           | erabilianu              | same as use above
+86   | work          | lanitza                 | Basq. lan (work) + -itza
+89   | way           | bideitza                | Basq. bide (way/road) + -itza
+91   | new           | berritza                | Basq. berri (new) + -itza
+92   | want          | nahi izananu            | Basq. nahi (to want) + -anu
+93   | because       | tzergatiitz             | same as because
+96   | give          | emananu                 | Basq. eman (to give) + -anu
+97   | day           | egunaitza               | Basq. egun (day) + -aitza
+98   | most          | gehienitza              | Basq. gehien (most) + -itza
+100  | great         | handiitza               | Basq. handi (great) + -itza
+101  | between       | artekotzak              | Basq. arteko (between) + -tzak
+103  | large         | handiitza               | same as great
+105  | hand          | eskuitza                | Basq. esku (hand) + -itza
+107  | place         | lekuitza                | Basq. leku (place) + -itza
+108  | hold          | eusteanu                | Basq. eutsi (to hold) + -anu
+109  | turn          | biratu anu              | Basq. biratu (to turn) + -anu
+111  | few           | gutxiitza               | Basq. gutxi (few/little) + -itza
+113  | open          | ireki anu               | Basq. ireki (to open) + -anu
+115  | together      | elkarrekxo              | Basq. elkar (together/each other) + -kxo
+117  | white         | zuriitza                | Basq. zuri (white) + -itza
+118  | children      | haurritza               | Basq. haur (child/children) + -itza
+121  | walk          | ibili anu               | Basq. ibili (to walk) + -anu
+122  | example       | adibideitza             | Basq. adibide (example) + -itza
+123  | ease          | erraztasunitz           | Basq. erraztasun (ease) + -itz
+124  | paper         | paperitza               | Basq. paper (paper) + -itza
+125  | group         | taldekxo                | Basq. talde (group) + -kxo
+126  | always        | betikxo                 | Basq. beti (always) + -kxo
+127  | music         | musikaitza              | Basq. musika (music) + -itza
+128  | those         | haietzak                | Basq. haiek (those) + -tzak
+130  | mark          | markakxo                | Basq. marka (mark) + -kxo
+131  | book          | liburukxo               | Basq. liburu (book) + -kxo
+132  | letter        | letrakxo                | Basq. letra (letter) + -kxo
+134  | mile          | miliakxo                | Basq. milia (mile) + -kxo
+135  | river         | ibaiitza                | Basq. ibai (river) + -itza
+136  | car           | gurdiitza               | Basq. gurdi (cart/vehicle) + -itza
+137  | feet          | oinakxo                 | Basq. oina (foot) + -kxo
+138  | care          | zainketa anu            | Basq. zaindu (to care) + -anu
+139  | second        | bigarrenitz             | Basq. bigarren (second) + -itz
+140  | enough        | adinakxo                | Basq. adina (enough) + -kxo
+141  | plain         | lautadaitz              | Basq. lautada (plain/flat) + -itz
+142  | girl          | neskitza                | Basq. neska (girl) + -itza
+143  | usual         | ohikoitza               | Basq. ohiko (usual) + -itza
+144  | young         | gaztekxo                | Basq. gazte (young) + -kxo
+145  | ready         | prest itza              | Basq. prest (ready) + -itza
+146  | above         | gainekoitza             | same as above
+148  | red           | gorritza                | Basq. gorri (red) + -itza
+149  | list          | zerrendaitz             | Basq. zerrenda (list) + -itz
+151  | feel          | sentituanu              | Basq. sentitu (to feel) + -anu
+152  | talk          | hitz eginanu            | Basq. hitz egin (to talk) + -anu
+153  | bird          | txoriitza               | Basq. txori (bird) + -itza
+155  | body          | gorputzitza             | Basq. gorputz (body) + -itza
+156  | dog           | txakurritz              | Basq. txakur (dog) + -itz
+157  | family        | familiaitz              | Basq. familia (family) + -itz
+159  | pose          | jarreraitz              | Basq. jarrera (pose/attitude) + -itz
+161  | song          | abesti itza             | Basq. abesti (song) + -itza
+162  | measure       | neurri itza             | Basq. neurri (measure) + -itza
+163  | door          | ateitza                 | Basq. ate (door) + -itza
+164  | product       | produktuitz             | Basq. produktu (product) + -itz
+165  | black         | beltzitza               | Basq. beltz (black) + -itza
+166  | short         | laburrita               | Basq. labur (short) + -ita
+167  | numeral       | zenbakiitz              | Basq. zenbaki (numeral) + -itz
+168  | class         | klasekxo                | Basq. klase (class) + -kxo
+170  | question      | galderaitz              | Basq. galdera (question) + -itz
+171  | happen        | gertatu anu             | Basq. gertatu (to happen) + -anu
+173  | ship          | untziitza               | Basq. untzi (ship/vessel) + -itza
+174  | area          | eremuitz                | Basq. eremu (area) + -itz
+175  | half          | erditza                 | Basq. erdi (half) + -tza
+176  | rock          | arritzak                | Basq. harri (rock/stone) + -tzak
+177  | order         | agindukxo               | Basq. agindu (order/command) + -kxo
+178  | fire          | suitza                  | Basq. su (fire) + -itza
+179  | south         | hegokxo                 | Basq. hego (south/wing) + -kxo
+180  | problem       | arazoitz                | Basq. arazo (problem) + -itz
+181  | piece         | zatikxo                 | Basq. zati (piece) + -kxo
+182  | told          | esan zaion              | Basq. esan (told/was said) stylized
+184  | pass          | igaro anu               | Basq. igaro (to pass) + -anu
+185  | since         | ezkerozitza             | same as since
+186  | top           | goikxo                  | Basq. goi (top/high) + -kxo
+187  | whole         | osoitza                 | Basq. oso (whole) + -itza
+188  | king          | erregeitza              | Basq. errege (king) + -itza
+189  | space         | espazioitz              | Basq. espazio (space) + -itz
+190  | heard         | entzun zan              | Basq. entzun (heard) stylized
+191  | best          | onenenitz               | Basq. onena (best) + -nitz
+192  | hour          | orduitza                | Basq. ordu (hour) + -itza
+193  | better        | hobetzak                | Basq. hobe (better) + -tzak
+195  | during        | bitartekxo              | same as during
+196  | hundred       | ehuneitz                | Basq. ehun (hundred) + -eitz
+197  | five          | bostzak                 | Basq. bost (five) + -tzak
+198  | remember      | gogoratu anu            | Basq. gogoratu (to remember) + -anu
+199  | step          | pasoitza                | Basq. paso (step) + -itza
+200  | early         | goizetzak               | Basq. goiz (early/morning) + -tzak
+201  | hold          | eusteanu                | same as hold
+202  | west          | sartaldekxo             | Basq. sartalde (west) + -kxo
+203  | ground        | lurzorukxo              | Basq. lurzo (ground/soil) + -kxo
+204  | interest      | interesitza             | Basq. interes (interest) + -itza
+205  | reach         | heldu anu               | Basq. heldu (to reach/arrive) + -anu
+206  | fast          | azkaritza               | Basq. azkar (fast) + -itza
+207  | verb          | aditzitza               | Basq. aditz (verb) + -itza
+208  | sing          | abestu anu              | Basq. abestu (to sing) + -anu
+209  | listen        | entzun anu              | Basq. entzun (to listen) + -anu
+210  | six           | seikxo                  | Basq. sei (six) + -kxo
+211  | table         | mahaitza                | Basq. mahai (table) + -tza
+212  | travel        | bidaiatu anu            | Basq. bidaiatu (to travel) + -anu
+213  | less          | gutxiagoitz             | Basq. gutxiago (less) + -itz
+214  | morning       | goizitza                | Basq. goiz (morning) + -itza
+215  | ten           | hamartza                | Basq. hamar (ten) + -tza
+216  | simple        | sinplekxo               | Basq. sinple (simple) + -kxo
+217  | several       | hainbatitz              | Basq. hainbat (several) + -itz
+218  | vowel         | bokalitz                | Basq. bokal (vowel) + -itz
+220  | war           | gerraitza               | Basq. gerra (war) + -itza
+221  | lay           | etzananu                | Basq. etzan (to lay/lie) + -anu
+222  | against       | aurkaitza               | same as against
+223  | pattern       | ereduitz                | Basq. eredu (pattern/model) + -itz
+224  | slow          | motelitza               | Basq. motel (slow) + -itza
+226  | love          | maiteitzak              | Basq. maite (love) + -itzak
+227  | person        | pertsonaitz             | Basq. pertsona (person) + -itz
+228  | money         | diruitza                | Basq. diru (money) + -itza
+229  | serve         | zerbitzatu anu          | Basq. zerbitzatu (to serve) + -anu
+230  | appear        | agertu anu              | Basq. agertu (to appear) + -anu
+231  | road          | errepideitz             | Basq. errepide (road) + -itz
+232  | map           | mapakxo                 | Basq. mapa (map) + -kxo
+233  | rain          | euriitza                | Basq. euri (rain) + -itza
+234  | rule          | arauitza                | Basq. arau (rule) + -itza
+235  | govern        | gobernatu anu           | Basq. gobernatu (to govern) + -anu
+236  | pull          | tiratu anu              | Basq. tiratu (to pull) + -anu
+237  | cold          | hotzitza                | Basq. hotz (cold) + -itza
+238  | notice        | ohartu anu              | Basq. ohartu (to notice) + -anu
+239  | voice         | ahoskaitz               | Basq. ahots (voice) + -kaitz
+240  | fall          | erori anu               | Basq. erori (to fall) + -anu
+241  | power         | indaritza               | Basq. indar (power/force) + -itza
+242  | town          | hiritza                 | Basq. hiri (town/city) + -tza
+243  | fine          | ongiitza                | Basq. ongi (fine/well) + -itza
+244  | drive         | gidatu anu              | Basq. gidatu (to drive) + -anu
+245  | lead          | gidatu anu              | Basq. gidatu (to lead — same as drive)
+246  | cry           | negar eginanu           | Basq. negar egin (to cry) + -anu
+247  | dark          | ilunitza                | Basq. ilun (dark) + -itza
+248  | machine       | makinaitz               | Basq. makina (machine) + -itz
+249  | note          | oharrkxo                | Basq. ohar (note) + -kxo
+250  | wait          | itxaron anu             | Basq. itxaron (to wait) + -anu
+252  | figure        | figurakxo               | Basq. figura (figure) + -kxo
+253  | star          | izaritza                | Basq. izar (star) + -itza
+254  | box           | kutxaitz                | Basq. kutxa (box) + -itz
+255  | noun          | izenkxo                 | Basq. izen (noun/name) + -kxo
+256  | field         | sorokuitz               | Basq. soroku (field) + -itz
+257  | rest          | atsedenu anu            | Basq. atsedendu (to rest) + -anu
+258  | correct       | zuzenitza               | Basq. zuzen (correct/straight) + -itza
+259  | able          | gauza anu               | Basq. gauza (able/thing) + -anu
+260  | pound         | librakxo                | Basq. libra (pound) + -kxo
+262  | beauty        | edertasunitz            | Basq. edertasun (beauty) + -itz
+263  | drive         | gidatu anu              | same as drive
+264  | stood         | zutik egon              | Basq. zutik (stood/upright) stylized
+265  | contain       | eduki anu               | Basq. eduki (to contain/have) + -anu
+266  | front         | aurreitza               | Basq. aurre (front) + -itza
+267  | teach         | irakatsi anu            | Basq. irakatsi (to teach) + -anu
+268  | week          | asteritza               | Basq. aste (week) + -ritza
+269  | final         | azkeneitz               | Basq. azken (final/last) + -eitz
+270  | gave          | eman zion               | Basq. eman (gave) stylized
+271  | green         | berdeitza               | Basq. berde (green) + -itza
+272  | oh            | otzak                   | Basq. o + Khoi -tzak
+273  | quick         | azkaritza               | same as fast
+274  | develop       | garatu anu              | Basq. garatu (to develop) + -anu
+275  | ocean         | ozeanoitz               | Basq. ozeano (ocean) + -itz
+276  | warm          | beroitza                | Basq. bero (warm) + -itza
+277  | free          | askeitza                | Basq. aske (free) + -itza
+278  | minute        | minutuitz               | Basq. minutu (minute) + -itz
+279  | strong        | sendoitza               | Basq. sendo (strong) + -itza
+280  | special       | bereziitza              | Basq. berezi (special) + -itza
+281  | behind        | atzekoitza              | same as behind
+282  | clear         | garbiitza               | Basq. garbi (clear/clean) + -itza
+283  | tail          | buztanitz               | Basq. buztan (tail) + -itz
+284  | produce       | ekoiztu anu             | Basq. ekoiztu (to produce) + -anu
+285  | fact          | egitateitz              | Basq. egitate (fact) + -itz
+286  | street        | kalekxo                 | Basq. kale (street) + -kxo
+288  | lot           | askoitza                | Basq. asko (lot/much) + -itza
+289  | nothing       | ezeritza                | Basq. ezer ez (nothing) + -itza
+290  | course        | ibilbidetz              | Basq. ibilbide (course/route) + -tz
+291  | stay          | geratu anu              | Basq. geratu (to stay) + -anu
+292  | wheel         | gurpilkxo               | Basq. gurpil (wheel) + -kxo
+293  | full          | betekxo                 | Basq. bete (full) + -kxo
+294  | force         | indaritzak              | Basq. indar (force) + -itzak
+295  | blue          | urdineitz               | Basq. urdin (blue) + -eitz
+296  | object        | gauzaitz                | Basq. gauza (object/thing) + -itz
+297  | decide        | erabaki anu             | Basq. erabaki (to decide) + -anu
+298  | surface       | azaleitz                | Basq. azal (surface/skin) + -eitz
+299  | deep          | sakonitza               | Basq. sakon (deep) + -itza
+300  | moon          | ilargiitza              | Basq. ilargi (moon) + -itza
+301  | island        | irlaitz                 | Basq. irla (island) + -itz
+302  | foot          | oinitza                 | Basq. oin (foot) + -itza
+303  | system        | sistemakxo              | Basq. sistema (system) + -kxo
+304  | busy          | lanpetukxo              | Basq. lanpetu (busy) + -kxo
+305  | test          | probaitz                | Basq. proba (test) + -itz
+306  | record        | erregistroitz           | Basq. erregistro (record) + -itz
+307  | boat          | txalupaitz              | Basq. txalupa (boat) + -itz
+308  | common        | arrunteitz              | Basq. arrunt (common) + -eitz
+309  | gold          | urreitza                | Basq. urre (gold) + -itza
+310  | possible      | posiblekxo              | Basq. posible (possible) + -kxo
+311  | plane         | planokxo                | Basq. plano (plane/flat) + -kxo
+312  | stead         | lekuitzak               | Basq. leku (stead/place) + -itzak
+313  | dry           | lehorrita               | Basq. lehor (dry) + -ita
+314  | wonder        | harritu anu             | Basq. harritu (to wonder/amaze) + -anu
+315  | laugh         | barre eginanu           | Basq. barre egin (to laugh) + -anu
+316  | thousand      | milakxo                 | Basq. mila (thousand) + -kxo
+317  | ago           | duela itz               | Basq. duela (ago) + -itz
+318  | ran           | lasterka ibili          | Basq. lasterka ibili (ran) stylized
+319  | check         | egiaztatu anu           | Basq. egiaztatu (to check) + -anu
+320  | game          | jokoitza                | Basq. joko (game) + -itza
+321  | shape         | formaitz                | Basq. forma (shape) + -itz
+322  | equate        | berdinkatu anu          | Basq. berdinkatu (to equate) + -anu
+323  | hot           | berotzak                | Basq. bero (hot) + -tzak
+324  | miss          | falta izananu           | Basq. falta (to miss/lack) + -anu
+325  | brought       | ekarri zuen             | Basq. ekarri (brought) stylized
+326  | heat          | beroaitz                | Basq. beroa (heat) + -itz
+327  | snow          | elurrita                | Basq. elur (snow) + -ita
+328  | tire          | nekatu anu              | Basq. nekatu (to tire) + -anu
+329  | bring         | ekarri anu              | Basq. ekarri (to bring) + -anu
+331  | distant       | urrunitza               | Basq. urrun (distant) + -itza
+333  | east          | sortaldekxo             | Basq. sortalde (east) + -kxo
+334  | paint         | margotu anu             | Basq. margotu (to paint) + -anu
+335  | language      | hizkuntzaitz            | Basq. hizkuntza (language) + -itz
+336  | among         | artekoitza              | same as among
+337  | grand         | handiitzak              | Basq. handi (grand) + -itzak
+341  | drop          | tantaitz                | Basq. tanta (drop) + -itz
+342  | heart         | bihotzitza              | Basq. bihotz (heart) + -itza
+344  | present       | orainaldiitz            | Basq. orainaldia (present) + -itz
+345  | heavy         | astunaitz               | Basq. astun (heavy) + -aitz
+346  | dance         | dantzatu anu            | Basq. dantzatu (to dance) + -anu
+347  | engine        | motorekxo               | Basq. motor (engine) + -ekxo
+348  | position      | posizinoitz             | Basq. posizio (position) + -itz
+349  | arm           | besoitza                | Basq. beso (arm) + -itza
+350  | wide          | zabalitza               | Basq. zabal (wide) + -itza
+351  | sail          | nabegatuanu             | Basq. nabegatu (to sail) + -anu
+352  | material      | materialitz             | Basq. material + -itz
+353  | size          | tamainuitz              | Basq. tamainu (size) + -itz
+354  | vary          | aldatu anu              | Basq. aldatu (to vary/change) + -anu
+355  | settle        | finkatu anu             | Basq. finkatu (to settle) + -anu
+356  | speak         | hitz egin anu           | Basq. hitz egin (to speak) + -anu
+357  | weight        | pisukxo                 | Basq. pisu (weight) + -kxo
+358  | general       | orokorrkxo              | Basq. orokor (general) + -kxo
+359  | ice           | izotzita                | Basq. izotz (ice) + -ita
+360  | matter        | gaiaitz                 | Basq. gai (matter/subject) + -itz
+361  | circle        | zirkuituitz             | Basq. zirkuitu (circle) + -itz
+362  | pair          | bikotzak                | Basq. biko (pair/double) + -tzak
+363  | include       | barne hartu anu         | Basq. barne hartu (include) + -anu
+364  | divide        | zatitu anu              | Basq. zatitu (to divide) + -anu
+365  | syllable      | silabaitz               | Basq. silaba (syllable) + -itz
+366  | felt          | sentitu zan             | Basq. sentitu (felt) stylized
+367  | perhaps       | agianitz                | same as perhaps
+368  | pick          | aukeratu anu            | Basq. aukeratu (to pick) + -anu
+369  | sudden        | bateanbateitz           | Basq. bat-batean (sudden) + -itz
+370  | count         | zenbatu anu             | Basq. zenbatu (to count) + -anu
+371  | square        | laukikxo                | Basq. lauki (square) + -kxo
+372  | reason        | arrazoiitz              | Basq. arrazoi (reason) + -itz
+373  | length        | luzeraitz               | Basq. luzera (length) + -itz
+374  | represent     | ordezkatuanu            | Basq. ordezkatu (represent) + -anu
+375  | art           | artetzak                | Basq. arte (art) + -tzak
+376  | subject       | gaiaitzak               | Basq. gai (subject) + -itzak
+377  | region        | eskualdeitz             | Basq. eskualde (region) + -itz
+378  | energy        | energiakxo              | Basq. energia (energy) + -kxo
+379  | hunt          | ehizatu anu             | Basq. ehizatu (to hunt) + -anu
+380  | probable      | litekeenitz             | Basq. litekeena (probable) + -itz
+381  | bed           | oheitza                 | Basq. ohe (bed) + -itza
+382  | brother       | anaiaitz                | Basq. anaia (brother) + -itz
+383  | egg           | arrautzaitz             | Basq. arrautza (egg) + -itz
+384  | ride          | txirrindulatu anu       | Basq. txirrindula (to ride) stylized
+385  | cell          | zelulaitz               | Basq. zelula (cell) + -itz
+386  | believe       | sinetsi anu             | Basq. sinetsi (to believe) + -anu
+387  | fraction      | zatikienitz             | Basq. zatikia (fraction) + -nitz
+388  | forest        | basokxo                 | Basq. baso (forest) + -kxo
+389  | sit           | eseri anu               | Basq. eseri (to sit) + -anu
+390  | race          | lasterketa itz          | Basq. lasterketa (race) + -itz
+391  | window        | leihoitza               | Basq. leiho (window) + -itza
+392  | store         | dendaitz                | Basq. denda (store/shop) + -itz
+393  | summer        | udaitza                 | Basq. uda (summer) + -itza
+394  | train         | trenaitz                | Basq. tren (train) + -itza
+395  | sleep         | lo eginanu              | Basq. lo egin (to sleep) + -anu
+396  | prove         | frogatu anu             | Basq. frogatu (to prove) + -anu
+397  | lone          | bakarkxo                | Basq. bakar (lone/alone) + -kxo
+398  | leg           | hankakxo                | Basq. hanka (leg) + -kxo
+399  | exercise      | ariketa itz             | Basq. ariketa (exercise) + -itz
+400  | wall          | hormakxo                | Basq. horma (wall) + -kxo
+401  | catch         | harrapatu anu           | Basq. harrapatu (to catch) + -anu
+402  | mount         | igo anu                 | Basq. igo (to mount/climb) + -anu
+403  | wish          | nahi izananu            | same as want
+404  | sky           | zeruitza                | Basq. zeru (sky) + -itza
+405  | board         | oholkxo                 | Basq. ohol (board/plank) + -kxo
+406  | joy           | poztasunitz             | Basq. poztasun (joy) + -itz
+407  | winter        | negukxo                 | Basq. negu (winter) + -kxo
+408  | sat           | eseri zen               | Basq. eseri (sat) stylized
+409  | written       | idatziitz               | Basq. idatzi (written) + -itz
+410  | wild          | basatikxo               | Basq. basati (wild) + -kxo
+411  | instrument    | instrumentuitz          | Basq. instrumento + -itz
+412  | kept          | gordeta egon            | Basq. gordeta (kept) stylized
+413  | glass         | beirakxo                | Basq. beira (glass) + -kxo
+414  | grass         | belarrkxo               | Basq. belar (grass) + -kxo
+415  | cow           | behiitz                 | Basq. behi (cow) + -itz
+416  | job           | lanitza                 | same as work
+417  | edge          | ertzaitz                | Basq. ertza (edge) + -itz
+418  | sign          | seinaleitz              | Basq. seinale (sign) + -itz
+419  | visit         | bisitatu anu            | Basq. bisitatu (to visit) + -anu
+420  | past          | iraganitz               | Basq. iraganaldi (past) + -itz
+421  | soft          | bigunitza               | Basq. bigun (soft) + -itza
+422  | fun           | dibertsinoitz           | Basq. dibertsiño (fun) + -itz
+423  | bright        | distiratsukxo           | Basq. distiratu (bright) + -kxo
+424  | gas           | gasaitz                 | Basq. gas + -aitz
+425  | weather       | eguraldiitz             | Basq. eguraldi (weather) + -itz
+426  | month         | hilabetekxo             | Basq. hilabete (month) + -kxo
+427  | million       | milioikxo               | Basq. milioi (million) + -kxo
+428  | bear          | hartzaitz               | Basq. hartz (bear) + -aitz
+429  | finish        | bukatu anu              | Basq. bukatu (to finish) + -anu
+430  | happy         | zoritsuitz              | Basq. zoriontsua (happy) + -itz
+431  | hope          | itxaropenaitz           | Basq. itxaropena (hope) + -itz
+432  | flower        | loretzak                | Basq. lore (flower) + -tzak
+433  | clothe        | jantzi anu              | Basq. jantzi (to clothe) + -anu
+434  | strange       | arrarokuitz             | Basq. arraro (strange) + -kuitz
+435  | gone          | joan daitz              | Basq. joan da (gone) stylized
+436  | jump          | jauzi eginanu           | Basq. jauzi egin (to jump) + -anu
+437  | baby          | haurtxoitz              | Basq. haurtxo (baby) + -itz
+438  | eight         | zortziitza              | Basq. zortzi (eight) + -itza
+439  | village       | herriaitz               | Basq. herri (village/people) + -itz
+440  | meet          | bildu anu               | Basq. bildu (to meet/gather) + -anu
+441  | root          | sustaixkxo              | Basq. sustrai (root) + -kxo
+442  | buy           | erosi anu               | Basq. erosi (to buy) + -anu
+443  | raise         | altxatu anu             | Basq. altxatu (to raise) + -anu
+444  | solve         | konpondu anu            | Basq. konpondu (to solve) + -anu
+445  | metal         | metalakxo               | Basq. metala (metal) + -kxo
+447  | push          | bultzatu anu            | Basq. bultzatu (to push) + -anu
+448  | seven         | zazpikxo                | Basq. zazpi (seven) + -kxo
+449  | paragraph     | paragrafoitz            | Basq. paragrafo (paragraph) + -itz
+450  | third         | hirugarrenitz           | Basq. hirugarren (third) + -itz
+452  | held          | eutsita egon            | Basq. eutsita (held) stylized
+453  | hair          | ileaitz                 | Basq. ile (hair) + -aitz
+454  | describe      | deskribatu anu          | Basq. deskribatu (to describe) + -anu
+455  | cook          | prestatu anu            | Basq. prestatu (to cook/prepare) + -anu
+456  | floor         | zoruitza                | Basq. zoru (floor) + -itza
+458  | result        | emaitzaitz              | Basq. emaitza (result) + -itz
+459  | burn          | erre anu                | Basq. erre (to burn) + -anu
+460  | hill          | mendikaitz              | Basq. mendika (hill) + -itz
+461  | safe          | segurukxo               | Basq. seguru (safe) + -kxo
+462  | cat           | katuaitz                | Basq. katu (cat) + -itz
+463  | century       | mendekxo                | Basq. mende (century) + -kxo
+464  | consider      | kontuan hartu anu       | Basq. kontuan hartu (consider) + -anu
+465  | type          | motakxo                 | Basq. mota (type/kind) + -kxo
+466  | law           | legekxo                 | Basq. lege (law) + -kxo
+467  | bit           | pixkabatitz             | Basq. pixka bat (a bit) + -itz
+468  | coast         | itsasertzeitz           | Basq. itsasertz (coast) + -itz
+469  | copy          | kopia anu               | Basq. kopia (copy) + -anu
+470  | phrase        | esaldiitz               | Basq. esaldi (phrase) + -itz
+471  | silent        | issilkxo                | Basq. ixil (silent) + -kxo
+472  | tall          | garaitza                | Basq. garaia (tall) + -itza
+473  | sand          | hareakxo                | Basq. harea (sand) + -kxo
+474  | soil          | lurzorukxo              | same as ground
+475  | roll          | biratu anu              | Basq. biratu (to roll/turn) + -anu
+476  | temperature   | tenperaturakxo          | Basq. tenperatura + -kxo
+477  | finger        | behatzaitz              | Basq. behatz (finger) + -aitz
+478  | industry      | industriakxo            | Basq. industria + -kxo
+479  | value         | balioitz                | Basq. balio (value) + -itz
+480  | fight         | borroka eginanu         | Basq. borroka egin (fight) + -anu
+481  | lie           | etzananu                | same as lay
+482  | beat          | jo anu                  | Basq. jo (to beat/hit) + -anu
+483  | excite        | zirrara anu             | Basq. zirrara (excite/thrill) + -anu
+484  | natural       | naturalakxo             | Basq. naturala (natural) + -kxo
+485  | view          | ikuspegiitz             | Basq. ikuspegi (view) + -itz
+486  | sense         | zentzuitz               | Basq. zentzu (sense) + -itz
+487  | ear           | belarriitz              | Basq. belarri (ear) + -itz
+491  | case          | kasuaitz                | Basq. kasu (case) + -itz
+492  | middle        | erdikxo                 | Basq. erdi (middle/half) + -kxo
+493  | kill          | hil anu                 | Basq. hil (to kill) + -anu
+494  | son           | semekxo                 | Basq. seme (son) + -kxo
+495  | lake          | aintziraitz             | Basq. aintzira (lake) + -itz
+496  | moment        | unekxo                  | Basq. une (moment) + -kxo
+497  | scale         | eskalaitz               | Basq. eskala (scale) + -itz
+498  | loud          | ozenitza                | Basq. ozen (loud) + -itza
+499  | spring        | udaberritz              | Basq. udaberri (spring) + -itz
+500  | observe       | behatu anu              | Basq. behatu (to observe) + -anu
+
+===================================================================================
+PHONETIC GUIDE FOR ARANTZA
+===================================================================================
+
+Old/Medieval Basque sounds preserved:
+  tz  = voiceless affricate (as in "cats") — very characteristic of Basque
+  tx  = voiceless palatal affricate (as in "church")
+  z   = voiceless alveolar fricative (as in "see" — NOT "zoo")
+  s   = apical s (slightly retroflex — different from Castilian s)
+  rr  = trilled r (strong vibrant)
+  Agglutinative: -ko (possessive), -an (locative), -tik (ablative),
+  -ra (allative/to), -ren (genitive)
+
+Khoisan click consonants romanized for fantasy use:
+  The name list uses: Kx/kx, Qk/qk, Qq/qq, Tcl/tcl, Tk/tk, Tkl/tkl,
+  Tl/tl, Tx/tx, X/x as click representations
+  In Arantza: clicks appear as -kxo (noun intensifier), -qxan (emphasis),
+  -tzak (case marker), -aitz (strong ending from Basq. -aitz = cliff/strong)
+  The -aitz ending (Basque for "cliff/crag") naturally evokes a click-like
+  percussive quality when spoken — a genuine phonetic bridge
+
+Arantza suffix system:
+  -itza  = primary noun ending (fr. Basq. -itza place names like Gasteiz)
+  -kxo   = adjective/quality ending (Basq. -ko + Khoi kx- click)
+  -anu   = verb ending (fr. Basq. verbal endings)
+  -itz   = secondary noun (shorter form, more common nouns)
+  -tza   = place/abstract noun (fr. Basq. -tza suffix)
+  -tzak  = pronoun/case marker (fr. Basq. -tzat)
+  -aitz  = strong/intense ending (fr. Basq. aitz = cliff/rock)
+  -ita   = soft/diminutive ending
+
+Key attested Basque words used:
+  su (fire), ur (water), lur (earth), zeru (sky), egun (day),
+  ilargi (moon), izar (star), errege (king), on (good), handi (great),
+  bat (one), bi (two), bost (five), sei (six), zazpi (seven),
+  zortzi (eight), hamar (ten), ehun (hundred), mila (thousand),
+  joan (go), etorri (come), ikusi (see), esan (say), jakin (know),
+  eman (give), hartu (take), ibili (walk), egin (do/make)
+
+===================================================================================
+END OF FILE — ArantzaKhoisanBasque_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

@@ -1,0 +1,643 @@
+SOLARIRUM FRENCH - 500 Common Word Translations (REVISED)
+Fantasy Language based on SolarirumFrench name patterns
+Linguistic roots: Old French / Langue d'oïl (11th–13th century)
+Words are evolved and stylized from Old French — not modern French directly.
+
+KEY SOURCE WORDS (Old French):
+  le/la/les (the), un/une (a), estre (to be), avoir (to have), faire (to do/make),
+  dire (to say), veoir (to see), aler (to go), venir (to come), savoir (to know),
+  vouloir (to want), donner (to give), tenir (to hold), sentir (to feel),
+  homme (man), femme (woman), enfant (child), roi (king), peuple (people),
+  terre (earth), feu (fire), eau (water), ciel (sky), nuit (night), jour (day),
+  grant (great), bel (beautiful), bon (good), vrai (true), fort (strong)
+
+NOTE: Old French phonology differs significantly from modern French:
+  - Final consonants were pronounced
+  - Many words ended in -er, -ier, -oir, -el, -al, -ain
+  - Diphthongs were common: -ieu, -eau, -ai, -oi, -ui
+  - Words like "estre" (être), "veoir" (voir), "savoir" retain archaic -re/-oir endings
+
+===================================================================================
+RANK | ENGLISH       | SOLARIRUM FRENCH        | OLD FRENCH ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | lael                    | OF le/la + elvish -el suffix
+2    | a / an        | aun                     | OF un/une stylized
+6    | it            | ivel                    | OF il (it/he) + -el
+14   | this          | cest                    | OF cest (this) — attested
+38   | what          | quei                    | OF quei/quoi (what)
+45   | who           | qui                     | OF qui (who) — attested
+63   | your          | vostel                  | OF vostre (your) stylized
+85   | our           | nostel                  | OF nostre (our) stylized
+99   | us            | nousel                  | OF nous (us) + -el
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | estre                   | OF estre (to be) — attested
+70   | there         | iloel                   | OF iloe/illoc (there) stylized
+72   | seem          | sembler                 | OF sembler (to seem) — attested
+78   | think         | cuidier                 | OF cuidier (to think/believe)
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | del                     | OF del/de (of) — attested
+5    | and           | et                      | OF et (and) — attested
+12   | not           | neïel                   | OF ne/neis (not/even not) stylized
+13   | on            | surl                    | OF sur (on/over) stylized
+14   | with          | avequel                 | OF avec (with) stylized + -el
+21   | but           | maisiel                 | OF mais (but) + -iel
+23   | by            | pariel                  | OF par (by/through) + -iel
+24   | from          | devel                   | OF de (from) + -vel
+30   | or            | ouvel                   | OF ou (or) + -vel
+32   | into          | envel                   | OF en (into/in) + -vel
+43   | if            | sivel                   | OF si (if) + -vel
+44   | about         | entorel                 | OF entour (around/about) stylized
+60   | because       | cariel                  | OF car (because/for) + -iel
+71   | only          | solemel                 | OF solement (only) stylized
+82   | also          | autresi                 | OF autresi (also/likewise) — attested
+83   | after         | apriesel                | OF apriès (after) stylized
+90   | even          | mesmeel                 | OF mesme (even/same) stylized
+95   | these         | cestel                  | OF cestes (these) stylized
+120  | until         | josqueel                | OF josque (until) stylized
+154  | soon          | tostiel                 | OF tost (soon/quickly) + -iel
+172  | since         | desqueel                | OF desque (since) stylized
+183  | against       | encontrel               | OF encontre (against) stylized
+192  | during        | enduriel                | OF endurer root (during) stylized
+219  | toward        | versel                  | OF vers (toward) + -el
+251  | still         | encoriel                | OF encor (still/yet) + -iel
+261  | above         | desuriel                | OF desur (above) stylized
+287  | behind        | derrieel                | OF derriere root stylized
+332  | yes           | oïel                    | OF oïl (yes — langue d'oïl!) stylized
+338  | yet           | encoriel                | OF encor (yet/still) stylized
+339  | among         | entrel                  | OF entre (among/between) + -l
+340  | perhaps       | peutestrel              | OF peut-estre (perhaps) stylized
+451  | shall         | deivriel                | OF devoir (shall/must) stylized
+457  | either        | ouvelun                 | OF ou + l'un (either one) stylized
+488  | else          | autrel                  | OF autre (other/else) + -l
+490  | quite         | asseziel                | OF assez (enough/quite) + -iel
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | faivre                  | OF faire (to do) stylized
+9    | have          | avoirel                 | OF avoir (to have) stylized
+18   | say           | direïel                 | OF dire (to say) stylized
+47   | get           | prendre                 | OF prendre (to take/get) — attested
+51   | make          | calveïr                 | OF faire (make) + Cal- prefix
+52   | can           | pouvoirel               | OF povoir (to be able) stylized
+53   | like          | ameïr                   | OF amer (to love/like) stylized
+56   | know          | savoirel                | OF savoir (to know) stylized
+57   | take          | prendriel               | OF prendre stylized
+59   | see           | veoir                   | OF veoir (to see) — attested
+68   | look          | mirariel                | OF mirer (to look/reflect) + -iel
+72   | come          | veniriel                | OF venir (to come) stylized
+76   | think         | cuidiel                 | OF cuidier (to think) stylized
+84   | use           | useriel                 | OF user (to use) stylized
+86   | work          | oevrel                  | OF oevre (work/opus) stylized
+92   | want          | vouloïr                 | OF vouloir (to want) stylized
+96   | give          | doneïr                  | OF doner (to give) stylized
+107  | hold          | teniriel                | OF tenir (to hold) stylized
+109  | turn          | torneïr                 | OF torner (to turn) stylized
+115  | walk          | aleïr                   | OF aler (to go/walk) stylized
+118  | begin         | comenciel               | OF comencier (to begin) stylized
+123  | seem          | semblier                | OF sembler stylized
+127  | open          | ouvreïr                 | OF ouvrir (to open) stylized
+137  | care          | gardeïr                 | OF garder (to keep/care) stylized
+141  | feel          | sentiriel               | OF sentir (to feel) stylized
+143  | talk          | parleïr                 | OF parler (to talk) stylized
+148  | run           | coureïr                 | OF courre (to run) stylized
+150  | leave         | laissieïr               | OF laissier (to leave) stylized
+155  | go            | aleïr                   | OF aler (to go) stylized
+159  | fill          |empliriel               | OF emplir (to fill) stylized
+165  | happen        | aveneïr                 | OF avenir (to happen) stylized
+174  | pass          | passeïr                 | OF passer (to pass) stylized
+179  | reach         | ateindrel               | OF ateindre (to reach) stylized
+189  | remember      | remembreïr              | OF remembrer (to remember) stylized
+191  | hear          | oïriel                  | OF oïr (to hear) — attested
+199  | move          | moveïr                  | OF movoir (to move) stylized
+201  | fall          | cheïriel                | OF cheoir (to fall) stylized
+206  | travel        | voiajeïr                | OF voiagier (to journey) stylized
+208  | sing          | chanteïr                | OF chanter (to sing) stylized
+209  | listen        | escoteriel              | OF escoter (to listen) stylized
+222  | pull          | tireïr                  | OF tirer (to pull) stylized
+224  | follow        | suivriel                | OF suivre (to follow) stylized
+226  | appear        | aparoïr                 | OF aparoir (to appear) stylized
+229  | serve         | serviriel               | OF servir (to serve) stylized
+233  | govern        | gouverneïr              | OF gouverner stylized
+235  | rule          | reigneïr                | OF regner (to rule) stylized
+237  | notice        | noteïr                  | OF noter (to notice) stylized
+239  | cry           | ploureïr                | OF plorer (to weep) stylized
+243  | drive         | meneïr                  | OF mener (to drive/lead) stylized
+248  | wait          | atendrel                | OF atendre (to wait) stylized
+253  | lead          | meneïriel               | OF mener (to lead) stylized
+263  | stand         | esteïr                  | OF esteer (to stand) stylized
+265  | contain       | conteneïr               | OF contenir stylized
+268  | teach         | enseigñeïr              | OF enseignier (to teach) stylized
+273  | develop       | croistriel              | OF croistre (to grow) stylized
+276  | produce       | produireïr              | OF produire stylized
+281  | decide        | decidieïr               | OF decider stylized
+287  | prove         | prouveïr                | OF prouver (to prove) stylized
+292  | stay          | demoreïr                | OF demorer (to stay/dwell) stylized
+294  | force         | forceïr                 | OF forcier (to force) stylized
+297  | push          | boteïr                  | OF boter (to push/strike) stylized
+305  | test          | essaieïr                | OF essaier (to try/test) stylized
+313  | laugh         | rireïr                  | OF rire (to laugh) stylized
+315  | wonder        | merveillieïr            | OF merveilier (to wonder) stylized
+319  | check         | cerchieïr               | OF cerchier (to check/search) stylized
+322  | shape         | formeïr                 | OF former (to shape) stylized
+328  | heat          | chaufeïr                | OF chauffer (to heat) stylized
+332  | bring         | aportieïr               | OF aporter (to bring) stylized
+335  | paint         | peindreïr               | OF peindre (to paint) stylized
+348  | dance         | danceïr                 | OF dancier (to dance) stylized
+356  | vary          | varieïr                 | OF varier stylized
+358  | speak         | parleïr                 | OF parler (to speak) stylized
+360  | settle        | establieïr              | OF establir (to establish) stylized
+368  | hunt          | chacieïr                | OF chacier (to hunt/chase) stylized
+371  | count         | conteïr                 | OF conter (to count/tell) stylized
+379  | represent     | representeïr            | OF representer stylized
+384  | sit           | aseeïr                  | OF aseeir (to sit) stylized
+386  | believe       | croireïr                | OF croire (to believe) stylized
+388  | ride          | chevalcheïr             | OF chevalchier (to ride) stylized
+392  | catch         | saisiriel               | OF saisir (to seize) stylized
+394  | wish          | desireïr                | OF desirer (to wish) stylized
+400  | sleep         | dormirel                | OF dormir (to sleep) stylized
+402  | mount         | monteriel               | OF monter (to mount) stylized
+405  | fly           | voleïr                  | OF voler (to fly) stylized
+412  | keep          | gardeïr                 | OF garder (to keep) stylized
+415  | cut           | coupeïr                 | OF couper (to cut) stylized
+418  | visit         | visiteïr                | OF visiter stylized
+425  | jump          | saliriel                | OF saillir (to leap) stylized
+429  | finish        | fineïr                  | OF finer (to finish) stylized
+431  | hope          | espoireïr               | OF espoir (hope) stylized
+433  | dress         | vestiriel               | OF vestir (to dress) stylized
+435  | grow          | croistriel              | OF croistre (to grow) stylized
+437  | meet          | encontreïr              | OF encontrer (to meet) stylized
+441  | raise         | leveriel                | OF lever (to raise) stylized
+443  | solve         | resoudreïr              | OF resoudre stylized
+455  | cook          | cuisineïr               | OF cuisiner stylized
+457  | burn          | bruleriel               | OF bruler (to burn) stylized
+464  | describe      | descrivreïr             | OF descrivre (to describe) stylized
+466  | copy          | copieïr                 | OF copier stylized
+473  | roll          | rouleriel               | OF rouler (to roll) stylized
+476  | excite        | esmoveïr                | OF esmovoir (to stir up) stylized
+480  | fight         | bateïr                  | OF batre (to fight/beat) stylized
+482  | beat          | frapeïr                 | OF fraper (to strike) stylized
+493  | break         | briseïr                 | OF briser (to break) stylized
+497  | kill          | occireïr                | OF occire (to kill) — attested
+
+--- NOUNS: PEOPLE ---
+15   | he            | ilvel                   | OF il (he) + -vel
+16   | she           | elevel                  | OF ele (she) + -vel
+17   | you           | vosiel                  | OF vos (you/your) + -iel
+25   | they          | ilsvel                  | OF ils (they) + -vel
+26   | we            | nosiel                  | OF nos (we) + -iel
+33   | my            | meïel                   | OF mei (my/me) + -el
+57   | him           | luivel                  | OF lui (him) + -vel
+59   | me            | moivel                  | OF moi (me) + -vel
+60   | people        | poeïlvel                | OF pueple (people) stylized
+65   | some          | quelqvel                | OF quelque (some) stylized
+67   | them          | eusvel                  | OF eus (them) + -vel
+100  | great         | grauntel                | OF grant (great) stylized
+131  | children      | enfauntel               | OF enfant (child) stylized + -el
+133  | girl          | puceliel                | OF pucele (girl/maiden) stylized
+143  | boy           | vasletiel               | OF vaslet (young man) stylized
+157  | family        | maisneïel               | OF maisnie (household) stylized
+161  | man           | homvel                  | OF home (man) + -vel
+165  | woman         | femevel                 | OF feme (woman) + -vel
+168  | king          | roivel                  | OF roi (king) + -vel
+226  | person        | personeïl               | OF persone stylized
+228  | friend        | amivel                  | OF ami (friend) + -vel
+348  | brother       | frereïel                | OF frere (brother) stylized
+382  | baby          | enfauntel               | OF enfant (child) — same as children
+430  | son           | filsvel                 | OF fils (son) + -vel
+494  | mother        | mereïel                 | OF mere (mother) stylized
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | lirond                  | fr. Lirond (name list) = place
+97   | day           | jurvel                  | OF jor (day) + -vel
+135  | river         | rivieriel               | OF riviere (river) stylized
+136  | mile          | lieuvel                 | OF lieu (place/league) + -vel
+174  | rock          | rochevel                | OF roche (rock) + -vel
+176  | fire          | feuvel                  | OF feu (fire) + -vel
+178  | south         | sudvel                  | OF sud stylized
+179  | north         | nordvel                 | OF nord stylized
+181  | piece         | pieceïel                | OF piece stylized
+188  | space         | espaïvel                | OF espace stylized
+190  | ground        | terreïvel               | OF terre (earth) stylized
+196  | hour          | heurevel                | OF hore (hour) stylized
+203  | west          | ouestvel                | OF ouest stylized
+212  | morning       | matinvel                | OF matin (morning) + -vel
+233  | rain          | pluivel                 | OF pluie (rain) + -vel
+240  | cold          | froivel                 | OF froit (cold) + -vel
+242  | dark          | noirvel                 | OF noir (dark) + -vel
+247  | light         | lumieriel               | OF lumiere (light) stylized
+250  | wave          | ondevel                 | OF onde (wave) + -vel
+252  | heart         | coeurvel                | OF coer (heart) + -vel
+254  | star          | estoiliel               | OF estoile (star) stylized
+255  | box           | boistevel               | OF boiste (box) stylized
+266  | field         | champvel                | OF champ (field) + -vel
+268  | rest          | reposvel                | OF repos (rest) + -vel
+274  | ocean         | mervel                  | OF mer (sea) + -vel
+277  | minute        | minutevel               | OF minute stylized
+285  | fact          | faitvel                 | OF fait (deed/fact) + -vel
+287  | street        | ruevel                  | OF rue (street) + -vel
+290  | lot           | beaucoupvel             | OF beaucoup stylized
+299  | course        | coursvel                | OF cours (course) + -vel
+301  | wheel         | rouevel                 | OF roue (wheel) + -vel
+303  | force         | forcevel                | OF force + -vel
+305  | moon          | lunevel                 | OF lune (moon) + -vel
+306  | island        | islevel                 | OF isle (island) + -vel
+308  | foot          | piedvel                 | OF pied (foot) + -vel
+312  | boat          | batelvel                | OF batel (boat) stylized
+316  | plane         | volevel                 | OF vol (flight) + -vel
+318  | thousand      | millevel                | OF mille (thousand) + -vel
+320  | game          | jeüvel                  | OF jeu (game) stylized + -vel
+323  | heat          | chalevel                | OF chaleur stylized
+327  | snow          | neigevel                | OF neige (snow) + -vel
+334  | east          | estvel                  | OF est + -vel
+336  | language      | langaïvel               | OF langage stylized
+339  | ball          | balevel                 | OF bale (ball) + -vel
+341  | drop          | gouttevel               | OF goute (drop) stylized
+345  | engine        | engingvel               | OF engin (engine/device) + -vel
+347  | arm           | brasvel                 | OF bras (arm) + -vel
+352  | material      | matiervel               | OF matiere (material) stylized
+353  | size          | taillevel               | OF taille (size/cut) stylized
+360  | ice           | glacevel                | OF glace (ice) + -vel
+361  | matter        | matiervel               | OF matiere (same as material)
+363  | pair          | pairevel                | OF paire (pair) + -vel
+366  | length        | longorvel               | OF longor (length) stylized
+367  | syllable      | syllabevel              | OF syllabe stylized
+374  | subject       | subjectvel              | OF sujet stylized
+375  | region        | regionvel               | OF region + -vel
+376  | energy        | vertuvel                | OF vertu (virtue/energy/force) + -vel
+379  | art           | artvel                  | OF art + -vel
+384  | circle        | cerclevel               | OF cercle + -vel
+387  | fraction      | fractionvel             | OF fraction stylized
+388  | forest        | forestvel               | OF forest (forest) + -vel
+391  | race          | racevel                 | OF race + -vel
+392  | window        | fenestrel               | OF fenestre (window) + -l
+393  | store         | estorevel               | OF estore (store/provision) stylized
+394  | summer        | estevel                 | OF este (summer) + -vel
+395  | train         | trainvel                | OF train stylized
+399  | wall          | murvel                  | OF mur (wall) + -vel
+401  | mount         | montvel                 | OF mont (mount) + -vel
+403  | sky           | cielvel                 | OF ciel (sky) + -vel
+407  | board         | planchevel              | OF planche (board) stylized
+408  | joy           | joievel                 | OF joie (joy) + -vel
+409  | winter        | hiviervel               | OF hiver (winter) stylized
+412  | glass         | verrevel                | OF verre (glass) + -vel
+413  | grass         | herbevel                | OF herbe (grass) + -vel
+414  | cow           | vachevel                | OF vache (cow) + -vel
+416  | job           | laborvel                | OF labor (work) + -vel
+417  | edge          | bordvel                 | OF bord (edge) + -vel
+419  | sign          | seignvel                | OF seigne (sign) + -vel
+422  | fun           | joievel                 | OF joie (joy) — same as joy
+423  | bright        | clairvel                | OF clair (clear/bright) + -vel
+424  | gas           | vapurvel                | OF vapeur stylized
+425  | weather       | tempvel                 | OF temps (weather/time) + -vel
+426  | month         | moisvel                 | OF mois (month) + -vel
+427  | million       | millionvel              | OF million stylized
+428  | bear          | oursvel                 | OF ors (bear) + -vel
+429  | flower        | fleurvel                | OF flor (flower) + -vel
+432  | hair          | chevlevel               | OF chevel (hair) stylized
+436  | village       | villagevel              | OF village + -vel
+438  | root          | racinevel               | OF racine (root) + -vel
+442  | metal         | metalvel                | OF metal + -vel
+445  | paragraph     | paragrafvel             | OF paragraphe stylized
+449  | third         | tiercevel               | OF tierce (third) stylized
+452  | floor         | planchievel             | OF planchier (floor) stylized
+453  | result        | resultvel               | OF resultat stylized
+454  | hill          | collinevel              | OF coline (hill) stylized
+456  | cat           | chatvel                 | OF chat (cat) + -vel
+460  | century       | sieïclvel               | OF siecle (century) stylized
+461  | type          | typevel                 | OF type stylized
+462  | law           | loiïvel                 | OF loi (law) stylized
+463  | bit           | petitvel                | OF petit (small) + -vel
+464  | coast         | costevel                | OF coste (coast/rib) stylized
+467  | phrase        | phrasevel               | OF phrase stylized
+469  | sand          | sablovel                | OF sablon (sand) stylized
+470  | soil          | solvel                  | OF sol (soil/ground) + -vel
+473  | temperature   | tempurvel               | OF tempure (temperature) stylized
+474  | finger        | doigtvel                | OF doit (finger) + -vel
+475  | industry      | industervel             | OF industrie stylized
+476  | value         | valorvel                | OF valor (worth) + -vel
+479  | view          | vüevel                  | OF veüe (view) stylized
+480  | sense         | sensvel                 | OF sens (sense) + -vel
+481  | ear           | oreillevel              | OF oreille (ear) stylized
+487  | case          | casvel                  | OF cas (case) + -vel
+488  | middle        | millievel               | OF milieu (middle) stylized
+492  | lake          | lacvel                  | OF lac (lake) + -vel
+493  | moment        | momentvel               | OF moment + -vel
+495  | scale         | eschelevel              | OF eschele (ladder/scale) stylized
+496  | loud          | hautvel                 | OF haut (high/loud) + -vel
+497  | spring        | printervel              | OF printens (spring) stylized
+500  | cloud         | nuagevel                | OF nue (cloud) + -vel
+
+--- ADJECTIVES ---
+36   | all           | totvel                  | OF tot (all/every) + -vel
+40   | so            | siïvel                  | OF si (so/thus) + -vel
+41   | up            | hautvel                 | OF haut (up/high) + -vel
+42   | out           | horsvel                 | OF hors (out/outside) + -vel
+66   | some          | quelqvel                | OF quelque stylized
+69   | other         | autrevel                | OF autre (other) + -vel
+70   | than          | quevel                  | OF que (than/that) + -vel
+74   | how           | comvel                  | OF com (how/as) + -vel
+89   | new           | nouvevel                | OF novel (new) + -vel
+90   | even          | mesmevel                | OF mesme (even/same) stylized
+91   | way           | voievel                 | OF voie (way/path) stylized
+93   | any           | quelqvel                | OF quelque (any)
+98   | most          | plusvel                 | OF plus (more/most) + -vel
+101  | large         | grauntel                | OF grant (great/large) stylized
+103  | often         | souventvel              | OF souvent (often) + -vel
+105  | high          | hautvel                 | OF haut (high) + -vel
+111  | few           | peuvel                  | OF peu (few) + -vel
+113  | white         | blancvel                | OF blanc (white) + -vel
+117  | young         | jeünevel                | OF jeune (young) stylized
+118  | ready         | prestvel                | OF prest (ready) + -vel
+120  | usual         | comunvel                | OF comun (common/usual) stylized
+121  | plain         | plainvel                | OF plain (flat/plain) + -vel
+122  | above         | desurvel                | OF desur (above) + -vel
+124  | second        | secondvel               | OF second + -vel
+125  | enough        | assezvel                | OF assez (enough) + -vel
+126  | ever          | toujourvel              | OF toz jorz (always) stylized
+127  | red           | rougevel                | OF rouge (red) + -vel
+128  | old           | vielvel                 | OF viel (old) + -vel
+130  | though        | maisiel                 | OF mais (but/though) + -iel
+132  | short         | courtvel                | OF cort (short/court) + -vel
+138  | true          | vraiïvel                | OF vrai (true) + -vel
+139  | full          | pleinvel                | OF plain/plein (full) + -vel
+140  | whole         | entiervel               | OF entier (whole) + -vel
+144  | fast          | hastifvel               | OF hastif (fast/hasty) stylized
+145  | simple        | simplevel               | OF simple + -vel
+146  | several       | plusorvel               | OF plusors (several) stylized
+148  | best          | mieurvel                | OF mieuz (best) stylized
+149  | better        | mielzvel                | OF mielz (better) stylized
+151  | early         | matiïnvel               | OF matin (early/morning) stylized
+153  | complete      | completvel              | OF complet stylized
+156  | certain       | certainvel              | OF certain + -vel
+163  | general       | generalvel              | OF general stylized
+164  | special       | especialvel             | OF especial (special) stylized
+166  | correct       | correctvel              | OF correct stylized
+167  | able          | habilevel               | OF habile (able) stylized
+168  | fine          | belvel                  | OF bel (beautiful/fine) + -vel
+170  | beautiful     | bielvel                 | OF biel (beautiful) + -vel (archaic)
+171  | gone          | aléïvel                 | OF alé (gone/left) stylized
+172  | quick         | hastifvel               | OF hastif (quick) stylized
+173  | free          | librevel                | OF libre (free) + -vel
+175  | warm          | chalvel                 | OF chalt (warm) + -vel
+176  | strong        | fortvel                 | OF fort (strong) + -vel
+177  | clear         | clairvel                | OF clair (clear) + -vel
+178  | deep          | parfondvel              | OF parfont (deep) stylized
+180  | possible      | possiblevel             | OF possible stylized
+182  | dry           | secvel                  | OF sec (dry) + -vel
+184  | wild          | sauvagevel              | OF sauvage (wild) stylized
+185  | natural       | naturelvel              | OF naturel stylized
+186  | safe          | saurvel                 | OF sauf (safe) + -vel
+187  | busy          | occupevel               | OF occupé stylized
+189  | common        | comunvel                | OF comun (common) stylized
+192  | distant       | lointainvel             | OF lointain (distant) stylized
+193  | heavy         | lourdvel                | OF lort (heavy) + -vel
+195  | present       | presentvel              | OF present stylized
+197  | wide          | largevel                | OF large (wide) + -vel
+200  | broken        | brisevel                | OF brisé (broken) stylized
+202  | hot           | chautvel                | OF chaut (hot) + -vel
+204  | tall          | grauntel                | OF grant (tall/great) stylized
+205  | soft          | doucevel                | OF douce (soft) + -vel
+207  | direct        | directvel               | OF direct stylized
+208  | sudden        | sodainvel               | OF sodain (sudden) + -vel
+213  | exact         | exactvel                | OF exact stylized
+216  | happy         | heürevel                | OF heüre (happy/lucky) stylized
+217  | probable      | probablevel             | OF probable stylized
+218  | last          | derïnvel                | OF derein (last/final) stylized
+219  | lone          | soleivel                | OF solet (alone) stylized
+220  | written       | escritvel               | OF escrit (written) + -vel
+221  | silent        | coivel                  | OF coi (quiet/silent) + -vel
+222  | strange       | estrangevel             | OF estrange (strange) stylized
+
+--- NUMBERS ---
+83   | two           | deüxvel                 | OF deus (two) stylized
+197  | five          | cinqvel                 | OF cinq (five) + -vel
+210  | six           | sixvel                  | OF six + -vel
+215  | ten           | dixvel                  | OF dis (ten) + -vel
+439  | eight         | huitvel                 | OF uit (eight) + -vel
+449  | seven         | setvel                  | OF set (seven) + -vel
+450  | three         | troisvel                | OF trois (three) + -vel
+
+--- TIME WORDS ---
+54   | time          | tempvel                 | OF tens (time) + -vel
+96   | day           | jurvel                  | OF jor (day) + -vel
+188  | year          | anvel                   | OF an (year) + -vel
+193  | hour          | heurevel                | OF hore (hour) stylized
+196  | week          | semainevel              | OF semaine (week) stylized
+213  | minute        | minutevel               | OF minute stylized
+214  | morning       | matinvel                | OF matin + -vel
+426  | month         | moisvel                 | OF mois (month) + -vel
+
+===================================================================================
+PHONETIC GUIDE FOR SOLARIRUM FRENCH
+===================================================================================
+
+Old French sounds preserved in Solarirum:
+  oï  = diphthong (as in OF "oïl" — the origin of "oui")
+  ieu = triphthong (as in OF "lieu")
+  ei  = diphthong (as in OF "rei" = king)
+  eü  = rounded front vowel (as in OF "feü" = fire)
+  ïe  = falling diphthong, two syllables
+
+Stylization rules for Solarirum French:
+  -vel    = nominal suffix (all nouns take this ending)
+  -iel    = adverbial/particle suffix (softer)
+  -el     = pronoun/article suffix
+  -ïel    = emphatic suffix (stressed form)
+  eïr     = verb infinitive ending (replaces OF -er/-ir/-re)
+  Final consonants: always pronounced (unlike modern French)
+  Nasals: -ain, -ien, -on are fully nasalized
+
+Prefix patterns from the name list:
+  aur-   = golden/radiant (Aur-Solind, Aur-Miravel)
+  bel-   = beautiful (Bel-Auriel, Bel-Lirond)
+  cel-   = sky/high (Cel-Auriel, Cel-Lirond)
+  mir-   = reflected/seen (Miravel, Mir-Aurond)
+  cal-   = calling/summoning (Cal-Auriel, Calvoire)
+  syl-   = forest/growing (Sylvaine, Sylvariel)
+  lir-   = lyrical/singing (Lirindel, Lirond)
+  vel-   = flowing/veiled (Velindre, Vel-Aurind)
+  sel-   = chosen/self (Selveth, Sel-Auriel)
+
+===================================================================================
+
+
+241  | power          | pouvoirvel               |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | avel                     |
+8     | that           | celael                   |
+10    | it             | ivel                     |
+11    | for            | pourveil                 |
+19    | at             | ael                      |
+20    | this           | cest                     |
+22    | his            | soel                     |
+27    | say            | direïel                  |
+28    | her            | sael                     |
+29    | she            | elevel                   |
+31    | an             | aun                      |
+34    | one            | aun                      |
+35    | all            | touvelvain               |
+37    | there          | iloel                    |
+39    | what           | quei                     |
+46    | get            | prelveth                 |
+48    | go             | allivorn                 |
+49    | me             | moivel                   |
+50    | when           | quandvel                 |
+55    | no             | noel                     |
+58    | know           | savoirel                 |
+61    | into           | envel                    |
+62    | year           | anvel                    |
+64    | good           | bonvel                   |
+75    | come           | velvaine                 |
+77    | over           | suriel                   |
+79    | also           | aurvain                  |
+80    | back           | arriervel                |
+81    | after          | apriesel                 |
+82    | use            | useriel                  |
+87    | first          | premiervel               |
+88    | well           | bienvel                  |
+94    | any            | quelvoir                 |
+102   | need           | besoirveil               |
+104   | often          | souventvel               |
+106   | high           | hautvel                  |
+108   | hold           | teniriel                 |
+110   | never          | jamaisvel                |
+112   | north          | nordvel                  |
+114   | seem           | sembler                  |
+116   | next           | prochainvel              |
+119   | begin          | celaurel                 |
+129   | both           | deuxvel                  |
+134   | mile           | lieuvel                  |
+142   | girl           | puceliel                 |
+147   | ever           | jourvelvorn              |
+152   | talk           | parlvain                 |
+158   | direct         | direcvelvorn             |
+160   | leave          | lairveth                 |
+162   | measure        | mesurvel                 |
+169   | wind           | ventvel                  |
+194   | true           | vraivelvorn              |
+198   | remember       | souvelvain               |
+211   | table          | tablevel                 |
+223   | pattern        | patternvel               |
+225   | center         | milievel                 |
+227   | person         | personeïl                |
+230   | appear         | aparoïr                  |
+231   | road           | ruevel                   |
+232   | map            | cartevel                 |
+234   | rule           | regnvel                  |
+236   | pull           | tirelveth                |
+238   | notice         | noteïr                   |
+244   | drive          | condvelvain              |
+245   | lead           | menelvorn                |
+246   | cry            | pleurveil                |
+249   | note           | notevel                  |
+256   | field          | champvel                 |
+257   | rest           | reposvel                 |
+258   | correct        | corrvelvain              |
+259   | able           | capvelvorn               |
+260   | pound          | livrevel                 |
+262   | beauty         | beautetvel               |
+264   | stood          | estutvel                 |
+267   | teach          | enselvaine               |
+269   | final          | finalvel                 |
+270   | gave           | donnéïvel                |
+271   | green          | vertvel                  |
+272   | oh             | ohvel                    |
+275   | ocean          | mervel                   |
+278   | minute         | minutevel                |
+279   | strong         | fortvelvorn              |
+280   | special        | specvelvorn              |
+282   | clear          | clairvel                 |
+283   | tail           | queuevel                 |
+284   | produce        | produiveil               |
+286   | street         | ruevel                   |
+288   | lot            | beaucoupvel              |
+289   | nothing        | nientvel                 |
+291   | stay           | restelvorn               |
+293   | full           | pleinvel                 |
+295   | blue           | bleuvel                  |
+296   | object         | objetvel                 |
+298   | surface        | surfacevel               |
+300   | moon           | lunevel                  |
+302   | foot           | piedvel                  |
+304   | busy           | occupvel                 |
+307   | boat           | batelvel                 |
+309   | gold           | orvel                    |
+310   | possible       | posvelvain               |
+311   | plane          | volelvorn                |
+314   | wonder         | etornelveth              |
+317   | ago            | iadisvel                 |
+321   | shape          | formelvain               |
+324   | miss           | manquerveil              |
+325   | brought        | aportéïvel               |
+326   | heat           | chalevel                 |
+329   | bring          | apportveil               |
+330   | yes            | orvaine                  |
+331   | distant        | loivelvorn               |
+333   | east           | estvelvorn               |
+337   | grand          | grandvel                 |
+342   | heart          | coeurvelvain             |
+343   | am             | suisvel                  |
+344   | present        | prevelvorn               |
+346   | dance          | danselvain               |
+349   | arm            | brasvel                  |
+350   | wide           | largevel                 |
+351   | sail           | voilevel                 |
+354   | vary           | varielvorn               |
+355   | settle         | etablveil                |
+357   | weight         | poidvel                  |
+359   | ice            | glairvelvorn             |
+362   | pair           | pairevel                 |
+364   | divide         | diviservel               |
+365   | syllable       | syllabevel               |
+369   | sudden         | soudvelvain              |
+370   | count          | comptveil                |
+372   | reason         | raisonvel                |
+373   | length         | longorvel                |
+377   | region         | regionvel                |
+378   | energy         | energvelvorn             |
+380   | probable       | probablevel              |
+381   | bed            | litvel                   |
+383   | egg            | oeufvel                  |
+385   | cell           | cellulevel               |
+389   | sit            | assirvorn                |
+390   | race           | racevel                  |
+396   | prove          | prouvelveth              |
+397   | lone           | seulveth                 |
+398   | leg            | jambevel                 |
+404   | sky            | cielvelvorn              |
+406   | joy            | joievelvorn              |
+410   | wild           | sauvelvain               |
+411   | instrument     | instrumvel               |
+420   | past           | passevel                 |
+421   | soft           | doucevel                 |
+434   | strange        | estrangevel              |
+440   | meet           | renconveil               |
+444   | solve          | reselvain                |
+446   | whether        | sivelvorn                |
+447   | push           | pouvelvorn               |
+448   | seven          | setvel                   |
+458   | result         | resulvelvain             |
+459   | burn           | brulveil                 |
+465   | type           | typevel                  |
+468   | coast          | cotevel                  |
+471   | silent         | silenvelvain             |
+472   | tall           | grandvelvorn             |
+477   | finger         | doigvelvain              |
+478   | industry       | indusvelvorn             |
+483   | excite         | excitelvorn              |
+484   | natural        | natvelvorn               |
+485   | view           | vuevelvorn               |
+486   | sense          | senvelvain               |
+489   | quite          | asseziel                 |
+491   | case           | casvelvain               |
+498   | loud           | hautvelvorn              |
+499   | spring         | prinvelvain              |
+
+END OF FILE — SolarirumFrench_500words_REVISED.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

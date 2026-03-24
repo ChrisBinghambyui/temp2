@@ -1,0 +1,595 @@
+NAUKIN MONGOLIAN-AKKADIAN - 500 Common Word Translations
+Fantasy Language based on NaukinMongolian-Akadian name patterns
+Linguistic roots: Middle Mongolian (Secret History era, 13th c.) primary
+with Old Akkadian (Sargonic, 2300-2150 BC) and Old Babylonian (1900-1600 BC) blend
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Middle Mongolian, Secret History):
+  tere (he/that), ene (this/he), bi (I/me), ta (you), bide (we),
+  ba (and/also), bol (be/become), ügei (not), -yin/-un (of/genitive),
+  -tur/-dür (at/in/dative), -aca/-ece (from/ablative),
+  yeke (great/big), sain (good), ünen (true), qamuγ (all),
+  γajar (earth/place), usun (water), γal (fire), tenggeri (sky/heaven),
+  edür (day), sara (moon), odun (star), öni (night),
+  kümün (person/man), eme (woman), köbegün (son/boy), noyan (lord/general),
+  qaγan (khan/ruler), irgen (people/nation), mori (horse), noqai (dog),
+  gazar (land), uul (mountain), mören (river), oi (forest),
+  yabumu (go), iremu (come), üjeму (see), keleму (say), mededeму (know)
+
+KEY SOURCE WORDS (Akkadian, mixed era):
+  šu (he/this), šī (she), anāku (I), atta (you), nīnu (we),
+  u (and), lā (not), ina (in/at), ana (to/for), ištu (from),
+  itti (with), eli (over/upon), warki (after/behind),
+  awīlum (man/person), sinništum (woman), mārum (son), šarrum (king),
+  erṣetum (earth), nārum (river), mûm (water), išātum (fire),
+  šamû (sky/heaven), ūmum (day), warḫum (month), kakkabum (star),
+  rabûm (great/big), ṭābum (good), kīnum (true/firm), kalûm (all),
+  alākum (go), erēbum (enter), amārum (see), qabûm (say), idûm (know)
+
+PHONETIC BRIDGE STRATEGY:
+  Mongolian: vowel harmony (back: a/o/u vs front: e/ö/ü), agglutinative suffixes,
+  hard stops q/γ, retroflex sounds, -n endings on nouns
+  Akkadian: emphatic consonants (ṭ/ṣ/q), short vowels, CVC roots,
+  case endings (-um nominative, -am accusative, -im genitive)
+  Bridge: Both share short punchy syllables, k/q stops, n/m endings,
+  open a/u vowels, agglutinative word-building
+  Fantasy suffix system: -un (noun, fr. Mong. -un genitive repurposed as noun marker),
+  -anu (verb, fr. Akk. -ānum infinitive), -qan (adjective/great, fr. Mong. qaγan),
+  -tur (locative/place, fr. Mong. -tur dative), -bul (collective, fr. Mong. bol)
+
+===================================================================================
+RANK | ENGLISH       | NAUKIN                  | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | tere                    | Mong. tere (the/that) — attested
+2    | a / an        | nigen                   | Mong. nigen (one/a) — attested
+3    | to            | anutur                  | Akk. ana (to) + Mong. -tur
+6    | it            | eneun                   | Mong. ene (it/this) + -un
+8    | that          | tereun                  | Mong. tere (that) + -un
+10   | it            | eneun                   | same
+11   | for           | anatun                  | Akk. ana (for/to) + Mong. -tun
+14   | this          | eneqan                  | Mong. ene (this) + -qan
+20   | this          | eneqan                  | same
+22   | his           | tereyin                 | Mong. tere-yin (his/of that) — attested
+28   | her           | tereyin                 | same — Mongolian gender-neutral
+29   | she           | teremoqan               | Mong. tere + Akk. -moqan stylized
+31   | an            | nigen                   | same as a
+34   | one           | nigeun                  | Mong. nigen (one) + -un
+35   | all           | qamuqan                 | Mong. qamuγ (all) + -qan
+37   | there         | tende                   | Mong. tende (there) — attested
+38   | their         | terenaryin              | Mong. terenar (their) + -yin
+39   | what          | yaqun                   | Mong. yaγun (what) — attested
+45   | who           | kenbul                  | Mong. ken (who) + -bul
+49   | me            | biun                    | Mong. bi (me/I) + -un
+50   | when          | qolunaun                | Mong. qolun (when) + -aun
+55   | no            | ügeiun                  | Mong. ügei (no/not) + -un
+63   | your          | tanyin                  | Mong. tan (your) + -yin
+64   | good          | sainqan                 | Mong. sain (good) + -qan
+65   | some          | jarimun                 | Mong. jarim (some) + -un
+69   | other         | ögedeun                 | Mong. ögedei (other/next) + -un
+83   | two           | qoyarun                 | Mong. qoyar (two) + -un
+85   | our           | mananyin                | Mong. manan (our) + -yin
+95   | these         | enenarqan               | Mong. enenar (these) + -qan
+99   | us            | bidenun                 | Mong. bide (us) + -nun
+120  | got           | olaqanu                 | Mong. ola (got/found) + -qanu
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | bolanu                  | Mong. bol (to be/become) + -anu
+70   | there         | tende                   | Mong. tende (there) — attested
+72   | seem          | metüqanu                | Mong. metü (like/seem) + -qanu
+78   | think         | bodoqanu                | Mong. bodol (thought) + -qanu
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | ynun                    | Mong. -yin/-un (of/genitive) + -un
+5    | and           | baqan                   | Mong. ba (and) + -qan
+12   | not           | ügeiun                  | Mong. ügei (not) + -un
+13   | on            | degerun                 | Mong. degere (on/above) + -un
+14   | with          | ittibul                 | Akk. itti (with) + Mong. -bul
+19   | at            | deturqan                | Mong. -dür (at/in) + -qan
+21   | but           | qariunbul               | Mong. qariu (but/answer) + -nbul
+23   | by            | inatur                  | Akk. ina (by/in) + Mong. -tur
+24   | from          | acatur                  | Mong. -aca (from) + -tur
+30   | or            | esebolun                | Mong. ese (or/not) + bol + -un
+32   | will          | bolqanu                 | Mong. bol (will/become) + -qanu
+33   | my            | minuyin                 | Mong. minu (my) + -yin
+36   | would         | bolquibul               | Mong. bolqui (would be) + -bul
+40   | so            | teyimun                 | Mong. teyim (so/thus) + -un
+41   | up            | degedeun                | Mong. degede (up/above) + -un
+42   | out           | γadaqan                 | Mong. γada (out/outside) + -qan
+43   | if            | bolbacun                | Mong. bolbac (if/become-if) + -un
+44   | about         | toquraqan               | Mong. toqura (about) + -qan
+60   | because       | ucirtur                 | Mong. ucir (reason/because) + -tur
+61   | into          | dotoγaun                | Mong. dotoγa (into/inside) + -un
+71   | only          | jaqunbul                | Mong. jaγun (only/hundred) + -bul
+76   | its           | tereyin                 | same as his/her
+77   | over          | degerebul               | Mong. degere (over) + -bul
+79   | also          | baqanun                 | Mong. ba (also) + -qanun
+80   | back          | qariun                  | Mong. qari (back/return) + -un
+81   | after         | warkitur                | Akk. warki (after) + Mong. -tur
+82   | use           | kereglebul              | Mong. kereglet (use) + -bul
+87   | first         | terigünqan              | Mong. terigün (first/head) + -qan
+88   | well          | sainburqan              | Mong. sain (well/good) + -burqan
+90   | even          | bultaqan                | Mong. bulta (even/all) + -qan
+94   | any           | aliburqan               | Mong. ali (any/which) + -burqan
+102  | need          | keregün                 | Mong. kereg (need/matter) + -ün
+104  | often         | oluntaqan               | Mong. olunta (often) + -qan
+106  | high          | öndürqan                | Mong. öndür (high) + -qan
+110  | never         | kolicabul               | Mong. koli (never) + -cabul
+112  | north         | umnaqan                 | Mong. umna (north/before) + -qan
+114  | seem          | metüqanu                | same as seem
+116  | next          | daraqiun                | Mong. daraqi (next) + -un
+119  | begin         | ekilequnu               | Mong. ekile (to begin) + -qunu
+129  | both          | qoyarturqan             | Mong. qoyar (both/two) + -turqan
+133  | until         | boltalabul              | Mong. boltala (until) + -bul
+147  | ever          | uridinaun               | Mong. uridin (ever/before) + -aun
+150  | though        | bolbacuntur             | Mong. bolbac (though) + -untur
+154  | soon          | türgenbul               | Mong. türgen (soon/fast) + -bul
+158  | direct        | sitiγaqan               | Mong. sitiγa (direct) + -qan
+160  | leave         | γarqanu                 | Mong. γar (to leave/go out) + -qanu
+169  | wind          | salkinun                | Mong. salkin (wind) + -un
+172  | since         | acaturaun               | Mong. -aca (since/from) + -turaun
+183  | against       | esergebul               | Mong. eserge (against) + -bul
+192  | during        | turiqantur              | Mong. turi (during) + -qantur
+194  | true          | ünenqan                 | Mong. ünen (true) + -qan
+219  | toward        | anuturqan               | Akk. ana (toward) + Mong. -turqan
+225  | center        | dumqitur                | Akk. dum-qi (center/heart) + -tur
+251  | still         | dayunbul                | Mong. daγun (still/voice) + -bul
+261  | above         | degerun                 | same as on (elevated sense)
+287  | behind        | warkibul                | Akk. warki (behind) + Mong. -bul
+330  | yes           | ünenbul                 | Mong. ünen (yes/true) + -bul
+332  | fill          | dügürqanu               | Mong. dügür (to fill) + -qanu
+338  | yet           | dayuntur                | Mong. daγun (yet/still) + -tur
+339  | among         | dotoγaturqan            | Mong. dotoγa (among/inside) + -turqan
+340  | perhaps       | maγadlabul              | Mong. maγad (perhaps/certain) + -bul
+343  | am            | bolunbi                 | Mong. bol (am/be) + -unbi
+446  | whether       | bolbacun                | same as if
+451  | shall         | bolquqan                | Mong. bolqu (shall/will) + -qan
+457  | either        | esebolvul               | Mong. ese+bol (either/or-be)
+488  | else          | ögedeqan                | Mong. ögedei (else/other) + -qan
+489  | quite         | tümbul                  | Mong. tüm (quite/ten-thousand) + -bul
+490  | quite         | tümbul                  | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | kiγaqanu                | Mong. kiγa (to do) + -qanu
+9    | have          | boluqanu                | Mong. bol (to have/be) + -uqanu
+15   | he            | tereun                  | Mong. tere (he) + -un
+16   | as            | metübul                 | Mong. metü (as/like) + -bul
+17   | you           | tanun                   | Mong. ta (you) + -nun
+18   | do            | kiγaqanu                | same
+25   | they          | terenarqan              | Mong. terenar (they) + -qan
+26   | we            | bidenqan                | Mong. bide (we) + -nqan
+27   | say           | kelequnu                | Mong. kele (to say) + -qunu
+46   | get           | olaqanu                 | Mong. ola (to get/find) + -qanu
+47   | which         | aliun                   | Mong. ali (which) + -un
+48   | go            | yabaqanu                | Mong. yaba (to go) + -qanu
+51   | make          | kiγabul                 | Mong. kiγa (to make/do) + -bul
+52   | can           | cidaqanu                | Mong. cida (to can/be able) + -qanu
+53   | like          | durluqanu               | Mong. durlu (to like/love) + -qanu
+54   | time          | caγuntur                | Mong. caγ (time) + -untur
+56   | just          | jaqunbul                | same as only
+57   | him           | tereun                  | same as he
+58   | know          | mededequnu              | Mong. medede (to know) + -qunu
+59   | take          | abaqanu                 | Mong. aba (to take) + -qanu
+62   | year          | jilun                   | Mong. jil (year) + -un
+66   | could         | cidaγaqan               | Mong. cidaγa (could) + -qan
+67   | them          | terenarqan              | Mong. terenar (them) + -qan
+68   | see           | üjequnu                 | Mong. üje (to see) + -qunu
+73   | look          | karaγaqanu              | Mong. karaγa (to look/watch) + -qanu
+74   | only          | jaqunbul                | same
+75   | come          | irequnu                 | Mong. ire (to come) + -qunu
+84   | use           | kereglebanu             | Mong. keregle (to use) + -banu
+86   | work          | ügüleqan                | Mong. ügüle (work/word-deed) + -qan
+89   | way           | mörüntur                | Mong. mör (way/path) + -üntur
+91   | new           | sinequn                 | Mong. sine (new) + -qun
+92   | want          | durluturqan             | Mong. durlu (to want) + -turqan
+93   | because       | ucirtur                 | same as because
+96   | give          | öggüqanu                | Mong. öggü (to give) + -qanu
+97   | day           | edürun                  | Mong. edür (day) + -un
+98   | most          | ölingqan                | Mong. öling (most/more) + -qan
+100  | great         | yekeqan                 | Mong. yeke (great) + -qan
+101  | between       | quriturqan              | Mong. quri (between) + -turqan
+103  | large         | yeketür                 | Mong. yeke (large) + -tür
+105  | hand          | γaruntur                | Mong. γar (hand) + -untur
+107  | place         | γajarun                 | Mong. γajar (place/earth) + -un
+108  | hold          | bariqanu                | Mong. bari (to hold) + -qanu
+109  | turn          | ergiqanu                | Mong. ergi (to turn) + -qanu
+111  | few           | cögenbul                | Mong. cögen (few/little) + -bul
+113  | open          | nebteqanu               | Mong. nebte (to open/through) + -qanu
+115  | together      | qamtubul                | Mong. qamtu (together) + -bul
+117  | white         | caγanqan                | Mong. caγan (white) + -qan
+118  | children      | köbegüdun               | Mong. köbegüd (children) + -un
+121  | walk          | yabuqanu                | Mong. yabu (to walk) + -qanu
+122  | example       | jisülebul               | Mong. jisüle (example) + -bul
+123  | ease          | amurbul                 | Mong. amur (ease/peace) + -bul
+124  | paper         | biciqun                 | Mong. bici (paper/writing) + -qun
+125  | group         | bülgüdun                | Mong. bülgüd (group) + -un
+126  | always        | daγunqan                | Mong. daγun (always/voice) + -qan
+127  | music         | daγuntur                | Mong. daγun (music/sound) + -tur
+128  | those         | terenarqan              | same as they
+130  | mark          | temdeqan                | Mong. temde (mark/sign) + -qan
+131  | book          | biciquntur              | Mong. bici (book/writing) + -quntur
+132  | letter        | üsügun                  | Mong. üsüg (letter/script) + -un
+134  | mile          | kaγurbul                | Mong. kaγur (distance) + -bul
+135  | river         | mörünun                 | Mong. mörün (river) + -un
+136  | car           | tergeun                 | Mong. terge (cart/vehicle) + -un
+137  | feet          | kölinbul                | Mong. kölin (feet) + -bul
+138  | care          | angilaqanu              | Mong. angila (to care) + -qanu
+139  | second        | qoyarturqan             | Mong. qoyar (second/two) + -qan
+140  | enough        | bolburqan               | Mong. bolbur (enough) + -qan
+141  | plain         | taγalbul                | Mong. taγal (plain/flat) + -bul
+142  | girl          | okintürqan              | Mong. okin (girl) + -türqan
+143  | usual         | jiruqantur              | Mong. jiru (usual/picture) + -qantur
+144  | young         | jaluqan                 | Mong. jalu (young) + -qan
+145  | ready         | beltegerqan             | Mong. belteger (ready) + -qan
+146  | above         | degerun                 | same as on/above
+148  | red           | ulaγanqan               | Mong. ulaγan (red) + -qan
+149  | list          | derisgün                | Mong. derisg (list/record) + -ün
+151  | feel          | medequnu                | Mong. mede (to feel/know) + -qunu
+152  | talk          | yariaqanu               | Mong. yaria (to talk) + -qanu
+153  | bird          | sibaγuntur              | Mong. sibaγun (bird) + -tur
+155  | body          | beyelün                 | Mong. beyel (body) + -ün
+156  | dog           | noqaibul                | Mong. noqai (dog) + -bul
+157  | family        | örtöqan                 | Mong. örtö (family/relay) + -qan
+159  | pose          | baidalqan               | Mong. baidal (pose/state) + -qan
+161  | song          | daγunqanu               | Mong. daγun (song) + -qanu
+162  | measure       | kesegqan                | Mong. keseg (measure/piece) + -qan
+163  | door          | egüdeun                 | Mong. egüde (door) + -un
+164  | product       | γarγaqan                | Mong. γarγa (product/output) + -qan
+165  | black         | qaraγanqan              | Mong. qaraγan (black/dark) + -qan
+166  | short         | boginiun                | Mong. bogini (short) + -un
+167  | numeral       | toγaqan                 | Mong. toγa (number) + -qan
+168  | class         | anggiun                 | Mong. anggi (class/section) + -un
+170  | question      | asaγulqan               | Mong. asaγul (question) + -qan
+171  | happen        | bolquqanu               | Mong. bolqu (to happen/become) + -qanu
+173  | ship          | usuntergeun             | Mong. usun+terge (water-cart/ship) + -un
+174  | area          | γajarturqan             | Mong. γajar (area/land) + -turqan
+175  | half          | qaγasunbul              | Mong. qaγasun (half) + -bul
+176  | rock          | cilaγuntur              | Mong. cilaγun (rock/stone) + -tur
+177  | order         | jarliγqan               | Mong. jarliγ (order/decree) + -qan
+178  | fire          | γalqan                  | Mong. γal (fire) + -qan
+179  | south         | ömnötur                 | Mong. ömnö (south) + -tur
+180  | problem       | buruγubul               | Mong. buruγu (problem/fault) + -bul
+181  | piece         | kesegün                 | Mong. keseg (piece) + -ün
+182  | told          | kelequibul              | Mong. kele (told/said) + -quibul
+184  | pass          | önggerqanu              | Mong. öngger (to pass) + -qanu
+185  | since         | acaturaun               | same as since
+186  | top           | oroiqan                 | Mong. oroi (top/peak) + -qan
+187  | whole         | bülügeun                | Mong. bülüge (whole) + -un
+188  | king          | qaγantur                | Mong. qaγan (king/khan) + -tur
+189  | space         | orziturqan              | Mong. orzi (space/place) + -turqan
+190  | heard         | sonusqanul              | Mong. sonus (heard) + -qanul
+191  | best          | degediun                | Mong. degedi (best/highest) + -un
+192  | hour          | caγunqan                | Mong. caγ (hour/time) + -unqan
+193  | better        | saiturqan               | Mong. saitur (better) + -qan
+195  | during        | turiqantur              | same as during
+196  | hundred       | jaγuntur                | Mong. jaγun (hundred) + -tur
+197  | five          | tabunqan                | Mong. tabun (five) + -qan
+198  | remember      | sanaγaqanu              | Mong. sanaγa (to remember) + -qanu
+199  | step          | alquqan                 | Mong. alqu (step/pace) + -qan
+200  | early         | öglögeun                | Mong. öglöge (early/morning) + -un
+201  | hold          | bariqanu                | same as hold
+202  | west          | örnötur                 | Mong. örnö (west) + -tur
+203  | ground        | γajarun                 | Mong. γajar (ground) + -un
+204  | interest      | sonirqalqan             | Mong. sonirqal (interest) + -qan
+205  | reach         | kürequnu                | Mong. küre (to reach) + -qunu
+206  | fast          | türgenqan               | Mong. türgen (fast) + -qan
+207  | verb          | üyilturqan              | Mong. üyil (verb/action) + -turqan
+208  | sing          | daγulaqanu              | Mong. daγula (to sing) + -qanu
+209  | listen        | sonosqanu               | Mong. sonos (to listen) + -qanu
+210  | six           | jirgaqan                | Mong. jirγa (six) + -qan
+211  | table         | shireetütur             | Mong. shireetü (table) + -tur
+212  | travel        | ayalaqanu               | Mong. ayala (to travel) + -qanu
+213  | less          | cögenbul                | Mong. cögen (less/few) + -bul
+214  | morning       | öglögeqan               | Mong. öglöge (morning) + -qan
+215  | ten           | arbanqan                | Mong. arban (ten) + -qan
+216  | simple        | engginbul               | Mong. enggin (simple) + -bul
+217  | several       | jarimunqan              | Mong. jarim (several/some) + -unqan
+218  | vowel         | egesigün                | Mong. egesig (vowel) + -ün
+220  | war           | dayintur                | Mong. dayin (war) + -tur
+221  | lay           | qataqanu                | Mong. qata (to lay/dry) + -qanu
+222  | against       | esergebul               | same as against
+223  | pattern       | jiruqan                 | Mong. jiru (pattern/picture) + -qan
+224  | slow          | udaanqan                | Mong. udaan (slow) + -qan
+226  | love          | qairaqan                | Mong. qaira (love) + -qan
+227  | person        | kümüntur                | Mong. kümün (person) + -tur
+228  | money         | mönggüntur              | Mong. mönggün (money/silver) + -tur
+229  | serve         | üyilчilqanu             | Mong. üyilčil (to serve) + -qanu
+230  | appear        | metübulqanu             | Mong. metü (appear/like) + -bulqanu
+231  | road          | zamuntur                | Mong. zam (road) + -untur
+232  | map           | γajarjiruqan            | Mong. γajar+jiru (map/earth-picture) + -qan
+233  | rain          | borγasuntur             | Mong. borγasun (rain) + -tur
+234  | rule          | dürimtur                | Mong. dürim (rule) + -tur
+235  | govern        | zasakqanu               | Mong. zasak (to govern) + -qanu
+236  | pull          | tataqanu                | Mong. tata (to pull) + -qanu
+237  | cold          | küitünqan               | Mong. küitün (cold) + -qan
+238  | notice        | angilaγaqanu            | Mong. angilaγa (to notice) + -qanu
+239  | voice         | daγunun                 | Mong. daγun (voice/sound) + -un
+240  | fall          | unaγaqanu               | Mong. unaγa (to fall) + -qanu
+241  | power         | erkeqan                 | Mong. erke (power) + -qan
+242  | town          | balγasuntur             | Mong. balγasun (town/city) + -tur
+243  | fine          | sainturqan              | Mong. sain (fine/good) + -turqan
+244  | drive         | daγuluqanu              | Mong. daγulu (to drive) + -qanu
+245  | lead          | terigüleqanu            | Mong. terigüle (to lead) + -qanu
+246  | cry           | uylaqanu                | Mong. uyla (to cry) + -qanu
+247  | dark          | qaranggubul             | Mong. qaranggu (dark) + -bul
+248  | machine       | kersilqan               | Akk. kersil (device) + Mong. -qan
+249  | note          | temdeqantur             | Mong. temde (note/mark) + -qantur
+250  | wait          | qüleequnu               | Mong. qülee (to wait) + -qunu
+252  | figure        | temdeqanul              | Mong. temde (figure/mark) + -qanul
+253  | star          | oduntur                 | Mong. odun (star) + -tur
+254  | box           | qoriqantur              | Mong. qori (box/enclosure) + -qantur
+255  | noun          | neretur                 | Mong. nere (noun/name) + -tur
+256  | field         | taγalbultur             | Mong. taγal (field/plain) + -bultur
+257  | rest          | amusqanu                | Mong. amus (to rest) + -qanu
+258  | correct       | ünenturqan              | Mong. ünen (correct/true) + -turqan
+259  | able          | cidaqantur              | Mong. cida (able) + -qantur
+260  | pound         | jingqan                 | Mong. jing (pound/weight) + -qan
+262  | beauty        | saihantur               | Mong. saihan (beautiful) + -tur
+263  | drive         | daγuluqanu              | same as drive
+264  | stood         | zogsoqanu               | Mong. zogso (stood/stopped) + -qanu
+265  | contain       | aγuluqanu               | Mong. aγul (to contain) + -uqanu
+266  | front         | emnötur                 | Mong. emnö (front) + -tur
+267  | teach         | surγaqanu               | Mong. surγa (to teach) + -qanu
+268  | week          | doloonedürqan           | Mong. doloon+edür (week/seven-days) + -qan
+269  | final         | tegusbul                | Mong. tegus (final/complete) + -bul
+270  | gave          | öggüibul                | Mong. öggüi (gave) + -bul
+271  | green         | noγoγanqan              | Mong. noγoγan (green) + -qan
+272  | oh            | aaun                    | Mong. aa (oh/exclamation) + -un
+273  | quick         | türgentur               | same as fast
+274  | develop       | degedüqanu              | Mong. degedü (to develop) + -qanu
+275  | ocean         | dalaintur               | Mong. dalai (ocean) + -ntur
+276  | warm          | durγumqan               | Mong. durγum (warm) + -qan
+277  | free          | ciluγeqan               | Mong. ciluγe (free) + -qan
+278  | minute        | minütqan                | Mong. minüt (minute) + -qan
+279  | strong        | ciluγanqan              | Mong. ciluγan (strong) + -qan
+280  | special       | oncaγulqan              | Mong. oncaγul (special) + -qan
+281  | behind        | warkibul                | same as behind
+282  | clear         | todorhoyqan             | Mong. todorhoy (clear) + -qan
+283  | tail          | segültur                | Mong. segül (tail) + -tur
+284  | produce       | γarγaqanu               | Mong. γarγa (to produce) + -qanu
+285  | fact          | ünenqantur              | Mong. ünen (fact/truth) + -qantur
+286  | street        | zamunqan                | Mong. zam (street/road) + -unqan
+288  | lot           | olonbul                 | Mong. olon (lot/many) + -bul
+289  | nothing       | yumabul                 | Mong. yuma (nothing/thing) + -bul
+290  | course        | zamturqan               | Mong. zam (course/road) + -turqan
+291  | stay          | baiqanu                 | Mong. bai (to stay/be) + -qanu
+292  | wheel         | dügergitur              | Mong. dügergi (wheel) + -tur
+293  | full          | dügürqan                | Mong. dügür (full) + -qan
+294  | force         | küchüntur               | Mong. küchün (force/strength) + -tur
+295  | blue          | kökünqan                | Mong. köke (blue/sky) + -ünqan
+296  | object        | yumaqan                 | Mong. yuma (object/thing) + -qan
+297  | decide        | siqidqaqanu             | Mong. siqidqa (to decide) + -qanu
+298  | surface       | γadargaqan              | Mong. γadarga (surface/outside) + -qan
+299  | deep          | güngqan                 | Mong. güng (deep) + -qan
+300  | moon          | saraqan                 | Mong. sara (moon) + -qan
+301  | island        | ariγuntur               | Mong. ariγun (island/pure) + -tur
+302  | foot          | kölintur                | Mong. kölin (foot) + -tur
+303  | system        | jüilqan                 | Mong. jüil (system/kind) + -qan
+304  | busy          | zavaaturqan             | Mong. zavaat (busy) + -urqan
+305  | test          | šûlumqan                | Akk. šûlum (test/greeting) + Mong. -qan
+306  | record        | biciqunqan              | Mong. bici (record/writing) + -qunqan
+307  | boat          | usuntergeqan            | Mong. usun+terge (boat) + -qan
+308  | common        | niitebul                | Mong. niite (common/public) + -bul
+309  | gold          | altatatur               | Mong. altan (gold) + -atur
+310  | possible      | boloqcitur              | Mong. boloqci (possible) + -tur
+311  | plane         | tegshinbul              | Mong. tegshin (plane/flat) + -bul
+312  | stead         | γajaruntur              | Mong. γajar (stead/place) + -untur
+313  | dry           | qataguqan               | Mong. qataγu (dry/hard) + -qan
+314  | wonder        | gaihamsiγaqanu          | Mong. gaihamsiγa (to wonder) + -qanu
+315  | laugh         | iniyeqanu               | Mong. iniye (to laugh) + -qanu
+316  | thousand      | mingγantur              | Mong. mingγan (thousand) + -tur
+317  | ago           | uridinaun               | Mong. uridin (ago/before) + -aun
+318  | ran           | güyiqanul               | Mong. güyi (ran) + -qanul
+319  | check         | šaqālqanu               | Akk. šaqāl (to check/weigh) + Mong. -qanu
+320  | game          | naadamtur               | Mong. naadam (game/festival) + -tur
+321  | shape         | dürsqan                 | Mong. dürs (shape/form) + -qan
+322  | equate        | adilburqan              | Mong. adil (to equate/same) + -burqan
+323  | hot           | halγunqan               | Mong. halγun (hot) + -qan
+324  | miss          | aldsaqanu               | Mong. aldsa (to miss) + -qanu
+325  | brought       | aviaqanul               | Mong. avia (brought) + -qanul
+326  | heat          | halγuntur               | Mong. halγun (heat) + -tur
+327  | snow          | casuntur                | Mong. casun (snow) + -tur
+328  | tire          | yadaqanu                | Mong. yada (to tire) + -qanu
+329  | bring         | aviaqanu                | Mong. avia (to bring) + -qanu
+331  | distant       | holqan                  | Mong. hol (distant) + -qan
+333  | east          | züntur                  | Mong. zün (east) + -tur
+334  | paint         | budaqanu                | Mong. buda (to paint) + -qanu
+335  | language      | keleqantur              | Mong. kele (language) + -qantur
+336  | among         | dotoγaturqan            | same as among
+337  | grand         | yeketurqan              | Mong. yeke (grand) + -turqan
+341  | drop          | durγilqan               | Mong. durγil (drop) + -qan
+342  | heart         | zürkentur               | Mong. zürken (heart) + -tur
+344  | present       | odoogqan                | Mong. odoog (present/now) + -qan
+345  | heavy         | jinteitur               | Mong. jintei (heavy) + -tur
+346  | dance         | büjigqanu               | Mong. büjig (to dance) + -qanu
+347  | engine        | kersiltur               | Akk. kersil (engine/device) + -tur
+348  | position      | baidalbul               | Mong. baidal (position/state) + -bul
+349  | arm           | γarunqan                | Mong. γar (arm/hand) + -unqan
+350  | wide          | örgönqan                | Mong. örgön (wide) + -qan
+351  | sail          | dariqanu                | Mong. dari (to sail/press) + -qanu
+352  | material      | materyalqan             | Mong. materyal (material) + -qan
+353  | size          | kemsülqan               | Mong. kemsül (size) + -qan
+354  | vary          | öörchilqanu             | Mong. öörchil (to vary) + -qanu
+355  | settle        | suuqanu                 | Mong. suu (to settle/sit) + -qanu
+356  | speak         | yariaqantur             | Mong. yaria (to speak) + -qantur
+357  | weight        | jingqantur              | Mong. jing (weight/pound) + -qantur
+358  | general       | niiteqan                | Mong. niite (general/public) + -qan
+359  | ice           | mösnqan                 | Mong. mösn (ice) + -qan
+360  | matter        | yumaqantur              | Mong. yuma (matter/thing) + -qantur
+361  | circle        | toirqan                 | Mong. toir (circle) + -qan
+362  | pair          | qosiγanbul              | Mong. qosiγan (pair/couple) + -bul
+363  | include       | oruuluqanu              | Mong. oruul (to include) + -uqanu
+364  | divide        | qubiyaqanu              | Mong. qubiya (to divide) + -qanu
+365  | syllable      | ügeqan                  | Mong. üge (syllable/word) + -qan
+366  | felt          | medequibul              | Mong. mede (felt) + -quibul
+367  | perhaps       | maγadlabul              | same as perhaps
+368  | pick          | songγoqanu              | Mong. songγo (to pick) + -qanu
+369  | sudden        | raptumqan               | Akk. raptum (sudden) + Mong. -qan
+370  | count         | toγalanqanu             | Mong. toγalan (to count) + -qanu
+371  | square        | dorvöljinqan            | Mong. dörvöljin (square) + -qan
+372  | reason        | šimtumqan               | Akk. šimtum (reason/fate) + Mong. -qan
+373  | length        | urtaqan                 | Mong. urta (length) + -qan
+374  | represent     | tölöölqanu              | Mong. tölööl (to represent) + -qanu
+375  | art           | urlagqan                | Mong. urlag (art) + -qan
+376  | subject       | sэdэвqan                | Mong. sэdэв (subject) + -qan
+377  | region        | γajarturqan             | same as area
+378  | energy        | enerqitur               | Mong. enerqi (energy) + -tur
+379  | hunt          | angqanu                 | Mong. ang (to hunt) + -qanu
+380  | probable      | boloqciturqan           | Mong. boloqci (probable) + -turqan
+381  | bed           | ortur                   | Mong. or (bed) + -tur
+382  | brother       | degüütur                | Mong. degüü (brother) + -tur
+383  | egg           | öndögeun                | Mong. öndöge (egg) + -un
+384  | ride          | unaqanu                 | Mong. una (to ride) + -qanu
+385  | cell          | eseqan                  | Mong. ese (cell/unit) + -qan
+386  | believe       | itgequnu                | Mong. itge (to believe) + -qunu
+387  | fraction      | quvaariqan              | Mong. quvaari (fraction) + -qan
+388  | forest        | oiturqan                | Mong. oi (forest) + -turqan
+389  | sit           | suuqanu                 | Mong. suu (to sit) + -qanu
+390  | race          | uralduqan               | Mong. uraidu (race) + -qan
+391  | window        | cöneuntur               | Mong. cöne (window) + -untur
+392  | store         | delgüürqan              | Mong. delgüür (store) + -qan
+393  | summer        | zungqan                 | Mong. zun (summer) + -qan
+394  | train         | galtergeun              | Mong. γal+terge (fire-cart/train) + -un
+395  | sleep         | untaqanu                | Mong. unta (to sleep) + -qanu
+396  | prove         | notkoqunu               | Mong. notko (to prove) + -qunu
+397  | lone          | gantsabul               | Mong. gantsa (lone/alone) + -bul
+398  | leg           | kölinqan                | Mong. kölin (leg/foot) + -qan
+399  | exercise      | damjilaγaqanu           | Mong. damjilaγa (exercise) + -qanu
+400  | wall          | khanaatur               | Mong. khan+atur (wall/enclosure) + -tur
+401  | catch         | bariqanutur             | Mong. bari (to catch/hold) + -qanutur
+402  | mount         | garqanu                 | Mong. γar (to mount/go up) + -qanu
+403  | wish          | hüseltqan               | Mong. hüselt (wish) + -qan
+404  | sky           | tenggeriqan             | Mong. tenggeri (sky) + -qan
+405  | board         | sambarqan               | Mong. sambar (board) + -qan
+406  | joy           | bayarqan                | Mong. bayar (joy) + -qan
+407  | winter        | övöltur                 | Mong. övöl (winter) + -tur
+408  | sat           | suuqanul                | Mong. suu (sat) + -qanul
+409  | written       | biciqanul               | Mong. bici (written) + -qanul
+410  | wild          | zerlequn                | Mong. zerle (wild) + -qun
+411  | instrument    | bagajqan                | Mong. bagaj (instrument) + -qan
+412  | kept          | barivalbul              | Mong. barival (kept) + -bul
+413  | glass         | šakuttumqan             | Akk. šakuttum (glass/alabaster) + Mong. -qan
+414  | grass         | övsürqan                | Mong. övsür (grass) + -qan
+415  | cow           | üneeqan                 | Mong. ünee (cow) + -qan
+416  | job           | ajiltur                 | Mong. ajil (job/work) + -tur
+417  | edge          | ireturqan               | Mong. ire (edge/blade) + -turqan
+418  | sign          | temdeqanqan             | Mong. temde (sign/mark) + -qanqan
+419  | visit         | ochiqanu                | Mong. ochi (to visit/go) + -qanu
+420  | past          | önggersntur             | Mong. önggers (past) + -ntur
+421  | soft          | zoölenqan               | Mong. zoölen (soft) + -qan
+422  | fun           | naadamqan               | Mong. naadam (fun/game) + -qan
+423  | bright        | giyalqan                | Mong. giyal (bright/shining) + -qan
+424  | gas           | hutqan                  | Mong. hut (gas/air) + -qan
+425  | weather       | caγ agaarqan            | Mong. caγ+agaar (weather/time-air) + -qan
+426  | month         | saraqantur              | Mong. sara (month/moon) + -qantur
+427  | million       | sayatur                 | Mong. saya (million) + -tur
+428  | bear          | baavgaiqan              | Mong. baavgai (bear) + -qan
+429  | finish        | tegusequnu              | Mong. teguse (to finish) + -qunu
+430  | happy         | bayarturqan             | Mong. bayar (happy/joy) + -turqan
+431  | hope          | naidvarqan              | Mong. naidvar (hope) + -qan
+432  | flower        | cecegtur                | Mong. ceceg (flower) + -tur
+433  | clothe        | ömsöqanu                | Mong. ömsö (to clothe) + -qanu
+434  | strange       | sonirholttur            | Mong. sonirhole (strange) + -ttur
+435  | gone          | yavaqanul               | Mong. yava (gone) + -qanul
+436  | jump          | üsreqanu                | Mong. üsre (to jump) + -qanu
+437  | baby          | nylхеqan                | Mong. nylхе (baby) + -qan
+438  | eight         | naimaqan                | Mong. naiman (eight) + -qan
+439  | village       | tosgontur               | Mong. tosgon (village) + -tur
+440  | meet          | uchraqanu               | Mong. uchra (to meet) + -qanu
+441  | root          | ündesnqan               | Mong. ündesn (root) + -qan
+442  | buy           | avaqanu                 | Mong. ava (to buy/take) + -qanu
+443  | raise         | örgöqanu                | Mong. örgö (to raise) + -qanu
+444  | solve         | šûlumqanu               | Akk. šûlum (to solve) + Mong. -qanu
+445  | metal         | metalqan                | Mong. metal + -qan
+447  | push          | tülkiqanu               | Mong. tülki (to push) + -qanu
+448  | seven         | doloonqan               | Mong. doloon (seven) + -qan
+449  | paragraph     | zürvasqan               | Mong. zürvas (paragraph) + -qan
+450  | third         | γurbaqlwi               | Mong. γurba (third/three) + -qlwi
+452  | held          | bariγdaqanul            | Mong. bariγda (held) + -qanul
+453  | hair          | üsüntur                 | Mong. üsün (hair) + -tur
+454  | describe      | taylbarqanu             | Mong. taylbar (to describe) + -qanu
+455  | cook          | chanaγaqanu             | Mong. chanaγa (to cook) + -qanu
+456  | floor         | šerbumqan               | Akk. šerbum (floor/mat) + Mong. -qan
+458  | result        | ürlqan                  | Mong. ürl (result) + -qan
+459  | burn          | šaraqanu                | Mong. šara (to burn) + -qanu
+460  | hill          | tolgointur              | Mong. tolgoin (hill) + -tur
+461  | safe          | amgalanqan              | Mong. amgalan (safe/peaceful) + -qan
+462  | cat           | muuqan                  | Mong. muu (cat) + -qan
+463  | century       | zuunqan                 | Mong. zuun (century/hundred) + -qan
+464  | consider      | bodoqantur              | Mong. bodo (to consider) + -qantur
+465  | type          | törlqan                 | Mong. törl (type/kind) + -qan
+466  | law           | huuliqan                | Mong. huuli (law) + -qan
+467  | bit           | jiiqan                  | Mong. jii (bit/small) + -qan
+468  | coast         | ereqtur                 | Mong. ereq (coast/shore) + -tur
+469  | copy          | huwilbarttur            | Mong. huwilbar (copy) + -ttur
+470  | phrase        | ügeqantur               | Mong. üge (phrase/word) + -qantur
+471  | silent        | duulisqantur            | Mong. duulis (silent) + -qantur
+472  | tall          | öndürturqan             | Mong. öndür (tall/high) + -turqan
+473  | sand          | elsentur                | Mong. elsen (sand) + -tur
+474  | soil          | γajarunqan              | Mong. γajar (soil/earth) + -unqan
+475  | roll          | ergiqantur              | Mong. ergi (to roll/turn) + -qantur
+476  | temperature   | dullumqan               | Akk. dullum (temperature) + Mong. -qan
+477  | finger        | horuubul                | Mong. horuu (finger) + -bul
+478  | industry      | üilduverqan             | Mong. üilduver (industry) + -qan
+479  | value         | üneqan                  | Mong. üne (value) + -qan
+480  | fight         | tuulaldaqanu            | Mong. tuulalda (to fight) + -qanu
+481  | lie           | qataqantur              | Mong. qata (to lie/lay) + -qantur
+482  | beat          | tsohiqanu               | Mong. tsohi (to beat) + -qanu
+483  | excite        | sэtgэlqanu              | Mong. sэtgэl (to excite/feel) + -qanu
+484  | natural       | baishinqan              | Mong. baishin (natural) + -qan
+485  | view          | üjemjqan                | Mong. üjemj (view) + -qan
+486  | sense         | mэdрэмjqan              | Mong. mэдрэмж (sense) + -qan
+487  | ear           | chihitur                | Mong. chihi (ear) + -tur
+491  | case          | baidalbultur            | Mong. baidal (case/state) + -bultur
+492  | middle        | durundturqan            | Mong. dururnd (middle) + -turqan
+493  | kill          | alaqanu                 | Mong. ala (to kill) + -qanu
+494  | son           | köbegüntur              | Mong. köbegün (son) + -tur
+495  | lake          | nuurtur                 | Mong. nuur (lake) + -tur
+496  | moment        | öcöqan                  | Mong. öcö (moment) + -qan
+497  | scale         | šaqālumqan              | Akk. šaqālum (scale/weigh) + Mong. -qan
+498  | loud          | oloonqan                | Mong. oloone (loud) + -qan
+499  | spring        | havarajqan              | Mong. havaraj (spring) + -qan
+500  | observe       | ajiglaγaqanu            | Mong. ajiglaγa (to observe) + -qanu
+
+===================================================================================
+PHONETIC GUIDE FOR NAUKIN
+===================================================================================
+
+Middle Mongolian sounds (Secret History era):
+  γ   = voiced uvular fricative (deeper than g — characteristic of Mongolian)
+  q   = voiceless uvular stop (deeper than k — very common)
+  ü   = front rounded vowel (as in French "tu")
+  ö   = front rounded vowel (as in French "feu")
+  Vowel harmony: back vowels (a/o/u) vs front vowels (e/ö/ü) — words
+  generally use one set only; Naukin relaxes this for fantasy usability
+  Agglutinative structure: suffixes stack onto roots
+
+Akkadian sounds adding texture:
+  š   = voiceless palatal fricative (as in "shoe")
+  ṭ   = emphatic t (retroflex, stronger than plain t)
+  ṣ   = emphatic s (stronger dental)
+  Triconsonantal roots (like Sumerian) simplified to CV/CVC for blending
+
+Key attested Mongolian words used directly:
+  qaγan (great khan/ruler), tenggeri (sky/heaven), dayin (war),
+  dalai (ocean), mingγan (thousand), tabun (five), jirγa (six),
+  doloon (seven), naiman (eight), arban (ten), naadam (festival/game),
+  ceceg (flower), casun (snow), bayar (joy), sara (moon/month),
+  γal (fire), usun (water), γajar (earth/place), odun (star)
+
+Naukin suffix system:
+  -qan  = primary adjective/quality ending (fr. Mong. qaγan repurposed)
+  -un   = primary noun ending (fr. Mong. genitive -un repurposed)
+  -tur  = place/locative noun (fr. Mong. dative -tur)
+  -qanu = verb ending (active/ongoing action)
+  -qunu = verb ending (completed/known action)
+  -bul  = collective/stative noun (fr. Mong. bol)
+  -yin  = possessive (fr. Mong. genitive -yin — attested)
+  -qantur = compound: quality + place (elevated/specific things)
+  -bultur = compound: collective + locative (broad/distributed things)
+
+===================================================================================
+END OF FILE — NaukinMongolianAkkadian_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

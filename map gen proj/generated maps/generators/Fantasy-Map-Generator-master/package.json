@@ -1,0 +1,51 @@
+{
+  "name": "fantasy-map-generator",
+  "version": "1.113.5",
+  "description": "Azgaar's _Fantasy Map Generator_ is a free web application that helps fantasy writers, game masters, and cartographers create and edit fantasy maps.",
+  "homepage": "https://github.com/Azgaar/Fantasy-Map-Generator#readme",
+  "bugs": {
+    "url": "https://github.com/Azgaar/Fantasy-Map-Generator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azgaar/Fantasy-Map-Generator.git"
+  },
+  "license": "MIT",
+  "author": "Azgaar",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:browser": "vitest --config=vitest.browser.config.ts",
+    "test:e2e": "playwright test",
+    "lint": "biome check --write",
+    "format": "biome format --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.13",
+    "@playwright/test": "^1.57.0",
+    "@types/d3": "^7.4.3",
+    "@types/delaunator": "^5.0.3",
+    "@types/lineclip": "^2.0.0",
+    "@types/node": "^25.0.10",
+    "@types/polylabel": "^1.1.3",
+    "@vitest/browser": "^4.0.18",
+    "@vitest/browser-playwright": "^4.0.18",
+    "playwright": "^1.57.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "alea": "^1.0.1",
+    "d3": "^7.9.0",
+    "delaunator": "^5.0.1",
+    "lineclip": "^2.0.0",
+    "polylabel": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

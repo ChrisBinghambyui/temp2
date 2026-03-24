@@ -1,0 +1,578 @@
+VETHANIRUM - 500 Common Word Translations
+Fantasy Language based on Vethanirum name patterns
+Linguistic roots: Medieval Catalan (Crown of Aragon era, 12th-15th c.)
+with light Occitan and Old Italian flavoring
+Stylization: Catalan roots processed through a consistent Vethanirum
+suffix/affix system — similar approach to SolarirumFrench.
+
+KEY SOURCE WORDS (Medieval Catalan):
+  lo/la/els (the), un/una (a), ésser/ser (to be), haver (to have),
+  fer (to do/make), dir (to say), veure (to see), anar (to go),
+  venir (to come), saber (to know), voler (to want), donar (to give),
+  tenir (to hold), sentir (to feel), parlar (to speak), home (man),
+  dona (woman), fill (son), infant (child), gent (people), rei (king),
+  terra (earth), foc (fire), aigua (water), cel (sky), dia (day),
+  nit (night), gran (great), bo/bona (good), ver/vera (true)
+
+STYLIZATION RULES FOR VETHANIRUM:
+  Nouns take suffix -eth (thing/place) or -ara (living being/abstract)
+  Verbs take suffix -eïr (infinitive) or -ar (action form)
+  Adjectives take suffix -el (quality marker) or -orn (state of being)
+  Particles/prepositions remain short and close to medieval Catalan roots
+  Characteristic sounds: soft -th, -rn, -el, -ara, -eïr, -orn
+  Prefix vel- (from name list: Velindre) marks elevated/formal register
+
+===================================================================================
+RANK | ENGLISH       | VETHANIRUM              | CATALAN ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | loth                    | Cat. lo/la + -th marker
+2    | a / an        | uneth                   | Cat. un/una + -eth
+3    | to            | aveïr                   | Cat. a (to) + -eïr
+6    | it            | elho                    | Cat. ell/ho (it/he) stylized
+8    | that          | aqueth                  | Cat. aquell (that) + -eth
+10   | it            | elho                    | same as above
+11   | for           | pereth                  | Cat. per (for) + -eth
+14   | this          | aqueth                  | Cat. aquest (this) stylized
+20   | this          | aqueth                  | same
+22   | his           | seuel                   | Cat. seu (his) + -el
+28   | her           | seuel                   | Cat. seu (her — same form) + -el
+29   | she           | elhorn                  | Cat. ella (she) + -orn
+31   | an            | uneth                   | same as a
+34   | one           | unsol                   | Cat. un sol (one single) stylized
+35   | all           | toteth                  | Cat. tot (all) + -eth
+37   | there         | alaeth                  | Cat. allà (there) + -eth
+38   | their         | loreth                  | Cat. llur (their) + -eth
+39   | what          | queth                   | Cat. que/quin (what) + -eth
+45   | who           | quieth                  | Cat. qui (who) + -eth
+49   | me            | mieth                   | Cat. mi (me) + -eth
+50   | when          | quaneth                 | Cat. quan (when) + -eth
+55   | no            | noneth                  | Cat. no (no) + -eth
+63   | your          | vostrel                 | Cat. vostre (your) + -el
+64   | good          | boneth                  | Cat. bo/bona (good) + -eth
+65   | some          | algeth                  | Cat. algun (some) + -eth
+85   | our           | nostrel                 | Cat. nostre (our) + -el
+95   | these         | aquestel                | Cat. aquests (these) + -el
+99   | us            | noseth                  | Cat. nos (us) + -eth
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | esseïr                  | Cat. ésser (to be) + -eïr
+70   | there         | alaeth                  | same as there above
+72   | seem          | sembleïr                | Cat. semblar (to seem) + -eïr
+78   | think         | cuideïr                 | Cat. cuidar (to think/believe) + -eïr
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | deth                    | Cat. de (of) + -th
+5    | and           | eth                     | Cat. e/i (and) + -th
+12   | not           | noneth                  | Cat. no (not) + -eth
+13   | on            | sobreth                 | Cat. sobre (on/over) + -th
+14   | with          | ambeth                  | Cat. amb (with) + -eth
+19   | at            | enneth                  | Cat. en (at/in) + -eth
+21   | but           | maseth                  | Cat. mas (but) + -eth
+23   | by            | pereth                  | Cat. per (by — same as for)
+24   | from          | devel                   | Cat. de (from) + -vel
+30   | or            | oveth                   | Cat. o (or) + -eth
+32   | will          | veleth                  | Cat. vol (will/want) + -eth
+33   | my            | mieuel                  | Cat. meu (my) + -el
+36   | would         | voldrel                 | Cat. voldria (would) + -el
+40   | so            | axieth                  | Cat. així (so/thus) + -eth
+41   | up            | amonteth                | Cat. amunt (up) + -eth
+42   | out           | forath                  | Cat. fora (out/outside) + -th
+43   | if            | sieth                   | Cat. si (if) + -eth
+44   | about         | entorel                 | Cat. entorn (about/around) + -el
+60   | because       | careth                  | Cat. car (because/for) + -eth
+61   | into          | belneth                 | Cat. belns/en (into) stylized
+71   | only          | solseth                 | Cat. sols (only) + -eth
+76   | its           | seuel                   | Cat. seu (its — same as his)
+77   | over          | sobreth                 | Cat. sobre (over — same as on)
+79   | also          | encareth                | Cat. encara (also/still) + -eth
+80   | back          | rereeth                 | Cat. rere (back/behind) + -eth
+81   | after         | aprethod                | Cat. après (after) + -od
+82   | use           | usarel                  | Cat. usar (to use) + -el
+87   | first         | primerel                | Cat. primer (first) + -el
+88   | well          | beneth                  | Cat. bé (well) + -eth
+90   | even          | finsel                  | Cat. fins (even/until) + -el
+94   | any           | qualseveth              | Cat. qualsevol (any) + -eth
+102  | need          | mestereth               | Cat. mester (need/craft) + -eth
+104  | often         | sovineth                | Cat. sovint (often) + -eth
+106  | high          | alteth                  | Cat. alt (high) + -eth
+110  | never         | jamaisel                | Cat. jamais (never) + -el
+112  | north         | nordeth                 | Cat. nord (north) + -eth
+114  | seem          | sembleïr                | same as seem above
+116  | next          | propeth                 | Cat. prop (near/next) + -eth
+119  | begin         | comenzeïr               | Cat. comenar (to begin) + -eïr
+129  | both          | ambdosel                | Cat. ambdós (both) + -el
+133  | until         | finsel                  | Cat. fins (until) + -el
+147  | ever          | maiseth                 | Cat. mai (ever/never) + -eth
+150  | though        | benquel                 | Cat. bé que (though) + -el
+154  | soon          | tosteth                 | Cat. tost (soon/quickly) + -eth
+158  | direct        | dreteth                 | Cat. dret (direct/right) + -eth
+160  | leave         | leixeïr                 | Cat. leixar (to leave) + -eïr
+169  | wind          | venteth                 | Cat. vent (wind) + -eth
+172  | since         | dequeth                 | Cat. des de (since) stylized
+183  | against       | contreïr                | Cat. contra (against) + -eïr
+192  | during        | duraneth                | Cat. durant (during) + -eth
+194  | true          | verael                  | Cat. vera (true) + -el
+219  | toward        | enversel                | Cat. envers (toward) + -el
+225  | center        | centreïl                | Cat. centre (center) + -il
+251  | still         | encareth                | Cat. encara (still — same as also)
+261  | above         | sobreth                 | Cat. sobre (above — same as on/over)
+287  | behind        | rereeth                 | Cat. rere (behind — same as back)
+330  | yes           | oïleth                  | Cat. oc (yes — langue d'oc root) + -eth
+332  | fill          | empleïr                 | Cat. emplir (to fill) + -eïr
+338  | yet           | encareth                | Cat. encara (yet — same as still)
+339  | among         | entremeth               | Cat. entre (among) + -eth
+340  | perhaps       | potserel                | Cat. potser (perhaps) + -el
+343  | am            | sothel                  | Cat. soc (I am) + -el stylized
+446  | whether       | sieth                   | Cat. si (whether — same as if)
+451  | shall         | caldreth                | Cat. caldrà (shall/will need) + -eth
+457  | either        | oveth...oveth           | Cat. o...o (either...or)
+488  | else          | altreïl                 | Cat. altre (other/else) + -il
+489  | quite         | forçeth                 | Cat. força (quite/very) + -eth
+490  | quite         | forçeth                 | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | fereïr                  | Cat. fer (to do/make) + -eïr
+9    | have          | avereïr                 | Cat. haver (to have) + -eïr
+15   | he            | elhel                   | Cat. ell (he) + -el
+16   | as            | cometh                  | Cat. com (as/like) + -eth
+17   | you           | voseth                  | Cat. vós (you) + -eth
+18   | do            | fereïr                  | same as do
+25   | they          | elhosel                 | Cat. ells (they) + -el
+26   | we            | noseth                  | Cat. nós (we) + -eth
+27   | say           | direïr                  | Cat. dir (to say) + -eïr
+46   | get           | prendreïr               | Cat. prendre (to get/take) + -eïr
+47   | which         | qualth                  | Cat. qual (which) + -th
+48   | go            | anareïr                 | Cat. anar (to go) + -eïr
+51   | make          | fereïr                  | Cat. fer (to make — same as do)
+52   | can           | podereïr                | Cat. poder (to be able) + -eïr
+53   | like          | amareth                 | Cat. amar (to like/love) + -eth
+54   | time          | tempsel                 | Cat. temps (time) + -el
+56   | just          | solseth                 | Cat. sols (just — same as only)
+57   | him           | elheth                  | Cat. ell (him) + -eth
+58   | know          | sabereïr                | Cat. saber (to know) + -eïr
+59   | take          | preneïr                 | Cat. prendre (to take) + -eïr
+62   | year          | aneth                   | Cat. any (year) + -eth
+66   | could         | poguereth               | Cat. pogué (could) + -eth
+67   | them          | elhoseth                | Cat. ells (them) + -eth
+68   | see           | veureïr                 | Cat. veure (to see) + -eïr
+73   | look          | gardeïr                 | Cat. guardar (to look/watch) + -eïr
+74   | only          | solseth                 | same as only/just
+75   | come          | venireïr                | Cat. venir (to come) + -eïr
+84   | use           | usareïr                 | Cat. usar (to use) + -eïr
+86   | work          | laboreth                | Cat. labor (work) + -eth
+89   | way           | camineth                | Cat. camí (way/road) + -eth
+91   | new           | noveth                  | Cat. nou (new) + -eth
+92   | want          | volereth                | Cat. voler (to want) + -eth
+93   | because       | careth                  | same as because above
+96   | give          | doneïr                  | Cat. donar (to give) + -eïr
+97   | day           | diaeth                  | Cat. dia (day) + -eth
+98   | most          | masel                   | Cat. més (most/more) + -el
+100  | great         | graneth                 | Cat. gran (great) + -eth
+101  | between       | entrel                  | Cat. entre (between) + -el
+103  | large         | graneth                 | Cat. gran (large — same as great)
+105  | hand          | maneth                  | Cat. mà (hand) + -eth
+107  | place         | loceth                  | Cat. lloc (place) + -eth
+108  | hold          | tenireïr                | Cat. tenir (to hold) + -eïr
+109  | turn          | girareïr                | Cat. girar (to turn) + -eïr
+111  | few           | poceth                  | Cat. poc (few/little) + -eth
+113  | open          | obrireïr                | Cat. obrir (to open) + -eïr
+115  | together      | ensembleth              | Cat. ensemble (together) + -th
+117  | white         | blanceth                | Cat. blanc (white) + -eth
+118  | children      | infantsel               | Cat. infants (children) + -el
+121  | walk          | camineïr                | Cat. caminar (to walk) + -eïr
+122  | example       | exempleth               | Cat. exemple (example) + -eth
+123  | ease          | urzeth                  | Cat. ús (ease/use) + -eth
+124  | paper         | papereth                | Cat. paper (paper) + -eth
+125  | group         | companyel               | Cat. companya (group/company) + -el
+126  | always        | sempreth                | Cat. sempre (always) + -eth
+127  | music         | muziceth                | Cat. música (music) + -eth
+128  | those         | aquelsel                | Cat. aquells (those) + -el
+130  | mark          | marceth                 | Cat. marca (mark) + -eth
+131  | book          | libreth                 | Cat. llibre (book) + -eth
+132  | letter        | letreth                 | Cat. lletra (letter) + -eth
+134  | mile          | mileth                  | Cat. milla (mile) + -eth
+135  | river         | ribereth                | Cat. ribera (river/bank) + -eth
+136  | car           | carretel                | Cat. carreta (cart/car) + -el
+137  | feet          | pedsel                  | Cat. peus (feet) + -el
+138  | care          | cureïr                  | Cat. cura (care) + -eïr
+139  | second        | segoneth                | Cat. segon (second) + -eth
+140  | enough        | proupeth                | Cat. prou (enough) + -eth
+141  | plain         | planeth                 | Cat. pla (plain/flat) + -eth
+142  | girl          | donzelleth              | Cat. donzella (girl/maiden) + -eth
+143  | usual         | usualeth                | Cat. usual + -eth
+144  | young         | joventh                 | Cat. jove (young) + -nth
+145  | ready         | aparedel                | Cat. aparest (ready) + -el
+146  | above         | sobreth                 | same as on/over
+148  | red           | vermelleth              | Cat. vermell (red) + -eth
+149  | list          | listeth                 | Cat. llista (list) + -eth
+151  | feel          | sentireïr               | Cat. sentir (to feel) + -eïr
+152  | talk          | parlareïr               | Cat. parlar (to talk) + -eïr
+153  | bird          | aucelleth               | Cat. aucell (bird) + -eth
+155  | body          | corpeth                 | Cat. cos/corp (body) + -eth
+156  | dog           | caneïl                  | Cat. ca (dog) + -neïl
+157  | family        | familleth               | Cat. família (family) + -eth
+159  | pose          | posteïr                 | Cat. postura (pose) stylized
+161  | song          | canteth                 | Cat. cant (song) + -eth
+162  | measure       | mesureth                | Cat. mesura (measure) + -eth
+163  | door          | porteth                 | Cat. porta (door) + -eth
+164  | product       | productel               | Cat. producte (product) + -el
+165  | black         | negreth                 | Cat. negre (black) + -eth
+166  | short         | curteth                 | Cat. curt (short) + -eth
+167  | numeral       | numereth                | Cat. número (numeral) + -eth
+168  | class         | classeth                | Cat. classe (class) + -eth
+170  | question      | questel                 | Cat. qüestió (question) + -el
+171  | happen        | sdaveneïr               | Cat. s'esdevenir (to happen) + -eïr
+173  | ship          | naveïl                  | Cat. nau (ship) + -eïl
+174  | area          | areeth                  | Cat. àrea (area) + -eth
+175  | half          | miteïl                  | Cat. mig (half) + -eïl
+176  | rock          | roceth                  | Cat. roca (rock) + -eth
+177  | order         | ordreth                 | Cat. ordre (order) + -eth
+178  | fire          | foceth                  | Cat. foc (fire) + -eth
+179  | south         | sudeth                  | Cat. sud (south) + -eth
+180  | problem       | problemeth              | Cat. problema (problem) + -eth
+181  | piece         | peçeth                  | Cat. peça (piece) + -eth
+182  | told          | digueth                 | Cat. digué (told/said) + -eth
+184  | pass          | passareïr               | Cat. passar (to pass) + -eïr
+185  | since         | dequeth                 | same as since above
+186  | top           | cimeth                  | Cat. cim (top/peak) + -eth
+187  | whole         | entereïl                | Cat. enter (whole) + -eïl
+188  | king          | reiel                   | Cat. rei (king) + -el
+189  | space         | espaïel                 | Cat. espai (space) + -el
+190  | heard         | ausideth                | Cat. ausit (heard) + -eth
+191  | best          | milloreïl               | Cat. millor (best) + -eïl
+192  | hour          | horeth                  | Cat. hora (hour) + -eth
+193  | better        | milloreïl               | Cat. millor (better — same as best)
+195  | during        | duraneth                | same as during above
+196  | hundred       | centeth                 | Cat. cent (hundred) + -eth
+197  | five          | cinceth                 | Cat. cinc (five) + -eth
+198  | remember      | remembreïr              | Cat. remembrar (to remember) + -eïr
+199  | step          | paseth                  | Cat. pas (step) + -eth
+200  | early         | dematineth              | Cat. de matí (early/morning) stylized
+201  | hold          | tenireïr                | same as hold above
+202  | west          | ouesteth                | Cat. oest (west) + -eth
+203  | ground        | terreth                 | Cat. terra (ground) + -eth
+204  | interest      | intereth                | Cat. interès (interest) + -eth
+205  | reach         | atenyereïr              | Cat. atènyer (to reach) + -eïr
+206  | fast          | rapideth                | Cat. ràpid (fast) + -eth
+207  | verb          | verbeth                 | Cat. verb (verb) + -eth
+208  | sing          | cantareïr               | Cat. cantar (to sing) + -eïr
+209  | listen        | escoltareïr             | Cat. escoltar (to listen) + -eïr
+210  | six           | siseth                  | Cat. sis (six) + -eth
+211  | table         | tauleth                 | Cat. taula (table) + -eth
+212  | travel        | viateïr                 | Cat. viatjar (to travel) + -eïr
+213  | less          | menosel                 | Cat. menys (less) + -el
+214  | morning       | matineth                | Cat. matí (morning) + -eth
+215  | ten           | deieth                  | Cat. deu (ten) + -eth
+216  | simple        | simpleth                | Cat. simple + -eth
+217  | several       | diversel                | Cat. divers (several) + -el
+218  | vowel         | voaleth                 | Cat. vocal (vowel) stylized + -eth
+220  | war           | guerreth                | Cat. guerra (war) + -eth
+221  | lay           | jaureïr                 | Cat. jaure (to lie/lay) + -eïr
+222  | against       | contreïl                | Cat. contra (against) + -eïl
+223  | pattern       | patroneth               | Cat. patró (pattern) + -eth
+224  | slow          | lenteth                 | Cat. lent (slow) + -eth
+226  | love          | amoreïl                 | Cat. amor (love) + -eïl
+227  | person        | personeth               | Cat. persona (person) + -eth
+228  | money         | moneteth                | Cat. moneda (money) + -eth
+229  | serve         | servireth               | Cat. servir (to serve) + -eth
+230  | appear        | aparexereïr             | Cat. aparèixer (to appear) + -eïr
+231  | road          | camineth                | Cat. camí (road — same as way)
+232  | map           | mapeth                  | Cat. mapa (map) + -eth
+233  | rain          | plujeth                 | Cat. pluja (rain) + -eth
+234  | rule          | regleth                 | Cat. regla (rule) + -eth
+235  | govern        | governareïr             | Cat. governar (to govern) + -eïr
+236  | pull          | tirareïr                | Cat. tirar (to pull) + -eïr
+237  | cold          | fredeth                 | Cat. fred (cold) + -eth
+238  | notice        | notareïr                | Cat. notar (to notice) + -eïr
+239  | voice         | vothel                  | Cat. vot (voice/vote) + -el stylized
+240  | fall          | caureth                 | Cat. caure (to fall) + -eth
+241  | power         | podereth                | Cat. poder (power) + -eth
+242  | town          | vileth                  | Cat. vila (town) + -eth
+243  | fine          | finel                   | Cat. fi (fine/end) + -el
+244  | drive         | conduireïr              | Cat. conduir (to drive) + -eïr
+245  | lead          | menareth                | Cat. menar (to lead) + -eth
+246  | cry           | plorareth               | Cat. plorar (to cry) + -eth
+247  | dark          | oscureth                | Cat. obscur (dark) + -eth
+248  | machine       | maquineth               | Cat. màquina (machine) + -eth
+249  | note          | noteth                  | Cat. nota (note) + -eth
+250  | wait          | esperareth              | Cat. esperar (to wait) + -eth
+252  | figure        | figureth                | Cat. figura (figure) + -eth
+253  | star          | estreleth               | Cat. estrella (star) + -eth
+254  | box           | caixeth                 | Cat. caixa (box) + -eth
+255  | noun          | nometh                  | Cat. nom (noun/name) + -eth
+256  | field         | campeth                 | Cat. camp (field) + -eth
+257  | rest          | reposeïr                | Cat. reposar (to rest) + -eïr
+258  | correct       | correcteth              | Cat. correcte (correct) + -eth
+259  | able          | capaçeth                | Cat. capaç (able) + -eth
+260  | pound         | lliureth                | Cat. lliura (pound) + -eth
+261  | done          | feteth                  | Cat. fet (done/made) + -eth
+262  | beauty        | belleseth               | Cat. bellesa (beauty) + -eth
+263  | drive         | conduireïr              | same as drive
+264  | stood         | estiguereth             | Cat. estigué (stood) + -eth
+265  | contain       | contenirel              | Cat. contenir (to contain) + -el
+266  | front         | davanteth               | Cat. davant (front/before) + -eth
+267  | teach         | ensenyareïr             | Cat. ensenyar (to teach) + -eïr
+268  | week          | setmaneth               | Cat. setmana (week) + -eth
+269  | final         | finaleth                | Cat. final + -eth
+270  | gave          | doneeth                 | Cat. donà (gave) + -eth
+271  | green         | verdeth                 | Cat. verd (green) + -eth
+272  | oh            | ohel                    | Cat. oh + -el
+273  | quick         | rapideth                | same as fast
+274  | develop       | desenvolvareïr          | Cat. desenvolupar (to develop) + -eïr
+275  | ocean         | oceàeth                 | Cat. oceà (ocean) + -eth
+276  | warm          | caldeth                 | Cat. cald (warm) + -eth
+277  | free          | llibereth               | Cat. lliure (free) + -eth
+278  | minute        | minuteth                | Cat. minut (minute) + -eth
+279  | strong        | forteth                 | Cat. fort (strong) + -eth
+280  | special       | especialeth             | Cat. especial (special) + -eth
+281  | behind        | rereeth                 | same as back/behind
+282  | clear         | clarel                  | Cat. clar (clear) + -el
+283  | tail          | cueïl                   | Cat. cua (tail) + -eïl
+284  | produce       | produireïr              | Cat. produir (to produce) + -eïr
+285  | fact          | feteth                  | Cat. fet (fact/deed) + -eth
+286  | street        | carrereth               | Cat. carrer (street) + -eth
+288  | lot           | moltel                  | Cat. molt (lot/much) + -el
+289  | nothing       | resdeth                 | Cat. res (nothing) + -eth
+290  | course        | curseth                 | Cat. curs (course) + -eth
+291  | stay          | romandreïr              | Cat. romandre (to stay) + -eïr
+292  | wheel         | roteth                  | Cat. roda (wheel) + -eth
+293  | full          | pleneth                 | Cat. ple (full) + -eth
+294  | force         | forçeth                 | Cat. força (force) + -eth
+295  | blue          | blaveth                 | Cat. blau (blue) + -eth
+296  | object        | objecteth               | Cat. objecte (object) + -eth
+297  | decide        | decidireïr              | Cat. decidir (to decide) + -eïr
+298  | surface       | superficiel             | Cat. superfície (surface) + -el
+299  | deep          | profundeth              | Cat. profund (deep) + -eth
+300  | moon          | luneth                  | Cat. lluna (moon) + -eth
+301  | island        | illeth                  | Cat. illa (island) + -eth
+302  | foot          | peueïl                  | Cat. peu (foot) + -eïl
+303  | system        | sistemeth               | Cat. sistema (system) + -eth
+304  | busy          | ocupatel                | Cat. ocupat (busy) + -el
+305  | test          | proveth                 | Cat. prova (test/proof) + -eth
+306  | record        | registreth              | Cat. registre (record) + -eth
+307  | boat          | barqueth                | Cat. barca (boat) + -eth
+308  | common        | comuneth                | Cat. comú (common) + -eth
+309  | gold          | aureth                  | Cat. or/aur (gold) + -eth
+310  | possible      | possibleth              | Cat. possible + -th
+311  | plane         | planeth                 | Cat. pla (flat/plane) + -eth
+312  | stead         | lloceth                 | Cat. lloc (place/stead) + -eth
+313  | dry           | secleth                 | Cat. sec (dry) + -eth
+314  | wonder        | meravelleïr             | Cat. meravellar (to wonder) + -eïr
+315  | laugh         | riureïr                 | Cat. riure (to laugh) + -eïr
+316  | thousand      | mileth                  | Cat. mil (thousand) + -eth
+317  | ago           | passadeth               | Cat. passat (past/ago) + -eth
+318  | ran           | correguereth            | Cat. corregué (ran) + -eth
+319  | check         | comprovareth            | Cat. comprovar (to check) + -eth
+320  | game          | joceth                  | Cat. joc (game) + -eth
+321  | shape         | formeth                 | Cat. forma (shape) + -eth
+322  | equate        | igualareth              | Cat. igualar (to equate) + -eth
+323  | hot           | caloreth                | Cat. calor (hot/heat) + -eth
+324  | miss          | mancareth               | Cat. mancar (to miss/lack) + -eth
+325  | brought       | adugereth               | Cat. adugué (brought) + -eth
+326  | heat          | caloreth                | Cat. calor (heat — same as hot)
+327  | snow          | neveth                  | Cat. neu (snow) + -eth
+328  | tire          | cansareïr               | Cat. cansar (to tire) + -eïr
+329  | bring         | adurereth               | Cat. adur (to bring) + -eth
+331  | distant       | llunyeth                | Cat. lluny (distant) + -eth
+333  | east          | esteth                  | Cat. est (east) + -eth
+334  | paint         | pintareth               | Cat. pintar (to paint) + -eth
+335  | language      | lengueth                | Cat. llengua (language) + -eth
+336  | among         | entremeth               | Cat. entre (among) + -eth
+337  | grand         | graneth                 | Cat. gran (grand — same as great)
+341  | drop          | goteth                  | Cat. gota (drop) + -eth
+342  | heart         | coreth                  | Cat. cor (heart) + -eth
+344  | present       | presenteth              | Cat. present + -eth
+345  | heavy         | pesadeth                | Cat. pesat (heavy) + -eth
+346  | dance         | dançareth               | Cat. dançar (to dance) + -eth
+347  | engine        | maquineth               | Cat. màquina (engine — same as machine)
+348  | position      | posicel                 | Cat. posició (position) + -el
+349  | arm           | braçeth                 | Cat. braç (arm) + -eth
+350  | wide          | ampleth                 | Cat. ample (wide) + -eth
+351  | sail          | velareth                | Cat. vela (sail) + -eth
+352  | material      | materialeth             | Cat. material + -eth
+353  | size          | mideseth                | Cat. mida (size) + -eth
+354  | vary          | variareïr               | Cat. variar (to vary) + -eïr
+355  | settle        | establireïr             | Cat. establir (to settle) + -eïr
+356  | speak         | parlareïr               | Cat. parlar (to speak) + -eïr
+357  | weight        | peseth                  | Cat. pes (weight) + -eth
+358  | general       | generaleth              | Cat. general + -eth
+359  | ice           | glaceth                 | Cat. gel/glaç (ice) + -eth
+360  | matter        | matereth                | Cat. matèria (matter) + -eth
+361  | circle        | cercleth                | Cat. cercle (circle) + -eth
+362  | pair          | pareïl                  | Cat. parell (pair) + -eïl
+363  | include       | incloureth              | Cat. incloure (to include) + -eth
+364  | divide        | dividireïr              | Cat. dividir (to divide) + -eïr
+365  | syllable      | sillabeth               | Cat. síl·laba (syllable) + -eth
+366  | felt          | sentiereth              | Cat. sentí (felt) + -eth
+367  | perhaps       | potserel                | Cat. potser (perhaps) + -el
+368  | pick          | triareth                | Cat. triar (to pick/choose) + -eth
+369  | sudden        | sobtadeth               | Cat. sobtat (sudden) + -eth
+370  | count         | comptareth              | Cat. comptar (to count) + -eth
+371  | square        | quadreth                | Cat. quadre (square) + -eth
+372  | reason        | raoneth                 | Cat. raó (reason) + -eth
+373  | length        | llargeth                | Cat. llarg (length) + -eth
+374  | represent     | representareth          | Cat. representar (to represent) + -eth
+375  | art           | artel                   | Cat. art + -el
+376  | subject       | subjecteth              | Cat. subjecte (subject) + -eth
+377  | region        | regioneth               | Cat. regió (region) + -eth
+378  | energy        | energieth               | Cat. energia (energy) + -eth
+379  | hunt          | caçareth                | Cat. caçar (to hunt) + -eth
+380  | probable      | probableth              | Cat. probable + -eth
+381  | bed           | llitreth                | Cat. llit (bed) + -eth
+382  | brother       | germanel                | Cat. germà (brother) + -el
+383  | egg           | oueth                   | Cat. ou (egg) + -eth
+384  | ride          | cavalcareth             | Cat. cavalcar (to ride) + -eth
+385  | cell          | cel·leth                | Cat. cel·la (cell) + -eth
+386  | believe       | creureth                | Cat. creure (to believe) + -eth
+387  | fraction      | fracceth                | Cat. fracció (fraction) stylized
+388  | forest        | boscheth                | Cat. bosc (forest) + -eth
+389  | sit           | seureïr                 | Cat. seure (to sit) + -eïr
+390  | race          | raçeth                  | Cat. raça (race) + -eth
+391  | window        | finestreth              | Cat. finestra (window) + -eth
+392  | store         | magazeth                | Cat. magatzem (store) stylized
+393  | summer        | estivel                 | Cat. estiu (summer) + -el
+394  | train         | traineth                | Cat. tren (train) + -eth
+395  | sleep         | dormireïr               | Cat. dormir (to sleep) + -eïr
+396  | prove         | provareïr               | Cat. provar (to prove) + -eïr
+397  | lone          | soleth                  | Cat. sol (alone/lone) + -eth
+398  | leg           | cameth                  | Cat. cama (leg) + -eth
+399  | exercise      | exerciceth              | Cat. exercici (exercise) + -eth
+400  | wall          | mureth                  | Cat. mur (wall) + -eth
+401  | catch         | agafareth               | Cat. agafar (to catch) + -eth
+402  | mount         | muntereth               | Cat. muntar (to mount) + -eth
+403  | wish          | desitjareïr             | Cat. desitjar (to wish) + -eïr
+404  | sky           | celeth                  | Cat. cel (sky) + -eth
+405  | board         | taulelleth              | Cat. taulell (board) + -eth
+406  | joy           | joieïl                  | Cat. joia (joy) + -eïl
+407  | winter        | hiverneth               | Cat. hivern (winter) + -eth
+408  | sat           | seiereth                | Cat. seié (sat) + -eth
+409  | written       | escriteth               | Cat. escrit (written) + -eth
+410  | wild          | salvargeth              | Cat. salvatge (wild) + -eth
+411  | instrument    | instrumenteth           | Cat. instrument + -eth
+412  | kept          | guardareth              | Cat. guardat (kept) + -eth
+413  | glass         | vidreth                 | Cat. vidre (glass) + -eth
+414  | grass         | herbeth                 | Cat. herba (grass) + -eth
+415  | cow           | vaceth                  | Cat. vaca (cow) + -eth
+416  | job           | feinel                  | Cat. feina (job/work) + -el
+417  | edge          | voranteth               | Cat. vorant (edge/border) + -eth
+418  | sign          | senyeth                 | Cat. senyal (sign) + -eth
+419  | visit         | visitareth              | Cat. visitar (to visit) + -eth
+420  | past          | passadeth               | Cat. passat (past) + -eth
+421  | soft          | suavel                  | Cat. suau (soft) + -el
+422  | fun           | diversioneth            | Cat. diversió (fun) + -eth
+423  | bright        | brillantel              | Cat. brillant (bright) + -el
+424  | gas           | gaseth                  | Cat. gas + -eth
+425  | weather       | tempsel                 | Cat. temps (weather — same as time)
+426  | month         | mesel                   | Cat. mes (month) + -el
+427  | million       | milioneth               | Cat. milió (million) + -eth
+428  | bear          | osseth                  | Cat. ós (bear) + -eth
+429  | finish        | acabareth               | Cat. acabar (to finish) + -eth
+430  | happy         | feliçeth                | Cat. feliç (happy) + -eth
+431  | hope          | esperançeth             | Cat. esperança (hope) + -eth
+432  | flower        | floreth                 | Cat. flor (flower) + -eth
+433  | clothe        | vestireïr               | Cat. vestir (to clothe) + -eïr
+434  | strange       | estranyreth             | Cat. estrany (strange) + -eth
+435  | gone          | anadeth                 | Cat. anat (gone) + -eth
+436  | jump          | saltareth               | Cat. saltar (to jump) + -eth
+437  | baby          | infanteth               | Cat. infant (baby/child) + -eth
+438  | eight         | vuiteth                 | Cat. vuit (eight) + -eth
+439  | village       | llogaret                | Cat. llogaret (village) — attested
+440  | meet          | trobareth               | Cat. trobar (to meet/find) + -eth
+441  | root          | arreleth                | Cat. arrel (root) + -eth
+442  | buy           | comprareïr              | Cat. comprar (to buy) + -eïr
+443  | raise         | aixecareïr              | Cat. aixecar (to raise) + -eïr
+444  | solve         | resoldreïr              | Cat. resoldre (to solve) + -eïr
+445  | metal         | metalleth               | Cat. metall (metal) + -eth
+447  | push          | empenyereth             | Cat. empenyer (to push) + -eth
+448  | seven         | seteth                  | Cat. set (seven) + -eth
+449  | paragraph     | paragrafeth             | Cat. paràgraf (paragraph) + -eth
+450  | third         | terceth                 | Cat. terç (third) + -eth
+452  | held          | tingueth                | Cat. tingué (held) + -eth
+453  | hair          | cabell eth              | Cat. cabell (hair) + -eth
+454  | describe      | descriureth             | Cat. descriure (to describe) + -eth
+455  | cook          | cuinareth               | Cat. cuinar (to cook) + -eth
+456  | floor         | pavimenteth             | Cat. paviment (floor) + -eth
+458  | result        | resultateth             | Cat. resultat (result) + -eth
+459  | burn          | cremareth               | Cat. cremar (to burn) + -eth
+460  | hill          | turoneth                | Cat. turó (hill) + -eth
+461  | safe          | segurel                 | Cat. segur (safe) + -el
+462  | cat           | gateth                  | Cat. gat (cat) + -eth
+463  | century       | segleth                 | Cat. segle (century) + -eth
+464  | consider      | considerareth           | Cat. considerar (to consider) + -eth
+465  | type          | tipusel                 | Cat. tipus (type) + -el
+466  | law           | lleiïel                 | Cat. llei (law) + -ïel
+467  | bit           | boceth                  | Cat. boc (bit/piece) + -eth
+468  | coast         | costareth               | Cat. costa (coast) + -eth
+469  | copy          | copiareth               | Cat. copiar (to copy) + -eth
+470  | phrase        | fraseth                 | Cat. frase (phrase) + -eth
+471  | silent        | silenciethel            | Cat. silenci (silent) + -el
+472  | tall          | alteth                  | Cat. alt (tall — same as high)
+473  | sand          | sorareth                | Cat. sorra (sand) + -eth
+474  | soil          | soleth                  | Cat. sòl (soil) + -eth
+475  | roll          | rodareth                | Cat. rodar (to roll) + -eth
+476  | temperature   | temperatureth           | Cat. temperatura + -eth
+477  | finger        | ditel                   | Cat. dit (finger) + -el
+478  | industry      | industrieth             | Cat. indústria (industry) + -eth
+479  | value         | valoreth                | Cat. valor (value) + -eth
+480  | fight         | batallareth             | Cat. batallar (to fight) + -eth
+481  | lie           | jaureïr                 | Cat. jaure (to lie — same as lay)
+482  | beat          | colpejareïr             | Cat. colpejar (to beat) + -eïr
+483  | excite        | excitareth              | Cat. excitar (to excite) + -eth
+484  | natural       | naturaleth              | Cat. natural + -eth
+485  | view          | visteïl                 | Cat. vista (view) + -eïl
+486  | sense         | sentitel                | Cat. sentit (sense) + -el
+487  | ear           | orelleth                | Cat. orella (ear) + -eth
+491  | case          | caseth                  | Cat. cas (case) + -eth
+492  | middle        | mijeth                  | Cat. mig (middle) + -eth
+493  | kill          | matareth                | Cat. matar (to kill) + -eth
+494  | son           | filleth                 | Cat. fill (son) + -eth
+495  | lake          | llageth                 | Cat. llac (lake) + -eth
+496  | moment        | momenteth               | Cat. moment + -eth
+497  | scale         | escaleth                | Cat. escala (scale) + -eth
+498  | loud          | alteth de voth          | Cat. alt de vot (loud voice) stylized
+499  | spring        | primavereth             | Cat. primavera (spring) + -eth
+500  | observe       | observareth             | Cat. observar (to observe) + -eth
+
+69   | other         | altreïl                 | Cat. altre (other) + -eïl
+83   | two           | dosel                   | Cat. dos (two) + -el
+120  | got           | hagueth                 | Cat. hagué (got/had) + -eth
+
+===================================================================================
+PHONETIC GUIDE FOR VETHANIRUM
+===================================================================================
+
+Medieval Catalan sounds preserved in Vethanirum:
+  ç   = voiceless alveolar affricate (as in "cats" — Cat. caça, peça)
+  ll  = palatal lateral (as in "million" — Cat. lletra, lliure)
+  ny  = palatal nasal (as in "canyon" — Cat. senyal, any)
+  l·l = geminate lateral (Cat. cel·la)
+  ï   = diaeresis — vowels pronounced separately (joïa, naïve)
+  Final -th = breathy dental release (Vethanirum innovation)
+
+Stylization rules for Vethanirum:
+  -eth    = primary noun/adjective/particle suffix (the "house sound" of Vethanirum)
+  -el     = secondary qualifier suffix (softer, often adjectival)
+  -eïr    = verb infinitive ending (all verbs)
+  -eïl    = feminine/diminutive noun ending
+  -orn    = state-of-being pronoun ending
+  -od     = temporal/sequential suffix
+  -il     = abstract concept ending (centreil, altreïl)
+
+Prefix patterns from the name list:
+  vel-    = elevated/formal (from Velindre, Vendres — see name list)
+  arn-    = warrior/noble (from Arnaut — Occitan troubadour name)
+  gui-    = guide/leader (from Guilhem, Guiraut)
+  ber-    = bear/strength (from Bertran, Berenguer)
+  rai-    = ray/light (from Raimon, Raimbaut)
+
+Catalan-root phonemes used most frequently:
+  Core consonants: r, l, n, m, t, c/k, v, f, s, p, b
+  Characteristic endings of source language: -ment, -ció, -ar, -ir, -re
+  Vethanirum converts all of these to: -eth, -eïr, -el, -eïl
+
+===================================================================================
+END OF FILE — Vethanirum_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

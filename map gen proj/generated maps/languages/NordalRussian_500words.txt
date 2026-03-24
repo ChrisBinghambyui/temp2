@@ -1,0 +1,659 @@
+NORDAL RUSSIAN - 500 Common Word Translations
+Fantasy Language based on NordalRussian name patterns
+Linguistic roots: Old Church Slavonic (primary base) + Medieval Russian,
+layered with Polish (heaviest), Czech/Bohemian, Lithuanian/Baltic,
+Hungarian vowel harmony, Wallachian/Moldavian, Rus Principalities, Serbian/Bulgarian.
+
+KEY SOURCE WORDS:
+  OCS: językŭ (language), zemlja (earth), voda (water), ogňŭ (fire), nebо (sky),
+  světŭ (light/world), slovo (word), imę (name), věra (faith/truth), vladŭ (rule/power),
+  bratŭ (brother), mati (mother), sŭnŭ (son), ljudije (people), knędzĭ (prince/lord),
+  věšti (thing), choditi (to go), věděti (to know), dati (to give), byti (to be),
+  Polish: pan (lord/sir), ziemia (earth), woda (water), ogień (fire), niebo (sky),
+  Czech: zem (earth), voda, oheň, nebe, slovo — mirroring OCS closely,
+  Lithuanian: žemė (earth), vanduo (water), ugnis (fire), dangus (sky),
+  Hungarian: föld (earth), víz (water), tűz (fire), ég (sky), ember (person),
+  vár (fortress/castle), úr (lord), király (king)
+
+NOTE: Nordal blends OCS's formal ecclesiastical register with the hard consonant
+stacks of Polish (sz, cz, rz, szcz), Czech softness (ř, č, ž), Lithuanian flow
+(-as, -is endings), and Hungarian vowel harmony (-vár, -ság, -ár suffixes).
+The result is a language that feels weighty, dynastic, and fortress-edged.
+
+===================================================================================
+RANK | ENGLISH       | NORDAL RUSSIAN          | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | sŭ                      | OCS sŭ (the/this, def. particle)
+2    | a / an        | jedŭ                    | OCS jedinŭ (one/a) stylized
+6    | it            | to                      | OCS/Pol. to (it/that) — attested
+14   | this          | sije                    | OCS sije (this) — attested
+38   | what          | czto                    | OCS čŭto + Polish cz- (what)
+45   | who           | kŭto                    | OCS kŭto (who) — attested
+63   | your          | tvoje                   | OCS tvoje (your/thine) — attested
+85   | our           | naše                    | OCS naše (our) — attested
+99   | us            | namŭ                    | OCS namŭ (to us/us) — attested
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | byti                    | OCS byti (to be) — attested
+70   | there         | tamŭ                    | OCS/Pol. tam (there) — attested
+72   | seem          | mniti sę                | OCS mniti sę (to seem/appear) stylized
+78   | think         | mysliti                 | OCS mysliti (to think) — attested
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | ot                      | OCS otŭ (of/from) — attested
+5    | and           | i                       | OCS i (and) — attested
+12   | not           | ne                      | OCS ne (not) — attested
+13   | on            | na                      | OCS na (on/upon) — attested
+14   | with          | sŭ                      | OCS sŭ (with/together) — attested
+21   | but           | nŭ                      | OCS nŭ (but/however) — attested
+23   | by            | prĭ                     | OCS pri (by/at/near) — attested
+24   | from          | otŭ                     | OCS otŭ (from) — attested
+30   | or            | ili                     | OCS ili (or) — attested
+32   | into          | vŭ                      | OCS vŭ (in/into) — attested
+43   | if            | ašte                    | OCS ašte (if) — attested
+44   | about         | o                       | OCS o (about/concerning) — attested
+60   | because       | jaže                    | OCS jaže (because/which) stylized
+71   | only          | tŭkŭmo                  | OCS tŭkŭmo (only/just) — attested
+82   | also          | takože                  | OCS takože (also/likewise) — attested
+83   | after         | po                      | OCS po (after/along) — attested
+90   | even          | daže                    | OCS daže (even/as far as) — attested
+95   | these         | sija                    | OCS sija (these) — attested
+120  | until         | doňdže                  | OCS doňdže (until/as long as) attested
+154  | soon          | skoro                   | OCS/Pol. skoro (soon/quickly) — attested
+172  | since         | otŭnelže                | OCS otŭ + nelže (since/from when) stylized
+183  | against       | protivu                 | OCS protivu (against) — attested
+192  | during        | prěžde                  | OCS prěžde (before/during) stylized
+219  | toward        | kŭ                      | OCS kŭ (toward/to) — attested
+251  | still         | ješte                   | OCS/Czech ješte (still/yet) — attested
+261  | above         | nadŭ                    | OCS nadŭ (above/over) — attested
+287  | behind        | za                      | OCS za (behind/beyond) — attested
+332  | yes           | ei                      | OCS ei (yes/verily) — attested
+338  | yet           | ješte                   | OCS ješte (yet — same as still)
+339  | among         | meždŭ                   | OCS meždŭ (among/between) — attested
+340  | perhaps       | možebytĭ                | OCS možebytĭ (maybe/perhaps) stylized
+451  | shall         | imatŭ                   | OCS imatŭ (shall/has to) stylized
+457  | either        | ili-ili                 | OCS ili...ili (either...or) — attested
+488  | else          | inŭ                     | OCS inŭ (other/else) — attested
+490  | quite         | věsĭma                  | OCS věsĭma (very/quite) — attested
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | tvoriti                 | OCS tvoriti (to do/create) — attested
+9    | have          | iměti                   | OCS iměti (to have) — attested
+18   | say           | rešti                   | OCS rešti (to say/speak) — attested
+47   | get           | vzęti                   | OCS vzęti (to take/get) — attested
+51   | make          | sŭtvoriti               | OCS sŭtvoriti (to make/create) attested
+52   | can           | moštĭ                   | OCS moštĭ (to be able/can) — attested
+53   | like          | ljubiti                 | OCS ljubiti (to love/like) — attested
+56   | know          | věděti                  | OCS věděti (to know) — attested
+57   | take          | vzęti                   | OCS vzęti (to take — same as get)
+59   | see           | viděti                  | OCS viděti (to see) — attested
+68   | look          | zĭrěti                  | OCS zĭrěti (to look/gaze) — attested
+72   | come          | prijiti                 | OCS prijiti (to come) — attested
+76   | think         | mysliti                 | OCS mysliti (to think — same as think)
+84   | use           | upotrebiti              | OCS upotrebiti (to use) — attested
+86   | work          | dělati                  | OCS dělati (to work/do) — attested
+92   | want          | хotěti                  | OCS хotěti (to want) — attested
+96   | give          | dati                    | OCS dati (to give) — attested
+107  | hold          | dŭržati                 | OCS dŭržati (to hold) — attested
+109  | turn          | obraštatĭ               | OCS obraštatĭ (to turn/convert) stylized
+115  | walk          | ходiti                  | OCS ходiti (to walk/go) — attested
+118  | begin         | načęti                  | OCS načęti (to begin) — attested
+123  | seem          | mniti sę                | OCS (to seem — same as seem)
+127  | open          | otvrŭsti                | OCS otvrŭsti (to open) — attested
+137  | care          | pečaliti sę             | OCS pečaliti sę (to care/grieve) stylized
+141  | feel          | čjuti                   | OCS/Pol. czuć stylized (to feel)
+143  | talk          | glagolati               | OCS glagolati (to speak/talk) — attested
+148  | run           | tešti                   | OCS tešti (to run/flow) — attested
+150  | leave         | otiti                   | OCS otiti (to leave/depart) — attested
+155  | go            | iti                     | OCS iti (to go) — attested
+159  | fill          | isplŭniti               | OCS isplŭniti (to fill/fulfill) — attested
+165  | happen        | bytĭ sę                 | OCS bytĭ sę (to happen/become) stylized
+174  | pass          | projiti                 | OCS projiti (to pass/go through) attested
+179  | reach         | dostignąti              | OCS dostignąti (to reach) — attested
+189  | remember      | pomniti                 | OCS/Pol. pomniti (to remember) stylized
+191  | hear          | slušati                 | OCS slušati (to hear/listen) — attested
+199  | move          | dvignąti                | OCS dvignąti (to move/lift) — attested
+201  | fall          | pasti                   | OCS pasti (to fall) — attested
+206  | travel        | шŭstvovati              | OCS šŭstvovati (to travel/journey) stylized
+208  | sing          | pěti                    | OCS pěti (to sing) — attested
+209  | listen        | poslušati               | OCS poslušati (to listen) — attested
+222  | pull          | vlěšti                  | OCS vlěšti (to pull/drag) — attested
+224  | follow        | sled̄ovati              | OCS sled̄ovati (to follow) — attested
+226  | appear        | javiti sę               | OCS javiti sę (to appear) — attested
+229  | serve         | slŭžiti                 | OCS slŭžiti (to serve) — attested
+233  | govern        | vladěti                 | OCS vladěti (to govern/rule) — attested
+235  | rule          | prĭvladati              | OCS prĭ + vladati (to rule over) stylized
+237  | notice        | paziti                  | OCS/Serbian paziti (to notice/watch) attested
+239  | cry           | plakati                 | OCS plakati (to cry/weep) — attested
+243  | drive         | gnati                   | OCS gnati (to drive/chase) — attested
+248  | wait          | čekati                  | OCS/Pol. czekać stylized (to wait)
+253  | lead          | vesti                   | OCS vesti (to lead/bring) — attested
+263  | stand         | stati                   | OCS stati (to stand/stop) — attested
+265  | contain       | sŭdŭržati               | OCS sŭ + dŭržati (to contain) stylized
+268  | teach         | učiti                   | OCS učiti (to teach) — attested
+273  | develop       | razviti                 | OCS/Pol. rozwijać stylized (to develop)
+276  | produce       | prinositi               | OCS prinositi (to bring/produce) attested
+281  | decide        | rěšiti                  | OCS rěšiti (to decide/resolve) — attested
+287  | prove         | dokázati                | OCS/Czech dokázat stylized (to prove)
+292  | stay          | ostati                  | OCS ostati (to stay/remain) — attested
+294  | force         | prinuditi               | OCS prinuditi (to force/compel) attested
+297  | push          | tlačiti                 | OCS/Pol. tłoczyć stylized (to push/press)
+305  | test          | ispytati                | OCS ispytati (to test/examine) — attested
+313  | laugh         | smějati sę              | OCS smějati sę (to laugh) — attested
+315  | wonder        | diviti sę               | OCS diviti sę (to wonder/marvel) attested
+319  | check         | prověriti               | OCS/Pol. prověriti (to verify/check) stylized
+322  | shape         | oblikŭ tvoriti          | OCS (to give form/shape) stylized
+328  | heat          | grěti                   | OCS grěti (to heat/warm) — attested
+332  | bring         | prinesti                | OCS prinesti (to bring) — attested
+335  | paint         | krásiti                 | OCS krásiti (to adorn/paint) — attested
+348  | dance         | plęsati                 | OCS plęsati (to dance) — attested
+356  | vary          | menjati                 | OCS/Pol. menjać stylized (to vary/change)
+358  | speak         | věštatĭ                 | OCS věštatĭ (to speak/proclaim) attested
+360  | settle        | osaditi                 | OCS osaditi (to settle/establish) attested
+368  | hunt          | loviti                  | OCS loviti (to hunt/catch) — attested
+371  | count         | čistiti                 | OCS čistiti (to count/reckon) stylized
+379  | represent     | prědstaviti             | OCS prědstaviti (to present/represent)
+384  | sit           | sěděti                  | OCS sěděti (to sit) — attested
+386  | believe       | věrovati                | OCS věrovati (to believe/trust) — attested
+388  | ride          | jaхati                  | OCS jaхati (to ride) — attested
+392  | catch         | jati                    | OCS jati (to catch/seize) — attested
+394  | wish          | žęдati                  | OCS žęдati (to wish/thirst for) attested
+400  | sleep         | sŭpati                  | OCS sŭpati (to sleep) — attested
+402  | mount         | vzyjiti                 | OCS vzŭjiti (to mount/ascend) stylized
+405  | fly           | letěti                  | OCS letěti (to fly) — attested
+412  | keep          | хraniti                 | OCS хraniti (to keep/guard) — attested
+415  | cut           | rězati                  | OCS rězati (to cut) — attested
+418  | visit         | navěstiti               | OCS navěstiti (to visit/announce) attested
+425  | jump          | skočiti                 | OCS/Pol. skoczyć stylized (to jump)
+429  | finish        | skončati                | OCS skončati (to finish/end) — attested
+431  | hope          | nadějtĭ sę              | OCS nadějtĭ sę (to hope) — attested
+433  | dress         | oblěšti                 | OCS oblěšti (to clothe/dress) — attested
+435  | grow          | rasti                   | OCS rasti (to grow) — attested
+437  | meet          | sŭrěsti                 | OCS sŭrěsti (to meet/encounter) attested
+441  | raise         | vzыti                   | OCS vzŭiti (to raise/lift) stylized
+443  | solve         | razrěšiti               | OCS razrěšiti (to resolve/solve) attested
+455  | cook          | variti                  | OCS variti (to cook/boil) — attested
+457  | burn          | gorěti                  | OCS gorěti (to burn) — attested
+464  | describe      | opisati                 | OCS opisati (to describe/write around)
+466  | copy          | pisati                  | OCS pisati (to write/copy) — attested
+473  | roll          | katiti                  | OCS katiti (to roll) — attested
+476  | excite        | vzbuditi                | OCS vzbuditi (to awaken/excite) attested
+480  | fight         | brati sę                | OCS brati sę (to fight/struggle) attested
+482  | beat          | biti                    | OCS biti (to beat/strike) — attested
+493  | break         | lomiti                  | OCS lomiti (to break) — attested
+497  | kill          | ubiti                   | OCS ubiti (to kill/strike dead) — attested
+
+--- NOUNS: PEOPLE ---
+15   | he            | onŭ                     | OCS onŭ (he) — attested
+16   | she           | ona                     | OCS ona (she) — attested
+17   | you           | ty                      | OCS ty (you/thou) — attested
+25   | they          | oni                     | OCS oni (they) — attested
+26   | we            | my                      | OCS my (we) — attested
+33   | my            | moje                    | OCS moje (my/mine) — attested
+57   | him           | jego                    | OCS jego (him/his) — attested
+59   | me            | mene                    | OCS mene (me/of me) — attested
+60   | people        | ljudije                 | OCS ljudije (people) — attested
+65   | some          | někŭto                  | OCS někŭto (some/someone) — attested
+67   | them          | imŭ                     | OCS imŭ (them/to them) — attested
+100  | great         | velikŭ                  | OCS velikŭ (great/large) — attested
+131  | children      | děti                    | OCS děti (children) — attested
+133  | girl          | dějvica                 | OCS dějvica (maiden/girl) stylized
+143  | boy           | otrokŭ                  | OCS otrokŭ (boy/youth) — attested
+157  | family        | čeljadĭ                 | OCS čeljadĭ (household/family) attested
+161  | man           | mąžĭ                    | OCS mąžĭ (man) — attested (Pol. mąż)
+165  | woman         | žena                    | OCS žena (woman/wife) — attested
+168  | king          | kralj                   | OCS/Serbian kralj (king) — attested
+226  | person        | člověkŭ                 | OCS člověkŭ (person/human) — attested
+228  | friend        | drŭgŭ                   | OCS drŭgŭ (friend/other) — attested
+348  | brother       | bratŭ                   | OCS bratŭ (brother) — attested
+382  | baby          | dětęšte                 | OCS dětęšte (infant/little child) stylized
+430  | son           | sŭnŭ                    | OCS sŭnŭ (son) — attested
+494  | mother        | mati                    | OCS mati (mother) — attested
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | město                   | OCS město (place/town) — attested
+97   | day           | dĭnĭ                    | OCS dĭnĭ (day) — attested
+135  | river         | rěka                    | OCS rěka (river) — attested
+136  | mile          | poprište                | OCS poprište (course/distance) attested
+174  | rock          | skalĭ                   | OCS skalĭ (rock/cliff) — attested
+176  | fire          | ogĭnĭ                   | OCS ogĭnĭ (fire) — attested
+178  | south         | jugŭ                    | OCS jugŭ (south) — attested
+179  | north         | sěverŭ                  | OCS sěverŭ (north) — attested
+181  | piece         | частĭ                   | OCS čas/častĭ (piece/part) stylized
+188  | space         | prěstorŭ                | OCS prěstorŭ (space/expanse) stylized
+190  | ground        | zemlja                  | OCS zemlja (earth/ground) — attested
+196  | hour          | godŭ                    | OCS godŭ (time/hour/year) — attested
+203  | west          | zapadŭ                  | OCS zapadŭ (west/sunset) — attested
+212  | morning       | jutro                   | OCS jutro (morning) — attested
+233  | rain          | dŭždĭ                   | OCS dŭždĭ (rain) — attested
+240  | cold          | mrazŭ                   | OCS mrazŭ (cold/frost) — attested
+242  | dark          | тĭma                    | OCS tĭma (darkness) — attested
+247  | light         | světŭ                   | OCS světŭ (light/world) — attested
+250  | wave          | vĭlna                   | OCS vĭlna (wave/wool) — attested
+252  | heart         | sŭrdĭce                 | OCS sŭrdĭce (heart) — attested
+254  | star          | zvězda                  | OCS zvězda (star) — attested
+255  | box           | kovĭčegŭ                | OCS kovĭčegŭ (chest/ark) — attested
+266  | field         | polje                   | OCS polje (field/plain) — attested
+268  | rest          | pokoi                   | OCS pokoi (rest/peace) — attested
+274  | ocean         | more                    | OCS more (sea/ocean) — attested
+277  | minute        | malŭ godŭ               | OCS (small time) stylized
+285  | fact          | istina                  | OCS istina (truth/fact) — attested
+287  | street        | putĭ                    | OCS putĭ (road/way/path) — attested
+290  | lot           | mnogo                   | OCS mnogo (many/much) — attested
+299  | course        | prěchodŭ                | OCS prěchodŭ (crossing/course) stylized
+301  | wheel         | kolo                    | OCS kolo (wheel/circle) — attested
+303  | force         | силa                    | OCS sila (force/strength) — attested
+305  | moon          | měsęcĭ                  | OCS měsęcĭ (moon/month) — attested
+306  | island        | ostrovŭ                 | OCS ostrovŭ (island) — attested
+308  | foot          | noga                    | OCS noga (foot/leg) — attested
+312  | boat          | ladĭja                  | OCS ladĭja (boat/vessel) — attested
+316  | plane         | летavicĭ                | OCS летěti + constructed (flying vessel)
+318  | thousand      | тысęšta                 | OCS тысęšta (thousand) — attested
+320  | game          | igra                    | OCS igra (game/play) — attested
+323  | heat          | žar                     | OCS žar (heat/ember) — attested
+327  | snow          | sněgŭ                   | OCS sněgŭ (snow) — attested
+334  | east          | vŭstokŭ                 | OCS vŭstokŭ (east/sunrise) — attested
+336  | language      | językŭ                  | OCS językŭ (language/tongue) — attested
+339  | ball          | kłobŭ                   | OCS/Pol. kłobŭ (ball/round thing) stylized
+341  | drop          | kaplja                  | OCS kaplja (drop) — attested
+345  | engine        | движatelĭ               | OCS dvižatelĭ (mover/engine) stylized
+347  | arm           | rąka                    | OCS rąka (hand/arm) — attested
+352  | material      | věštĭ                   | OCS věštĭ (thing/material) — attested
+353  | size          | věličina                | OCS věličina (size/greatness) stylized
+360  | ice           | ledŭ                    | OCS ledŭ (ice) — attested
+361  | matter        | věštĭ                   | OCS věštĭ (matter/thing — same as material)
+363  | pair          | para                    | OCS/Pol. para (pair) — attested
+366  | length        | dlĭgota                 | OCS dlĭgota (length) — attested
+367  | syllable      | slogŭ                   | OCS slogŭ (syllable) — attested
+374  | subject       | prědmětŭ                | OCS prědmětŭ (subject/object before) stylized
+375  | region        | krajŭ                   | OCS krajŭ (region/edge/land) — attested
+376  | energy        | сила                    | OCS sila (energy/force — same as force)
+379  | art           | хudožĭstvo              | OCS хudožĭstvo (art/craft) — attested
+384  | circle        | krug                    | OCS krug (circle) — attested
+387  | fraction      | část                    | OCS część (part/fraction) — attested
+388  | forest        | lěsŭ                    | OCS lěsŭ (forest) — attested
+391  | race          | rodŭ                    | OCS rodŭ (race/lineage/kind) — attested
+392  | window        | oblokŭ                  | OCS oblokŭ (window/cloud) — attested
+393  | store         | skladu                  | OCS/Pol. skład (store/depot) stylized
+394  | summer        | lěto                    | OCS lěto (summer/year) — attested
+395  | train         | vozŭ niz                | OCS vozŭ (vehicle) + niz (chain) stylized
+399  | wall          | stěna                   | OCS stěna (wall) — attested
+401  | mount         | gorа                    | OCS gora (mountain/hill) — attested
+403  | sky           | nebo                    | OCS nebo (sky/heaven) — attested
+407  | board         | dŭska                   | OCS dŭska (board/plank) — attested
+408  | joy           | radostĭ                 | OCS radostĭ (joy/gladness) — attested
+409  | winter        | zima                    | OCS zima (winter) — attested
+412  | glass         | stŭklo                  | OCS stŭklo (glass) — attested
+413  | grass         | trava                   | OCS trava (grass/herb) — attested
+414  | cow           | krava                   | OCS krava (cow) — attested
+416  | job           | rabota                  | OCS rabota (work/labor) — attested
+417  | edge          | krajŭ                   | OCS krajŭ (edge — same as region)
+419  | sign          | znakŭ                   | OCS znakŭ (sign/mark) — attested
+422  | fun           | veselije                | OCS veselije (fun/merriment) — attested
+423  | bright        | světlŭ                  | OCS světlŭ (bright/luminous) — attested
+424  | gas           | parŭ                    | OCS parŭ (steam/vapor) — attested
+425  | weather       | pogoda                  | OCS/Pol. pogoda (weather) — attested
+426  | month         | měsęcĭ                  | OCS měsęcĭ (month — same as moon)
+427  | million       | milionŭ                 | Pol./Czech milion stylized
+428  | bear          | medvědĭ                 | OCS medvědĭ (bear) — attested
+429  | flower        | květŭ                   | OCS květŭ (flower/bloom) — attested
+432  | hair          | vlasŭ                   | OCS vlasŭ (hair) — attested
+436  | village       | vŭsĭ                    | OCS vŭsĭ (village/settlement) — attested
+438  | root          | korěnĭ                  | OCS korěnĭ (root) — attested
+442  | metal         | kovŭ                    | OCS kovŭ (metal/forging) — attested
+445  | paragraph     | otryvokŭ                | OCS otŭryvŭ (excerpt/paragraph) stylized
+449  | third         | tretĭ                   | OCS tretĭ (third) — attested
+452  | floor         | podŭ                    | OCS podŭ (floor/under) — attested
+453  | result        | plodŭ                   | OCS plodŭ (fruit/result) — attested
+454  | hill          | хŭlmŭ                   | OCS хŭlmŭ (hill/mound) — attested
+456  | cat           | kotŭ                    | OCS/Pol. kot stylized (cat)
+460  | century       | věkŭ                    | OCS věkŭ (age/century) — attested
+461  | type          | vidŭ                    | OCS vidŭ (type/kind/appearance) attested
+462  | law           | zakonŭ                  | OCS zakonŭ (law) — attested
+463  | bit           | malŭ                    | OCS malŭ (little/bit) — attested
+464  | coast         | brěgŭ                   | OCS brěgŭ (shore/coast) — attested
+467  | phrase        | slovo                   | OCS slovo (word/phrase) — attested
+469  | sand          | pěsŭkŭ                  | OCS pěsŭkŭ (sand) — attested
+470  | soil          | zemlja                  | OCS zemlja (soil/earth — same as ground)
+473  | temperature   | тeplota                 | OCS teplota (warmth/temperature) attested
+474  | finger        | prŭstŭ                  | OCS prŭstŭ (finger) — attested
+475  | industry      | dělanĭje                | OCS dělanĭje (doing/industry) stylized
+476  | value         | cěna                    | OCS cěna (price/value) — attested
+479  | view          | vidŭ                    | OCS vidŭ (view/sight — same as type)
+480  | sense         | čjustvo                 | OCS čjustvo (feeling/sense) stylized
+481  | ear           | uxo                     | OCS uxo (ear) — attested
+487  | case          | slučai                  | OCS/Pol. slučaj (case/occasion) stylized
+488  | middle        | srěda                   | OCS srěda (middle/Wednesday) — attested
+492  | lake          | jezerŭ                  | OCS jezerŭ (lake) — attested
+493  | moment        | mgnovĭje                | OCS mgnovĭje (moment/instant) stylized
+495  | scale         | měrilŭ                  | OCS měrilŭ (measure/scale) stylized
+496  | loud          | glasĭnŭ                 | OCS glasŭ (voice) + -ĭnŭ (loud) stylized
+497  | spring        | věsna                   | OCS věsna (spring season) — attested
+500  | cloud         | oblakŭ                  | OCS oblakŭ (cloud) — attested
+
+--- ADJECTIVES ---
+36   | all           | vĭsĭ                    | OCS vĭsĭ (all/every) — attested
+40   | so            | tako                    | OCS tako (so/thus) — attested
+41   | up            | gorě                    | OCS gorě (up/above) — attested
+42   | out           | vonŭ                    | OCS vonŭ (out/outside) — attested
+66   | some          | někŭto                  | OCS někŭto (some — same as above)
+69   | other         | drŭgŭ                   | OCS drŭgŭ (other/another) — attested
+70   | than          | než                     | OCS/Pol. niž/než (than) — attested
+74   | how           | kako                    | OCS kako (how) — attested
+89   | new           | novŭ                    | OCS novŭ (new) — attested
+90   | even          | daže                    | OCS daže (even — same as even prep)
+91   | way           | putĭ                    | OCS putĭ (way — same as street)
+93   | any           | někŭto                  | OCS (any/some — same as some)
+98   | most          | naivělikŭ               | OCS nai + velikŭ (most great) stylized
+101  | large         | velikŭ                  | OCS velikŭ (large — same as great)
+103  | often         | čęsto                   | OCS čęsto (often) — attested
+105  | high          | vysokŭ                  | OCS vysokŭ (high) — attested
+111  | few           | malŭ                    | OCS malŭ (few/small) — attested
+113  | white         | bělŭ                    | OCS bělŭ (white) — attested
+117  | young         | mladŭ                   | OCS mladŭ (young) — attested
+118  | ready         | gotovŭ                  | OCS gotovŭ (ready) — attested
+120  | usual         | obĭčajĭnŭ               | OCS obĭčajĭ + -nŭ (usual/customary) stylized
+121  | plain         | prostŭ                  | OCS prostŭ (plain/simple) — attested
+122  | above         | nadŭ                    | OCS nadŭ (above — same as prep)
+124  | second        | vtorŭ                   | OCS vtorŭ (second) — attested
+125  | enough        | довольнŭ                | OCS dovolĭnŭ (enough/sufficient) attested
+126  | ever          | vŭsegda                 | OCS vŭsegda (always/ever) — attested
+127  | red           | čŭrvenŭ                 | OCS čŭrvenŭ (red) — attested
+128  | old           | starŭ                   | OCS starŭ (old) — attested
+130  | though        | хotę                    | OCS хotę (though/wanting) stylized
+132  | short         | kratŭkŭ                 | OCS kratŭkŭ (short/brief) — attested
+138  | true          | istinĭnŭ                | OCS istinĭnŭ (true) — attested
+139  | full          | plŭnŭ                   | OCS plŭnŭ (full) — attested
+140  | whole         | cělŭ                    | OCS cělŭ (whole/healthy) — attested
+144  | fast          | skорŭ                   | OCS skорŭ (fast/quick) — attested
+145  | simple        | prostŭ                  | OCS prostŭ (simple — same as plain)
+146  | several       | někŭlikŭ                | OCS někŭlikŭ (several) — attested
+148  | best          | naилučĭšĭ               | OCS nai + lučĭšĭ (best) stylized
+149  | better        | lučĭšĭ                  | OCS lučĭšĭ (better) — attested
+151  | early         | ranoе                   | OCS rano (early/morning) — attested
+153  | complete      | cělŭ                    | OCS cělŭ (complete — same as whole)
+156  | certain       | věrĭnŭ                  | OCS věrĭnŭ (certain/faithful) — attested
+163  | general       | obĭštĭ                  | OCS obĭštĭ (common/general) — attested
+164  | special       | osobĭnŭ                 | OCS osobĭnŭ (special/separate) stylized
+166  | correct       | pravĭdĭnŭ               | OCS pravĭdĭnŭ (correct/righteous) stylized
+167  | able          | sposobĭnŭ               | OCS sposobĭnŭ (able/capable) stylized
+168  | fine          | krasĭnŭ                 | OCS krasĭnŭ (fine/beautiful) — attested
+170  | beautiful     | krasnŭ                  | OCS krasnŭ (beautiful/red) — attested
+171  | gone          | otšŭdĭšĭ               | OCS (gone/departed) stylized
+172  | quick         | skорŭ                   | OCS skорŭ (quick — same as fast)
+173  | free          | svobodĭnŭ               | OCS svobodĭnŭ (free) — attested
+175  | warm          | teplŭ                   | OCS teplŭ (warm) — attested
+176  | strong        | krěpŭkŭ                 | OCS krěpŭkŭ (strong/firm) — attested
+177  | clear         | jasnŭ                   | OCS jasnŭ (clear/bright) — attested
+178  | deep          | głębokŭ                 | OCS/Pol. głęboki stylized (deep)
+180  | possible      | možĭnŭ                  | OCS možĭnŭ (possible) — attested
+182  | dry           | suхŭ                    | OCS suхŭ (dry) — attested
+184  | wild          | divĭjĭ                  | OCS divĭjĭ (wild/savage) — attested
+185  | natural       | prirodĭnŭ               | OCS prirodĭnŭ (natural) stylized
+186  | safe          | bezopasĭnŭ              | OCS bezŭ + opasĭnŭ (without danger) stylized
+187  | busy          | zanětrŭ                 | OCS constructed (busy/occupied)
+189  | common        | obĭštĭ                  | OCS obĭštĭ (common — same as general)
+192  | distant       | dalĭnŭ                  | OCS dalĭnŭ (distant/far) — attested
+193  | heavy         | тęžĭkŭ                  | OCS tęžĭkŭ (heavy) — attested
+195  | present       | nынě                    | OCS nyně (now/present) — attested
+197  | wide          | širokŭ                  | OCS širokŭ (wide/broad) — attested
+200  | broken        | lomĭjĭ                  | OCS lomĭjĭ (broken — fr. lomiti) stylized
+202  | hot           | горęštĭ                 | OCS goręštĭ (hot/burning) — attested
+204  | tall          | vysokŭ                  | OCS vysokŭ (tall — same as high)
+205  | soft          | měgŭkŭ                  | OCS měgŭkŭ (soft) — attested
+207  | direct        | prямŭ                   | OCS prямŭ (direct/straight) — attested
+208  | sudden        | vnezapĭnŭ               | OCS vnezapĭnŭ (sudden) — attested
+213  | exact         | točĭnŭ                  | OCS/Pol. toczny stylized (exact/precise)
+216  | happy         | blagŭ                   | OCS blagŭ (good/happy/blessed) attested
+217  | probable      | věrojatĭnŭ              | OCS věra + jatĭ (believable/probable) stylized
+218  | last          | poslidĭnŭ               | OCS poslidĭnŭ (last/final) — attested
+219  | lone          | edinŭ                   | OCS edinŭ (one/alone) — attested
+220  | written       | pisanŭ                  | OCS pisanŭ (written) — attested
+221  | silent        | молĭčalivŭ              | OCS molĭčalivŭ (silent/quiet) — attested
+222  | strange       | čjudĭnŭ                 | OCS čjudĭnŭ (strange/wondrous) stylized
+
+--- NUMBERS ---
+83   | two           | dŭva                    | OCS dŭva (two) — attested
+197  | five          | pętĭ                    | OCS pętĭ (five) — attested
+210  | six           | šestĭ                   | OCS šestĭ (six) — attested
+215  | ten           | desętĭ                  | OCS desętĭ (ten) — attested
+439  | eight         | osmĭ                    | OCS osmĭ (eight) — attested
+449  | seven         | sedmĭ                   | OCS sedmĭ (seven) — attested
+450  | three         | trĭje                   | OCS trĭje (three) — attested
+
+--- TIME WORDS ---
+54   | time          | vrěmę                   | OCS vrěmę (time) — attested
+96   | day           | dĭnĭ                    | OCS dĭnĭ (day — same as above)
+188  | year          | lěto                    | OCS lěto (year/summer — same as summer)
+193  | hour          | godŭ                    | OCS godŭ (hour/time — same as hour)
+196  | week          | sedmica                 | OCS sedmica (week/seven-days) — attested
+213  | minute        | malŭ godŭ               | OCS (small time — same as minute)
+214  | morning       | jutro                   | OCS jutro (morning — same as above)
+426  | month         | měsęcĭ                  | OCS měsęcĭ (month — same as moon)
+
+===================================================================================
+PHONETIC GUIDE FOR NORDAL RUSSIAN
+===================================================================================
+
+Old Church Slavonic sounds:
+  ŭ   = ultra-short back vowel (reduced, often silent in modern descendants)
+  ĭ   = ultra-short front vowel (reduced)
+  ę   = nasal front vowel (as in French "vin" — Polish preserved this as ę)
+  ą   = nasal back vowel (as in French "on" — Polish preserves as ą)
+  ě   = front vowel between e and ie (yat — disappeared in most modern Slavic)
+  š   = voiceless palatal fricative (sh)
+  ž   = voiced palatal fricative (zh)
+  č   = palatal affricate (ch)
+  št  = Bulgarian/OCS cluster (šč in Russian)
+  žd  = Bulgarian/OCS cluster (zd in Russian)
+
+Polish consonant stacks preserved in Nordal:
+  sz  = š (heavy sh)
+  cz  = č (heavy ch)
+  rz  = ž (heavy zh, once a trill)
+  szcz = šč (the infamous Polish cluster)
+  dź  = soft dz
+  ń   = soft n
+
+Lithuanian softness:
+  -as / -is endings on nouns (Gediminas, Vytautas, Kernavė)
+  flow of liquid consonants -l-, -r- within words
+
+Hungarian vowel harmony flavoring:
+  -vár suffix = fortress/castle (Visegrád, Esztergom)
+  -ság suffix = abstract noun quality
+  Front vowels group: e, é, i, ö, ő, ü, ű
+  Back vowels group: a, á, o, ó, u, ú
+
+Word-building patterns:
+  OCS prě-  = over/trans- (prěchodŭ, prěstorŭ)
+  OCS sŭ-   = together/with- (sŭtvoriti, sŭrdĭce)
+  OCS vŭ-   = in/into- (vŭstokŭ, vzęti)
+  OCS po-   = after/along- (poslidĭnŭ, pokoi)
+  OCS na-   = on/upon/at- (načęti, namŭ)
+  OCS ot-   = from/away- (otiti, opisati)
+  -ĭstvo    = abstract noun (хudožĭstvo, dělanĭje)
+  -ĭnŭ      = adjectival suffix (věrĭnŭ, krasnŭ)
+
+===================================================================================
+
+
+241  | power          | властĭ                   |
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | kŭ                       |
+8     | that           | to                       |
+10    | it             | to                       |
+11    | for            | za                       |
+19    | at             | prĭ                      |
+20    | this           | sije                     |
+22    | his            | jego                     |
+27    | say            | rešti                    |
+28    | her            | jeje                     |
+29    | she            | ona                      |
+31    | an             | jedŭ                     |
+34    | one            | jedŭ                     |
+35    | all            | vĭsĭ                     |
+37    | there          | tamŭ                     |
+39    | what           | czto                     |
+46    | get            | vzęti                    |
+48    | go             | iti                      |
+49    | me             | mene                     |
+50    | when           | kogda                    |
+55    | no             | ne                       |
+58    | know           | věděti                   |
+61    | into           | vŭ                       |
+62    | year           | lěto                     |
+64    | good           | dobro                    |
+75    | come           | prijiti                  |
+77    | over           | nadŭ                     |
+79    | also           | takože                   |
+80    | back           | nazadŭ                   |
+81    | after          | po                       |
+82    | use            | upotrebiti               |
+87    | first          | prŭvŭ                    |
+88    | well           | dobro                    |
+94    | any            | někŭto                   |
+102   | need           | nŭždati                  |
+104   | often          | čęsto                    |
+106   | high           | vysokŭ                   |
+108   | hold           | dŭržati                  |
+110   | never          | nikolĭže                 |
+112   | north          | sěverŭ                   |
+114   | seem           | mniti sę                 |
+116   | next           | slědujuštĭ               |
+119   | begin          | načęti                   |
+129   | both           | oba                      |
+134   | mile           | poprište                 |
+142   | girl           | dějvica                  |
+147   | ever           | kogda-libo               |
+152   | talk           | glagolati                |
+158   | direct         | prямŭ                    |
+160   | leave          | otiti                    |
+162   | measure        | měriti                   |
+169   | wind           | větrŭ                    |
+194   | true           | istinĭnŭ                 |
+198   | remember       | pomniti                  |
+211   | table          | stol                     |
+223   | pattern        | uzorŭ                    |
+225   | center         | srěda                    |
+227   | person         | člověkŭ                  |
+230   | appear         | javiti sę                |
+231   | road           | putĭ                     |
+232   | map            | karta                    |
+234   | rule           | rěšiti                   |
+236   | pull           | vlěšti                   |
+238   | notice         | paziti                   |
+244   | drive          | gnati                    |
+245   | lead           | vesti                    |
+246   | cry            | plakati                  |
+249   | note           | zamětka                  |
+256   | field          | polje                    |
+257   | rest           | pokoi                    |
+258   | correct        | pravĭdĭnŭ                |
+259   | able           | sposobĭnŭ                |
+260   | pound          | funtŭ                    |
+262   | beauty         | krasota                  |
+264   | stood          | stojatĭ                  |
+267   | teach          | učiti                    |
+269   | final          | poslidĭnŭ                |
+270   | gave           | dalŭ                     |
+271   | green          | zelĭnŭ                   |
+272   | oh             | o                        |
+275   | ocean          | more                     |
+278   | minute         | malŭ godŭ                |
+279   | strong         | krěpŭkŭ                  |
+280   | special        | osobĭnŭ                  |
+282   | clear          | jasnŭ                    |
+283   | tail           | хvostŭ                   |
+284   | produce        | prinositi                |
+286   | street         | ulica                    |
+288   | lot            | mnogo                    |
+289   | nothing        | ničĭtože                 |
+291   | stay           | ostati                   |
+293   | full           | plŭnŭ                    |
+295   | blue           | sinĭ                     |
+296   | object         | prědmětŭ                 |
+298   | surface        | povŭrхĭ                  |
+300   | moon           | měsęcĭ                   |
+302   | foot           | noga                     |
+304   | busy           | zanětrŭ                  |
+307   | boat           | ladĭja                   |
+309   | gold           | zlatŭ                    |
+310   | possible       | možĭnŭ                   |
+311   | plane          | letavicĭ                 |
+314   | wonder         | diviti sę                |
+317   | ago            | prěžde                   |
+321   | shape          | oblikŭ                   |
+324   | miss           | propustiti               |
+325   | brought        | priněsŭ                  |
+326   | heat           | žar                      |
+329   | bring          | prinesti                 |
+330   | yes            | ei                       |
+331   | distant        | dalĭnŭ                   |
+333   | east           | vŭstokŭ                  |
+337   | grand          | velichĭ                  |
+342   | heart          | sŭrdĭce                  |
+343   | am             | jesmĭ                    |
+344   | present        | nyně                     |
+346   | dance          | plęsati                  |
+349   | arm            | rąka                     |
+350   | wide           | širokŭ                   |
+351   | sail           | plыti                    |
+354   | vary           | menjati                  |
+355   | settle         | osaditi                  |
+357   | weight         | těžestĭ                  |
+359   | ice            | ledŭ                     |
+362   | pair           | para                     |
+364   | divide         | razděltĭ                 |
+365   | syllable       | slogŭ                    |
+369   | sudden         | vnezapĭnŭ                |
+370   | count          | čistiti                  |
+372   | reason         | pričina                  |
+373   | length         | dlĭgota                  |
+377   | region         | krajŭ                    |
+378   | energy         | силa                     |
+380   | probable       | věrojatĭnŭ               |
+381   | bed            | lože                     |
+383   | egg            | jajĭco                   |
+385   | cell           | kletka                   |
+389   | sit            | sěděti                   |
+390   | race           | rodŭ                     |
+396   | prove          | dokázati                 |
+397   | lone           | edinŭ                    |
+398   | leg            | noga                     |
+404   | sky            | nebo                     |
+406   | joy            | radostĭ                  |
+410   | wild           | divĭjĭ                   |
+411   | instrument     | orudije                  |
+420   | past           | minulŭ                   |
+421   | soft           | měgŭkŭ                   |
+434   | strange        | čjudĭnŭ                  |
+440   | meet           | sŭrěsti                  |
+444   | solve          | razrěšiti                |
+446   | whether        | li                       |
+447   | push           | tlačiti                  |
+448   | seven          | sedmĭ                    |
+458   | result         | plodŭ                    |
+459   | burn           | gorěti                   |
+465   | type           | vidŭ                     |
+468   | coast          | brěgŭ                    |
+471   | silent         | молĭčalivŭ               |
+472   | tall           | vysokŭ                   |
+477   | finger         | prŭstŭ                   |
+478   | industry       | dělanĭje                 |
+483   | excite         | vzbuditi                 |
+484   | natural        | prirodĭnŭ                |
+485   | view           | vidŭ                     |
+486   | sense          | čjustvo                  |
+489   | quite          | věsĭma                   |
+491   | case           | slučai                   |
+498   | loud           | glasĭnŭ                  |
+499   | spring         | věsna                    |
+
+END OF FILE — NordalRussian_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

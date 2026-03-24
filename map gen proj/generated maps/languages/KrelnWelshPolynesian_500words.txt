@@ -1,0 +1,601 @@
+KRELN WELSH-POLYNESIAN - 500 Common Word Translations
+Fantasy Language based on KrelnWelsh-Polynesian name patterns
+Linguistic roots: Old Welsh / Middle Welsh (9th-14th c.) primary
+with Samoan (primary Polynesian) and Māori (secondary) flavoring
+Stylization: Fantasy-leaning, consistent feel prioritized.
+
+KEY SOURCE WORDS (Old/Middle Welsh):
+  y/yr (the), a/ac (and), nid/ni (not), yn (in/at), o (from/of),
+  â/gyda (with), ond (but), os (if), am (about/for), ar (on/upon),
+  bod (to be), cael (to have/get), gwneud (to do/make), dweud (to say),
+  gweld (to see), mynd (to go), dod (to come), gwybod (to know),
+  dyn (man), gwraig (woman), mab (son/boy), merch (girl), pobl (people),
+  brenin (king), daear (earth), tân (fire), dŵr (water), awyr (sky),
+  dydd (day), mawr (great/big), da (good), gwir (true), llawn (full),
+  Old Welsh: map (son), hen (old), du (black), gwyn (white), coch (red),
+  llong (ship), caer (fort), môr (sea), nef (heaven), llys (court)
+
+KEY SOURCE WORDS (Samoan):
+  le (the), se (a), ma (and), ae (but), i (at/in/to), mai (from),
+  o (of/from), fa'a- (like/manner of), tele (big/many), lelei (good),
+  maua (have/get), fai (do/say), va'ai (see), alu (go), sau (come),
+  iloa (know), alofa (love), tagata (person), ali'i (chief/king),
+  vai (water), afi (fire), eleele (earth), lagi (sky), ao (cloud/day)
+
+KEY SOURCE WORDS (Māori):
+  te (the), he (a), me (and/with), engari (but), i (at/past marker),
+  nō (from/of), kia (to/for), mō (for/about), whakamāui (to turn),
+  tangata (person), rangi (sky), whenua (land), awa (river), maunga (mountain),
+  wai (water), ahi (fire), ao (cloud/world), rā (sun), marama (moon),
+  nui (big), pai (good), tika (correct/straight), māku (wet), māero (wild)
+
+PHONETIC BRIDGE STRATEGY:
+  Welsh: ll (voiceless lateral), dd (voiced dental), rh (voiceless r),
+         ch (velar fricative), f/ff distinction, mutation system
+  Samoan: open CV syllables, glottal stop ('), long vowels, fa'a- prefix
+  Māori: wh (f-sound), ng (velar nasal), macron vowels (ā/ē/ī/ō/ū)
+  Bridge: Welsh consonant stems + Polynesian vowel-final endings
+  Both share: open a/e/i/o vowels, nasal n/m, liquid l/r
+  Fantasy suffix system: -ael (noun, fr. Welsh -ael), -anu (verb, fr. Samoan -anu),
+  -lwi (adjective, fr. Welsh -lwi), -ora (place/abstract, fr. Polynesian -ora),
+  -ddu (dark/intense marker, fr. Welsh du), -mai (motion/from, fr. Samoan mai)
+
+===================================================================================
+RANK | ENGLISH       | KRELN                   | ROOT / NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | yr                      | Welsh yr (the) — attested
+2    | a / an        | seael                   | Samoan se (a) + Welsh -ael
+3    | to            | rhianu                  | Welsh rhi (lord/to) + -anu
+6    | it            | hynnael                 | Welsh hynny (it/that) + -ael
+8    | that          | acwael                  | Welsh acw (that/over there) + -ael
+10   | it            | hynnael                 | same
+11   | for           | amora                   | Welsh am (for/about) + -ora
+14   | this          | hwnnael                 | Welsh hwn (this) + -ael
+20   | this          | hwnnael                 | same
+22   | his           | eidolwi                 | Welsh eiddo (his/possession) + -lwi
+28   | her           | eidolwi                 | Welsh eiddo (her — same)
+29   | she           | hianu                   | Welsh hi (she) + -anu
+31   | an            | seael                   | same as a
+34   | one           | unael                   | Welsh un (one) + -ael
+35   | all           | poplwi                  | Welsh pob (all/every) + -lwi
+37   | there         | acwora                  | Welsh acw (there) + -ora
+38   | their         | eiddolwi                | Welsh eiddo (their) + -lwi
+39   | what          | bethael                 | Welsh beth (what) + -ael
+45   | who           | pwyal                   | Welsh pwy (who) + -al
+49   | me            | mifael                  | Welsh mi (me/I) + -ael
+50   | when          | prydael                 | Welsh pryd (when/time) + -ael
+55   | no            | nidael                  | Welsh nid (no/not) + -ael
+63   | your          | ddyolwi                 | Welsh dy (your) + dd- mut. + -lwi
+64   | good          | daolwi                  | Welsh da (good) + -olwi
+65   | some          | rhaiol                  | Welsh rhai (some) + -ol
+69   | other         | arallael                | Welsh arall (other) + -ael
+83   | two           | dwael                   | Welsh dwy/dau (two) + -ael
+85   | our           | einora                  | Welsh ein (our) + -ora
+95   | these         | rhainael                | Welsh rhain (these) + -ael
+99   | us            | ninael                  | Welsh ni (us) + -nael
+120  | got           | caelodd                 | Welsh caelod (got/received) stylized
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | bodanu                  | Welsh bod (to be) + -anu
+70   | there         | acwora                  | same as there
+72   | seem          | ymddangosddu            | Welsh ymddangos (to seem) + -ddu
+78   | think         | meddylianu              | Welsh meddwl (to think) + -anu
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | olwi                    | Welsh o (of/from) + -lwi
+5    | and           | acael                   | Welsh ac/a (and) + -ael
+12   | not           | nidael                  | Welsh nid (not) + -ael
+13   | on            | arael                   | Welsh ar (on/upon) + -ael
+14   | with          | gydalwi                 | Welsh gyda (with) + -lwi
+19   | at            | ynael                   | Welsh yn (at/in) + -ael
+21   | but           | ondael                  | Welsh ond (but) + -ael
+23   | by            | ganael                  | Welsh gan (by/with) + -ael
+24   | from          | maiora                  | Samoan mai (from) + Welsh -ora
+30   | or            | neuael                  | Welsh neu (or) + -ael
+32   | will          | fyddanu                 | Welsh bydd (will be) + -anu
+33   | my            | fyolwi                  | Welsh fy (my) + -olwi
+36   | would         | baiddanu                | Welsh byddai (would be) + -anu
+40   | so            | fellyael                | Welsh felly (so/thus) + -ael
+41   | up            | ianolwi                 | Welsh i fyny (up) stylized + -lwi
+42   | out           | allanael                | Welsh allan (out/outside) + -ael
+43   | if            | osael                   | Welsh os (if) + -ael
+44   | about         | amdanael                | Welsh am (about) + -dael
+60   | because       | oherwylddu              | Welsh oherwydd (because) + -ddu
+61   | into          | mewnael                 | Welsh mewn (into/in) + -ael
+71   | only          | dimonddu                | Welsh dim ond (only/nothing but) + -ddu
+76   | its           | eidolwi                 | same as his/her
+77   | over          | drosolwi                | Welsh dros (over/across) + -lwi
+79   | also          | hefydael                | Welsh hefyd (also/too) + -ael
+80   | back          | nôlael                  | Welsh nôl (back/fetch) + -ael
+81   | after         | wedynael                | Welsh wedyn (after/then) + -ael
+82   | use           | defnyddanu              | Welsh defnyddio (to use) + -anu
+87   | first         | cyntafael               | Welsh cyntaf (first) + -ael
+88   | well          | dawelwi                 | Welsh da (well/good) + -elwi
+90   | even          | hynddulwi               | Welsh hyd yn oed (even) stylized
+94   | any           | unrhywael               | Welsh unrhyw (any) + -ael
+102  | need          | angenael                | Welsh angen (need) + -ael
+104  | often         | ynailwi                 | Welsh yn aml (often) + -lwi
+106  | high          | uchelael                | Welsh uchel (high) + -ael
+110  | never         | bythddael               | Welsh byth (never/ever) + dd + -ael
+112  | north         | gogleddael              | Welsh gogledd (north) + -ael
+114  | seem          | ymddangosddu            | same as seem
+116  | next          | nesafael                | Welsh nesaf (next/nearest) + -ael
+119  | begin         | dechraunu               | Welsh dechrau (to begin) + -nu
+129  | both          | ddaulwi                 | Welsh dau (both/two) + dd-mut + -lwi
+133  | until         | tanael                  | Welsh tan (until/under) + -ael
+147  | ever          | bythael                 | Welsh byth (ever/never) + -ael
+150  | though        | erddulwi                | Welsh er (though/for) + dd + -lwi
+154  | soon          | toclwi                  | Welsh toc (soon) + -lwi
+158  | direct        | unionolwi               | Welsh union (direct/straight) + -lwi
+160  | leave         | gaduanu                 | Welsh gadael (to leave) + -anu
+169  | wind          | gwyntael                | Welsh gwynt (wind) + -ael
+172  | since         | erslwi                  | Welsh ers (since) + -lwi
+183  | against       | erbynael                | Welsh erbyn (against/by) + -ael
+192  | during        | ystodael                | Welsh ystod (during/course) + -ael
+194  | true          | gwirael                 | Welsh gwir (true) + -ael
+219  | toward        | tugiatael               | Welsh tuag at (toward) + -ael
+225  | center        | canoloddael             | Welsh canol (center) + -odd + -ael
+251  | still         | ohydael                 | Welsh o hyd (still/always) + -ael
+261  | above         | uchoddlwi               | Welsh uchod (above) + dd + -lwi
+287  | behind        | tuólael                 | Welsh tu ôl (behind) + -ael
+330  | yes           | ielwi                   | Welsh ie (yes) + -lwi
+332  | fill          | llenwanu                | Welsh llenwi (to fill) + -anu
+338  | yet           | etolwi                  | Welsh eto (yet/still) + -lwi
+339  | among         | ymlithael               | Welsh ymhlith (among) + -ael
+340  | perhaps       | efallaelu               | Welsh efallai (perhaps) + -lu
+343  | am            | wyflwi                  | Welsh wyf (I am) + -lwi
+446  | whether       | aosael                  | Welsh a oes (whether) + -ael
+451  | shall         | rhaidanu                | Welsh rhaid (shall/must) + -anu
+457  | either        | naill ai                | Welsh naill ai (either) — attested
+488  | else          | arallael                | Welsh arall (else/other) + -ael
+489  | quite         | eithafael               | Welsh eithaf (quite/extreme) + -ael
+490  | quite         | eithafael               | same
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | gwneuthanu              | Welsh gwneud (to do) + -anu
+9    | have          | caelanu                 | Welsh cael (to have/get) + -anu
+15   | he            | efael                   | Welsh ef (he) + -ael
+16   | as            | felorael                | Welsh fel (as/like) + -orael
+17   | you           | tithael                 | Welsh tithau (you/thou) + -ael
+18   | do            | gwneuthanu              | same
+25   | they          | hwyntael                | Welsh hwynt (they) + -ael
+26   | we            | ninael                  | Welsh ni (we) + -nael
+27   | say           | dweudanu                | Welsh dweud (to say) + -anu
+46   | get           | caelanu                 | Welsh cael (to get) + -anu
+47   | which         | paolwi                  | Welsh pa (which) + -olwi
+48   | go            | mundanu                 | Welsh mynd (to go) + -anu
+51   | make          | gweuthfanu              | Welsh gwneud (to make) stylized
+52   | can           | gallanu                 | Welsh gallu (can/ability) + -anu
+53   | like          | hoffianu                | Welsh hoffi (to like) + -anu
+54   | time          | amserael                | Welsh amser (time) + -ael
+56   | just          | dimondael               | Welsh dim ond (just/only) + -ael
+57   | him           | efael                   | Welsh ef (him) + -ael
+58   | know          | gwybodanu               | Welsh gwybod (to know) + -anu
+59   | take          | cymrydanu               | Welsh cymryd (to take) + -anu
+62   | year          | blwyddael               | Welsh blwyddyn (year) + -ael
+66   | could         | gallaidddu              | Welsh gallai (could) + dd + -u
+67   | them          | hwyntlwi                | Welsh hwynt (them) + -lwi
+68   | see           | gweldanu                | Welsh gweld (to see) + -anu
+73   | look          | edrychanu               | Welsh edrych (to look) + -anu
+74   | only          | dimondael               | same as just/only
+75   | come          | dyfodanu                | Welsh dod (to come) + -anu
+84   | use           | deffanu                 | Welsh defnyddio (to use) stylized
+86   | work          | gwaithddu               | Welsh gwaith (work) + -ddu
+89   | way           | ffyrddael               | Welsh ffordd (way/road) + -ael
+91   | new           | newyddael               | Welsh newydd (new) + -ael
+92   | want          | eisiaunu                | Welsh eisiau (to want) + -nu
+93   | because       | oherwylddu              | same as because
+96   | give          | rhoddianu               | Welsh rhoi/rhoddi (to give) + -anu
+97   | day           | dyddael                 | Welsh dydd (day) + -ael
+98   | most          | fwyafael                | Welsh mwyaf (most) + f-mut + -ael
+100  | great         | mawrael                 | Welsh mawr (great) + -ael
+101  | between       | rhwngael                | Welsh rhwng (between) + -ael
+103  | large         | mawrolwi                | Welsh mawr (large) + -olwi
+105  | hand          | llaword                 | Welsh llaw (hand) + -ord
+107  | place         | lleoedd                 | Welsh lle (place) — attested form
+108  | hold          | dallanu                 | Welsh dal (to hold) + -anu
+109  | turn          | troianu                 | Welsh troi (to turn) + -anu
+111  | few           | ychydigael              | Welsh ychydig (few/little) + -ael
+113  | open          | agoranu                 | Welsh agor (to open) + -anu
+115  | together      | gydalwi                 | Welsh gyda'i gilydd (together) stylized
+117  | white         | gwynael                 | Welsh gwyn (white) + -ael
+118  | children      | plantael                | Welsh plant (children) + -ael
+121  | walk          | cerddianu               | Welsh cerdded (to walk) + -anu
+122  | example       | esiamplael              | Welsh esiampl (example) + -ael
+123  | ease          | rhyddhael               | Welsh rhyddid (ease/freedom) + -ael
+124  | paper         | paprael                 | Welsh papur (paper) + -ael
+125  | group         | grwpael                 | Welsh grŵp (group) + -ael
+126  | always        | bob amserael            | Welsh bob amser (always) + -ael
+127  | music         | cerddorael              | Welsh cerddoriaeth (music) stylized
+128  | those         | rheinyael               | Welsh rheiny (those) + -ael
+130  | mark          | nodael                  | Welsh nod (mark/aim) + -ael
+131  | book          | llyfrddu                | Welsh llyfr (book) + -ddu
+132  | letter        | llythrael               | Welsh llythyr (letter) + -ael
+134  | mile          | milltirael              | Welsh milltir (mile) + -ael
+135  | river         | afonael                 | Welsh afon (river) + -ael
+136  | car           | ceirddu                 | Welsh cerbyd (vehicle) stylized + -ddu
+137  | feet          | traedael                | Welsh traed (feet) + -ael
+138  | care          | gofalianu               | Welsh gofal (care) + -anu
+139  | second        | eilael                  | Welsh eiliad (second) + -ael
+140  | enough        | digonael                | Welsh digon (enough) + -ael
+141  | plain         | gwastatael              | Welsh gwastad (plain/flat) + -ael
+142  | girl          | merchlwi                | Welsh merch (girl) + -lwi
+143  | usual         | arferolddu              | Welsh arferol (usual) + -ddu
+144  | young         | ifancael                | Welsh ifanc (young) + -ael
+145  | ready         | parodddu                | Welsh parod (ready) + -ddu
+146  | above         | uchoddlwi               | same as above
+148  | red           | cochddu                 | Welsh coch (red) + -ddu
+149  | list          | rhestrael               | Welsh rhestr (list) + -ael
+151  | feel          | teimlaunu               | Welsh teimlo (to feel) + -anu
+152  | talk          | siaradanu               | Welsh siarad (to talk) + -anu
+153  | bird          | adarael                 | Welsh aderyn/adar (bird) + -ael
+155  | body          | corffael                | Welsh corff (body) + -ael
+156  | dog           | ciael                   | Welsh ci (dog) + -ael
+157  | family        | teuluael                | Welsh teulu (family) + -ael
+159  | pose          | ystumael                | Welsh ystum (pose/gesture) + -ael
+161  | song          | cânora                  | Welsh cân (song) + -ora
+162  | measure       | mesurael                | Welsh mesur (measure) + -ael
+163  | door          | drwsael                 | Welsh drws (door) + -ael
+164  | product       | cynnyrchael             | Welsh cynnyrch (product) + -ael
+165  | black         | duddael                 | Welsh du (black) + dd + -ael
+166  | short         | byrael                  | Welsh byr (short) + -ael
+167  | numeral       | rhifael                 | Welsh rhif (number) + -ael
+168  | class         | dosbarthael             | Welsh dosbarth (class) + -ael
+170  | question      | cwestiwnael             | Welsh cwestiwn (question) + -ael
+171  | happen        | digwyddanu              | Welsh digwydd (to happen) + -anu
+173  | ship          | llongael                | Welsh llong (ship) + -ael
+174  | area          | ardalodd                | Welsh ardal (area) + -odd
+175  | half          | hanner ael              | Welsh hanner (half) + -ael
+176  | rock          | creigael                | Welsh craig (rock) + -ael
+177  | order         | trefnael                | Welsh trefn (order) + -ael
+178  | fire          | ahiora                  | Māori ahi (fire) + -ora
+179  | south         | dehauael                | Welsh dehau (south) + -ael
+180  | problem       | problemael              | Welsh problem + -ael
+181  | piece         | darnael                 | Welsh darn (piece) + -ael
+182  | told          | dyweddwyd               | Welsh dywedwyd (was told) stylized
+184  | pass          | mynegianu               | Welsh mynd heibio (to pass) stylized
+185  | since         | erslwi                  | same as since
+186  | top           | copael                  | Welsh cop/copa (top) + -ael
+187  | whole         | cyfanael                | Welsh cyfan (whole) + -ael
+188  | king          | breninael               | Welsh brenin (king) + -ael
+189  | space         | gofodael                | Welsh gofod (space) + -ael
+190  | heard         | glywwyd                 | Welsh clywwyd (was heard) stylized
+191  | best          | gorauael                | Welsh gorau (best) + -ael
+192  | hour          | awrael                  | Welsh awr (hour) + -ael
+193  | better        | gwellael                | Welsh gwell (better) + -ael
+195  | during        | ystodael                | same as during
+196  | hundred       | canael                  | Welsh can (hundred) + -ael
+197  | five          | limaora                 | Samoan lima (five) + -ora
+198  | remember      | cofanu                  | Welsh cofio (to remember) + -anu
+199  | step          | camael                  | Welsh cam (step) + -ael
+200  | early         | boreolwi                | Welsh bore (early/morning) + -olwi
+201  | hold          | dallanu                 | same as hold
+202  | west          | gorllewddael            | Welsh gorllewin (west) + -ael
+203  | ground        | ddaerorael              | Welsh daear (ground) + dd-mut + -ael
+204  | interest      | diddordebael            | Welsh diddordeb (interest) + -ael
+205  | reach         | cyrraeddanu             | Welsh cyrraedd (to reach) + -anu
+206  | fast          | cyflymael               | Welsh cyflym (fast) + -ael
+207  | verb          | berfael                 | Welsh berf (verb) + -ael
+208  | sing          | canuanu                 | Welsh canu (to sing) + -anu
+209  | listen        | gwrandawanu             | Welsh gwrando (to listen) + -anu
+210  | six           | onoora                  | Samoan ono (six) + -ora
+211  | table         | bwrddael                | Welsh bwrdd (table) + -ael
+212  | travel        | teithianu               | Welsh teithio (to travel) + -anu
+213  | less          | llaiorael               | Welsh llai (less) + -orael
+214  | morning       | boreael                 | Welsh bore (morning) + -ael
+215  | ten           | tekauora                | Māori tekau (ten) + -ora
+216  | simple        | symlael                 | Welsh syml (simple) + -ael
+217  | several       | sawlael                 | Welsh sawl (several) + -ael
+218  | vowel         | llafariaid              | Welsh llafariaid (vowel) — attested
+220  | war           | rhyfelddu               | Welsh rhyfel (war) + -ddu
+221  | lay           | gorweddanu              | Welsh gorwedd (to lay) + -anu
+222  | against       | erbynael                | same as against
+223  | pattern       | patrymael               | Welsh patrwm (pattern) + -ael
+224  | slow          | arafael                 | Welsh araf (slow) + -ael
+226  | love          | caradwrael              | Welsh cariad (love) + -wrael
+227  | person        | personael               | Welsh person + -ael
+228  | money         | arianddu                | Welsh arian (money/silver) + -ddu
+229  | serve         | gwasanaethanu           | Welsh gwasanaethu (to serve) + -anu
+230  | appear        | ymddangosanu            | Welsh ymddangos (to appear) + -anu
+231  | road          | ffyrddael               | same as way
+232  | map           | mapael                  | Welsh map + -ael
+233  | rain          | glawianu                | Welsh glaw (rain) + -anu
+234  | rule          | rheolael                | Welsh rheol (rule) + -ael
+235  | govern        | llywodraethanu          | Welsh llywodraethu (to govern) + -anu
+236  | pull          | tynnuanu                | Welsh tynnu (to pull) + -anu
+237  | cold          | oerael                  | Welsh oer (cold) + -ael
+238  | notice        | sylwianu                | Welsh sylwi (to notice) + -anu
+239  | voice         | llaisael                | Welsh llais (voice) + -ael
+240  | fall          | cwympanu                | Welsh cwympo (to fall) + -anu
+241  | power         | pwerael                 | Welsh pŵer (power) + -ael
+242  | town          | trefddu                 | Welsh tref (town) + -ddu
+243  | fine          | ddalwi                  | Welsh da (fine) + dd-mut + -lwi
+244  | drive         | gyrruanu                | Welsh gyrru (to drive) + -anu
+245  | lead          | arwainanu               | Welsh arwain (to lead) + -anu
+246  | cry           | wyloanu                 | Welsh wylo (to cry) + -anu
+247  | dark          | tywyllddu               | Welsh tywyll (dark) + -ddu
+248  | machine       | peiriantael             | Welsh peiriant (machine) + -ael
+249  | note          | nodiadael               | Welsh nodiad (note) + -ael
+250  | wait          | arosanu                 | Welsh aros (to wait/stay) + -anu
+252  | figure        | ffigurael               | Welsh ffigur (figure) + -ael
+253  | star          | whētuora                | Māori whetū (star) + -ora
+254  | box           | blwchael                | Welsh blwch (box) + -ael
+255  | noun          | enwael                  | Welsh enw (noun/name) + -ael
+256  | field         | caelora                 | Welsh cae (field) + -lora
+257  | rest          | gorffwysanu             | Welsh gorffwys (to rest) + -anu
+258  | correct       | cywirael                | Welsh cywir (correct) + -ael
+259  | able          | ableddu                 | Welsh abl (able) + -eddu
+260  | pound         | pwysael                 | Welsh pwys (pound/weight) + -ael
+262  | beauty        | hardduchddu             | Welsh harddwch (beauty) + -ddu
+263  | drive         | gyrruanu                | same as drive
+264  | stood         | safodd                  | Welsh safodd (stood) — attested
+265  | contain       | cynnwysanu              | Welsh cynnwys (to contain) + -anu
+266  | front         | blaenddu                | Welsh blaen (front) + -ddu
+267  | teach         | dysganu                 | Welsh dysgu (to teach) + -anu
+268  | week          | wythnosael              | Welsh wythnos (week) + -ael
+269  | final         | olafael                 | Welsh olaf (final/last) + -ael
+270  | gave          | rhoddes                 | Welsh rhoddes (gave) — attested
+271  | green         | gwyrddael               | Welsh gwyrdd (green) + -ael
+272  | oh            | ohael                   | Welsh oh + -ael
+273  | quick         | cyflymddu               | Welsh cyflym (quick) + -ddu
+274  | develop       | datblygianu             | Welsh datblygu (to develop) + -anu
+275  | ocean         | môrora                  | Welsh môr (ocean/sea) + -ora
+276  | warm          | cynnesael               | Welsh cynnes (warm) + -ael
+277  | free          | rhyddhael               | Welsh rhyddid (free) + -ael
+278  | minute        | munudael                | Welsh munud (minute) + -ael
+279  | strong        | cryfddu                 | Welsh cryf (strong) + -ddu
+280  | special       | arbennigael             | Welsh arbennig (special) + -ael
+281  | behind        | tuólael                 | same as behind
+282  | clear         | clirael                 | Welsh clir (clear) + -ael
+283  | tail          | cynffonddu              | Welsh cynffon (tail) + -ddu
+284  | produce       | cynhyrchianu            | Welsh cynhyrchu (to produce) + -anu
+285  | fact          | ffaithael               | Welsh ffaith (fact) + -ael
+286  | street        | strydael                | Welsh stryd (street) + -ael
+288  | lot           | llawerddu               | Welsh llawer (lot/many) + -ddu
+289  | nothing       | dimael                  | Welsh dim (nothing/not) + -ael
+290  | course        | cwrsael                 | Welsh cwrs (course) + -ael
+291  | stay          | arosanu                 | same as wait
+292  | wheel         | olwynael                | Welsh olwyn (wheel) + -ael
+293  | full          | llawnael                | Welsh llawn (full) + -ael
+294  | force         | grymael                 | Welsh grym (force) + -ael
+295  | blue          | glasddu                 | Welsh glas (blue/green) + -ddu
+296  | object        | gwrthrychael            | Welsh gwrthrych (object) + -ael
+297  | decide        | penderfynanu            | Welsh penderfynu (to decide) + -anu
+298  | surface       | arwynebael              | Welsh arwyneb (surface) + -ael
+299  | deep          | dwfnael                 | Welsh dwfn (deep) + -ael
+300  | moon          | maramaora               | Samoan mā/Māori marama (moon) + -ora
+301  | island        | ynysddu                 | Welsh ynys (island) + -ddu
+302  | foot          | troedfaelael            | Welsh troedfedd (foot) + -ael
+303  | system        | cyfundrefnael           | Welsh cyfundrefn (system) + -ael
+304  | busy          | prysurddu               | Welsh prysur (busy) + -ddu
+305  | test          | prawfael                | Welsh prawf (test/proof) + -ael
+306  | record        | cofnodael               | Welsh cofnod (record) + -ael
+307  | boat          | cwchael                 | Welsh cwch (boat) + -ael
+308  | common        | cyffredinael            | Welsh cyffredin (common) + -ael
+309  | gold          | aurddu                  | Welsh aur (gold) + -ddu
+310  | possible      | posibleddael            | Welsh posib (possible) + -ael
+311  | plane         | plênael                 | Welsh plên (plane/flat) + -ael
+312  | stead         | lleoeddael              | Welsh lle (stead/place) + -ael
+313  | dry           | sychael                 | Welsh sych (dry) + -ael
+314  | wonder        | rhyfeddanu              | Welsh rhyfeddu (to wonder) + -anu
+315  | laugh         | chwerthinanu            | Welsh chwerthin (to laugh) + -anu
+316  | thousand      | afe ora                 | Samoan afe (thousand) + -ora
+317  | ago           | nôlael                  | Welsh yn ôl (ago/back) + -ael
+318  | ran           | rhedodd                 | Welsh rhedodd (ran) — attested
+319  | check         | gwirio anu              | Welsh gwirio (to check) + -anu
+320  | game          | gêmael                  | Welsh gêm (game) + -ael
+321  | shape         | siâpael                 | Welsh siâp (shape) + -ael
+322  | equate        | hafalddu                | Welsh hafal (equal) + -ddu
+323  | hot           | poethddu                | Welsh poeth (hot) + -ddu
+324  | miss          | colli anu               | Welsh colli (to miss/lose) + -anu
+325  | brought       | dygwyd                  | Welsh dygwyd (was brought) stylized
+326  | heat          | gwresddu                | Welsh gwres (heat) + -ddu
+327  | snow          | eiraael                 | Welsh eira (snow) + -ael
+328  | tire          | blino anu               | Welsh blino (to tire) + -anu
+329  | bring         | dodyanu                 | Welsh dod â (to bring) + -anu
+331  | distant       | pellddu                 | Welsh pell (distant) + -ddu
+333  | east          | dwyrainddu              | Welsh dwyrain (east) + -ddu
+334  | paint         | paintianu               | Welsh peintio (to paint) + -anu
+335  | language      | iaithddu                | Welsh iaith (language) + -ddu
+336  | among         | ymlithael               | same as among
+337  | grand         | gwychael                | Welsh gwych (grand/splendid) + -ael
+341  | drop          | diferael                | Welsh diferyn (drop) + -ael
+342  | heart         | calonddu                | Welsh calon (heart) + -ddu
+344  | present       | bresennolael            | Welsh presennol (present) + -ael
+345  | heavy         | trwmael                 | Welsh trwm (heavy) + -ael
+346  | dance         | dawnsanu                | Welsh dawnsio (to dance) + -anu
+347  | engine        | peiriantael             | same as machine
+348  | position      | safleael                | Welsh safle (position) + -ael
+349  | arm           | braichddu               | Welsh braich (arm) + -ddu
+350  | wide          | llydanael               | Welsh llydan (wide) + -ael
+351  | sail          | hwylanu                 | Welsh hwylio (to sail) + -anu
+352  | material      | defnyddael              | Welsh defnydd (material) + -ael
+353  | size          | meintiael               | Welsh maint (size) + -ael
+354  | vary          | amrywioanu              | Welsh amrywio (to vary) + -anu
+355  | settle        | setloanu                | Welsh setlo (to settle) + -anu
+356  | speak         | llefaruanu              | Welsh llefaru (to speak) + -anu
+357  | weight        | pwysaelael              | Welsh pwysau (weight) + -ael
+358  | general       | cyffredinael            | same as common
+359  | ice           | rhewddu                 | Welsh rhew (ice) + -ddu
+360  | matter        | matterael               | Welsh mater (matter) + -ael
+361  | circle        | cylchddu                | Welsh cylch (circle) + -ddu
+362  | pair          | pârael                  | Welsh pâr (pair) + -ael
+363  | include       | cynnwysanu              | Welsh cynnwys (to include) + -anu
+364  | divide        | rhannuanu               | Welsh rhannu (to divide) + -anu
+365  | syllable      | sillafael               | Welsh sillaf (syllable) + -ael
+366  | felt          | teimladwyd              | Welsh teimlwyd (was felt) stylized
+367  | perhaps       | efallaelwi              | Welsh efallai (perhaps) + -lwi
+368  | pick          | dewisanu                | Welsh dewis (to pick/choose) + -anu
+369  | sudden        | sydynael                | Welsh sydyn (sudden) + -ael
+370  | count         | cyfranu                 | Welsh cyfrif (to count) + -anu
+371  | square        | sgwârael                | Welsh sgwâr (square) + -ael
+372  | reason        | rheswmael               | Welsh rheswm (reason) + -ael
+373  | length        | hyddael                 | Welsh hyd (length) + -dael
+374  | represent     | cynrychioli anu         | Welsh cynrychioli (represent) + -anu
+375  | art           | celfyddydael            | Welsh celfyddyd (art) + -ael
+376  | subject       | pwncddu                 | Welsh pwnc (subject) + -ddu
+377  | region        | rhanbarthael            | Welsh rhanbarth (region) + -ael
+378  | energy        | ynniael                 | Welsh ynni (energy) + -ael
+379  | hunt          | helgianu                | Welsh helgi/hela (to hunt) + -anu
+380  | probable      | tebygolael              | Welsh tebygol (probable) + -ael
+381  | bed           | gwelyddu                | Welsh gwely (bed) + -ddu
+382  | brother       | brawd ddu               | Welsh brawd (brother) + -ddu
+383  | egg           | wyael                   | Welsh wy (egg) + -ael
+384  | ride          | marchoganu              | Welsh marchogaeth (to ride) + -anu
+385  | cell          | cellael                 | Welsh cell + -ael
+386  | believe       | creduanu                | Welsh credu (to believe) + -anu
+387  | fraction      | ffracsiwnddu            | Welsh ffracsiwn (fraction) + -ddu
+388  | forest        | coeddoel                | Welsh coed (forest/trees) + -oel
+389  | sit           | eisteddanu              | Welsh eistedd (to sit) + -anu
+390  | race          | rasael                  | Welsh râs (race) + -ael
+391  | window        | ffenestrddu             | Welsh ffenestr (window) + -ddu
+392  | store         | siopael                 | Welsh siop (store/shop) + -ael
+393  | summer        | hafddu                  | Welsh haf (summer) + -ddu
+394  | train         | trênael                 | Welsh trên (train) + -ael
+395  | sleep         | cysguanu                | Welsh cysgu (to sleep) + -anu
+396  | prove         | profianu                | Welsh profi (to prove) + -anu
+397  | lone          | unigddu                 | Welsh unig (lone/only) + -ddu
+398  | leg           | coesael                 | Welsh coes (leg) + -ael
+399  | exercise      | ymarferael              | Welsh ymarfer (exercise) + -ael
+400  | wall          | wallddu                 | Welsh wal (wall) + -ddu
+401  | catch         | dalianu                 | Welsh dal (to catch/hold) + -anu
+402  | mount         | dringianu               | Welsh dringo (to mount/climb) + -anu
+403  | wish          | dymunuanu               | Welsh dymuno (to wish) + -anu
+404  | sky           | wybrddu                 | Welsh wybr (sky) + -ddu
+405  | board         | bordael                 | Welsh bord (board) + -ael
+406  | joy           | llawendyddael           | Welsh llawenydd (joy) + -ael
+407  | winter        | gaeafddu                | Welsh gaeaf (winter) + -ddu
+408  | sat           | eisteddodd              | Welsh eisteddodd (sat) — attested
+409  | written       | ysgrifennwyd            | Welsh ysgrifennwyd (written) — attested
+410  | wild          | gwylltddu               | Welsh gwyllt (wild) + -ddu
+411  | instrument    | offerynael              | Welsh offeryn (instrument) + -ael
+412  | kept          | cadwwyd                 | Welsh cadwwyd (was kept) stylized
+413  | glass         | gwydrael                | Welsh gwydr (glass) + -ael
+414  | grass         | glaswelltael            | Welsh glaswellt (grass) + -ael
+415  | cow           | buchael                 | Welsh buwch (cow) + -ael
+416  | job           | swyddddu                | Welsh swydd (job) + -ddu
+417  | edge          | ymylddu                 | Welsh ymyl (edge) + -ddu
+418  | sign          | arwyddddu               | Welsh arwydd (sign) + -ddu
+419  | visit         | ymwelanu                | Welsh ymweld (to visit) + -anu
+420  | past          | gorffennolael           | Welsh gorffennol (past) + -ael
+421  | soft          | meddaelwi               | Welsh meddal (soft) + -lwi
+422  | fun           | hwylddu                 | Welsh hwyl (fun/spirit) + -ddu
+423  | bright        | disglairddu             | Welsh disglair (bright) + -ddu
+424  | gas           | nwydael                 | Welsh nwy (gas) + -dael
+425  | weather       | tywyddael               | Welsh tywydd (weather) + -ael
+426  | month         | misael                  | Welsh mis (month) + -ael
+427  | million       | miliyonael              | Welsh miliwn (million) + -ael
+428  | bear          | arththael               | Welsh arth (bear) + -ael
+429  | finish        | gorffenannu             | Welsh gorffen (to finish) + -anu
+430  | happy         | hapusael                | Welsh hapus (happy) + -ael
+431  | hope          | gobaithddu              | Welsh gobaith (hope) + -ddu
+432  | flower        | blodynael               | Welsh blodyn (flower) + -ael
+433  | clothe        | gwisganu                | Welsh gwisgo (to clothe) + -anu
+434  | strange       | ryfeddddu               | Welsh rhyfedd (strange) + -ddu
+435  | gone          | wediael                 | Welsh wedi mynd (gone) stylized
+436  | jump          | neidioanu               | Welsh neidio (to jump) + -anu
+437  | baby          | babanol                 | Welsh baban (baby) + -ol
+438  | eight         | waluora                 | Samoan valu (eight) + -ora
+439  | village       | pentrefael              | Welsh pentref (village) + -ael
+440  | meet          | cyfarfodanu             | Welsh cyfarfod (to meet) + -anu
+441  | root          | gwreiddael              | Welsh gwreiddyn (root) + -ael
+442  | buy           | prynu anu               | Welsh prynu (to buy) + -anu
+443  | raise         | codianu                 | Welsh codi (to raise) + -anu
+444  | solve         | datrysanu               | Welsh datrys (to solve) + -anu
+445  | metal         | metalael                | Welsh metel (metal) + -ael
+447  | push          | gwthianu                | Welsh gwthio (to push) + -anu
+448  | seven         | fituora                 | Samoan fitu (seven) + -ora
+449  | paragraph     | paragraaffael           | Welsh paragraff (paragraph) + -ael
+450  | third         | tryddydael              | Welsh trydydd (third) + -ael
+452  | held          | daliwydfael             | Welsh daliwyd (was held) + -ael
+453  | hair          | gwalltddu               | Welsh gwallt (hair) + -ddu
+454  | describe      | disgrifioanu            | Welsh disgrifio (to describe) + -anu
+455  | cook          | coginianu               | Welsh coginio (to cook) + -anu
+456  | floor         | llaworddu               | Welsh llawr (floor) + -ddu
+458  | result        | canlyniadael            | Welsh canlyniad (result) + -ael
+459  | burn          | llosgianu               | Welsh llosgi (to burn) + -anu
+460  | hill          | brynddu                 | Welsh bryn (hill) + -ddu
+461  | safe          | diogelddu               | Welsh diogel (safe) + -ddu
+462  | cat           | cathael                 | Welsh cath (cat) + -ael
+463  | century       | canriFael               | Welsh canrif (century) + -ael
+464  | consider      | ystyriedanu             | Welsh ystyried (to consider) + -anu
+465  | type          | mathael                 | Welsh math (type/kind) + -ael
+466  | law           | cyfraithddu             | Welsh cyfraith (law) + -ddu
+467  | bit           | tamaidael               | Welsh tamaid (bit/piece) + -ael
+468  | coast         | arfordirael             | Welsh arfordir (coast) + -ael
+469  | copy          | copianu                 | Welsh copïo (to copy) + -anu
+470  | phrase        | ymadroddael             | Welsh ymadrodd (phrase) + -ael
+471  | silent        | distachddu              | Welsh distaw (silent) + ch + -ddu
+472  | tall          | talael                  | Welsh tal (tall) + -ael
+473  | sand          | tywodael                | Welsh tywod (sand) + -ael
+474  | soil          | priflwi                 | Welsh pridd (soil) + f-mut + -lwi
+475  | roll          | rholianu                | Welsh rholio (to roll) + -anu
+476  | temperature   | tymheredael             | Welsh tymheredd (temperature) + -ael
+477  | finger        | bysddu                  | Welsh bys (finger) + -ddu
+478  | industry      | diwydiantael            | Welsh diwydiant (industry) + -ael
+479  | value         | gwerthddu               | Welsh gwerth (value) + -ddu
+480  | fight         | ymladdanu               | Welsh ymladdiad (fight) + -anu
+481  | lie           | gorweddanu              | same as lay
+482  | beat          | curanu                  | Welsh curo (to beat) + -anu
+483  | excite        | cyffrouanu              | Welsh cyffroi (to excite) + -anu
+484  | natural       | naturiolael             | Welsh naturiol (natural) + -ael
+485  | view          | golwgael                | Welsh golwg (view) + -ael
+486  | sense         | synwyrddu               | Welsh synwyr (sense) + -ddu
+487  | ear           | clustddu                | Welsh clust (ear) + -ddu
+491  | case          | achosddu                | Welsh achos (case/cause) + -ddu
+492  | middle        | canolddu                | Welsh canol (middle) + -ddu
+493  | kill          | lladdanu                | Welsh lladd (to kill) + -anu
+494  | son           | mabael                  | Welsh mab (son) + -ael
+495  | lake          | llynael                 | Welsh llyn (lake) + -ael
+496  | moment        | eiliadael               | Welsh eiliad (moment/second) + -ael
+497  | scale         | graddfaael              | Welsh graddfa (scale) + -ael
+498  | loud          | uchelddael              | Welsh uchel (loud/high) + dd + -ael
+499  | spring        | gwanwynael              | Welsh gwanwyn (spring) + -ael
+500  | observe       | arsylwanuanu            | Welsh arsylwi (to observe) + -anu
+
+===================================================================================
+PHONETIC GUIDE FOR KRELN
+===================================================================================
+
+Old/Middle Welsh sounds preserved in Kreln:
+  ll  = voiceless lateral fricative (unique to Welsh — blow air around sides of tongue)
+  dd  = voiced dental fricative (as in English "the")
+  rh  = voiceless trill (breathed r — unique to Welsh)
+  ch  = voiceless velar fricative (as in Scots "loch")
+  f   = v-sound (Welsh f = English v)
+  ff  = f-sound (Welsh ff = English f)
+  Welsh mutation system: initial consonants change in context
+  (b→f, c→g→ngh, d→dd→n, g→ng, ll→l, m→f, p→b→mh, rh→r, t→d→nh)
+
+Samoan sounds adding Polynesian texture:
+  '   = glottal stop (fa'a-, ali'i) — marked but softened in Kreln
+  Long vowels: ā, ē, ī, ō, ū (written plain in Kreln for fantasy usability)
+  All words end in vowels — creates flowing quality after Welsh consonant clusters
+  Number words: tasi(1), lua(2), tolu(3), fā(4), lima(5), ono(6), fitu(7), valu(8), iva(9), sefulu(10)
+
+Māori sounds adding secondary texture:
+  wh  = f-sound (whetū = star; Māori wh = f in most dialects)
+  ng  = velar nasal (as in "sing") — word-initially possible
+  Macron vowels (ā/ē/ī/ō/ū) indicate length
+
+Kreln suffix system:
+  -ael  = primary noun ending (things/people/concepts)
+  -ddu  = intense/dark noun/adj (fr. Welsh du = black — adds weight)
+  -anu  = verb infinitive ending (all active verbs)
+  -lwi  = adjective/quality ending (fr. Welsh -lwi)
+  -ora  = place/natural noun (fr. Polynesian -ora)
+  -odd  = collective/territory noun
+  -olwi = positive quality marker
+
+Polynesian number words used in Kreln:
+  lima (five), ono (six), fitu (seven), valu (eight) — Samoan
+  tekau (ten) — Māori
+  afe (thousand) — Samoan
+  These integrate naturally as their CV syllables complement Welsh stems
+
+===================================================================================
+END OF FILE — KrelnWelshPolynesian_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================

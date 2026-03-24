@@ -1,0 +1,648 @@
+VERDATHI ABORIGINAL - 500 Common Word Translations
+Fantasy Language based on VerdathiAboriginal name patterns
+(Phonetic patterns derived from: Adjungbilly, Bunjil, Cooinda, Cooee, Gundagai,
+ Gurulmundi, Iluka, Indooroopilly, Uluru, Wollongong, Yuin, Boorabin, Kurrajong, etc.)
+
+NOTE: Where no direct Aboriginal equivalent exists, words are constructed using
+attested phonemic patterns: open vowels (a, i, u, oo), consonant clusters (ng, lj, mb,
+nd, rr, wl), and characteristic suffixes (-indi, -ulla, -amba, -oora, -inga, -urru).
+
+===================================================================================
+RANK | ENGLISH       | VERDATHI ABORIGINAL     | NOTES
+===================================================================================
+
+--- ARTICLES & PRONOUNS ---
+1    | the           | ngaa                    | definite marker
+2    | a / an        | bul                     | indefinite marker
+6    | it            | yindi                   | neutral pronoun
+14   | this          | ngulli                  | near demonstrative
+38   | what          | wunna                   | interrogative
+45   | who           | yuurra                  | person interrogative
+63   | your          | nginda                  | 2nd person possessive
+64   | good          | coinda                  | (fr. Cooinda - "happy place")
+85   | our           | ngambil                 | 1st person plural possessive
+99   | us            | ngambi                  | 1st person plural object
+
+--- BEING / EXISTENCE ---
+2    | be / is / are | booroo                  | to exist, to be
+70   | there         | indjal                  | existential locative
+72   | seem          | woorinda                | to appear to be
+78   | think         | mulya                   | to consider, believe
+
+--- PREPOSITIONS & CONJUNCTIONS ---
+4    | of            | ulla                    | possessive/relational particle
+5    | and           | yarra                   | connector
+12   | not           | wurra                   | negation particle
+13   | on            | ngurra                  | surface position
+14   | with          | bimba                   | together-with
+21   | but           | durroo                  | contrast particle
+23   | by            | djurra                  | proximity/agent particle
+24   | from          | gundoo                  | origin particle
+30   | or            | gaali                   | alternation particle
+32   | into          | goolba                  | inward motion
+43   | if            | warrul                  | conditional particle
+44   | about         | bulindi                 | topic/concerning particle
+60   | because       | wullari                 | causal connector
+71   | only          | djinba                  | limiting particle
+82   | also          | yulnga                  | additive particle
+83   | after         | ngurroo                 | following, after
+90   | even          | boorindi                | emphatic/inclusive particle
+95   | these         | ngullima                | near plural demonstrative
+120  | until         | burrandoo               | (fr. Burrandong) until, up to
+154  | soon          | yandoo                  | near-future marker
+172  | since         | booranda                | temporal since
+183  | against       | marruwa                 | opposing
+192  | during        | warramba                | within a time period
+219  | toward        | gulinda                 | directional particle
+222  | against       | burroong                | opposing force
+251  | still         | coola                   | (fr. Coolah) continuing state
+261  | above         | indjurra                | above, over
+287  | behind        | wombala                 | behind, following
+303  | about         | bulinda                 | approximately, concerning
+332  | yes           | owwa                    | (fr. Cooee - affirmative call)
+338  | yet           | ngarroo                 | contrast temporal
+339  | among         | yulimba                 | within a group
+340  | perhaps       | moolinda                | possibility marker
+451  | shall         | gooroo                  | future obligation marker
+457  | either        | djirroo                 | one-or-the-other
+488  | else          | murroo                  | other/different
+490  | quite         | djirrin                 | degree marker (fully)
+
+--- VERBS: CORE ACTIONS ---
+7    | do            | bimbal                  | to perform/act
+9    | have          | ngulla                  | to hold/possess
+18   | say           | cooba                   | to speak (fr. Cooee)
+27   | say           | cooba                   | (same)
+47   | get           | wulba                   | to obtain
+51   | make          | djirramba               | to create/construct
+52   | can           | yurra                   | to be able
+53   | like          | cooinda                 | to enjoy (fr. Cooinda)
+56   | know          | mulunba                 | to understand
+57   | take          | garna                   | to take/grasp
+59   | see           | mirroo                  | to see/observe
+68   | look          | gurroo                  | to look/watch
+72   | come          | djinba                  | to arrive/approach
+76   | think         | mulya                   | to reflect/consider
+84   | use           | djulba                  | to use/employ
+86   | work          | burroo                  | to labor/work
+92   | want          | ngurloo                 | to desire
+96   | give          | yuramba                 | to give
+107  | hold          | gundja                  | to hold/grip
+109  | turn          | marroo                  | to turn/rotate
+115  | walk          | birroo                  | to walk/travel
+118  | begin         | gullaroo                | to start
+123  | seem          | woorinda                | to appear
+127  | open          | booroo                  | to open (distinct tone)
+137  | care          | goomal                  | to care for
+141  | feel          | coorinji                | to feel/sense
+143  | talk          | cooinda                 | to speak (casual)
+148  | run           | murramba                | to run
+150  | leave         | djinoon                 | to depart
+155  | go            | ganoo                   | to travel (fr. Gannmain root)
+159  | fill          | booloong                | to fill
+165  | happen        | yindari                 | to occur
+174  | pass          | djurroo                 | to pass by
+179  | reach         | gundara                 | to reach/arrive at
+189  | remember      | mooloong                | to recall
+191  | hear          | guramba                 | to hear/listen
+195  | know          | mulunba                 | (same as above)
+199  | move          | birrinda                | to change place
+201  | fall          | woomboo                 | to descend/fall
+206  | travel        | ganamba                 | to journey
+208  | sing          | yurlamba                | to sing/chant
+209  | listen        | burringoo               | to listen (fr. Burrinjuck root)
+222  | pull          | djurroo                 | to pull/draw
+224  | follow        | ngurrool                | to follow/pursue
+226  | appear        | woorinba                | to become visible
+229  | serve         | ngamboo                 | to serve
+233  | govern        | gundagoo                | to lead (fr. Gundagai)
+235  | rule          | goolba                  | to govern/rule
+237  | notice        | mirrooba                | to notice
+239  | cry           | wooroong                | to weep
+241  | fall          | woomboo                 | (same as above)
+243  | drive         | djirroo                 | to drive/push
+248  | wait          | ngarroo                 | to wait
+253  | lead          | gullaroo                | to lead forward
+263  | stand         | djirramoo               | to stand
+265  | contain       | ngullamba               | to hold within
+268  | teach         | mulunba                 | to instruct (same root as know)
+273  | develop       | djurrimba               | to grow/develop
+276  | produce       | wulamba                 | to create
+281  | decide        | moolooma                | to choose
+287  | prove         | burramba                | to demonstrate
+292  | stay          | djinool                 | to remain
+294  | force         | marramba                | to compel
+297  | push          | goonoo                  | to push
+299  | fill          | booloong                | (same as 159)
+305  | test          | mirroonda               | to examine
+313  | laugh         | coorool                 | to laugh
+315  | wonder        | moolinda                | to be curious
+319  | check         | mirroinda               | to verify
+322  | shape         | djirramba               | to form/shape
+328  | heat          | booramba                | to warm
+332  | bring         | yurramoo                | to carry here
+335  | paint         | woorlamba               | to mark/paint
+348  | dance         | yullamba                | to dance/celebrate
+356  | vary          | djulooba                | to differ
+358  | speak         | coobaloo                | to address formally
+360  | settle        | djinool                 | to establish
+368  | hunt          | murramba                | to pursue/hunt
+371  | count         | djinamba                | to enumerate
+379  | represent     | ngullinda               | to stand for
+384  | sit           | goora                   | to sit (fr. Gooralong root)
+386  | believe       | ngulamba                | to trust/believe
+388  | ride          | ganamba                 | to ride (same as travel)
+390  | prove         | burramba                | (same as 287)
+392  | catch         | gurnoo                  | to catch/capture
+394  | wish          | ngurloo                 | to wish (same root as want)
+400  | sleep         | moogoo                  | to rest/sleep
+402  | mount         | indjurra                | to climb
+405  | fly           | yurlinga                | to fly
+410  | run           | murramba                | (same as 148)
+412  | keep          | djinool                 | to keep/maintain
+415  | cut           | gurroo                  | to cut
+418  | visit         | ganamba                 | to visit
+420  | pull          | djurroo                 | (same as 222)
+425  | jump          | booramba                | to leap
+429  | finish        | djinool                 | to complete
+431  | hope          | ngurloo                 | to hope (same desire root)
+433  | dress         | woorlamba               | to clothe/cover
+435  | grow          | djurrimba               | to grow (same as develop)
+437  | meet          | yindoo                  | to encounter
+441  | raise         | indjurra                | to lift
+443  | solve         | moolooma                | to resolve
+447  | push          | goonoo                  | (same as 297)
+455  | cook          | booramba                | to prepare food
+457  | burn          | wooroo                  | to burn
+462  | consider      | mulya                   | to consider (same as think)
+464  | describe      | coobaloo                | to describe
+466  | copy          | djulooba                | to duplicate
+473  | roll          | marroo                  | to roll (same as turn)
+476  | excite        | yullamba                | to stir up
+480  | fight         | marramba                | to contest
+481  | lie           | ngullinda               | to recline / to deceive (context)
+482  | beat          | djurramba               | to strike
+493  | break         | gurramba                | to shatter
+497  | kill          | wurroong                | to end life (strong negative connotation)
+
+--- NOUNS: PEOPLE ---
+15   | he            | bimbal                  | 3rd person masc. pronoun
+16   | she           | yurra                   | 3rd person fem. pronoun
+17   | you           | nginda                  | 2nd person pronoun
+25   | they          | djurroo                 | 3rd person plural
+26   | we            | ngambi                  | 1st person plural
+33   | my            | ngull                   | 1st person possessive
+57   | him           | bimbaloo                | 3rd person masc. object
+59   | me            | ngambi                  | 1st person object
+60   | people        | yuin                    | people (fr. Yuin - coastal people)
+65   | some          | bulamba                 | some/certain ones
+67   | them          | djurramba               | 3rd plural object
+88   | him           | bimbalinda              | (emphatic form)
+100  | great         | coolooma                | great/large (fr. Coolamon root)
+131  | children      | djinbali                | young ones
+133  | girl          | yurrambi                | young woman
+143  | boy           | bimbali                 | young man
+157  | family        | ngambil                 | kin group (same root as our)
+161  | man           | bimbaloo                | adult male
+165  | woman         | yurramba                | adult female
+168  | king          | gundagai                | leader (fr. Gundagai - "high ground")
+226  | person        | yuin                    | individual person
+228  | friend        | cooinda                 | companion (fr. Cooinda)
+348  | brother       | djulooba                | male sibling
+382  | baby          | bimbali                 | infant (same as boy, context differs)
+430  | son           | djinbali                | male child
+494  | mother        | ngamboo                 | mother/nurturing one
+
+--- NOUNS: NATURE & LANDSCAPE ---
+73   | place         | ngurra                  | country/place (key Aust. concept)
+97   | day           | bulandra                | daytime
+135  | river         | warroong                | flowing water (fr. Warrumbungle root)
+136  | mile          | ganamba                 | distance walked
+174  | rock          | googong                 | stone (fr. Googong)
+176  | fire          | wooroong                | fire (fr. Wooroonooran root)
+178  | south         | gooroong                | direction
+179  | north         | indjalba                | direction
+181  | piece         | djinba                  | fragment
+188  | space         | burrinjuck              | open land (fr. Burrinjuck)
+190  | ground        | ngurra                  | earth/ground (same as place)
+196  | hour          | bulindra                | time period
+203  | west          | goolba                  | direction
+212  | morning       | yurroo                  | dawn/morning
+233  | rain          | bimbaroo                | water from sky
+240  | cold          | booroo                  | cold (distinct from be)
+242  | dark          | wullamba                | darkness
+247  | light         | mirroong                | illumination
+250  | wave          | goolindoo               | wave/motion
+252  | heart         | ngullamba               | inner self/heart
+254  | star          | yurlinga                | star (fr. Yurlunggur root)
+255  | box           | djurroo                 | container
+266  | field         | indjal                  | open plain
+268  | rest          | moogoo                  | rest/pause
+274  | ocean         | gooralong               | great water (fr. Gooralong)
+277  | minute        | djinba                  | small time period
+285  | fact          | burroo                  | truth/reality
+287  | street        | ganoo                   | path/road
+290  | lot           | bulamba                 | many/much
+299  | course        | ganamba                 | route/journey
+301  | wheel         | marroo                  | circular thing
+303  | force         | marramba                | power
+305  | moon          | mooloong                | moon (fr. Mooloolaba root)
+306  | island        | cooloola                | land-surrounded (fr. Cooloola)
+308  | foot          | birroo                  | foot/base (same as walk)
+312  | boat          | goolba                  | vessel/boat
+316  | plane         | yurlinga                | flying thing
+318  | thousand      | djinamba                | large count
+320  | game          | coorool                 | game/play
+323  | heat          | booramba                | warmth (same as heat verb)
+327  | snow          | booroo                  | frozen cold
+334  | east          | djirramoo               | direction
+336  | language      | coobaloo                | speech/language (fr. Cooee root)
+339  | ball          | marroo                  | round object
+341  | drop          | woomboo                 | falling drop
+345  | engine        | djurramba               | power mechanism
+347  | arm           | goolindoo               | limb
+352  | material      | woorlamba               | substance
+353  | size          | djinamba                | measure/size
+360  | ice           | booroo                  | frozen water
+361  | matter        | ngullamba               | substance/importance
+363  | pair          | djulooba                | two together
+366  | length        | ganamba                 | extent/length
+367  | syllable      | coobaloo                | word-part
+374  | subject       | bulindi                 | topic
+375  | region        | ngurra                  | territory/area
+376  | energy        | booramba                | life force
+379  | art           | woorlamba               | decoration/art
+384  | circle        | marroong                | ring shape
+387  | fraction      | djinba                  | part/portion
+388  | forest        | kurrajong               | dense trees (fr. Kurrajong)
+391  | race          | murramba                | contest/people group
+392  | window        | mirroong                | opening for light
+393  | store         | djinool                 | kept goods
+394  | summer        | bulandra                | warm season
+395  | train         | ganamba                 | moving line
+399  | wall          | djirramoo               | barrier
+401  | mount         | indjurra                | high ground
+403  | sky           | yurlamba                | above/sky
+407  | board         | woorlamba               | flat surface
+408  | joy           | cooinda                 | happiness (fr. Cooinda)
+409  | winter        | booroo                  | cold season
+412  | glass         | mirroong                | clear material
+413  | grass         | ngurroo                 | ground covering
+414  | cow           | djinba                  | cattle
+416  | job           | burroo                  | work/task
+417  | edge          | gurroo                  | boundary
+419  | sign          | woorlamba               | marker/symbol
+422  | fun           | cooinda                 | enjoyment (same as joy)
+423  | bright        | mirroong                | luminous
+424  | gas           | booramba                | vapor
+425  | weather       | bimbaroo                | sky condition (same as rain)
+426  | month         | mooloong                | moon-period
+427  | million       | djinamba                | vast number
+428  | bear          | djirramoo               | large creature
+429  | flower        | yurroo                  | blooming plant
+432  | hair          | goolindoo               | body covering
+436  | village       | ngurra                  | settlement (same as place)
+438  | root          | djurrimba               | underground part
+442  | metal         | googong                 | hard material (fr. Googong)
+445  | paragraph     | coobaloo                | block of speech
+449  | third         | djinamba                | ordinal three
+452  | floor         | ngurra                  | base surface
+453  | result        | burramba                | outcome
+454  | hill          | indjurra                | raised land
+456  | cat           | djinba                  | small creature
+460  | century       | ganamba                 | long journey of time
+461  | type          | djulooba                | kind/sort
+462  | law           | gundagai                | rule of the land (fr. Gundagai)
+463  | bit           | djinba                  | small piece
+464  | coast         | gooralong               | edge of sea (fr. Gooralong)
+467  | phrase        | coobaloo                | spoken unit
+469  | sand          | yullamba                | fine ground cover
+470  | soil          | ngurra                  | earth/soil (same as ground)
+473  | temperature   | booramba                | degree of heat
+474  | finger        | goolindoo               | digit
+475  | industry      | burroo                  | productive work
+476  | value         | ngullamba               | worth/importance
+479  | view          | mirroong                | what is seen
+480  | sense         | coorinji                | feeling/perception (same as feel)
+481  | ear           | guramba                 | hearing organ (same root as hear)
+487  | case          | bulindi                 | situation
+488  | middle        | djinool                 | centre
+492  | lake          | goolba                  | still water (same as vessel root)
+493  | moment        | djinba                  | short time
+495  | scale         | djinamba                | measure
+496  | loud          | coobaloo                | full voice
+497  | spring        | yurroo                  | new growth season
+500  | cloud         | bimbaroo                | sky water (same as rain root)
+
+--- ADJECTIVES ---
+36   | all           | djurroo                 | every/complete
+40   | so            | yindi                   | degree marker
+41   | up            | indjurra                | upward direction
+42   | out           | goolba                  | outward
+66   | some          | bulamba                 | partial
+69   | other         | murroo                  | different one
+70   | than          | djulooba                | comparison particle
+74   | how           | wunna                   | manner interrogative
+89   | new           | yurroo                  | fresh/new (fr. Yurroo - dawn)
+90   | even          | djulooba                | equal/level
+91   | way           | ganoo                   | method/path
+93   | any           | bulamba                 | any/all (same as some)
+98   | most          | coolooma                | greatest amount
+100  | great         | coolooma                | important/large
+101  | large         | coolooma                | big
+103  | often         | djulooba                | frequent
+105  | high          | indjurra                | tall/elevated
+111  | few           | djinba                  | small number
+113  | white         | mirroo                  | pale/clear
+117  | young         | djinbali                | youthful
+118  | ready         | djirramoo               | prepared
+120  | usual         | djulooba                | normal
+121  | plain         | booroo                  | simple/flat
+122  | above         | indjurra                | higher position
+124  | second        | djinamba                | ordinal two
+125  | enough        | bulamba                 | sufficient
+126  | ever          | djurroo                 | at any time
+127  | red           | wooroong                | red (color of fire)
+128  | old           | ganamba                 | aged/long-traveled
+130  | though        | durroo                  | concessive (same as but)
+132  | short         | djinba                  | brief/small
+138  | true          | burramba                | real/truthful
+139  | full          | booloong                | complete
+140  | whole         | djurroo                 | entire
+144  | fast          | murramba                | quick
+145  | simple        | booroo                  | uncomplicated
+146  | several       | bulamba                 | more than two
+148  | best          | coolooma                | finest
+149  | better        | coindaba                | improved (fr. Cooinda)
+151  | early         | yurroo                  | at dawn (same as morning)
+153  | complete      | djurroo                 | fully done
+156  | certain       | burramba                | sure
+160  | certain       | burramba                | (same)
+163  | general       | djurroo                 | widespread
+164  | special       | ngullamba               | particular/important
+166  | correct       | burramba                | right/accurate
+167  | able          | yurra                   | capable (same as can)
+168  | fine          | djinba                  | delicate/good
+170  | beautiful     | cooindamba              | lovely (fr. Cooinda extended)
+171  | gone          | djinoon                 | departed (same as leave)
+172  | quick         | murramba                | fast (same as fast)
+173  | free          | goolba                  | unbound/open
+175  | warm          | booramba                | moderately hot
+176  | strong        | marramba                | powerful
+177  | clear         | mirroong                | transparent
+178  | deep          | goolba                  | far down
+180  | possible      | yurra                   | can-be
+182  | dry           | bulindra                | without moisture
+184  | wild          | murramba                | untamed
+185  | natural       | ngurra                  | belonging to the land
+186  | safe          | djinool                 | protected/secure
+187  | busy          | burroo                  | actively working (same as work)
+189  | common        | djulooba                | shared/frequent
+192  | distant       | ganamba                 | far away (same as travel)
+193  | heavy         | coolooma                | weighty
+195  | present       | yindi                   | here now
+197  | wide          | booroo                  | broad
+199  | bright        | mirroong                | (same as above)
+200  | broken        | gurramba                | damaged
+202  | hot           | booramba                | very warm
+204  | tall          | indjurra                | high-standing
+205  | soft          | djinba                  | gentle/tender
+207  | direct        | ganoo                   | straight-path
+208  | sudden        | yindari                 | happening fast
+213  | exact         | burramba                | precise
+214  | square        | djirramoo               | four-sided shape
+216  | happy         | cooinda                 | joyful (fr. Cooinda)
+217  | probable      | woorinba                | likely
+218  | last          | djinoon                 | final
+219  | lone          | djinba                  | alone
+220  | written       | coobaloo                | recorded in marks
+221  | silent        | moogoo                  | quiet/still (same as sleep root)
+222  | strange       | murroo                  | unusual (same as other)
+
+--- NUMBERS ---
+83   | two           | djulooba                | pair number
+197  | five          | djinamba                | fifth count
+210  | six           | djurrimba               | sixth count
+215  | ten           | bulandra                | tenth count
+439  | eight         | booramba                | eighth count
+449  | seven         | djurramba               | seventh count
+450  | three         | djinamba                | (used contextually for three)
+
+--- TIME WORDS ---
+54   | time          | bulandra                | time/period
+96   | day           | bulandra                | day period (same)
+188  | year          | ganamba                 | long cycle (same as journey)
+193  | hour          | bulindra                | short time period
+196  | week          | djulooba                | seven-day cycle
+213  | minute        | djinba                  | small time (same as small piece)
+214  | morning       | yurroo                  | (same as above)
+269  | week          | djulooba                | (same)
+395  | train         | ganamba                 | cycle/journey (same)
+426  | month         | mooloong                | moon-period (same)
+
+===================================================================================
+PHONETIC GUIDE FOR VERDATHI ABORIGINAL
+===================================================================================
+
+Vowels:
+  a   = open back vowel (as in "father")
+  i   = front vowel (as in "see")
+  u   = back rounded (as in "moon")
+  oo  = long back vowel (as in "cool")
+  ai  = diphthong (as in "sky")
+
+Consonant clusters characteristic of this language:
+  ng  = nasal velar (as in "sing") — very common word-initially
+  dj  = palatal affricate (as in "judge")
+  rr  = retroflex or trilled r
+  mb  = prenasalized bilabial stop
+  nd  = prenasalized dental stop
+  lj  = lateral palatal
+
+Suffix patterns:
+  -amba / -imba  = verb/action suffix
+  -indi / -inga  = locative or participial
+  -ulla / -ulla  = possessive/relational
+  -oo / -oong    = nominal or directional
+  -urru / -urra  = animate being marker
+  -bali          = diminutive / young
+
+===================================================================================
+
+
+--- PATCH: 169 missing entries added to reach 500 ---
+RANK  | ENGLISH        | TRANSLATION              |
+------------------------------------------------------------
+3     | to             | ganool                   |
+8     | that           | yindoo                   |
+10    | it             | yindi                    |
+11    | for            | ngurloo                  |
+19    | at             | djirra                   |
+20    | this           | ngulli                   |
+22    | his            | bimbalool                |
+27    | say            | coobaloo                 |
+28    | her            | yurrambool               |
+29    | she            | yurramba                 |
+31    | an             | bul                      |
+34    | one            | djinba                   |
+35    | all            | djurroo                  |
+37    | there          | indjal                   |
+39    | what           | wunna                    |
+46    | get            | wulba                    |
+48    | go             | ganoo                    |
+49    | me             | ngambi                   |
+50    | when           | bulindra                 |
+55    | no             | wurra                    |
+58    | know           | mulunba                  |
+61    | into           | goolba                   |
+62    | year           | ganamba                  |
+64    | good           | coinda                   |
+75    | come           | djinba                   |
+77    | over           | indjurra                 |
+79    | also           | yulnga                   |
+80    | back           | wombala                  |
+81    | after          | ngurroo                  |
+82    | use            | djulba                   |
+87    | first          | ałtsé                    |
+88    | well           | coindaba                 |
+94    | any            | bulamba                  |
+102   | need           | ngurloo                  |
+104   | often          | djulooba                 |
+106   | high           | indjurra                 |
+108   | hold           | gundja                   |
+110   | never          | wurra djurroo            |
+112   | north          | indjalba                 |
+114   | seem           | woorinda                 |
+116   | next           | yurroo                   |
+119   | begin          | gullaroo                 |
+129   | both           | djulooba ngamba          |
+134   | mile           | ganamba                  |
+142   | girl           | yurrambi                 |
+147   | ever           | djurroo                  |
+152   | talk           | cooindamba               |
+158   | direct         | ganoo                    |
+160   | leave          | djinoon                  |
+162   | measure        | djinamba                 |
+169   | wind           | niyool                   |
+194   | true           | burramba                 |
+198   | remember       | mooloong                 |
+211   | table          | woorlamba                |
+223   | pattern        | djirramoo                |
+225   | center         | djinool                  |
+227   | person         | yuin                     |
+230   | appear         | woorinba                 |
+231   | road           | ganoo                    |
+232   | map            | mirrooba                 |
+234   | rule           | goolba                   |
+236   | pull           | djurroo                  |
+238   | notice         | mirrooba                 |
+244   | drive          | djirroo                  |
+245   | lead           | gullaroo                 |
+246   | cry            | wooroong                 |
+249   | note           | woorlamba                |
+256   | field          | indjal                   |
+257   | rest           | moogoo                   |
+258   | correct        | burramba                 |
+259   | able           | yurra                    |
+260   | pound          | djurramoo                |
+262   | beauty         | cooindamba               |
+264   | stood          | djirramoo                |
+267   | teach          | mulunba                  |
+269   | final          | djinoon                  |
+270   | gave           | yuramba                  |
+271   | green          | murroo                   |
+272   | oh             | owwa                     |
+275   | ocean          | gooralong                |
+278   | minute         | djinba                   |
+279   | strong         | marramba                 |
+280   | special        | ngullamba                |
+282   | clear          | mirroong                 |
+283   | tail           | goolindoo                |
+284   | produce        | wulamba                  |
+286   | street         | ganoo                    |
+288   | lot            | bulamba                  |
+289   | nothing        | wurra djinba             |
+291   | stay           | djinool                  |
+293   | full           | booloong                 |
+295   | blue           | djirrimba                |
+296   | object         | ngullamba                |
+298   | surface        | woorlamba                |
+300   | moon           | mooloong                 |
+302   | foot           | birroo                   |
+304   | busy           | burroo                   |
+307   | boat           | goolba                   |
+309   | gold           | yullamba                 |
+310   | possible       | yurra                    |
+311   | plane          | yurlinga                 |
+314   | wonder         | moolinda                 |
+317   | ago            | ngurroo                  |
+321   | shape          | djirramba                |
+324   | miss           | ngurloo                  |
+325   | brought        | yurramoo                 |
+326   | heat           | booramba                 |
+329   | bring          | yurramoo                 |
+330   | yes            | owwa                     |
+331   | distant        | ganamba                  |
+333   | east           | djirramoo                |
+337   | grand          | coolooma                 |
+342   | heart          | ngullamba                |
+343   | am             | booroo                   |
+344   | present        | yindi                    |
+346   | dance          | yullamba                 |
+349   | arm            | goolindoo                |
+350   | wide           | booroo                   |
+351   | sail           | goolba                   |
+354   | vary           | djulooba                 |
+355   | settle         | djinool                  |
+357   | weight         | coolooma                 |
+359   | ice            | booroo                   |
+362   | pair           | djulooba                 |
+364   | divide         | djurroo                  |
+365   | syllable       | coobaloo                 |
+369   | sudden         | yindari                  |
+370   | count          | djinamba                 |
+372   | reason         | mulya                    |
+373   | length         | ganamba                  |
+377   | region         | ngurra                   |
+378   | energy         | booramba                 |
+380   | probable       | woorinba                 |
+381   | bed            | moogoo                   |
+383   | egg            | djinba                   |
+385   | cell           | djinba                   |
+389   | sit            | goora                    |
+390   | race           | murramba                 |
+396   | prove          | burramba                 |
+397   | lone           | djinba                   |
+398   | leg            | birroo                   |
+404   | sky            | yurlamba                 |
+406   | joy            | cooinda                  |
+410   | wild           | murramba                 |
+411   | instrument     | djurramba                |
+420   | past           | ngurroo                  |
+421   | soft           | djinba                   |
+434   | strange        | murroo                   |
+440   | meet           | yindoo                   |
+444   | solve          | moolooma                 |
+446   | whether        | wunna                    |
+447   | push           | goonoo                   |
+448   | seven          | djurramba                |
+458   | result         | burramba                 |
+459   | burn           | wooroo                   |
+465   | type           | djulooba                 |
+468   | coast          | gooralong                |
+471   | silent         | moogoo                   |
+472   | tall           | indjurra                 |
+477   | finger         | goolindoo                |
+478   | industry       | burroo                   |
+483   | excite         | yullamba                 |
+484   | natural        | ngurra                   |
+485   | view           | mirroong                 |
+486   | sense          | coorinji                 |
+489   | quite          | djirrin                  |
+491   | case           | bulindi                  |
+498   | loud           | coobaloo                 |
+499   | spring         | yurroo                   |
+
+END OF FILE — VerdathiAboriginal_500words.txt
+Generated for Durgeth fantasy world language system
+===================================================================================
